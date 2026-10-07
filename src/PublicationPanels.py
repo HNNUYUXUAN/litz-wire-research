@@ -10,7 +10,7 @@ def prepare(run,languages):
     b.prepare_specimen(run,languages)
     request=b.read(run/'render_request.json');panels=request['panels'];sources=dict(evidence['sources_sha256'])
     def table(name):
-        p=b.OLD_DOC/'figure_data'/name;sources[p.relative_to(b.ROOT).as_posix()]=b.sha(p);return b.csv_rows(p)
+        p=b.TABLES/name;sources[p.relative_to(b.ROOT).as_posix()]=b.sha(p);return b.csv_rows(p)
     def add(lang,id,kind,caption,model,origin,acceptance='scoped_passed',**opts):
         digest=hashlib.sha256(json.dumps(opts,sort_keys=True,ensure_ascii=False).encode()).hexdigest()
         panels.append(dict(id=id,language=lang,kind=kind,caption=caption,source_model=model,source_run_id=origin,
@@ -24,9 +24,7 @@ def prepare(run,languages):
     sources[coax_path.relative_to(b.ROOT).as_posix()]=b.sha(coax_path);sources[geometry_path.relative_to(b.ROOT).as_posix()]=b.sha(geometry_path)
     coax=b.read(coax_path)['cases'];geometries=b.read(geometry_path)['geometries']
     (run/'tables').mkdir(exist_ok=True)
-    for p in (b.OLD_DOC/'tables').glob('*.csv'):
-        sources[p.relative_to(b.ROOT).as_posix()]=b.sha(p);shutil.copy2(p,run/'tables'/p.name)
-    for p in (b.OLD_DOC/'figure_data').glob('*.csv'):
+    for p in b.TABLES.glob('*.csv'):
         sources[p.relative_to(b.ROOT).as_posix()]=b.sha(p);shutil.copy2(p,run/'tables'/p.name)
     for lang in languages:
         zh=lang=='zh-CN';t=lambda z,e:z if zh else e
@@ -91,5 +89,5 @@ def prepare(run,languages):
     request['panels']=panels;request['publication_scope']='full panel collection; frozen physical status unchanged'
     request['composition_groups']=[['q1_profile',['q1_magnitude','q1_phase']],['coax640_currents',['coax640_current','coax640_phase']],['coax640_fields',['coax640_field','coax640_field_phase']],['peec_validation',['peec_length','peec_sensitivity']],['rt0_sections',['rt0_loss_slice','rt0_J_slice']],['aphi_preserved',['aphi_A_samples','aphi_phi_samples','aphi_J_samples','aphi_gradient_samples']],['geometry_comparison',['geometry_straight','geometry_single','multilevel_detail','geometry_crosslayer']]]
     b.write(run/'render_request.json',request)
-    manifest=b.read(run/'source_manifest.json');manifest.update(field_sources_sha256=evidence['sources_sha256'],additional_sources_sha256=sources,reconstructed_fields_sha256=evidence['outputs_sha256'],style_reference_run_id='publication_20261006_specimen_08',user_revision='调整每个图的宽一致',single_panel_width_mm=88.9,composite_width_mm=182,notebook_single_panel_width_pt=310)
+    manifest=b.read(run/'source_manifest.json');manifest.update(field_sources_sha256=evidence['sources_sha256'],additional_sources_sha256=sources,reconstructed_fields_sha256=evidence['outputs_sha256'],single_panel_width_mm=88.9,composite_width_mm=182,notebook_single_panel_width_pt=310)
     b.write(run/'source_manifest.json',manifest)

@@ -4,7 +4,7 @@ Layered models, numerical verification, and bilingual academic documents for Lit
 
 **Miao Yuxuan · Huainan Normal University**
 
-[简体中文](README.zh-CN.md) · [Academic editions](docs/editions.md) · [Development](docs/development.md) · [Scientific conventions](docs/建模约定与解析基准.md) · [Acceptance criteria](tests/ACCEPTANCE.md)
+[简体中文](README.zh-CN.md) · [Academic editions](docs/editions.md) · [Datasets](docs/datasets.md) · [Development](docs/development.md) · [Scientific conventions](docs/建模约定与解析基准.md) · [Acceptance criteria](tests/ACCEPTANCE.md)
 
 ## Start
 

@@ -20,3 +20,5 @@ The publication preserves model assumptions and scientific acceptance states. Co
 ## Public-version review
 
 Review the scientific scope, attribution, dual licensing of Notebook cells, bibliography links, download experience, and the scholarly editions. Public visibility and the final archival state are the next release-stage decisions. The private candidate and its draft release provide the complete materials for that review.
+
+For the public edition, publish the reviewed release, use its public attachment URLs in the catalogue and set `private` to `false`. Verify anonymous downloads against the same SHA256 records before setting the final repository archival state. The current candidate uses authenticated draft-release API URLs.

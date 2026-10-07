@@ -6,7 +6,7 @@
   "part_limit_bytes": 134217728,
   "datasets": {
     "academic-editions": {
-      "description": "academic editions",
+      "description": "Bilingual reports, papers, chapters, Notebooks, PDFs, figures and document acceptance records",
       "dependencies": [
         "research-shared"
       ],
@@ -4782,7 +4782,7 @@
       ]
     },
     "analytic": {
-      "description": "analytic",
+      "description": "Round-wire Bessel calibration, radial profiles and analytical acceptance records",
       "dependencies": [
         "research-shared"
       ],
@@ -9877,7 +9877,7 @@
       ]
     },
     "ansys": {
-      "description": "ansys",
+      "description": "Maxwell inputs, projects, interface probes, mesh limits and validation records",
       "dependencies": [
         "research-shared"
       ],
@@ -22182,7 +22182,7 @@
       ]
     },
     "aphi": {
-      "description": "aphi",
+      "description": "Three-dimensional A–phi fields, calibration diagnostics and solver boundary evidence",
       "dependencies": [
         "research-shared"
       ],
@@ -34197,7 +34197,7 @@
       ]
     },
     "common-terminal": {
-      "description": "common terminal",
+      "description": "Common-terminal field–circuit models, complex strand currents and controlled return-path evidence",
       "dependencies": [
         "research-shared"
       ],
@@ -42180,7 +42180,7 @@
       ]
     },
     "fem2": {
-      "description": "fem2",
+      "description": "Two-dimensional finite-element calibration, meshes, fields and sensitivity checks",
       "dependencies": [
         "research-shared"
       ],
@@ -45011,7 +45011,7 @@
       ]
     },
     "geometry": {
-      "description": "geometry",
+      "description": "Strand identities, centreline geometry, arc lengths, copper volume and geometric checks",
       "dependencies": [
         "research-shared"
       ],
@@ -52227,7 +52227,7 @@
       ]
     },
     "gpu": {
-      "description": "gpu",
+      "description": "CPU/GPU matrix and complex-current comparisons with resource and exit-status records",
       "dependencies": [
         "research-shared"
       ],
@@ -77680,7 +77680,7 @@
       ]
     },
     "peec": {
-      "description": "peec",
+      "description": "Finite-length longitudinal PEEC inputs, solutions, length and quadrature sensitivity",
       "dependencies": [
         "research-shared"
       ],
@@ -96329,7 +96329,7 @@
       ]
     },
     "publication-inputs": {
-      "description": "publication inputs",
+      "description": "Verified independent panels, figure data and observables used by publication builds",
       "dependencies": [
         "research-shared"
       ],
@@ -97921,7 +97921,7 @@
       ]
     },
     "research-records": {
-      "description": "research records",
+      "description": "Cross-route run records, handoff inputs, validation summaries and retained source snapshots",
       "dependencies": [
         "research-shared"
       ],
@@ -173394,7 +173394,7 @@
       ]
     },
     "research-shared": {
-      "description": "research shared",
+      "description": "Content objects shared by route datasets; restored through their dependent file mappings",
       "dependencies": [],
       "objects": [
         {
@@ -175416,7 +175416,7 @@
       ]
     },
     "rt0": {
-      "description": "rt0",
+      "description": "Imposed-field RT0 solutions, flux reconstruction, spatial convergence and operator checks",
       "dependencies": [
         "research-shared"
       ],

@@ -19,7 +19,7 @@ import PreManuscriptClosure as control
 
 ROOT = Path(__file__).resolve().parents[1]
 BUNDLE = ROOT / "outputs/closure_20261005_manuscript_bundle_final_02"
-OLD_DOC = ROOT / "docs/report/pre_manuscript_closure_20261005"
+TABLES = ROOT / "data/publication/tables"
 SCIENCE_FILES = (ROOT / "docs/总控/当前运行索引.json", ROOT / "outputs/prewrite_closure_state.json")
 
 
@@ -67,7 +67,7 @@ def array_from_descriptor(desc):
 
 
 def prepare_specimen(run, languages):
-    source = OLD_DOC / "figure_data/q1_analytic_profile.csv"
+    source = TABLES / "q1_analytic_profile.csv"
     rows = csv_rows(source)
     radial = [(float(r["r_mm"]), float(r["abs_J_A_per_mm2"])) for r in rows]
     def interpolate(r):

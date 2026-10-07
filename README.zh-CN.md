@@ -4,7 +4,7 @@
 
 **缪雨轩 · 淮南师范学院**
 
-[English](README.md) · [学术文件](docs/editions.md) · [开发说明](docs/development.zh-CN.md) · [物理约定](docs/建模约定与解析基准.md) · [验收标准](tests/ACCEPTANCE.md)
+[English](README.md) · [学术文件](docs/editions.md) · [数据集](docs/datasets.md) · [开发说明](docs/development.zh-CN.md) · [物理约定](docs/建模约定与解析基准.md) · [验收标准](tests/ACCEPTANCE.md)
 
 ## 使用入口
 
