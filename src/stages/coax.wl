@@ -1,0 +1,13 @@
+Get[FileNameJoin[{stageRoot,"src","CoaxFEM.wl"}]];
+coCases={};
+coFailure=None;
+coSpecifications=Join[{{2,.6,2.,1.5},{3,.6,2.,1.5}},Table[{7,h,2.,1.5},{h,{.6,.3,.15}}],{{7,.3,3.,1.5},{7,.3,2.,2.}},Table[{n,.6,2.,1.5},{n,{640,1280,2560}}]];
+Do[coOne=TimeConstrained[LitzCoax`SolveCoax[spec[[1]],.0001,spec[[2]],spec[[3]],spec[[4]]],600,$Aborted];
+ If[!AssociationQ[coOne],coFailure=<|"specification"->spec,"failure"->coOne|>;Print[coFailure];Break[]];AppendTo[coCases,coOne];
+ Scan[stageCheck["coax_"<>StringRiffle[ToString/@spec,"_"]<>"_"<>#,coOne[#],If[#=="power_residual",.001,10.^-8],"2D_coax_FEM"]&,{"linear_residual","current_residual","power_residual"}];
+ stageCheck["coax_sparse_"<>ToString[spec[[1]]],If[coOne["matrix_head"]=="SparseArray",0,1],0,"2D_coax_FEM"];
+ stageData=<|"source_model"->"2D_coax_FEM","cases"->coCases,"first_blocked_case"->coFailure|>;stageSave[],{spec,coSpecifications}];
+coSeven=Select[coCases,#["strands"]==7&&#["return_factor"]==2.&&#["outer_factor"]==1.5&];
+If[Length[coSeven]==3,stageCheck["coax_7_fine_mesh_change",Abs[coSeven[[3]]["bundle_Rac_ohm_per_m"]/coSeven[[2]]["bundle_Rac_ohm_per_m"]-1],.01,"2D_coax_FEM"]];
+If[Length[coCases]>0,stageFigure["coax_mesh",First[coCases]["mesh"]["Wireframe"]];stageFigure["coax_strand_currents",ListPlot[Table[{i,Abs[Last[coCases]["strand_currents_RMS_A"][[i]]]},{i,Last[coCases]["strands"]}],Frame->True,FrameLabel->{"strand ID","Abs I (A RMS)"},ImageSize->600]]];
+stageData=<|"source_model"->"2D_coax_FEM","cases"->coCases,"first_blocked_case"->coFailure,"assumptions"->"Explicit conforming polygonal copper strand boundaries, air, concentric copper return shell, outer Az=0. All insulated source strands share axial end-to-end gradient V/m; total +20 A, return -20 A. Unknown u=j omega Az and two common voltages. Sparse linear triangular FEM with consistent mass. Separate bundle and return loss and both source powers. Infinite translation-invariant conductor, no finite length or transverse termination physics. Coarse 640+ scale attempts demonstrate execution only; independent mesh/boundary convergence is required before ranking."|>;

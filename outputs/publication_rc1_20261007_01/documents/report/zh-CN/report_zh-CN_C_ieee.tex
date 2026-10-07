@@ -1,0 +1,76 @@
+\documentclass[journal,10pt]{IEEEtran}
+\setlength{\textwidth}{182mm}
+\setlength{\columnsep}{4.2mm}
+\usepackage{amsmath,amssymb,newtxmath}
+\usepackage[no-math]{fontspec}
+\setmainfont{Times New Roman}
+\usepackage{xeCJK}
+\setCJKmainfont[AutoFakeBold=2]{SimSun}
+\usepackage{graphicx,booktabs,array,hyperref,placeins}
+\hypersetup{hidelinks,unicode=true}
+\raggedbottom
+\setlength{\emergencystretch}{2em}
+\renewcommand{\arraystretch}{1.15}
+\usepackage{seqsplit}
+\begin{document}
+\title{Litz 线分层建模与数值验证：完整研究报告 · C 验收、诊断与复现}
+\author{缪雨轩\thanks{淮南师范学院}}
+
+\maketitle
+\noindent 合并稿对应章节 / Chapter in merged manuscript: \href{report_zh-CN_ieee.pdf#chapter-C}{C}\par
+\FloatBarrier
+\section*{C 验收、诊断与复现}
+\hypertarget{chapter-C}{}
+\pdfbookmark[0]{C 验收、诊断与复现}{bookmark-chapter-C}
+每条路线保留模型、参数、源码和运行身份，原始 WXF、检查点、Ansys 工程、日志及失败文件不被转换结果覆盖。JSON/CSV 提供复数实虚部、单位和逐股身份；原字段的单位标注若存在歧义，由源模型定义和附加说明解释，不改写原文件。逐图映射记录来源数据、表达式、独立 PDF/SVG/PNG 哈希及组图布局。有效场积分与完整空间场导出分开记录，部分恢复不填造成完整场。
+
+
+失败最小复现应包含触发输入、实际错误、尝试过的针对性修正、停止条件及下一步所需资源或许可。已知相同代码和输入的接口错误不通过重复求解变成“更多证据”。已有源文件和日志通过新清单指向，既不删除历史异常退出，也不把后处理成功回填为原求解成功。这样才能把研究限制交给其他研究者继续验证。
+
+
+成稿运行限制 CPU 线程、任务内存和系统空闲内存，只读解析缓存并后处理。Notebook 保存静态正文、公式与图形，原生 Graphics3D 允许前端旋转，但打开文稿不运行 FEM、PEEC 或 GPU 求解。缺少附件时报告具体文件。带空格恢复副本、哈希一致性和轻量读取是移交验收的一部分；正文排版与图件导出通过不改变物理验收状态。
+
+
+\begin{table*}[!htbp]
+\centering{\footnotesize q1\_fem2\_convergence.csv}\par
+\begingroup\footnotesize\begin{tabular}{p{40.45mm}|p{40.45mm}|p{40.45mm}|p{40.45mm}}
+\toprule
+nodes & h\_\allowbreak over\_\allowbreak a & Rac\_\allowbreak ohm\_\allowbreak per\_\allowbreak m & Rac\_\allowbreak relative\_\allowbreak error\\
+353 & 0.24 & 0.02015722 & 0.007045247\\
+1389 & 0.12 & 0.02002081 & 0.0002302695\\
+5573 & 0.06 & 0.02001617 & 1.79233e-06\\
+\bottomrule\end{tabular}\endgroup
+\end{table*}
+\begin{table*}[!htbp]
+\centering{\footnotesize peec\_length.csv}\par
+\begingroup\footnotesize\begin{tabular}{p{40.45mm}|p{40.45mm}|p{40.45mm}|p{40.45mm}}
+\toprule
+filaments & length\_\allowbreak m & Rac\_\allowbreak ohm\_\allowbreak per\_\allowbreak axial\_\allowbreak m & Rac\_\allowbreak over\_\allowbreak Rdc\\
+1264 & 0.16 & 0.01989922 & 3.647128\\
+1264 & 0.32 & 0.01995864 & 3.65802\\
+1264 & 0.64 & 0.01998848 & 3.663488\\
+5024 & 0.32 & 0.01998302 & 3.639307\\
+5024 & 0.64 & 0.02001274 & 3.64472\\
+\bottomrule\end{tabular}\endgroup
+\end{table*}
+\begin{table*}[!htbp]
+\centering{\footnotesize rt0\_cases.csv}\par
+\begingroup\footnotesize\begin{tabular}{p{84.9mm}|p{84.9mm}}
+\toprule
+cells & recomputed\_\allowbreak loss\_\allowbreak W\\
+8192 & 0.0009274631\\
+16000 & 0.0009335389\\
+27648 & 0.0009369268\\
+27648 & 0.0009369268\\
+\bottomrule\end{tabular}\endgroup
+\end{table*}
+\begin{table*}[!htbp]
+\centering{\footnotesize gpu\_equivalence.csv}\par
+\begingroup\footnotesize\begin{tabular}{p{55.26666666666667mm}|p{55.26666666666667mm}|p{55.26666666666667mm}}
+\toprule
+filaments & L\_\allowbreak matrix\_\allowbreak relative\_\allowbreak error & current\_\allowbreak relative\_\allowbreak error\\
+1264 & 7.075722e-16 & 3.281741e-14\\
+5024 & 7.481492e-16 & 7.780817e-14\\
+\bottomrule\end{tabular}\endgroup
+\end{table*}
+\end{document}

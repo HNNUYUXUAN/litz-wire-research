@@ -1,0 +1,55 @@
+Get[FileNameJoin[{stageRoot,"src","NotebookView.wl"}]];
+hfGeo=LitzView`OpenStage[stageRoot,"geometry"]["data"]["geometries"];
+hf640Geometry=LitzPhysics`Topology["straight",640,.02,.01,.0001];hf640Geometry["kind"]="straight640";hfGeo=Append[hfGeo,hf640Geometry];hfFiles={};hfSTEP={};Needs["OpenCascadeLink`"];
+hfTubeMesh[path_,radius_] := Module[{tangents,normals,binormals,vertices,ns=24,segments=Length[path],faces,caps,axis,plane},
+ tangents=Normalize/@Join[{path[[2]]-path[[1]]},Table[path[[i+1]]-path[[i-1]],{i,2,Length[path]-1}],{path[[-1]]-path[[-2]]}];
+ normals=Map[Normalize[Cross[#,If[Abs[#[[1]]]<.8,{1.,0.,0.},{0.,1.,0.}]]]&,tangents];binormals=MapThread[Cross,{tangents,normals}];
+ vertices=Flatten[Table[path[[i]]+radius (Cos[t] normals[[i]]+Sin[t] binormals[[i]]),{i,segments},{t,0.,2 Pi-2 Pi/ns,2 Pi/ns}],1];
+ faces=Flatten[Table[With[{a=(i-1) ns+j,b=(i-1) ns+Mod[j,ns]+1,c=i ns+Mod[j,ns]+1,d=i ns+j},{{a,b,c},{a,c,d}}],{i,segments-1},{j,ns}],2];
+ vertices=Join[vertices,{First[path],Last[path]}];caps=Join[Table[{segments ns+1,Mod[j,ns]+1,j},{j,ns}],Table[{segments ns+2,(segments-1) ns+j,(segments-1) ns+Mod[j,ns]+1},{j,ns}]];
+ BoundaryMeshRegion[vertices,Triangle[Join[faces,caps]]]
+];
+Do[hfKind=g["kind"];hfDir=FileNameJoin[{stageDir,hfKind}];CreateDirectory[hfDir];
+ Do[hfID="strand_"<>IntegerString[id,10,4];hfPath=g["paths"][[id]];
+  hfCSV=FileNameJoin[{hfDir,hfID<>"_centerline_m.csv"}];Export[hfCSV,Prepend[hfPath,{"x_m","y_m","z_m"}],"CSV"];
+  AppendTo[hfFiles,<|"kind"->hfKind,"strand_id"->hfID,"centerline_file"->FileNameTake[hfCSV],"diameter_m"->g["diameter_m"],"arc_length_m"->g["arc_lengths_m"][[id]],"port_start"->First[hfPath],"port_end"->Last[hfPath],"positive_direction"->"start_to_end"|>];
+  (* Native exact cylinders for straight calibration. Curved centreline sweeps
+     require a solid-validity tolerance test; keep the curves without claiming an exact solid. *)
+  If[StringStartsQ[hfKind,"straight"],hfShape=OpenCascadeLink`OpenCascadeShape[Cylinder[1000 {First[hfPath],Last[hfPath]},1000 g["diameter_m"]/2]];
+   hfSTEPFile=FileNameJoin[{hfDir,hfID<>".step"}];hfExport=Quiet[Check[OpenCascadeLink`OpenCascadeShapeExport[hfSTEPFile,hfShape],$Failed]];
+   hfRead=If[FileExistsQ[hfSTEPFile],Quiet[Check[OpenCascadeLink`OpenCascadeShapeImport[hfSTEPFile],$Failed]],$Failed];
+   AppendTo[hfSTEP,<|"strand_id"->hfID,"export_result"->ToString[hfExport,InputForm],"readback_head"->ToString[Head[hfRead]],"exists"->FileExistsQ[hfSTEPFile]|>];
+   stageCheck["STEP_roundtrip_"<>hfKind<>"_"<>hfID,If[Head[hfRead]===OpenCascadeLink`OpenCascadeShapeExpression,0,1],0,"geometry_STEP_roundtrip"];
+   hfSTEPText=Import[hfSTEPFile,"Text"];hfSTEPUnitOK=StringContainsQ[hfSTEPText,"SI_UNIT(.MILLI.,.METRE.)"];
+   stageCheck["STEP_declared_mm_"<>hfKind<>"_"<>hfID,If[hfSTEPUnitOK,0,1],0,"STEP_file_unit_declaration"];
+   If[Head[hfRead]===OpenCascadeLink`OpenCascadeShapeExpression,OpenCascadeLink`OpenCascadeShapeSurfaceMesh[hfRead];hfReadPoints=.001 OpenCascadeLink`OpenCascadeShapeSurfaceMeshCoordinates[hfRead];
+    hfRadiusError=Abs[Max[Norm[Most[#]-Most[First[hfPath]]]&/@hfReadPoints]-g["diameter_m"]/2];
+    hfAxialError=Max[Abs[MinMax[hfReadPoints[[All,3]]]-Sort[{First[hfPath][[3]],Last[hfPath][[3]]}]]];
+    stageCheck["STEP_physical_radius_m_"<>hfKind<>"_"<>hfID,hfRadiusError,10.^-8,"native_STEP_readback_mm_to_SI"];
+    stageCheck["STEP_physical_axial_extent_m_"<>hfKind<>"_"<>hfID,hfAxialError,10.^-8,"native_STEP_readback_mm_to_SI"];
+    hfSTEP[[-1]]=Join[hfSTEP[[-1]],<|"declared_length_unit"->"millimetre","file_units_to_metres"->.001,"radius_readback_error_m"->hfRadiusError,"axial_extent_readback_error_m"->hfAxialError|>]];
+  ,hfSTL=FileNameJoin[{hfDir,hfID<>".stl"}];hfMesh=hfTubeMesh[hfPath,g["diameter_m"]/2];hfSTLOut=Export[hfSTL,hfMesh,"STL"];hfSTLBack=Import[hfSTL,"STL"];
+   hfOriginalBounds=RegionBounds[hfMesh];hfImportedBounds=RegionBounds[hfSTLBack];
+   stageCheck["STL_SI_bounds_"<>hfKind<>"_"<>hfID,Max[Abs[Flatten[hfOriginalBounds-hfImportedBounds]]],10.^-8,"geometry_STL_roundtrip"];
+   stageCheck["STL_watertight_"<>hfKind<>"_"<>hfID,If[TrueQ[RegionDimension[hfMesh]==3],0,1],0,"geometry_STL_roundtrip"];
+  ];hfFiles[[-1]]=Join[hfFiles[[-1]],<|"solid_file"->hfID<>If[StringStartsQ[hfKind,"straight"],".step",".stl"],"solid_coordinate_units"->If[StringStartsQ[hfKind,"straight"],"millimetre_declared_in_STEP","metre_STL_numeric_coordinates"],"file_length_unit_to_metres"->If[StringStartsQ[hfKind,"straight"],.001,1.],"STL_radial_chord_error_bound_m"->If[StringStartsQ[hfKind,"straight"],0.,g["diameter_m"]/2 (1-Cos[Pi/24])],"readback_coordinate_tolerance_m"->10.^-8|>],{id,Length[g["paths"]]}],{g,hfGeo}];
+Export[FileNameJoin[{stageDir,"geometry_manifest.json"}],hfFiles,"RawJSON"];
+Export[FileNameJoin[{stageDir,"step_report.json"}],hfSTEP,"RawJSON"];
+hfCo=LitzView`OpenStage[stageRoot,"coax"];hfCases=hfCo["data"]["cases"];hfRunIDs=ConstantArray[hfCo["run_id"],Length[hfCases]];hf640=LitzView`OpenStage[stageRoot,"coax640"];If[AssociationQ[hf640]&&Length[Lookup[hf640["data"],"cases",{}]]>=3,hfCases=Append[hfCases,hf640["data"]["cases"][[3]]];hfRunIDs=Append[hfRunIDs,hf640["run_id"]];Export[FileNameJoin[{stageDir,"640_convergence_checks.json"}],hf640["checks"],"RawJSON"]];
+Do[hfCaseDir=FileNameJoin[{stageDir,"field_case_"<>IntegerString[k,10,3]}];CreateDirectory[hfCaseDir];hfC=hfCases[[k]];
+ Export[FileNameJoin[{hfCaseDir,"strand_currents.csv"}],Prepend[MapIndexed[{First[#2],Re[#1],Im[#1],Abs[#1],Arg[#1]}&,hfC["strand_currents_RMS_A"]],{"strand_id","Re_I_RMS_A","Im_I_RMS_A","Abs_I_RMS_A","phase_rad"}],"CSV"];
+ Export[FileNameJoin[{hfCaseDir,"port_and_loss.json"}],KeyTake[hfC,{"source_model","strands","diameter_m","circle_segments","polygonal_bundle_area_m2","return_inner_radius_m","return_outer_radius_m","outer_radius_m","bundle_loss_W_per_m","return_loss_W_per_m","input_W_per_m","bundle_Rac_ohm_per_m","linear_residual","current_residual","power_residual"}],"RawJSON"];
+ Export[FileNameJoin[{hfCaseDir,"ports_RMS.json"}],<|"source_voltage_gradient_Re_V_per_m"->Re[hfC["source_voltage_V_per_m"]],"source_voltage_gradient_Im_V_per_m"->Im[hfC["source_voltage_V_per_m"]],"return_voltage_gradient_Re_V_per_m"->Re[hfC["return_voltage_V_per_m"]],"return_voltage_gradient_Im_V_per_m"->Im[hfC["return_voltage_V_per_m"]],"source_total_RMS_A"->20,"return_total_RMS_A"->-20,"source_run_id"->hfRunIDs[[k]]|>,"RawJSON"];
+ Export[FileNameJoin[{hfCaseDir,"field_nodes.csv"}],Prepend[MapThread[Join,{hfC["mesh"]["Coordinates"]*.001,Transpose[{Re[hfC["u_nodes_V_per_m"]],Im[hfC["u_nodes_V_per_m"]]}]}],{"x_m","y_m","Re_jomegaAz_V_per_m","Im_jomegaAz_V_per_m"}],"CSV"];
+ hfCoordinates=.001 hfC["mesh"]["Coordinates"];hfTriangles=hfC["triangles_node_ids"];hfMarkers=hfC["element_markers"];hfU=hfC["u_nodes_V_per_m"];hfA=hfU/(I 2 Pi 200000.);
+ hfSamples=Table[hfNodes=hfTriangles[[t]];hfP=hfCoordinates[[hfNodes]];hfDX=hfP[[2]]-hfP[[1]];hfDY=hfP[[3]]-hfP[[1]];hfDet=Det[{hfDX,hfDY}];hfDA=hfA[[hfNodes[[2]]]]-hfA[[hfNodes[[1]]]];hfDB=hfA[[hfNodes[[3]]]]-hfA[[hfNodes[[1]]]];
+ hfGradient={(hfDA hfDY[[2]]-hfDB hfDX[[2]])/hfDet,(hfDB hfDX[[1]]-hfDA hfDY[[1]])/hfDet};hfB={hfGradient[[2]],-hfGradient[[1]]};
+ hfJ=If[1<=hfMarkers[[t]]<=hfC["strands"]+1,5.8*^7 (If[hfMarkers[[t]]<=hfC["strands"],hfC["source_voltage_V_per_m"],hfC["return_voltage_V_per_m"]]-Mean[hfU[[hfNodes]]]),0.+0. I];
+ Join[Mean[hfP],{hfMarkers[[t]],Re[hfJ],Im[hfJ],Re[hfB[[1]]],Im[hfB[[1]]],Re[hfB[[2]]],Im[hfB[[2]]],Abs[hfJ]^2/(5.8*^7)}],{t,Length[hfTriangles]}];
+ Export[FileNameJoin[{hfCaseDir,"centroid_J_B_loss_samples.csv"}],Prepend[hfSamples,{"x_m","y_m","material_strand_marker","Re_Jz_A_m2","Im_Jz_A_m2","Re_Bx_T","Im_Bx_T","Re_By_T","Im_By_T","sampled_Joule_W_m3"}],"CSV"];
+ ,{k,Length[hfCases]}];
+Export[FileNameJoin[{stageDir,"ANSYS_README.md"}],"# Ansys continuation package\n\nParameters and CSV use SI metres. STEP declares millimetres and coordinates are explicitly converted m->mm before native export; readback coordinates are converted mm->m for radius/axial-size checks. STL coordinates are metres with explicit import scaling. copper sigma 5.8e7 S/m, mu_r=1, 20 C; f=200 kHz, exp(+j omega t), RMS. Positive strand port direction follows centreline start->end; insulated sides, common ideal end terminals. Source bundle +20 A and explicit concentric copper return -20 A in 2D field cases. Every field case records its own actual return radii and outer Az=0 boundary. CSV phasors split Re/Im.\n\nSeven-strand and 640-strand straight baselines have independent OpenCascade STEP solids with file readback; centreline files for rotating structures preserve physical IDs, diameter, pitch, sampled arc length and port endpoints. Construct separate insulated sweep solids in Ansys; validate clearance/curvature and length before electromagnetic solve. Curved structures use independent watertight STL fallback solids: numerical coordinates are metres, 24 points per circular section, 401 sections; import as SI explicitly. Readback coordinate tolerance 1e-8 m; radial chord error r(1-cos(pi/24)) recorded per strand. Curved STEP B-rep remains pending.\n\nField arrays contain u=j omega Az. Recover Az=u/(j omega), J= sigma(V_port-u) inside each copper strand. B=(dAz/dy,-dAz/dx,0); element connectivity/markers and complete mesh are preserved in source results.wxf. Native 2D FEM cases use infinite axial translation, not finite-end 3D solutions.\n\nRequired Ansys crosschecks: identical 7-strand coax case, then 640-strand equal-copper baseline; Rac mesh change <=1%, common end current/voltage residual <=1e-8, power mismatch <=0.1%; refine return radius and outer boundary independently. Native A-phi 3D gauge/field failure and full RT0 cuboid spatial nonconvergence are recorded; reproduce them before extending to helices. Structure rankings require improvement exceeding numerical uncertainty.\n", "Text"];
+stageData=<|"source_model"->"Ansys_geometry_and_field_evidence_handoff","geometry_records"->hfFiles,"straight_STEP_tests"->hfSTEP,"field_source_run_ids"->DeleteDuplicates[hfRunIDs],"assumptions"->"Separate SI metre geometry and electromagnetic provenance. Straight exact STEP solids roundtrip checked. Curved physical strand centreline IDs and finite paths preserved; independent triangulated STL solids, SI unit/tolerance and readback checks recorded. No Ansys installation or solver execution performed."|>;
+
+
+

@@ -1,0 +1,2548 @@
+{
+  "schema_version": 1,
+  "tasks": {
+    "peec_small_tests": {
+      "task_id": "peec_small_tests",
+      "run_id": "closure_20261005_peec_smalltests_frozen_02",
+      "profile": "high64gpu",
+      "completed_at_UTC": "2026-10-05T12:12:19.078516+00:00",
+      "execution_status": "executed",
+      "physical_acceptance_status": "passed_test_scope_only",
+      "process_exit": 0,
+      "input_signature": "a4652e52c6e7a425be80e4f04cd714a8e9ebd37b8009fd8ea2082cd5693551e4",
+      "input_sources": [
+        {
+          "path": "configs\\prewrite_closure.json",
+          "sha256": "e5b6bca3023de100b0a93c524544c42269c07f7a998e081d3d2411ba8fc35713"
+        },
+        {
+          "path": "src\\stages\\closure_peec_tests.wl",
+          "sha256": "7f688bbcc98df080367f8fc270bfa254895df7bd67a3b9b5e1753f7c024ecc06"
+        },
+        {
+          "path": "src\\PEEC.wl",
+          "sha256": "9f6ce5908db81b5abb0ee53cf9d5ad57824cad72d6fcaeee99c8f682e7fe030f"
+        },
+        {
+          "path": "tests\\ClosurePEEC.wlt",
+          "sha256": "437e76c23bcb1981206fb4b302a382f2d9261804f69c761c6a2c5bf5b026de3a"
+        }
+      ],
+      "failure_reason": null,
+      "source_run_ids": [
+        ""
+      ]
+    },
+    "peec_m40_l016_q4_s10p8": {
+      "task_id": "peec_m40_l016_q4_s10p8",
+      "run_id": "closure_20261005_peec_m40_l016_q4_01",
+      "profile": "high64gpu",
+      "completed_at_UTC": "2026-10-05T11:36:09.028130+00:00",
+      "execution_status": "executed",
+      "physical_acceptance_status": "not_verified_incomplete_campaign",
+      "process_exit": 0,
+      "input_signature": "370d0b67a6e218d544d7d21a2f1bfb561ba5d1a708f7163dc74e21d41f38cad7",
+      "failure_reason": null,
+      "source_run_ids": [
+        ""
+      ]
+    },
+    "peec_m40_l032_q4_s10p8": {
+      "task_id": "peec_m40_l032_q4_s10p8",
+      "run_id": "closure_20261005_peec_m40_l032_q4_01",
+      "profile": "high64gpu",
+      "completed_at_UTC": "2026-10-05T11:37:48.543867+00:00",
+      "execution_status": "executed",
+      "physical_acceptance_status": "not_verified_incomplete_campaign",
+      "process_exit": 0,
+      "input_signature": "d968424a877e4e748662a675a1c0bfaf6ce1508abd8a827b62fd3da652ccfca6",
+      "failure_reason": null,
+      "source_run_ids": [
+        "closure_20261005_peec_m40_l016_q4_01"
+      ]
+    },
+    "peec_m40_l064_q4_s10p8": {
+      "task_id": "peec_m40_l064_q4_s10p8",
+      "run_id": "closure_20261005_peec_m40_l064_q4_01",
+      "profile": "high64gpu",
+      "completed_at_UTC": "2026-10-05T11:38:29.137728+00:00",
+      "execution_status": "executed",
+      "physical_acceptance_status": "not_verified_incomplete_campaign",
+      "process_exit": 0,
+      "input_signature": "c4e28d3045a4a72a38b27858d8c2301c6525574b7f1a53d9ded1ae31f078cfb1",
+      "input_sources": [
+        {
+          "path": "configs\\prewrite_closure.json",
+          "sha256": "e5b6bca3023de100b0a93c524544c42269c07f7a998e081d3d2411ba8fc35713"
+        },
+        {
+          "path": "src\\stages\\closure_peec.wl",
+          "sha256": "949a35c88f26df47c18591019c3a428b851546113300ae0b85e8e17c3af1ab8e"
+        },
+        {
+          "path": "src\\PEEC.wl",
+          "sha256": "9f6ce5908db81b5abb0ee53cf9d5ad57824cad72d6fcaeee99c8f682e7fe030f"
+        }
+      ],
+      "failure_reason": null,
+      "source_run_ids": [
+        "closure_20261005_peec_m40_l016_q4_01 closure_20261005_peec_m40_l032_q4_01"
+      ]
+    },
+    "peec_m40_l064_q6_s10p8": {
+      "task_id": "peec_m40_l064_q6_s10p8",
+      "run_id": "closure_20261005_peec_m40_l064_q6_01",
+      "profile": "high64gpu",
+      "completed_at_UTC": "2026-10-05T11:39:13.444934+00:00",
+      "execution_status": "executed",
+      "physical_acceptance_status": "not_verified_incomplete_campaign",
+      "process_exit": 0,
+      "input_signature": "661204be5fffdf61ada15b477abad9ba24592aac188688716b01a1f65e3721b8",
+      "input_sources": [
+        {
+          "path": "configs\\prewrite_closure.json",
+          "sha256": "e5b6bca3023de100b0a93c524544c42269c07f7a998e081d3d2411ba8fc35713"
+        },
+        {
+          "path": "src\\stages\\closure_peec.wl",
+          "sha256": "949a35c88f26df47c18591019c3a428b851546113300ae0b85e8e17c3af1ab8e"
+        },
+        {
+          "path": "src\\PEEC.wl",
+          "sha256": "9f6ce5908db81b5abb0ee53cf9d5ad57824cad72d6fcaeee99c8f682e7fe030f"
+        }
+      ],
+      "failure_reason": null,
+      "source_run_ids": [
+        "closure_20261005_peec_m40_l016_q4_01",
+        "closure_20261005_peec_m40_l032_q4_01",
+        "closure_20261005_peec_m40_l064_q4_01"
+      ]
+    },
+    "peec_m40_l064_q8_s10p8": {
+      "task_id": "peec_m40_l064_q8_s10p8",
+      "run_id": "closure_20261005_peec_m40_l064_q8_01",
+      "profile": "high64gpu",
+      "completed_at_UTC": "2026-10-05T11:39:51.089701+00:00",
+      "execution_status": "executed",
+      "physical_acceptance_status": "not_verified_incomplete_campaign",
+      "process_exit": 0,
+      "input_signature": "8c23e61604b9d90f1081b79769ab8d60a20f9449bc80878da514875251bcbac9",
+      "input_sources": [
+        {
+          "path": "configs\\prewrite_closure.json",
+          "sha256": "e5b6bca3023de100b0a93c524544c42269c07f7a998e081d3d2411ba8fc35713"
+        },
+        {
+          "path": "src\\stages\\closure_peec.wl",
+          "sha256": "949a35c88f26df47c18591019c3a428b851546113300ae0b85e8e17c3af1ab8e"
+        },
+        {
+          "path": "src\\PEEC.wl",
+          "sha256": "9f6ce5908db81b5abb0ee53cf9d5ad57824cad72d6fcaeee99c8f682e7fe030f"
+        }
+      ],
+      "failure_reason": null,
+      "source_run_ids": [
+        "closure_20261005_peec_m40_l016_q4_01",
+        "closure_20261005_peec_m40_l032_q4_01",
+        "closure_20261005_peec_m40_l064_q4_01",
+        "closure_20261005_peec_m40_l064_q6_01"
+      ]
+    },
+    "peec_m40_l064_q4_s12p10": {
+      "task_id": "peec_m40_l064_q4_s12p10",
+      "run_id": "closure_20261005_peec_m40_l064_self12p10_01",
+      "profile": "high64gpu",
+      "completed_at_UTC": "2026-10-05T11:40:18.574363+00:00",
+      "execution_status": "executed",
+      "physical_acceptance_status": "not_verified_incomplete_campaign",
+      "process_exit": 0,
+      "input_signature": "f0ab0b29ba4175b5f4c8998e174f1eae57539dcc836896a6b591240595782e9e",
+      "input_sources": [
+        {
+          "path": "configs\\prewrite_closure.json",
+          "sha256": "e5b6bca3023de100b0a93c524544c42269c07f7a998e081d3d2411ba8fc35713"
+        },
+        {
+          "path": "src\\stages\\closure_peec.wl",
+          "sha256": "949a35c88f26df47c18591019c3a428b851546113300ae0b85e8e17c3af1ab8e"
+        },
+        {
+          "path": "src\\PEEC.wl",
+          "sha256": "9f6ce5908db81b5abb0ee53cf9d5ad57824cad72d6fcaeee99c8f682e7fe030f"
+        }
+      ],
+      "failure_reason": null,
+      "source_run_ids": [
+        "closure_20261005_peec_m40_l016_q4_01",
+        "closure_20261005_peec_m40_l032_q4_01",
+        "closure_20261005_peec_m40_l064_q4_01",
+        "closure_20261005_peec_m40_l064_q6_01",
+        "closure_20261005_peec_m40_l064_q8_01"
+      ]
+    },
+    "peec_m80_l032_q4_s10p8": {
+      "task_id": "peec_m80_l032_q4_s10p8",
+      "run_id": "closure_20261005_peec_m80_l032_q4_01",
+      "profile": "high64gpu",
+      "completed_at_UTC": "2026-10-05T11:42:48.567303+00:00",
+      "execution_status": "executed",
+      "physical_acceptance_status": "not_verified_incomplete_campaign",
+      "process_exit": 0,
+      "input_signature": "f0773bad4b3e71cf6fe2da2b96098a07621788b4e2270407ef9059da2e704a46",
+      "input_sources": [
+        {
+          "path": "configs\\prewrite_closure.json",
+          "sha256": "e5b6bca3023de100b0a93c524544c42269c07f7a998e081d3d2411ba8fc35713"
+        },
+        {
+          "path": "src\\stages\\closure_peec.wl",
+          "sha256": "949a35c88f26df47c18591019c3a428b851546113300ae0b85e8e17c3af1ab8e"
+        },
+        {
+          "path": "src\\PEEC.wl",
+          "sha256": "9f6ce5908db81b5abb0ee53cf9d5ad57824cad72d6fcaeee99c8f682e7fe030f"
+        }
+      ],
+      "failure_reason": null,
+      "source_run_ids": [
+        "closure_20261005_peec_m40_l016_q4_01",
+        "closure_20261005_peec_m40_l032_q4_01",
+        "closure_20261005_peec_m40_l064_q4_01",
+        "closure_20261005_peec_m40_l064_q6_01",
+        "closure_20261005_peec_m40_l064_q8_01",
+        "closure_20261005_peec_m40_l064_self12p10_01"
+      ]
+    },
+    "peec_m80_l064_q4_s10p8": {
+      "task_id": "peec_m80_l064_q4_s10p8",
+      "run_id": "closure_20261005_peec_m80_l064_q4_01",
+      "profile": "high64gpu",
+      "completed_at_UTC": "2026-10-05T11:45:35.270439+00:00",
+      "execution_status": "executed",
+      "physical_acceptance_status": "not_verified_incomplete_campaign",
+      "process_exit": 0,
+      "input_signature": "eac9a83f94633ed93463721eefb2d77c69b9acb1328710ec3b0af253dfefe638",
+      "input_sources": [
+        {
+          "path": "configs\\prewrite_closure.json",
+          "sha256": "e5b6bca3023de100b0a93c524544c42269c07f7a998e081d3d2411ba8fc35713"
+        },
+        {
+          "path": "src\\stages\\closure_peec.wl",
+          "sha256": "949a35c88f26df47c18591019c3a428b851546113300ae0b85e8e17c3af1ab8e"
+        },
+        {
+          "path": "src\\PEEC.wl",
+          "sha256": "9f6ce5908db81b5abb0ee53cf9d5ad57824cad72d6fcaeee99c8f682e7fe030f"
+        }
+      ],
+      "failure_reason": null,
+      "source_run_ids": [
+        "closure_20261005_peec_m40_l016_q4_01",
+        "closure_20261005_peec_m40_l032_q4_01",
+        "closure_20261005_peec_m40_l064_q4_01",
+        "closure_20261005_peec_m40_l064_q6_01",
+        "closure_20261005_peec_m40_l064_q8_01",
+        "closure_20261005_peec_m40_l064_self12p10_01",
+        "closure_20261005_peec_m80_l032_q4_01"
+      ]
+    },
+    "fem3_diagnostics": {
+      "task_id": "fem3_diagnostics",
+      "run_id": "closure_fem3_diagnostics_20261005_readonly_02",
+      "profile": "high64gpu",
+      "completed_at_UTC": "2026-10-05T11:49:23.218343+00:00",
+      "execution_status": "executed",
+      "physical_acceptance_status": "failed_numerical",
+      "process_exit": 1,
+      "input_signature": "e3f603f687ca3ba31a1a3408a1e2d3d74b919b619168d1e123907098e27ae4d1",
+      "input_sources": [
+        {
+          "path": "configs\\prewrite_closure.json",
+          "sha256": "e5b6bca3023de100b0a93c524544c42269c07f7a998e081d3d2411ba8fc35713"
+        },
+        {
+          "path": "src\\stages\\closure_fem3_diagnostics.wl",
+          "sha256": "047b09854dd2c26229587509c81c10e7e0571e901c5edd43348ec6ef9c54dc7f"
+        }
+      ],
+      "failure_reason": "preserved_cylinder_phi_and_gauge_thresholds_failed",
+      "source_run_ids": [
+        ""
+      ]
+    },
+    "geometry": {
+      "task_id": "geometry",
+      "run_id": "closure_20261005_geometry_01",
+      "profile": "high64gpu",
+      "completed_at_UTC": "2026-10-05T11:47:49.817739+00:00",
+      "execution_status": "executed",
+      "physical_acceptance_status": "passed_sampled_geometry_and_synthetic_partition_scope",
+      "process_exit": 1,
+      "input_signature": "d786d76292db50b481fa468c6cade928d4f3be13102da41f4c62c324b5ec8947",
+      "input_sources": [
+        {
+          "path": "configs\\prewrite_closure.json",
+          "sha256": "e5b6bca3023de100b0a93c524544c42269c07f7a998e081d3d2411ba8fc35713"
+        },
+        {
+          "path": "src\\stages\\closure_geometry.wl",
+          "sha256": "e760b032dfd7400beba7239d0a369771ba68c36a5dad3373ca418d57b8462504"
+        }
+      ],
+      "failure_reason": null,
+      "source_run_ids": [
+        ""
+      ]
+    },
+    "peec_m80_l064_q6_s10p8": {
+      "task_id": "peec_m80_l064_q6_s10p8",
+      "run_id": "closure_20261005_peec_m80_l064_q6_01",
+      "profile": "high64gpu",
+      "completed_at_UTC": "2026-10-05T11:48:33.863854+00:00",
+      "execution_status": "executed",
+      "physical_acceptance_status": "not_verified_incomplete_campaign",
+      "process_exit": 1,
+      "input_signature": "303db1a848df011320f4009764cc8f2b2e4ac3e35be61674ffd5db0c2408e53f",
+      "input_sources": [
+        {
+          "path": "configs\\prewrite_closure.json",
+          "sha256": "e5b6bca3023de100b0a93c524544c42269c07f7a998e081d3d2411ba8fc35713"
+        },
+        {
+          "path": "src\\stages\\closure_peec.wl",
+          "sha256": "317f61ec4d8b050183f53bf9adc31f6c6c70b4de1fe75a010c70f1dd97ee0d88"
+        },
+        {
+          "path": "src\\PEEC.wl",
+          "sha256": "9f6ce5908db81b5abb0ee53cf9d5ad57824cad72d6fcaeee99c8f682e7fe030f"
+        }
+      ],
+      "failure_reason": null,
+      "source_run_ids": [
+        "closure_20261005_peec_m40_l016_q4_01",
+        "closure_20261005_peec_m40_l032_q4_01",
+        "closure_20261005_peec_m40_l064_q4_01",
+        "closure_20261005_peec_m40_l064_q6_01",
+        "closure_20261005_peec_m40_l064_q8_01",
+        "closure_20261005_peec_m40_l064_self12p10_01",
+        "closure_20261005_peec_m80_l032_q4_01",
+        "closure_20261005_peec_m80_l064_q4_01"
+      ]
+    },
+    "peec_m80_l064_q8_s10p8": {
+      "task_id": "peec_m80_l064_q8_s10p8",
+      "run_id": "closure_20261005_peec_m80_l064_q8_01",
+      "profile": "high64gpu",
+      "completed_at_UTC": "2026-10-05T11:51:31.552485+00:00",
+      "execution_status": "failed_process_exit",
+      "physical_acceptance_status": "not_verified",
+      "process_exit": 1,
+      "input_signature": "22a4c2cbaff6f1ca8e7abc95991e0ec0318d992ab80efcf2c6361361e84e25bb",
+      "input_sources": [
+        {
+          "path": "configs\\prewrite_closure.json",
+          "sha256": "e5b6bca3023de100b0a93c524544c42269c07f7a998e081d3d2411ba8fc35713"
+        },
+        {
+          "path": "src\\stages\\closure_peec.wl",
+          "sha256": "30e2c90fbe450eccc8b04aa98b69bdbf3d61c0e9c6251af30ff23ef94b0152a0"
+        },
+        {
+          "path": "src\\PEEC.wl",
+          "sha256": "9f6ce5908db81b5abb0ee53cf9d5ad57824cad72d6fcaeee99c8f682e7fe030f"
+        }
+      ],
+      "failure_reason": null,
+      "source_run_ids": [
+        "closure_20261005_peec_m40_l016_q4_01",
+        "closure_20261005_peec_m40_l032_q4_01",
+        "closure_20261005_peec_m40_l064_q4_01",
+        "closure_20261005_peec_m40_l064_q6_01",
+        "closure_20261005_peec_m40_l064_q8_01",
+        "closure_20261005_peec_m40_l064_self12p10_01",
+        "closure_20261005_peec_m80_l032_q4_01",
+        "closure_20261005_peec_m80_l064_q4_01",
+        "closure_20261005_peec_m80_l064_q6_01"
+      ]
+    },
+    "gpu_recovery": {
+      "task_id": "gpu_recovery",
+      "run_id": "closure_20261005_gpu9856_recovery_01",
+      "profile": "high64gpu",
+      "completed_at_UTC": "2026-10-05T11:53:28.609525+00:00",
+      "execution_status": "executed",
+      "physical_acceptance_status": "passed_cached_9856_case_checks_and_recovery_arithmetic_only",
+      "process_exit": 0,
+      "input_signature": "b713d37df6521874fcbff2d23c3be26db2a3eb63706e0fb7679077451b464f30",
+      "input_sources": [
+        {
+          "path": "configs\\prewrite_closure.json",
+          "sha256": "e5b6bca3023de100b0a93c524544c42269c07f7a998e081d3d2411ba8fc35713"
+        },
+        {
+          "path": "src\\stages\\closure_gpu_recovery.wl",
+          "sha256": "ec8bc0898aa9584b0c4606211f102363b7dc0fc940fd60b91411e84779fe0a36"
+        }
+      ],
+      "failure_reason": null,
+      "source_run_ids": [
+        ""
+      ]
+    },
+    "ansys_native_probe_q1": {
+      "task_id": "ansys_native_probe_q1",
+      "run_id": "closure_20261005_ansys_probe_r2",
+      "profile": "high64gpu",
+      "completed_at_UTC": "2026-10-05T11:57:26.968422+00:00",
+      "execution_status": "failed_interface_or_solver",
+      "physical_acceptance_status": "failed_or_limited_Ansys_scope",
+      "process_exit": 1,
+      "input_signature": "18a11c46ef0bd5173da26aa60b235fe7875becb89310fd90bcd18bc934a100ba",
+      "input_sources": [
+        {
+          "path": "configs\\prewrite_closure.json",
+          "sha256": "e5b6bca3023de100b0a93c524544c42269c07f7a998e081d3d2411ba8fc35713"
+        },
+        {
+          "path": "src\\RunClosureAnsys.py",
+          "sha256": "2a239fdf1f06b176c3d05e6745fe94cfe5a7416bb5c65603c8784a7b5320e748"
+        },
+        {
+          "path": "src\\ansys_native3d.py",
+          "sha256": "19a41917195aad84018af479dddf8a87c9079667d9894d22becc98d0e4dd35d1"
+        },
+        {
+          "path": "src\\ansys_validate.py",
+          "sha256": "91d3591eae8e651dfdae6fb084e848e469935503d5471a0429c0a9e5bbcfba36"
+        }
+      ],
+      "failure_reason": null,
+      "source_run_ids": [
+        ""
+      ]
+    },
+    "analytic": {
+      "task_id": "analytic",
+      "run_id": "closure_20261005_analytic_01",
+      "profile": "high64gpu",
+      "execution_status": "executed",
+      "physical_acceptance_status": "passed_test_scope_only",
+      "process_exit": 0,
+      "adopted_existing_executed_run": true,
+      "signature_evidence": "original run_manifest.json source snapshot; not current source",
+      "completed_at_UTC": "2026-10-05T19:25:10.5883710+08:00"
+    },
+    "rt0_n16_q14": {
+      "task_id": "rt0_n16_q14",
+      "run_id": "closure_20261005_rt0_n16_q14_01",
+      "profile": "high64gpu",
+      "completed_at_UTC": "2026-10-05T12:06:00.378673+00:00",
+      "execution_status": "executed",
+      "physical_acceptance_status": "not_verified_incomplete_campaign",
+      "process_exit": 0,
+      "input_signature": "0af5042d05d68c4f67a49991ab09a3a92e185533f143a38f6e18600b312cfccf",
+      "input_sources": [
+        {
+          "path": "configs\\prewrite_closure.json",
+          "sha256": "e5b6bca3023de100b0a93c524544c42269c07f7a998e081d3d2411ba8fc35713"
+        },
+        {
+          "path": "src\\stages\\closure_rt0.wl",
+          "sha256": "ad3cba6decc008088faf88d23c4d3d759cae6839de283f804cdb747f32cb2f2d"
+        },
+        {
+          "path": "src\\VoxelOperator.wl",
+          "sha256": "3468d9d9d79782e18245c40b2c0cc2a928d09222b82f7c0c4e371385f92b632e"
+        }
+      ],
+      "failure_reason": null,
+      "source_run_ids": [
+        ""
+      ]
+    },
+    "voxel_operator_tests": {
+      "task_id": "voxel_operator_tests",
+      "run_id": "closure_20261005_rt0_operator_tests_parallel_source_02",
+      "profile": "high64gpu",
+      "completed_at_UTC": "2026-10-05T12:35:46.708220+00:00",
+      "execution_status": "executed",
+      "physical_acceptance_status": "passed_test_scope_only",
+      "process_exit": 0,
+      "input_signature": "a1f9b77308b0391d96063dac074d2a2f571b7fab52f0595e6c0cf38f8ef44789",
+      "input_sources": [
+        {
+          "path": "configs\\prewrite_closure.json",
+          "sha256": "e5b6bca3023de100b0a93c524544c42269c07f7a998e081d3d2411ba8fc35713"
+        },
+        {
+          "path": "src\\stages\\voxel_operator_tests.wl",
+          "sha256": "9eeb3c7706fc190a128871bfd3fc845fca85515123ef870ca775d925e973397a"
+        },
+        {
+          "path": "src\\NotebookPhysics.wl",
+          "sha256": "f651d141ccc62edc67518b24b42984254d049b08eb180616cfb706be803593d6"
+        },
+        {
+          "path": "src\\VoxelOperator.wl",
+          "sha256": "f7062db496d54545b8cc218b8cc86fbd8eb0ec7759a168a065390290de90fd07"
+        },
+        {
+          "path": "src\\VoxelPEEC.wl",
+          "sha256": "cd204a74d2e50b4c82b64e7dc9a10deaaefe98d817d09a54593077443f1eb0e9"
+        },
+        {
+          "path": "src\\VoxelOperatorParallel.wl",
+          "sha256": "ffb61e5e263ce849e2b902127b885bd7197caa46e482a9ecbf21ef9de3a9100b"
+        },
+        {
+          "path": "tests\\VoxelOperator.wlt",
+          "sha256": "209f9cf85da466bf8188a31eb885ddbfe16d579be26c79a056e5fd15964e8af3"
+        }
+      ],
+      "failure_reason": null,
+      "source_run_ids": [
+        ""
+      ]
+    },
+    "rt0_n20_q14": {
+      "task_id": "rt0_n20_q14",
+      "run_id": "closure_20261005_rt0_n20_q14_01",
+      "profile": "high64gpu",
+      "completed_at_UTC": "2026-10-05T12:30:27.973677+00:00",
+      "execution_status": "executed",
+      "physical_acceptance_status": "not_verified_incomplete_campaign",
+      "process_exit": 0,
+      "input_signature": "8c03956b4aa711fc02293c40b503f3cf330f6ff3456944bf07789d79ec57970a",
+      "input_sources": [
+        {
+          "path": "configs\\prewrite_closure.json",
+          "sha256": "e5b6bca3023de100b0a93c524544c42269c07f7a998e081d3d2411ba8fc35713"
+        },
+        {
+          "path": "src\\stages\\closure_rt0.wl",
+          "sha256": "ad3cba6decc008088faf88d23c4d3d759cae6839de283f804cdb747f32cb2f2d"
+        },
+        {
+          "path": "src\\VoxelOperator.wl",
+          "sha256": "3468d9d9d79782e18245c40b2c0cc2a928d09222b82f7c0c4e371385f92b632e"
+        }
+      ],
+      "failure_reason": null,
+      "source_run_ids": [
+        "closure_20261005_rt0_n16_q14_01"
+      ]
+    },
+    "closure_rt0_parallel_tests": {
+      "task_id": "closure_rt0_parallel_tests",
+      "run_id": "closure_20261005_rt0_parallel_tests_02",
+      "profile": "high64gpu",
+      "completed_at_UTC": "2026-10-05T12:32:59.208428+00:00",
+      "execution_status": "executed",
+      "physical_acceptance_status": "passed_test_scope_only",
+      "process_exit": 0,
+      "input_signature": "ea1dbbba726ec3720c2be8217899b60f118c32180d648cd477a1a7a1b88544ab",
+      "input_sources": [
+        {
+          "path": "configs\\prewrite_closure.json",
+          "sha256": "e5b6bca3023de100b0a93c524544c42269c07f7a998e081d3d2411ba8fc35713"
+        },
+        {
+          "path": "src\\stages\\closure_rt0_parallel_tests.wl",
+          "sha256": "aafb2dd29a537c9c90206c0e8b1f4b90e969a845ac10655bff17458cbbb49674"
+        },
+        {
+          "path": "src\\NotebookPhysics.wl",
+          "sha256": "f651d141ccc62edc67518b24b42984254d049b08eb180616cfb706be803593d6"
+        },
+        {
+          "path": "src\\VoxelOperator.wl",
+          "sha256": "f7062db496d54545b8cc218b8cc86fbd8eb0ec7759a168a065390290de90fd07"
+        },
+        {
+          "path": "src\\VoxelPEEC.wl",
+          "sha256": "cd204a74d2e50b4c82b64e7dc9a10deaaefe98d817d09a54593077443f1eb0e9"
+        },
+        {
+          "path": "src\\VoxelOperatorParallel.wl",
+          "sha256": "ffb61e5e263ce849e2b902127b885bd7197caa46e482a9ecbf21ef9de3a9100b"
+        },
+        {
+          "path": "tests\\VoxelOperatorParallel.wlt",
+          "sha256": "00337b8ad644e81c1a73f0dc76f0288eb0487a50ed405d9e73ca9c97f6e74fe4"
+        }
+      ],
+      "failure_reason": null,
+      "source_run_ids": [
+        ""
+      ]
+    },
+    "gpu_m40": {
+      "task_id": "gpu_m40",
+      "run_id": "closure_20261005_gpu_m40_01",
+      "profile": "high64gpu",
+      "completed_at_UTC": "2026-10-05T12:35:36.725520+00:00",
+      "execution_status": "executed",
+      "physical_acceptance_status": "passed_CPU_GPU_equivalence_only",
+      "process_exit": 0,
+      "input_signature": "4c117fc5c6a6e72e584e59040ab61ed7784a27ba2f9b37537f45649f78433d78",
+      "input_sources": [
+        {
+          "path": "configs\\prewrite_closure.json",
+          "sha256": "e5b6bca3023de100b0a93c524544c42269c07f7a998e081d3d2411ba8fc35713"
+        },
+        {
+          "path": "src\\stages\\closure_gpu.wl",
+          "sha256": "93873b522d0009d9e03484a28ef7c171fd7e43faccd0950bf4a2f1a0e47b83e5"
+        },
+        {
+          "path": "src\\NotebookPhysics.wl",
+          "sha256": "f651d141ccc62edc67518b24b42984254d049b08eb180616cfb706be803593d6"
+        },
+        {
+          "path": "src\\PEEC.wl",
+          "sha256": "9f6ce5908db81b5abb0ee53cf9d5ad57824cad72d6fcaeee99c8f682e7fe030f"
+        },
+        {
+          "path": "src\\GPUVolumeFarKernel.wl",
+          "sha256": "72eedcdfd09f7c29f47bf2388f20d55687b58b06eff7b1cc337fd3ecdabf43fa"
+        }
+      ],
+      "failure_reason": null,
+      "source_run_ids": [
+        ""
+      ]
+    },
+    "gpu_m80": {
+      "task_id": "gpu_m80",
+      "run_id": "closure_20261005_gpu_m80_01",
+      "profile": "high64gpu",
+      "completed_at_UTC": "2026-10-05T12:45:42.659099+00:00",
+      "execution_status": "executed",
+      "physical_acceptance_status": "passed_CPU_GPU_equivalence_only",
+      "process_exit": 0,
+      "input_signature": "94b9371747f3260715fc60aa23b98bb713754de2b90739cb05d3348da9665334",
+      "input_sources": [
+        {
+          "path": "configs\\prewrite_closure.json",
+          "sha256": "e5b6bca3023de100b0a93c524544c42269c07f7a998e081d3d2411ba8fc35713"
+        },
+        {
+          "path": "src\\stages\\closure_gpu.wl",
+          "sha256": "93873b522d0009d9e03484a28ef7c171fd7e43faccd0950bf4a2f1a0e47b83e5"
+        },
+        {
+          "path": "src\\NotebookPhysics.wl",
+          "sha256": "f651d141ccc62edc67518b24b42984254d049b08eb180616cfb706be803593d6"
+        },
+        {
+          "path": "src\\PEEC.wl",
+          "sha256": "9f6ce5908db81b5abb0ee53cf9d5ad57824cad72d6fcaeee99c8f682e7fe030f"
+        },
+        {
+          "path": "src\\GPUVolumeFarKernel.wl",
+          "sha256": "72eedcdfd09f7c29f47bf2388f20d55687b58b06eff7b1cc337fd3ecdabf43fa"
+        }
+      ],
+      "failure_reason": null,
+      "source_run_ids": [
+        ""
+      ]
+    },
+    "ansys_2d_mesh_seven": {
+      "task_id": "ansys_2d_mesh_seven",
+      "run_id": "closure_20261005_ansys_2dmesh_02",
+      "profile": "high64gpu",
+      "completed_at_UTC": "2026-10-05T12:58:02.401845+00:00",
+      "execution_status": "failed_numerical",
+      "physical_acceptance_status": "limited_fields_unavailable",
+      "process_exit": 1,
+      "input_signature": "8db1fb07c4a243df2e0f6a45241ef1ca5ed52f78953ca8238ea4c5e7e044c10e",
+      "input_sources": [
+        {
+          "path": "configs\\prewrite_closure.json",
+          "sha256": "e5b6bca3023de100b0a93c524544c42269c07f7a998e081d3d2411ba8fc35713"
+        },
+        {
+          "path": "src\\RunClosureAnsys.py",
+          "sha256": "0e82da3f906fc89334c12aedefbd9c943870dd253882f845dc1c9a8c530e2328"
+        },
+        {
+          "path": "src\\ansys_native3d.py",
+          "sha256": "19a41917195aad84018af479dddf8a87c9079667d9894d22becc98d0e4dd35d1"
+        },
+        {
+          "path": "src\\ansys_validate.py",
+          "sha256": "91d3591eae8e651dfdae6fb084e848e469935503d5471a0429c0a9e5bbcfba36"
+        }
+      ],
+      "failure_reason": null,
+      "source_run_ids": [
+        ""
+      ]
+    },
+    "ansys_2d_return_seven": {
+      "task_id": "ansys_2d_return_seven",
+      "run_id": null,
+      "profile": "high64gpu",
+      "execution_status": "not_run_failed_prerequisite",
+      "physical_acceptance_status": "not_run",
+      "process_exit": null,
+      "finalized": true,
+      "blocking_run_id": "closure_20261005_ansys_2dmesh_02",
+      "attempt_run_ids": [
+        "closure_20261005_ansys_2dmesh_01",
+        "closure_20261005_ansys_2dmesh_02"
+      ],
+      "targeted_2d_revision_limit": 2,
+      "actual_20A_verified": false,
+      "source_static_after_run_id": "closure_20261005_ansys_2dmesh_02",
+      "final_status": "not_run_failed_prerequisite",
+      "solver_started": false,
+      "reason": "No retained 2D scalar case satisfied actual20A/common-port and fixed-mesh validation; independent boundary comparisons have no accepted same-geometry source case."
+    },
+    "ansys_2d_outer_seven": {
+      "task_id": "ansys_2d_outer_seven",
+      "run_id": null,
+      "profile": "high64gpu",
+      "execution_status": "not_run_failed_prerequisite",
+      "physical_acceptance_status": "not_run",
+      "process_exit": null,
+      "finalized": true,
+      "blocking_run_id": "closure_20261005_ansys_2dmesh_02",
+      "attempt_run_ids": [
+        "closure_20261005_ansys_2dmesh_01",
+        "closure_20261005_ansys_2dmesh_02"
+      ],
+      "targeted_2d_revision_limit": 2,
+      "actual_20A_verified": false,
+      "source_static_after_run_id": "closure_20261005_ansys_2dmesh_02",
+      "final_status": "not_run_failed_prerequisite",
+      "solver_started": false,
+      "reason": "No retained 2D scalar case satisfied actual20A/common-port and fixed-mesh validation; independent boundary comparisons have no accepted same-geometry source case."
+    },
+    "rt0_n24_q14": {
+      "task_id": "rt0_n24_q14",
+      "run_id": "closure_20261005_rt0_n24_q14_01",
+      "profile": "high64gpu",
+      "completed_at_UTC": "2026-10-05T13:14:45.726672+00:00",
+      "execution_status": "executed",
+      "physical_acceptance_status": "not_verified_incomplete_campaign",
+      "process_exit": 0,
+      "input_signature": "4dd704223a3cc3abc9bf2391c571e71cabf18d6775b1c9f61512c9531708d69c",
+      "input_sources": [
+        {
+          "path": "configs\\prewrite_closure.json",
+          "sha256": "e5b6bca3023de100b0a93c524544c42269c07f7a998e081d3d2411ba8fc35713"
+        },
+        {
+          "path": "src\\stages\\closure_rt0.wl",
+          "sha256": "52c1cc7a728fcb94b606a501140eba7d7780a060e03eb9e1f9736f85b240ff3f"
+        },
+        {
+          "path": "src\\NotebookPhysics.wl",
+          "sha256": "f651d141ccc62edc67518b24b42984254d049b08eb180616cfb706be803593d6"
+        },
+        {
+          "path": "src\\VoxelOperator.wl",
+          "sha256": "f7062db496d54545b8cc218b8cc86fbd8eb0ec7759a168a065390290de90fd07"
+        },
+        {
+          "path": "src\\VoxelPEEC.wl",
+          "sha256": "cd204a74d2e50b4c82b64e7dc9a10deaaefe98d817d09a54593077443f1eb0e9"
+        },
+        {
+          "path": "src\\VoxelOperatorParallel.wl",
+          "sha256": "ffb61e5e263ce849e2b902127b885bd7197caa46e482a9ecbf21ef9de3a9100b"
+        }
+      ],
+      "failure_reason": null,
+      "source_run_ids": [
+        "closure_20261005_rt0_n16_q14_01",
+        "closure_20261005_rt0_n20_q14_01"
+      ]
+    },
+    "frozen_physics_verify": {
+      "task_id": "frozen_physics_verify",
+      "run_id": "closure_20261005_frozen_physics_final02",
+      "profile": "high64gpu",
+      "completed_at_UTC": "2026-10-05T14:00:51.409424+00:00",
+      "execution_status": "executed",
+      "physical_acceptance_status": "not_applicable_original_cache_agreement_only",
+      "process_exit": 0,
+      "input_signature": "a1c3a1932b5daf08a3e71de3a9e21e91f181f8cd25632ed331b8957584f6ac8a",
+      "input_sources": [
+        {
+          "path": "configs\\prewrite_closure.json",
+          "sha256": "e5b6bca3023de100b0a93c524544c42269c07f7a998e081d3d2411ba8fc35713"
+        },
+        {
+          "path": "src\\stages\\closure_frozen_verify.wl",
+          "sha256": "edf3941a18f1bebdcaa181e78187d4f99fbc66463a139f91ebaf0a299e8d84f5"
+        },
+        {
+          "path": "src\\NotebookPhysics.wl",
+          "sha256": "f651d141ccc62edc67518b24b42984254d049b08eb180616cfb706be803593d6"
+        },
+        {
+          "path": "src\\VerifyFrozenPhysics.wls",
+          "sha256": "a1ae47a884224b9789f1bb20a7a458ad3cb6093be5a1b2ec3f60fcca9e278326"
+        }
+      ],
+      "failure_reason": null,
+      "source_run_ids": [
+        "closure_20261005_rt0_n24_q18_01",
+        "closure_20261005_peec_m80_l064_self12p10_01"
+      ]
+    },
+    "rt0_n24_q18": {
+      "task_id": "rt0_n24_q18",
+      "run_id": "closure_20261005_rt0_n24_q18_01",
+      "profile": "high64gpu",
+      "completed_at_UTC": "2026-10-05T13:46:05.934222+00:00",
+      "execution_status": "executed",
+      "physical_acceptance_status": "failed_numerical",
+      "process_exit": 0,
+      "input_signature": "ba6baeffff61a20e3fff24fddc912aa665b1841f795c0c8d8f7fa8a9fbc4e1a2",
+      "input_sources": [
+        {
+          "path": "configs\\prewrite_closure.json",
+          "sha256": "e5b6bca3023de100b0a93c524544c42269c07f7a998e081d3d2411ba8fc35713"
+        },
+        {
+          "path": "src\\stages\\closure_rt0.wl",
+          "sha256": "52c1cc7a728fcb94b606a501140eba7d7780a060e03eb9e1f9736f85b240ff3f"
+        },
+        {
+          "path": "src\\NotebookPhysics.wl",
+          "sha256": "f651d141ccc62edc67518b24b42984254d049b08eb180616cfb706be803593d6"
+        },
+        {
+          "path": "src\\VoxelOperator.wl",
+          "sha256": "f7062db496d54545b8cc218b8cc86fbd8eb0ec7759a168a065390290de90fd07"
+        },
+        {
+          "path": "src\\VoxelPEEC.wl",
+          "sha256": "cd204a74d2e50b4c82b64e7dc9a10deaaefe98d817d09a54593077443f1eb0e9"
+        },
+        {
+          "path": "src\\VoxelOperatorParallel.wl",
+          "sha256": "ffb61e5e263ce849e2b902127b885bd7197caa46e482a9ecbf21ef9de3a9100b"
+        }
+      ],
+      "failure_reason": "sensitivity_threshold_exceeded",
+      "source_run_ids": [
+        "closure_20261005_rt0_n16_q14_01",
+        "closure_20261005_rt0_n20_q14_01",
+        "closure_20261005_rt0_n24_q14_01"
+      ]
+    },
+    "rt0_campaign_collect": {
+      "task_id": "rt0_campaign_collect",
+      "run_id": "closure_20261005_rt0_campaign_collect_01",
+      "profile": "high64gpu",
+      "completed_at_UTC": "2026-10-05T13:52:35.232053+00:00",
+      "execution_status": "executed",
+      "physical_acceptance_status": "passed_cuboid_imposed_field_scope_only",
+      "process_exit": 0,
+      "input_signature": "e7e6e7831d0c7052ec840e48690cf96824fe8141a6baf213937661c0d6be50a2",
+      "input_sources": [
+        {
+          "path": "configs\\prewrite_closure.json",
+          "sha256": "e5b6bca3023de100b0a93c524544c42269c07f7a998e081d3d2411ba8fc35713"
+        },
+        {
+          "path": "src\\stages\\closure_rt0_collect.wl",
+          "sha256": "d41f511bbc8995b376470c0c019c1f0a746e5e587afd5ade5816ef51ef416e96"
+        },
+        {
+          "path": "src\\NotebookPhysics.wl",
+          "sha256": "f651d141ccc62edc67518b24b42984254d049b08eb180616cfb706be803593d6"
+        },
+        {
+          "path": "src\\ClosureCSV.wl",
+          "sha256": "a1cf9546389472069838232f6995237b90954376e0c8dd064a1231a3afe37e8b"
+        }
+      ],
+      "failure_reason": null,
+      "source_run_ids": [
+        "closure_20261005_rt0_n16_q14_01",
+        "closure_20261005_rt0_n20_q14_01",
+        "closure_20261005_rt0_n24_q14_01",
+        "closure_20261005_rt0_n24_q18_01"
+      ]
+    },
+    "peec_m80_l064_q4_s12p10": {
+      "task_id": "peec_m80_l064_q4_s12p10",
+      "run_id": "closure_20261005_peec_m80_l064_self12p10_01",
+      "profile": "high64gpu",
+      "completed_at_UTC": "2026-10-05T13:56:05.274677+00:00",
+      "execution_status": "executed",
+      "physical_acceptance_status": "passed_longitudinal_scope_only",
+      "process_exit": 0,
+      "input_signature": "0aeadf357154c936ca4f236461217de7937692857ed01efaed1a4f5480e4365d",
+      "input_sources": [
+        {
+          "path": "configs\\prewrite_closure.json",
+          "sha256": "e5b6bca3023de100b0a93c524544c42269c07f7a998e081d3d2411ba8fc35713"
+        },
+        {
+          "path": "src\\stages\\closure_peec.wl",
+          "sha256": "9311576605beb1c0e4468c580da9e570e685b44cfb67600b5f4b9161a2c7c1c9"
+        },
+        {
+          "path": "src\\NotebookPhysics.wl",
+          "sha256": "f651d141ccc62edc67518b24b42984254d049b08eb180616cfb706be803593d6"
+        },
+        {
+          "path": "src\\PEEC.wl",
+          "sha256": "9f6ce5908db81b5abb0ee53cf9d5ad57824cad72d6fcaeee99c8f682e7fe030f"
+        }
+      ],
+      "failure_reason": null,
+      "source_run_ids": [
+        "closure_20261005_peec_m40_l016_q4_01",
+        "closure_20261005_peec_m40_l032_q4_01",
+        "closure_20261005_peec_m40_l064_q4_01",
+        "closure_20261005_peec_m40_l064_q6_01",
+        "closure_20261005_peec_m40_l064_q8_01",
+        "closure_20261005_peec_m40_l064_self12p10_01",
+        "closure_20261005_peec_m80_l032_q4_01",
+        "closure_20261005_peec_m80_l064_q4_01",
+        "closure_20261005_peec_m80_l064_q6_01",
+        "closure_20261005_peec_m80_l064_q8_01"
+      ]
+    },
+    "rt0_mesh_export": {
+      "task_id": "rt0_mesh_export",
+      "run_id": "closure_20261005_rt0_mesh_export_01",
+      "profile": "high64gpu",
+      "completed_at_UTC": "2026-10-05T13:59:42.403040+00:00",
+      "execution_status": "executed_data_export",
+      "physical_acceptance_status": "not_applicable_data_export",
+      "process_exit": 0,
+      "input_signature": "cb599deb1960fb6b560e75eb4b3eb564befe9de3d6a0864d1a647fbb80cf3c94",
+      "input_sources": [
+        {
+          "path": "configs\\prewrite_closure.json",
+          "sha256": "e5b6bca3023de100b0a93c524544c42269c07f7a998e081d3d2411ba8fc35713"
+        },
+        {
+          "path": "src\\ExportFrozenGridMesh.py",
+          "sha256": "489a166bba57bc8937ba29c78e15ead84e568e46ee6a4feead2da91d17ff29af"
+        }
+      ],
+      "failure_reason": null,
+      "source_run_ids": [
+        "closure_20261005_rt0_n16_q14_01",
+        "closure_20261005_rt0_n20_q14_01",
+        "closure_20261005_rt0_n24_q14_01",
+        "closure_20261005_rt0_n24_q18_01"
+      ]
+    },
+    "frozen_physics_collect": {
+      "task_id": "frozen_physics_collect",
+      "run_id": "closure_20261005_frozen_physics_collect_01",
+      "profile": "high64gpu",
+      "completed_at_UTC": "2026-10-05T14:03:51.695074+00:00",
+      "execution_status": "passed_original_numeric_agreement",
+      "physical_acceptance_status": "not_applicable_cache_integrity_only",
+      "process_exit": 0,
+      "input_signature": "1d424f5fe63695e4e2b328f80c30ce465348a4f9a6dbda16a93de74199f79229",
+      "input_sources": [
+        {
+          "path": "configs\\prewrite_closure.json",
+          "sha256": "e5b6bca3023de100b0a93c524544c42269c07f7a998e081d3d2411ba8fc35713"
+        },
+        {
+          "path": "src\\CollectFrozenPhysicsValidation.py",
+          "sha256": "f77db7d04a7c11f74af7a88e242f56314245617bc70c5ea78d451958f6f6553c"
+        }
+      ],
+      "failure_reason": null,
+      "source_run_ids": [
+        ""
+      ]
+    }
+  },
+  "runs": [
+    {
+      "task_id": "peec_small_tests",
+      "run_id": "closure_20261005_peec_smalltests_01",
+      "profile": "high64gpu",
+      "completed_at_UTC": "2026-10-05T11:31:55.682772+00:00",
+      "execution_status": "executed",
+      "physical_acceptance_status": "passed_test_scope_only",
+      "process_exit": 0,
+      "input_signature": "889c0dbb233458a647c97e9b7f4d61563eb22e7e24e4aac3d7631a75a5e8ab7d",
+      "failure_reason": null,
+      "source_run_ids": [
+        ""
+      ]
+    },
+    {
+      "task_id": "peec_m40_l016_q4_s10p8",
+      "run_id": "closure_20261005_peec_m40_l016_q4_01",
+      "profile": "high64gpu",
+      "completed_at_UTC": "2026-10-05T11:36:09.028130+00:00",
+      "execution_status": "executed",
+      "physical_acceptance_status": "not_verified_incomplete_campaign",
+      "process_exit": 0,
+      "input_signature": "370d0b67a6e218d544d7d21a2f1bfb561ba5d1a708f7163dc74e21d41f38cad7",
+      "failure_reason": null,
+      "source_run_ids": [
+        ""
+      ]
+    },
+    {
+      "task_id": "peec_m40_l032_q4_s10p8",
+      "run_id": "closure_20261005_peec_m40_l032_q4_01",
+      "profile": "high64gpu",
+      "completed_at_UTC": "2026-10-05T11:37:48.543867+00:00",
+      "execution_status": "executed",
+      "physical_acceptance_status": "not_verified_incomplete_campaign",
+      "process_exit": 0,
+      "input_signature": "d968424a877e4e748662a675a1c0bfaf6ce1508abd8a827b62fd3da652ccfca6",
+      "failure_reason": null,
+      "source_run_ids": [
+        "closure_20261005_peec_m40_l016_q4_01"
+      ]
+    },
+    {
+      "task_id": "peec_m40_l064_q4_s10p8",
+      "run_id": "closure_20261005_peec_m40_l064_q4_01",
+      "profile": "high64gpu",
+      "completed_at_UTC": "2026-10-05T11:38:29.137728+00:00",
+      "execution_status": "executed",
+      "physical_acceptance_status": "not_verified_incomplete_campaign",
+      "process_exit": 0,
+      "input_signature": "c4e28d3045a4a72a38b27858d8c2301c6525574b7f1a53d9ded1ae31f078cfb1",
+      "input_sources": [
+        {
+          "path": "configs\\prewrite_closure.json",
+          "sha256": "e5b6bca3023de100b0a93c524544c42269c07f7a998e081d3d2411ba8fc35713"
+        },
+        {
+          "path": "src\\stages\\closure_peec.wl",
+          "sha256": "949a35c88f26df47c18591019c3a428b851546113300ae0b85e8e17c3af1ab8e"
+        },
+        {
+          "path": "src\\PEEC.wl",
+          "sha256": "9f6ce5908db81b5abb0ee53cf9d5ad57824cad72d6fcaeee99c8f682e7fe030f"
+        }
+      ],
+      "failure_reason": null,
+      "source_run_ids": [
+        "closure_20261005_peec_m40_l016_q4_01 closure_20261005_peec_m40_l032_q4_01"
+      ]
+    },
+    {
+      "task_id": "peec_m40_l064_q6_s10p8",
+      "run_id": "closure_20261005_peec_m40_l064_q6_01",
+      "profile": "high64gpu",
+      "completed_at_UTC": "2026-10-05T11:39:13.444934+00:00",
+      "execution_status": "executed",
+      "physical_acceptance_status": "not_verified_incomplete_campaign",
+      "process_exit": 0,
+      "input_signature": "661204be5fffdf61ada15b477abad9ba24592aac188688716b01a1f65e3721b8",
+      "input_sources": [
+        {
+          "path": "configs\\prewrite_closure.json",
+          "sha256": "e5b6bca3023de100b0a93c524544c42269c07f7a998e081d3d2411ba8fc35713"
+        },
+        {
+          "path": "src\\stages\\closure_peec.wl",
+          "sha256": "949a35c88f26df47c18591019c3a428b851546113300ae0b85e8e17c3af1ab8e"
+        },
+        {
+          "path": "src\\PEEC.wl",
+          "sha256": "9f6ce5908db81b5abb0ee53cf9d5ad57824cad72d6fcaeee99c8f682e7fe030f"
+        }
+      ],
+      "failure_reason": null,
+      "source_run_ids": [
+        "closure_20261005_peec_m40_l016_q4_01",
+        "closure_20261005_peec_m40_l032_q4_01",
+        "closure_20261005_peec_m40_l064_q4_01"
+      ]
+    },
+    {
+      "task_id": "peec_m40_l064_q8_s10p8",
+      "run_id": "closure_20261005_peec_m40_l064_q8_01",
+      "profile": "high64gpu",
+      "completed_at_UTC": "2026-10-05T11:39:51.089701+00:00",
+      "execution_status": "executed",
+      "physical_acceptance_status": "not_verified_incomplete_campaign",
+      "process_exit": 0,
+      "input_signature": "8c23e61604b9d90f1081b79769ab8d60a20f9449bc80878da514875251bcbac9",
+      "input_sources": [
+        {
+          "path": "configs\\prewrite_closure.json",
+          "sha256": "e5b6bca3023de100b0a93c524544c42269c07f7a998e081d3d2411ba8fc35713"
+        },
+        {
+          "path": "src\\stages\\closure_peec.wl",
+          "sha256": "949a35c88f26df47c18591019c3a428b851546113300ae0b85e8e17c3af1ab8e"
+        },
+        {
+          "path": "src\\PEEC.wl",
+          "sha256": "9f6ce5908db81b5abb0ee53cf9d5ad57824cad72d6fcaeee99c8f682e7fe030f"
+        }
+      ],
+      "failure_reason": null,
+      "source_run_ids": [
+        "closure_20261005_peec_m40_l016_q4_01",
+        "closure_20261005_peec_m40_l032_q4_01",
+        "closure_20261005_peec_m40_l064_q4_01",
+        "closure_20261005_peec_m40_l064_q6_01"
+      ]
+    },
+    {
+      "task_id": "peec_m40_l064_q4_s12p10",
+      "run_id": "closure_20261005_peec_m40_l064_self12p10_01",
+      "profile": "high64gpu",
+      "completed_at_UTC": "2026-10-05T11:40:18.574363+00:00",
+      "execution_status": "executed",
+      "physical_acceptance_status": "not_verified_incomplete_campaign",
+      "process_exit": 0,
+      "input_signature": "f0ab0b29ba4175b5f4c8998e174f1eae57539dcc836896a6b591240595782e9e",
+      "input_sources": [
+        {
+          "path": "configs\\prewrite_closure.json",
+          "sha256": "e5b6bca3023de100b0a93c524544c42269c07f7a998e081d3d2411ba8fc35713"
+        },
+        {
+          "path": "src\\stages\\closure_peec.wl",
+          "sha256": "949a35c88f26df47c18591019c3a428b851546113300ae0b85e8e17c3af1ab8e"
+        },
+        {
+          "path": "src\\PEEC.wl",
+          "sha256": "9f6ce5908db81b5abb0ee53cf9d5ad57824cad72d6fcaeee99c8f682e7fe030f"
+        }
+      ],
+      "failure_reason": null,
+      "source_run_ids": [
+        "closure_20261005_peec_m40_l016_q4_01",
+        "closure_20261005_peec_m40_l032_q4_01",
+        "closure_20261005_peec_m40_l064_q4_01",
+        "closure_20261005_peec_m40_l064_q6_01",
+        "closure_20261005_peec_m40_l064_q8_01"
+      ]
+    },
+    {
+      "task_id": "peec_m80_l032_q4_s10p8",
+      "run_id": "closure_20261005_peec_m80_l032_q4_01",
+      "profile": "high64gpu",
+      "completed_at_UTC": "2026-10-05T11:42:48.567303+00:00",
+      "execution_status": "executed",
+      "physical_acceptance_status": "not_verified_incomplete_campaign",
+      "process_exit": 0,
+      "input_signature": "f0773bad4b3e71cf6fe2da2b96098a07621788b4e2270407ef9059da2e704a46",
+      "input_sources": [
+        {
+          "path": "configs\\prewrite_closure.json",
+          "sha256": "e5b6bca3023de100b0a93c524544c42269c07f7a998e081d3d2411ba8fc35713"
+        },
+        {
+          "path": "src\\stages\\closure_peec.wl",
+          "sha256": "949a35c88f26df47c18591019c3a428b851546113300ae0b85e8e17c3af1ab8e"
+        },
+        {
+          "path": "src\\PEEC.wl",
+          "sha256": "9f6ce5908db81b5abb0ee53cf9d5ad57824cad72d6fcaeee99c8f682e7fe030f"
+        }
+      ],
+      "failure_reason": null,
+      "source_run_ids": [
+        "closure_20261005_peec_m40_l016_q4_01",
+        "closure_20261005_peec_m40_l032_q4_01",
+        "closure_20261005_peec_m40_l064_q4_01",
+        "closure_20261005_peec_m40_l064_q6_01",
+        "closure_20261005_peec_m40_l064_q8_01",
+        "closure_20261005_peec_m40_l064_self12p10_01"
+      ]
+    },
+    {
+      "task_id": "peec_m80_l064_q4_s10p8",
+      "run_id": "closure_20261005_peec_m80_l064_q4_01",
+      "profile": "high64gpu",
+      "completed_at_UTC": "2026-10-05T11:45:35.270439+00:00",
+      "execution_status": "executed",
+      "physical_acceptance_status": "not_verified_incomplete_campaign",
+      "process_exit": 0,
+      "input_signature": "eac9a83f94633ed93463721eefb2d77c69b9acb1328710ec3b0af253dfefe638",
+      "input_sources": [
+        {
+          "path": "configs\\prewrite_closure.json",
+          "sha256": "e5b6bca3023de100b0a93c524544c42269c07f7a998e081d3d2411ba8fc35713"
+        },
+        {
+          "path": "src\\stages\\closure_peec.wl",
+          "sha256": "949a35c88f26df47c18591019c3a428b851546113300ae0b85e8e17c3af1ab8e"
+        },
+        {
+          "path": "src\\PEEC.wl",
+          "sha256": "9f6ce5908db81b5abb0ee53cf9d5ad57824cad72d6fcaeee99c8f682e7fe030f"
+        }
+      ],
+      "failure_reason": null,
+      "source_run_ids": [
+        "closure_20261005_peec_m40_l016_q4_01",
+        "closure_20261005_peec_m40_l032_q4_01",
+        "closure_20261005_peec_m40_l064_q4_01",
+        "closure_20261005_peec_m40_l064_q6_01",
+        "closure_20261005_peec_m40_l064_q8_01",
+        "closure_20261005_peec_m40_l064_self12p10_01",
+        "closure_20261005_peec_m80_l032_q4_01"
+      ]
+    },
+    {
+      "task_id": "fem3_diagnostics",
+      "run_id": "closure_fem3_diagnostics_20261005_readonly_01",
+      "profile": "high64gpu",
+      "completed_at_UTC": "2026-10-05T11:46:19.522926+00:00",
+      "execution_status": "failed_process_exit",
+      "physical_acceptance_status": "not_verified",
+      "process_exit": -1,
+      "input_signature": "2687f981a8666c3bb3dc13d11dff144bf6352b042e8c914306c579d9f95c0c00",
+      "input_sources": [
+        {
+          "path": "configs\\prewrite_closure.json",
+          "sha256": "e5b6bca3023de100b0a93c524544c42269c07f7a998e081d3d2411ba8fc35713"
+        },
+        {
+          "path": "src\\stages\\closure_fem3_diagnostics.wl",
+          "sha256": "db7d539af2bbf995e7c1bd1cb398e76eb1cf3ff89f06fd72f5c1e77bee93fce6"
+        }
+      ],
+      "failure_reason": null,
+      "source_run_ids": [
+        ""
+      ]
+    },
+    {
+      "task_id": "geometry",
+      "run_id": "closure_20261005_geometry_01",
+      "profile": "high64gpu",
+      "completed_at_UTC": "2026-10-05T11:47:49.817739+00:00",
+      "execution_status": "executed",
+      "physical_acceptance_status": "passed_sampled_geometry_and_synthetic_partition_scope",
+      "process_exit": 1,
+      "input_signature": "d786d76292db50b481fa468c6cade928d4f3be13102da41f4c62c324b5ec8947",
+      "input_sources": [
+        {
+          "path": "configs\\prewrite_closure.json",
+          "sha256": "e5b6bca3023de100b0a93c524544c42269c07f7a998e081d3d2411ba8fc35713"
+        },
+        {
+          "path": "src\\stages\\closure_geometry.wl",
+          "sha256": "e760b032dfd7400beba7239d0a369771ba68c36a5dad3373ca418d57b8462504"
+        }
+      ],
+      "failure_reason": null,
+      "source_run_ids": [
+        ""
+      ]
+    },
+    {
+      "task_id": "peec_m80_l064_q6_s10p8",
+      "run_id": "closure_20261005_peec_m80_l064_q6_01",
+      "profile": "high64gpu",
+      "completed_at_UTC": "2026-10-05T11:48:33.863854+00:00",
+      "execution_status": "executed",
+      "physical_acceptance_status": "not_verified_incomplete_campaign",
+      "process_exit": 1,
+      "input_signature": "303db1a848df011320f4009764cc8f2b2e4ac3e35be61674ffd5db0c2408e53f",
+      "input_sources": [
+        {
+          "path": "configs\\prewrite_closure.json",
+          "sha256": "e5b6bca3023de100b0a93c524544c42269c07f7a998e081d3d2411ba8fc35713"
+        },
+        {
+          "path": "src\\stages\\closure_peec.wl",
+          "sha256": "317f61ec4d8b050183f53bf9adc31f6c6c70b4de1fe75a010c70f1dd97ee0d88"
+        },
+        {
+          "path": "src\\PEEC.wl",
+          "sha256": "9f6ce5908db81b5abb0ee53cf9d5ad57824cad72d6fcaeee99c8f682e7fe030f"
+        }
+      ],
+      "failure_reason": null,
+      "source_run_ids": [
+        "closure_20261005_peec_m40_l016_q4_01",
+        "closure_20261005_peec_m40_l032_q4_01",
+        "closure_20261005_peec_m40_l064_q4_01",
+        "closure_20261005_peec_m40_l064_q6_01",
+        "closure_20261005_peec_m40_l064_q8_01",
+        "closure_20261005_peec_m40_l064_self12p10_01",
+        "closure_20261005_peec_m80_l032_q4_01",
+        "closure_20261005_peec_m80_l064_q4_01"
+      ]
+    },
+    {
+      "task_id": "fem3_diagnostics",
+      "run_id": "closure_fem3_diagnostics_20261005_readonly_02",
+      "profile": "high64gpu",
+      "completed_at_UTC": "2026-10-05T11:49:23.218343+00:00",
+      "execution_status": "executed",
+      "physical_acceptance_status": "failed_numerical",
+      "process_exit": 1,
+      "input_signature": "e3f603f687ca3ba31a1a3408a1e2d3d74b919b619168d1e123907098e27ae4d1",
+      "input_sources": [
+        {
+          "path": "configs\\prewrite_closure.json",
+          "sha256": "e5b6bca3023de100b0a93c524544c42269c07f7a998e081d3d2411ba8fc35713"
+        },
+        {
+          "path": "src\\stages\\closure_fem3_diagnostics.wl",
+          "sha256": "047b09854dd2c26229587509c81c10e7e0571e901c5edd43348ec6ef9c54dc7f"
+        }
+      ],
+      "failure_reason": "preserved_cylinder_phi_and_gauge_thresholds_failed",
+      "source_run_ids": [
+        ""
+      ]
+    },
+    {
+      "task_id": "peec_m80_l064_q8_s10p8",
+      "run_id": "closure_20261005_peec_m80_l064_q8_01",
+      "profile": "high64gpu",
+      "completed_at_UTC": "2026-10-05T11:51:31.552485+00:00",
+      "execution_status": "failed_process_exit",
+      "physical_acceptance_status": "not_verified",
+      "process_exit": 1,
+      "input_signature": "22a4c2cbaff6f1ca8e7abc95991e0ec0318d992ab80efcf2c6361361e84e25bb",
+      "input_sources": [
+        {
+          "path": "configs\\prewrite_closure.json",
+          "sha256": "e5b6bca3023de100b0a93c524544c42269c07f7a998e081d3d2411ba8fc35713"
+        },
+        {
+          "path": "src\\stages\\closure_peec.wl",
+          "sha256": "30e2c90fbe450eccc8b04aa98b69bdbf3d61c0e9c6251af30ff23ef94b0152a0"
+        },
+        {
+          "path": "src\\PEEC.wl",
+          "sha256": "9f6ce5908db81b5abb0ee53cf9d5ad57824cad72d6fcaeee99c8f682e7fe030f"
+        }
+      ],
+      "failure_reason": null,
+      "source_run_ids": [
+        "closure_20261005_peec_m40_l016_q4_01",
+        "closure_20261005_peec_m40_l032_q4_01",
+        "closure_20261005_peec_m40_l064_q4_01",
+        "closure_20261005_peec_m40_l064_q6_01",
+        "closure_20261005_peec_m40_l064_q8_01",
+        "closure_20261005_peec_m40_l064_self12p10_01",
+        "closure_20261005_peec_m80_l032_q4_01",
+        "closure_20261005_peec_m80_l064_q4_01",
+        "closure_20261005_peec_m80_l064_q6_01"
+      ]
+    },
+    {
+      "task_id": "gpu_recovery",
+      "run_id": "closure_20261005_gpu9856_recovery_01",
+      "profile": "high64gpu",
+      "completed_at_UTC": "2026-10-05T11:53:28.609525+00:00",
+      "execution_status": "executed",
+      "physical_acceptance_status": "passed_cached_9856_case_checks_and_recovery_arithmetic_only",
+      "process_exit": 0,
+      "input_signature": "b713d37df6521874fcbff2d23c3be26db2a3eb63706e0fb7679077451b464f30",
+      "input_sources": [
+        {
+          "path": "configs\\prewrite_closure.json",
+          "sha256": "e5b6bca3023de100b0a93c524544c42269c07f7a998e081d3d2411ba8fc35713"
+        },
+        {
+          "path": "src\\stages\\closure_gpu_recovery.wl",
+          "sha256": "ec8bc0898aa9584b0c4606211f102363b7dc0fc940fd60b91411e84779fe0a36"
+        }
+      ],
+      "failure_reason": null,
+      "source_run_ids": [
+        ""
+      ]
+    },
+    {
+      "task_id": "ansys_native_probe_q1",
+      "run_id": "closure_20261005_ansys_probe_r2",
+      "profile": "high64gpu",
+      "completed_at_UTC": "2026-10-05T11:57:26.968422+00:00",
+      "execution_status": "failed_interface_or_solver",
+      "physical_acceptance_status": "failed_or_limited_Ansys_scope",
+      "process_exit": 1,
+      "input_signature": "18a11c46ef0bd5173da26aa60b235fe7875becb89310fd90bcd18bc934a100ba",
+      "input_sources": [
+        {
+          "path": "configs\\prewrite_closure.json",
+          "sha256": "e5b6bca3023de100b0a93c524544c42269c07f7a998e081d3d2411ba8fc35713"
+        },
+        {
+          "path": "src\\RunClosureAnsys.py",
+          "sha256": "2a239fdf1f06b176c3d05e6745fe94cfe5a7416bb5c65603c8784a7b5320e748"
+        },
+        {
+          "path": "src\\ansys_native3d.py",
+          "sha256": "19a41917195aad84018af479dddf8a87c9079667d9894d22becc98d0e4dd35d1"
+        },
+        {
+          "path": "src\\ansys_validate.py",
+          "sha256": "91d3591eae8e651dfdae6fb084e848e469935503d5471a0429c0a9e5bbcfba36"
+        }
+      ],
+      "failure_reason": null,
+      "source_run_ids": [
+        ""
+      ]
+    },
+    {
+      "task_id": "analytic",
+      "run_id": "closure_20261005_analytic_01",
+      "profile": "high64gpu",
+      "execution_status": "executed",
+      "physical_acceptance_status": "passed_test_scope_only",
+      "process_exit": 0,
+      "adopted_existing_executed_run": true,
+      "signature_evidence": "original run_manifest.json source snapshot; not current source",
+      "completed_at_UTC": "2026-10-05T19:25:10.5883710+08:00"
+    },
+    {
+      "task_id": "rt0_n16_q14",
+      "run_id": "closure_20261005_rt0_n16_q14_01",
+      "profile": "high64gpu",
+      "completed_at_UTC": "2026-10-05T12:06:00.378673+00:00",
+      "execution_status": "executed",
+      "physical_acceptance_status": "not_verified_incomplete_campaign",
+      "process_exit": 0,
+      "input_signature": "0af5042d05d68c4f67a49991ab09a3a92e185533f143a38f6e18600b312cfccf",
+      "input_sources": [
+        {
+          "path": "configs\\prewrite_closure.json",
+          "sha256": "e5b6bca3023de100b0a93c524544c42269c07f7a998e081d3d2411ba8fc35713"
+        },
+        {
+          "path": "src\\stages\\closure_rt0.wl",
+          "sha256": "ad3cba6decc008088faf88d23c4d3d759cae6839de283f804cdb747f32cb2f2d"
+        },
+        {
+          "path": "src\\VoxelOperator.wl",
+          "sha256": "3468d9d9d79782e18245c40b2c0cc2a928d09222b82f7c0c4e371385f92b632e"
+        }
+      ],
+      "failure_reason": null,
+      "source_run_ids": [
+        ""
+      ]
+    },
+    {
+      "task_id": "peec_small_tests",
+      "run_id": "closure_20261005_peec_smalltests_frozen_02",
+      "profile": "high64gpu",
+      "completed_at_UTC": "2026-10-05T12:12:19.078516+00:00",
+      "execution_status": "executed",
+      "physical_acceptance_status": "passed_test_scope_only",
+      "process_exit": 0,
+      "input_signature": "a4652e52c6e7a425be80e4f04cd714a8e9ebd37b8009fd8ea2082cd5693551e4",
+      "input_sources": [
+        {
+          "path": "configs\\prewrite_closure.json",
+          "sha256": "e5b6bca3023de100b0a93c524544c42269c07f7a998e081d3d2411ba8fc35713"
+        },
+        {
+          "path": "src\\stages\\closure_peec_tests.wl",
+          "sha256": "7f688bbcc98df080367f8fc270bfa254895df7bd67a3b9b5e1753f7c024ecc06"
+        },
+        {
+          "path": "src\\PEEC.wl",
+          "sha256": "9f6ce5908db81b5abb0ee53cf9d5ad57824cad72d6fcaeee99c8f682e7fe030f"
+        },
+        {
+          "path": "tests\\ClosurePEEC.wlt",
+          "sha256": "437e76c23bcb1981206fb4b302a382f2d9261804f69c761c6a2c5bf5b026de3a"
+        }
+      ],
+      "failure_reason": null,
+      "source_run_ids": [
+        ""
+      ]
+    },
+    {
+      "task_id": "voxel_operator_tests",
+      "run_id": "closure_20261005_rt0_operator_tests_01",
+      "profile": "high64gpu",
+      "completed_at_UTC": "2026-10-05T12:19:15.264318+00:00",
+      "execution_status": "executed",
+      "physical_acceptance_status": "passed_test_scope_only",
+      "process_exit": 0,
+      "input_signature": "14fb42f30081120549994071fe485de8138d346975c07fa2e7573d1a7f974c29",
+      "input_sources": [
+        {
+          "path": "configs\\prewrite_closure.json",
+          "sha256": "e5b6bca3023de100b0a93c524544c42269c07f7a998e081d3d2411ba8fc35713"
+        },
+        {
+          "path": "src\\stages\\voxel_operator_tests.wl",
+          "sha256": "9eeb3c7706fc190a128871bfd3fc845fca85515123ef870ca775d925e973397a"
+        }
+      ],
+      "failure_reason": null,
+      "source_run_ids": [
+        ""
+      ]
+    },
+    {
+      "task_id": "rt0_n20_q14",
+      "run_id": "closure_20261005_rt0_n20_q14_01",
+      "profile": "high64gpu",
+      "completed_at_UTC": "2026-10-05T12:30:27.973677+00:00",
+      "execution_status": "executed",
+      "physical_acceptance_status": "not_verified_incomplete_campaign",
+      "process_exit": 0,
+      "input_signature": "8c03956b4aa711fc02293c40b503f3cf330f6ff3456944bf07789d79ec57970a",
+      "input_sources": [
+        {
+          "path": "configs\\prewrite_closure.json",
+          "sha256": "e5b6bca3023de100b0a93c524544c42269c07f7a998e081d3d2411ba8fc35713"
+        },
+        {
+          "path": "src\\stages\\closure_rt0.wl",
+          "sha256": "ad3cba6decc008088faf88d23c4d3d759cae6839de283f804cdb747f32cb2f2d"
+        },
+        {
+          "path": "src\\VoxelOperator.wl",
+          "sha256": "3468d9d9d79782e18245c40b2c0cc2a928d09222b82f7c0c4e371385f92b632e"
+        }
+      ],
+      "failure_reason": null,
+      "source_run_ids": [
+        "closure_20261005_rt0_n16_q14_01"
+      ]
+    },
+    {
+      "task_id": "voxel_operator_tests",
+      "run_id": "closure_20261005_rt0_operator_tests_parallel_source_01",
+      "profile": "high64gpu",
+      "completed_at_UTC": "2026-10-05T12:32:00.140035+00:00",
+      "execution_status": "executed",
+      "physical_acceptance_status": "passed_test_scope_only",
+      "process_exit": 0,
+      "input_signature": "1c996245fb83507a618b2257d5b12ed9bab4e7014fa25d7648e95f6f462e6a5c",
+      "input_sources": [
+        {
+          "path": "configs\\prewrite_closure.json",
+          "sha256": "e5b6bca3023de100b0a93c524544c42269c07f7a998e081d3d2411ba8fc35713"
+        },
+        {
+          "path": "src\\stages\\voxel_operator_tests.wl",
+          "sha256": "9eeb3c7706fc190a128871bfd3fc845fca85515123ef870ca775d925e973397a"
+        },
+        {
+          "path": "src\\NotebookPhysics.wl",
+          "sha256": "f651d141ccc62edc67518b24b42984254d049b08eb180616cfb706be803593d6"
+        },
+        {
+          "path": "src\\VoxelOperator.wl",
+          "sha256": "f7062db496d54545b8cc218b8cc86fbd8eb0ec7759a168a065390290de90fd07"
+        },
+        {
+          "path": "src\\VoxelPEEC.wl",
+          "sha256": "cd204a74d2e50b4c82b64e7dc9a10deaaefe98d817d09a54593077443f1eb0e9"
+        },
+        {
+          "path": "tests\\VoxelOperator.wlt",
+          "sha256": "209f9cf85da466bf8188a31eb885ddbfe16d579be26c79a056e5fd15964e8af3"
+        }
+      ],
+      "failure_reason": null,
+      "source_run_ids": [
+        ""
+      ]
+    },
+    {
+      "task_id": "closure_rt0_parallel_tests",
+      "run_id": "closure_20261005_rt0_parallel_tests_01",
+      "profile": "high64gpu",
+      "completed_at_UTC": "2026-10-05T12:32:15.220458+00:00",
+      "execution_status": "failed",
+      "physical_acceptance_status": "failed",
+      "process_exit": 1,
+      "input_signature": "e2aa42056c6c2c9227f85dc56b753a2de3c962b504b43f903bf522ed55c0d474",
+      "input_sources": [
+        {
+          "path": "configs\\prewrite_closure.json",
+          "sha256": "e5b6bca3023de100b0a93c524544c42269c07f7a998e081d3d2411ba8fc35713"
+        },
+        {
+          "path": "src\\stages\\closure_rt0_parallel_tests.wl",
+          "sha256": "aafb2dd29a537c9c90206c0e8b1f4b90e969a845ac10655bff17458cbbb49674"
+        },
+        {
+          "path": "src\\NotebookPhysics.wl",
+          "sha256": "f651d141ccc62edc67518b24b42984254d049b08eb180616cfb706be803593d6"
+        },
+        {
+          "path": "src\\VoxelOperator.wl",
+          "sha256": "f7062db496d54545b8cc218b8cc86fbd8eb0ec7759a168a065390290de90fd07"
+        },
+        {
+          "path": "src\\VoxelPEEC.wl",
+          "sha256": "cd204a74d2e50b4c82b64e7dc9a10deaaefe98d817d09a54593077443f1eb0e9"
+        },
+        {
+          "path": "src\\VoxelOperatorParallel.wl",
+          "sha256": "75400b5130e0d0286cc2c1db24781949aa5bb0cef20f8da521dd5dbc808d196d"
+        },
+        {
+          "path": "tests\\VoxelOperatorParallel.wlt",
+          "sha256": "553650f6fec7678d2291073e57f2810ba678fb7ee4d99e30955aa9b1a737eff0"
+        }
+      ],
+      "failure_reason": "see_test_report_and_messages",
+      "source_run_ids": [
+        ""
+      ]
+    },
+    {
+      "task_id": "closure_rt0_parallel_tests",
+      "run_id": "closure_20261005_rt0_parallel_tests_02",
+      "profile": "high64gpu",
+      "completed_at_UTC": "2026-10-05T12:32:59.208428+00:00",
+      "execution_status": "executed",
+      "physical_acceptance_status": "passed_test_scope_only",
+      "process_exit": 0,
+      "input_signature": "ea1dbbba726ec3720c2be8217899b60f118c32180d648cd477a1a7a1b88544ab",
+      "input_sources": [
+        {
+          "path": "configs\\prewrite_closure.json",
+          "sha256": "e5b6bca3023de100b0a93c524544c42269c07f7a998e081d3d2411ba8fc35713"
+        },
+        {
+          "path": "src\\stages\\closure_rt0_parallel_tests.wl",
+          "sha256": "aafb2dd29a537c9c90206c0e8b1f4b90e969a845ac10655bff17458cbbb49674"
+        },
+        {
+          "path": "src\\NotebookPhysics.wl",
+          "sha256": "f651d141ccc62edc67518b24b42984254d049b08eb180616cfb706be803593d6"
+        },
+        {
+          "path": "src\\VoxelOperator.wl",
+          "sha256": "f7062db496d54545b8cc218b8cc86fbd8eb0ec7759a168a065390290de90fd07"
+        },
+        {
+          "path": "src\\VoxelPEEC.wl",
+          "sha256": "cd204a74d2e50b4c82b64e7dc9a10deaaefe98d817d09a54593077443f1eb0e9"
+        },
+        {
+          "path": "src\\VoxelOperatorParallel.wl",
+          "sha256": "ffb61e5e263ce849e2b902127b885bd7197caa46e482a9ecbf21ef9de3a9100b"
+        },
+        {
+          "path": "tests\\VoxelOperatorParallel.wlt",
+          "sha256": "00337b8ad644e81c1a73f0dc76f0288eb0487a50ed405d9e73ca9c97f6e74fe4"
+        }
+      ],
+      "failure_reason": null,
+      "source_run_ids": [
+        ""
+      ]
+    },
+    {
+      "task_id": "gpu_m40",
+      "run_id": "closure_20261005_gpu_m40_01",
+      "profile": "high64gpu",
+      "completed_at_UTC": "2026-10-05T12:35:36.725520+00:00",
+      "execution_status": "executed",
+      "physical_acceptance_status": "passed_CPU_GPU_equivalence_only",
+      "process_exit": 0,
+      "input_signature": "4c117fc5c6a6e72e584e59040ab61ed7784a27ba2f9b37537f45649f78433d78",
+      "input_sources": [
+        {
+          "path": "configs\\prewrite_closure.json",
+          "sha256": "e5b6bca3023de100b0a93c524544c42269c07f7a998e081d3d2411ba8fc35713"
+        },
+        {
+          "path": "src\\stages\\closure_gpu.wl",
+          "sha256": "93873b522d0009d9e03484a28ef7c171fd7e43faccd0950bf4a2f1a0e47b83e5"
+        },
+        {
+          "path": "src\\NotebookPhysics.wl",
+          "sha256": "f651d141ccc62edc67518b24b42984254d049b08eb180616cfb706be803593d6"
+        },
+        {
+          "path": "src\\PEEC.wl",
+          "sha256": "9f6ce5908db81b5abb0ee53cf9d5ad57824cad72d6fcaeee99c8f682e7fe030f"
+        },
+        {
+          "path": "src\\GPUVolumeFarKernel.wl",
+          "sha256": "72eedcdfd09f7c29f47bf2388f20d55687b58b06eff7b1cc337fd3ecdabf43fa"
+        }
+      ],
+      "failure_reason": null,
+      "source_run_ids": [
+        ""
+      ]
+    },
+    {
+      "task_id": "voxel_operator_tests",
+      "run_id": "closure_20261005_rt0_operator_tests_parallel_source_02",
+      "profile": "high64gpu",
+      "completed_at_UTC": "2026-10-05T12:35:46.708220+00:00",
+      "execution_status": "executed",
+      "physical_acceptance_status": "passed_test_scope_only",
+      "process_exit": 0,
+      "input_signature": "a1f9b77308b0391d96063dac074d2a2f571b7fab52f0595e6c0cf38f8ef44789",
+      "input_sources": [
+        {
+          "path": "configs\\prewrite_closure.json",
+          "sha256": "e5b6bca3023de100b0a93c524544c42269c07f7a998e081d3d2411ba8fc35713"
+        },
+        {
+          "path": "src\\stages\\voxel_operator_tests.wl",
+          "sha256": "9eeb3c7706fc190a128871bfd3fc845fca85515123ef870ca775d925e973397a"
+        },
+        {
+          "path": "src\\NotebookPhysics.wl",
+          "sha256": "f651d141ccc62edc67518b24b42984254d049b08eb180616cfb706be803593d6"
+        },
+        {
+          "path": "src\\VoxelOperator.wl",
+          "sha256": "f7062db496d54545b8cc218b8cc86fbd8eb0ec7759a168a065390290de90fd07"
+        },
+        {
+          "path": "src\\VoxelPEEC.wl",
+          "sha256": "cd204a74d2e50b4c82b64e7dc9a10deaaefe98d817d09a54593077443f1eb0e9"
+        },
+        {
+          "path": "src\\VoxelOperatorParallel.wl",
+          "sha256": "ffb61e5e263ce849e2b902127b885bd7197caa46e482a9ecbf21ef9de3a9100b"
+        },
+        {
+          "path": "tests\\VoxelOperator.wlt",
+          "sha256": "209f9cf85da466bf8188a31eb885ddbfe16d579be26c79a056e5fd15964e8af3"
+        }
+      ],
+      "failure_reason": null,
+      "source_run_ids": [
+        ""
+      ]
+    },
+    {
+      "task_id": "gpu_m80",
+      "run_id": "closure_20261005_gpu_m80_01",
+      "profile": "high64gpu",
+      "completed_at_UTC": "2026-10-05T12:45:42.659099+00:00",
+      "execution_status": "executed",
+      "physical_acceptance_status": "passed_CPU_GPU_equivalence_only",
+      "process_exit": 0,
+      "input_signature": "94b9371747f3260715fc60aa23b98bb713754de2b90739cb05d3348da9665334",
+      "input_sources": [
+        {
+          "path": "configs\\prewrite_closure.json",
+          "sha256": "e5b6bca3023de100b0a93c524544c42269c07f7a998e081d3d2411ba8fc35713"
+        },
+        {
+          "path": "src\\stages\\closure_gpu.wl",
+          "sha256": "93873b522d0009d9e03484a28ef7c171fd7e43faccd0950bf4a2f1a0e47b83e5"
+        },
+        {
+          "path": "src\\NotebookPhysics.wl",
+          "sha256": "f651d141ccc62edc67518b24b42984254d049b08eb180616cfb706be803593d6"
+        },
+        {
+          "path": "src\\PEEC.wl",
+          "sha256": "9f6ce5908db81b5abb0ee53cf9d5ad57824cad72d6fcaeee99c8f682e7fe030f"
+        },
+        {
+          "path": "src\\GPUVolumeFarKernel.wl",
+          "sha256": "72eedcdfd09f7c29f47bf2388f20d55687b58b06eff7b1cc337fd3ecdabf43fa"
+        }
+      ],
+      "failure_reason": null,
+      "source_run_ids": [
+        ""
+      ]
+    },
+    {
+      "task_id": "ansys_2d_mesh_seven",
+      "run_id": "closure_20261005_ansys_2dmesh_01",
+      "profile": "high64gpu",
+      "completed_at_UTC": "2026-10-05T12:51:20.381325+00:00",
+      "execution_status": "failed_numerical",
+      "physical_acceptance_status": "limited_fields_unavailable",
+      "process_exit": 1,
+      "input_signature": "324d1c9bbe5f88b0b449c86beb0b1c1a13ed4f3cf8476ed5ebcb77327ffe3bc0",
+      "input_sources": [
+        {
+          "path": "configs\\prewrite_closure.json",
+          "sha256": "e5b6bca3023de100b0a93c524544c42269c07f7a998e081d3d2411ba8fc35713"
+        },
+        {
+          "path": "src\\RunClosureAnsys.py",
+          "sha256": "8c62dbc1b4253b0b5e651a013c18e00f73720547993a56d87eb2897d4cd4b20d"
+        },
+        {
+          "path": "src\\ansys_native3d.py",
+          "sha256": "19a41917195aad84018af479dddf8a87c9079667d9894d22becc98d0e4dd35d1"
+        },
+        {
+          "path": "src\\ansys_validate.py",
+          "sha256": "91d3591eae8e651dfdae6fb084e848e469935503d5471a0429c0a9e5bbcfba36"
+        }
+      ],
+      "failure_reason": null,
+      "source_run_ids": [
+        ""
+      ]
+    },
+    {
+      "task_id": "ansys_2d_mesh_seven",
+      "run_id": "closure_20261005_ansys_2dmesh_02",
+      "profile": "high64gpu",
+      "completed_at_UTC": "2026-10-05T12:58:02.401845+00:00",
+      "execution_status": "failed_numerical",
+      "physical_acceptance_status": "limited_fields_unavailable",
+      "process_exit": 1,
+      "input_signature": "8db1fb07c4a243df2e0f6a45241ef1ca5ed52f78953ca8238ea4c5e7e044c10e",
+      "input_sources": [
+        {
+          "path": "configs\\prewrite_closure.json",
+          "sha256": "e5b6bca3023de100b0a93c524544c42269c07f7a998e081d3d2411ba8fc35713"
+        },
+        {
+          "path": "src\\RunClosureAnsys.py",
+          "sha256": "0e82da3f906fc89334c12aedefbd9c943870dd253882f845dc1c9a8c530e2328"
+        },
+        {
+          "path": "src\\ansys_native3d.py",
+          "sha256": "19a41917195aad84018af479dddf8a87c9079667d9894d22becc98d0e4dd35d1"
+        },
+        {
+          "path": "src\\ansys_validate.py",
+          "sha256": "91d3591eae8e651dfdae6fb084e848e469935503d5471a0429c0a9e5bbcfba36"
+        }
+      ],
+      "failure_reason": null,
+      "source_run_ids": [
+        ""
+      ]
+    },
+    {
+      "task_id": "rt0_n24_q14",
+      "run_id": "closure_20261005_rt0_n24_q14_01",
+      "profile": "high64gpu",
+      "completed_at_UTC": "2026-10-05T13:14:45.726672+00:00",
+      "execution_status": "executed",
+      "physical_acceptance_status": "not_verified_incomplete_campaign",
+      "process_exit": 0,
+      "input_signature": "4dd704223a3cc3abc9bf2391c571e71cabf18d6775b1c9f61512c9531708d69c",
+      "input_sources": [
+        {
+          "path": "configs\\prewrite_closure.json",
+          "sha256": "e5b6bca3023de100b0a93c524544c42269c07f7a998e081d3d2411ba8fc35713"
+        },
+        {
+          "path": "src\\stages\\closure_rt0.wl",
+          "sha256": "52c1cc7a728fcb94b606a501140eba7d7780a060e03eb9e1f9736f85b240ff3f"
+        },
+        {
+          "path": "src\\NotebookPhysics.wl",
+          "sha256": "f651d141ccc62edc67518b24b42984254d049b08eb180616cfb706be803593d6"
+        },
+        {
+          "path": "src\\VoxelOperator.wl",
+          "sha256": "f7062db496d54545b8cc218b8cc86fbd8eb0ec7759a168a065390290de90fd07"
+        },
+        {
+          "path": "src\\VoxelPEEC.wl",
+          "sha256": "cd204a74d2e50b4c82b64e7dc9a10deaaefe98d817d09a54593077443f1eb0e9"
+        },
+        {
+          "path": "src\\VoxelOperatorParallel.wl",
+          "sha256": "ffb61e5e263ce849e2b902127b885bd7197caa46e482a9ecbf21ef9de3a9100b"
+        }
+      ],
+      "failure_reason": null,
+      "source_run_ids": [
+        "closure_20261005_rt0_n16_q14_01",
+        "closure_20261005_rt0_n20_q14_01"
+      ]
+    },
+    {
+      "task_id": "frozen_physics_verify",
+      "run_id": "closure_20261005_frozen_physics_batch01",
+      "profile": "high64gpu",
+      "completed_at_UTC": "2026-10-05T13:22:35.429420+00:00",
+      "execution_status": "failed",
+      "physical_acceptance_status": "not_applicable_original_cache_agreement_only",
+      "process_exit": 1,
+      "input_signature": "d119d011ffc3f37498ce4ee27d606f8d769dd24cf8bbc805e083f5b15abad800",
+      "input_sources": [
+        {
+          "path": "configs\\prewrite_closure.json",
+          "sha256": "e5b6bca3023de100b0a93c524544c42269c07f7a998e081d3d2411ba8fc35713"
+        },
+        {
+          "path": "src\\stages\\closure_frozen_verify.wl",
+          "sha256": "edf3941a18f1bebdcaa181e78187d4f99fbc66463a139f91ebaf0a299e8d84f5"
+        },
+        {
+          "path": "src\\NotebookPhysics.wl",
+          "sha256": "f651d141ccc62edc67518b24b42984254d049b08eb180616cfb706be803593d6"
+        },
+        {
+          "path": "src\\VerifyFrozenPhysics.wls",
+          "sha256": "e09de14ee0882f75a9ffbf7554d2959467a5a1cede38bb53abc2979b89c0cd2e"
+        }
+      ],
+      "failure_reason": "see_test_report_and_messages",
+      "source_run_ids": [
+        "closure_20261005_peec_m40_l016_q4_01",
+        "closure_20261005_peec_m40_l032_q4_01",
+        "closure_20261005_peec_m40_l064_q4_01",
+        "closure_20261005_peec_m40_l064_q6_01",
+        "closure_20261005_peec_m40_l064_q8_01",
+        "closure_20261005_peec_m40_l064_self12p10_01",
+        "closure_20261005_peec_m80_l032_q4_01",
+        "closure_20261005_peec_m80_l064_q4_01",
+        "closure_20261005_peec_m80_l064_q6_01",
+        "closure_20261005_peec_m80_l064_q8_01",
+        "closure_20261005_gpu_m40_01",
+        "closure_20261005_gpu_m80_01",
+        "closure_20261005_rt0_n16_q14_01",
+        "closure_20261005_rt0_n20_q14_01",
+        "closure_20261005_rt0_n24_q14_01"
+      ]
+    },
+    {
+      "task_id": "frozen_physics_verify",
+      "run_id": "closure_20261005_frozen_physics_gpu02",
+      "profile": "high64gpu",
+      "completed_at_UTC": "2026-10-05T13:35:48.758562+00:00",
+      "execution_status": "executed",
+      "physical_acceptance_status": "not_applicable_original_cache_agreement_only",
+      "process_exit": 0,
+      "input_signature": "232fcd5ef7b51604b8c5d6e17052122c9a9bdb74a3bedaec808003894d02fb76",
+      "input_sources": [
+        {
+          "path": "configs\\prewrite_closure.json",
+          "sha256": "e5b6bca3023de100b0a93c524544c42269c07f7a998e081d3d2411ba8fc35713"
+        },
+        {
+          "path": "src\\stages\\closure_frozen_verify.wl",
+          "sha256": "edf3941a18f1bebdcaa181e78187d4f99fbc66463a139f91ebaf0a299e8d84f5"
+        },
+        {
+          "path": "src\\NotebookPhysics.wl",
+          "sha256": "f651d141ccc62edc67518b24b42984254d049b08eb180616cfb706be803593d6"
+        },
+        {
+          "path": "src\\VerifyFrozenPhysics.wls",
+          "sha256": "a1ae47a884224b9789f1bb20a7a458ad3cb6093be5a1b2ec3f60fcca9e278326"
+        }
+      ],
+      "failure_reason": null,
+      "source_run_ids": [
+        "closure_20261005_gpu_m40_01",
+        "closure_20261005_gpu_m80_01"
+      ]
+    },
+    {
+      "task_id": "rt0_n24_q18",
+      "run_id": "closure_20261005_rt0_n24_q18_01",
+      "profile": "high64gpu",
+      "completed_at_UTC": "2026-10-05T13:46:05.934222+00:00",
+      "execution_status": "executed",
+      "physical_acceptance_status": "failed_numerical",
+      "process_exit": 0,
+      "input_signature": "ba6baeffff61a20e3fff24fddc912aa665b1841f795c0c8d8f7fa8a9fbc4e1a2",
+      "input_sources": [
+        {
+          "path": "configs\\prewrite_closure.json",
+          "sha256": "e5b6bca3023de100b0a93c524544c42269c07f7a998e081d3d2411ba8fc35713"
+        },
+        {
+          "path": "src\\stages\\closure_rt0.wl",
+          "sha256": "52c1cc7a728fcb94b606a501140eba7d7780a060e03eb9e1f9736f85b240ff3f"
+        },
+        {
+          "path": "src\\NotebookPhysics.wl",
+          "sha256": "f651d141ccc62edc67518b24b42984254d049b08eb180616cfb706be803593d6"
+        },
+        {
+          "path": "src\\VoxelOperator.wl",
+          "sha256": "f7062db496d54545b8cc218b8cc86fbd8eb0ec7759a168a065390290de90fd07"
+        },
+        {
+          "path": "src\\VoxelPEEC.wl",
+          "sha256": "cd204a74d2e50b4c82b64e7dc9a10deaaefe98d817d09a54593077443f1eb0e9"
+        },
+        {
+          "path": "src\\VoxelOperatorParallel.wl",
+          "sha256": "ffb61e5e263ce849e2b902127b885bd7197caa46e482a9ecbf21ef9de3a9100b"
+        }
+      ],
+      "failure_reason": "sensitivity_threshold_exceeded",
+      "source_run_ids": [
+        "closure_20261005_rt0_n16_q14_01",
+        "closure_20261005_rt0_n20_q14_01",
+        "closure_20261005_rt0_n24_q14_01"
+      ]
+    },
+    {
+      "task_id": "rt0_campaign_collect",
+      "run_id": "closure_20261005_rt0_campaign_collect_01",
+      "profile": "high64gpu",
+      "completed_at_UTC": "2026-10-05T13:52:35.232053+00:00",
+      "execution_status": "executed",
+      "physical_acceptance_status": "passed_cuboid_imposed_field_scope_only",
+      "process_exit": 0,
+      "input_signature": "e7e6e7831d0c7052ec840e48690cf96824fe8141a6baf213937661c0d6be50a2",
+      "input_sources": [
+        {
+          "path": "configs\\prewrite_closure.json",
+          "sha256": "e5b6bca3023de100b0a93c524544c42269c07f7a998e081d3d2411ba8fc35713"
+        },
+        {
+          "path": "src\\stages\\closure_rt0_collect.wl",
+          "sha256": "d41f511bbc8995b376470c0c019c1f0a746e5e587afd5ade5816ef51ef416e96"
+        },
+        {
+          "path": "src\\NotebookPhysics.wl",
+          "sha256": "f651d141ccc62edc67518b24b42984254d049b08eb180616cfb706be803593d6"
+        },
+        {
+          "path": "src\\ClosureCSV.wl",
+          "sha256": "a1cf9546389472069838232f6995237b90954376e0c8dd064a1231a3afe37e8b"
+        }
+      ],
+      "failure_reason": null,
+      "source_run_ids": [
+        "closure_20261005_rt0_n16_q14_01",
+        "closure_20261005_rt0_n20_q14_01",
+        "closure_20261005_rt0_n24_q14_01",
+        "closure_20261005_rt0_n24_q18_01"
+      ]
+    },
+    {
+      "task_id": "peec_m80_l064_q4_s12p10",
+      "run_id": "closure_20261005_peec_m80_l064_self12p10_01",
+      "profile": "high64gpu",
+      "completed_at_UTC": "2026-10-05T13:56:05.274677+00:00",
+      "execution_status": "executed",
+      "physical_acceptance_status": "passed_longitudinal_scope_only",
+      "process_exit": 0,
+      "input_signature": "0aeadf357154c936ca4f236461217de7937692857ed01efaed1a4f5480e4365d",
+      "input_sources": [
+        {
+          "path": "configs\\prewrite_closure.json",
+          "sha256": "e5b6bca3023de100b0a93c524544c42269c07f7a998e081d3d2411ba8fc35713"
+        },
+        {
+          "path": "src\\stages\\closure_peec.wl",
+          "sha256": "9311576605beb1c0e4468c580da9e570e685b44cfb67600b5f4b9161a2c7c1c9"
+        },
+        {
+          "path": "src\\NotebookPhysics.wl",
+          "sha256": "f651d141ccc62edc67518b24b42984254d049b08eb180616cfb706be803593d6"
+        },
+        {
+          "path": "src\\PEEC.wl",
+          "sha256": "9f6ce5908db81b5abb0ee53cf9d5ad57824cad72d6fcaeee99c8f682e7fe030f"
+        }
+      ],
+      "failure_reason": null,
+      "source_run_ids": [
+        "closure_20261005_peec_m40_l016_q4_01",
+        "closure_20261005_peec_m40_l032_q4_01",
+        "closure_20261005_peec_m40_l064_q4_01",
+        "closure_20261005_peec_m40_l064_q6_01",
+        "closure_20261005_peec_m40_l064_q8_01",
+        "closure_20261005_peec_m40_l064_self12p10_01",
+        "closure_20261005_peec_m80_l032_q4_01",
+        "closure_20261005_peec_m80_l064_q4_01",
+        "closure_20261005_peec_m80_l064_q6_01",
+        "closure_20261005_peec_m80_l064_q8_01"
+      ]
+    },
+    {
+      "task_id": "rt0_mesh_export",
+      "run_id": "closure_20261005_rt0_mesh_export_01",
+      "profile": "high64gpu",
+      "completed_at_UTC": "2026-10-05T13:59:42.403040+00:00",
+      "execution_status": "executed_data_export",
+      "physical_acceptance_status": "not_applicable_data_export",
+      "process_exit": 0,
+      "input_signature": "cb599deb1960fb6b560e75eb4b3eb564befe9de3d6a0864d1a647fbb80cf3c94",
+      "input_sources": [
+        {
+          "path": "configs\\prewrite_closure.json",
+          "sha256": "e5b6bca3023de100b0a93c524544c42269c07f7a998e081d3d2411ba8fc35713"
+        },
+        {
+          "path": "src\\ExportFrozenGridMesh.py",
+          "sha256": "489a166bba57bc8937ba29c78e15ead84e568e46ee6a4feead2da91d17ff29af"
+        }
+      ],
+      "failure_reason": null,
+      "source_run_ids": [
+        "closure_20261005_rt0_n16_q14_01",
+        "closure_20261005_rt0_n20_q14_01",
+        "closure_20261005_rt0_n24_q14_01",
+        "closure_20261005_rt0_n24_q18_01"
+      ]
+    },
+    {
+      "task_id": "frozen_physics_verify",
+      "run_id": "closure_20261005_frozen_physics_final02",
+      "profile": "high64gpu",
+      "completed_at_UTC": "2026-10-05T14:00:51.409424+00:00",
+      "execution_status": "executed",
+      "physical_acceptance_status": "not_applicable_original_cache_agreement_only",
+      "process_exit": 0,
+      "input_signature": "a1c3a1932b5daf08a3e71de3a9e21e91f181f8cd25632ed331b8957584f6ac8a",
+      "input_sources": [
+        {
+          "path": "configs\\prewrite_closure.json",
+          "sha256": "e5b6bca3023de100b0a93c524544c42269c07f7a998e081d3d2411ba8fc35713"
+        },
+        {
+          "path": "src\\stages\\closure_frozen_verify.wl",
+          "sha256": "edf3941a18f1bebdcaa181e78187d4f99fbc66463a139f91ebaf0a299e8d84f5"
+        },
+        {
+          "path": "src\\NotebookPhysics.wl",
+          "sha256": "f651d141ccc62edc67518b24b42984254d049b08eb180616cfb706be803593d6"
+        },
+        {
+          "path": "src\\VerifyFrozenPhysics.wls",
+          "sha256": "a1ae47a884224b9789f1bb20a7a458ad3cb6093be5a1b2ec3f60fcca9e278326"
+        }
+      ],
+      "failure_reason": null,
+      "source_run_ids": [
+        "closure_20261005_rt0_n24_q18_01",
+        "closure_20261005_peec_m80_l064_self12p10_01"
+      ]
+    },
+    {
+      "task_id": "frozen_physics_collect",
+      "run_id": "closure_20261005_frozen_physics_collect_01",
+      "profile": "high64gpu",
+      "completed_at_UTC": "2026-10-05T14:03:51.695074+00:00",
+      "execution_status": "passed_original_numeric_agreement",
+      "physical_acceptance_status": "not_applicable_cache_integrity_only",
+      "process_exit": 0,
+      "input_signature": "1d424f5fe63695e4e2b328f80c30ce465348a4f9a6dbda16a93de74199f79229",
+      "input_sources": [
+        {
+          "path": "configs\\prewrite_closure.json",
+          "sha256": "e5b6bca3023de100b0a93c524544c42269c07f7a998e081d3d2411ba8fc35713"
+        },
+        {
+          "path": "src\\CollectFrozenPhysicsValidation.py",
+          "sha256": "f77db7d04a7c11f74af7a88e242f56314245617bc70c5ea78d451958f6f6553c"
+        }
+      ],
+      "failure_reason": null,
+      "source_run_ids": [
+        ""
+      ]
+    }
+  ],
+  "updated_at_UTC": "2026-10-05T14:14:40.571221+00:00",
+  "finalized_tasks": {
+    "ansys_native_probe_q1": {
+      "final_status": "failed_interface_budget_exhausted",
+      "source_run_ids": [
+        "closure_20261005_ansys_probe_r1",
+        "closure_20261005_ansys_probe_r2"
+      ],
+      "reason": "Actual J named-expression loading failed twice; native branches stopped for this closure.",
+      "physical_acceptance_status": "failed_or_limited_Ansys_scope",
+      "blocking_run_id": "closure_20261005_ansys_probe_r2"
+    },
+    "ansys_native_coarse_q1": {
+      "final_status": "not_run_failed_prerequisite",
+      "source_run_ids": [
+        "closure_20261005_ansys_probe_r1",
+        "closure_20261005_ansys_probe_r2"
+      ],
+      "reason": "Actual J named-expression loading failed twice; native branches stopped for this closure.",
+      "physical_acceptance_status": "failed_or_limited_Ansys_scope",
+      "blocking_run_id": "closure_20261005_ansys_probe_r2"
+    },
+    "ansys_native_suite_q1": {
+      "final_status": "not_run_failed_prerequisite",
+      "source_run_ids": [
+        "closure_20261005_ansys_probe_r1",
+        "closure_20261005_ansys_probe_r2"
+      ],
+      "reason": "Actual J named-expression loading failed twice; native branches stopped for this closure.",
+      "physical_acceptance_status": "failed_or_limited_Ansys_scope",
+      "blocking_run_id": "closure_20261005_ansys_probe_r2"
+    },
+    "ansys_native_suite_seven": {
+      "final_status": "not_run_failed_prerequisite",
+      "source_run_ids": [
+        "closure_20261005_ansys_probe_r1",
+        "closure_20261005_ansys_probe_r2"
+      ],
+      "reason": "Actual J named-expression loading failed twice; native branches stopped for this closure.",
+      "physical_acceptance_status": "failed_or_limited_Ansys_scope",
+      "blocking_run_id": "closure_20261005_ansys_probe_r2"
+    },
+    "ansys_2d_mesh_seven": {
+      "final_status": "failed_fixed_mesh_validation_budget_exhausted",
+      "source_run_ids": [
+        "closure_20261005_ansys_2dmesh_01",
+        "closure_20261005_ansys_2dmesh_02"
+      ],
+      "reason": "Two bounded 2D attempts both failed strict actual coordinate/connectivity identity before20A verification. No third revision or solver attempt.",
+      "physical_acceptance_status": "failed_or_limited_Ansys_scope",
+      "blocking_run_id": "closure_20261005_ansys_2dmesh_02"
+    },
+    "ansys_2d_return_seven": {
+      "final_status": "not_run_failed_prerequisite",
+      "source_run_ids": [
+        "closure_20261005_ansys_2dmesh_01",
+        "closure_20261005_ansys_2dmesh_02"
+      ],
+      "reason": "No retained 2D scalar case satisfied actual20A/common-port and fixed-mesh validation; independent boundary comparisons have no accepted same-geometry source case.",
+      "physical_acceptance_status": "failed_or_limited_Ansys_scope",
+      "blocking_run_id": "closure_20261005_ansys_2dmesh_02"
+    },
+    "ansys_2d_outer_seven": {
+      "final_status": "not_run_failed_prerequisite",
+      "source_run_ids": [
+        "closure_20261005_ansys_2dmesh_01",
+        "closure_20261005_ansys_2dmesh_02"
+      ],
+      "reason": "No retained 2D scalar case satisfied actual20A/common-port and fixed-mesh validation; independent boundary comparisons have no accepted same-geometry source case.",
+      "physical_acceptance_status": "failed_or_limited_Ansys_scope",
+      "blocking_run_id": "closure_20261005_ansys_2dmesh_02"
+    },
+    "peec_m40_l016_q4_s10p8": {
+      "final_status": "completed_scope_pass",
+      "source_run_ids": [
+        "closure_20261005_peec_m40_l016_q4_01",
+        "closure_20261005_peec_m80_l064_self12p10_01",
+        "closure_20261005_frozen_physics_collect_01"
+      ],
+      "reason": "单档原始场解及JSON/CSV/WXF一致性通过；适用范围与最终敏感性由显式聚合证据确定。历史后处理/退出未知状态原样保留。",
+      "original_execution_status": "executed",
+      "original_physical_acceptance_status": "not_verified_incomplete_campaign"
+    },
+    "peec_m40_l032_q4_s10p8": {
+      "final_status": "completed_scope_pass",
+      "source_run_ids": [
+        "closure_20261005_peec_m40_l032_q4_01",
+        "closure_20261005_peec_m80_l064_self12p10_01",
+        "closure_20261005_frozen_physics_collect_01"
+      ],
+      "reason": "单档原始场解及JSON/CSV/WXF一致性通过；适用范围与最终敏感性由显式聚合证据确定。历史后处理/退出未知状态原样保留。",
+      "original_execution_status": "executed",
+      "original_physical_acceptance_status": "not_verified_incomplete_campaign"
+    },
+    "peec_m40_l064_q4_s10p8": {
+      "final_status": "completed_scope_pass",
+      "source_run_ids": [
+        "closure_20261005_peec_m40_l064_q4_01",
+        "closure_20261005_peec_m80_l064_self12p10_01",
+        "closure_20261005_frozen_physics_collect_01"
+      ],
+      "reason": "单档原始场解及JSON/CSV/WXF一致性通过；适用范围与最终敏感性由显式聚合证据确定。历史后处理/退出未知状态原样保留。",
+      "original_execution_status": "executed",
+      "original_physical_acceptance_status": "not_verified_incomplete_campaign"
+    },
+    "peec_m40_l064_q6_s10p8": {
+      "final_status": "completed_scope_pass",
+      "source_run_ids": [
+        "closure_20261005_peec_m40_l064_q6_01",
+        "closure_20261005_peec_m80_l064_self12p10_01",
+        "closure_20261005_frozen_physics_collect_01"
+      ],
+      "reason": "单档原始场解及JSON/CSV/WXF一致性通过；适用范围与最终敏感性由显式聚合证据确定。历史后处理/退出未知状态原样保留。",
+      "original_execution_status": "executed",
+      "original_physical_acceptance_status": "not_verified_incomplete_campaign"
+    },
+    "peec_m40_l064_q8_s10p8": {
+      "final_status": "completed_scope_pass",
+      "source_run_ids": [
+        "closure_20261005_peec_m40_l064_q8_01",
+        "closure_20261005_peec_m80_l064_self12p10_01",
+        "closure_20261005_frozen_physics_collect_01"
+      ],
+      "reason": "单档原始场解及JSON/CSV/WXF一致性通过；适用范围与最终敏感性由显式聚合证据确定。历史后处理/退出未知状态原样保留。",
+      "original_execution_status": "executed",
+      "original_physical_acceptance_status": "not_verified_incomplete_campaign"
+    },
+    "peec_m40_l064_q4_s12p10": {
+      "final_status": "completed_scope_pass",
+      "source_run_ids": [
+        "closure_20261005_peec_m40_l064_self12p10_01",
+        "closure_20261005_peec_m80_l064_self12p10_01",
+        "closure_20261005_frozen_physics_collect_01"
+      ],
+      "reason": "单档原始场解及JSON/CSV/WXF一致性通过；适用范围与最终敏感性由显式聚合证据确定。历史后处理/退出未知状态原样保留。",
+      "original_execution_status": "executed",
+      "original_physical_acceptance_status": "not_verified_incomplete_campaign"
+    },
+    "peec_m80_l032_q4_s10p8": {
+      "final_status": "completed_scope_pass",
+      "source_run_ids": [
+        "closure_20261005_peec_m80_l032_q4_01",
+        "closure_20261005_peec_m80_l064_self12p10_01",
+        "closure_20261005_frozen_physics_collect_01"
+      ],
+      "reason": "单档原始场解及JSON/CSV/WXF一致性通过；适用范围与最终敏感性由显式聚合证据确定。历史后处理/退出未知状态原样保留。",
+      "original_execution_status": "executed",
+      "original_physical_acceptance_status": "not_verified_incomplete_campaign"
+    },
+    "peec_m80_l064_q4_s10p8": {
+      "final_status": "completed_scope_pass",
+      "source_run_ids": [
+        "closure_20261005_peec_m80_l064_q4_01",
+        "closure_20261005_peec_m80_l064_self12p10_01",
+        "closure_20261005_frozen_physics_collect_01"
+      ],
+      "reason": "单档原始场解及JSON/CSV/WXF一致性通过；适用范围与最终敏感性由显式聚合证据确定。历史后处理/退出未知状态原样保留。",
+      "original_execution_status": "executed",
+      "original_physical_acceptance_status": "not_verified_incomplete_campaign"
+    },
+    "peec_m80_l064_q6_s10p8": {
+      "final_status": "completed_scientific_scope_wrapper_exit_unknown",
+      "source_run_ids": [
+        "closure_20261005_peec_m80_l064_q6_01",
+        "closure_20261005_peec_m80_l064_self12p10_01",
+        "closure_20261005_frozen_physics_collect_01"
+      ],
+      "reason": "单档原始场解及JSON/CSV/WXF一致性通过；适用范围与最终敏感性由显式聚合证据确定。历史后处理/退出未知状态原样保留。",
+      "original_execution_status": "executed",
+      "original_physical_acceptance_status": "not_verified_incomplete_campaign"
+    },
+    "peec_m80_l064_q8_s10p8": {
+      "final_status": "completed_scientific_scope_wrapper_exit_unknown",
+      "source_run_ids": [
+        "closure_20261005_peec_m80_l064_q8_01",
+        "closure_20261005_peec_m80_l064_self12p10_01",
+        "closure_20261005_frozen_physics_collect_01"
+      ],
+      "reason": "单档原始场解及JSON/CSV/WXF一致性通过；适用范围与最终敏感性由显式聚合证据确定。历史后处理/退出未知状态原样保留。",
+      "original_execution_status": "executed",
+      "original_physical_acceptance_status": "passed_longitudinal_scope_only"
+    },
+    "rt0_n16_q14": {
+      "final_status": "completed_scope_pass",
+      "source_run_ids": [
+        "closure_20261005_rt0_n16_q14_01",
+        "closure_20261005_rt0_campaign_collect_01",
+        "closure_20261005_frozen_physics_collect_01"
+      ],
+      "reason": "单档原始场解及JSON/CSV/WXF一致性通过；适用范围与最终敏感性由显式聚合证据确定。历史后处理/退出未知状态原样保留。",
+      "original_execution_status": "executed",
+      "original_physical_acceptance_status": "not_verified_incomplete_campaign"
+    },
+    "rt0_n20_q14": {
+      "final_status": "completed_scope_pass",
+      "source_run_ids": [
+        "closure_20261005_rt0_n20_q14_01",
+        "closure_20261005_rt0_campaign_collect_01",
+        "closure_20261005_frozen_physics_collect_01"
+      ],
+      "reason": "单档原始场解及JSON/CSV/WXF一致性通过；适用范围与最终敏感性由显式聚合证据确定。历史后处理/退出未知状态原样保留。",
+      "original_execution_status": "executed",
+      "original_physical_acceptance_status": "not_verified_incomplete_campaign"
+    },
+    "rt0_n24_q14": {
+      "final_status": "completed_scope_pass",
+      "source_run_ids": [
+        "closure_20261005_rt0_n24_q14_01",
+        "closure_20261005_rt0_campaign_collect_01",
+        "closure_20261005_frozen_physics_collect_01"
+      ],
+      "reason": "单档原始场解及JSON/CSV/WXF一致性通过；适用范围与最终敏感性由显式聚合证据确定。历史后处理/退出未知状态原样保留。",
+      "original_execution_status": "executed",
+      "original_physical_acceptance_status": "not_verified_incomplete_campaign"
+    },
+    "rt0_n24_q18": {
+      "final_status": "completed_scope_pass",
+      "source_run_ids": [
+        "closure_20261005_rt0_n24_q18_01",
+        "closure_20261005_rt0_campaign_collect_01",
+        "closure_20261005_frozen_physics_collect_01"
+      ],
+      "reason": "单档原始场解及JSON/CSV/WXF一致性通过；适用范围与最终敏感性由显式聚合证据确定。历史后处理/退出未知状态原样保留。",
+      "original_execution_status": "executed",
+      "original_physical_acceptance_status": "failed_numerical"
+    },
+    "peec_m80_l064_q4_s12p10": {
+      "final_status": "completed_scope_pass",
+      "source_run_ids": [
+        "closure_20261005_peec_m80_l064_self12p10_01",
+        "closure_20261005_peec_m80_l064_self12p10_01",
+        "closure_20261005_frozen_physics_collect_01"
+      ],
+      "reason": "单档原始场解及JSON/CSV/WXF一致性通过；适用范围与最终敏感性由显式聚合证据确定。历史后处理/退出未知状态原样保留。",
+      "original_execution_status": "executed",
+      "original_physical_acceptance_status": "passed_longitudinal_scope_only"
+    },
+    "analytic": {
+      "final_status": "completed_scope_pass",
+      "source_run_ids": [
+        "closure_20261005_analytic_01"
+      ],
+      "reason": "12项解析回归通过，默认解析基线复用。"
+    },
+    "geometry": {
+      "final_status": "completed_scientific_scope_wrapper_exit_unknown",
+      "source_run_ids": [
+        "closure_20261005_geometry_01"
+      ],
+      "reason": "60项400/800/1600采样与7/14/28合成分段检查通过；旧wrapper1/内核退出未知保留。"
+    },
+    "peec_small_tests": {
+      "final_status": "completed_scope_pass",
+      "source_run_ids": [
+        "closure_20261005_peec_smalltests_frozen_02"
+      ],
+      "reason": "默认兼容与显式积分参数14项回归通过，事前源码快照已绑定。"
+    },
+    "fem3_diagnostics": {
+      "final_status": "completed_scope_fail",
+      "source_run_ids": [
+        "closure_fem3_diagnostics_20261005_readonly_02"
+      ],
+      "reason": "24项只读恢复与诊断检查通过；原三档圆柱phi/规范残差未通过，边界/导数诊断未提供修订依据，保留最小复现。"
+    },
+    "voxel_operator_tests": {
+      "final_status": "completed_scope_pass",
+      "source_run_ids": [
+        "closure_20261005_rt0_operator_tests_parallel_source_02"
+      ],
+      "reason": "当前物理模块13项致密/矩阵自由算子回归通过。"
+    },
+    "closure_rt0_parallel_tests": {
+      "final_status": "completed_scope_pass",
+      "source_run_ids": [
+        "closure_20261005_rt0_parallel_tests_02"
+      ],
+      "reason": "12项串并行矩阵/复电流/功率/worker退出回归通过；初次语法失败保留。"
+    },
+    "gpu_m40": {
+      "final_status": "completed_scope_pass",
+      "source_run_ids": [
+        "closure_20261005_gpu_m40_01"
+      ],
+      "reason": "1264自由度同模型CPU/GPU矩阵及电流对照通过，实际正常退出。"
+    },
+    "gpu_m80": {
+      "final_status": "completed_scope_pass",
+      "source_run_ids": [
+        "closure_20261005_gpu_m80_01"
+      ],
+      "reason": "5024自由度同模型CPU/GPU矩阵及电流对照通过，实际正常退出。"
+    },
+    "gpu_recovery": {
+      "final_status": "completed_recovery_limited",
+      "source_run_ids": [
+        "closure_20261005_gpu9856_recovery_01"
+      ],
+      "reason": "恢复9856缓存逐细丝复电流/位置/标量及52个原始文件引用；历史退出异常保留，原完整矩阵缺失明确记录。"
+    },
+    "rt0_mesh_export": {
+      "final_status": "completed_data_export",
+      "source_run_ids": [
+        "closure_20261005_rt0_mesh_export_01"
+      ],
+      "reason": "四档原始场中心逐点对应导出的节点/六面体连接/单材料标记，未求解或插值。"
+    },
+    "rt0_campaign_collect": {
+      "final_status": "completed_data_verification",
+      "source_run_ids": [
+        "closure_20261005_rt0_campaign_collect_01"
+      ],
+      "reason": "66项纯CSV算术复核通过，两个连续空间差≤1%，最终q14/18差≤0.1%；旧null摘要与混合资源曲线保留。"
+    },
+    "frozen_physics_collect": {
+      "final_status": "completed_data_verification",
+      "source_run_ids": [
+        "closure_20261005_frozen_physics_collect_01"
+      ],
+      "reason": "17个原始算例914检查/256文件SHA通过；旧整体失败报告及原物理状态不改。"
+    },
+    "fem3_mms": {
+      "final_status": "baseline_reused",
+      "source_run_ids": [
+        "3d_20261005_fem3_mms_distinct",
+        "closure_fem3_diagnostics_20261005_readonly_02"
+      ],
+      "reason": "已有制造解与三档圆柱保存场被完整诊断复核；制造解通过，圆柱phi/规范门槛继续失败。没有有诊断依据的现有实现修订。",
+      "physical_acceptance_status": "passed"
+    },
+    "fem3_cylinder": {
+      "final_status": "baseline_reused",
+      "source_run_ids": [
+        "rerun_20261005_fem3_cylinder_report",
+        "closure_fem3_diagnostics_20261005_readonly_02"
+      ],
+      "reason": "已有制造解与三档圆柱保存场被完整诊断复核；制造解通过，圆柱phi/规范门槛继续失败。没有有诊断依据的现有实现修订。",
+      "physical_acceptance_status": "failed_numerical"
+    },
+    "peec_m40_l128_q4_s10p8": {
+      "final_status": "not_run_not_required",
+      "source_run_ids": [
+        "closure_20261005_peec_m80_l064_self12p10_01"
+      ],
+      "reason": "0.16/0.32/0.64m连续长度差及5024末两档复核已≤1%；按有限计划无需条件性1.28m。"
+    },
+    "peec_m80_l128_q4_s10p8": {
+      "final_status": "not_run_not_required",
+      "source_run_ids": [
+        "closure_20261005_peec_m80_l064_self12p10_01"
+      ],
+      "reason": "0.16/0.32/0.64m连续长度差及5024末两档复核已≤1%；按有限计划无需条件性1.28m。"
+    },
+    "rt0_n16_q18": {
+      "final_status": "not_run_not_required",
+      "source_run_ids": [
+        "closure_20261005_rt0_campaign_collect_01"
+      ],
+      "reason": "8192→16000→27648统一q14两次空间变化均≤1%，最终27648 q18积分复核通过；按计划不增65536，q18仅需最终成功档。"
+    },
+    "rt0_n20_q18": {
+      "final_status": "not_run_not_required",
+      "source_run_ids": [
+        "closure_20261005_rt0_campaign_collect_01"
+      ],
+      "reason": "8192→16000→27648统一q14两次空间变化均≤1%，最终27648 q18积分复核通过；按计划不增65536，q18仅需最终成功档。"
+    },
+    "rt0_n32_q14": {
+      "final_status": "not_run_not_required",
+      "source_run_ids": [
+        "closure_20261005_rt0_campaign_collect_01"
+      ],
+      "reason": "8192→16000→27648统一q14两次空间变化均≤1%，最终27648 q18积分复核通过；按计划不增65536，q18仅需最终成功档。"
+    },
+    "rt0_n32_q18": {
+      "final_status": "not_run_not_required",
+      "source_run_ids": [
+        "closure_20261005_rt0_campaign_collect_01"
+      ],
+      "reason": "8192→16000→27648统一q14两次空间变化均≤1%，最终27648 q18积分复核通过；按计划不增65536，q18仅需最终成功档。"
+    },
+    "frozen_physics_verify": {
+      "final_status": "completed_data_verification",
+      "source_run_ids": [
+        "closure_20261005_frozen_physics_batch01",
+        "closure_20261005_frozen_physics_gpu02",
+        "closure_20261005_frozen_physics_final02",
+        "closure_20261005_frozen_physics_collect_01"
+      ],
+      "reason": "逐算例接受13首批通过报告、2次GPU算术归约复核和最后2档原始回读；接受显式17档汇总。首批parent/child1和失败项保留。",
+      "accepted_validation_run_id": "closure_20261005_frozen_physics_collect_01"
+    }
+  },
+  "final_selection_run_id": "closure_20261005_compute_pin_01"
+}

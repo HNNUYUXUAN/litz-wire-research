@@ -1,0 +1,94 @@
+\documentclass[journal,10pt]{IEEEtran}
+\setlength{\textwidth}{182mm}
+\setlength{\columnsep}{4.2mm}
+\usepackage{amsmath,amssymb,newtxmath}
+\usepackage[no-math]{fontspec}
+\setmainfont{Times New Roman}
+\usepackage{xeCJK}
+\setCJKmainfont[AutoFakeBold=2]{SimSun}
+\usepackage{graphicx,booktabs,array,hyperref,placeins}
+\hypersetup{hidelinks,unicode=true}
+\raggedbottom
+\setlength{\emergencystretch}{2em}
+\renewcommand{\arraystretch}{1.15}
+\usepackage{seqsplit}
+\begin{document}
+\title{Litz 线分层建模与数值验证：完整研究报告 · 06 有限长度纵向 PEEC}
+\author{缪雨轩\thanks{淮南师范学院}}
+
+\maketitle
+\noindent 合并稿对应章节 / Chapter in merged manuscript: \href{report_zh-CN_ieee.pdf#chapter-06}{06}\par
+\FloatBarrier
+\section*{06 有限长度纵向 PEEC}
+\hypertarget{chapter-06}{}
+\pdfbookmark[0]{06 有限长度纵向 PEEC}{bookmark-chapter-06}
+\subsection*{有限长度纵向 PEEC：理论与离散}
+\hypertarget{06.peec_method.heading}{}
+\pdfbookmark[1]{有限长度纵向 PEEC：理论与离散}{bookmark-06.peec_method.heading}
+纵向模型以截面体积细丝承载轴向、沿长度均匀的复电流。欧姆项为各细丝的有限段电阻，部分电感由有限体积对的 1/|r−r′| 核积分得到 \href{report_zh-CN_ieee.pdf#E08}{(7)}，公共端口和总电流仍按 \href{report_zh-CN_ieee.pdf#E04}{(4)} 求解。这里的 1264 与 5024 是体积细丝自由度，不是相同数量的绝缘 Litz 股。场内径向电流集中可以由截面电流分配表现，但基函数不含完整横向涡流环路或真实端部重分布。
+
+
+互项积分阶数与自项精度作为独立选项归档。1264 自由度固定截面首先使用 0.16、0.32、0.64 m 长度；积分检查固定长度，在互项 q=4、6、8 和自项 10/8\(\to\)12/10 之间分别改变一个因素。5024 代表模型复核末两档长度和积分。由于 m40/m80 的实际铜面积略有不同，跨 m 对照按每档自身的等面积 Bessel 参照解释，不能把面积变化隐藏为纯离散误差。
+
+
+部分电感中的外部磁场与长直圆线的内部 Bessel 阻抗不同，因此这里主要以 Rac 作解析比较，并保留长度和几何面积。长度变化限制了当前有限核计算对所选长度的敏感性，却没有增加新的横向基函数。与 FEM–PEEC 文献 [4] 比较时，本研究的纵向体积细丝、激励、回流与反馈方式应分别注明；某个耦合实现的假设不能推广为所有 PEEC 方法的共同缺点。
+
+
+\subsection*{基函数与积分}
+\hypertarget{06.peec_derivation.heading}{}
+\pdfbookmark[1]{基函数与积分}{bookmark-06.peec_derivation.heading}
+每条体积细丝内以常量轴向电流密度 iα/Aα 表示电流。把矢势的体积积分投影回测试细丝并沿长度积分，就得到对称部分电感矩阵。自项核可积但在重合点具有奇性，需采用其专用积分精度；互项使用独立阶数。将有限段欧姆电阻与 jωL 相加形成 Z，再由共同端增广系统得到各细丝复电流与端电压。
+
+
+\subsection*{纵向 PEEC 敏感性与结果}
+\hypertarget{06.peec_results.heading}{}
+\pdfbookmark[1]{纵向 PEEC 敏感性与结果}{bookmark-06.peec_results.heading}
+1264 自由度的 0.16、0.32、0.64 m 三档 Rac 分别为 19.899215、19.958642、19.988477 mΩ/轴向m。两个长度增量的变化均低于 1\%；5024 自由度的 0.32\(\to\)0.64 m 变化也低于门槛。互项 q4/6/8、自项 10/8\(\to\)12/10 以及当前实际截面的粗细离散比较均达到专项规定的有限检查目标。试验逐次改变一个因素；未运行的 1.28 m 档保留为未运行，不能填入外推值或零误差。
+
+
+末档 5024 自由度、Lz=0.64 m、互项 q4、自项 12/10 的 Rac=20.012738128 mΩ/轴向m、Rac/Rdc=3.644719868，损耗为 8.005095251 W/轴向m；与本档等面积 Bessel 参照的差为 0.044582\%。截面颜色图按保存的细丝电流和方形单元恢复。该细丝电流偏差量描述离散导体内部的电流集中，不是 Litz 物理绝缘股线的均流指标。
+
+
+长度敏感性与解析参照分别回答不同问题。前者检验有限长度核在所选区间内的变化，后者核验电阻是否与可比较的长直内场尺度一致。二者接近并不消除边界或基函数缺口。特别是末档的很小积分变化只能支持当前积分实现，对真实端区、曲线股线的横向电流以及端接再分布没有新增证据。论文因而把这一结果称为纵向模型内的有限验收。
+
+
+\hypertarget{E08}{}
+\begin{equation}
+\begin{gathered}
+R_{\alpha\beta}=\delta_{\alpha\beta}\frac{L_z}{\sigma A_\alpha} \\
+L_{\alpha\beta}=\frac{\mu}{4\pi A_\alpha A_\beta}\int_{V_\alpha}\int_{V_\beta}\frac{\hat{\mathbf t}_\alpha\cdot\hat{\mathbf t}_\beta}{|\mathbf r-\mathbf r'|}\,\mathrm dV\,\mathrm dV'
+\end{gathered}
+\tag{7}\label{eq:E08}
+\end{equation}
+\begin{figure}[!htbp]
+\centering
+\setcounter{figure}{9}
+\refstepcounter{figure}\label{fig:peec_cross_section}
+\hypertarget{fig-peec_cross_section}{}
+\includegraphics[width=88.9mm]{../../../panels/zh-CN/peec_cross_section.pdf}
+\par\vspace{4pt}{\small\centering 图 10. 纵向 PEEC 截面电流。\par}
+\vspace{3pt}{\small\raggedright 方形细丝单元的复电流恢复 RMS 幅值。 代表模型含 5024 条纵向体积细丝，轴向长度 0.64 m。坐标和材料面积采用该档实际方形离散定义。\par}
+\end{figure}
+\begin{figure}[!htbp]
+\centering
+\setcounter{figure}{10}
+\refstepcounter{figure}\label{fig:peec_length}
+\hypertarget{fig-peec_length}{}
+\includegraphics[width=88.9mm]{../../../panels/zh-CN/peec_length.pdf}
+\par\vspace{4pt}{\small\centering 图 11. 纵向 PEEC 长度敏感性。\par}
+\vspace{3pt}{\small\raggedright 同一截面按保存的轴向长度比较单位长度电阻。 1264 自由度模型采用 0.16、0.32、0.64 m，5024 自由度复核末两档。积分参数在每个长度序列内固定。\par}
+\end{figure}
+\begin{figure}[!htbp]
+\centering
+\setcounter{figure}{11}
+\refstepcounter{figure}\label{fig:peec_sensitivity}
+\hypertarget{fig-peec_sensitivity}{}
+\includegraphics[width=88.9mm]{../../../panels/zh-CN/peec_sensitivity.pdf}
+\par\vspace{4pt}{\small\centering 图 12. 纵向 PEEC 积分敏感性。\par}
+\vspace{3pt}{\small\raggedright 互项阶数与自项精度各自进行单因素对照。 互项使用 q4、q6、q8，自项使用 10/8 与 12/10。比较保留同一截面及轴向长度。\par}
+\end{figure}
+\clearpage
+\begin{thebibliography}{99}
+\bibitem[4]{P03} Andreas Roßkopf, Eberhard Bär, Christopher Joffe, Clemens Bonse. Calculation of Power Losses in Litz Wire Systems by Coupling FEM and PEEC Method. IEEE TPEL 31(9):6442–6449, 2016. https://doi.org/10.1109/TPEL.2015.2499793
+\end{thebibliography}
+\end{document}

@@ -1,0 +1,13 @@
+$HistoryLength=0;$CharacterEncoding="UTF8";
+root=DirectoryName[DirectoryName[$InputFileName]];Get[FileNameJoin[{root,"src","PublicationStyles.wl"}]];
+linkBox[s_,target_]:=With[{box=Apply[RowBox,{First[LitzPublication`PublicationTextData[s,12]]}]},ButtonBox[box,BaseStyle->"Hyperlink",ButtonData->{target,None}]];
+req=Import[Last[Rest[$ScriptCommandLine]],"RawJSON"];
+cells=Join[{Cell[LitzPublication`PublicationTextData[req["title"],24],"Title"],Cell[LitzPublication`PublicationTextData[req["intro"],12],"Text"]},
+ Flatten[Map[{Cell[LitzPublication`PublicationTextData[#["heading"],16],"Section"],Cell[TextData[{linkBox[#["label"],#["target"]]}],"Text",Evaluatable->False]}&,req["links"]],1]];
+cover=Get[FileNameJoin[{root,req["cover"]}]];UsingFrontEnd[cover=Pane[Magnify[cover,N[310/First[ImageDimensions[Rasterize[cover,"Image",ImageResolution->72]]]]],ImageSize->310,ImageSizeAction->"ResizeToFit"]];
+cells=Insert[cells,Cell[BoxData[ToBoxes[cover,StandardForm]],"Output",TextAlignment->Center,Evaluatable->False],3];
+cells=Insert[cells,Cell[LitzPublication`PublicationTextData[req["cover_caption"],10],"Caption"],4];
+nb=Notebook[cells,StyleDefinitions->LitzPublication`PublicationStylesheet[],TaggingRules-><|"ArchiveDisplayMode"->True,"PhysicalSolverExecuted"->False,"PublicationRunID"->req["run_id"]|>];
+UsingFrontEnd[Put[nb,req["path"]];doc=NotebookOpen[req["path"],Visible->False];NotebookSave[doc];NotebookClose[doc];doc=NotebookOpen[req["path"],Visible->False];restored=NotebookGet[doc];img=Rasterize[doc,"Image",ImageResolution->120];Export[req["preview"],img,"PNG"];NotebookClose[doc]];
+Export[req["verification"],<|"path"->req["path"],"sha256"->FileHash[req["path"],"SHA256","HexString"],"actual_open_save_read_render"->ImageQ[img],"input_count"->Count[restored,Cell[_,"Input",___],Infinity],"physical_solver_calls"->0|>,"RawJSON"];
+Exit[If[ImageQ[img],0,1]];

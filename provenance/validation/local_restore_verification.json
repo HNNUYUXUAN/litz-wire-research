@@ -1,0 +1,184 @@
+{
+  "target": "Candidate Restore With Spaces",
+  "parts": [
+    {
+      "name": "academic-editions.tar.gz.part001",
+      "sha256": "43524dfda0a2087f9513304b86ed525db733f40bf48b7c4ce9ad343d23bf5b02",
+      "bytes": 264704805,
+      "passed": true
+    },
+    {
+      "name": "analytic.tar.gz.part001",
+      "sha256": "37d16ca416e3e635d59c424195776316c9ec04b5c3635bb4adf1297da06d240d",
+      "bytes": 1443395,
+      "passed": true
+    },
+    {
+      "name": "ansys.tar.gz.part001",
+      "sha256": "1aae3edd56882725a9424c96014dee7852d744a7356a870f458225d729b7a060",
+      "bytes": 4486086,
+      "passed": true
+    },
+    {
+      "name": "aphi.tar.gz.part001",
+      "sha256": "8d3b25f820d24426fbba907c75b1efa14b806bc40c53e39c5810e5768a32e414",
+      "bytes": 1073741824,
+      "passed": true
+    },
+    {
+      "name": "aphi.tar.gz.part002",
+      "sha256": "3d20df5687e0fa49b5e253b7761aa5c1ad8bed6d42b0266914bfbf4985cbd053",
+      "bytes": 1073741824,
+      "passed": true
+    },
+    {
+      "name": "aphi.tar.gz.part003",
+      "sha256": "10e01e3a2a705ee308fc515c29af705f44f5eae7011ecfcf6efa34d28ea13f42",
+      "bytes": 1073741824,
+      "passed": true
+    },
+    {
+      "name": "aphi.tar.gz.part004",
+      "sha256": "cd1c9614260283df0f961d64a261bac65d58566ce38e328552f519ddba3e0f2d",
+      "bytes": 134728984,
+      "passed": true
+    },
+    {
+      "name": "common-terminal.tar.gz.part001",
+      "sha256": "0777670a5b7cc9713eb1f9ecb65923ccbea868a5261b1c57905a580777bc8365",
+      "bytes": 727314726,
+      "passed": true
+    },
+    {
+      "name": "fem2.tar.gz.part001",
+      "sha256": "f45c412ffd8758cee9ab7ad531906c6bdb9c88900d0e0f8783aff54359b752d7",
+      "bytes": 6588427,
+      "passed": true
+    },
+    {
+      "name": "geometry.tar.gz.part001",
+      "sha256": "c4901f5ffd904769a3b45e3eb3c7e6ee618550ef4c84c393c2b786c50f4dcace",
+      "bytes": 98820313,
+      "passed": true
+    },
+    {
+      "name": "gpu.tar.gz.part001",
+      "sha256": "07d2a7242a3e2cdd035246cba2d28b4fdc2f920d306a35a20836e8f8236f9fe0",
+      "bytes": 316000599,
+      "passed": true
+    },
+    {
+      "name": "peec.tar.gz.part001",
+      "sha256": "ea3cd0757bbe22a99bc61489d4407ac97d0570b4f56ef1faa71d0a47e3349a21",
+      "bytes": 1037609707,
+      "passed": true
+    },
+    {
+      "name": "publication-inputs.tar.gz.part001",
+      "sha256": "83e2a4ce7c3fb5c25741f4084b2b4a204f3c575eaf519819e676dc60afc6ad3c",
+      "bytes": 48837373,
+      "passed": true
+    },
+    {
+      "name": "research-records.tar.gz.part001",
+      "sha256": "bcba723b368632b59997e5048976e8a9bb49f2969bd5f2afb5be24cf74ba8a7e",
+      "bytes": 974720998,
+      "passed": true
+    },
+    {
+      "name": "research-shared.tar.gz.part001",
+      "sha256": "ea122415080f8a3b65c1b27b71b8fd17ac95ecdc77498edcc6cbe5a3eb8ca4ba",
+      "bytes": 131987680,
+      "passed": true
+    },
+    {
+      "name": "rt0.tar.gz.part001",
+      "sha256": "bd2db08e783d27100f77ff4a74b358215f2a3ddb027d4758f893019ba262ab2b",
+      "bytes": 547956305,
+      "passed": true
+    }
+  ],
+  "datasets": [
+    {
+      "dataset": "academic-editions",
+      "files": 613,
+      "status": "passed",
+      "errors": []
+    },
+    {
+      "dataset": "analytic",
+      "files": 874,
+      "status": "passed",
+      "errors": []
+    },
+    {
+      "dataset": "ansys",
+      "files": 1980,
+      "status": "passed",
+      "errors": []
+    },
+    {
+      "dataset": "aphi",
+      "files": 2057,
+      "status": "passed",
+      "errors": []
+    },
+    {
+      "dataset": "common-terminal",
+      "files": 1401,
+      "status": "passed",
+      "errors": []
+    },
+    {
+      "dataset": "fem2",
+      "files": 470,
+      "status": "passed",
+      "errors": []
+    },
+    {
+      "dataset": "geometry",
+      "files": 1155,
+      "status": "passed",
+      "errors": []
+    },
+    {
+      "dataset": "gpu",
+      "files": 4746,
+      "status": "passed",
+      "errors": []
+    },
+    {
+      "dataset": "peec",
+      "files": 3289,
+      "status": "passed",
+      "errors": []
+    },
+    {
+      "dataset": "publication-inputs",
+      "files": 311,
+      "status": "passed",
+      "errors": []
+    },
+    {
+      "dataset": "research-records",
+      "files": 11389,
+      "status": "passed",
+      "errors": []
+    },
+    {
+      "dataset": "research-shared",
+      "files": 0,
+      "status": "passed",
+      "errors": []
+    },
+    {
+      "dataset": "rt0",
+      "files": 3613,
+      "status": "passed",
+      "errors": []
+    }
+  ],
+  "files": 31898,
+  "passed": true,
+  "elapsed_seconds": 251.29699999999139
+}

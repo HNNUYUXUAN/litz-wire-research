@@ -1,0 +1,129 @@
+\documentclass[journal,10pt]{IEEEtran}
+\setlength{\textwidth}{182mm}
+\setlength{\columnsep}{4.2mm}
+\usepackage{amsmath,amssymb,newtxmath}
+\usepackage[no-math]{fontspec}
+\setmainfont{Times New Roman}
+\usepackage{xeCJK}
+\setCJKmainfont[AutoFakeBold=2]{SimSun}
+\usepackage{graphicx,booktabs,array,hyperref,placeins}
+\hypersetup{hidelinks,unicode=true}
+\raggedbottom
+\setlength{\emergencystretch}{2em}
+\renewcommand{\arraystretch}{1.15}
+\usepackage{seqsplit}
+\begin{document}
+\title{Hierarchical Verification, Common-Terminal Current Sharing, and Finite-Length Longitudinal PEEC for Litz-Wire Modeling · 02 Methods}
+\author{Miao Yuxuan\thanks{Huainan Normal University}}
+
+\maketitle
+\noindent 合并稿对应章节 / Chapter in merged manuscript: \href{paper_en_ieee.pdf#chapter-02}{02}\par
+\FloatBarrier
+\section*{02 Methods}
+\hypertarget{chapter-02}{}
+\pdfbookmark[0]{02 Methods}{bookmark-chapter-02}
+\subsection*{Operating Conditions, Quantities, and Fair Comparisons}
+\hypertarget{02.conventions.heading}{}
+\pdfbookmark[1]{Operating Conditions, Quantities, and Fair Comparisons}{bookmark-02.conventions.heading}
+Calculations use SI units, exp(jωt), and RMS phasors. Copper at 20 °C has conductivity 5.8×10⁷ S/m and relative permeability one. The main transport condition is 200 kHz and 20 A RMS with no independent imposed field. Strands are insulated along their paths and connected in parallel at the ends. Every per-metre quantity refers to axial length; actual strand arc lengths are reported separately. A finite-segment terminal voltage V and the axial electric field used by a two-dimensional model have different units, so their length normalization must remain explicit.
+
+
+The original Q1 conductor with diameter 2 mm is retained as an analytical calibration. Its copper area is 3.141593 mm² and its DC current density is 6.366198 A/mm², exceeding the 4 A/mm² constraint; it therefore does not satisfy the final design condition. Q2 requires at least 5 mm² nominal copper area. The ideal circular area of 640 strands of diameter 0.100 mm is 5.026548 mm², whereas the original two-dimensional 64-sided approximation has an area of approximately 5.018478 mm². Equal-copper references should use the actual chosen area to avoid interpreting an area-discretization difference as a purely electromagnetic improvement.
+
+
+For unequal strand lengths, DC resistance follows from the sum of parallel conductances \href{paper_en_ieee.pdf#E01}{(1)}. Copper volume, arc-length growth, absolute AC resistance, its ratio to DC resistance, loss, and complex strand currents are all reported rather than reducing the comparison to one ratio. RMS Joule loss uses \href{paper_en_ieee.pdf#E02}{(2)} without the one-half factor associated with peak phasors. With an independent imposed field, absorbed power includes work done by that excitation. RT0 imposed-field loss cannot be divided unconditionally by 20² and named intrinsic transport resistance. Equal nominal copper area also does not imply equal copper volume per axial metre.
+
+
+\subsection*{Model Hierarchy and Verification Methods}
+\hypertarget{02.hierarchy.heading}{}
+\pdfbookmark[1]{Model Hierarchy and Verification Methods}{bookmark-02.hierarchy.heading}
+The hierarchy is organized by unknowns and comparable observables. The analytical round wire supplies internal impedance and radial current for a homogeneous long straight conductor; two-dimensional diffusion verifies the same internal-field problem. The multistrand two-dimensional common-terminal model additionally retains intrastand fields, complex current sharing, and an explicit return, while omitting longitudinal transposition and finite end regions. Longitudinal PEEC retains a finite-length partial-inductance kernel and common-terminal constraints but lacks complete transverse current loops. The three-component RT0 imposed-field example tests a three-dimensional operator, continuity, and field absorption; it remains distinct from transport in curved Litz geometry.
+
+
+Verification combines solver residuals, constraints, independent power evaluation, and parameter sensitivities. The retained targets are 10⁻⁸ for true linear residuals and common-terminal or total-current constraints, 0.1\% for independent power balance, and 1\% for relevant mesh, segmentation, boundary, and length changes. Analytical references and analytical current/power integrals have their own stricter targets. RT0 keeps a true GMRES residual target of 10⁻¹¹ and an integration sensitivity target of 0.1\%; CPU/GPU matrix and complex-current comparisons use 10⁻¹⁰. These are definitions of the checks performed in this study, not a claim that every physical problem has already attained the same accuracy.
+
+
+Evidence can be cross-compared only under shared assumptions; a conclusion does not propagate automatically along a diagram arrow. A small linear residual indicates that the assembled system was solved accurately but does not exclude omitted physics or an incorrect boundary. Power balance constrains consistency between the discretization and postprocessing, yet a conservative but inappropriate model may also balance power. Agreement between two levels limits variation under a specified perturbation; it is not an unconditional error bound or a statistical confidence interval. Execution status, numerical-check status, and physical applicability are therefore archived separately.
+
+
+\subsection*{Common-Terminal Field–Circuit Model and Complex Current Sharing}
+\hypertarget{02.common.heading}{}
+\pdfbookmark[1]{Common-Terminal Field–Circuit Model and Complex Current Sharing}{bookmark-02.common.heading}
+Parallel terminals do not require strand currents to be prescribed as equal. Let Z denote the coupled impedance matrix of a specified linear model, e the independently induced term, and i the complex strand-current vector. Common terminal voltage and total current form the augmented system \href{paper_en_ieee.pdf#E04}{(3)}. The implementation solves this system rather than relying on an explicit matrix inverse. Both magnitude and phase are determined by the coupled field–circuit problem. Comparing only current magnitudes overlooks the relationship between individual phasors and their complex sum.
+
+
+Assuming a unique solution of the augmented system, substitution of i=(It/N)1 into the terminal equation shows that equal current sharing holds exactly when [(It/N)Z1+e] lies in the span of 1. Projection by Q gives \href{paper_en_ieee.pdf#E05}{(4)}. Without an independent imposed field, the condition reduces to equality of impedance row sums. With an imposed field, the induced term can preserve or break it. This algebraic criterion applies to the specified Z, e, and terminal model; it is not a theorem of equal sharing for arbitrary continuously transposed three-dimensional geometry.
+
+
+The two-dimensional common-terminal FEM solves the shared axial electric field together with Az degrees of freedom. The preserved u and terminal field are measured in V/m, with Jz=σ(v−u); the return uses its own terminal field, and air is not assigned conductor current. Figures reconstruct Jz from original nodes and material triangles and retain the original coordinate scaling in the integrals. Independent linear-triangle mass integration is compared with complex strand currents, bundle and return losses, and copper area, making the color map auditable. The preserved u itself is not current density.
+
+
+\subsection*{Finite-Length Longitudinal PEEC: Theory and Discretization}
+\hypertarget{02.peec_method.heading}{}
+\pdfbookmark[1]{Finite-Length Longitudinal PEEC: Theory and Discretization}{bookmark-02.peec_method.heading}
+The longitudinal model carries axial, uniform-in-length complex current in cross-sectional volume filaments. The ohmic term is each filament’s finite-segment resistance, and partial inductance is obtained by integrating the finite-volume 1/|r−r′| kernel \href{paper_en_ieee.pdf#E08}{(5)}. A common port and total-current constraint are again solved through \href{paper_en_ieee.pdf#E04}{(3)}. Here, 1264 and 5024 count volume-filament degrees of freedom, not insulated Litz strands. Radial concentration can appear through cross-sectional current redistribution, but the basis contains neither complete transverse eddy-current loops nor realistic end redistribution.
+
+
+Mutual-integration order and self-integration accuracy are archived as separate options. The fixed 1264-degree-of-freedom cross-section is first examined at lengths 0.16, 0.32, and 0.64 m. Integration checks then hold length fixed and change one factor at a time across mutual orders q=4, 6, and 8 and self settings 10/8 to 12/10. The representative 5024 model rechecks the final two lengths and integration settings. Because m40 and m80 have slightly different actual copper areas, each level is interpreted against its own equal-area Bessel reference; an area change is not concealed as pure discretization error.
+
+
+The external magnetic contribution to partial inductance differs from the internal Bessel impedance of a long straight wire. Analytical comparison therefore focuses on AC resistance while retaining length and actual area. Length variation limits sensitivity of the present finite-kernel calculation to the chosen length but does not introduce transverse basis functions. In comparison with FEM–PEEC literature [4], the longitudinal volume basis, excitation, return, and feedback treatment must each be identified. An assumption of one coupling implementation should not be generalized to every PEEC method.
+
+
+\hypertarget{E01}{}
+\begin{equation}
+\begin{gathered}
+R_{\mathrm{dc}}=\left(\sum_{k=1}^{N}\frac{\sigma A_k}{\ell_k}\right)^{-1} \\
+V_{\mathrm{Cu}}=\sum_{k=1}^{N}A_k\ell_k
+\end{gathered}
+\tag{1}\label{eq:E01}
+\end{equation}
+\hypertarget{E02}{}
+\begin{equation}
+\begin{gathered}
+P_{\mathrm{Cu}}=\int_{\Omega_{\mathrm{Cu}}}|\mathbf J|^2/\sigma\,\mathrm d\Omega \\
+R_{\mathrm{ac}}=P_{\mathrm{Cu}}/|I_t|^2 \\
+r_{\mathrm{ac}}=R_{\mathrm{ac}}/L_z
+\end{gathered}
+\tag{2}\label{eq:E02}
+\end{equation}
+\hypertarget{E04}{}\begin{equation}\begin{bmatrix} Z&-\mathbf1\\ \mathbf1^T&0\end{bmatrix}\begin{bmatrix}\mathbf i\\V\end{bmatrix}=\begin{bmatrix}-\mathbf e\\I_t\end{bmatrix}\tag{3}\label{eq:E04}\end{equation}
+\hypertarget{E05}{}
+\begin{equation}
+\begin{gathered}
+Q=I_N-\mathbf1\mathbf1^T/N \\
+Q\left[(I_t/N)Z\mathbf1+\mathbf e\right]=\mathbf0
+\end{gathered}
+\tag{4}\label{eq:E05}
+\end{equation}
+\hypertarget{E08}{}
+\begin{equation}
+\begin{gathered}
+R_{\alpha\beta}=\delta_{\alpha\beta}\frac{L_z}{\sigma A_\alpha} \\
+L_{\alpha\beta}=\frac{\mu}{4\pi A_\alpha A_\beta}\int_{V_\alpha}\int_{V_\beta}\frac{\hat{\mathbf t}_\alpha\cdot\hat{\mathbf t}_\beta}{|\mathbf r-\mathbf r'|}\,\mathrm dV\,\mathrm dV'
+\end{gathered}
+\tag{5}\label{eq:E08}
+\end{equation}
+\begin{figure}[!htbp]
+\centering
+\setcounter{figure}{0}
+\refstepcounter{figure}\label{fig:model_hierarchy}
+\hypertarget{fig-model_hierarchy}{}
+\includegraphics[width=88.9mm]{../../../panels/en/model_hierarchy.pdf}
+\par\vspace{4pt}{\small\centering Fig. 1. Model hierarchy and comparable observables.\par}
+\vspace{3pt}{\small\raggedright Transport models are grouped by physical object and observable: round-wire internal fields support analytical and two-dimensional calibration, multistrand field–circuit models resolve common-terminal phasor currents, and longitudinal PEEC examines finite-length effects. Links identify internal-field calibration or equal-area resistance references. RT0 imposed-field loss and three-dimensional A–φ diagnostics occupy separate research scopes.\par}
+\end{figure}
+\begin{figure}[!htbp]
+\centering
+\setcounter{figure}{1}
+\refstepcounter{figure}\label{fig:common_terminal}
+\hypertarget{fig-common_terminal}{}
+\includegraphics[width=88.9mm]{../../../panels/en/common_terminal.pdf}
+\par\vspace{4pt}{\small\centering Fig. 2. Multistrand common terminals and return.\par}
+\vspace{3pt}{\small\raggedright Strands are insulated along their paths and connected in parallel at both ends; their phasor currents follow from the common voltage and total-current constraints. The coupling matrix Z and excitation term e contain the impedance and field contributions retained by the model. The controlled return carries the opposite total current and has its own terminal field. Known inputs and unknown currents and voltage are identified.\par}
+\end{figure}
+\clearpage
+\begin{thebibliography}{99}
+\bibitem[4]{P03} Andreas Roßkopf, Eberhard Bär, Christopher Joffe, Clemens Bonse. Calculation of Power Losses in Litz Wire Systems by Coupling FEM and PEEC Method. IEEE TPEL 31(9):6442–6449, 2016. https://doi.org/10.1109/TPEL.2015.2499793
+\end{thebibliography}
+\end{document}

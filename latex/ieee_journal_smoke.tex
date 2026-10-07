@@ -1,0 +1,108 @@
+% Litz project adaptation of Michael Shell's bare_jrnl.tex, IEEEtran 1.8b.
+% Upstream original and LPPL notice are preserved in references/templates.
+% This short specimen checks typesetting only; no physical solver is run.
+\documentclass[journal,10pt]{IEEEtran}
+\usepackage{amsmath,amssymb}
+\usepackage{newtxmath}
+\usepackage[no-math]{fontspec}
+\setmainfont{Times New Roman}
+\usepackage{xeCJK}
+\setCJKmainfont[AutoFakeBold=2]{SimSun}
+\usepackage{booktabs}
+\usepackage{graphicx}
+\usepackage[hidelinks]{hyperref}
+% Keep both independent panels at 88.9 mm while retaining the class margins.
+\setlength{\columnsep}{\dimexpr\textwidth-177.8mm\relax}
+\title{Hierarchical Verification and Common-Terminal Current Sharing in Litz-Wire Models}
+\author{Litz Wire Modeling Project}
+\begin{document}
+\maketitle
+\begin{abstract}
+This specimen exercises the IEEE journal layout using frozen project results.
+It distinguishes analytical calibration, common-terminal current allocation,
+and finite-length longitudinal PEEC. The purpose is to verify the compilation
+chain and typography before further manuscript revision.
+\end{abstract}
+\begin{IEEEkeywords}
+Litz wire, common-terminal constraint, PEEC, numerical verification.
+\end{IEEEkeywords}
+\section{Scope and Conventions}
+All phasors are RMS quantities with the convention $\exp(\mathrm{j}\omega t)$.
+The baseline uses $f=200\,\mathrm{kHz}$, $I_{\mathrm{t}}=20\,\mathrm{A}$,
+and $\sigma=5.8\times10^7\,\mathrm{S/m}$ at $20\,{}^{\circ}\mathrm{C}$.
+The $2\,\mathrm{mm}$ round wire is a calibration specimen; its DC current
+density exceeds the original design limit and it is not a compliant final bundle.
+
+\textbf{中文字体短测：}沿途绝缘、端部并联；采用共同端电压与总复电流约束。
+几何展示、解析预测、二维场解和实际三维验证分别标明。
+宋体用于中文，Times New Roman 用于西文与数字。
+
+\section{Common-Terminal Model}
+The strand currents are unknowns rather than prescribed equal currents:
+\begin{equation}
+\begin{bmatrix}\mathbf Z&-\mathbf1\\\mathbf1^{\mathsf T}&0\end{bmatrix}
+\begin{bmatrix}\mathbf i\\V\end{bmatrix}
+=\begin{bmatrix}-\mathbf e\\I_{\mathrm t}\end{bmatrix}.
+\label{eq:common}
+\end{equation}
+Within the specified linear model, equal sharing requires
+\begin{equation}
+\mathbf Q\left[\frac{I_{\mathrm t}}{N}\mathbf Z\mathbf1+\mathbf e\right]
+=\mathbf0,\quad
+\mathbf Q=\mathbf I_N-\frac{\mathbf1\mathbf1^{\mathsf T}}N.
+\label{eq:sharing}
+\end{equation}
+Equation~\eqref{eq:sharing} is a model-scoped algebraic criterion and does not
+establish a ranking of real transposed geometries. DTM-based strand permutation
+provides a relevant comparison framework~\cite{cruciani2023}.
+
+\section{Frozen Numerical Check}
+Table~\ref{tab:round} uses the saved Bessel calibration values. RMS normalization
+gives $P=|I|^2R_{\mathrm{ac}}$ without a factor of $1/2$.
+Figure~\ref{fig:round} reuses the independently exported Wolfram PDF without
+replotting. Its physical width is $88.9\,\mathrm{mm}$.
+\begin{figure}[!t]
+\centering
+\includegraphics[width=88.9mm]{../outputs/publication_20261006_full_05/panels/en/q1_magnitude.pdf}
+\caption{Frozen Bessel radial current-density magnitude for the calibration
+wire. The field convention and RMS normalization are unchanged.}
+\label{fig:round}
+\end{figure}
+\begin{table}[!t]
+\caption{Round-wire analytical calibration at 200 kHz}
+\label{tab:round}
+\centering
+\begin{tabular}{lr}
+\toprule
+Quantity & Frozen value\\
+\midrule
+Skin depth (mm)&0.147771655\\
+$R_{\mathrm{dc}}$ ($\mathrm{m\Omega/m}$)&5.488101486\\
+$R_{\mathrm{ac}}$ ($\mathrm{m\Omega/m}$)&20.016203628\\
+$R_{\mathrm{ac}}/R_{\mathrm{dc}}$&3.647199980\\
+Loss ($\mathrm{W/m}$)&8.006481451\\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\clearpage
+\section{Discussion and Conclusions}
+The longitudinal PEEC implementation assumes a fixed axial current basis;
+transverse loops and true end-region redistribution remain outside its scope.
+RT0 imposed-field loss is distinct from transport resistance. Preserved
+A--$\phi$ field samples retain their failed potential and gauge acceptance
+status. A successful typesetting test does not change those physical outcomes.
+Figure~\ref{fig:geometry} shows archived geometry alone, with no claimed
+electromagnetic performance ranking.
+\begin{figure}[!t]
+\centering
+\includegraphics[width=88.9mm]{../outputs/publication_20261006_full_05/panels/en/multilevel_detail.pdf}
+\caption{An actual 3 mm detail of the archived 24-strand multilevel
+geometry. Copper diameter: 0.100 mm. Highlighted physical strand identities
+are retained.}
+\label{fig:geometry}
+\end{figure}
+
+\bibliographystyle{IEEEtran}
+\bibliography{references}
+\end{document}

@@ -1,0 +1,63 @@
+\documentclass[11pt]{article}
+\usepackage[paperwidth=210mm,paperheight=297mm,textwidth=182mm,top=20mm,bottom=22mm]{geometry}
+\usepackage{amsmath,amssymb,newtxmath}
+\usepackage[no-math]{fontspec}
+\setmainfont{Times New Roman}
+\usepackage{xeCJK}
+\setCJKmainfont[AutoFakeBold=2]{SimSun}
+\usepackage{graphicx,booktabs,array,hyperref,placeins}
+\hypersetup{hidelinks,unicode=true}
+\raggedbottom
+\setlength{\emergencystretch}{2em}
+\renewcommand{\arraystretch}{1.15}
+\usepackage{seqsplit}
+\begin{document}
+\title{Litz-Wire Modeling and Numerical Verification: Comprehensive Research Report · 05 Transposition Models, Real Geometry, and Equal-Copper Comparisons}
+\author{Miao Yuxuan\\Huainan Normal University}
+\date{}
+\maketitle
+\noindent 合并稿对应章节 / Chapter in merged manuscript: \href{report_en_single.pdf#chapter-05}{05}\par
+\FloatBarrier
+\section*{05 Transposition Models, Real Geometry, and Equal-Copper Comparisons}
+\hypertarget{chapter-05}{}
+\pdfbookmark[0]{05 Transposition Models, Real Geometry, and Equal-Copper Comparisons}{bookmark-chapter-05}
+\subsection*{Geometry, Actual Arc Length, and Discrete Transposition}
+\hypertarget{05.geometry.heading}{}
+\pdfbookmark[1]{Geometry, Actual Arc Length, and Discrete Transposition}{bookmark-05.geometry.heading}
+Archived straight, single-level, traditional multilevel, and cross-layer centerlines support checks of physical strand identity, period, gap, curvature, arc length, and copper volume. Axial sampling at 400, 800, and 1600 segments and 60 geometry checks support numerical consistency of these quantities; the historical wrapper exit and the unrecorded native kernel exit retain their original status. The 24-strand specimen with 0.100 mm copper diameter has only about 0.1885 mm² nominal copper area. It illustrates construction and is not a final bundle satisfying the 5 mm² requirement. Three-dimensional material, lighting, and rotatable views are reading aids.
+
+
+The current DTM/iDTM demonstration uses additive discrete blocks \href{report_en_single.pdf#E06}{(6)}. Reordering the same weighted impedance blocks does not change their sum. Equal sharing in that implementation therefore does not prove the equivalence of distinct realistic transposition paths or the superiority of a cross-layer structure over traditional multilevel Litz. Comparison with [1, 2] should examine longitudinal transposition, noncommuting hierarchical operations, local-field assumptions, and terminals rather than borrowing the method name alone. Geometric fairness, model adequacy, and performance improvement are three questions requiring separate evidence.
+
+
+\subsection*{Dtm Derivation}
+\hypertarget{05.dtm_derivation.heading}{}
+\pdfbookmark[1]{Dtm Derivation}{bookmark-05.dtm_derivation.heading}
+Let Ps map fixed physical strand identities to spatial positions in section s. The local current is Ps i and the voltage in identity coordinates is Ps\(^{\mathrm T}\)ZsPs i. Summation over series segments Δzs yields the total impedance. Position permutation and current identity therefore have separate records; K, 2K, and 4K segmentation checks concern the same paths and physical strands. Period, gap, and arc-length checks constrain geometric feasibility and copper usage separately.
+
+
+\subsection*{Geometry Sampling and Equal-Copper Checks}
+\hypertarget{05.report_geometry.heading}{}
+\pdfbookmark[1]{Geometry Sampling and Equal-Copper Checks}{bookmark-05.report_geometry.heading}
+Trajectory recovery preserves physical strand IDs instead of renaming strands by cross-sectional order. Period checks distinguish position closure from identity permutation; gap and curvature checks use physical units, and arc length is integrated from sampled paths and compared with doubled sampling. Copper volume and DC resistance use actual strand lengths; the axial length is not substituted for every helical branch. Local cropping and display subsampling are recorded under the publication run, while complete original centerlines remain available.
+
+
+Equal-copper comparisons identify circular nominal area, discretized actual area, and the outer envelope occupied by insulation. At the same nominal area, longer arc length increases copper volume per axial metre and the resistive path length. Geometric complexity itself supplies no evidence of electromagnetic improvement. The 640-strand candidate trajectories and 7/24-strand construction demonstrations serve different scales, and public materials should retain that distinction.
+
+
+\hypertarget{E06}{}\begin{equation}Z_{\mathrm{tot}}=\sum_{s=1}^{K}\Delta z_s P_s^T Z_s P_s\tag{6}\label{eq:E06}\end{equation}
+\begin{figure}[!htbp]
+\centering
+\setcounter{figure}{8}
+\refstepcounter{figure}\label{fig:geometry_comparison}
+\hypertarget{fig-geometry_comparison}{}
+\includegraphics[width=182mm]{../../../composites/en/geometry_comparison.pdf}
+\par\vspace{4pt}{\small\centering Fig. 9. Three-dimensional strand centerline structures.\par}
+\vspace{3pt}{\small\raggedright Panels show straight, single-level, local multilevel, and cross-layer structures. The 24-strand structures use a copper diameter of 0.100 mm, and the multilevel panel shows a 3 mm detail. Blue markers preserve selected physical strand identities.\par}
+\end{figure}
+\clearpage
+\begin{thebibliography}{99}
+\bibitem[1]{P01} Silvano Cruciani, Tommaso Campi, Francesca Maradei, Mauro Feliziani. Numerical Modeling of Litz Wires Based on Discrete Transpositions of Strands and 2-D Finite Element Analysis. IEEE TPEL 38(5):6710–6719, 2023. https://doi.org/10.1109/TPEL.2023.3240338
+\bibitem[2]{N01} Xinsheng Zhang, Fei Xiao, Ruitian Wang, Shunjun Chen, Xuexin Fan, Xin Li. AC Impedance Modeling of Composite Litz Wire With Nonideal Transposition Based on Improved Discrete Transposition Model. IEEE TPEL 41(7):11003–11019, 2026. https://doi.org/10.1109/TPEL.2026.3661080
+\end{thebibliography}
+\end{document}

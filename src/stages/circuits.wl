@@ -1,0 +1,10 @@
+cirCases={};
+Do[cirZ=Switch[k,1,{{.02+.01 I,.003 I},{.003 I,.02+.01 I}},2,{{.02+.01 I,.003 I},{.003 I,.04+.01 I}},3,{{.02+.01 I,.003 I,.001 I},{.003 I,.025+.01 I,.002 I},{.001 I,.002 I,.03+.012 I}}];
+ cirE=If[k==3,{.01 I,-.02 I,.005},ConstantArray[0.,Length[cirZ]]];
+ cirSol=LitzPhysics`CommonPort[cirZ,cirE,20.];AppendTo[cirCases,<|"case"->k,"Z_ohm"->cirZ,"e_V"->cirE,"solution"->cirSol|>];
+ Scan[stageCheck["circuit_"<>ToString[k]<>"_"<>#,cirSol[#],10.^-8,"common_port_linear_circuit"]&,{"linear_residual","current_residual","common_voltage_residual","power_residual"}];
+ stageCheck["passivity_"<>ToString[k],Max[0.,-cirSol["minimum_dissipation_eigenvalue"]],10.^-12,"common_port_linear_circuit"],{k,3}];
+stageCheck["identical_branches_equal",Abs[Subtract@@cirCases[[1]]["solution"]["currents"]],10.^-10,"common_port_linear_circuit"];
+stageData=<|"source_model"->"common_port_linear_circuit","cases"->cirCases,"assumptions"->"Three explanatory lumped circuits in ohms/volts/RMS amperes: equal branches; unequal resistance; nonuniform independent induced voltage. Solve augmented system, never prescribe strand I/N. Dissipation uses Hermitian Z; external e contributes to power balance. These matrices are educational, not extracted strand-field impedances."|>;
+stageFigure["phasors",ListPlot[Table[({Re[#],Im[#]}&/@c["solution"]["currents"]),{c,cirCases}],PlotLegends->{"equal","unequal R","induced e"},Frame->True,FrameLabel->{"Re I (A RMS)","Im I (A RMS)"},PlotRange->All,ImageSize->600]];
+stageFigure["branch_magnitudes",BarChart[Table[Abs[c["solution"]["currents"]],{c,cirCases}],ChartLegends->{"equal","unequal R","induced e"},Frame->True,FrameLabel->{"strand","Abs I (A RMS)"},ImageSize->600]];

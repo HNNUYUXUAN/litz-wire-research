@@ -1,0 +1,47 @@
+\documentclass[11pt]{article}
+\usepackage[paperwidth=210mm,paperheight=297mm,textwidth=182mm,top=20mm,bottom=22mm]{geometry}
+\usepackage{amsmath,amssymb,newtxmath}
+\usepackage[no-math]{fontspec}
+\setmainfont{Times New Roman}
+\usepackage{xeCJK}
+\setCJKmainfont[AutoFakeBold=2]{SimSun}
+\usepackage{graphicx,booktabs,array,hyperref,placeins}
+\hypersetup{hidelinks,unicode=true}
+\raggedbottom
+\setlength{\emergencystretch}{2em}
+\renewcommand{\arraystretch}{1.15}
+\usepackage{seqsplit}
+\begin{document}
+\title{Litz-Wire Modeling and Numerical Verification: Comprehensive Research Report · B Discretization and Postprocessing}
+\author{Miao Yuxuan\\Huainan Normal University}
+\date{}
+\maketitle
+\noindent 合并稿对应章节 / Chapter in merged manuscript: \href{report_en_single.pdf#chapter-B}{B}\par
+\FloatBarrier
+\section*{B Discretization and Postprocessing}
+\hypertarget{chapter-B}{}
+\pdfbookmark[0]{B Discretization and Postprocessing}{bookmark-chapter-B}
+\subsection*{Triangle Derivation}
+\hypertarget{B.triangle_derivation.heading}{}
+\pdfbookmark[1]{Triangle Derivation}{bookmark-B.triangle_derivation.heading}
+On a linear triangle, J=\(\sum\)\(_a\)NaJa. Current integration uses A/3 for each shape function. Joule integration uses the mass matrix and Joule expression in \href{report_en_single.pdf#E09}{(9)}. Material markers assign each cell to a strand, the return, or air. Coordinates are converted to metres before area evaluation, and the integrated power is independently compared with the archived scalar.
+
+
+\subsection*{RT0 Face Flux and Lightweight Field Recovery}
+\hypertarget{B.report_rt0.heading}{}
+\pdfbookmark[1]{RT0 Face Flux and Lightweight Field Recovery}{bookmark-B.report_rt0.heading}
+Original RT0 face fluxes are stored by direction and integer grid identity. For each cell axis, opposing fluxes q− and q+ give the center component (q−+q+)/(2h²) and local resistive power [|q−|²+|q+|²+Re(q−*q+)]/(3σh). Summing all three axes and all cells recovers total loss. Faces omitted at insulating sides have structural zero flux in the original discretization; this zero is not an independently solved boundary-flux validation.
+
+
+Publication postprocessing independently reconstructs complex center J for all 27648 cells and compares it with the original cell\_fields.csv, while exact overlap integration checks archived loss. A section uses the actual discrete layer near the center and states its z coordinate rather than assuming that all samples lie exactly at 1 mm. The W/cm³ scale is obtained by multiplying SI loss density by 10⁻⁶. Vector sample identities and their common length scale are inspectable in the figure request and mapping data without an additional solver.
+
+
+\hypertarget{E09}{}
+\begin{equation}
+\begin{gathered}
+M_T=\frac{A_T}{12}\begin{bmatrix}2&1&1\\1&2&1\\1&1&2\end{bmatrix} \\
+P_T=\mathbf J_T^H M_T\mathbf J_T/\sigma
+\end{gathered}
+\tag{9}\label{eq:E09}
+\end{equation}
+\end{document}

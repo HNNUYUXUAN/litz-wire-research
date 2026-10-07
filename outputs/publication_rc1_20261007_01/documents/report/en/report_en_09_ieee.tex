@@ -1,0 +1,49 @@
+\documentclass[journal,10pt]{IEEEtran}
+\setlength{\textwidth}{182mm}
+\setlength{\columnsep}{4.2mm}
+\usepackage{amsmath,amssymb,newtxmath}
+\usepackage[no-math]{fontspec}
+\setmainfont{Times New Roman}
+\usepackage{xeCJK}
+\setCJKmainfont[AutoFakeBold=2]{SimSun}
+\usepackage{graphicx,booktabs,array,hyperref,placeins}
+\hypersetup{hidelinks,unicode=true}
+\raggedbottom
+\setlength{\emergencystretch}{2em}
+\renewcommand{\arraystretch}{1.15}
+\usepackage{seqsplit}
+\begin{document}
+\title{Litz-Wire Modeling and Numerical Verification: Comprehensive Research Report · 09 Ansys Cases and Interface Verification}
+\author{Miao Yuxuan\thanks{Huainan Normal University}}
+
+\maketitle
+\noindent 合并稿对应章节 / Chapter in merged manuscript: \href{report_en_ieee.pdf#chapter-09}{09}\par
+\FloatBarrier
+\section*{09 Ansys Cases and Interface Verification}
+\hypertarget{chapter-09}{}
+\pdfbookmark[0]{09 Ansys Cases and Interface Verification}{bookmark-chapter-09}
+The historical valid seven-strand two-dimensional port short test uses 704 cells and includes two voltage basis solutions and an actual ±20 A field solution. Common terminal voltage, complex strand currents, and independent power support this single-level example; it is not three-grid convergence. New fixed-mesh and precision attempts did not produce the required full validation. Native three-dimensional J-expression probes also did not yield an accepted physical solution, so no field-result image or invented numerical value is supplied for them.
+
+
+Archived boundaries use the checked v252 Student limits of 2000 two-dimensional triangles, 64000 three-dimensional volume cells or 8000 surface cells, and four CPU cores. Interface errors, mesh or license limits, and numerical errors have different meanings and are recorded separately. Actual terminals, curved STL geometry, and full-copper-area large bundles still require suitable licensing, mesh capability, and independent validation. A limited short test cannot support a recommendation about realistic transposition performance.
+
+
+\begin{figure}[!htbp]
+\centering
+\setcounter{figure}{17}
+\refstepcounter{figure}\label{fig:ansys_seven_current}
+\hypertarget{fig-ansys_seven_current}{}
+\includegraphics[width=88.9mm]{../../../panels/en/ansys_seven_current.pdf}
+\par\vspace{4pt}{\small\centering Fig. 18. Ansys seven-strand two-dimensional complex currents.\par}
+\vspace{3pt}{\small\raggedright The valid 704-cell port short test provides strand magnitudes and phases. Currents use port records from the actual ±20 A field solution. Magnitudes and phases correspond to the same seven strand identities.\par}
+\end{figure}
+\begin{figure}[!htbp]
+\centering
+\setcounter{figure}{18}
+\refstepcounter{figure}\label{fig:ansys_limits}
+\hypertarget{fig-ansys_limits}{}
+\includegraphics[width=88.9mm]{../../../panels/en/ansys_limits.pdf}
+\par\vspace{4pt}{\small\centering Fig. 19. Ansys Student capacity and interface diagnostics.\par}
+\vspace{3pt}{\small\raggedright Ansys Student v252 permits up to 2000 two-dimensional triangles, 64000 three-dimensional volume elements, and 8000 surface elements, with at most 4 CPU cores. Parallel groups identify the license limits. Probes of the current-density expression J are recorded separately from mesh capacity; actual solution status is reported in the three-dimensional diagnostics.\par}
+\end{figure}
+\end{document}

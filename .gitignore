@@ -1,0 +1,13 @@
+.venv/
+__pycache__/
+*.pyc
+*.egg-info/
+dist/
+build/
+outputs/
+notebooks/
+data/publication/
+data/raw/
+data/cache/
+releases/
+litz.config.json

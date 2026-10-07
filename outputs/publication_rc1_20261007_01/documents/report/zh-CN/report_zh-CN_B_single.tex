@@ -1,0 +1,47 @@
+\documentclass[11pt]{article}
+\usepackage[paperwidth=210mm,paperheight=297mm,textwidth=182mm,top=20mm,bottom=22mm]{geometry}
+\usepackage{amsmath,amssymb,newtxmath}
+\usepackage[no-math]{fontspec}
+\setmainfont{Times New Roman}
+\usepackage{xeCJK}
+\setCJKmainfont[AutoFakeBold=2]{SimSun}
+\usepackage{graphicx,booktabs,array,hyperref,placeins}
+\hypersetup{hidelinks,unicode=true}
+\raggedbottom
+\setlength{\emergencystretch}{2em}
+\renewcommand{\arraystretch}{1.15}
+\usepackage{seqsplit}
+\begin{document}
+\title{Litz 线分层建模与数值验证：完整研究报告 · B 离散与后处理}
+\author{缪雨轩\\淮南师范学院}
+\date{}
+\maketitle
+\noindent 合并稿对应章节 / Chapter in merged manuscript: \href{report_zh-CN_single.pdf#chapter-B}{B}\par
+\FloatBarrier
+\section*{B 离散与后处理}
+\hypertarget{chapter-B}{}
+\pdfbookmark[0]{B 离散与后处理}{bookmark-chapter-B}
+\subsection*{独立单元积分}
+\hypertarget{B.triangle_derivation.heading}{}
+\pdfbookmark[1]{独立单元积分}{bookmark-B.triangle_derivation.heading}
+线性三角形上 J=\(\sum\)\(_a\)NaJa。复电流积分使用每个形函数积分 A/3；焦耳积分使用质量矩阵与焦耳积分见 \href{report_zh-CN_single.pdf#E09}{(9)}。材料标记决定本单元所属股线、回流或空气。坐标先转换为米再计算面积，所得总功率与原归档标量进行独立一致性检查。
+
+
+\subsection*{RT0 面通量与轻量场恢复}
+\hypertarget{B.report_rt0.heading}{}
+\pdfbookmark[1]{RT0 面通量与轻量场恢复}{bookmark-B.report_rt0.heading}
+原 RT0 面通量按方向及整数网格身份保存。单元每轴取相对两面的 q−、q+，中心分量为 (q−+q+)/(2h²)，轴向局部电阻功率为 [|q−|²+|q+|²+Re(q−*q+)]/(3σh)。三轴相加、全单元求和恢复总损耗。被绝缘侧边省略的面在原离散定义中具有结构零通量；这种零值不等于另做了独立边界通量场解。
+
+
+成稿后处理独立恢复全部 27648 单元中心复 J，与原 cell\_fields.csv 对照；同时用完整重叠积分核验原损耗。切面取实际最接近中心的离散层并标注 z，不假设所有采样正好位于 1 mm。W/cm³ 色标由 SI 损耗密度乘 10⁻⁶ 得到。三维箭头的抽样身份与公共长度缩放可在图件请求和映射数据中检查，不用额外求解器。
+
+
+\hypertarget{E09}{}
+\begin{equation}
+\begin{gathered}
+M_T=\frac{A_T}{12}\begin{bmatrix}2&1&1\\1&2&1\\1&1&2\end{bmatrix} \\
+P_T=\mathbf J_T^H M_T\mathbf J_T/\sigma
+\end{gathered}
+\tag{9}\label{eq:E09}
+\end{equation}
+\end{document}

@@ -1,0 +1,51 @@
+\documentclass[11pt]{article}
+\usepackage[paperwidth=210mm,paperheight=297mm,textwidth=182mm,top=20mm,bottom=22mm]{geometry}
+\usepackage{amsmath,amssymb,newtxmath}
+\usepackage[no-math]{fontspec}
+\setmainfont{Times New Roman}
+\usepackage{xeCJK}
+\setCJKmainfont[AutoFakeBold=2]{SimSun}
+\usepackage{graphicx,booktabs,array,hyperref,placeins}
+\hypersetup{hidelinks,unicode=true}
+\raggedbottom
+\setlength{\emergencystretch}{2em}
+\renewcommand{\arraystretch}{1.15}
+\usepackage{seqsplit}
+\begin{document}
+\title{Litz-Wire Modeling and Numerical Verification: Comprehensive Research Report · 11 General Discussion}
+\author{Miao Yuxuan\\Huainan Normal University}
+\date{}
+\maketitle
+\noindent 合并稿对应章节 / Chapter in merged manuscript: \href{report_en_single.pdf#chapter-11}{11}\par
+\FloatBarrier
+\section*{11 General Discussion}
+\hypertarget{chapter-11}{}
+\pdfbookmark[0]{11 General Discussion}{bookmark-chapter-11}
+\subsection*{Discussion: Model Uncertainty and Relation to Literature}
+\hypertarget{11.discussion.heading}{}
+\pdfbookmark[1]{Discussion: Model Uncertainty and Relation to Literature}{bookmark-11.discussion.heading}
+The results show that equal sharing and low loss are not a single issue determined only by strand size. The common-terminal model permits self-consistent changes in both current magnitude and phase, whereas current geometry displays supply paths and arc-length costs. A realistic comparison must carry these terminal constraints into an electromagnetic model with adequate longitudinal coupling and use consistent actual copper area, return, and length definitions. A proposed improvement must also exceed relevant numerical uncertainty; a small solver residual cannot cancel unresolved model error.
+
+
+The relationship to [1, 2] concerns transposition representation and scope rather than replication of all published experiments. The connection to [3] is an interpretable reduced circuit, but its winding-specific experimental error is not imported as this project’s accuracy. Common voltage and total-current constraints in [5] provide a methodological link; its frequencies, dimensions, and quasi-two-dimensional assumptions do not directly validate the present 200 kHz large bundle. Homogenization studies [6, 7] also emphasize consistent allocation of macroscopic fields and microscopic local losses to avoid double counting. Averaging does not automatically establish uniform strand currents.
+
+
+No thermal model or experimental measurement is available here to test winding tolerances, terminal contacts, insulation thickness, or temperature rise. RT0 imposed-field refinement and longitudinal PEEC agreement with analytical resistance provide localized evidence. Unsuccessful three-dimensional A–φ validation and native Ansys interfaces remain practical research boundaries. A subsequent priority is an affordable small-strand three-dimensional cross-check with real ends, return, and transverse degrees of freedom, followed by full-copper-area multilevel baselines and candidate structures, and ultimately controlled measurement.
+
+
+\subsection*{Recommendations}
+\hypertarget{11.recommendations.heading}{}
+\pdfbookmark[1]{Recommendations}{bookmark-11.recommendations.heading}
+Further research should follow the remaining model gaps: establish boundary, gauge, and terminal-field consistency on an affordable three-dimensional calibration body; introduce realistic terminals and transverse freedom for a small strand count; and then compare full-copper multilevel and cross-layer structures. Experiments should measure impedance at common frequency, temperature, return, and axial length, with terminal resistance and geometric tolerances recorded. Proposed improvements should be compared with both numerical and measurement uncertainty.
+
+
+\clearpage
+\begin{thebibliography}{99}
+\bibitem[1]{P01} Silvano Cruciani, Tommaso Campi, Francesca Maradei, Mauro Feliziani. Numerical Modeling of Litz Wires Based on Discrete Transpositions of Strands and 2-D Finite Element Analysis. IEEE TPEL 38(5):6710–6719, 2023. https://doi.org/10.1109/TPEL.2023.3240338
+\bibitem[2]{N01} Xinsheng Zhang, Fei Xiao, Ruitian Wang, Shunjun Chen, Xuexin Fan, Xin Li. AC Impedance Modeling of Composite Litz Wire With Nonideal Transposition Based on Improved Discrete Transposition Model. IEEE TPEL 41(7):11003–11019, 2026. https://doi.org/10.1109/TPEL.2026.3661080
+\bibitem[3]{P02} Yueyin Wang, Wu Chen, Zhan Shen. Modeling of Litz Wire Winding AC Resistance Based on Improved Segmented Equivalent Circuit. IEEE TPEL 39(1):1135–1149, 2024. https://doi.org/10.1109/TPEL.2023.3321327
+\bibitem[5]{P04} Tamás Bakondi, Sándor Bilicz, Szabolcs Gyimóthy. Finite element modeling of eddy currents in a multiconductor system with quasi-2D symmetry. COMPEL 44(5):730–742, 2025. https://doi.org/10.1108/COMPEL-01-2025-0031
+\bibitem[6]{P05} David C. Meeker. An Improved Continuum Skin and Proximity Effect Model for Hexagonally Packed Wires. JCAM 236(18):4635–4644, 2012. https://doi.org/10.1016/j.cam.2012.04.009
+\bibitem[7]{P09} Korawich Niyomsatian, Johan Gyselinck, Ruth V. Sabariego. Closed-form complex permeability expression for proximity-effect homogenisation of litz-wire windings. IET SMT 14(3):287–291, 2020. https://doi.org/10.1049/iet-smt.2019.0377
+\end{thebibliography}
+\end{document}

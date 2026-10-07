@@ -1,0 +1,26 @@
+{
+  "status": "passed",
+  "python_analytic_checks": 12,
+  "wolfram_analytic_checks": 12,
+  "standalone_wolfram_checks": 12,
+  "wheel_install": "fresh_virtual_environment",
+  "wheel_analytic_checks": 12,
+  "unit_tests": 123,
+  "pdf_files": 104,
+  "pdf_pages": 411,
+  "notebook_files": 52,
+  "notebook_render_chunks": 168,
+  "pdf_pixel_identical_baseline_pages": 395,
+  "changed_pdf_pages_visually_reviewed": 16,
+  "notebook_pixel_identical_baseline_chunks": 150,
+  "changed_notebook_chunks_visually_reviewed": 18,
+  "physical_scope": "Analytical regression and archived-data postprocessing; numerical-route acceptance states retain their source definitions.",
+  "raw_candidate_review": {
+    "files": 31424,
+    "publishable": 30974,
+    "source_archive": 323,
+    "bibliographic_reference": 127,
+    "pending": 0
+  },
+  "credential_pattern_findings": 0
+}

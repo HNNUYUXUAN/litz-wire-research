@@ -1,0 +1,61 @@
+\documentclass[11pt]{article}
+\usepackage[paperwidth=210mm,paperheight=297mm,textwidth=182mm,top=20mm,bottom=22mm]{geometry}
+\usepackage{amsmath,amssymb,newtxmath}
+\usepackage[no-math]{fontspec}
+\setmainfont{Times New Roman}
+\usepackage{xeCJK}
+\setCJKmainfont[AutoFakeBold=2]{SimSun}
+\usepackage{graphicx,booktabs,array,hyperref,placeins}
+\hypersetup{hidelinks,unicode=true}
+\raggedbottom
+\setlength{\emergencystretch}{2em}
+\renewcommand{\arraystretch}{1.15}
+\usepackage{seqsplit}
+\begin{document}
+\title{Litz-Wire Modeling and Numerical Verification: Comprehensive Research Report · 01 Introduction and Research Questions}
+\author{Miao Yuxuan\\Huainan Normal University}
+\date{}
+\maketitle
+\noindent 合并稿对应章节 / Chapter in merged manuscript: \href{report_en_single.pdf#chapter-01}{01}\par
+\FloatBarrier
+\section*{01 Introduction and Research Questions}
+\hypertarget{chapter-01}{}
+\pdfbookmark[0]{01 Introduction and Research Questions}{bookmark-chapter-01}
+\subsection*{Introduction}
+\hypertarget{01.introduction.heading}{}
+\pdfbookmark[1]{Introduction}{bookmark-01.introduction.heading}
+Dividing a copper cross-section into many fine strands does not by itself guarantee a reduction in high-frequency loss. Strand diameter sets the local skin-effect scale; neighboring conductors and the return determine the surrounding magnetic field; longitudinal positions and common terminals determine complex strand currents. Comparing geometry alone, nominal copper area, or an assumed average current merges distinct mechanisms into a single indicator. A defensible structural comparison first identifies the fields and constraints retained by a model and then checks the numerical uncertainty relevant to those quantities.
+
+
+Existing approaches address different scales. DTM combines discrete transpositions with two-dimensional FEM [1], linking strand-position permutations to cross-sectional fields; iDTM additionally considers nonideal hierarchical and subbundle transpositions [2]. The improved segmented equivalent circuit [3] constructs a reduced circuit under its stated winding and layer assumptions. FEM–PEEC coupling [4] and quasi-two-dimensional multiconductor modeling [5] use different macroscopic fields, axial electric fields, and current constraints. Continuum models [6] and complex-permeability homogenization [7] reduce the cost of large winding simulations, but their average fields do not directly replace strand-resolved complex currents or realistic end regions.
+
+
+The emphasis here is a set of comparable quantities and verification relationships needed for structural research. The first contribution separates the analytical, two-dimensional, longitudinal, and full-component voxel models according to what each can verify. The second derives a current-sharing condition from the common-terminal augmented system and states its model scope. The third performs single-factor sensitivity checks for finite-length longitudinal PEEC while interpreting CPU/GPU agreement separately from physical validation. Traditional multilevel Litz remains a strong baseline. Cross-layer geometry is a candidate for subsequent verification, without a presumed performance advantage.
+
+
+\subsection*{Scope}
+\hypertarget{01.scope.heading}{}
+\pdfbookmark[1]{Scope}{bookmark-01.scope.heading}
+Three questions organize the verification: whether independent discretizations reproduce the local skin-effect reference; which algebraic conditions determine complex current sharing under common terminals; and how strongly the resistance obtained from a finite longitudinal kernel depends on length and integration settings. The contributions are consistent observables, inspectable verification relationships, and quantitative evidence within each model, supporting the selection of the next model for realistic transposition research.
+
+
+\begin{figure}[!htbp]
+\centering
+\setcounter{figure}{0}
+\refstepcounter{figure}\label{fig:model_hierarchy}
+\hypertarget{fig-model_hierarchy}{}
+\includegraphics[width=88.9mm]{../../../panels/en/model_hierarchy.pdf}
+\par\vspace{4pt}{\small\centering Fig. 1. Model hierarchy and comparable observables.\par}
+\vspace{3pt}{\small\raggedright Transport models are grouped by physical object and observable: round-wire internal fields support analytical and two-dimensional calibration, multistrand field–circuit models resolve common-terminal phasor currents, and longitudinal PEEC examines finite-length effects. Links identify internal-field calibration or equal-area resistance references. RT0 imposed-field loss and three-dimensional A–φ diagnostics occupy separate research scopes.\par}
+\end{figure}
+\clearpage
+\begin{thebibliography}{99}
+\bibitem[1]{P01} Silvano Cruciani, Tommaso Campi, Francesca Maradei, Mauro Feliziani. Numerical Modeling of Litz Wires Based on Discrete Transpositions of Strands and 2-D Finite Element Analysis. IEEE TPEL 38(5):6710–6719, 2023. https://doi.org/10.1109/TPEL.2023.3240338
+\bibitem[2]{N01} Xinsheng Zhang, Fei Xiao, Ruitian Wang, Shunjun Chen, Xuexin Fan, Xin Li. AC Impedance Modeling of Composite Litz Wire With Nonideal Transposition Based on Improved Discrete Transposition Model. IEEE TPEL 41(7):11003–11019, 2026. https://doi.org/10.1109/TPEL.2026.3661080
+\bibitem[3]{P02} Yueyin Wang, Wu Chen, Zhan Shen. Modeling of Litz Wire Winding AC Resistance Based on Improved Segmented Equivalent Circuit. IEEE TPEL 39(1):1135–1149, 2024. https://doi.org/10.1109/TPEL.2023.3321327
+\bibitem[4]{P03} Andreas Roßkopf, Eberhard Bär, Christopher Joffe, Clemens Bonse. Calculation of Power Losses in Litz Wire Systems by Coupling FEM and PEEC Method. IEEE TPEL 31(9):6442–6449, 2016. https://doi.org/10.1109/TPEL.2015.2499793
+\bibitem[5]{P04} Tamás Bakondi, Sándor Bilicz, Szabolcs Gyimóthy. Finite element modeling of eddy currents in a multiconductor system with quasi-2D symmetry. COMPEL 44(5):730–742, 2025. https://doi.org/10.1108/COMPEL-01-2025-0031
+\bibitem[6]{P05} David C. Meeker. An Improved Continuum Skin and Proximity Effect Model for Hexagonally Packed Wires. JCAM 236(18):4635–4644, 2012. https://doi.org/10.1016/j.cam.2012.04.009
+\bibitem[7]{P09} Korawich Niyomsatian, Johan Gyselinck, Ruth V. Sabariego. Closed-form complex permeability expression for proximity-effect homogenisation of litz-wire windings. IET SMT 14(3):287–291, 2020. https://doi.org/10.1049/iet-smt.2019.0377
+\end{thebibliography}
+\end{document}

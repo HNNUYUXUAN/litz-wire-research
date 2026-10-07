@@ -1,0 +1,49 @@
+\documentclass[11pt]{article}
+\usepackage[paperwidth=210mm,paperheight=297mm,textwidth=182mm,top=20mm,bottom=22mm]{geometry}
+\usepackage{amsmath,amssymb,newtxmath}
+\usepackage[no-math]{fontspec}
+\setmainfont{Times New Roman}
+\usepackage{xeCJK}
+\setCJKmainfont[AutoFakeBold=2]{SimSun}
+\usepackage{graphicx,booktabs,array,hyperref,placeins}
+\hypersetup{hidelinks,unicode=true}
+\raggedbottom
+\setlength{\emergencystretch}{2em}
+\renewcommand{\arraystretch}{1.15}
+\usepackage{seqsplit}
+\begin{document}
+\title{Litz 线分层建模与数值验证：完整研究报告 · 08 三维 A–φ 场与诊断}
+\author{缪雨轩\\淮南师范学院}
+\date{}
+\maketitle
+\noindent 合并稿对应章节 / Chapter in merged manuscript: \href{report_zh-CN_single.pdf#chapter-08}{08}\par
+\FloatBarrier
+\section*{08 三维 A–φ 场与诊断}
+\hypertarget{chapter-08}{}
+\pdfbookmark[0]{08 三维 A–φ 场与诊断}{bookmark-chapter-08}
+A–φ 电流应使用实际保存的 A 和 φ 梯度恢复 \href{report_zh-CN_single.pdf#E07}{(8)}，不能把未通过的 φ 替换成解析值。三档圆柱分别为 1683、3672、9108 节点。最细档的径向 J 校准达到其门槛，但 φ 与规范残差在原三档中仍未通过；较粗档 J 本身也未通过。制造解核验检验了指定方程与实现关系，却没有使这些圆柱物理解自动通过。
+
+
+诊断图使用 128 个具有明确节点身份的保存场及导数样本，分别显示 A、φ、J 和实际 φ 梯度。它们不是从美化表面反推的结果，也不是全场极值。边界、缩放、导数和后处理诊断应区分实现问题与离散误差；达到有限修订上限后，未通过项以触发条件、最小复现和继续研究所需条件封存。直接分解、OOC 与迭代失败路线也保持各自原因。
+
+
+\hypertarget{E07}{}\begin{equation}\mathbf J=-\sigma\left(j\omega\mathbf A+\nabla\phi\right)\tag{8}\label{eq:E07}\end{equation}
+\begin{figure}[!htbp]
+\centering
+\setcounter{figure}{15}
+\refstepcounter{figure}\label{fig:aphi_preserved}
+\hypertarget{fig-aphi_preserved}{}
+\includegraphics[width=182mm]{../../../composites/zh-CN/aphi_preserved.pdf}
+\par\vspace{4pt}{\small\centering 图 16. A–φ 保存场样本。\par}
+\vspace{3pt}{\small\raggedright 面板分别给出 A、φ、J 和实际 φ 梯度。 128 个指定节点保留其样本身份。色标使用实际保存的复数场与导数幅值。\par}
+\end{figure}
+\begin{figure}[!htbp]
+\centering
+\setcounter{figure}{16}
+\refstepcounter{figure}\label{fig:aphi_gates}
+\hypertarget{fig-aphi_gates}{}
+\includegraphics[width=88.9mm]{../../../panels/zh-CN/aphi_gates.pdf}
+\par\vspace{4pt}{\small\centering 图 17. A–φ 圆柱校准指标。\par}
+\vspace{3pt}{\small\raggedright 三档网格与各指标门槛分别展示。 圆柱三档含 1683、3672、9108 节点。误差以各自验收门槛归一化，水平线标出单位比值。\par}
+\end{figure}
+\end{document}

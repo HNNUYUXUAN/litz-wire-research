@@ -1,0 +1,11 @@
+Get[FileNameJoin[{stageRoot,"src","NotebookView.wl"}]];Needs["NDSolve`FEM`"];
+faSource=LitzView`OpenStage[stageRoot,"fem3"];faCases=Select[Lookup[faSource["data"],"cases",{}],KeyExistsQ[#,"fields"]&];faRows={};faSigma=5.8*^7;faV=LitzPhysics`WireZ[.001,200000.] 20.;
+Do[faSol=c["fields"];faProfile=Table[{r,-faSigma faV (faSol[[3]][r,0.,1.]+Derivative[0,0,1][faSol[[4]]][r,0.,1.]),LitzPhysics`WireJ[.001 r,.001,200000.,20.]},{r,0.,.999,.999/80}];
+ faError=Norm[faProfile[[All,2]]-faProfile[[All,3]]]/Norm[faProfile[[All,3]]];
+ faProxyError=Norm[Table[faSigma faV (1-faSol[[3]][r,0.,1.]),{r,0.,.999,.999/80}]-faProfile[[All,2]]]/Norm[faProfile[[All,2]]];
+ stageCheck["actual_A_phi_J_Bessel",faError,.01,"archived_3D_fields_actual_phi_gradient_current"];
+ stageCheck["actual_A_phi_potential",c["phi_error"],10.^-8,"archived_3D_fields"];
+ stageCheck["actual_A_phi_gauge",c["gauge_sample_residual"],.001,"archived_3D_fields"];
+ AppendTo[faRows,<|"nodes"->c["nodes"],"actual_J_relative_error"->faError,"phi_z_minus1_proxy_relative_difference"->faProxyError,"phi_error"->c["phi_error"],"gauge_sample_residual"->c["gauge_sample_residual"],"profile"->faProfile|>],{c,faCases}];
+If[Length[faRows]>0,stageFigure["actual_3D_J_comparison",ListLinePlot[{({#[[1]],Abs[#[[2]]]/10.^6}&/@Last[faRows]["profile"]),({#[[1]],Abs[#[[3]]]/10.^6}&/@Last[faRows]["profile"])},PlotLegends->{"J=-sigma V (u+grad phi)","Bessel"},Frame->True,FrameLabel->{"r (mm)","Abs J (A/mm^2)"},ImageSize->600]]];
+stageData=<|"source_model"->"archived_3D_A_phi_physical_current_audit","source_run_id"->faSource["run_id"],"cases"->faRows,"assumptions"->"Independent postprocessing of actually saved 3D A/phi fields, no new solve and no invented samples. Physical current includes the computed phi gradient. Earlier 1-u_z curves assumed phi_z=-1 and are proxy diagnostics. Gauge and potential acceptance remain separate; no finite-end or insulation flux validation claim."|>;

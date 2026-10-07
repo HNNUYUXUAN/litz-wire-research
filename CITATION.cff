@@ -1,0 +1,16 @@
+cff-version: 1.2.0
+message: "Please cite this research software and the corresponding dataset version."
+type: software
+title: "Litz Wire Research"
+version: 1.0.0-rc.1
+authors:
+  - family-names: Miao
+    given-names: Yuxuan
+    affiliation: Huainan Normal University
+repository-code: "https://github.com/HNNUYUXUAN/litz-wire-research"
+license: MIT
+keywords:
+  - Litz wire
+  - finite element method
+  - PEEC
+  - reproducible research

@@ -1,0 +1,77 @@
+\documentclass[journal,10pt]{IEEEtran}
+\setlength{\textwidth}{182mm}
+\setlength{\columnsep}{4.2mm}
+\usepackage{amsmath,amssymb,newtxmath}
+\usepackage[no-math]{fontspec}
+\setmainfont{Times New Roman}
+\usepackage{xeCJK}
+\setCJKmainfont[AutoFakeBold=2]{SimSun}
+\usepackage{graphicx,booktabs,array,hyperref,placeins}
+\hypersetup{hidelinks,unicode=true}
+\raggedbottom
+\setlength{\emergencystretch}{2em}
+\renewcommand{\arraystretch}{1.15}
+\usepackage{seqsplit}
+\begin{document}
+\title{Litz 线分层建模与数值验证：完整研究报告 · 03 单圆线解析与二维校准}
+\author{缪雨轩\thanks{淮南师范学院}}
+
+\maketitle
+\noindent 合并稿对应章节 / Chapter in merged manuscript: \href{report_zh-CN_ieee.pdf#chapter-03}{03}\par
+\FloatBarrier
+\section*{03 单圆线解析与二维校准}
+\hypertarget{chapter-03}{}
+\pdfbookmark[0]{03 单圆线解析与二维校准}{bookmark-chapter-03}
+\subsection*{径向方程与归一化}
+\hypertarget{03.round_derivation.heading}{}
+\pdfbookmark[1]{径向方程与归一化}{bookmark-03.round_derivation.heading}
+圆线内部的轴向电流满足 (1/r) d(r dJz/dr)/dr=κ²Jz。轴心的有限性选择 I\(_0\)(κr)；使用 \(\int\)\(_0\)\(^a\) rI\(_0\)(κr)dr=aI\(_1\)(κa)/κ 和总复电流约束即可确定归一化常数。表面轴向电场与总电流之比给出内部阻抗，其实部通过独立焦耳积分复核。该推导把解析形状、归一化和功率三个检查连接起来。
+
+
+\subsection*{单圆线解析与独立二维校准}
+\hypertarget{03.analytic.heading}{}
+\pdfbookmark[1]{单圆线解析与独立二维校准}{bookmark-03.analytic.heading}
+长直圆线内部解采用修正 Bessel 函数 \href{report_zh-CN_ieee.pdf#E03}{(3)}。200 kHz 下的趋肤深度 δ=0.147771655 mm，相对 1 mm 半径已形成明显表层电流集中。解析值为 Rdc=5.488101486 mΩ/m、Rac=20.016203628 mΩ/m、Rac/Rdc=3.647199980、损耗 8.006481451 W/m。这里的内部阻抗不含由回流确定的外部电感。径向相位保留原复相量，并通过相邻半径的 360° 连续提升显示；显示解缠不修改数据。
+
+
+独立二维圆盘扩散使用三档 353、1389、5573 节点，并按总复电流归一化。最细 Rac 解析相对误差为 1.79233×10⁻⁶，功率积分差为 3.06800×10⁻⁶。结果支持该孤立内场问题的离散与归一化。二维场与有限长度三维端区不具有相同边界，不能把这个误差直接用于后者。解析截面图由径向解析幅值线性插值并轴对称映射。
+
+
+\hypertarget{E03}{}
+\begin{equation}
+\begin{gathered}
+\delta=(\pi f\mu\sigma)^{-1/2} \\
+\kappa=(1+j)/\delta \\
+J_z(r)=\frac{I_t\kappa I_0(\kappa r)}{2\pi a I_1(\kappa a)} \\
+z_{\mathrm{int}}=\frac{\kappa I_0(\kappa a)}{2\pi a\sigma I_1(\kappa a)}
+\end{gathered}
+\tag{3}\label{eq:E03}
+\end{equation}
+\begin{figure*}[!htbp]
+\centering
+\setcounter{figure}{1}
+\refstepcounter{figure}\label{fig:q1_profile}
+\hypertarget{fig-q1_profile}{}
+\includegraphics[width=182mm]{../../../composites/zh-CN/q1_profile.pdf}
+\par\vspace{4pt}{\small\centering 图 2. 单圆线径向电流幅值与相位。\par}
+\vspace{3pt}{\small\raggedright 铜导体直径 2 mm，200 kHz、20 A RMS。 (a) RMS 幅值；(b) 连续显示的相位。 相位显示采用径向连续提升，幅值保留 RMS 归一化。径向样本来自保存的 Bessel 解析数据。\par}
+\end{figure*}
+\begin{figure}[!htbp]
+\centering
+\setcounter{figure}{2}
+\refstepcounter{figure}\label{fig:q1_cross_section}
+\hypertarget{fig-q1_cross_section}{}
+\includegraphics[width=88.9mm]{../../../panels/zh-CN/q1_cross_section.pdf}
+\par\vspace{4pt}{\small\centering 图 3. 单圆线解析截面幅值。\par}
+\vspace{3pt}{\small\raggedright 铜导体直径 2 mm，200 kHz、20 A RMS。 色标显示轴向 RMS 电流密度。 径向样本经线性插值后作轴对称映射。坐标以毫米显示，电流密度以 A/mm² 显示。\par}
+\end{figure}
+\begin{figure}[!htbp]
+\centering
+\setcounter{figure}{3}
+\refstepcounter{figure}\label{fig:q1_fem_error}
+\hypertarget{fig-q1_fem_error}{}
+\includegraphics[width=88.9mm]{../../../panels/zh-CN/q1_fem_error.pdf}
+\par\vspace{4pt}{\small\centering 图 4. 单圆线二维校准误差。\par}
+\vspace{3pt}{\small\raggedright 铜导体直径 2 mm，200 kHz、20 A RMS。 三档网格与独立功率积分对应同一内场问题。 电阻参照为相同圆线的内部 Bessel 解。功率使用独立材料域积分计算。\par}
+\end{figure}
+\end{document}

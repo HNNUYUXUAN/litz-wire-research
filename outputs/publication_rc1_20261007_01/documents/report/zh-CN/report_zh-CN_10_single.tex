@@ -1,0 +1,57 @@
+\documentclass[11pt]{article}
+\usepackage[paperwidth=210mm,paperheight=297mm,textwidth=182mm,top=20mm,bottom=22mm]{geometry}
+\usepackage{amsmath,amssymb,newtxmath}
+\usepackage[no-math]{fontspec}
+\setmainfont{Times New Roman}
+\usepackage{xeCJK}
+\setCJKmainfont[AutoFakeBold=2]{SimSun}
+\usepackage{graphicx,booktabs,array,hyperref,placeins}
+\hypersetup{hidelinks,unicode=true}
+\raggedbottom
+\setlength{\emergencystretch}{2em}
+\renewcommand{\arraystretch}{1.15}
+\usepackage{seqsplit}
+\begin{document}
+\title{Litz 线分层建模与数值验证：完整研究报告 · 10 计算实现、CPU/GPU 对照与资源表现}
+\author{缪雨轩\\淮南师范学院}
+\date{}
+\maketitle
+\noindent 合并稿对应章节 / Chapter in merged manuscript: \href{report_zh-CN_single.pdf#chapter-10}{10}\par
+\FloatBarrier
+\section*{10 计算实现、CPU/GPU 对照与资源表现}
+\hypertarget{chapter-10}{}
+\pdfbookmark[0]{10 计算实现、CPU/GPU 对照与资源表现}{bookmark-chapter-10}
+\subsection*{CPU/GPU 等价性与资源边界}
+\hypertarget{10.compute.heading}{}
+\pdfbookmark[1]{CPU/GPU 等价性与资源边界}{bookmark-10.compute.heading}
+CPU/GPU 对照固定同一纵向模型和离散设置。5024 自由度的 L 矩阵相对差为 7.48149×10⁻¹⁶，复电流相对差为 7.78082×10⁻¹⁴，低于 10⁻¹⁰ 门槛；1264 对照亦通过。这支持已实现 CPU/GPU 算法在所比较矩阵与端口解上的等价。它不赋予模型额外物理内容，也不能用不同规模或不同积分设置的用时声称加速比。
+
+
+9856 自由度历史结果只恢复了部分电流等数据，缺少完整矩阵、公共电压或全场的项目不升级为完整验证。20108 及更大规模保持已有资源边界证据和退出记录。资源曲线只采用可归属的进程树样本；短时峰值可能遗漏，混入其他 PID 的记录排除。计算能力边界与物理失败分开解释：缺少资源不是通过，运行完成也不是物理验收通过。
+
+
+\subsection*{构建与复现入口}
+\hypertarget{10.workflow.heading}{}
+\pdfbookmark[1]{构建与复现入口}{bookmark-10.workflow.heading}
+复现分为研究计算与成稿构建两个入口。研究入口读取原始输入和求解配置，执行相应验证；成稿入口读取冻结数据、已验收单图与 Markdown 正文，生成章节、合并稿和多种格式。每一阶段保存输入哈希和输出哈希，只有依赖与产物一致时才复用已完成阶段。独立单图保留矢量曲线及其字体，组图清单保存面板身份与布局参数。
+
+
+\begin{figure}[!htbp]
+\centering
+\setcounter{figure}{19}
+\refstepcounter{figure}\label{fig:gpu_equivalence}
+\hypertarget{fig-gpu_equivalence}{}
+\includegraphics[width=88.9mm]{../../../panels/zh-CN/gpu_equivalence.pdf}
+\par\vspace{4pt}{\small\centering 图 20. CPU/GPU 同模型数值对照。\par}
+\vspace{3pt}{\small\raggedright 矩阵与复电流相对差使用同一离散和积分设置。 相对差针对 1264 和 5024 自由度分别计算。水平参照为 10⁻¹⁰ 算法对照门槛。\par}
+\end{figure}
+\begin{figure}[!htbp]
+\centering
+\setcounter{figure}{20}
+\refstepcounter{figure}\label{fig:resource_memory}
+\hypertarget{fig-resource_memory}{}
+\includegraphics[width=88.9mm]{../../../panels/zh-CN/resource_memory.pdf}
+\par\vspace{4pt}{\small\centering 图 21. 可归属进程树资源曲线。\par}
+\vspace{3pt}{\small\raggedright 曲线使用归档的时间及内存样本。 时间以对应运行的起点归一化。内存为可归属进程树的采样工作集。\par}
+\end{figure}
+\end{document}

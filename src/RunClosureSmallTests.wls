@@ -1,0 +1,16 @@
+$HistoryLength=0;$CharacterEncoding="UTF8";
+ctRoot=DirectoryName[DirectoryName[$InputFileName]];
+ctDir=Last[$ScriptCommandLine];
+If[!DirectoryQ[ctDir]||FileExistsQ[FileNameJoin[{ctDir,"results.json"}]],Exit[2]];
+ctID=FileNameTake[ctDir];ctStart=AbsoluteTime[];
+Export[FileNameJoin[{ctDir,"environment.json"}],<|"WolframVersion"->$Version,"SystemID"->$SystemID,"process_id"->$ProcessID,"ProcessorCount"->$ProcessorCount|>,"RawJSON"];
+Export[FileNameJoin[{ctDir,"parameters.json"}],<|"tests"->"tests/ClosurePEEC.wlt","scope"->"small independent assembly/default/port regression before larger closure cases"|>,"RawJSON"];
+ctTest=TestReport[FileNameJoin[{ctRoot,"tests","ClosurePEEC.wlt"}]];
+ctSuccess=ctTest["TestsSucceededCount"];ctFailure=ctTest["TestsFailedCount"];
+ctRows=Map[Function[t,<|"id"->t["TestID"],"execution_status"->If[t["Outcome"]==="Success","passed","failed"],"expected"->ToString[t["ExpectedOutput"],InputForm],"actual"->ToString[t["ActualOutput"],InputForm]|>],Values[ctTest["TestResults"]]];
+Export[FileNameJoin[{ctDir,"test_report.json"}],<|"run_id"->ctID,"execution_status"->If[ctFailure==0,"passed","failed"],"tests"->ctRows|>,"RawJSON"];
+Export[FileNameJoin[{ctDir,"results.wxf"}],ctTest,"WXF"];
+Export[FileNameJoin[{ctDir,"results.json"}],<|"run_id"->ctID,"source_model"->"small_independent_pairwise_vs_grid_offset_PEEC_regression","execution_status"->If[ctFailure==0,"executed","failed"],"physical_acceptance_status"->If[ctFailure==0,"passed_test_scope_only","failed"],"tests_succeeded"->ctSuccess,"tests_failed"->ctFailure,"elapsed_seconds"->AbsoluteTime[]-ctStart|>,"RawJSON"];
+Export[FileNameJoin[{ctDir,"process_status.json"}],<|"process_exit_code"->If[ctFailure==0,0,1],"finished_UTC"->DateString[DateObject[Now,TimeZone->0],"ISODateTime"]|>,"RawJSON"];
+Print["Closure PEEC small tests passed=",ctSuccess," failed=",ctFailure];
+Exit[If[ctFailure==0,0,1]];
