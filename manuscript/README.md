@@ -6,10 +6,11 @@
 
 正文块以 `<!-- id: ... -->` 声明身份。`{{metric:...}}` 引用冻结数值；`{{equation:...}}` 和 `{{figure:...}}` 指定展示位置；`{{eqref:...}}` 引用公式；`[@P01; @N01]` 引用共享 BibTeX 库。每张图在每套合并稿中具有一个展示位置。章节稿提取合并稿的对应正文块，使用相同的显示编号。
 
-依赖按 `requirements.lock` 安装到 `.venv/publication-deps`。Windows 编译环境包括 MiKTeX、XeLaTeX、BibTeX、latexmk 和 Wolfram 前端。构建参数由工程根目录派生路径，支持目录名包含空格。
+在项目虚拟环境执行 `python -m pip install -e ".[documents,figures]"` 安装构建依赖，已验收的 Windows Python 3.12 版本组合见 `requirements-windows-py312.lock`。Windows 编译环境包括 MiKTeX、XeLaTeX、BibTeX、latexmk 和 Wolfram 前端。构建参数由工程根目录派生路径，支持目录名包含空格。
 
 ```powershell
-./src/RunPublicationEdition.ps1 -RunId publication_YYYYMMDD_01 -Stage all
+litz-research data fetch publication-inputs
+litz-research build --run-id publication_YYYYMMDD_01 --stage all
 ```
 
 Python 入口为 `src/BuildPublicationEdition.py`。可选参数包括 `--edition report|paper|all`、`--language zh-CN|en|all`、`--source-manifest`、`--form merged|chapters|all`、`--layout single|ieee|all` 和 `--stage`。阶段顺序为正文及图件准备、Notebook、PDF、验收、封装。独立阶段通过相同运行号接续；正式构建使用新运行号。

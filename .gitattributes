@@ -1,13 +1,5 @@
-* text=auto eol=lf
-*.py text eol=lf
-*.wl text eol=lf
-*.wls text eol=lf
-*.ps1 text eol=crlf
-*.md text eol=lf
-*.json text eol=lf
+# Checkout preserves byte identities used by scientific provenance and build hashes.
+* -text
 *.pdf binary
 *.wxf binary
 *.png binary
-# Evidence files retain the exact bytes identified by the dataset manifests.
-outputs/** -text
-docs/总控/当前运行索引.json -text
