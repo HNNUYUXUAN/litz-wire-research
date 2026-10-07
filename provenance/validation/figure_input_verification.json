@@ -1,0 +1,24 @@
+{
+  "status": "passed",
+  "panels": 8,
+  "languages": [
+    "en",
+    "zh-CN"
+  ],
+  "sources": [
+    {
+      "path": "data/publication/tables/q1_analytic_profile.csv",
+      "sha256": "07fc4c3e473681151935fb67a9cda764c493ebd17c5852bc19ab3ac3534a5aec"
+    },
+    {
+      "path": "outputs/closure_20261005_manuscript_bundle_final_02/routes/closure_geometry/data.json",
+      "sha256": "ff9a6cb76959db8a491c53b847d0e329276f17e7d6ec1097025efd1aa8310077"
+    },
+    {
+      "path": "outputs/closure_20261005_manuscript_bundle_final_02/routes/closure_geometry/arrays/data_geometries_9_paths_861921dcbbd8.csv",
+      "sha256": "8fe4d0d144d79a8504dd95906f717ae81309c4a20b2019ace07cf7436fe301e2"
+    }
+  ],
+  "data_sha256": "21f0927644356d1a85d419cddfe758280dc078e7a2283dcf7b515d3f26c8e91f",
+  "publication_regression_tests": 9
+}

@@ -10,7 +10,7 @@ class ReleaseManifestTests(unittest.TestCase):
         paths={f['path'] for d in catalogue['datasets'].values() for f in d['files']}
         self.assertEqual(len(index['documents']),52)
         for document in index['documents']:
-            for key in ['markdown','notebook','pdf_single','pdf_ieee']:
+            for key in ['markdown','notebook','latex_single','latex_ieee','pdf_single','pdf_ieee']:
                 self.assertIn(document[key],paths)
 
     def test_catalogue_provenance_and_dependency_coverage(self):

@@ -1,0 +1,23 @@
+{
+  "status": "passed",
+  "wheel": "litz_research-1.0.0rc1-py3-none-any.whl",
+  "sha256": "caf962e7722b9fe9152d3a105a435f73b584a40518a13228745106aa90ccf028",
+  "members": [
+    "litz_research/__init__.py",
+    "litz_research/__main__.py",
+    "litz_research/analytical.py",
+    "litz_research/cli.py",
+    "litz_research/common.py",
+    "litz_research/data.py",
+    "litz_research/packaging.py",
+    "litz_research/provenance.py",
+    "litz_research-1.0.0rc1.dist-info/licenses/LICENSE",
+    "litz_research-1.0.0rc1.dist-info/METADATA",
+    "litz_research-1.0.0rc1.dist-info/WHEEL",
+    "litz_research-1.0.0rc1.dist-info/entry_points.txt",
+    "litz_research-1.0.0rc1.dist-info/top_level.txt",
+    "litz_research-1.0.0rc1.dist-info/RECORD"
+  ],
+  "fresh_environment_install": true,
+  "analytical_checks": 12
+}

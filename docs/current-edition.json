@@ -6,364 +6,468 @@
       "markdown": "outputs/publication_rc1_20261007_01/documents/report/zh-CN/report_zh-CN.md",
       "notebook": "notebooks/publication/publication_rc1_20261007_01/report/zh-CN/report_zh-CN.nb",
       "pdf_single": "outputs/publication_rc1_20261007_01/documents/report/zh-CN/report_zh-CN_single.pdf",
-      "pdf_ieee": "outputs/publication_rc1_20261007_01/documents/report/zh-CN/report_zh-CN_ieee.pdf"
+      "pdf_ieee": "outputs/publication_rc1_20261007_01/documents/report/zh-CN/report_zh-CN_ieee.pdf",
+      "latex_single": "outputs/publication_rc1_20261007_01/documents/report/zh-CN/report_zh-CN_single.tex",
+      "latex_ieee": "outputs/publication_rc1_20261007_01/documents/report/zh-CN/report_zh-CN_ieee.tex"
     },
     {
       "id": "report_zh-CN_01",
       "markdown": "outputs/publication_rc1_20261007_01/documents/report/zh-CN/report_zh-CN_01.md",
       "notebook": "notebooks/publication/publication_rc1_20261007_01/report/zh-CN/report_zh-CN_01.nb",
       "pdf_single": "outputs/publication_rc1_20261007_01/documents/report/zh-CN/report_zh-CN_01_single.pdf",
-      "pdf_ieee": "outputs/publication_rc1_20261007_01/documents/report/zh-CN/report_zh-CN_01_ieee.pdf"
+      "pdf_ieee": "outputs/publication_rc1_20261007_01/documents/report/zh-CN/report_zh-CN_01_ieee.pdf",
+      "latex_single": "outputs/publication_rc1_20261007_01/documents/report/zh-CN/report_zh-CN_01_single.tex",
+      "latex_ieee": "outputs/publication_rc1_20261007_01/documents/report/zh-CN/report_zh-CN_01_ieee.tex"
     },
     {
       "id": "report_zh-CN_02",
       "markdown": "outputs/publication_rc1_20261007_01/documents/report/zh-CN/report_zh-CN_02.md",
       "notebook": "notebooks/publication/publication_rc1_20261007_01/report/zh-CN/report_zh-CN_02.nb",
       "pdf_single": "outputs/publication_rc1_20261007_01/documents/report/zh-CN/report_zh-CN_02_single.pdf",
-      "pdf_ieee": "outputs/publication_rc1_20261007_01/documents/report/zh-CN/report_zh-CN_02_ieee.pdf"
+      "pdf_ieee": "outputs/publication_rc1_20261007_01/documents/report/zh-CN/report_zh-CN_02_ieee.pdf",
+      "latex_single": "outputs/publication_rc1_20261007_01/documents/report/zh-CN/report_zh-CN_02_single.tex",
+      "latex_ieee": "outputs/publication_rc1_20261007_01/documents/report/zh-CN/report_zh-CN_02_ieee.tex"
     },
     {
       "id": "report_zh-CN_03",
       "markdown": "outputs/publication_rc1_20261007_01/documents/report/zh-CN/report_zh-CN_03.md",
       "notebook": "notebooks/publication/publication_rc1_20261007_01/report/zh-CN/report_zh-CN_03.nb",
       "pdf_single": "outputs/publication_rc1_20261007_01/documents/report/zh-CN/report_zh-CN_03_single.pdf",
-      "pdf_ieee": "outputs/publication_rc1_20261007_01/documents/report/zh-CN/report_zh-CN_03_ieee.pdf"
+      "pdf_ieee": "outputs/publication_rc1_20261007_01/documents/report/zh-CN/report_zh-CN_03_ieee.pdf",
+      "latex_single": "outputs/publication_rc1_20261007_01/documents/report/zh-CN/report_zh-CN_03_single.tex",
+      "latex_ieee": "outputs/publication_rc1_20261007_01/documents/report/zh-CN/report_zh-CN_03_ieee.tex"
     },
     {
       "id": "report_zh-CN_04",
       "markdown": "outputs/publication_rc1_20261007_01/documents/report/zh-CN/report_zh-CN_04.md",
       "notebook": "notebooks/publication/publication_rc1_20261007_01/report/zh-CN/report_zh-CN_04.nb",
       "pdf_single": "outputs/publication_rc1_20261007_01/documents/report/zh-CN/report_zh-CN_04_single.pdf",
-      "pdf_ieee": "outputs/publication_rc1_20261007_01/documents/report/zh-CN/report_zh-CN_04_ieee.pdf"
+      "pdf_ieee": "outputs/publication_rc1_20261007_01/documents/report/zh-CN/report_zh-CN_04_ieee.pdf",
+      "latex_single": "outputs/publication_rc1_20261007_01/documents/report/zh-CN/report_zh-CN_04_single.tex",
+      "latex_ieee": "outputs/publication_rc1_20261007_01/documents/report/zh-CN/report_zh-CN_04_ieee.tex"
     },
     {
       "id": "report_zh-CN_05",
       "markdown": "outputs/publication_rc1_20261007_01/documents/report/zh-CN/report_zh-CN_05.md",
       "notebook": "notebooks/publication/publication_rc1_20261007_01/report/zh-CN/report_zh-CN_05.nb",
       "pdf_single": "outputs/publication_rc1_20261007_01/documents/report/zh-CN/report_zh-CN_05_single.pdf",
-      "pdf_ieee": "outputs/publication_rc1_20261007_01/documents/report/zh-CN/report_zh-CN_05_ieee.pdf"
+      "pdf_ieee": "outputs/publication_rc1_20261007_01/documents/report/zh-CN/report_zh-CN_05_ieee.pdf",
+      "latex_single": "outputs/publication_rc1_20261007_01/documents/report/zh-CN/report_zh-CN_05_single.tex",
+      "latex_ieee": "outputs/publication_rc1_20261007_01/documents/report/zh-CN/report_zh-CN_05_ieee.tex"
     },
     {
       "id": "report_zh-CN_06",
       "markdown": "outputs/publication_rc1_20261007_01/documents/report/zh-CN/report_zh-CN_06.md",
       "notebook": "notebooks/publication/publication_rc1_20261007_01/report/zh-CN/report_zh-CN_06.nb",
       "pdf_single": "outputs/publication_rc1_20261007_01/documents/report/zh-CN/report_zh-CN_06_single.pdf",
-      "pdf_ieee": "outputs/publication_rc1_20261007_01/documents/report/zh-CN/report_zh-CN_06_ieee.pdf"
+      "pdf_ieee": "outputs/publication_rc1_20261007_01/documents/report/zh-CN/report_zh-CN_06_ieee.pdf",
+      "latex_single": "outputs/publication_rc1_20261007_01/documents/report/zh-CN/report_zh-CN_06_single.tex",
+      "latex_ieee": "outputs/publication_rc1_20261007_01/documents/report/zh-CN/report_zh-CN_06_ieee.tex"
     },
     {
       "id": "report_zh-CN_07",
       "markdown": "outputs/publication_rc1_20261007_01/documents/report/zh-CN/report_zh-CN_07.md",
       "notebook": "notebooks/publication/publication_rc1_20261007_01/report/zh-CN/report_zh-CN_07.nb",
       "pdf_single": "outputs/publication_rc1_20261007_01/documents/report/zh-CN/report_zh-CN_07_single.pdf",
-      "pdf_ieee": "outputs/publication_rc1_20261007_01/documents/report/zh-CN/report_zh-CN_07_ieee.pdf"
+      "pdf_ieee": "outputs/publication_rc1_20261007_01/documents/report/zh-CN/report_zh-CN_07_ieee.pdf",
+      "latex_single": "outputs/publication_rc1_20261007_01/documents/report/zh-CN/report_zh-CN_07_single.tex",
+      "latex_ieee": "outputs/publication_rc1_20261007_01/documents/report/zh-CN/report_zh-CN_07_ieee.tex"
     },
     {
       "id": "report_zh-CN_08",
       "markdown": "outputs/publication_rc1_20261007_01/documents/report/zh-CN/report_zh-CN_08.md",
       "notebook": "notebooks/publication/publication_rc1_20261007_01/report/zh-CN/report_zh-CN_08.nb",
       "pdf_single": "outputs/publication_rc1_20261007_01/documents/report/zh-CN/report_zh-CN_08_single.pdf",
-      "pdf_ieee": "outputs/publication_rc1_20261007_01/documents/report/zh-CN/report_zh-CN_08_ieee.pdf"
+      "pdf_ieee": "outputs/publication_rc1_20261007_01/documents/report/zh-CN/report_zh-CN_08_ieee.pdf",
+      "latex_single": "outputs/publication_rc1_20261007_01/documents/report/zh-CN/report_zh-CN_08_single.tex",
+      "latex_ieee": "outputs/publication_rc1_20261007_01/documents/report/zh-CN/report_zh-CN_08_ieee.tex"
     },
     {
       "id": "report_zh-CN_09",
       "markdown": "outputs/publication_rc1_20261007_01/documents/report/zh-CN/report_zh-CN_09.md",
       "notebook": "notebooks/publication/publication_rc1_20261007_01/report/zh-CN/report_zh-CN_09.nb",
       "pdf_single": "outputs/publication_rc1_20261007_01/documents/report/zh-CN/report_zh-CN_09_single.pdf",
-      "pdf_ieee": "outputs/publication_rc1_20261007_01/documents/report/zh-CN/report_zh-CN_09_ieee.pdf"
+      "pdf_ieee": "outputs/publication_rc1_20261007_01/documents/report/zh-CN/report_zh-CN_09_ieee.pdf",
+      "latex_single": "outputs/publication_rc1_20261007_01/documents/report/zh-CN/report_zh-CN_09_single.tex",
+      "latex_ieee": "outputs/publication_rc1_20261007_01/documents/report/zh-CN/report_zh-CN_09_ieee.tex"
     },
     {
       "id": "report_zh-CN_10",
       "markdown": "outputs/publication_rc1_20261007_01/documents/report/zh-CN/report_zh-CN_10.md",
       "notebook": "notebooks/publication/publication_rc1_20261007_01/report/zh-CN/report_zh-CN_10.nb",
       "pdf_single": "outputs/publication_rc1_20261007_01/documents/report/zh-CN/report_zh-CN_10_single.pdf",
-      "pdf_ieee": "outputs/publication_rc1_20261007_01/documents/report/zh-CN/report_zh-CN_10_ieee.pdf"
+      "pdf_ieee": "outputs/publication_rc1_20261007_01/documents/report/zh-CN/report_zh-CN_10_ieee.pdf",
+      "latex_single": "outputs/publication_rc1_20261007_01/documents/report/zh-CN/report_zh-CN_10_single.tex",
+      "latex_ieee": "outputs/publication_rc1_20261007_01/documents/report/zh-CN/report_zh-CN_10_ieee.tex"
     },
     {
       "id": "report_zh-CN_11",
       "markdown": "outputs/publication_rc1_20261007_01/documents/report/zh-CN/report_zh-CN_11.md",
       "notebook": "notebooks/publication/publication_rc1_20261007_01/report/zh-CN/report_zh-CN_11.nb",
       "pdf_single": "outputs/publication_rc1_20261007_01/documents/report/zh-CN/report_zh-CN_11_single.pdf",
-      "pdf_ieee": "outputs/publication_rc1_20261007_01/documents/report/zh-CN/report_zh-CN_11_ieee.pdf"
+      "pdf_ieee": "outputs/publication_rc1_20261007_01/documents/report/zh-CN/report_zh-CN_11_ieee.pdf",
+      "latex_single": "outputs/publication_rc1_20261007_01/documents/report/zh-CN/report_zh-CN_11_single.tex",
+      "latex_ieee": "outputs/publication_rc1_20261007_01/documents/report/zh-CN/report_zh-CN_11_ieee.tex"
     },
     {
       "id": "report_zh-CN_12",
       "markdown": "outputs/publication_rc1_20261007_01/documents/report/zh-CN/report_zh-CN_12.md",
       "notebook": "notebooks/publication/publication_rc1_20261007_01/report/zh-CN/report_zh-CN_12.nb",
       "pdf_single": "outputs/publication_rc1_20261007_01/documents/report/zh-CN/report_zh-CN_12_single.pdf",
-      "pdf_ieee": "outputs/publication_rc1_20261007_01/documents/report/zh-CN/report_zh-CN_12_ieee.pdf"
+      "pdf_ieee": "outputs/publication_rc1_20261007_01/documents/report/zh-CN/report_zh-CN_12_ieee.pdf",
+      "latex_single": "outputs/publication_rc1_20261007_01/documents/report/zh-CN/report_zh-CN_12_single.tex",
+      "latex_ieee": "outputs/publication_rc1_20261007_01/documents/report/zh-CN/report_zh-CN_12_ieee.tex"
     },
     {
       "id": "report_zh-CN_A",
       "markdown": "outputs/publication_rc1_20261007_01/documents/report/zh-CN/report_zh-CN_A.md",
       "notebook": "notebooks/publication/publication_rc1_20261007_01/report/zh-CN/report_zh-CN_A.nb",
       "pdf_single": "outputs/publication_rc1_20261007_01/documents/report/zh-CN/report_zh-CN_A_single.pdf",
-      "pdf_ieee": "outputs/publication_rc1_20261007_01/documents/report/zh-CN/report_zh-CN_A_ieee.pdf"
+      "pdf_ieee": "outputs/publication_rc1_20261007_01/documents/report/zh-CN/report_zh-CN_A_ieee.pdf",
+      "latex_single": "outputs/publication_rc1_20261007_01/documents/report/zh-CN/report_zh-CN_A_single.tex",
+      "latex_ieee": "outputs/publication_rc1_20261007_01/documents/report/zh-CN/report_zh-CN_A_ieee.tex"
     },
     {
       "id": "report_zh-CN_B",
       "markdown": "outputs/publication_rc1_20261007_01/documents/report/zh-CN/report_zh-CN_B.md",
       "notebook": "notebooks/publication/publication_rc1_20261007_01/report/zh-CN/report_zh-CN_B.nb",
       "pdf_single": "outputs/publication_rc1_20261007_01/documents/report/zh-CN/report_zh-CN_B_single.pdf",
-      "pdf_ieee": "outputs/publication_rc1_20261007_01/documents/report/zh-CN/report_zh-CN_B_ieee.pdf"
+      "pdf_ieee": "outputs/publication_rc1_20261007_01/documents/report/zh-CN/report_zh-CN_B_ieee.pdf",
+      "latex_single": "outputs/publication_rc1_20261007_01/documents/report/zh-CN/report_zh-CN_B_single.tex",
+      "latex_ieee": "outputs/publication_rc1_20261007_01/documents/report/zh-CN/report_zh-CN_B_ieee.tex"
     },
     {
       "id": "report_zh-CN_C",
       "markdown": "outputs/publication_rc1_20261007_01/documents/report/zh-CN/report_zh-CN_C.md",
       "notebook": "notebooks/publication/publication_rc1_20261007_01/report/zh-CN/report_zh-CN_C.nb",
       "pdf_single": "outputs/publication_rc1_20261007_01/documents/report/zh-CN/report_zh-CN_C_single.pdf",
-      "pdf_ieee": "outputs/publication_rc1_20261007_01/documents/report/zh-CN/report_zh-CN_C_ieee.pdf"
+      "pdf_ieee": "outputs/publication_rc1_20261007_01/documents/report/zh-CN/report_zh-CN_C_ieee.pdf",
+      "latex_single": "outputs/publication_rc1_20261007_01/documents/report/zh-CN/report_zh-CN_C_single.tex",
+      "latex_ieee": "outputs/publication_rc1_20261007_01/documents/report/zh-CN/report_zh-CN_C_ieee.tex"
     },
     {
       "id": "report_zh-CN_D",
       "markdown": "outputs/publication_rc1_20261007_01/documents/report/zh-CN/report_zh-CN_D.md",
       "notebook": "notebooks/publication/publication_rc1_20261007_01/report/zh-CN/report_zh-CN_D.nb",
       "pdf_single": "outputs/publication_rc1_20261007_01/documents/report/zh-CN/report_zh-CN_D_single.pdf",
-      "pdf_ieee": "outputs/publication_rc1_20261007_01/documents/report/zh-CN/report_zh-CN_D_ieee.pdf"
+      "pdf_ieee": "outputs/publication_rc1_20261007_01/documents/report/zh-CN/report_zh-CN_D_ieee.pdf",
+      "latex_single": "outputs/publication_rc1_20261007_01/documents/report/zh-CN/report_zh-CN_D_single.tex",
+      "latex_ieee": "outputs/publication_rc1_20261007_01/documents/report/zh-CN/report_zh-CN_D_ieee.tex"
     },
     {
       "id": "report_en",
       "markdown": "outputs/publication_rc1_20261007_01/documents/report/en/report_en.md",
       "notebook": "notebooks/publication/publication_rc1_20261007_01/report/en/report_en.nb",
       "pdf_single": "outputs/publication_rc1_20261007_01/documents/report/en/report_en_single.pdf",
-      "pdf_ieee": "outputs/publication_rc1_20261007_01/documents/report/en/report_en_ieee.pdf"
+      "pdf_ieee": "outputs/publication_rc1_20261007_01/documents/report/en/report_en_ieee.pdf",
+      "latex_single": "outputs/publication_rc1_20261007_01/documents/report/en/report_en_single.tex",
+      "latex_ieee": "outputs/publication_rc1_20261007_01/documents/report/en/report_en_ieee.tex"
     },
     {
       "id": "report_en_01",
       "markdown": "outputs/publication_rc1_20261007_01/documents/report/en/report_en_01.md",
       "notebook": "notebooks/publication/publication_rc1_20261007_01/report/en/report_en_01.nb",
       "pdf_single": "outputs/publication_rc1_20261007_01/documents/report/en/report_en_01_single.pdf",
-      "pdf_ieee": "outputs/publication_rc1_20261007_01/documents/report/en/report_en_01_ieee.pdf"
+      "pdf_ieee": "outputs/publication_rc1_20261007_01/documents/report/en/report_en_01_ieee.pdf",
+      "latex_single": "outputs/publication_rc1_20261007_01/documents/report/en/report_en_01_single.tex",
+      "latex_ieee": "outputs/publication_rc1_20261007_01/documents/report/en/report_en_01_ieee.tex"
     },
     {
       "id": "report_en_02",
       "markdown": "outputs/publication_rc1_20261007_01/documents/report/en/report_en_02.md",
       "notebook": "notebooks/publication/publication_rc1_20261007_01/report/en/report_en_02.nb",
       "pdf_single": "outputs/publication_rc1_20261007_01/documents/report/en/report_en_02_single.pdf",
-      "pdf_ieee": "outputs/publication_rc1_20261007_01/documents/report/en/report_en_02_ieee.pdf"
+      "pdf_ieee": "outputs/publication_rc1_20261007_01/documents/report/en/report_en_02_ieee.pdf",
+      "latex_single": "outputs/publication_rc1_20261007_01/documents/report/en/report_en_02_single.tex",
+      "latex_ieee": "outputs/publication_rc1_20261007_01/documents/report/en/report_en_02_ieee.tex"
     },
     {
       "id": "report_en_03",
       "markdown": "outputs/publication_rc1_20261007_01/documents/report/en/report_en_03.md",
       "notebook": "notebooks/publication/publication_rc1_20261007_01/report/en/report_en_03.nb",
       "pdf_single": "outputs/publication_rc1_20261007_01/documents/report/en/report_en_03_single.pdf",
-      "pdf_ieee": "outputs/publication_rc1_20261007_01/documents/report/en/report_en_03_ieee.pdf"
+      "pdf_ieee": "outputs/publication_rc1_20261007_01/documents/report/en/report_en_03_ieee.pdf",
+      "latex_single": "outputs/publication_rc1_20261007_01/documents/report/en/report_en_03_single.tex",
+      "latex_ieee": "outputs/publication_rc1_20261007_01/documents/report/en/report_en_03_ieee.tex"
     },
     {
       "id": "report_en_04",
       "markdown": "outputs/publication_rc1_20261007_01/documents/report/en/report_en_04.md",
       "notebook": "notebooks/publication/publication_rc1_20261007_01/report/en/report_en_04.nb",
       "pdf_single": "outputs/publication_rc1_20261007_01/documents/report/en/report_en_04_single.pdf",
-      "pdf_ieee": "outputs/publication_rc1_20261007_01/documents/report/en/report_en_04_ieee.pdf"
+      "pdf_ieee": "outputs/publication_rc1_20261007_01/documents/report/en/report_en_04_ieee.pdf",
+      "latex_single": "outputs/publication_rc1_20261007_01/documents/report/en/report_en_04_single.tex",
+      "latex_ieee": "outputs/publication_rc1_20261007_01/documents/report/en/report_en_04_ieee.tex"
     },
     {
       "id": "report_en_05",
       "markdown": "outputs/publication_rc1_20261007_01/documents/report/en/report_en_05.md",
       "notebook": "notebooks/publication/publication_rc1_20261007_01/report/en/report_en_05.nb",
       "pdf_single": "outputs/publication_rc1_20261007_01/documents/report/en/report_en_05_single.pdf",
-      "pdf_ieee": "outputs/publication_rc1_20261007_01/documents/report/en/report_en_05_ieee.pdf"
+      "pdf_ieee": "outputs/publication_rc1_20261007_01/documents/report/en/report_en_05_ieee.pdf",
+      "latex_single": "outputs/publication_rc1_20261007_01/documents/report/en/report_en_05_single.tex",
+      "latex_ieee": "outputs/publication_rc1_20261007_01/documents/report/en/report_en_05_ieee.tex"
     },
     {
       "id": "report_en_06",
       "markdown": "outputs/publication_rc1_20261007_01/documents/report/en/report_en_06.md",
       "notebook": "notebooks/publication/publication_rc1_20261007_01/report/en/report_en_06.nb",
       "pdf_single": "outputs/publication_rc1_20261007_01/documents/report/en/report_en_06_single.pdf",
-      "pdf_ieee": "outputs/publication_rc1_20261007_01/documents/report/en/report_en_06_ieee.pdf"
+      "pdf_ieee": "outputs/publication_rc1_20261007_01/documents/report/en/report_en_06_ieee.pdf",
+      "latex_single": "outputs/publication_rc1_20261007_01/documents/report/en/report_en_06_single.tex",
+      "latex_ieee": "outputs/publication_rc1_20261007_01/documents/report/en/report_en_06_ieee.tex"
     },
     {
       "id": "report_en_07",
       "markdown": "outputs/publication_rc1_20261007_01/documents/report/en/report_en_07.md",
       "notebook": "notebooks/publication/publication_rc1_20261007_01/report/en/report_en_07.nb",
       "pdf_single": "outputs/publication_rc1_20261007_01/documents/report/en/report_en_07_single.pdf",
-      "pdf_ieee": "outputs/publication_rc1_20261007_01/documents/report/en/report_en_07_ieee.pdf"
+      "pdf_ieee": "outputs/publication_rc1_20261007_01/documents/report/en/report_en_07_ieee.pdf",
+      "latex_single": "outputs/publication_rc1_20261007_01/documents/report/en/report_en_07_single.tex",
+      "latex_ieee": "outputs/publication_rc1_20261007_01/documents/report/en/report_en_07_ieee.tex"
     },
     {
       "id": "report_en_08",
       "markdown": "outputs/publication_rc1_20261007_01/documents/report/en/report_en_08.md",
       "notebook": "notebooks/publication/publication_rc1_20261007_01/report/en/report_en_08.nb",
       "pdf_single": "outputs/publication_rc1_20261007_01/documents/report/en/report_en_08_single.pdf",
-      "pdf_ieee": "outputs/publication_rc1_20261007_01/documents/report/en/report_en_08_ieee.pdf"
+      "pdf_ieee": "outputs/publication_rc1_20261007_01/documents/report/en/report_en_08_ieee.pdf",
+      "latex_single": "outputs/publication_rc1_20261007_01/documents/report/en/report_en_08_single.tex",
+      "latex_ieee": "outputs/publication_rc1_20261007_01/documents/report/en/report_en_08_ieee.tex"
     },
     {
       "id": "report_en_09",
       "markdown": "outputs/publication_rc1_20261007_01/documents/report/en/report_en_09.md",
       "notebook": "notebooks/publication/publication_rc1_20261007_01/report/en/report_en_09.nb",
       "pdf_single": "outputs/publication_rc1_20261007_01/documents/report/en/report_en_09_single.pdf",
-      "pdf_ieee": "outputs/publication_rc1_20261007_01/documents/report/en/report_en_09_ieee.pdf"
+      "pdf_ieee": "outputs/publication_rc1_20261007_01/documents/report/en/report_en_09_ieee.pdf",
+      "latex_single": "outputs/publication_rc1_20261007_01/documents/report/en/report_en_09_single.tex",
+      "latex_ieee": "outputs/publication_rc1_20261007_01/documents/report/en/report_en_09_ieee.tex"
     },
     {
       "id": "report_en_10",
       "markdown": "outputs/publication_rc1_20261007_01/documents/report/en/report_en_10.md",
       "notebook": "notebooks/publication/publication_rc1_20261007_01/report/en/report_en_10.nb",
       "pdf_single": "outputs/publication_rc1_20261007_01/documents/report/en/report_en_10_single.pdf",
-      "pdf_ieee": "outputs/publication_rc1_20261007_01/documents/report/en/report_en_10_ieee.pdf"
+      "pdf_ieee": "outputs/publication_rc1_20261007_01/documents/report/en/report_en_10_ieee.pdf",
+      "latex_single": "outputs/publication_rc1_20261007_01/documents/report/en/report_en_10_single.tex",
+      "latex_ieee": "outputs/publication_rc1_20261007_01/documents/report/en/report_en_10_ieee.tex"
     },
     {
       "id": "report_en_11",
       "markdown": "outputs/publication_rc1_20261007_01/documents/report/en/report_en_11.md",
       "notebook": "notebooks/publication/publication_rc1_20261007_01/report/en/report_en_11.nb",
       "pdf_single": "outputs/publication_rc1_20261007_01/documents/report/en/report_en_11_single.pdf",
-      "pdf_ieee": "outputs/publication_rc1_20261007_01/documents/report/en/report_en_11_ieee.pdf"
+      "pdf_ieee": "outputs/publication_rc1_20261007_01/documents/report/en/report_en_11_ieee.pdf",
+      "latex_single": "outputs/publication_rc1_20261007_01/documents/report/en/report_en_11_single.tex",
+      "latex_ieee": "outputs/publication_rc1_20261007_01/documents/report/en/report_en_11_ieee.tex"
     },
     {
       "id": "report_en_12",
       "markdown": "outputs/publication_rc1_20261007_01/documents/report/en/report_en_12.md",
       "notebook": "notebooks/publication/publication_rc1_20261007_01/report/en/report_en_12.nb",
       "pdf_single": "outputs/publication_rc1_20261007_01/documents/report/en/report_en_12_single.pdf",
-      "pdf_ieee": "outputs/publication_rc1_20261007_01/documents/report/en/report_en_12_ieee.pdf"
+      "pdf_ieee": "outputs/publication_rc1_20261007_01/documents/report/en/report_en_12_ieee.pdf",
+      "latex_single": "outputs/publication_rc1_20261007_01/documents/report/en/report_en_12_single.tex",
+      "latex_ieee": "outputs/publication_rc1_20261007_01/documents/report/en/report_en_12_ieee.tex"
     },
     {
       "id": "report_en_A",
       "markdown": "outputs/publication_rc1_20261007_01/documents/report/en/report_en_A.md",
       "notebook": "notebooks/publication/publication_rc1_20261007_01/report/en/report_en_A.nb",
       "pdf_single": "outputs/publication_rc1_20261007_01/documents/report/en/report_en_A_single.pdf",
-      "pdf_ieee": "outputs/publication_rc1_20261007_01/documents/report/en/report_en_A_ieee.pdf"
+      "pdf_ieee": "outputs/publication_rc1_20261007_01/documents/report/en/report_en_A_ieee.pdf",
+      "latex_single": "outputs/publication_rc1_20261007_01/documents/report/en/report_en_A_single.tex",
+      "latex_ieee": "outputs/publication_rc1_20261007_01/documents/report/en/report_en_A_ieee.tex"
     },
     {
       "id": "report_en_B",
       "markdown": "outputs/publication_rc1_20261007_01/documents/report/en/report_en_B.md",
       "notebook": "notebooks/publication/publication_rc1_20261007_01/report/en/report_en_B.nb",
       "pdf_single": "outputs/publication_rc1_20261007_01/documents/report/en/report_en_B_single.pdf",
-      "pdf_ieee": "outputs/publication_rc1_20261007_01/documents/report/en/report_en_B_ieee.pdf"
+      "pdf_ieee": "outputs/publication_rc1_20261007_01/documents/report/en/report_en_B_ieee.pdf",
+      "latex_single": "outputs/publication_rc1_20261007_01/documents/report/en/report_en_B_single.tex",
+      "latex_ieee": "outputs/publication_rc1_20261007_01/documents/report/en/report_en_B_ieee.tex"
     },
     {
       "id": "report_en_C",
       "markdown": "outputs/publication_rc1_20261007_01/documents/report/en/report_en_C.md",
       "notebook": "notebooks/publication/publication_rc1_20261007_01/report/en/report_en_C.nb",
       "pdf_single": "outputs/publication_rc1_20261007_01/documents/report/en/report_en_C_single.pdf",
-      "pdf_ieee": "outputs/publication_rc1_20261007_01/documents/report/en/report_en_C_ieee.pdf"
+      "pdf_ieee": "outputs/publication_rc1_20261007_01/documents/report/en/report_en_C_ieee.pdf",
+      "latex_single": "outputs/publication_rc1_20261007_01/documents/report/en/report_en_C_single.tex",
+      "latex_ieee": "outputs/publication_rc1_20261007_01/documents/report/en/report_en_C_ieee.tex"
     },
     {
       "id": "report_en_D",
       "markdown": "outputs/publication_rc1_20261007_01/documents/report/en/report_en_D.md",
       "notebook": "notebooks/publication/publication_rc1_20261007_01/report/en/report_en_D.nb",
       "pdf_single": "outputs/publication_rc1_20261007_01/documents/report/en/report_en_D_single.pdf",
-      "pdf_ieee": "outputs/publication_rc1_20261007_01/documents/report/en/report_en_D_ieee.pdf"
+      "pdf_ieee": "outputs/publication_rc1_20261007_01/documents/report/en/report_en_D_ieee.pdf",
+      "latex_single": "outputs/publication_rc1_20261007_01/documents/report/en/report_en_D_single.tex",
+      "latex_ieee": "outputs/publication_rc1_20261007_01/documents/report/en/report_en_D_ieee.tex"
     },
     {
       "id": "paper_zh-CN",
       "markdown": "outputs/publication_rc1_20261007_01/documents/paper/zh-CN/paper_zh-CN.md",
       "notebook": "notebooks/publication/publication_rc1_20261007_01/paper/zh-CN/paper_zh-CN.nb",
       "pdf_single": "outputs/publication_rc1_20261007_01/documents/paper/zh-CN/paper_zh-CN_single.pdf",
-      "pdf_ieee": "outputs/publication_rc1_20261007_01/documents/paper/zh-CN/paper_zh-CN_ieee.pdf"
+      "pdf_ieee": "outputs/publication_rc1_20261007_01/documents/paper/zh-CN/paper_zh-CN_ieee.pdf",
+      "latex_single": "outputs/publication_rc1_20261007_01/documents/paper/zh-CN/paper_zh-CN_single.tex",
+      "latex_ieee": "outputs/publication_rc1_20261007_01/documents/paper/zh-CN/paper_zh-CN_ieee.tex"
     },
     {
       "id": "paper_zh-CN_01",
       "markdown": "outputs/publication_rc1_20261007_01/documents/paper/zh-CN/paper_zh-CN_01.md",
       "notebook": "notebooks/publication/publication_rc1_20261007_01/paper/zh-CN/paper_zh-CN_01.nb",
       "pdf_single": "outputs/publication_rc1_20261007_01/documents/paper/zh-CN/paper_zh-CN_01_single.pdf",
-      "pdf_ieee": "outputs/publication_rc1_20261007_01/documents/paper/zh-CN/paper_zh-CN_01_ieee.pdf"
+      "pdf_ieee": "outputs/publication_rc1_20261007_01/documents/paper/zh-CN/paper_zh-CN_01_ieee.pdf",
+      "latex_single": "outputs/publication_rc1_20261007_01/documents/paper/zh-CN/paper_zh-CN_01_single.tex",
+      "latex_ieee": "outputs/publication_rc1_20261007_01/documents/paper/zh-CN/paper_zh-CN_01_ieee.tex"
     },
     {
       "id": "paper_zh-CN_02",
       "markdown": "outputs/publication_rc1_20261007_01/documents/paper/zh-CN/paper_zh-CN_02.md",
       "notebook": "notebooks/publication/publication_rc1_20261007_01/paper/zh-CN/paper_zh-CN_02.nb",
       "pdf_single": "outputs/publication_rc1_20261007_01/documents/paper/zh-CN/paper_zh-CN_02_single.pdf",
-      "pdf_ieee": "outputs/publication_rc1_20261007_01/documents/paper/zh-CN/paper_zh-CN_02_ieee.pdf"
+      "pdf_ieee": "outputs/publication_rc1_20261007_01/documents/paper/zh-CN/paper_zh-CN_02_ieee.pdf",
+      "latex_single": "outputs/publication_rc1_20261007_01/documents/paper/zh-CN/paper_zh-CN_02_single.tex",
+      "latex_ieee": "outputs/publication_rc1_20261007_01/documents/paper/zh-CN/paper_zh-CN_02_ieee.tex"
     },
     {
       "id": "paper_zh-CN_03",
       "markdown": "outputs/publication_rc1_20261007_01/documents/paper/zh-CN/paper_zh-CN_03.md",
       "notebook": "notebooks/publication/publication_rc1_20261007_01/paper/zh-CN/paper_zh-CN_03.nb",
       "pdf_single": "outputs/publication_rc1_20261007_01/documents/paper/zh-CN/paper_zh-CN_03_single.pdf",
-      "pdf_ieee": "outputs/publication_rc1_20261007_01/documents/paper/zh-CN/paper_zh-CN_03_ieee.pdf"
+      "pdf_ieee": "outputs/publication_rc1_20261007_01/documents/paper/zh-CN/paper_zh-CN_03_ieee.pdf",
+      "latex_single": "outputs/publication_rc1_20261007_01/documents/paper/zh-CN/paper_zh-CN_03_single.tex",
+      "latex_ieee": "outputs/publication_rc1_20261007_01/documents/paper/zh-CN/paper_zh-CN_03_ieee.tex"
     },
     {
       "id": "paper_zh-CN_04",
       "markdown": "outputs/publication_rc1_20261007_01/documents/paper/zh-CN/paper_zh-CN_04.md",
       "notebook": "notebooks/publication/publication_rc1_20261007_01/paper/zh-CN/paper_zh-CN_04.nb",
       "pdf_single": "outputs/publication_rc1_20261007_01/documents/paper/zh-CN/paper_zh-CN_04_single.pdf",
-      "pdf_ieee": "outputs/publication_rc1_20261007_01/documents/paper/zh-CN/paper_zh-CN_04_ieee.pdf"
+      "pdf_ieee": "outputs/publication_rc1_20261007_01/documents/paper/zh-CN/paper_zh-CN_04_ieee.pdf",
+      "latex_single": "outputs/publication_rc1_20261007_01/documents/paper/zh-CN/paper_zh-CN_04_single.tex",
+      "latex_ieee": "outputs/publication_rc1_20261007_01/documents/paper/zh-CN/paper_zh-CN_04_ieee.tex"
     },
     {
       "id": "paper_zh-CN_05",
       "markdown": "outputs/publication_rc1_20261007_01/documents/paper/zh-CN/paper_zh-CN_05.md",
       "notebook": "notebooks/publication/publication_rc1_20261007_01/paper/zh-CN/paper_zh-CN_05.nb",
       "pdf_single": "outputs/publication_rc1_20261007_01/documents/paper/zh-CN/paper_zh-CN_05_single.pdf",
-      "pdf_ieee": "outputs/publication_rc1_20261007_01/documents/paper/zh-CN/paper_zh-CN_05_ieee.pdf"
+      "pdf_ieee": "outputs/publication_rc1_20261007_01/documents/paper/zh-CN/paper_zh-CN_05_ieee.pdf",
+      "latex_single": "outputs/publication_rc1_20261007_01/documents/paper/zh-CN/paper_zh-CN_05_single.tex",
+      "latex_ieee": "outputs/publication_rc1_20261007_01/documents/paper/zh-CN/paper_zh-CN_05_ieee.tex"
     },
     {
       "id": "paper_zh-CN_S1",
       "markdown": "outputs/publication_rc1_20261007_01/documents/paper/zh-CN/paper_zh-CN_S1.md",
       "notebook": "notebooks/publication/publication_rc1_20261007_01/paper/zh-CN/paper_zh-CN_S1.nb",
       "pdf_single": "outputs/publication_rc1_20261007_01/documents/paper/zh-CN/paper_zh-CN_S1_single.pdf",
-      "pdf_ieee": "outputs/publication_rc1_20261007_01/documents/paper/zh-CN/paper_zh-CN_S1_ieee.pdf"
+      "pdf_ieee": "outputs/publication_rc1_20261007_01/documents/paper/zh-CN/paper_zh-CN_S1_ieee.pdf",
+      "latex_single": "outputs/publication_rc1_20261007_01/documents/paper/zh-CN/paper_zh-CN_S1_single.tex",
+      "latex_ieee": "outputs/publication_rc1_20261007_01/documents/paper/zh-CN/paper_zh-CN_S1_ieee.tex"
     },
     {
       "id": "paper_zh-CN_S2",
       "markdown": "outputs/publication_rc1_20261007_01/documents/paper/zh-CN/paper_zh-CN_S2.md",
       "notebook": "notebooks/publication/publication_rc1_20261007_01/paper/zh-CN/paper_zh-CN_S2.nb",
       "pdf_single": "outputs/publication_rc1_20261007_01/documents/paper/zh-CN/paper_zh-CN_S2_single.pdf",
-      "pdf_ieee": "outputs/publication_rc1_20261007_01/documents/paper/zh-CN/paper_zh-CN_S2_ieee.pdf"
+      "pdf_ieee": "outputs/publication_rc1_20261007_01/documents/paper/zh-CN/paper_zh-CN_S2_ieee.pdf",
+      "latex_single": "outputs/publication_rc1_20261007_01/documents/paper/zh-CN/paper_zh-CN_S2_single.tex",
+      "latex_ieee": "outputs/publication_rc1_20261007_01/documents/paper/zh-CN/paper_zh-CN_S2_ieee.tex"
     },
     {
       "id": "paper_zh-CN_S3",
       "markdown": "outputs/publication_rc1_20261007_01/documents/paper/zh-CN/paper_zh-CN_S3.md",
       "notebook": "notebooks/publication/publication_rc1_20261007_01/paper/zh-CN/paper_zh-CN_S3.nb",
       "pdf_single": "outputs/publication_rc1_20261007_01/documents/paper/zh-CN/paper_zh-CN_S3_single.pdf",
-      "pdf_ieee": "outputs/publication_rc1_20261007_01/documents/paper/zh-CN/paper_zh-CN_S3_ieee.pdf"
+      "pdf_ieee": "outputs/publication_rc1_20261007_01/documents/paper/zh-CN/paper_zh-CN_S3_ieee.pdf",
+      "latex_single": "outputs/publication_rc1_20261007_01/documents/paper/zh-CN/paper_zh-CN_S3_single.tex",
+      "latex_ieee": "outputs/publication_rc1_20261007_01/documents/paper/zh-CN/paper_zh-CN_S3_ieee.tex"
     },
     {
       "id": "paper_en",
       "markdown": "outputs/publication_rc1_20261007_01/documents/paper/en/paper_en.md",
       "notebook": "notebooks/publication/publication_rc1_20261007_01/paper/en/paper_en.nb",
       "pdf_single": "outputs/publication_rc1_20261007_01/documents/paper/en/paper_en_single.pdf",
-      "pdf_ieee": "outputs/publication_rc1_20261007_01/documents/paper/en/paper_en_ieee.pdf"
+      "pdf_ieee": "outputs/publication_rc1_20261007_01/documents/paper/en/paper_en_ieee.pdf",
+      "latex_single": "outputs/publication_rc1_20261007_01/documents/paper/en/paper_en_single.tex",
+      "latex_ieee": "outputs/publication_rc1_20261007_01/documents/paper/en/paper_en_ieee.tex"
     },
     {
       "id": "paper_en_01",
       "markdown": "outputs/publication_rc1_20261007_01/documents/paper/en/paper_en_01.md",
       "notebook": "notebooks/publication/publication_rc1_20261007_01/paper/en/paper_en_01.nb",
       "pdf_single": "outputs/publication_rc1_20261007_01/documents/paper/en/paper_en_01_single.pdf",
-      "pdf_ieee": "outputs/publication_rc1_20261007_01/documents/paper/en/paper_en_01_ieee.pdf"
+      "pdf_ieee": "outputs/publication_rc1_20261007_01/documents/paper/en/paper_en_01_ieee.pdf",
+      "latex_single": "outputs/publication_rc1_20261007_01/documents/paper/en/paper_en_01_single.tex",
+      "latex_ieee": "outputs/publication_rc1_20261007_01/documents/paper/en/paper_en_01_ieee.tex"
     },
     {
       "id": "paper_en_02",
       "markdown": "outputs/publication_rc1_20261007_01/documents/paper/en/paper_en_02.md",
       "notebook": "notebooks/publication/publication_rc1_20261007_01/paper/en/paper_en_02.nb",
       "pdf_single": "outputs/publication_rc1_20261007_01/documents/paper/en/paper_en_02_single.pdf",
-      "pdf_ieee": "outputs/publication_rc1_20261007_01/documents/paper/en/paper_en_02_ieee.pdf"
+      "pdf_ieee": "outputs/publication_rc1_20261007_01/documents/paper/en/paper_en_02_ieee.pdf",
+      "latex_single": "outputs/publication_rc1_20261007_01/documents/paper/en/paper_en_02_single.tex",
+      "latex_ieee": "outputs/publication_rc1_20261007_01/documents/paper/en/paper_en_02_ieee.tex"
     },
     {
       "id": "paper_en_03",
       "markdown": "outputs/publication_rc1_20261007_01/documents/paper/en/paper_en_03.md",
       "notebook": "notebooks/publication/publication_rc1_20261007_01/paper/en/paper_en_03.nb",
       "pdf_single": "outputs/publication_rc1_20261007_01/documents/paper/en/paper_en_03_single.pdf",
-      "pdf_ieee": "outputs/publication_rc1_20261007_01/documents/paper/en/paper_en_03_ieee.pdf"
+      "pdf_ieee": "outputs/publication_rc1_20261007_01/documents/paper/en/paper_en_03_ieee.pdf",
+      "latex_single": "outputs/publication_rc1_20261007_01/documents/paper/en/paper_en_03_single.tex",
+      "latex_ieee": "outputs/publication_rc1_20261007_01/documents/paper/en/paper_en_03_ieee.tex"
     },
     {
       "id": "paper_en_04",
       "markdown": "outputs/publication_rc1_20261007_01/documents/paper/en/paper_en_04.md",
       "notebook": "notebooks/publication/publication_rc1_20261007_01/paper/en/paper_en_04.nb",
       "pdf_single": "outputs/publication_rc1_20261007_01/documents/paper/en/paper_en_04_single.pdf",
-      "pdf_ieee": "outputs/publication_rc1_20261007_01/documents/paper/en/paper_en_04_ieee.pdf"
+      "pdf_ieee": "outputs/publication_rc1_20261007_01/documents/paper/en/paper_en_04_ieee.pdf",
+      "latex_single": "outputs/publication_rc1_20261007_01/documents/paper/en/paper_en_04_single.tex",
+      "latex_ieee": "outputs/publication_rc1_20261007_01/documents/paper/en/paper_en_04_ieee.tex"
     },
     {
       "id": "paper_en_05",
       "markdown": "outputs/publication_rc1_20261007_01/documents/paper/en/paper_en_05.md",
       "notebook": "notebooks/publication/publication_rc1_20261007_01/paper/en/paper_en_05.nb",
       "pdf_single": "outputs/publication_rc1_20261007_01/documents/paper/en/paper_en_05_single.pdf",
-      "pdf_ieee": "outputs/publication_rc1_20261007_01/documents/paper/en/paper_en_05_ieee.pdf"
+      "pdf_ieee": "outputs/publication_rc1_20261007_01/documents/paper/en/paper_en_05_ieee.pdf",
+      "latex_single": "outputs/publication_rc1_20261007_01/documents/paper/en/paper_en_05_single.tex",
+      "latex_ieee": "outputs/publication_rc1_20261007_01/documents/paper/en/paper_en_05_ieee.tex"
     },
     {
       "id": "paper_en_S1",
       "markdown": "outputs/publication_rc1_20261007_01/documents/paper/en/paper_en_S1.md",
       "notebook": "notebooks/publication/publication_rc1_20261007_01/paper/en/paper_en_S1.nb",
       "pdf_single": "outputs/publication_rc1_20261007_01/documents/paper/en/paper_en_S1_single.pdf",
-      "pdf_ieee": "outputs/publication_rc1_20261007_01/documents/paper/en/paper_en_S1_ieee.pdf"
+      "pdf_ieee": "outputs/publication_rc1_20261007_01/documents/paper/en/paper_en_S1_ieee.pdf",
+      "latex_single": "outputs/publication_rc1_20261007_01/documents/paper/en/paper_en_S1_single.tex",
+      "latex_ieee": "outputs/publication_rc1_20261007_01/documents/paper/en/paper_en_S1_ieee.tex"
     },
     {
       "id": "paper_en_S2",
       "markdown": "outputs/publication_rc1_20261007_01/documents/paper/en/paper_en_S2.md",
       "notebook": "notebooks/publication/publication_rc1_20261007_01/paper/en/paper_en_S2.nb",
       "pdf_single": "outputs/publication_rc1_20261007_01/documents/paper/en/paper_en_S2_single.pdf",
-      "pdf_ieee": "outputs/publication_rc1_20261007_01/documents/paper/en/paper_en_S2_ieee.pdf"
+      "pdf_ieee": "outputs/publication_rc1_20261007_01/documents/paper/en/paper_en_S2_ieee.pdf",
+      "latex_single": "outputs/publication_rc1_20261007_01/documents/paper/en/paper_en_S2_single.tex",
+      "latex_ieee": "outputs/publication_rc1_20261007_01/documents/paper/en/paper_en_S2_ieee.tex"
     },
     {
       "id": "paper_en_S3",
       "markdown": "outputs/publication_rc1_20261007_01/documents/paper/en/paper_en_S3.md",
       "notebook": "notebooks/publication/publication_rc1_20261007_01/paper/en/paper_en_S3.nb",
       "pdf_single": "outputs/publication_rc1_20261007_01/documents/paper/en/paper_en_S3_single.pdf",
-      "pdf_ieee": "outputs/publication_rc1_20261007_01/documents/paper/en/paper_en_S3_ieee.pdf"
+      "pdf_ieee": "outputs/publication_rc1_20261007_01/documents/paper/en/paper_en_S3_ieee.pdf",
+      "latex_single": "outputs/publication_rc1_20261007_01/documents/paper/en/paper_en_S3_single.tex",
+      "latex_ieee": "outputs/publication_rc1_20261007_01/documents/paper/en/paper_en_S3_ieee.tex"
     }
   ]
 }
