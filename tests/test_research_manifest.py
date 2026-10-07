@@ -4,6 +4,15 @@ from pathlib import Path
 import unittest
 ROOT=Path(__file__).resolve().parents[1]
 class ReleaseManifestTests(unittest.TestCase):
+    def test_all_edition_links_have_release_files(self):
+        catalogue=json.loads((ROOT/'data/catalog.json').read_text(encoding='utf-8'))
+        index=json.loads((ROOT/'docs/current-edition.json').read_text(encoding='utf-8'))
+        paths={f['path'] for d in catalogue['datasets'].values() for f in d['files']}
+        self.assertEqual(len(index['documents']),52)
+        for document in index['documents']:
+            for key in ['markdown','notebook','pdf_single','pdf_ieee']:
+                self.assertIn(document[key],paths)
+
     def test_catalogue_provenance_and_dependency_coverage(self):
         catalogue=json.loads((ROOT/'data/catalog.json').read_text(encoding='utf-8'))
         records=json.loads((ROOT/'provenance/candidate_files.json').read_text(encoding='utf-8'))

@@ -1,0 +1,14 @@
+{
+  "status": "passed",
+  "part": "analytic.tar.gz.part001",
+  "prefix_bytes": 65536,
+  "responses": [
+    {
+      "requested_range": "bytes=65536-",
+      "response_status": 206,
+      "content_range": "bytes 65536-1443394/1443395"
+    }
+  ],
+  "sha256": "37d16ca416e3e635d59c424195776316c9ec04b5c3635bb4adf1297da06d240d",
+  "corrupt_complete_partial_detected": true
+}

@@ -9,7 +9,7 @@ Version `v1.0.0-rc.1` is the private candidate for the Litz Wire Research snapsh
 - Inspect [scientific acceptance](../tests/ACCEPTANCE.md), [per-file provenance](../provenance/candidate_files.json), and [license categories](../LICENSES/README.md).
 - Install the command-line tool and run the analytical example. Select datasets with `litz-research data list` and `data fetch <dataset>`.
 
-The candidate contains 13 datasets, 31,898 restored file identities and 8,901 unique content objects. Sixteen compressed parts total 7,516,424,870 bytes; each part is at most 1 GiB. Original scientific bytes and metadata derivatives have separate source and release hashes.
+The candidate contains 13 datasets, 31,950 restored file identities and 8,953 unique content objects. Sixty-five compressed parts total 7,605,595,016 bytes; each part is at most 128 MiB. Original scientific bytes and metadata derivatives have separate source and release hashes.
 
 ## Acceptance evidence
 

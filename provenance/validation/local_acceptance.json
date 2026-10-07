@@ -5,7 +5,7 @@
   "standalone_wolfram_checks": 12,
   "wheel_install": "fresh_virtual_environment",
   "wheel_analytic_checks": 12,
-  "unit_tests": 123,
+  "unit_tests": 124,
   "pdf_files": 104,
   "pdf_pages": 411,
   "notebook_files": 52,
@@ -22,5 +22,6 @@
     "bibliographic_reference": 127,
     "pending": 0
   },
-  "credential_pattern_findings": 0
+  "credential_pattern_findings": 0,
+  "formal_notebook_payloads_inspected": 52
 }
