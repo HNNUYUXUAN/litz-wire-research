@@ -221,8 +221,8 @@
   },
   {
     "path": "docs/candidate-review.md",
-    "sha256": "39d7b5572bb868539854b65e21fb41529e6fd8886893ac3e1e29ddffdf27508c",
-    "working_sha256": "39d7b5572bb868539854b65e21fb41529e6fd8886893ac3e1e29ddffdf27508c",
+    "sha256": "0f034c6f9c7ba535253099ae6a9eb87785cea4eaa6a1f3cd4a9a623327e242c5",
+    "working_sha256": "0f034c6f9c7ba535253099ae6a9eb87785cea4eaa6a1f3cd4a9a623327e242c5",
     "source_sha256": null,
     "source_commit": null,
     "author": "Miao Yuxuan",
@@ -287,8 +287,8 @@
   },
   {
     "path": "docs/候选版审阅.md",
-    "sha256": "3d7a84bd969115563468ee73aef4ac9d90210e1201c6089fe3bfc6f96cd472c6",
-    "working_sha256": "3d7a84bd969115563468ee73aef4ac9d90210e1201c6089fe3bfc6f96cd472c6",
+    "sha256": "141597dbd55665bb43f7fc24024cfba0e589f2d1744c00b1797f67f381a13eb7",
+    "working_sha256": "141597dbd55665bb43f7fc24024cfba0e589f2d1744c00b1797f67f381a13eb7",
     "source_sha256": null,
     "source_commit": null,
     "author": "Miao Yuxuan",
@@ -2959,6 +2959,17 @@
     "inspection": "text_and_source_review"
   },
   {
+    "path": "provenance/validation/remote_restore_verification.json",
+    "sha256": "abba6504a1eef4a4f8ae15ace3882324ec4823f778e9edf17e34db616c2fa912",
+    "working_sha256": "abba6504a1eef4a4f8ae15ace3882324ec4823f778e9edf17e34db616c2fa912",
+    "source_sha256": null,
+    "source_commit": null,
+    "author": "Miao Yuxuan",
+    "license": "CC-BY-4.0",
+    "processing": "candidate_authored",
+    "inspection": "text_and_source_review"
+  },
+  {
     "path": "provenance/validation/remote_resume_verification.json",
     "sha256": "d83f3ef5f5b002ff722eb37d6d9e7c506b0d501bbf2459ad9467e31270e002e5",
     "working_sha256": "d83f3ef5f5b002ff722eb37d6d9e7c506b0d501bbf2459ad9467e31270e002e5",
@@ -2971,8 +2982,8 @@
   },
   {
     "path": "provenance/validation/source_review.json",
-    "sha256": "bed3a4d0f4dfb54e10ff82bbb1243dc7d5ba057ddf108bd5e3b4dcf55c5c1538",
-    "working_sha256": "bed3a4d0f4dfb54e10ff82bbb1243dc7d5ba057ddf108bd5e3b4dcf55c5c1538",
+    "sha256": "c3ce13eca1a4001b8a10d3f26bffdd1a13000db9c69f3789e74f7ebb013ec353",
+    "working_sha256": "c3ce13eca1a4001b8a10d3f26bffdd1a13000db9c69f3789e74f7ebb013ec353",
     "source_sha256": null,
     "source_commit": null,
     "author": "Miao Yuxuan",

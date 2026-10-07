@@ -17,6 +17,8 @@ Local records in [provenance/validation](../provenance/validation/) cover indepe
 
 The publication preserves model assumptions and scientific acceptance states. Consult the discussion and diagnostic appendices when evaluating A–φ, Ansys, RT0, finite-length PEEC, and transposition claims.
 
+Remote recovery downloaded all 65 parts from the private release and restored all 31,950 file identities across 13 datasets. The release also carries licenses, citation metadata, the installable wheel, provenance inventories, dataset manifests and SHA256 checksums. HTTP range resumption and corruption detection were exercised against an actual release attachment.
+
 ## Public-version review
 
 Review the scientific scope, attribution, dual licensing of Notebook cells, bibliography links, download experience, and the scholarly editions. Public visibility and the final archival state are the next release-stage decisions. The private candidate and its draft release provide the complete materials for that review.
