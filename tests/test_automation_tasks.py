@@ -55,6 +55,16 @@ class AutomationTests(unittest.TestCase):
         for model,p in [('coax',{'strands':640}),('peec',{'cross_divisions':80}),('rt0',{'dimensions':[16,16,32]}),('gpu',{'matrix_size':65537})]:
             with self.assertRaises(ValueError):parameters(model,p)
 
+    def test_restore_supports_long_windows_snapshot_paths(self):
+        from litz_research.data import fetch,cached_object
+        with tempfile.TemporaryDirectory() as tmp:
+            root=Path(tmp);cache=root/'cache';data=b'saved source';identity=hashlib.sha256(data).hexdigest()
+            relative='outputs/'+('long_snapshot_'*6)+'/source_snapshot/'+('subdirectory_'*6)+'/source.json'
+            write(root/'data/catalog.json',{'tag':'fixture','datasets':{'snapshot':{'dependencies':[],'objects':[{'sha256':identity,'bytes':len(data)}],'files':[{'path':relative,'sha256':identity,'bytes':len(data)}],'parts':[]}}})
+            obj=cached_object(cache,identity);obj.parent.mkdir(parents=True);obj.write_bytes(data)
+            self.assertEqual(fetch(root,'snapshot',cache,offline=True)[0]['status'],'passed')
+            self.assertEqual(sha(evidence_path(root,relative)),identity)
+
     def test_parameters_must_be_actual_supported_inputs(self):
         with self.assertRaises(ValueError):parameters('aphi',{'frequency_Hz':100000})
         with self.assertRaises(ValueError):parameters('fem2',{'radius_m':.002})

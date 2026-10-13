@@ -4,7 +4,7 @@ import os
 from pathlib import Path
 import subprocess
 import sys
-from .common import read, write, tool, run_directory
+from .common import read, write, tool, run_directory,native_path
 
 def configure(root,output,ansys_python=None,transport='stdio'):
     ws=tool(root,'wolfram_kernel') or 'wolfram'
@@ -38,7 +38,7 @@ def probe(root,server,run_id,sequence=None):
     from .common import sha
     sources=source_manifest(root)
     for relative in sources:
-        target=out/'source_snapshot'/relative;target.parent.mkdir(parents=True,exist_ok=True);shutil.copy2(root/relative,target)
+        target=native_path(out/'source_snapshot'/relative);target.parent.mkdir(parents=True,exist_ok=True);shutil.copy2(root/relative,target)
     local=read(root/'litz.config.json') if (root/'litz.config.json').exists() else {}
     configured=local.get('mcp_servers',{}).get(server)
     if configured is None:

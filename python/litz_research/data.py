@@ -9,7 +9,7 @@ import tempfile
 import urllib.error
 import urllib.parse
 import urllib.request
-from .common import read, safe_path, sha, evidence_root
+from .common import read, safe_path, sha, evidence_root,native_path
 
 class CredentialRedirect(urllib.request.HTTPRedirectHandler):
     def redirect_request(self, req, fp, code, msg, headers, newurl):
@@ -20,7 +20,7 @@ class CredentialRedirect(urllib.request.HTTPRedirectHandler):
 
 def download(url, destination, expected_hash, expected_bytes, private=False):
     """Resume a partial response; only verified bytes become cache entries."""
-    destination = Path(destination)
+    destination = native_path(destination)
     destination.parent.mkdir(parents=True, exist_ok=True)
     if destination.exists() and destination.stat().st_size == expected_bytes and sha(destination) == expected_hash:
         return destination
@@ -68,12 +68,12 @@ def catalog(root):
 def cached_object(cache, digest):
     if len(digest) != 64 or any(c not in "0123456789abcdef" for c in digest):
         raise ValueError("SHA256 object identity required.")
-    return Path(cache) / "objects" / digest
+    return native_path(Path(cache) / "objects" / digest)
 
 def unpack_parts(parts, cache, files):
     """Read a verified concatenated tar archive with a closed file allowlist."""
     allowed = {f["sha256"]: f["bytes"] for f in files}
-    cache = Path(cache); cache.mkdir(parents=True, exist_ok=True)
+    cache = native_path(cache); cache.mkdir(parents=True, exist_ok=True)
     with tempfile.TemporaryFile(dir=cache) as archive:
         for part in parts:
             with Path(part).open("rb") as stream: shutil.copyfileobj(stream, archive, 1024**2)
@@ -115,7 +115,7 @@ def fetch(root, dataset_id, cache, offline=False):
     for record in dataset["files"]:
         source = cached_object(cache,record["sha256"])
         if not source.is_file() or sha(source) != record["sha256"]: raise ValueError("Required cached object: " + record["sha256"])
-        dest = safe_path(destination_root,record["path"])
+        dest = native_path(safe_path(destination_root,record["path"]))
         if dest.exists() and sha(dest) != record["sha256"]: raise ValueError("Local file has independent edits: " + record["path"])
         dest.parent.mkdir(parents=True,exist_ok=True)
         if not dest.exists(): shutil.copyfile(source,dest)
@@ -129,7 +129,7 @@ def verify(root,dataset_id=None):
         errors=[]
         destination_root=evidence_root(root,dataset.get('source_version'))
         for record in dataset["files"]:
-            path=safe_path(destination_root,record["path"])
+            path=native_path(safe_path(destination_root,record["path"]))
             if not path.is_file():errors.append({"path":record["path"],"status":"missing","command":f"litz-research data fetch {name}"})
             elif path.stat().st_size!=record["bytes"] or sha(path)!=record["sha256"]:errors.append({"path":record["path"],"status":"checksum_mismatch"})
         results.append(dict(dataset=name,files=len(dataset["files"]),status="passed" if not errors else "failed",errors=errors))

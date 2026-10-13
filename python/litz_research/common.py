@@ -7,16 +7,25 @@ from pathlib import Path
 import re
 import shutil
 
+def native_path(path):
+    """Use Windows extended paths for file I/O without changing logical paths."""
+    path=Path(path)
+    if os.name=='nt':
+        absolute=os.path.abspath(path)
+        if len(absolute)>=240 and not absolute.startswith('\\\\?\\'):
+            return Path('\\\\?\\UNC\\'+absolute[2:] if absolute.startswith('\\\\') else '\\\\?\\'+absolute)
+    return path
+
 def read(path):
-    return json.loads(Path(path).read_text(encoding="utf-8-sig"))
+    return json.loads(native_path(path).read_text(encoding="utf-8-sig"))
 
 def write(path, value):
-    path = Path(path)
+    path = native_path(path)
     path.parent.mkdir(parents=True, exist_ok=True)
     path.write_text(json.dumps(value, ensure_ascii=False, indent=2, allow_nan=False) + "\n", encoding="utf-8")
 
 def sha(path):
-    with Path(path).open("rb") as stream:
+    with native_path(path).open("rb") as stream:
         return hashlib.file_digest(stream, "sha256").hexdigest()
 
 def project(value=None):
@@ -44,9 +53,10 @@ def evidence_path(root, relative, version=None):
     versions=[version] if version else list(dict.fromkeys(v for r,v in matches)) or [c['tag']]
     for identity in versions:
         mounted=safe_path(evidence_root(root,identity),relative)
-        if mounted.is_file() or mounted.is_dir():
+        disk=native_path(mounted)
+        if disk.is_file() or disk.is_dir():
             exact=[r for r,v in matches if v==identity and r['path']==name]
-            if mounted.is_file() and exact and any(sha(mounted)!=r['sha256'] for r in exact):
+            if disk.is_file() and exact and any(sha(mounted)!=r['sha256'] for r in exact):
                 raise ValueError('Frozen evidence checksum mismatch: '+str(relative))
             return mounted
     legacy = safe_path(root, relative)

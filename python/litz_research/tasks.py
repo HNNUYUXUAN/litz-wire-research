@@ -12,7 +12,7 @@ import time
 import traceback
 import shutil
 import re
-from .common import constrain, read, run_directory, sha, tool, write
+from .common import constrain, read, run_directory, sha, tool, write,native_path
 
 ROUTES = {
     'analytic':'analytic','wolfram-analytic':'analytic','fem2':'fem2',
@@ -88,7 +88,7 @@ def execute(root, model, run_id, case='tutorial', supplied=None):
     write(out/'request.json',request);write(out/'parameters.json',request['parameters'])
     sources=source_manifest(root)
     for relative in sources:
-        target=out/'source_snapshot'/relative;target.parent.mkdir(parents=True,exist_ok=True)
+        target=native_path(out/'source_snapshot'/relative);target.parent.mkdir(parents=True,exist_ok=True)
         shutil.copy2(root/relative,target)
     frozen_inputs=[]
     if model=='aphi':
