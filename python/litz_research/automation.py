@@ -4,11 +4,24 @@ import os
 from pathlib import Path
 import subprocess
 import sys
+import shutil
 from .common import read, write, tool, run_directory,native_path
 
 def configure(root,output,ansys_python=None,transport='stdio'):
-    ws=tool(root,'wolfram_kernel') or 'wolfram'
+    ws=tool(root,'wolfram_kernel') or shutil.which('wolfram')
+    if not ws and tool(root,'wolframscript'):
+        try:
+            discovered=subprocess.run([tool(root,'wolframscript'),'-local','-code','$InstallationDirectory'],capture_output=True,text=True,encoding='utf-8',timeout=30)
+            installation=Path(discovered.stdout.strip().strip('"'))
+            candidates=[installation/'wolfram.exe',installation/'WolframKernel.exe',installation/'Executables/WolframKernel',installation/'MacOS/WolframKernel']
+            ws=next((str(p) for p in candidates if p.is_file()),None)
+        except (OSError,subprocess.TimeoutExpired):pass
+    diagnostics=[]
+    if not ws:diagnostics.append('Set LITZ_WOLFRAM_KERNEL to the licensed kernel executable.')
+    ws=ws or 'wolfram'
     ap=ansys_python or tool(root,'ansys_python') or str(root/'.venv/ansys/Scripts/python.exe')
+    if not Path(ap).is_absolute():ap=str((root/ap).resolve())
+    if transport=='stdio' and not Path(ap).is_file():diagnostics.append('Select the installed Ansys MCP Python executable with --ansys-python.')
     servers={
         'wolfram':{'command':ws,'args':['-run','PacletSymbol["Wolfram/AgentTools","Wolfram`AgentTools`StartMCPServer"]["WolframLanguage"]','-noinit','-noprompt'],'cwd':str(root)},
         'ansys':{'command':ap,'args':[str(root/'adapters/ansys/StartMCP.py'),'--transport','stdio'],'env':{'LITZ_AEDT_EDITION':'student'},'cwd':str(root)},
@@ -24,7 +37,7 @@ def configure(root,output,ansys_python=None,transport='stdio'):
             lines.append(k+' = '+encoded)
         lines+=['startup_timeout_sec = 120','tool_timeout_sec = 120','']
     (output/'config.toml').write_text('\n'.join(lines),encoding='utf-8')
-    return {'execution_status':'completed','configuration_directory':str(output),'servers':list(servers),'scope':'Generated inspectable project configuration; copy or merge it into the selected client configuration.'}
+    return {'execution_status':'completed','configuration_directory':str(output),'servers':list(servers),'configuration_status':'local_paths_located' if not diagnostics else 'local_paths_required','diagnostics':diagnostics,'scope':'Generated inspectable project configuration; live connection and scientific acceptance require the separate probes.'}
 
 def doctor(root):
     local=read(root/'litz.config.json') if (root/'litz.config.json').exists() else {}
