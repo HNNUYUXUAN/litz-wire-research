@@ -36,7 +36,7 @@ class ChinesePaperReading(unittest.TestCase):
                     self.assertIn(key, numbers["equation" if kind == "eqref" else "figure"])
 
     def test_table_display_conversions(self):
-        tables = publication.table_cells(ROOT / "data/publication", "zh-CN")
+        tables = publication.table_cells(publication.input_path("data/publication"), "zh-CN")
         self.assertEqual(tables[0]["rows"][0][2], "Rac (mΩ/m)")
         self.assertAlmostEqual(float(tables[0]["rows"][1][2]), 20.1572, places=4)
         self.assertEqual(tables[2]["rows"][0], ["单元数", "积分阶数", "损耗 (mW)"])

@@ -111,10 +111,11 @@ def fetch(root, dataset_id, cache, offline=False):
                 download(url,dest,part["sha256"],part["bytes"],private=c.get("private",True))
             parts.append(dest)
         unpack_parts(parts,cache,records)
+    destination_root=evidence_root(root,dataset.get('source_version'))
     for record in dataset["files"]:
         source = cached_object(cache,record["sha256"])
         if not source.is_file() or sha(source) != record["sha256"]: raise ValueError("Required cached object: " + record["sha256"])
-        dest = safe_path(evidence_root(root,dataset.get('source_version')),record["path"])
+        dest = safe_path(destination_root,record["path"])
         if dest.exists() and sha(dest) != record["sha256"]: raise ValueError("Local file has independent edits: " + record["path"])
         dest.parent.mkdir(parents=True,exist_ok=True)
         if not dest.exists(): shutil.copyfile(source,dest)
@@ -126,8 +127,9 @@ def verify(root,dataset_id=None):
     for name,dataset in c["datasets"].items():
         if dataset_id and name != dataset_id:continue
         errors=[]
+        destination_root=evidence_root(root,dataset.get('source_version'))
         for record in dataset["files"]:
-            path=safe_path(evidence_root(root,dataset.get('source_version')),record["path"])
+            path=safe_path(destination_root,record["path"])
             if not path.is_file():errors.append({"path":record["path"],"status":"missing","command":f"litz-research data fetch {name}"})
             elif path.stat().st_size!=record["bytes"] or sha(path)!=record["sha256"]:errors.append({"path":record["path"],"status":"checksum_mismatch"})
         results.append(dict(dataset=name,files=len(dataset["files"]),status="passed" if not errors else "failed",errors=errors))

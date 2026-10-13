@@ -23,7 +23,7 @@ class PublicationAcceptance(unittest.TestCase):
   for ed in ['report','paper']:
    n=p.numbering(self.m,ed);self.assertEqual(len(n['figure']),21);self.assertEqual(len(n['equation']),9)
  def test_frozen_indices(self):
-  for f,h in self.m['scientific_hashes'].items():self.assertEqual(p.sha(ROOT/f),h)
+  for f,h in self.m['scientific_hashes'].items():self.assertEqual(p.sha(p.input_path(f)),h)
  def test_caption_components(self):
   for fid,spec in self.m['figures'].items():
    for lang in ['zh-CN','en']:
@@ -40,7 +40,7 @@ class PublicationAcceptance(unittest.TestCase):
    limits=diagram('ansys_limits',lang)
    self.assertEqual(limits['semantics']['edges'],[])
  def test_figure_source_hashes(self):
-  baseline=ROOT/self.m['panel_run'];data=p.read(baseline/'panel_manifest.json')
+  baseline=p.input_path(self.m['panel_run']);data=p.read(baseline/'panel_manifest.json')
   for panel in data['panels']:
    for a in panel['assets']:self.assertEqual(p.sha(baseline/a['path_relative_to_run']),a['sha256'])
 

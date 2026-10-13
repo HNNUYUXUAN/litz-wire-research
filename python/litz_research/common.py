@@ -31,8 +31,7 @@ def project(value=None):
 
 def evidence_root(root, version=None):
     """Versioned restoration root; archive member names retain original identity."""
-    c = read(Path(root) / "data/catalog.json")
-    identity = version or c["tag"]
+    identity = version or read(Path(root) / "data/catalog.json")["tag"]
     if not re.fullmatch(r"[A-Za-z0-9._-]+", identity):
         raise ValueError("Invalid evidence version")
     return Path(root) / "data/evidence" / identity
