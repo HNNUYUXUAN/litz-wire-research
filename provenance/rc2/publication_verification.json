@@ -1,0 +1,150 @@
+{
+  "checks": [
+    {
+      "name": "science/docs/总控/当前运行索引.json",
+      "passed": true
+    },
+    {
+      "name": "science/outputs/prewrite_closure_state.json",
+      "passed": true
+    },
+    {
+      "name": "quantity/coax_rac",
+      "passed": true
+    },
+    {
+      "name": "quantity/coax_bundle_loss",
+      "passed": true
+    },
+    {
+      "name": "quantity/coax_return_loss",
+      "passed": true
+    },
+    {
+      "name": "quantity/coax_area",
+      "passed": true
+    },
+    {
+      "name": "quantity/coax_voltage_re",
+      "passed": true
+    },
+    {
+      "name": "quantity/coax_voltage_im",
+      "passed": true
+    },
+    {
+      "name": "quantity/coax_return_voltage_re",
+      "passed": true
+    },
+    {
+      "name": "quantity/coax_return_voltage_im",
+      "passed": true
+    },
+    {
+      "name": "quantity/coax_rdc",
+      "passed": true
+    },
+    {
+      "name": "quantity/coax_rac_rdc",
+      "passed": true
+    },
+    {
+      "name": "quantity/coax_spread",
+      "passed": true
+    },
+    {
+      "name": "quantity/peec_rac",
+      "passed": true
+    },
+    {
+      "name": "quantity/skin_depth",
+      "passed": true
+    },
+    {
+      "name": "quantity/q1_rac",
+      "passed": true
+    },
+    {
+      "name": "quantity/q1_rdc",
+      "passed": true
+    },
+    {
+      "name": "quantity/q1_loss",
+      "passed": true
+    },
+    {
+      "name": "paper_zh-CN/markdown_hash",
+      "passed": true
+    },
+    {
+      "name": "paper_zh-CN/tokens_resolved",
+      "passed": true
+    },
+    {
+      "name": "paper_zh-CN/figure_display_unique",
+      "passed": true
+    },
+    {
+      "name": "paper_zh-CN_single/source_hash",
+      "passed": true
+    },
+    {
+      "name": "paper_zh-CN_single/compiled_hash",
+      "passed": true
+    },
+    {
+      "name": "paper_zh-CN_single/exists",
+      "passed": true
+    },
+    {
+      "name": "paper_zh-CN_single/resolved_references",
+      "passed": true
+    },
+    {
+      "name": "paper_zh-CN_single/boxes",
+      "passed": true
+    },
+    {
+      "name": "paper_zh-CN_single/destination/E01",
+      "passed": true
+    },
+    {
+      "name": "paper_zh-CN_single/destination/E02",
+      "passed": true
+    },
+    {
+      "name": "paper_zh-CN_single/destination/E04",
+      "passed": true
+    },
+    {
+      "name": "paper_zh-CN_single/destination/E05",
+      "passed": true
+    },
+    {
+      "name": "paper_zh-CN_single/destination/E08",
+      "passed": true
+    },
+    {
+      "name": "paper_zh-CN_single/destination/E03",
+      "passed": true
+    },
+    {
+      "name": "paper_zh-CN_single/destination/E06",
+      "passed": true
+    },
+    {
+      "name": "paper_zh-CN_single/destination/E09",
+      "passed": true
+    },
+    {
+      "name": "paper_zh-CN_single/destination/E07",
+      "passed": true
+    },
+    {
+      "name": "paper_zh-CN_single/embedded_fonts",
+      "passed": true
+    }
+  ],
+  "failed_checks": 0,
+  "physical_solver_calls": 0
+}

@@ -1,0 +1,39 @@
+{
+  "route": "geometry",
+  "model_id": "geometry",
+  "titles": {
+    "en": "Geometry and transposition",
+    "zh-CN": "几何与换位"
+  },
+  "equation": "ℓi=∫√(1+x′²+y′²) dz; Rdc=(ΣσAi/ℓi)⁻¹",
+  "references": [
+    "P01",
+    "N01"
+  ],
+  "parameters": {
+    "strands": 7,
+    "length_m": 0.04,
+    "pitch_m": 0.02,
+    "diameter_m": 0.0001,
+    "kind": "multilevel"
+  },
+  "tutorial_instructions": {
+    "en": "Change topology, pitch or length; inspect gaps, arc lengths and copper volume. Geometry is a model input.",
+    "zh-CN": "修改结构、节距或长度；检查间隙、弧长与铜体积。几何是场模型的输入。"
+  },
+  "fixed_conventions": "SI; exp(+j omega t); RMS; sigma=58 MS/m; mu_r=1; 20 C",
+  "evidence_dataset": "geometry",
+  "derivation": {
+    "en": [
+      "A topology maps a persistent strand identity to a centerline (xi(z),yi(z),z). The tutorial samples the path, evaluates surface gaps and integrates each arc length ℓi=∫√(1+x′i²+y′i²)dz.",
+      "For axially cut length L, copper volume is ΣAiℓi and common-terminal Rdc=(ΣσAi/ℓi)⁻¹. Equal nominal copper area does not remove arc-length growth or change terminal constraints.",
+      "Geometry supplies the subsequent field model. Performance ranking requires an independent electromagnetic solve, controlled return/end effects and numerical uncertainty, using traditional multilevel Litz as a strong baseline."
+    ],
+    "zh-CN": [
+      "结构把持续不变的股线身份映射到中心线 (xi(z),yi(z),z)。教程采样路径，检查表面间隙，并积分弧长 ℓi=∫√(1+x′i²+y′i²)dz。",
+      "轴向长度 L 对应铜体积 ΣAiℓi，共端直流电阻为 Rdc=(ΣσAi/ℓi)⁻¹。名义铜面积相等仍须计入弧长增长，并保持一致的端接约束。",
+      "几何为后续场模型提供输入。性能排名须独立电磁场解、受控回流与端区及数值不确定性；传统多级 Litz 是强基线。"
+    ]
+  },
+  "history": "data/evidence/v1.0.0-rc.1/; litz-research data fetch geometry"
+}

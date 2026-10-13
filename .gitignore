@@ -9,5 +9,11 @@ notebooks/
 data/publication/
 data/raw/
 data/cache/
+data/evidence/
+!models/**/notebooks/
+!models/**/notebooks/*.nb
+!adapters/**/notebooks/
+!adapters/**/notebooks/*.nb
 releases/
 litz.config.json
+batch.log

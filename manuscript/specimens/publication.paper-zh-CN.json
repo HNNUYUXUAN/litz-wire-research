@@ -1,0 +1,956 @@
+{
+  "schema_version": 2,
+  "baseline_commit": "29bfaef3cb4e4f0016b4567edc501f34c50542d7",
+  "author": {
+    "zh-CN": "缪雨轩",
+    "en": "Miao Yuxuan"
+  },
+  "affiliation": {
+    "zh-CN": "淮南师范学院",
+    "en": "Huainan Normal University"
+  },
+  "edition": {
+    "report": {
+      "title": {
+        "zh-CN": "Litz 线分层建模与数值验证：完整研究报告",
+        "en": "Litz-Wire Modeling and Numerical Verification: Comprehensive Research Report"
+      },
+      "abstract": {
+        "zh-CN": "Litz 线的高频损耗取决于单股趋肤、局部邻近场、股间复电流分配、换位路径及端部约束。本文建立可复现的分层数值验证框架，区分各层实际保留的物理内容。沿途绝缘、端部并联的股线采用共同端电压和总复电流约束，并在指定线性场路模型内给出均流判据。有限长度纵向 PEEC 则独立检查轴向长度、互项与自项积分及横向离散的影响。\n\n在 200 kHz、20 A RMS、20 ℃ 铜导体工况下，单圆线解析与独立二维校准建立了内场参考，640 股二维共端模型具有受控网格、回流和外域检查。5024 自由度纵向模型末档 Rac 为 20.012738 mΩ/轴向m，与本档等面积 Bessel 参照相差 0.044582%。固定长方体外场 RT0 算例的末两次损耗变化为 0.655090% 和 0.362916%；它检验外场算子，不能作为 Litz 输运电阻。三维 A–φ、Ansys 新接口及真实性能排名的未通过边界继续保留。结果支持限定模型内的数值结论，不证明实际多级或跨层 Litz 的性能优劣。",
+        "en": "High-frequency loss in Litz wire depends on strand skin effect, local proximity fields, complex current sharing, transposition paths, and terminal constraints. This study establishes a reproducible hierarchy of numerical verification in which the physical content retained by each model is stated explicitly. Individually insulated strands connected in parallel are described by a common terminal voltage and a total complex-current constraint, yielding a current-sharing criterion within a specified linear field–circuit model. Finite-length longitudinal PEEC is then examined through independent changes in axial length, mutual and self integration, and cross-sectional discretization.\n\nFor copper at 200 kHz, 20 A RMS, and 20 °C, the round-wire analytical solution and independent two-dimensional calibration establish an internal-field reference. The 640-strand common-terminal model has controlled mesh, return, and exterior-boundary checks. The final 5024-degree-of-freedom longitudinal model gives an axial resistance of 20.012738 mΩ/m, differing by 0.044582% from its equal-area Bessel reference. The final two loss changes in the fixed-cuboid imposed-field RT0 example are 0.655090% and 0.362916%; this example tests an imposed-field operator and does not measure Litz transport resistance. Unsuccessful three-dimensional A–φ validation, new Ansys interfaces, and unresolved realistic-geometry ranking remain explicit boundaries. These results support numerical conclusions within stated models, without establishing the superiority of actual multilevel or cross-layer Litz structures."
+      },
+      "chapters": [
+        {
+          "id": "01",
+          "title": {
+            "zh-CN": "引言与研究问题",
+            "en": "Introduction and Research Questions"
+          },
+          "sources": {
+            "zh-CN": "manuscript/report/zh-CN/01.md",
+            "en": "manuscript/report/en/01.md"
+          }
+        },
+        {
+          "id": "02",
+          "title": {
+            "zh-CN": "物理约定与分层建模框架",
+            "en": "Physical Conventions and Model Hierarchy"
+          },
+          "sources": {
+            "zh-CN": "manuscript/report/zh-CN/02.md",
+            "en": "manuscript/report/en/02.md"
+          }
+        },
+        {
+          "id": "03",
+          "title": {
+            "zh-CN": "单圆线解析与二维校准",
+            "en": "Round-Wire Analysis and Two-Dimensional Calibration"
+          },
+          "sources": {
+            "zh-CN": "manuscript/report/zh-CN/03.md",
+            "en": "manuscript/report/en/03.md"
+          }
+        },
+        {
+          "id": "04",
+          "title": {
+            "zh-CN": "多股共端场路与均流判据",
+            "en": "Multistrand Common-Terminal Circuits and Sharing Criterion"
+          },
+          "sources": {
+            "zh-CN": "manuscript/report/zh-CN/04.md",
+            "en": "manuscript/report/en/04.md"
+          }
+        },
+        {
+          "id": "05",
+          "title": {
+            "zh-CN": "换位模型、真实几何与等铜比较",
+            "en": "Transposition Models, Real Geometry, and Equal-Copper Comparisons"
+          },
+          "sources": {
+            "zh-CN": "manuscript/report/zh-CN/05.md",
+            "en": "manuscript/report/en/05.md"
+          }
+        },
+        {
+          "id": "06",
+          "title": {
+            "zh-CN": "有限长度纵向 PEEC",
+            "en": "Finite-Length Longitudinal PEEC"
+          },
+          "sources": {
+            "zh-CN": "manuscript/report/zh-CN/06.md",
+            "en": "manuscript/report/en/06.md"
+          }
+        },
+        {
+          "id": "07",
+          "title": {
+            "zh-CN": "RT0 三维外场算例",
+            "en": "RT0 Three-Dimensional Imposed-Field Example"
+          },
+          "sources": {
+            "zh-CN": "manuscript/report/zh-CN/07.md",
+            "en": "manuscript/report/en/07.md"
+          }
+        },
+        {
+          "id": "08",
+          "title": {
+            "zh-CN": "三维 A–φ 场与诊断",
+            "en": "Three-Dimensional A–φ Fields and Diagnostics"
+          },
+          "sources": {
+            "zh-CN": "manuscript/report/zh-CN/08.md",
+            "en": "manuscript/report/en/08.md"
+          }
+        },
+        {
+          "id": "09",
+          "title": {
+            "zh-CN": "Ansys 算例与接口验证",
+            "en": "Ansys Cases and Interface Verification"
+          },
+          "sources": {
+            "zh-CN": "manuscript/report/zh-CN/09.md",
+            "en": "manuscript/report/en/09.md"
+          }
+        },
+        {
+          "id": "10",
+          "title": {
+            "zh-CN": "计算实现、CPU/GPU 对照与资源表现",
+            "en": "Implementation, CPU/GPU Comparison, and Resources"
+          },
+          "sources": {
+            "zh-CN": "manuscript/report/zh-CN/10.md",
+            "en": "manuscript/report/en/10.md"
+          }
+        },
+        {
+          "id": "11",
+          "title": {
+            "zh-CN": "综合讨论",
+            "en": "General Discussion"
+          },
+          "sources": {
+            "zh-CN": "manuscript/report/zh-CN/11.md",
+            "en": "manuscript/report/en/11.md"
+          }
+        },
+        {
+          "id": "12",
+          "title": {
+            "zh-CN": "结论",
+            "en": "Conclusions"
+          },
+          "sources": {
+            "zh-CN": "manuscript/report/zh-CN/12.md",
+            "en": "manuscript/report/en/12.md"
+          }
+        },
+        {
+          "id": "A",
+          "title": {
+            "zh-CN": "数学推导",
+            "en": "Mathematical Derivations"
+          },
+          "sources": {
+            "zh-CN": "manuscript/report/zh-CN/A.md",
+            "en": "manuscript/report/en/A.md"
+          }
+        },
+        {
+          "id": "B",
+          "title": {
+            "zh-CN": "离散与后处理",
+            "en": "Discretization and Postprocessing"
+          },
+          "sources": {
+            "zh-CN": "manuscript/report/zh-CN/B.md",
+            "en": "manuscript/report/en/B.md"
+          }
+        },
+        {
+          "id": "C",
+          "title": {
+            "zh-CN": "验收、诊断与复现",
+            "en": "Acceptance, Diagnostics, and Reproduction"
+          },
+          "sources": {
+            "zh-CN": "manuscript/report/zh-CN/C.md",
+            "en": "manuscript/report/en/C.md"
+          }
+        },
+        {
+          "id": "D",
+          "title": {
+            "zh-CN": "数据来源与环境交接",
+            "en": "Data Sources and Environment Handoff"
+          },
+          "sources": {
+            "zh-CN": "manuscript/report/zh-CN/D.md",
+            "en": "manuscript/report/en/D.md"
+          }
+        }
+      ]
+    },
+    "paper": {
+      "title": {
+        "zh-CN": "Litz 线共端电流分配与纵向 PEEC 的分层数值验证",
+        "en": "Hierarchical Verification, Common-Terminal Current Sharing, and Finite-Length Longitudinal PEEC for Litz-Wire Modeling"
+      },
+      "abstract": {
+        "zh-CN": "Litz 线高频损耗受单股趋肤、股间耦合与端接约束共同影响。本文建立解析圆线、二维共端场路和有限长度纵向 PEEC 的验证关系，推导指定线性模型的复电流均流条件。在 200 kHz、20 A RMS 铜导体工况下，640 股二维直束的束内电阻为 {{metric:coax_rac}} mΩ/轴向m，损耗为 {{metric:coax_bundle_loss}} W/轴向m，归一化复电流 RMS 偏差为 {{metric:coax_spread}}，表明共同端接下仍存在显著电流差异。纵向 PEEC 的已检查长度增量引起约 0.15%–0.30% 的电阻变化，互项积分变化约为 10⁻⁵ 量级，自项更小；5024 自由度末档电阻与等面积 Bessel 参照相差 0.044582%。结果为指定模型内的电流与损耗比较提供定量依据，真实换位束的端区、横向电流及实验性能仍需进一步验证。",
+        "en": "High-frequency loss in Litz wire depends on strand skin effect, local proximity fields, complex current sharing, transposition paths, and terminal constraints. This study establishes a reproducible hierarchy of numerical verification in which the physical content retained by each model is stated explicitly. Individually insulated strands connected in parallel are described by a common terminal voltage and a total complex-current constraint, yielding a current-sharing criterion within a specified linear field–circuit model. Finite-length longitudinal PEEC is then examined through independent changes in axial length, mutual and self integration, and cross-sectional discretization.\n\nFor copper at 200 kHz, 20 A RMS, and 20 °C, the round-wire analytical solution and independent two-dimensional calibration establish an internal-field reference. The 640-strand common-terminal model has controlled mesh, return, and exterior-boundary checks. The final 5024-degree-of-freedom longitudinal model gives an axial resistance of 20.012738 mΩ/m, differing by 0.044582% from its equal-area Bessel reference. The final two loss changes in the fixed-cuboid imposed-field RT0 example are 0.655090% and 0.362916%; this example tests an imposed-field operator and does not measure Litz transport resistance. Unsuccessful three-dimensional A–φ validation, new Ansys interfaces, and unresolved realistic-geometry ranking remain explicit boundaries. These results support numerical conclusions within stated models, without establishing the superiority of actual multilevel or cross-layer Litz structures."
+      },
+      "chapters": [
+        {
+          "id": "01",
+          "title": {
+            "zh-CN": "引言",
+            "en": "Introduction"
+          },
+          "sources": {
+            "zh-CN": "manuscript/specimens/paper-zh-CN/01.md",
+            "en": "manuscript/paper/en/01.md"
+          }
+        },
+        {
+          "id": "02",
+          "title": {
+            "zh-CN": "方法",
+            "en": "Methods"
+          },
+          "sources": {
+            "zh-CN": "manuscript/specimens/paper-zh-CN/02.md",
+            "en": "manuscript/paper/en/02.md"
+          }
+        },
+        {
+          "id": "03",
+          "title": {
+            "zh-CN": "结果",
+            "en": "Results"
+          },
+          "sources": {
+            "zh-CN": "manuscript/specimens/paper-zh-CN/03.md",
+            "en": "manuscript/paper/en/03.md"
+          }
+        },
+        {
+          "id": "04",
+          "title": {
+            "zh-CN": "讨论",
+            "en": "Discussion"
+          },
+          "sources": {
+            "zh-CN": "manuscript/specimens/paper-zh-CN/04.md",
+            "en": "manuscript/paper/en/04.md"
+          }
+        },
+        {
+          "id": "05",
+          "title": {
+            "zh-CN": "结论",
+            "en": "Conclusions"
+          },
+          "sources": {
+            "zh-CN": "manuscript/specimens/paper-zh-CN/05.md",
+            "en": "manuscript/paper/en/05.md"
+          }
+        },
+        {
+          "id": "S1",
+          "title": {
+            "zh-CN": "补充材料：理论与离散",
+            "en": "Theory and Discretization"
+          },
+          "sources": {
+            "zh-CN": "manuscript/specimens/paper-zh-CN/S1.md",
+            "en": "manuscript/paper/en/S1.md"
+          }
+        },
+        {
+          "id": "S2",
+          "title": {
+            "zh-CN": "补充材料：敏感性与三维诊断",
+            "en": "Complete Sensitivity Data"
+          },
+          "sources": {
+            "zh-CN": "manuscript/specimens/paper-zh-CN/S2.md",
+            "en": "manuscript/paper/en/S2.md"
+          }
+        },
+        {
+          "id": "S3",
+          "title": {
+            "zh-CN": "补充材料：数据来源与复现",
+            "en": "Sources and Reproduction"
+          },
+          "sources": {
+            "zh-CN": "manuscript/specimens/paper-zh-CN/S3.md",
+            "en": "manuscript/paper/en/S3.md"
+          }
+        }
+      ]
+    }
+  },
+  "keywords": {
+    "zh-CN": "Litz 线；共端场路；复电流分配；趋肤效应；有限长度 PEEC；数值验证",
+    "en": "Litz wire; hierarchical verification; skin and proximity effects; common-terminal circuits; finite-length PEEC; reproducible numerical research"
+  },
+  "equations": {
+    "E01": {
+      "latex": "R_{\\mathrm{dc}}=\\left(\\sum_{k=1}^{N}\\frac{\\sigma A_k}{\\ell_k}\\right)^{-1},\\qquad V_{\\mathrm{Cu}}=\\sum_{k=1}^{N}A_k\\ell_k.",
+      "wolfram": "HoldForm[{Subscript[R,\"dc\"]==(Sum[\\[Sigma] Subscript[A,k]/Subscript[\\[ScriptL],k],{k,1,N}])^-1,Subscript[V,\"Cu\"]==Sum[Subscript[A,k] Subscript[\\[ScriptL],k],{k,1,N}]}]"
+    },
+    "E02": {
+      "latex": "P_{\\mathrm{Cu}}=\\int_{\\Omega_{\\mathrm{Cu}}}|\\mathbf J|^2/\\sigma\\,\\mathrm d\\Omega,\\quad R_{\\mathrm{ac}}=P_{\\mathrm{Cu}}/|I_t|^2,\\quad r_{\\mathrm{ac}}=R_{\\mathrm{ac}}/L_z.",
+      "wolfram": "HoldForm[{Subscript[P,\"Cu\"]==Inactive[Integrate][Abs[J]^2/\\[Sigma],\\[CapitalOmega]],Subscript[R,\"ac\"]==Subscript[P,\"Cu\"]/Abs[Subscript[Style[\"I\",Italic],t]]^2,Subscript[r,\"ac\"]==Subscript[R,\"ac\"]/Subscript[L,z]}]"
+    },
+    "E03": {
+      "latex": "\\delta=(\\pi f\\mu\\sigma)^{-1/2},\\quad\\kappa=(1+j)/\\delta,\\quad J_z(r)=\\frac{I_t\\kappa I_0(\\kappa r)}{2\\pi a I_1(\\kappa a)},\\quad z_{\\mathrm{int}}=\\frac{\\kappa I_0(\\kappa a)}{2\\pi a\\sigma I_1(\\kappa a)}.",
+      "wolfram": "HoldForm[{\\[Delta]==(Pi f \\[Mu] \\[Sigma])^(-1/2),\\[Kappa]==(1+j)/\\[Delta],Subscript[J,z][r]==Subscript[Style[\"I\",Italic],t] \\[Kappa] BesselI[0,\\[Kappa] r]/(2 Pi a BesselI[1,\\[Kappa] a]),Subscript[z,\"int\"]==\\[Kappa] BesselI[0,\\[Kappa] a]/(2 Pi a \\[Sigma] BesselI[1,\\[Kappa] a])}]"
+    },
+    "E04": {
+      "latex": "\\begin{bmatrix} Z&-\\mathbf1\\\\ \\mathbf1^T&0\\end{bmatrix}\\begin{bmatrix}\\mathbf i\\\\V\\end{bmatrix}=\\begin{bmatrix}-\\mathbf e\\\\I_t\\end{bmatrix}.",
+      "wolfram": "HoldForm[{Z.i+e==V Style[\"1\",Bold],Transpose[Style[\"1\",Bold]].i==Subscript[Style[\"I\",Italic],t]}]"
+    },
+    "E05": {
+      "latex": "Q=I_N-\\mathbf1\\mathbf1^T/N,\\qquad Q\\left[(I_t/N)Z\\mathbf1+\\mathbf e\\right]=\\mathbf0.",
+      "wolfram": "HoldForm[{Q==Subscript[Style[\"I\",Italic],N]-Style[\"1\",Bold].Transpose[Style[\"1\",Bold]]/N,Q.((Subscript[Style[\"I\",Italic],t]/N) Z.Style[\"1\",Bold]+e)==0}]"
+    },
+    "E06": {
+      "latex": "Z_{\\mathrm{tot}}=\\sum_{s=1}^{K}\\Delta z_s P_s^T Z_s P_s.",
+      "wolfram": "HoldForm[Subscript[Z,\"tot\"]==Sum[Subscript[\\[CapitalDelta]z,s] Transpose[Subscript[P,s]].Subscript[Z,s].Subscript[P,s],{s,1,K}]]"
+    },
+    "E08": {
+      "latex": "R_{\\alpha\\beta}=\\delta_{\\alpha\\beta}\\frac{L_z}{\\sigma A_\\alpha},\\qquad L_{\\alpha\\beta}=\\frac{\\mu}{4\\pi A_\\alpha A_\\beta}\\int_{V_\\alpha}\\int_{V_\\beta}\\frac{\\hat{\\mathbf t}_\\alpha\\cdot\\hat{\\mathbf t}_\\beta}{|\\mathbf r-\\mathbf r'|}\\,\\mathrm dV\\,\\mathrm dV'.",
+      "wolfram": "HoldForm[{Subscript[R,\\[Alpha]\\[Beta]]==Subscript[\\[Delta],\\[Alpha]\\[Beta]] Subscript[L,z]/(\\[Sigma] Subscript[A,\\[Alpha]]),Subscript[L,\\[Alpha]\\[Beta]]==\\[Mu]/(4 Pi Subscript[A,\\[Alpha]] Subscript[A,\\[Beta]]) Inactive[Integrate][Subscript[t,\\[Alpha]].Subscript[t,\\[Beta]]/Abs[r-rp],Element[r,Subscript[V,\\[Alpha]]],Element[rp,Subscript[V,\\[Beta]]]]}]"
+    },
+    "E07": {
+      "latex": "\\mathbf J=-\\sigma\\left(j\\omega\\mathbf A+\\nabla\\phi\\right).",
+      "wolfram": "HoldForm[J==-\\[Sigma](j \\[Omega] A+\\[Del]\\[Phi])]"
+    },
+    "E09": {
+      "latex": "M_T=\\frac{A_T}{12}\\begin{bmatrix}2&1&1\\\\1&2&1\\\\1&1&2\\end{bmatrix},\\qquad P_T=\\mathbf J_T^H M_T\\mathbf J_T/\\sigma.",
+      "wolfram": "HoldForm[{Subscript[M,T]==Subscript[A,T] MatrixForm[{{2,1,1},{1,2,1},{1,1,2}}]/12,Subscript[P,T]==ConjugateTranspose[Subscript[J,T]].Subscript[M,T].Subscript[J,T]/\\[Sigma]}]"
+    }
+  },
+  "figures": {
+    "model_hierarchy": {
+      "panels": [
+        "model_hierarchy"
+      ],
+      "source_models": [
+        "conceptual_model_hierarchy"
+      ],
+      "source_acceptance": [
+        "conceptual_diagram"
+      ],
+      "title": {
+        "zh-CN": "分层模型与可比较观测量。",
+        "en": "Model hierarchy and comparable observables."
+      },
+      "descriptions": {
+        "report": {
+          "zh-CN": "输运模型按物理对象与观测量分组：圆线内场用于解析与二维校准，多股二维场路求解共同端口下的复电流，纵向 PEEC 检验有限长度效应。连线标明内部场校准或等面积电阻参照。RT0 外场损耗与三维 A–φ 场诊断各自构成独立研究范围。",
+          "en": "Transport models are grouped by physical object and observable: round-wire internal fields support analytical and two-dimensional calibration, multistrand field–circuit models resolve common-terminal phasor currents, and longitudinal PEEC examines finite-length effects. Links identify internal-field calibration or equal-area resistance references. RT0 imposed-field loss and three-dimensional A–φ diagnostics occupy separate research scopes."
+        },
+        "paper": {
+          "zh-CN": "输运模型按物理对象与观测量分组：圆线内场用于解析与二维校准，多股二维场路求解共同端口下的复电流，纵向 PEEC 检验有限长度效应。连线标明内部场校准或等面积电阻参照。RT0 外场损耗与三维 A–φ 场诊断各自构成独立研究范围。",
+          "en": "Transport models are grouped by physical object and observable: round-wire internal fields support analytical and two-dimensional calibration, multistrand field–circuit models resolve common-terminal phasor currents, and longitudinal PEEC examines finite-length effects. Links identify internal-field calibration or equal-area resistance references. RT0 imposed-field loss and three-dimensional A–φ diagnostics occupy separate research scopes."
+        }
+      }
+    },
+    "q1_profile": {
+      "panels": [
+        "q1_magnitude",
+        "q1_phase"
+      ],
+      "source_models": [
+        "frozen_Bessel_radial_profile"
+      ],
+      "source_acceptance": [
+        "see frozen source scope"
+      ],
+      "title": {
+        "zh-CN": "单圆线径向电流幅值与相位。",
+        "en": "Round-wire radial current magnitude and phase."
+      },
+      "descriptions": {
+        "report": {
+          "zh-CN": "铜导体直径 2 mm，200 kHz、20 A RMS。 (a) RMS 幅值；(b) 连续显示的相位。 相位显示采用径向连续提升，幅值保留 RMS 归一化。径向样本来自保存的 Bessel 解析数据。",
+          "en": "The copper conductor has diameter 2 mm and carries 20 A RMS at 200 kHz. (a) RMS magnitude; (b) continuously displayed phase. Phase is displayed with a continuous radial lift, while magnitude retains RMS normalization. Radial samples come from preserved Bessel analytical data."
+        },
+        "paper": {
+          "zh-CN": "直径 2 mm 铜圆线，频率 200 kHz，总电流 20 A RMS。(a) 径向电流密度 RMS 幅值；(b) 沿半径连续展开的相位。两条曲线采用同一解析复电流密度。",
+          "en": "The copper conductor has diameter 2 mm and carries 20 A RMS at 200 kHz. (a) RMS magnitude; (b) continuously displayed phase."
+        }
+      }
+    },
+    "q1_cross_section": {
+      "panels": [
+        "q1_cross_section"
+      ],
+      "source_models": [
+        "frozen_Bessel_radial_profile"
+      ],
+      "source_acceptance": [
+        "see frozen source scope"
+      ],
+      "title": {
+        "zh-CN": "单圆线解析截面幅值。",
+        "en": "Analytical round-wire cross-sectional magnitude."
+      },
+      "descriptions": {
+        "report": {
+          "zh-CN": "铜导体直径 2 mm，200 kHz、20 A RMS。 色标显示轴向 RMS 电流密度。 径向样本经线性插值后作轴对称映射。坐标以毫米显示，电流密度以 A/mm² 显示。",
+          "en": "The copper conductor has diameter 2 mm and carries 20 A RMS at 200 kHz. The color scale represents axial RMS current density. Radial samples are linearly interpolated and mapped axisymmetrically. Coordinates are displayed in millimetres and current density in A/mm²."
+        },
+        "paper": {
+          "zh-CN": "直径 2 mm 铜圆线，频率 200 kHz，总电流 20 A RMS。径向解析样本经轴对称映射得到截面幅值，色标为 RMS 电流密度。",
+          "en": "The copper conductor has diameter 2 mm and carries 20 A RMS at 200 kHz. The color scale represents axial RMS current density."
+        }
+      }
+    },
+    "q1_fem_error": {
+      "panels": [
+        "q1_fem_error"
+      ],
+      "source_models": [
+        "2D_diffusion_FEM"
+      ],
+      "source_acceptance": [
+        "scoped_passed"
+      ],
+      "title": {
+        "zh-CN": "单圆线二维校准误差。",
+        "en": "Round-wire two-dimensional calibration errors."
+      },
+      "descriptions": {
+        "report": {
+          "zh-CN": "铜导体直径 2 mm，200 kHz、20 A RMS。 三档网格与独立功率积分对应同一内场问题。 电阻参照为相同圆线的内部 Bessel 解。功率使用独立材料域积分计算。",
+          "en": "The copper conductor has diameter 2 mm and carries 20 A RMS at 200 kHz. Three grids and independent power integrals concern the same internal-field problem. Resistance is referenced to the internal Bessel solution of the same round wire. Power is evaluated by independent integration over the material region."
+        },
+        "paper": {
+          "zh-CN": "直径 2 mm 铜圆线的三档二维网格校准。曲线分别表示交流电阻相对解析误差与独立功率积分相对差；两项指标对应同一内部场问题。",
+          "en": "The copper conductor has diameter 2 mm and carries 20 A RMS at 200 kHz. Three grids and independent power integrals concern the same internal-field problem."
+        }
+      }
+    },
+    "common_terminal": {
+      "panels": [
+        "common_terminal"
+      ],
+      "source_models": [
+        "conceptual_common_terminal_constraint"
+      ],
+      "source_acceptance": [
+        "conceptual_diagram"
+      ],
+      "title": {
+        "zh-CN": "多股共同端口与回流。",
+        "en": "Multistrand common terminals and return."
+      },
+      "descriptions": {
+        "report": {
+          "zh-CN": "各股沿途绝缘，在两端并联，逐股复电流由共同端电压及总电流约束求解。耦合矩阵 Z 与激励项 e 包含指定模型中的阻抗和场作用。受控回流承担反向总电流，并具有独立的端场。图中给出已知输入及待求复电流和电压。",
+          "en": "Strands are insulated along their paths and connected in parallel at both ends; their phasor currents follow from the common voltage and total-current constraints. The coupling matrix Z and excitation term e contain the impedance and field contributions retained by the model. The controlled return carries the opposite total current and has its own terminal field. Known inputs and unknown currents and voltage are identified."
+        },
+        "paper": {
+          "zh-CN": "各股沿途绝缘，在两端并联，逐股复电流由共同端电压及总电流约束求解。耦合矩阵 Z 与激励项 e 包含指定模型中的阻抗和场作用。受控回流承担反向总电流，并具有独立的端场。图中给出已知输入及待求复电流和电压。",
+          "en": "Strands are insulated along their paths and connected in parallel at both ends; their phasor currents follow from the common voltage and total-current constraints. The coupling matrix Z and excitation term e contain the impedance and field contributions retained by the model. The controlled return carries the opposite total current and has its own terminal field. Known inputs and unknown currents and voltage are identified."
+        }
+      }
+    },
+    "coax640_currents": {
+      "panels": [
+        "coax640_current",
+        "coax640_phase"
+      ],
+      "source_models": [
+        "2D_common_voltage_coax_FEM"
+      ],
+      "source_acceptance": [
+        "scoped_passed"
+      ],
+      "title": {
+        "zh-CN": "640 股共端复电流分配。",
+        "en": "640-strand common-terminal complex current sharing."
+      },
+      "descriptions": {
+        "report": {
+          "zh-CN": "(a) 幅值；(b) 相位，按物理股线身份排列。 虚线表示 It/N 的比较参照。幅值和相位使用相同的物理股线编号。",
+          "en": "(a) Magnitude; (b) phase, ordered by physical strand identity. A dashed line marks the comparison reference It/N. Magnitude and phase use identical physical strand numbering."
+        },
+        "paper": {
+          "zh-CN": "200 kHz、总电流 20 A RMS 的二维直束模型。(a) 逐股电流幅值；(b) 主值相位。横轴按物理股线身份排列，虚线表示等流参照 It/N=0.03125 A。两幅图采用相同股线编号。",
+          "en": "(a) Magnitude; (b) phase, ordered by physical strand identity."
+        }
+      }
+    },
+    "coax640_fields": {
+      "panels": [
+        "coax640_field",
+        "coax640_field_phase"
+      ],
+      "source_models": [
+        "2D_linear_triangle_Az_common_voltage_coax_FEM"
+      ],
+      "source_acceptance": [
+        "scoped_passed"
+      ],
+      "title": {
+        "zh-CN": "640 股二维截面电流密度。",
+        "en": "640-strand two-dimensional cross-sectional current density."
+      },
+      "descriptions": {
+        "report": {
+          "zh-CN": "(a) RMS 幅值；(b) 相位，材料标记识别各股。 电流按 Jz=σ(v−u) 从原节点场与端场恢复。独立功率使用线性三角形质量积分，显示采用单元中心采样。",
+          "en": "(a) RMS magnitude; (b) phase, with material markers identifying strands. Current is reconstructed as Jz=σ(v−u) from original nodal and terminal fields. Independent power uses linear-triangle mass integration, while visualization samples cell centers."
+        },
+        "paper": {
+          "zh-CN": "200 kHz、总电流 20 A RMS 的 640 股二维直束。(a) 单元中心的电流密度 RMS 幅值；(b) 主值相位。场由保存的端场、u 与材料三角形重构，材料标记用于识别各股。",
+          "en": "(a) RMS magnitude; (b) phase, with material markers identifying strands."
+        }
+      }
+    },
+    "geometry_comparison": {
+      "panels": [
+        "geometry_straight",
+        "geometry_single",
+        "multilevel_detail",
+        "geometry_crosslayer"
+      ],
+      "source_models": [
+        "archived_geometric_trajectories_only",
+        "archived_physical_strand_centerlines"
+      ],
+      "source_acceptance": [
+        "geometry_only; historical_native_exit_unknown",
+        "see frozen source scope"
+      ],
+      "title": {
+        "zh-CN": "股线中心线的三维结构比较。",
+        "en": "Three-dimensional strand centerline structures."
+      },
+      "descriptions": {
+        "report": {
+          "zh-CN": "面板依次展示直束、单级、传统多级局部和跨层结构。 24 股结构使用 0.100 mm 铜径，传统多级面板展示 3 mm 局部。蓝色标记保持选定股线的物理身份。",
+          "en": "Panels show straight, single-level, local multilevel, and cross-layer structures. The 24-strand structures use a copper diameter of 0.100 mm, and the multilevel panel shows a 3 mm detail. Blue markers preserve selected physical strand identities."
+        },
+        "paper": {
+          "zh-CN": "按面板顺序展示直束、单级、传统多级和跨层中心线。样张采用 24 股、0.100 mm 铜径，展示轨迹与空间组织；弧长、间隙和铜量按各自几何计算。",
+          "en": "Panels show straight, single-level, local multilevel, and cross-layer structures."
+        }
+      }
+    },
+    "peec_cross_section": {
+      "panels": [
+        "peec_cross_section"
+      ],
+      "source_models": [
+        "finite_length_longitudinal_volume_filament_PEEC"
+      ],
+      "source_acceptance": [
+        "scoped_passed"
+      ],
+      "title": {
+        "zh-CN": "纵向 PEEC 截面电流。",
+        "en": "Longitudinal PEEC cross-sectional current."
+      },
+      "descriptions": {
+        "report": {
+          "zh-CN": "方形细丝单元的复电流恢复 RMS 幅值。 代表模型含 5024 条纵向体积细丝，轴向长度 0.64 m。坐标和材料面积采用该档实际方形离散定义。",
+          "en": "Complex currents in square volume filaments reconstruct the RMS magnitude. The representative model contains 5024 longitudinal volume filaments and has axial length 0.64 m. Coordinates and material areas follow that level’s actual square-cell discretization."
+        },
+        "paper": {
+          "zh-CN": "5024 个体积细丝、长度 0.64 m 的纵向 PEEC 模型。截面颜色由各方形单元的复电流恢复 RMS 电流密度，反映连续导体内部的趋肤分布。",
+          "en": "Complex currents in square volume filaments reconstruct the RMS magnitude."
+        }
+      }
+    },
+    "peec_length": {
+      "panels": [
+        "peec_length"
+      ],
+      "source_models": [
+        "finite_length_longitudinal_volume_filament_PEEC"
+      ],
+      "source_acceptance": [
+        "scoped_passed"
+      ],
+      "title": {
+        "zh-CN": "纵向 PEEC 长度敏感性。",
+        "en": "Longitudinal PEEC length sensitivity."
+      },
+      "descriptions": {
+        "report": {
+          "zh-CN": "同一截面按保存的轴向长度比较单位长度电阻。 1264 自由度模型采用 0.16、0.32、0.64 m，5024 自由度复核末两档。积分参数在每个长度序列内固定。",
+          "en": "Resistance per axial length is compared at archived lengths for the same cross-section. The 1264-degree-of-freedom model uses 0.16, 0.32, and 0.64 m, while 5024 degrees of freedom recheck the final two levels. Integration settings remain fixed within each length sequence."
+        },
+        "paper": {
+          "zh-CN": "1264 与 5024 自由度模型的长度敏感性。在各自固定的横截面上改变轴向长度，纵轴为按轴向长度归一化的交流电阻。两种离散各采用自身实际铜面积作解析参照。",
+          "en": "Resistance per axial length is compared at archived lengths for the same cross-section."
+        }
+      }
+    },
+    "coax640_mesh": {
+      "panels": [
+        "coax640_mesh"
+      ],
+      "source_models": [
+        "640_strand_area_and_convergence_coax_FEM"
+      ],
+      "source_acceptance": [
+        "scoped_passed"
+      ],
+      "title": {
+        "zh-CN": "640 股二维模型的网格敏感性。",
+        "en": "640-strand mesh and boundary sensitivities."
+      },
+      "descriptions": {
+        "report": {
+          "zh-CN": "各试验按网格、回流和外域分别改变一个因素。 变化以相邻指定工况的电阻差归一化。网格、回流距离与外域大小各使用独立序列。",
+          "en": "Mesh, return, and exterior tests each vary one factor. Variation is normalized from resistance differences between the specified adjacent cases. Mesh, return distance, and exterior size use separate sequences."
+        },
+        "paper": {
+          "zh-CN": "640 股二维共端模型的三档网格交流电阻。网格细化采用相同几何与激励；回流距离和外域敏感性另以独立单因素试验核查。",
+          "en": "Mesh, return, and exterior tests each vary one factor."
+        }
+      }
+    },
+    "peec_sensitivity": {
+      "panels": [
+        "peec_sensitivity"
+      ],
+      "source_models": [
+        "prewrite_longitudinal_PEEC_sensitivity"
+      ],
+      "source_acceptance": [
+        "scoped_passed"
+      ],
+      "title": {
+        "zh-CN": "纵向 PEEC 的单因素敏感性。",
+        "en": "Longitudinal PEEC integration sensitivity."
+      },
+      "descriptions": {
+        "report": {
+          "zh-CN": "互项阶数与自项精度各自进行单因素对照。 互项使用 q4、q6、q8，自项使用 10/8 与 12/10。比较保留同一截面及轴向长度。",
+          "en": "Mutual order and self accuracy are compared in separate single-factor tests. Mutual settings are q4, q6, and q8; self settings are 10/8 and 12/10. Comparisons retain the same cross-section and axial length."
+        },
+        "paper": {
+          "zh-CN": "编号 1–3 为长度比较，4–7 为互项积分，8–9 为自项积分，10–11 为横向离散比较。积分项取电阻与复电流相对变化中的较大值，其余项显示电阻相对变化。各点的条件与数值见补充材料编号表；纵轴以百分数表示相对变化。",
+          "en": "Mutual order and self accuracy are compared in separate single-factor tests."
+        }
+      }
+    },
+    "rt0_sections": {
+      "panels": [
+        "rt0_loss_slice",
+        "rt0_J_slice"
+      ],
+      "source_models": [
+        "3D_RT0_exact_Toeplitz_matrix_free_PEEC"
+      ],
+      "source_acceptance": [
+        "scoped_passed"
+      ],
+      "title": {
+        "zh-CN": "RT0 外场电流与损耗切面。",
+        "en": "RT0 imposed-field current and loss sections."
+      },
+      "descriptions": {
+        "report": {
+          "zh-CN": "铜长方体为 1×1×2 mm，200 kHz、1 mT RMS 外场、零净输运。 (a) 单元平均损耗密度；(b) 复 RMS 电流范数。 电流由相对面通量恢复，单元平均损耗采用 RT0 重叠积分。切面位置和色标对应归档的重构定义。",
+          "en": "The 1×1×2 mm copper cuboid is excited at 200 kHz by a 1 mT RMS field with zero net transport. (a) Cell-average loss density; (b) complex RMS current norm. Current is reconstructed from opposing face fluxes, and cell-average loss uses RT0 overlap integration. Section positions and color scales follow the archived reconstruction definitions."
+        },
+        "paper": {
+          "zh-CN": "铜长方体为 1×1×2 mm，200 kHz、1 mT RMS 外场、零净输运。 (a) 单元平均损耗密度；(b) 复 RMS 电流范数。",
+          "en": "The 1×1×2 mm copper cuboid is excited at 200 kHz by a 1 mT RMS field with zero net transport. (a) Cell-average loss density; (b) complex RMS current norm."
+        }
+      }
+    },
+    "rt0_vectors": {
+      "panels": [
+        "rt0_vectors"
+      ],
+      "source_models": [
+        "3D_RT0_exact_Toeplitz_matrix_free_PEEC"
+      ],
+      "source_acceptance": [
+        "scoped_passed"
+      ],
+      "title": {
+        "zh-CN": "RT0 重构电流三维矢量。",
+        "en": "RT0 reconstructed three-dimensional current vectors."
+      },
+      "descriptions": {
+        "report": {
+          "zh-CN": "铜长方体为 1×1×2 mm，200 kHz、1 mT RMS 外场、零净输运。 箭头为固定相位的实部，色标为复 RMS 范数。 矢量采用固定比例与稀疏单元采样。单元与面通量身份在保存的重构数据中对应。",
+          "en": "The 1×1×2 mm copper cuboid is excited at 200 kHz by a 1 mT RMS field with zero net transport. Arrows show the real part at a fixed phase; color represents the complex RMS norm. Vectors use a common scale and sparse cell sampling. Cell and face-flux identities correspond in the preserved reconstruction data."
+        },
+        "paper": {
+          "zh-CN": "铜长方体为 1×1×2 mm，200 kHz、1 mT RMS 外场、零净输运。 箭头为固定相位的实部，色标为复 RMS 范数。",
+          "en": "The 1×1×2 mm copper cuboid is excited at 200 kHz by a 1 mT RMS field with zero net transport. Arrows show the real part at a fixed phase; color represents the complex RMS norm."
+        }
+      }
+    },
+    "rt0_spatial": {
+      "panels": [
+        "rt0_spatial"
+      ],
+      "source_models": [
+        "frozen_RT0_CSV_campaign_arithmetic"
+      ],
+      "source_acceptance": [
+        "scoped_passed"
+      ],
+      "title": {
+        "zh-CN": "RT0 外场损耗的空间敏感性。",
+        "en": "RT0 spatial and integration comparisons."
+      },
+      "descriptions": {
+        "report": {
+          "zh-CN": "铜长方体为 1×1×2 mm，200 kHz、1 mT RMS 外场、零净输运。 q14 空间序列与末档 q18 对照使用相同外场工况。 空间序列为 8192、16000、27648 单元。积分对照在最终成功网格上进行。",
+          "en": "The 1×1×2 mm copper cuboid is excited at 200 kHz by a 1 mT RMS field with zero net transport. The q14 spatial sequence and final q18 comparison use the same imposed-field condition. The spatial sequence contains 8192, 16000, and 27648 cells. Integration is compared on the final successful grid."
+        },
+        "paper": {
+          "zh-CN": "1×1×2 mm 铜长方体，200 kHz、1 mT RMS 外场、零净输运。图示 q14 的 8192、16000、27648 单元损耗；最细档 q18 积分对照见补充材料数值表。",
+          "en": "The 1×1×2 mm copper cuboid is excited at 200 kHz by a 1 mT RMS field with zero net transport. The q14 spatial sequence and final q18 comparison use the same imposed-field condition."
+        }
+      }
+    },
+    "aphi_preserved": {
+      "panels": [
+        "aphi_A_samples",
+        "aphi_phi_samples",
+        "aphi_J_samples",
+        "aphi_gradient_samples"
+      ],
+      "source_models": [
+        "actual_preserved_A_phi_cylinder_fields"
+      ],
+      "source_acceptance": [
+        "failed_numerical"
+      ],
+      "title": {
+        "zh-CN": "A–φ 场的空间诊断样本。",
+        "en": "Preserved A–φ field samples."
+      },
+      "descriptions": {
+        "report": {
+          "zh-CN": "面板分别给出 A、φ、J 和实际 φ 梯度。 128 个指定节点保留其样本身份。色标使用实际保存的复数场与导数幅值。",
+          "en": "Panels show A, φ, J, and the actual gradient of φ. The 128 selected nodes retain their sample identities. Color scales use magnitudes of the actual saved complex fields and derivatives."
+        },
+        "paper": {
+          "zh-CN": "9108 节点圆柱最细档的 128 个空间诊断样本。面板依次展示 A、φ、J 及实际 φ 梯度；颜色对应所示样本的量值，三档网格的验收指标由校准指标图给出。",
+          "en": "Panels show A, φ, J, and the actual gradient of φ."
+        }
+      }
+    },
+    "aphi_gates": {
+      "panels": [
+        "aphi_gates"
+      ],
+      "source_models": [
+        "actual_preserved_A_phi_cylinder_fields"
+      ],
+      "source_acceptance": [
+        "failed_numerical"
+      ],
+      "title": {
+        "zh-CN": "A–φ 圆柱校准指标。",
+        "en": "A–φ cylinder calibration metrics."
+      },
+      "descriptions": {
+        "report": {
+          "zh-CN": "三档网格与各指标门槛分别展示。 圆柱三档含 1683、3672、9108 节点。误差以各自验收门槛归一化，水平线标出单位比值。",
+          "en": "Three grids and their metric targets are shown separately. The three cylinder levels contain 1683, 3672, and 9108 nodes. Errors are normalized by their respective acceptance targets, with the horizontal line indicating a unit ratio."
+        },
+        "paper": {
+          "zh-CN": "三档 A–φ 圆柱校准中的 J、φ 与规范残差指标。各指标依其独立门槛评价，用于区分电流校准与场势、规范条件的满足程度。",
+          "en": "Three grids and their metric targets are shown separately."
+        }
+      }
+    },
+    "gpu_equivalence": {
+      "panels": [
+        "gpu_equivalence"
+      ],
+      "source_models": [
+        "physical_longitudinal_PEEC_CPU_GPU_cross_validation"
+      ],
+      "source_acceptance": [
+        "scoped_passed"
+      ],
+      "title": {
+        "zh-CN": "CPU/GPU 同模型数值对照。",
+        "en": "CPU/GPU same-model numerical comparison."
+      },
+      "descriptions": {
+        "report": {
+          "zh-CN": "矩阵与复电流相对差使用同一离散和积分设置。 相对差针对 1264 和 5024 自由度分别计算。水平参照为 10⁻¹⁰ 算法对照门槛。",
+          "en": "Relative matrix and complex-current differences use identical discretization and integration. Relative differences are computed separately for 1264 and 5024 degrees of freedom. The horizontal reference is the 10⁻¹⁰ algorithm-comparison target."
+        },
+        "paper": {
+          "zh-CN": "1264 与 5024 自由度的 CPU/GPU 数值对照。两条曲线分别表示部分电感矩阵与复电流的相对差，每组采用相同几何、离散和积分设置。",
+          "en": "Relative matrix and complex-current differences use identical discretization and integration."
+        }
+      }
+    },
+    "resource_memory": {
+      "panels": [
+        "resource_memory"
+      ],
+      "source_models": [
+        "sampled_owned_process_tree_resource_observation"
+      ],
+      "source_acceptance": [
+        "scoped_passed"
+      ],
+      "title": {
+        "zh-CN": "代表任务的内存采样。",
+        "en": "Attributable process-tree resource curves."
+      },
+      "descriptions": {
+        "report": {
+          "zh-CN": "曲线使用归档的时间及内存样本。 时间以对应运行的起点归一化。内存为可归属进程树的采样工作集。",
+          "en": "Curves use archived time and memory samples. Time is measured from the start of each corresponding run. Memory is the sampled working set of the attributable process tree."
+        },
+        "paper": {
+          "zh-CN": "代表计算任务的进程树内存采样。横轴为相应任务开始后的时间，纵轴为采样时刻记录的内存；采样间隔内的瞬时峰值可能更高。",
+          "en": "Curves use archived time and memory samples."
+        }
+      }
+    },
+    "ansys_seven_current": {
+      "panels": [
+        "ansys_seven_current"
+      ],
+      "source_models": [
+        "Ansys_Maxwell2D_common_voltage_port_short_test"
+      ],
+      "source_acceptance": [
+        "limited_single_mesh_validation"
+      ],
+      "title": {
+        "zh-CN": "Ansys 七股二维复电流。",
+        "en": "Ansys seven-strand two-dimensional complex currents."
+      },
+      "descriptions": {
+        "report": {
+          "zh-CN": "704 单元有效端口短测给出逐股幅值与相位。 电流采用实际 ±20 A 场解的端口记录。幅值与相位对应同一七股编号。",
+          "en": "The valid 704-cell port short test provides strand magnitudes and phases. Currents use port records from the actual ±20 A field solution. Magnitudes and phases correspond to the same seven strand identities."
+        },
+        "paper": {
+          "zh-CN": "Ansys 七股二维端口算例，采用 704 单元网格与实际 ±20 A 场解。图中按物理股线身份给出电流幅值，该数据支持本档端口及功率检查。",
+          "en": "The valid 704-cell port short test provides strand magnitudes and phases."
+        }
+      }
+    },
+    "ansys_limits": {
+      "panels": [
+        "ansys_limits"
+      ],
+      "source_models": [
+        "archived_Ansys_Student_interface_and_license_boundary"
+      ],
+      "source_acceptance": [
+        "interface_failure_and_license_boundary"
+      ],
+      "title": {
+        "zh-CN": "Ansys Student 能力与接口诊断。",
+        "en": "Ansys Student capacity and interface diagnostics."
+      },
+      "descriptions": {
+        "report": {
+          "zh-CN": "Ansys Student v252 的二维三角形、三维体单元与面单元上限分别为 2000、64000 和 8000，计算使用最多 4 核。并列分组表示各项许可限制。电流密度表达式 J 的接口探针与许可规模分别记录，实际求解状态见三维诊断。",
+          "en": "Ansys Student v252 permits up to 2000 two-dimensional triangles, 64000 three-dimensional volume elements, and 8000 surface elements, with at most 4 CPU cores. Parallel groups identify the license limits. Probes of the current-density expression J are recorded separately from mesh capacity; actual solution status is reported in the three-dimensional diagnostics."
+        },
+        "paper": {
+          "zh-CN": "Ansys Student v252 的二维三角形、三维体单元与面单元上限分别为 2000、64000 和 8000，计算使用最多 4 核。并列分组表示各项许可限制。电流密度表达式 J 的接口探针与许可规模分别记录，实际求解状态见三维诊断。",
+          "en": "Ansys Student v252 permits up to 2000 two-dimensional triangles, 64000 three-dimensional volume elements, and 8000 surface elements, with at most 4 CPU cores. Parallel groups identify the license limits. Probes of the current-density expression J are recorded separately from mesh capacity; actual solution status is reported in the three-dimensional diagnostics."
+        }
+      }
+    }
+  },
+  "references": [
+    {
+      "id": "P01"
+    },
+    {
+      "id": "N01"
+    },
+    {
+      "id": "P02"
+    },
+    {
+      "id": "P03"
+    },
+    {
+      "id": "P04"
+    },
+    {
+      "id": "P05"
+    },
+    {
+      "id": "P09"
+    }
+  ],
+  "bibtex": "references/library.bib",
+  "frozen_bundle": "data/publication/closure",
+  "panel_run": "data/publication",
+  "scientific_hashes": {
+    "docs/总控/当前运行索引.json": "3324976d4af8f58e60820a88ae978246443f78fbdd0cfa1050e86809110ae60d",
+    "outputs/prewrite_closure_state.json": "80a66afa79c321a89f730b102af0e70125f6e1655372717d6b59f470c6520e71"
+  },
+  "resource_limits": {
+    "threads": 8,
+    "task_memory_GiB": 24,
+    "system_reserve_GiB": 8
+  },
+  "format": {
+    "panel_width_mm": 88.9,
+    "composite_width_mm": 182,
+    "font_zh": "SimSun",
+    "font_en": "Times New Roman",
+    "font_size_figure_pt": 10
+  },
+  "dependency_lock": {
+    "markdown-it-py": "4.2.0",
+    "mdit-py-plugins": "0.5.0",
+    "mdurl": "0.1.2"
+  },
+  "panel_overrides": {
+    "q1_cross_section": "outputs/publication_20261013_panel_alignment_08",
+    "q1_fem_error": "outputs/publication_20261013_panel_alignment_06",
+    "peec_length": "outputs/publication_20261013_panel_alignment_05",
+    "peec_cross_section": "outputs/publication_20261013_panel_alignment_08"
+  },
+  "numbering_language": "zh-CN",
+  "quantity_display": {
+    "coax_rac": ".6g",
+    "coax_bundle_loss": ".6g",
+    "coax_return_loss": ".6g",
+    "coax_area": ".6g",
+    "coax_voltage_re": ".6g",
+    "coax_voltage_im": ".6g",
+    "coax_return_voltage_re": ".6g",
+    "coax_return_voltage_im": ".6g",
+    "coax_rdc": ".6g",
+    "coax_rac_rdc": ".6g",
+    "coax_spread": ".6g",
+    "peec_rac": ".6g",
+    "skin_depth": ".6g",
+    "q1_rac": ".6g",
+    "q1_rdc": ".6g",
+    "q1_loss": ".6g"
+  },
+  "reference_numbering": "first_appearance_shared_bilingual"
+}

@@ -1,0 +1,45 @@
+# Litz 线分层建模与数值验证：完整研究报告 · 05 换位模型、真实几何与等铜比较
+
+缪雨轩 · 淮南师范学院
+
+[合并稿](../README.md#chapter-05)
+
+<a id="chapter-05"></a>
+## 05 换位模型、真实几何与等铜比较
+
+<a id="05.geometry.heading"></a>
+### 几何、实际弧长与离散换位
+
+保存的直束、单级、传统多级和跨层中心线用于检查股线身份、周期、间隙、曲率、实际弧长和铜体积。400、800、1600 轴向采样与 60 项几何检查支持这些几何量的数值一致性，但旧包装器退出码和未保存的内核实际退出保持原状态。24 股、0.100 mm 铜径样张约有 0.1885 mm² 名义铜面积；它说明几何构造，不等于满足至少 5 mm² 的最终束。三维材质、光照与可旋转视角只用于读图。
+
+当前 DTM/iDTM 演示采用加性离散块 [(6)](../README.md#E06)。同一组带权阻抗块只改变排列顺序，不改变总和；因此该实现中出现的均流不能证明不同真实换位路径等效，或证明跨层结构优于传统多级。与文献 [1, 2] 比较时，应核查沿程换位、层级非交换关系、局部场假设和端接，而不能仅复用方法名称。几何公平、模型充分性和性能改善是分别需要证据的三个问题。
+
+<a id="05.dtm_derivation.heading"></a>
+### 身份坐标与分段
+
+设 Ps 将固定的物理股线身份映射到第 s 个截面的空间位置。截面电流变为 Ps i，局部电压在回到身份坐标后为 PsᵀZsPs i。串联累加各段 Δzs 即得到总阻抗。因而位置置换与电流身份须分开保存；分段检查 K、2K、4K 的对象是同一条轨迹和同一组物理股线。周期、间隙和弧长检查分别约束几何可实现性与铜用量。
+
+<a id="05.report_geometry.heading"></a>
+### 几何采样与等铜检查
+
+轨迹恢复保留物理股线 ID，不按截面排序重新命名。周期检查应分别看位置闭合和身份置换；间隙与曲率检查使用真实单位，弧长由路径采样积分并与加倍采样比较。铜体积与直流电阻以实际股长进入计算，不能把轴向长度直接用于所有螺旋支路。成稿展示的局部截取和绘图抽样在新运行号下记录，原完整中心线继续保留。
+
+等铜对照应注明圆形名义面积、离散实际面积和绝缘占据的外包络。相同名义面积下，较大的弧长会增加单位轴向长度铜体积和电阻路径长度；几何复杂度自身不产生电磁改善证据。640 股候选中心线与 7/24 股构造演示承担不同尺度任务，公开材料应保留这个区别。
+
+<a id="E06"></a>
+$$
+Z_{\mathrm{tot}}=\sum_{s=1}^{K}\Delta z_s P_s^T Z_s P_s.\tag{6}
+$$
+
+<a id="fig-geometry_comparison"></a>
+![Fig. 9](../../../assets/zh-CN/geometry_comparison.png)
+
+<p align="center">图 9. 股线中心线的三维结构比较。</p>
+
+面板依次展示直束、单级、传统多级局部和跨层结构。 24 股结构使用 0.100 mm 铜径，传统多级面板展示 3 mm 局部。蓝色标记保持选定股线的物理身份。
+<a id="references"></a>
+## 参考文献
+
+[1] Silvano Cruciani, Tommaso Campi, Francesca Maradei, Mauro Feliziani. Numerical Modeling of Litz Wires Based on Discrete Transpositions of Strands and 2-D Finite Element Analysis. IEEE TPEL 38(5):6710–6719, 2023. https://doi.org/10.1109/TPEL.2023.3240338
+
+[2] Xinsheng Zhang, Fei Xiao, Ruitian Wang, Shunjun Chen, Xuexin Fan, Xin Li. AC Impedance Modeling of Composite Litz Wire With Nonideal Transposition Based on Improved Discrete Transposition Model. IEEE TPEL 41(7):11003–11019, 2026. https://doi.org/10.1109/TPEL.2026.3661080

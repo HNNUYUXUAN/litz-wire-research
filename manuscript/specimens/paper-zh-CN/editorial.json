@@ -1,0 +1,85 @@
+{
+  "language": "zh-CN",
+  "edition": "paper",
+  "title": "Litz 线共端电流分配与纵向 PEEC 的分层数值验证",
+  "abstract": "Litz 线高频损耗受单股趋肤、股间耦合与端接约束共同影响。本文建立解析圆线、二维共端场路和有限长度纵向 PEEC 的验证关系，推导指定线性模型的复电流均流条件。在 200 kHz、20 A RMS 铜导体工况下，640 股二维直束的束内电阻为 15.7930 mΩ/轴向m，损耗为 6.31720 W/轴向m，归一化复电流 RMS 偏差为 1.85421，表明共同端接下仍存在显著电流差异。纵向 PEEC 的已检查长度增量引起约 0.15%–0.30% 的电阻变化，互项积分变化约为 10⁻⁵ 量级，自项更小；5024 自由度末档电阻与等面积 Bessel 参照相差 0.044582%。结果为指定模型内的电流与损耗比较提供定量依据，真实换位束的端区、横向电流及实验性能仍需进一步验证。",
+  "keywords": "Litz 线；共端场路；复电流分配；趋肤效应；有限长度 PEEC；数值验证",
+  "editorial_decisions": [
+    "引言按损耗问题、已有方法的尺度差异、本文三个研究问题组织。",
+    "公式和图件紧随相关论述；640 股定量段落进入对应结果小节。",
+    "以长度、互项、自项敏感性的量级差解释结果，数值结论保持纵向模型范围。",
+    "主文集中于解析、共端电流与纵向 PEEC，三维诊断和来源记录保留在补充材料。",
+    "全部 105 个原 block id、21 个图件、9 个公式及原指标 token 保留。"
+  ],
+  "display_precision_recommendation": {
+    "physical_observables": "正文约 5–6 位有效数字，源数值保持完整精度。",
+    "relative_errors": "正文通常 3–4 位有效数字，低于 0.001 的无量纲量优先科学记数法。",
+    "sensitivity_percentages": "按 3–4 位有效数字统一；正文与图表使用同一百分比换算。"
+  },
+  "numeric_source_checks": [
+    {
+      "claim": "1264 自由度长度增量电阻变化",
+      "file": "data/publication/tables/peec_sensitivity.csv",
+      "rows": ["id=length_016_032", "id=length_032_064"],
+      "field": "Rac_relative_change",
+      "source_values": [0.0029864033502624565, 0.0014948223482726952],
+      "percent_values": [0.29864033502624565, 0.14948223482726952]
+    },
+    {
+      "claim": "5024 自由度长度增量电阻变化",
+      "file": "data/publication/tables/peec_sensitivity.csv",
+      "rows": ["id=fine_length_032_064"],
+      "field": "Rac_relative_change",
+      "source_values": [0.0014873027795723193],
+      "percent_values": [0.14873027795723193]
+    },
+    {
+      "claim": "两档规模互项敏感性的最大电阻和复电流变化",
+      "file": "data/publication/tables/peec_sensitivity.csv",
+      "maximum_row": "id=mutual_q4_to6",
+      "comparison_rows": ["mutual_q4_to6", "mutual_q6_to8", "fine_mutual_q4_to6", "fine_mutual_q6_to8"],
+      "Rac_relative_change": 1.2055984599967928e-5,
+      "complex_current_relative_change": 1.5969965952490117e-5
+    },
+    {
+      "claim": "两档规模自项敏感性的最大电阻和复电流变化",
+      "file": "data/publication/tables/peec_sensitivity.csv",
+      "maximum_row": "id=self_10p8_to12p10",
+      "comparison_rows": ["self_10p8_to12p10", "fine_self_10p8_to12p10"],
+      "Rac_relative_change": 6.751743608646166e-11,
+      "complex_current_relative_change": 7.095955818644651e-11
+    },
+    {
+      "claim": "0.32 m 和 0.64 m 横向粗细离散的电阻变化",
+      "file": "data/publication/tables/peec_sensitivity.csv",
+      "rows": ["id=spatial_l032", "id=spatial_l064"],
+      "field": "Rac_relative_change",
+      "source_values": [0.0012212742129769083, 0.0012137566981702541],
+      "interpretation": "实际铜面积也随离散改变，因此这些值是已运行离散之间的变化，非固定几何的纯网格误差。"
+    },
+    {
+      "claim": "640 股束内电阻与损耗",
+      "file": "data/publication/closure/routes/coax640/data.json",
+      "locator": "cases[2]",
+      "bundle_Rac_ohm_per_m": 0.015793003196615706,
+      "bundle_loss_W_per_m": 6.317201278646283,
+      "return_loss_W_per_m": 2.196205515590568,
+      "polygonal_bundle_area_m2": 5.018477584873503e-6
+    },
+    {
+      "claim": "640 股归一化复电流 RMS 偏差",
+      "file": "data/publication/tables/coax640_currents.csv",
+      "fields": ["Re_I_RMS_A", "Im_I_RMS_A"],
+      "calculation": "sqrt(mean(abs(I_k - 20/640)^2))/(20/640)",
+      "value": 1.8542135827933763
+    }
+  ],
+  "scientific_scope_notes": [
+    "640 股按二维直束及受控回流解释，性能排名尚需沿程和端区模型。",
+    "PEEC 的 1264/5024 是连续导体的细丝自由度，股线均流指标用于不同物理对象。",
+    "摘要互项约 10^-5 指无量纲相对变化，长度 0.15%–0.30% 使用百分数。",
+    "A–φ 最细档 J 通过，φ 与规范残差三档未通过，较粗两档 J 未通过。",
+    "RT0 结论对应外场吸收和零净输运；q18 求解记录与 CSV 后处理记录分别保留。",
+    "实际复现及排版质量需由根任务对生成 PDF、Notebook 和链接另行验收。"
+  ]
+}

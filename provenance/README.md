@@ -6,4 +6,6 @@ Scientific data contain both successful and unsuccessful validation records. Eac
 
 The bibliography supplies titles, authors, DOI and source links. Third-party articles remain accessible from their publishers or repositories under their respective terms. IEEEtran is retained with its upstream copyright and LPPL license information. Original research material uses the license categories in `LICENSES/README.md`.
 
-`build_sources/` preserves the exact source bytes recorded by the academic build. The binding in `validation/build_source_binding.json` maps 72 recorded snapshots to 13 unique source objects. `source_files.json` inventories the maintained repository files; `candidate_files.json` inventories dataset files and their original and released identities.
+`build_sources/` preserves the exact source bytes recorded by the academic build. The binding in `validation/build_source_binding.json` maps 72 recorded snapshots to 13 unique source objects. `source_files.json` retains the rc.1 source inventory; `rc2/source_files.json` inventories current maintained files; `candidate_files.json` inventories dataset files and their original and released identities.
+
+The rc.2 dataset appends actual automation evidence with per-file raw/public identities, numerical equivalence checks and explicit source-snapshot lineage. `rc2/` records current runs and compatibility verification.

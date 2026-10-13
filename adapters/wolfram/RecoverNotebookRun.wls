@@ -1,0 +1,12 @@
+$HistoryLength=0;$CharacterEncoding="UTF8";
+recRoot=NestWhile[DirectoryName,DirectoryName[$InputFileName],!FileExistsQ[FileNameJoin[{#,"pyproject.toml"}]]&];recID=Environment["LITZ_RUN_ID"];recDir=FileNameJoin[{recRoot,"outputs",recID}];
+If[FileExistsQ[FileNameJoin[{recDir,"results.json"}]],Exit[0]];
+recCheckpoint=If[FileExistsQ[FileNameJoin[{recDir,"checkpoint.wxf"}]],Import[FileNameJoin[{recDir,"checkpoint.wxf"}],"WXF"],<|"data"-><||>,"figures"-><||>,"checks"->{}|>];
+recStatus=Import[FileNameJoin[{recDir,"process_status.json"}],"RawJSON"];
+recData=recCheckpoint["data"];
+recChecks=Append[recCheckpoint["checks"],<|"id"->"process_completed","execution_status"->"failed","actual"->recStatus["process_exit_code"],"tolerance"->0,"source_model"->"external_process_lifecycle"|>];
+If[FileExistsQ[FileNameJoin[{recDir,"resource_stop.json"}]],recData["resource_stop"]=Import[FileNameJoin[{recDir,"resource_stop.json"}],"RawJSON"]];
+Export[FileNameJoin[{recDir,"results.wxf"}],<|"run_id"->recID,"stage"->Environment["LITZ_STAGE"],"source_model"->Lookup[recData,"source_model","aborted_stage"],"execution_status"->"failed_process_exit","data"->recData,"figures"->recCheckpoint["figures"],"checks"->recChecks|>,"WXF"];
+Export[FileNameJoin[{recDir,"results.json"}],<|"run_id"->recID,"stage"->Environment["LITZ_STAGE"],"source_model"->Lookup[recData,"source_model","aborted_stage"],"execution_status"->"failed_process_exit","process_status"->recStatus,"recovered_completed_checks"->Length[recCheckpoint["checks"]],"recovery_note"->"Only completed checkpoint values retained. Failure details are in run_log.txt and stderr.txt; no uncomputed values filled."|>,"RawJSON"];
+Export[FileNameJoin[{recDir,"test_report.json"}],<|"run_id"->recID,"execution_status"->"failed_process_exit","tests"->recChecks|>,"RawJSON"];
+recEnvFile=FileNameJoin[{recDir,"environment.json"}];If[FileExistsQ[recEnvFile],recEnv=Import[recEnvFile,"RawJSON"];recEnv["execution_status"]="failed_process_exit";Export[recEnvFile,recEnv,"RawJSON"]];

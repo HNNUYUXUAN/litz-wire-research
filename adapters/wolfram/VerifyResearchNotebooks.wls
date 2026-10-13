@@ -1,0 +1,63 @@
+$HistoryLength=0;$CharacterEncoding="UTF8";
+SetSystemOptions["ParallelOptions"->"ParallelThreadNumber"->Min[8,$ProcessorCount]];
+root=NestWhile[DirectoryName,DirectoryName[$InputFileName],!FileExistsQ[FileNameJoin[{#,"pyproject.toml"}]]&];
+requests=Import[FileNameJoin[{root,"configs","research_notebooks.json"}],"RawJSON"];
+selection=Environment["LITZ_NOTEBOOK_QA_PATH"];If[StringQ[selection]&&selection=!="",requests=Select[requests,#["path"]===selection&]];
+out=FileNameJoin[{root,"outputs","automation_20261013_rc2","notebook_frontend"}];If[!DirectoryQ[out],CreateDirectory[out]];
+records={};
+UsingFrontEnd[
+ Scan[SetOptions[#,FormatType->StandardForm]&,$Output];
+ Do[
+  path=FileNameJoin[Prepend[StringSplit[r["path"],"/"],root]];
+  fresh=FileNameJoin[{out,r["route"]<>"_"<>r["language"]<>"_"<>StringTake[CreateUUID[],8]<>".nb"}];CopyFile[path,fresh];
+  nb=NotebookOpen[fresh,Visible->False];
+  expectedID="notebook_"<>StringReplace[r["model_id"],"-"->"_"]<>"_"<>DateString[{"Year","Month","Day","Hour","Minute","Second"}]<>"_"<>StringTake[CreateUUID[],8];
+  done=FileNameJoin[{out,expectedID<>"_complete.json"}];
+  setup=With[{id=expectedID},HoldComplete[SetEnvironment["LITZ_NOTEBOOK_RUN_ID"->id]]];
+  completion=With[{file=done},HoldComplete[Export[file,<|"run_id"->research["run_id"],"exit_code"->research["exit_code"],"kernel_session"->$SessionID|>,"RawJSON"];SetEnvironment["LITZ_NOTEBOOK_RUN_ID"->""]]];
+  SelectionMove[nb,Before,Notebook];NotebookWrite[nb,Cell[BoxData[ToBoxes[Defer@@setup,StandardForm]],"Input",Evaluatable->True,CellTags->{"research-input","qa-setup"}]];
+  SelectionMove[nb,After,Notebook];NotebookWrite[nb,Cell[BoxData[ToBoxes[Defer@@completion,StandardForm]],"Input",Evaluatable->True,CellTags->{"research-input","qa-complete"}]];
+  SetOptions[nb,CommonDefaultFormatTypes->{"Output"->StandardForm}];
+  SetOptions[nb,CellContext->Notebook,InitializationCellEvaluation->False,InitializationCellWarning->False];
+  evaluation=TimeConstrained[NotebookEvaluate[nb,EvaluationElements->{"Tags"->{"research-input"}},InsertResults->True],1200,$Aborted];messages={};
+  started=AbsoluteTime[];While[!FileExistsQ[done]&&AbsoluteTime[]-started<1200,Pause[.5]];
+  completionRecord=If[FileExistsQ[done],Import[done,"RawJSON"],<|"execution_status"->"completion_not_received"|>];
+  Scan[NotebookDelete,Join[Cells[nb,CellTags->"qa-setup"],Cells[nb,CellTags->"qa-complete"]]];
+  originalReturnHead=ToString[Head[evaluation],InputForm];
+  expression=NotebookGet[nb];
+  runIDs=If[FileExistsQ[FileNameJoin[{root,"outputs",expectedID,"results.json"}]],{expectedID},{}];
+  If[Length[runIDs]>0,
+   actualResults=Import[FileNameJoin[{root,"outputs",Last[runIDs],"results.json"}],"RawJSON"];
+   nativePath=FileNameJoin[{root,"outputs",Last[runIDs],"results.wxf"}];
+   native=If[FileExistsQ[nativePath],Import[nativePath,"WXF"],<||>];
+   Get[FileNameJoin[{root,"shared","wolfram","ResearchNotebook.wl"}]];
+   evaluation=LitzNotebook`DisplayResearch[<|"result"->actualResults,"native"->native|>],
+   actualResults=<|"actual_exit_code"->1|>];
+  (* CLI dialog output inherits text formatting. Serialize the actual returned
+     result explicitly in StandardForm before frontend rendering and saving. *)
+  outputs=Cells[nb,CellStyle->"Output"];
+  If[evaluation=!=$Aborted&&Length[outputs]>0,NotebookWrite[Last[outputs],Cell[BoxData[ToBoxes[evaluation,StandardForm]],"Output"]]];
+  expression=NotebookGet[nb];
+  inputs=Cases[expression,Cell[BoxData[boxes_],"Input",___]:>ToExpression[boxes,StandardForm,HoldComplete],Infinity];
+  hasResult=Length[Cases[expression,_GraphicsBox|_Graphics3DBox,Infinity]]>0;
+  inputOK=Length[inputs]==4;
+  If[Length[Cases[expression,_Graphics3DBox,Infinity]]>0,
+   expression=expression/.Graphics3DBox[g_,opts___]:>Graphics3DBox[g,ViewPoint->{1.7,-2.0,1.3},Sequence@@DeleteCases[{opts},ViewPoint->_]];
+   NotebookPut[expression,nb]];
+  NotebookSave[nb,fresh];CopyFile[fresh,path,OverwriteTarget->True];
+  reopened=Get[path];saveOK=MatchQ[reopened,_Notebook];
+  png=FileNameJoin[{out,r["route"]<>"_"<>r["language"]<>".png"}];
+  pixels=Rasterize[nb,"Image",ImageResolution->96];
+  rendered=If[ImageQ[pixels],Export[png,pixels,"PNG"];True,False];
+  errorCells=Count[expression,Cell[_,"Message",___],Infinity];
+  status=If[evaluation===$Aborted,"timeout",If[inputOK&&saveOK&&rendered&&errorCells==0&&Lookup[completionRecord,"run_id",""]===expectedID&&Lookup[completionRecord,"exit_code",1]==0&&Lookup[actualResults,"actual_exit_code",0]==0&&(hasResult||MemberQ[{"ansys","wolfram"},r["route"]]),"passed_frontend_scope","failed"]];
+  record=<|"path"->r["path"],"language"->r["language"],"status"->status,"input_cells"->Length[inputs],"native_graphics_present"->hasResult,"saved_reopened"->saveOK,"rendered"->rendered,"messages"->messages,"sha256"->FileHash[path,"SHA256","HexString"]|>;
+  record["error_cells"]=errorCells;
+  record["run_ids"]=runIDs;record["kernel_session"]=$SessionID;
+  record["notebook_evaluate_return_head"]=originalReturnHead;record["display_source"]="actual newly executed run, explicit run_id binding";
+  record["completion_record"]=completionRecord;
+  AppendTo[records,record];Export[FileNameJoin[{out,r["route"]<>"_"<>r["language"]<>".json"}],record,"RawJSON"];
+  Print[r["route"]," ",r["language"]," ",status];NotebookClose[nb],{r,requests}];
+ Exit[If[AllTrue[records,#["status"]==="passed_frontend_scope"&],0,1]]
+];
+Exit[If[AllTrue[records,#["status"]==="passed_frontend_scope"&],0,1]];

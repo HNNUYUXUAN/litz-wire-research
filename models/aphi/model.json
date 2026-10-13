@@ -1,0 +1,35 @@
+{
+  "route": "aphi",
+  "model_id": "aphi",
+  "titles": {
+    "en": "Preserved A–φ field diagnostics",
+    "zh-CN": "保存 A–φ 场诊断"
+  },
+  "equation": "J=−σ(jωA+∇φ); ∇·J=0",
+  "references": [
+    "FEMDOC",
+    "GMRES1986"
+  ],
+  "parameters": {
+    "sampling_points": 32
+  },
+  "tutorial_instructions": {
+    "en": "Read actual saved fields and reproduce J, phi and gauge residuals. Original field parameters remain visible.",
+    "zh-CN": "读取实际保存场，复算 J、电势与规范残差，保留原场参数。"
+  },
+  "fixed_conventions": "SI; exp(+j omega t); RMS; sigma=58 MS/m; mu_r=1; 20 C",
+  "evidence_dataset": "aphi",
+  "derivation": {
+    "en": [
+      "Under exp(+jωt), reconstruct J=−σ(jωA+∇φ) from the original saved A and φ fields. Compare current conservation and normalized potential/gauge residuals using the exact preserved inputs.",
+      "This entry changes only diagnostic sampling density. It recomputes derivatives on saved fields and tests reproducibility against the original diagnostic quantities; it performs no new field solve.",
+      "The saved scalar-potential/gauge checks remain failed. Preserve mesh, excitation, gauge and boundary assumptions. Continue only after identifying a consistent formulation and passing conservation, gauge and mesh studies."
+    ],
+    "zh-CN": [
+      "采用 exp(+jωt)，由原保存的 A、φ 场重构 J=−σ(jωA+∇φ)，在原输入下比较电流守恒和归一化电势、规范残差。",
+      "本入口仅改变诊断采样密度，在保存场上复算导数并与原诊断量比较可复现性，不产生新的物理场解。",
+      "原电势与规范验收仍为失败。保留网格、激励、规范及边界假设；明确一致形式并通过守恒、规范和网格研究后再推进。"
+    ]
+  },
+  "history": "data/evidence/v1.0.0-rc.1/; litz-research data fetch aphi"
+}

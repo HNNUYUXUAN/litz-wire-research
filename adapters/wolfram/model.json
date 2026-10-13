@@ -1,0 +1,31 @@
+{
+  "route": "wolfram",
+  "model_id": "wolfram",
+  "titles": {
+    "en": "Wolfram environment and execution",
+    "zh-CN": "Wolfram 环境与执行"
+  },
+  "equation": "Independent kernel execution and native frontend rendering",
+  "references": [
+    "WOLFRAM",
+    "AGENTTOOLS"
+  ],
+  "parameters": {},
+  "tutorial_instructions": {
+    "en": "Probe the local kernel, then follow the MCP workflow for actual tool and Notebook operations.",
+    "zh-CN": "检查本机内核，再按 MCP 工作流验收真实工具调用和 Notebook 操作。"
+  },
+  "fixed_conventions": "SI; exp(+j omega t); RMS; sigma=58 MS/m; mu_r=1; 20 C",
+  "evidence_dataset": "wolfram",
+  "derivation": {
+    "en": [
+      "Probe the actual local kernel and arithmetic first. The native Notebook runs the same saved task interface as the CLI in an independent process. The MCP example separately checks tool discovery, numerical evaluation, TestReport, Notebook writing and reading.",
+      "A working connection is distinct from a successful numerical test or field acceptance. Record the installed AgentTools version and visible tool schemas before using version-specific arguments."
+    ],
+    "zh-CN": [
+      "先检查实际本机内核与算术。原生 Notebook 在独立进程调用与 CLI 相同的保存任务接口；MCP 案例另行检查工具发现、数值执行、TestReport 及 Notebook 写入回读。",
+      "连接成功、数值测试成功和场解验收分别记录；使用版本相关参数前核对实际 AgentTools 版本与可见工具 schema。"
+    ]
+  },
+  "history": "data/evidence/v1.0.0-rc.1/; litz-research data fetch analytic"
+}

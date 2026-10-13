@@ -1,7 +1,4 @@
-"""Read shared scholarly identities from the publication source manifest."""
-from pathlib import Path
-import json
-ROOT=Path(__file__).resolve().parents[1]
-def bank(source_manifest="manuscript/publication.json"):
-    path=ROOT/source_manifest
-    return json.loads(path.read_text(encoding="utf-8-sig"))
+"""Compatibility entry; maintained implementation: tools/publication/PublicationContent.py."""
+from pathlib import Path as _Path
+_target = _Path(__file__).resolve().parents[1] / 'tools/publication/PublicationContent.py'
+exec(compile(_target.read_text(encoding="utf-8"), str(_target), "exec"), globals())

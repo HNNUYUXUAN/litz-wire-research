@@ -1,1 +1,2 @@
-Get[FileNameJoin[{stageRoot,"src","stages","fem3.wl"}]];
+(* Compatibility entry; maintained implementation: models/aphi/src/stages/fem3_ooc.wl *)
+Get[FileNameJoin[{NestWhile[DirectoryName,DirectoryName[$InputFileName],!FileExistsQ[FileNameJoin[{#,"pyproject.toml"}]]&],"models","aphi","src","stages","fem3_ooc.wl"}]];

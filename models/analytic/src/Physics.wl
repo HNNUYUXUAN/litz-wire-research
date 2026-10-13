@@ -1,0 +1,14 @@
+BeginPackage["LitzPhysics`"];
+WireZ::usage="WireZ[radius,frequency] internal round-wire impedance per axial metre.";
+WireJ::usage="WireJ[r,radius,frequency,current] RMS phasor current density.";
+CommonPort::usage="CommonPort[Z,e,total] solves common-end currents and voltage.";
+DiskFEM::usage="DiskFEM[h] independent 2D complex diffusion FEM in a circular conductor.";
+Topology::usage="Topology[kind,n,length,pitch,diameter] sampled labelled strand trajectories.";
+StrandCenters::usage="StrandCenters[n,diameter] labelled close-packed straight-strand cross-section centres in metres.";
+DTM::usage="DTM[blocks,permutations,weights] slot-to-physical impedance integration.";
+IDTM::usage="IDTM[breakpoints,matrixFunction,permutationFunction] integrates union intervals.";
+Begin["`Private`"];
+sigma=5.8*^7; mu=4. Pi 10.^-7;
+WireZ[a_?NumericQ,f_?NumericQ] := If[f==0,1/(sigma Pi a^2),With[{k=Sqrt[I 2 Pi f mu sigma]},k BesselI[0,k a]/(2 Pi a sigma BesselI[1,k a])]];
+WireJ[r_?NumericQ,a_?NumericQ,f_?NumericQ,it_?NumericQ] := If[f==0,it/(Pi a^2),With[{k=Sqrt[I 2 Pi f mu sigma]},it k BesselI[0,k r]/(2 Pi a BesselI[1,k a])]];
+End[];EndPackage[];

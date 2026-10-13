@@ -1,0 +1,16 @@
+{
+  "id": "aphi-diagnostics",
+  "harness": "Codex desktop orchestrating the standard MCP client bridge",
+  "model_identifier": "not exposed as a stable session identifier; no model version inferred",
+  "task_origin": "approved implementation plan and the visible task template",
+  "runs": [
+    {
+      "run_id": "rc2_aphi_bound_fields_01",
+      "result_sha256": "69855e51768918504bd60de115b4f3515b797e79bdb38b6df2795c8b3f071f8f",
+      "execution_status": "completed",
+      "physical_acceptance_status": "failed_retained_phi_gauge",
+      "attachment_path": "outputs/rc2_aphi_bound_fields_01"
+    }
+  ],
+  "conclusion": "completed / failed_retained_phi_gauge"
+}

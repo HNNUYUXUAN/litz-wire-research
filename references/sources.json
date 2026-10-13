@@ -1,0 +1,798 @@
+{
+  "schema_version": 1,
+  "sources": [
+    {
+      "key": "P01",
+      "category": "literature",
+      "role": "Litz-wire modeling method and comparison",
+      "use_status": "reviewed literature",
+      "locations": [
+        "manuscript/",
+        "models/"
+      ],
+      "license": "publisher terms",
+      "distribution": "bibliographic metadata"
+    },
+    {
+      "key": "N01",
+      "category": "literature",
+      "role": "Litz-wire modeling method and comparison",
+      "use_status": "reviewed literature",
+      "locations": [
+        "manuscript/",
+        "models/"
+      ],
+      "license": "publisher terms",
+      "distribution": "bibliographic metadata"
+    },
+    {
+      "key": "P02",
+      "category": "literature",
+      "role": "Litz-wire modeling method and comparison",
+      "use_status": "reviewed literature",
+      "locations": [
+        "manuscript/",
+        "models/"
+      ],
+      "license": "publisher terms",
+      "distribution": "bibliographic metadata"
+    },
+    {
+      "key": "P03",
+      "category": "literature",
+      "role": "Litz-wire modeling method and comparison",
+      "use_status": "reviewed literature",
+      "locations": [
+        "manuscript/",
+        "models/"
+      ],
+      "license": "publisher terms",
+      "distribution": "bibliographic metadata"
+    },
+    {
+      "key": "P04",
+      "category": "literature",
+      "role": "Litz-wire modeling method and comparison",
+      "use_status": "reviewed literature",
+      "locations": [
+        "manuscript/",
+        "models/"
+      ],
+      "license": "publisher terms",
+      "distribution": "bibliographic metadata"
+    },
+    {
+      "key": "P05",
+      "category": "literature",
+      "role": "Litz-wire modeling method and comparison",
+      "use_status": "reviewed literature",
+      "locations": [
+        "manuscript/",
+        "models/"
+      ],
+      "license": "publisher terms",
+      "distribution": "bibliographic metadata"
+    },
+    {
+      "key": "P09",
+      "category": "literature",
+      "role": "Litz-wire modeling method and comparison",
+      "use_status": "reviewed literature",
+      "locations": [
+        "manuscript/",
+        "models/"
+      ],
+      "license": "publisher terms",
+      "distribution": "bibliographic metadata"
+    },
+    {
+      "key": "C01",
+      "category": "literature",
+      "role": "Research literature index",
+      "use_status": "historically reviewed; see dated source record",
+      "locations": [
+        "references/"
+      ],
+      "license": "publisher terms",
+      "distribution": "bibliographic metadata",
+      "metadata_origin": "references/literature_20261004/manifest.json"
+    },
+    {
+      "key": "C02",
+      "category": "literature",
+      "role": "Research literature index",
+      "use_status": "historically reviewed; see dated source record",
+      "locations": [
+        "references/"
+      ],
+      "license": "publisher terms",
+      "distribution": "bibliographic metadata",
+      "metadata_origin": "references/literature_20261004/manifest.json"
+    },
+    {
+      "key": "C03",
+      "category": "literature",
+      "role": "Research literature index",
+      "use_status": "historically reviewed; see dated source record",
+      "locations": [
+        "references/"
+      ],
+      "license": "publisher terms",
+      "distribution": "bibliographic metadata",
+      "metadata_origin": "references/literature_20261004/manifest.json"
+    },
+    {
+      "key": "C04",
+      "category": "literature",
+      "role": "Research literature index",
+      "use_status": "historically reviewed; see dated source record",
+      "locations": [
+        "references/"
+      ],
+      "license": "publisher terms",
+      "distribution": "bibliographic metadata",
+      "metadata_origin": "references/literature_20261004/manifest.json"
+    },
+    {
+      "key": "S03",
+      "category": "literature",
+      "role": "Research literature index",
+      "use_status": "historically reviewed; see dated source record",
+      "locations": [
+        "references/"
+      ],
+      "license": "publisher terms",
+      "distribution": "bibliographic metadata",
+      "metadata_origin": "references/literature_20261004/manifest.json"
+    },
+    {
+      "key": "S05",
+      "category": "literature",
+      "role": "Research literature index",
+      "use_status": "historically reviewed; see dated source record",
+      "locations": [
+        "references/"
+      ],
+      "license": "publisher terms",
+      "distribution": "bibliographic metadata",
+      "metadata_origin": "references/literature_20261004/manifest.json"
+    },
+    {
+      "key": "S06",
+      "category": "literature",
+      "role": "Research literature index",
+      "use_status": "historically reviewed; see dated source record",
+      "locations": [
+        "references/"
+      ],
+      "license": "publisher terms",
+      "distribution": "bibliographic metadata",
+      "metadata_origin": "references/literature_20261004/manifest.json"
+    },
+    {
+      "key": "P07",
+      "category": "literature",
+      "role": "Research literature index",
+      "use_status": "historically reviewed; see dated source record",
+      "locations": [
+        "references/"
+      ],
+      "license": "publisher terms",
+      "distribution": "bibliographic metadata",
+      "metadata_origin": "references/literature_20261004_supplement/manifest.json"
+    },
+    {
+      "key": "P08",
+      "category": "literature",
+      "role": "Research literature index",
+      "use_status": "historically reviewed; see dated source record",
+      "locations": [
+        "references/"
+      ],
+      "license": "publisher terms",
+      "distribution": "bibliographic metadata",
+      "metadata_origin": "references/literature_20261004_supplement/manifest.json"
+    },
+    {
+      "key": "E01",
+      "category": "literature",
+      "role": "Research literature index",
+      "use_status": "historically reviewed; see dated source record",
+      "locations": [
+        "references/"
+      ],
+      "license": "publisher terms",
+      "distribution": "bibliographic metadata",
+      "metadata_origin": "references/literature_20261004_supplement/manifest.json"
+    },
+    {
+      "key": "E02",
+      "category": "literature",
+      "role": "Research literature index",
+      "use_status": "historically reviewed; see dated source record",
+      "locations": [
+        "references/"
+      ],
+      "license": "publisher terms",
+      "distribution": "bibliographic metadata",
+      "metadata_origin": "references/literature_20261004_supplement/manifest.json"
+    },
+    {
+      "key": "E03",
+      "category": "literature",
+      "role": "Research literature index",
+      "use_status": "historically reviewed; see dated source record",
+      "locations": [
+        "references/"
+      ],
+      "license": "publisher terms",
+      "distribution": "bibliographic metadata",
+      "metadata_origin": "references/literature_20261004_supplement/manifest.json"
+    },
+    {
+      "key": "S02",
+      "category": "literature",
+      "role": "Research literature index",
+      "use_status": "historically reviewed; see dated source record",
+      "locations": [
+        "references/"
+      ],
+      "license": "publisher terms",
+      "distribution": "bibliographic metadata",
+      "metadata_origin": "references/literature_20261004_supplement/manifest.json"
+    },
+    {
+      "key": "S04",
+      "category": "literature",
+      "role": "Research literature index",
+      "use_status": "historically reviewed; see dated source record",
+      "locations": [
+        "references/"
+      ],
+      "license": "publisher terms",
+      "distribution": "bibliographic metadata",
+      "metadata_origin": "references/literature_20261004_supplement/manifest.json"
+    },
+    {
+      "key": "WOLFRAM",
+      "category": "software",
+      "role": "Symbolic/numerical modeling and native Notebooks",
+      "use_status": "used dependency or research tool",
+      "locations": [
+        "automation/",
+        "models/",
+        "tools/"
+      ],
+      "license": "proprietary",
+      "version": "15.0.0",
+      "distribution": "metadata and configuration; software installed separately"
+    },
+    {
+      "key": "AGENTTOOLS",
+      "category": "software",
+      "role": "Wolfram MCP tools",
+      "use_status": "used dependency or research tool",
+      "locations": [
+        "automation/",
+        "models/",
+        "tools/"
+      ],
+      "license": "MIT",
+      "version": "2.2.0",
+      "distribution": "metadata and configuration; software installed separately"
+    },
+    {
+      "key": "PYAEDTMCP",
+      "category": "software",
+      "role": "AEDT MCP automation",
+      "use_status": "used dependency or research tool",
+      "locations": [
+        "automation/",
+        "models/",
+        "tools/"
+      ],
+      "license": "Apache-2.0",
+      "version": "0.2.dev0",
+      "distribution": "metadata and configuration; software installed separately"
+    },
+    {
+      "key": "PYAEDT",
+      "category": "software",
+      "role": "AEDT modeling and postprocessing",
+      "use_status": "used dependency or research tool",
+      "locations": [
+        "automation/",
+        "models/",
+        "tools/"
+      ],
+      "license": "MIT",
+      "version": "1.8.0",
+      "distribution": "metadata and configuration; software installed separately"
+    },
+    {
+      "key": "CODEX",
+      "category": "software",
+      "role": "Research agent harness and coding assistance",
+      "use_status": "used dependency or research tool",
+      "locations": [
+        "automation/",
+        "models/",
+        "tools/"
+      ],
+      "license": "service/software terms",
+      "version": "recorded per session",
+      "distribution": "metadata and configuration; software installed separately"
+    },
+    {
+      "key": "MCP",
+      "category": "software",
+      "role": "Tool transport and discovery protocol",
+      "use_status": "used dependency or research tool",
+      "locations": [
+        "automation/",
+        "models/",
+        "tools/"
+      ],
+      "license": "upstream specification terms",
+      "version": "recorded per connection",
+      "distribution": "metadata and configuration; software installed separately"
+    },
+    {
+      "key": "AEDT",
+      "category": "software",
+      "role": "Independent electromagnetic field solver",
+      "use_status": "used dependency or research tool",
+      "locations": [
+        "automation/",
+        "models/",
+        "tools/"
+      ],
+      "license": "proprietary",
+      "version": "2025.2 Student",
+      "distribution": "metadata and configuration; software installed separately"
+    },
+    {
+      "key": "CUDA",
+      "category": "software",
+      "role": "GPU numerical execution and CPU comparison",
+      "use_status": "used dependency or research tool",
+      "locations": [
+        "automation/",
+        "models/",
+        "tools/"
+      ],
+      "license": "upstream software terms",
+      "version": "recorded per run",
+      "distribution": "metadata and configuration; software installed separately"
+    },
+    {
+      "key": "PYTHON",
+      "category": "software",
+      "role": "CLI and orchestration runtime",
+      "use_status": "used dependency or research tool",
+      "locations": [
+        "automation/",
+        "models/",
+        "tools/"
+      ],
+      "license": "PSF",
+      "version": "3.12",
+      "distribution": "metadata and configuration; software installed separately"
+    },
+    {
+      "key": "MATH",
+      "category": "software",
+      "role": "Independent high-precision Bessel calibration",
+      "use_status": "used dependency or research tool",
+      "locations": [
+        "automation/",
+        "models/",
+        "tools/"
+      ],
+      "license": "BSD-3-Clause",
+      "version": "1.3.0",
+      "distribution": "metadata and configuration; software installed separately"
+    },
+    {
+      "key": "NUMPY",
+      "category": "software",
+      "role": "Arrays and port calibration",
+      "use_status": "used dependency or research tool",
+      "locations": [
+        "automation/",
+        "models/",
+        "tools/"
+      ],
+      "license": "BSD-3-Clause",
+      "version": "2.3.3",
+      "distribution": "metadata and configuration; software installed separately"
+    },
+    {
+      "key": "MATPLOTLIB",
+      "category": "software",
+      "role": "Data visualization",
+      "use_status": "used dependency or research tool",
+      "locations": [
+        "automation/",
+        "models/",
+        "tools/"
+      ],
+      "license": "Matplotlib license",
+      "version": "3.10.6",
+      "distribution": "metadata and configuration; software installed separately"
+    },
+    {
+      "key": "PILLOW",
+      "category": "software",
+      "role": "Image processing and inspection",
+      "use_status": "used dependency or research tool",
+      "locations": [
+        "automation/",
+        "models/",
+        "tools/"
+      ],
+      "license": "HPND",
+      "version": "11.3.0",
+      "distribution": "metadata and configuration; software installed separately"
+    },
+    {
+      "key": "PYPDF",
+      "category": "software",
+      "role": "PDF structure and verification",
+      "use_status": "used dependency or research tool",
+      "locations": [
+        "automation/",
+        "models/",
+        "tools/"
+      ],
+      "license": "BSD-3-Clause",
+      "version": "6.1.1",
+      "distribution": "metadata and configuration; software installed separately"
+    },
+    {
+      "key": "PDFIUM",
+      "category": "software",
+      "role": "PDF rendering",
+      "use_status": "used dependency or research tool",
+      "locations": [
+        "automation/",
+        "models/",
+        "tools/"
+      ],
+      "license": "upstream component licenses",
+      "version": "4.30.0",
+      "distribution": "metadata and configuration; software installed separately"
+    },
+    {
+      "key": "REPORTLAB",
+      "category": "software",
+      "role": "Document production",
+      "use_status": "used dependency or research tool",
+      "locations": [
+        "automation/",
+        "models/",
+        "tools/"
+      ],
+      "license": "BSD-style",
+      "version": "4.4.3",
+      "distribution": "metadata and configuration; software installed separately"
+    },
+    {
+      "key": "MARKDOWNIT",
+      "category": "software",
+      "role": "Markdown and mathematical document parsing",
+      "use_status": "used dependency or research tool",
+      "locations": [
+        "automation/",
+        "models/",
+        "tools/"
+      ],
+      "license": "MIT",
+      "version": "4.2.0 / 0.5.0",
+      "distribution": "metadata and configuration; software installed separately"
+    },
+    {
+      "key": "MDURL",
+      "category": "software",
+      "role": "Markdown URL parsing",
+      "use_status": "used dependency or research tool",
+      "locations": [
+        "automation/",
+        "models/",
+        "tools/"
+      ],
+      "license": "MIT",
+      "version": "0.1.2",
+      "distribution": "metadata and configuration; software installed separately"
+    },
+    {
+      "key": "SETUPTOOLS",
+      "category": "software",
+      "role": "Package installation",
+      "use_status": "used dependency or research tool",
+      "locations": [
+        "automation/",
+        "models/",
+        "tools/"
+      ],
+      "license": "MIT",
+      "version": "80.9.0",
+      "distribution": "metadata and configuration; software installed separately"
+    },
+    {
+      "key": "PSUTIL",
+      "category": "software",
+      "role": "Process ownership and resource monitoring",
+      "use_status": "used dependency or research tool",
+      "locations": [
+        "automation/",
+        "models/",
+        "tools/"
+      ],
+      "license": "BSD-3-Clause",
+      "version": "7.2.2",
+      "distribution": "metadata and configuration; software installed separately"
+    },
+    {
+      "key": "BIBTEXPARSE",
+      "category": "software",
+      "role": "Canonical bibliography parsing",
+      "use_status": "used dependency or research tool",
+      "locations": [
+        "automation/",
+        "models/",
+        "tools/"
+      ],
+      "license": "BSD-3-Clause",
+      "version": "1.4.3",
+      "distribution": "metadata and configuration; software installed separately"
+    },
+    {
+      "key": "MCPSDK",
+      "category": "software",
+      "role": "Standard client protocol acceptance",
+      "use_status": "used dependency or research tool",
+      "locations": [
+        "automation/",
+        "models/",
+        "tools/"
+      ],
+      "license": "MIT",
+      "version": "1.17.0 client / 2.3.0 Ansys server",
+      "distribution": "metadata and configuration; software installed separately"
+    },
+    {
+      "key": "FAST_MCP",
+      "category": "software",
+      "role": "MCP server framework",
+      "use_status": "used dependency or research tool",
+      "locations": [
+        "automation/",
+        "models/",
+        "tools/"
+      ],
+      "license": "Apache-2.0",
+      "version": "4.0.10",
+      "distribution": "metadata and configuration; software installed separately"
+    },
+    {
+      "key": "WOLFRAMCLIENT",
+      "category": "software",
+      "role": "WXF and Wolfram interoperability",
+      "use_status": "used dependency or research tool",
+      "locations": [
+        "automation/",
+        "models/",
+        "tools/"
+      ],
+      "license": "MIT",
+      "version": "1.4.0",
+      "distribution": "metadata and configuration; software installed separately"
+    },
+    {
+      "key": "POWERSHELL",
+      "category": "software",
+      "role": "Windows process supervision",
+      "use_status": "used dependency or research tool",
+      "locations": [
+        "automation/",
+        "models/",
+        "tools/"
+      ],
+      "license": "MIT",
+      "version": "recorded per run",
+      "distribution": "metadata and configuration; software installed separately"
+    },
+    {
+      "key": "TEX",
+      "category": "software",
+      "role": "Academic document compilation",
+      "use_status": "used dependency or research tool",
+      "locations": [
+        "automation/",
+        "models/",
+        "tools/"
+      ],
+      "license": "component-specific terms",
+      "version": "recorded per build",
+      "distribution": "metadata and configuration; software installed separately"
+    },
+    {
+      "key": "IEEE",
+      "category": "software",
+      "role": "IEEE-style document class",
+      "use_status": "used dependency or research tool",
+      "locations": [
+        "automation/",
+        "models/",
+        "tools/"
+      ],
+      "license": "LPPL-1.3-or-later",
+      "version": "f90a1b28035a7e7530cf313267ea3487ee68d5df",
+      "distribution": "IEEEtran class with retained license"
+    },
+    {
+      "key": "FONTS",
+      "category": "software",
+      "role": "Chinese and Latin document typography",
+      "use_status": "used dependency or research tool",
+      "locations": [
+        "automation/",
+        "models/",
+        "tools/"
+      ],
+      "license": "proprietary font terms",
+      "version": "installed separately",
+      "distribution": "metadata and configuration; software installed separately"
+    },
+    {
+      "key": "BESSEL",
+      "category": "method",
+      "role": "Bessel definitions and conventions",
+      "use_status": "method reference",
+      "locations": [
+        "automation/",
+        "models/",
+        "tools/"
+      ],
+      "license": "NIST website terms",
+      "version": "accessed 2026-10-13",
+      "distribution": "metadata and configuration; software installed separately"
+    },
+    {
+      "key": "FEMDOC",
+      "category": "method",
+      "role": "FEM and A-phi method documentation",
+      "use_status": "method reference",
+      "locations": [
+        "automation/",
+        "models/",
+        "tools/"
+      ],
+      "license": "documentation terms",
+      "version": "accessed 2026-10-13",
+      "distribution": "metadata and configuration; software installed separately"
+    },
+    {
+      "key": "REPO1",
+      "category": "repository",
+      "role": "Published method and implementation reference",
+      "use_status": "read-only reviewed",
+      "license": "BSD-2-Clause",
+      "version": "3a7ed32f2e6c669c819b9b292077ac21c3945ede",
+      "distribution": "bibliographic metadata",
+      "locations": [
+        "references/"
+      ],
+      "commit": "3a7ed32f2e6c669c819b9b292077ac21c3945ede",
+      "review_evidence": "provenance/rc2/repository_review_sources.json"
+    },
+    {
+      "key": "REPO2",
+      "category": "repository",
+      "role": "Published method and implementation reference",
+      "use_status": "read-only reviewed",
+      "license": "BSD-2-Clause",
+      "version": "952503bee97c400de667acb7c7c850c6fe9a62a1",
+      "distribution": "bibliographic metadata",
+      "locations": [
+        "references/"
+      ],
+      "commit": "952503bee97c400de667acb7c7c850c6fe9a62a1",
+      "review_evidence": "provenance/rc2/repository_review_sources.json"
+    },
+    {
+      "key": "REPO3",
+      "category": "repository",
+      "role": "Published method and implementation reference",
+      "use_status": "read-only reviewed",
+      "license": "GPL-3.0",
+      "version": "05425e56fe9f6077e565b0950e877b035d906f15",
+      "distribution": "bibliographic metadata",
+      "locations": [
+        "references/"
+      ],
+      "commit": "05425e56fe9f6077e565b0950e877b035d906f15",
+      "review_evidence": "provenance/rc2/repository_review_sources.json"
+    },
+    {
+      "key": "REPO4",
+      "category": "repository",
+      "role": "Published method and implementation reference",
+      "use_status": "read-only reviewed",
+      "license": "MPL-2.0",
+      "version": "v5.8.0",
+      "distribution": "bibliographic metadata",
+      "locations": [
+        "references/"
+      ],
+      "revision_kind": "historically reviewed release tag; no commit inferred",
+      "review_evidence": "provenance/rc2/repository_review_sources.json"
+    },
+    {
+      "key": "REPO6",
+      "category": "repository",
+      "role": "Published method and implementation reference",
+      "use_status": "read-only reviewed",
+      "license": "GPL-2.0",
+      "version": "99eb6db4ea72679ccbdfea01a3ce2f72fee07b8a",
+      "distribution": "bibliographic metadata",
+      "locations": [
+        "references/"
+      ],
+      "commit": "99eb6db4ea72679ccbdfea01a3ce2f72fee07b8a",
+      "review_evidence": "provenance/rc2/repository_review_sources.json"
+    },
+    {
+      "key": "RUEHLI1974",
+      "category": "literature",
+      "role": "Foundational partial-element equivalent-circuit formulation",
+      "use_status": "method attribution; DOI metadata verified via Crossref; implementation independently coded",
+      "locations": [
+        "models/peec/src/PEEC.wl",
+        "models/rt0/src/VoxelOperator.wl"
+      ],
+      "license": "publisher terms",
+      "distribution": "bibliographic metadata",
+      "metadata_evidence": "provenance/reference_metadata/RUEHLI1974.json"
+    },
+    {
+      "key": "RT1977",
+      "category": "literature",
+      "role": "Lowest-order mixed finite-element flux basis",
+      "use_status": "method attribution; DOI metadata verified via Crossref; implementation independently coded",
+      "locations": [
+        "models/rt0/src/VoxelOperator.wl"
+      ],
+      "license": "publisher terms",
+      "distribution": "bibliographic metadata",
+      "metadata_evidence": "provenance/reference_metadata/RT1977.json"
+    },
+    {
+      "key": "GMRES1986",
+      "category": "literature",
+      "role": "Restarted nonsymmetric Krylov iteration and true residual checks",
+      "use_status": "method attribution; DOI metadata verified via Crossref; implementation independently coded",
+      "locations": [
+        "models/rt0/src/VoxelOperator.wl",
+        "models/aphi/"
+      ],
+      "license": "publisher terms",
+      "distribution": "bibliographic metadata",
+      "metadata_evidence": "provenance/reference_metadata/GMRES1986.json"
+    },
+    {
+      "key": "ANSYSCOMMONMCP",
+      "category": "software",
+      "role": "Shared PyAnsys MCP runtime and server utilities",
+      "use_status": "actual runtime dependency",
+      "version": "0.3.5",
+      "license": "Apache-2.0",
+      "locations": [
+        "adapters/ansys/StartMCP.py",
+        "automation/mcp/ansys-environment.lock"
+      ],
+      "distribution": "external dependency; upstream copyright retained"
+    }
+  ]
+}

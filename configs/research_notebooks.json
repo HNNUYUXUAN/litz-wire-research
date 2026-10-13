@@ -1,0 +1,808 @@
+[
+  {
+    "route": "analytic",
+    "model_id": "wolfram-analytic",
+    "titles": {
+      "en": "Round-wire analytical calibration",
+      "zh-CN": "单圆线解析校准"
+    },
+    "equation": "∇²Ez−jωμσEz=0; Zint=κ I0(κa)/(2πaσ I1(κa))",
+    "references": [
+      "BESSEL"
+    ],
+    "parameters": {
+      "frequency_Hz": 200000.0,
+      "current_RMS_A": 20.0
+    },
+    "tutorial_instructions": {
+      "en": "Change frequency/current; compare independent current and Joule integrals.",
+      "zh-CN": "修改频率与总电流，核对独立电流积分与焦耳积分。"
+    },
+    "fixed_conventions": "SI; exp(+j omega t); RMS; sigma=58 MS/m; mu_r=1; 20 C",
+    "evidence_dataset": "analytic",
+    "derivation": {
+      "en": [
+        "For a homogeneous, long cylindrical conductor, symmetry leaves Ez(r) and Jz=σEz. Combining Ampère and Faraday laws with exp(+jωt) gives (1/r)d(r dEz/dr)/dr=jωμσEz. The regular solution is C I0(κr), κ²=jωμσ.",
+        "Normalize C using 2π∫Jz r dr=It. The terminal voltage gradient gives Zint=κ I0(κa)/(2πaσ I1(κa)). Independently integrate ∫|J|²/σ dA and compare with |It|² Re Zint. RMS phasors introduce no extra factor 1/2.",
+        "As κa→0, I0→1 and I1→κa/2, giving Rdc=1/(σπa²). The model excludes end effects and return-path external inductance. Q1 uses a=1 mm and remains a calibration case."
+      ],
+      "zh-CN": [
+        "均匀长圆柱导体的轴对称内场仅保留 Ez(r)，并有 Jz=σEz。由安培与法拉第定律及 exp(+jωt) 得 (1/r)d(r dEz/dr)/dr=jωμσEz；轴心正则解为 C I0(κr)，κ²=jωμσ。",
+        "用 2π∫Jz r dr=It 确定 C，得到内阻抗 Zint=κ I0(κa)/(2πaσ I1(κa))。独立积分 ∫|J|²/σ dA，与 |It|² Re Zint 比较；采用 RMS 相量，无额外 1/2 系数。",
+        "κa→0 时 I0→1、I1→κa/2，因此 Rdc=1/(σπa²)。模型不含端效应与回流外电感。Q1 的 a=1 mm 保留为解析校准。"
+      ]
+    },
+    "history": "data/evidence/v1.0.0-rc.1/; litz-research data fetch analytic",
+    "language": "en",
+    "title": "Round-wire analytical calibration",
+    "usage": "Change frequency/current; compare independent current and Joule integrals.",
+    "path": "models/analytic/notebooks/analytic_en.nb"
+  },
+  {
+    "route": "analytic",
+    "model_id": "wolfram-analytic",
+    "titles": {
+      "en": "Round-wire analytical calibration",
+      "zh-CN": "单圆线解析校准"
+    },
+    "equation": "∇²Ez−jωμσEz=0; Zint=κ I0(κa)/(2πaσ I1(κa))",
+    "references": [
+      "BESSEL"
+    ],
+    "parameters": {
+      "frequency_Hz": 200000.0,
+      "current_RMS_A": 20.0
+    },
+    "tutorial_instructions": {
+      "en": "Change frequency/current; compare independent current and Joule integrals.",
+      "zh-CN": "修改频率与总电流，核对独立电流积分与焦耳积分。"
+    },
+    "fixed_conventions": "SI; exp(+j omega t); RMS; sigma=58 MS/m; mu_r=1; 20 C",
+    "evidence_dataset": "analytic",
+    "derivation": {
+      "en": [
+        "For a homogeneous, long cylindrical conductor, symmetry leaves Ez(r) and Jz=σEz. Combining Ampère and Faraday laws with exp(+jωt) gives (1/r)d(r dEz/dr)/dr=jωμσEz. The regular solution is C I0(κr), κ²=jωμσ.",
+        "Normalize C using 2π∫Jz r dr=It. The terminal voltage gradient gives Zint=κ I0(κa)/(2πaσ I1(κa)). Independently integrate ∫|J|²/σ dA and compare with |It|² Re Zint. RMS phasors introduce no extra factor 1/2.",
+        "As κa→0, I0→1 and I1→κa/2, giving Rdc=1/(σπa²). The model excludes end effects and return-path external inductance. Q1 uses a=1 mm and remains a calibration case."
+      ],
+      "zh-CN": [
+        "均匀长圆柱导体的轴对称内场仅保留 Ez(r)，并有 Jz=σEz。由安培与法拉第定律及 exp(+jωt) 得 (1/r)d(r dEz/dr)/dr=jωμσEz；轴心正则解为 C I0(κr)，κ²=jωμσ。",
+        "用 2π∫Jz r dr=It 确定 C，得到内阻抗 Zint=κ I0(κa)/(2πaσ I1(κa))。独立积分 ∫|J|²/σ dA，与 |It|² Re Zint 比较；采用 RMS 相量，无额外 1/2 系数。",
+        "κa→0 时 I0→1、I1→κa/2，因此 Rdc=1/(σπa²)。模型不含端效应与回流外电感。Q1 的 a=1 mm 保留为解析校准。"
+      ]
+    },
+    "history": "data/evidence/v1.0.0-rc.1/; litz-research data fetch analytic",
+    "language": "zh-CN",
+    "title": "单圆线解析校准",
+    "usage": "修改频率与总电流，核对独立电流积分与焦耳积分。",
+    "path": "models/analytic/notebooks/analytic_zh-CN.nb"
+  },
+  {
+    "route": "fem2",
+    "model_id": "fem2",
+    "titles": {
+      "en": "Two-dimensional diffusion FEM",
+      "zh-CN": "二维扩散有限元"
+    },
+    "equation": "∇⊥²Ez−jωμσEz=0; Jz=σEz",
+    "references": [
+      "FEMDOC",
+      "P04"
+    ],
+    "parameters": {
+      "mesh_h": 0.2
+    },
+    "tutorial_instructions": {
+      "en": "Change mesh_h; run at least three meshes before making a convergence claim.",
+      "zh-CN": "修改 mesh_h；收敛判断至少运行三档网格。"
+    },
+    "fixed_conventions": "SI; exp(+j omega t); RMS; sigma=58 MS/m; mu_r=1; 20 C",
+    "evidence_dataset": "fem2",
+    "derivation": {
+      "en": [
+        "The circular cross section solves ∇⊥²Ez−jωμσEz=0. A constant boundary field is normalized to the total complex current; the circle polygon, interpolation order and mesh size determine numerical error.",
+        "The weak form integrates ∇v·∇Ez+jωμσvEz over the domain, subject to the stated boundary value. Integrate the resulting current and Joule density independently and compare Rac with the Bessel solution.",
+        "This tutorial uses one mesh. Repeat at three or more decreasing h/a values and inspect boundary/polygon resolution before claiming accuracy; integral conservation alone does not bound field error."
+      ],
+      "zh-CN": [
+        "在圆截面求解 ∇⊥²Ez−jωμσEz=0；边界常量场通过总复电流归一化。圆周多边形、插值阶次和网格尺寸共同决定数值误差。",
+        "弱形式在区域内积分 ∇v·∇Ez+jωμσvEz，并施加给定边界值。对所得电流及焦耳密度独立积分，再将 Rac 与 Bessel 解比较。",
+        "教程只用单档网格。精度判断须至少三档递减 h/a，并检查边界及圆周离散；积分守恒本身不构成场误差上界。"
+      ]
+    },
+    "history": "data/evidence/v1.0.0-rc.1/; litz-research data fetch fem2",
+    "language": "en",
+    "title": "Two-dimensional diffusion FEM",
+    "usage": "Change mesh_h; run at least three meshes before making a convergence claim.",
+    "path": "models/fem2/notebooks/fem2_en.nb"
+  },
+  {
+    "route": "fem2",
+    "model_id": "fem2",
+    "titles": {
+      "en": "Two-dimensional diffusion FEM",
+      "zh-CN": "二维扩散有限元"
+    },
+    "equation": "∇⊥²Ez−jωμσEz=0; Jz=σEz",
+    "references": [
+      "FEMDOC",
+      "P04"
+    ],
+    "parameters": {
+      "mesh_h": 0.2
+    },
+    "tutorial_instructions": {
+      "en": "Change mesh_h; run at least three meshes before making a convergence claim.",
+      "zh-CN": "修改 mesh_h；收敛判断至少运行三档网格。"
+    },
+    "fixed_conventions": "SI; exp(+j omega t); RMS; sigma=58 MS/m; mu_r=1; 20 C",
+    "evidence_dataset": "fem2",
+    "derivation": {
+      "en": [
+        "The circular cross section solves ∇⊥²Ez−jωμσEz=0. A constant boundary field is normalized to the total complex current; the circle polygon, interpolation order and mesh size determine numerical error.",
+        "The weak form integrates ∇v·∇Ez+jωμσvEz over the domain, subject to the stated boundary value. Integrate the resulting current and Joule density independently and compare Rac with the Bessel solution.",
+        "This tutorial uses one mesh. Repeat at three or more decreasing h/a values and inspect boundary/polygon resolution before claiming accuracy; integral conservation alone does not bound field error."
+      ],
+      "zh-CN": [
+        "在圆截面求解 ∇⊥²Ez−jωμσEz=0；边界常量场通过总复电流归一化。圆周多边形、插值阶次和网格尺寸共同决定数值误差。",
+        "弱形式在区域内积分 ∇v·∇Ez+jωμσvEz，并施加给定边界值。对所得电流及焦耳密度独立积分，再将 Rac 与 Bessel 解比较。",
+        "教程只用单档网格。精度判断须至少三档递减 h/a，并检查边界及圆周离散；积分守恒本身不构成场误差上界。"
+      ]
+    },
+    "history": "data/evidence/v1.0.0-rc.1/; litz-research data fetch fem2",
+    "language": "zh-CN",
+    "title": "二维扩散有限元",
+    "usage": "修改 mesh_h；收敛判断至少运行三档网格。",
+    "path": "models/fem2/notebooks/fem2_zh-CN.nb"
+  },
+  {
+    "route": "common_terminal",
+    "model_id": "coax",
+    "titles": {
+      "en": "Common-terminal current sharing",
+      "zh-CN": "共端复电流分配"
+    },
+    "equation": "Zi+e=V1; 1ᵀi=It",
+    "references": [
+      "P01",
+      "P02"
+    ],
+    "parameters": {
+      "strands": 7,
+      "diameter_m": 0.0001,
+      "mesh_factor": 0.7,
+      "return_factor": 2.0,
+      "outer_factor": 1.5,
+      "minimum_segments": 24
+    },
+    "tutorial_instructions": {
+      "en": "Change strand count or return geometry; inspect complex strand currents and input/loss balance.",
+      "zh-CN": "修改股数或回流几何；检查复电流及输入功率与损耗。"
+    },
+    "fixed_conventions": "SI; exp(+j omega t); RMS; sigma=58 MS/m; mu_r=1; 20 C",
+    "evidence_dataset": "common-terminal",
+    "derivation": {
+      "en": [
+        "Insulated strands are connected in parallel only at the ends. The 2D Az weak form couples each conductive region to its unknown axial electric potential gradient. A controlled conducting coaxial return closes the transport problem.",
+        "Linearity yields a coupled block system for Az and the source/return voltage gradients. Impose ΣIi=20 A RMS and Ireturn=−20 A; every strand shares the source voltage gradient, while each complex Ii follows from integrating its solved current density.",
+        "Compute bundle and return Joule losses separately and compare their sum with input real power. Rac,bundle=Pbundle/|It|² is valid for this pure transport case. Seven strands demonstrate the method and do not meet Q2 copper area."
+      ],
+      "zh-CN": [
+        "股线沿途绝缘，仅端部并联。二维 Az 弱形式把各导体区域与未知轴向电势梯度耦合，并用受控同轴铜回流闭合输运问题。",
+        "线性模型形成 Az 与源束/回流电势梯度的块系统。施加 ΣIi=20 A RMS、Ireturn=−20 A；各股共享源束电势梯度，复电流 Ii 由求得的电流密度积分得到。",
+        "分别积分束线及回流焦耳损耗，与输入有功功率比较。纯输运工况可定义 Rac,bundle=Pbundle/|It|²。七股为方法演示，铜面积不满足 Q2。"
+      ]
+    },
+    "history": "data/evidence/v1.0.0-rc.1/; litz-research data fetch common-terminal",
+    "language": "en",
+    "title": "Common-terminal current sharing",
+    "usage": "Change strand count or return geometry; inspect complex strand currents and input/loss balance.",
+    "path": "models/common_terminal/notebooks/common_terminal_en.nb"
+  },
+  {
+    "route": "common_terminal",
+    "model_id": "coax",
+    "titles": {
+      "en": "Common-terminal current sharing",
+      "zh-CN": "共端复电流分配"
+    },
+    "equation": "Zi+e=V1; 1ᵀi=It",
+    "references": [
+      "P01",
+      "P02"
+    ],
+    "parameters": {
+      "strands": 7,
+      "diameter_m": 0.0001,
+      "mesh_factor": 0.7,
+      "return_factor": 2.0,
+      "outer_factor": 1.5,
+      "minimum_segments": 24
+    },
+    "tutorial_instructions": {
+      "en": "Change strand count or return geometry; inspect complex strand currents and input/loss balance.",
+      "zh-CN": "修改股数或回流几何；检查复电流及输入功率与损耗。"
+    },
+    "fixed_conventions": "SI; exp(+j omega t); RMS; sigma=58 MS/m; mu_r=1; 20 C",
+    "evidence_dataset": "common-terminal",
+    "derivation": {
+      "en": [
+        "Insulated strands are connected in parallel only at the ends. The 2D Az weak form couples each conductive region to its unknown axial electric potential gradient. A controlled conducting coaxial return closes the transport problem.",
+        "Linearity yields a coupled block system for Az and the source/return voltage gradients. Impose ΣIi=20 A RMS and Ireturn=−20 A; every strand shares the source voltage gradient, while each complex Ii follows from integrating its solved current density.",
+        "Compute bundle and return Joule losses separately and compare their sum with input real power. Rac,bundle=Pbundle/|It|² is valid for this pure transport case. Seven strands demonstrate the method and do not meet Q2 copper area."
+      ],
+      "zh-CN": [
+        "股线沿途绝缘，仅端部并联。二维 Az 弱形式把各导体区域与未知轴向电势梯度耦合，并用受控同轴铜回流闭合输运问题。",
+        "线性模型形成 Az 与源束/回流电势梯度的块系统。施加 ΣIi=20 A RMS、Ireturn=−20 A；各股共享源束电势梯度，复电流 Ii 由求得的电流密度积分得到。",
+        "分别积分束线及回流焦耳损耗，与输入有功功率比较。纯输运工况可定义 Rac,bundle=Pbundle/|It|²。七股为方法演示，铜面积不满足 Q2。"
+      ]
+    },
+    "history": "data/evidence/v1.0.0-rc.1/; litz-research data fetch common-terminal",
+    "language": "zh-CN",
+    "title": "共端复电流分配",
+    "usage": "修改股数或回流几何；检查复电流及输入功率与损耗。",
+    "path": "models/common_terminal/notebooks/common_terminal_zh-CN.nb"
+  },
+  {
+    "route": "geometry",
+    "model_id": "geometry",
+    "titles": {
+      "en": "Geometry and transposition",
+      "zh-CN": "几何与换位"
+    },
+    "equation": "ℓi=∫√(1+x′²+y′²) dz; Rdc=(ΣσAi/ℓi)⁻¹",
+    "references": [
+      "P01",
+      "N01"
+    ],
+    "parameters": {
+      "strands": 7,
+      "length_m": 0.04,
+      "pitch_m": 0.02,
+      "diameter_m": 0.0001,
+      "kind": "multilevel"
+    },
+    "tutorial_instructions": {
+      "en": "Change topology, pitch or length; inspect gaps, arc lengths and copper volume. Geometry is a model input.",
+      "zh-CN": "修改结构、节距或长度；检查间隙、弧长与铜体积。几何是场模型的输入。"
+    },
+    "fixed_conventions": "SI; exp(+j omega t); RMS; sigma=58 MS/m; mu_r=1; 20 C",
+    "evidence_dataset": "geometry",
+    "derivation": {
+      "en": [
+        "A topology maps a persistent strand identity to a centerline (xi(z),yi(z),z). The tutorial samples the path, evaluates surface gaps and integrates each arc length ℓi=∫√(1+x′i²+y′i²)dz.",
+        "For axially cut length L, copper volume is ΣAiℓi and common-terminal Rdc=(ΣσAi/ℓi)⁻¹. Equal nominal copper area does not remove arc-length growth or change terminal constraints.",
+        "Geometry supplies the subsequent field model. Performance ranking requires an independent electromagnetic solve, controlled return/end effects and numerical uncertainty, using traditional multilevel Litz as a strong baseline."
+      ],
+      "zh-CN": [
+        "结构把持续不变的股线身份映射到中心线 (xi(z),yi(z),z)。教程采样路径，检查表面间隙，并积分弧长 ℓi=∫√(1+x′i²+y′i²)dz。",
+        "轴向长度 L 对应铜体积 ΣAiℓi，共端直流电阻为 Rdc=(ΣσAi/ℓi)⁻¹。名义铜面积相等仍须计入弧长增长，并保持一致的端接约束。",
+        "几何为后续场模型提供输入。性能排名须独立电磁场解、受控回流与端区及数值不确定性；传统多级 Litz 是强基线。"
+      ]
+    },
+    "history": "data/evidence/v1.0.0-rc.1/; litz-research data fetch geometry",
+    "language": "en",
+    "title": "Geometry and transposition",
+    "usage": "Change topology, pitch or length; inspect gaps, arc lengths and copper volume. Geometry is a model input.",
+    "path": "models/geometry/notebooks/geometry_en.nb"
+  },
+  {
+    "route": "geometry",
+    "model_id": "geometry",
+    "titles": {
+      "en": "Geometry and transposition",
+      "zh-CN": "几何与换位"
+    },
+    "equation": "ℓi=∫√(1+x′²+y′²) dz; Rdc=(ΣσAi/ℓi)⁻¹",
+    "references": [
+      "P01",
+      "N01"
+    ],
+    "parameters": {
+      "strands": 7,
+      "length_m": 0.04,
+      "pitch_m": 0.02,
+      "diameter_m": 0.0001,
+      "kind": "multilevel"
+    },
+    "tutorial_instructions": {
+      "en": "Change topology, pitch or length; inspect gaps, arc lengths and copper volume. Geometry is a model input.",
+      "zh-CN": "修改结构、节距或长度；检查间隙、弧长与铜体积。几何是场模型的输入。"
+    },
+    "fixed_conventions": "SI; exp(+j omega t); RMS; sigma=58 MS/m; mu_r=1; 20 C",
+    "evidence_dataset": "geometry",
+    "derivation": {
+      "en": [
+        "A topology maps a persistent strand identity to a centerline (xi(z),yi(z),z). The tutorial samples the path, evaluates surface gaps and integrates each arc length ℓi=∫√(1+x′i²+y′i²)dz.",
+        "For axially cut length L, copper volume is ΣAiℓi and common-terminal Rdc=(ΣσAi/ℓi)⁻¹. Equal nominal copper area does not remove arc-length growth or change terminal constraints.",
+        "Geometry supplies the subsequent field model. Performance ranking requires an independent electromagnetic solve, controlled return/end effects and numerical uncertainty, using traditional multilevel Litz as a strong baseline."
+      ],
+      "zh-CN": [
+        "结构把持续不变的股线身份映射到中心线 (xi(z),yi(z),z)。教程采样路径，检查表面间隙，并积分弧长 ℓi=∫√(1+x′i²+y′i²)dz。",
+        "轴向长度 L 对应铜体积 ΣAiℓi，共端直流电阻为 Rdc=(ΣσAi/ℓi)⁻¹。名义铜面积相等仍须计入弧长增长，并保持一致的端接约束。",
+        "几何为后续场模型提供输入。性能排名须独立电磁场解、受控回流与端区及数值不确定性；传统多级 Litz 是强基线。"
+      ]
+    },
+    "history": "data/evidence/v1.0.0-rc.1/; litz-research data fetch geometry",
+    "language": "zh-CN",
+    "title": "几何与换位",
+    "usage": "修改结构、节距或长度；检查间隙、弧长与铜体积。几何是场模型的输入。",
+    "path": "models/geometry/notebooks/geometry_zh-CN.nb"
+  },
+  {
+    "route": "peec",
+    "model_id": "peec",
+    "titles": {
+      "en": "Finite-length longitudinal PEEC",
+      "zh-CN": "有限长度纵向 PEEC"
+    },
+    "equation": "Z=R+jωL; Zi=V1; 1ᵀi=It",
+    "references": [
+      "P03",
+      "RUEHLI1974"
+    ],
+    "parameters": {
+      "cross_divisions": 6,
+      "length_m": 0.04,
+      "frequency_Hz": 200000.0,
+      "quadrature_order": 4
+    },
+    "tutorial_instructions": {
+      "en": "Change length or cross divisions; compare complex port constraints and power. The basis is longitudinal.",
+      "zh-CN": "修改长度或横向离散，核对复端口约束与功率。基函数沿纵向。"
+    },
+    "fixed_conventions": "SI; exp(+j omega t); RMS; sigma=58 MS/m; mu_r=1; 20 C",
+    "evidence_dataset": "peec",
+    "derivation": {
+      "en": [
+        "Discretize the cross section into longitudinal current basis elements. Galerkin projection of the magnetoquasistatic integral equation gives Z=R+jωL, where R follows from conductivity and basis overlap and L contains finite-length mutual and self interactions.",
+        "Solve Zi=V1 and 1ᵀi=It simultaneously. The terminal voltage and complex currents are unknowns. Real input power must equal the quadratic resistive loss iᴴRi.",
+        "Vary cross-section divisions, longitudinal length and quadrature independently. This longitudinal basis omits general transverse current and end-region charge; it must not be presented as a full vector 3D conductor solution."
+      ],
+      "zh-CN": [
+        "将截面离散为纵向电流基函数。磁准静态积分方程经 Galerkin 投影得到 Z=R+jωL；R 由电导率与基函数重叠构造，L 含有限长度互项与自项。",
+        "联立 Zi=V1、1ᵀi=It 求未知端电压与复电流。有功输入须与电阻二次型损耗 iᴴRi 一致。",
+        "横向离散、轴向长度和积分阶数分别研究。纵向基函数未保留一般横向电流及完整端区电荷，适用范围应据此解释。"
+      ]
+    },
+    "history": "data/evidence/v1.0.0-rc.1/; litz-research data fetch peec",
+    "language": "en",
+    "title": "Finite-length longitudinal PEEC",
+    "usage": "Change length or cross divisions; compare complex port constraints and power. The basis is longitudinal.",
+    "path": "models/peec/notebooks/peec_en.nb"
+  },
+  {
+    "route": "peec",
+    "model_id": "peec",
+    "titles": {
+      "en": "Finite-length longitudinal PEEC",
+      "zh-CN": "有限长度纵向 PEEC"
+    },
+    "equation": "Z=R+jωL; Zi=V1; 1ᵀi=It",
+    "references": [
+      "P03",
+      "RUEHLI1974"
+    ],
+    "parameters": {
+      "cross_divisions": 6,
+      "length_m": 0.04,
+      "frequency_Hz": 200000.0,
+      "quadrature_order": 4
+    },
+    "tutorial_instructions": {
+      "en": "Change length or cross divisions; compare complex port constraints and power. The basis is longitudinal.",
+      "zh-CN": "修改长度或横向离散，核对复端口约束与功率。基函数沿纵向。"
+    },
+    "fixed_conventions": "SI; exp(+j omega t); RMS; sigma=58 MS/m; mu_r=1; 20 C",
+    "evidence_dataset": "peec",
+    "derivation": {
+      "en": [
+        "Discretize the cross section into longitudinal current basis elements. Galerkin projection of the magnetoquasistatic integral equation gives Z=R+jωL, where R follows from conductivity and basis overlap and L contains finite-length mutual and self interactions.",
+        "Solve Zi=V1 and 1ᵀi=It simultaneously. The terminal voltage and complex currents are unknowns. Real input power must equal the quadratic resistive loss iᴴRi.",
+        "Vary cross-section divisions, longitudinal length and quadrature independently. This longitudinal basis omits general transverse current and end-region charge; it must not be presented as a full vector 3D conductor solution."
+      ],
+      "zh-CN": [
+        "将截面离散为纵向电流基函数。磁准静态积分方程经 Galerkin 投影得到 Z=R+jωL；R 由电导率与基函数重叠构造，L 含有限长度互项与自项。",
+        "联立 Zi=V1、1ᵀi=It 求未知端电压与复电流。有功输入须与电阻二次型损耗 iᴴRi 一致。",
+        "横向离散、轴向长度和积分阶数分别研究。纵向基函数未保留一般横向电流及完整端区电荷，适用范围应据此解释。"
+      ]
+    },
+    "history": "data/evidence/v1.0.0-rc.1/; litz-research data fetch peec",
+    "language": "zh-CN",
+    "title": "有限长度纵向 PEEC",
+    "usage": "修改长度或横向离散，核对复端口约束与功率。基函数沿纵向。",
+    "path": "models/peec/notebooks/peec_zh-CN.nb"
+  },
+  {
+    "route": "rt0",
+    "model_id": "rt0",
+    "titles": {
+      "en": "Vector RT0 volume PEEC",
+      "zh-CN": "向量 RT0 体积 PEEC"
+    },
+    "equation": "(R+jωL)i+e=Cᵀv; Ci=b",
+    "references": [
+      "P03",
+      "RUEHLI1974",
+      "RT1977",
+      "GMRES1986"
+    ],
+    "parameters": {
+      "dimensions": [
+        2,
+        2,
+        3
+      ],
+      "cell_width_m": 0.0005,
+      "quadrature_order": 6,
+      "excitation": "field"
+    },
+    "tutorial_instructions": {
+      "en": "Choose field or transport excitation. The field case has 1 mT RMS imposed Bz and zero net transport.",
+      "zh-CN": "选择外场或输运激励。外场算例为 1 mT RMS Bz、零净输运。"
+    },
+    "fixed_conventions": "SI; exp(+j omega t); RMS; sigma=58 MS/m; mu_r=1; 20 C",
+    "evidence_dataset": "rt0",
+    "derivation": {
+      "en": [
+        "Lowest-order Raviart–Thomas face-flux degrees of freedom represent a vector current field with cellwise divergence. Adjacent cells share oriented face fluxes; the incidence matrix C enforces discrete current continuity.",
+        "The mixed PEEC system is (R+jωL)i+e=Cᵀv with Ci=b. In the imposed-field tutorial Bz=1 mT RMS and net transport is zero; calculate dissipated power from the reconstructed current and resistive quadratic form.",
+        "Check the true linear residual, continuity, quadrature and spatial sensitivity. Imposed-field loss is a diagnostic observable; dividing it by a separate transport current squared would not define intrinsic conductor resistance."
+      ],
+      "zh-CN": [
+        "最低阶 Raviart–Thomas 面通量自由度表示具有单元散度的向量电流；相邻单元共享带方向的面通量，关联矩阵 C 实现离散电流连续性。",
+        "混合 PEEC 系统为 (R+jωL)i+e=Cᵀv、Ci=b。外场教程采用 Bz=1 mT RMS、零净输运，分别由重构电流与电阻二次型计算损耗。",
+        "检查真实线性残差、连续性、积分及空间敏感性。外场损耗是诊断量；用另设输运电流的平方去除它，不能据此定义内禀电阻。"
+      ]
+    },
+    "history": "data/evidence/v1.0.0-rc.1/; litz-research data fetch rt0",
+    "language": "en",
+    "title": "Vector RT0 volume PEEC",
+    "usage": "Choose field or transport excitation. The field case has 1 mT RMS imposed Bz and zero net transport.",
+    "path": "models/rt0/notebooks/rt0_en.nb"
+  },
+  {
+    "route": "rt0",
+    "model_id": "rt0",
+    "titles": {
+      "en": "Vector RT0 volume PEEC",
+      "zh-CN": "向量 RT0 体积 PEEC"
+    },
+    "equation": "(R+jωL)i+e=Cᵀv; Ci=b",
+    "references": [
+      "P03",
+      "RUEHLI1974",
+      "RT1977",
+      "GMRES1986"
+    ],
+    "parameters": {
+      "dimensions": [
+        2,
+        2,
+        3
+      ],
+      "cell_width_m": 0.0005,
+      "quadrature_order": 6,
+      "excitation": "field"
+    },
+    "tutorial_instructions": {
+      "en": "Choose field or transport excitation. The field case has 1 mT RMS imposed Bz and zero net transport.",
+      "zh-CN": "选择外场或输运激励。外场算例为 1 mT RMS Bz、零净输运。"
+    },
+    "fixed_conventions": "SI; exp(+j omega t); RMS; sigma=58 MS/m; mu_r=1; 20 C",
+    "evidence_dataset": "rt0",
+    "derivation": {
+      "en": [
+        "Lowest-order Raviart–Thomas face-flux degrees of freedom represent a vector current field with cellwise divergence. Adjacent cells share oriented face fluxes; the incidence matrix C enforces discrete current continuity.",
+        "The mixed PEEC system is (R+jωL)i+e=Cᵀv with Ci=b. In the imposed-field tutorial Bz=1 mT RMS and net transport is zero; calculate dissipated power from the reconstructed current and resistive quadratic form.",
+        "Check the true linear residual, continuity, quadrature and spatial sensitivity. Imposed-field loss is a diagnostic observable; dividing it by a separate transport current squared would not define intrinsic conductor resistance."
+      ],
+      "zh-CN": [
+        "最低阶 Raviart–Thomas 面通量自由度表示具有单元散度的向量电流；相邻单元共享带方向的面通量，关联矩阵 C 实现离散电流连续性。",
+        "混合 PEEC 系统为 (R+jωL)i+e=Cᵀv、Ci=b。外场教程采用 Bz=1 mT RMS、零净输运，分别由重构电流与电阻二次型计算损耗。",
+        "检查真实线性残差、连续性、积分及空间敏感性。外场损耗是诊断量；用另设输运电流的平方去除它，不能据此定义内禀电阻。"
+      ]
+    },
+    "history": "data/evidence/v1.0.0-rc.1/; litz-research data fetch rt0",
+    "language": "zh-CN",
+    "title": "向量 RT0 体积 PEEC",
+    "usage": "选择外场或输运激励。外场算例为 1 mT RMS Bz、零净输运。",
+    "path": "models/rt0/notebooks/rt0_zh-CN.nb"
+  },
+  {
+    "route": "aphi",
+    "model_id": "aphi",
+    "titles": {
+      "en": "Preserved A–φ field diagnostics",
+      "zh-CN": "保存 A–φ 场诊断"
+    },
+    "equation": "J=−σ(jωA+∇φ); ∇·J=0",
+    "references": [
+      "FEMDOC",
+      "GMRES1986"
+    ],
+    "parameters": {
+      "sampling_points": 32
+    },
+    "tutorial_instructions": {
+      "en": "Read actual saved fields and reproduce J, phi and gauge residuals. Original field parameters remain visible.",
+      "zh-CN": "读取实际保存场，复算 J、电势与规范残差，保留原场参数。"
+    },
+    "fixed_conventions": "SI; exp(+j omega t); RMS; sigma=58 MS/m; mu_r=1; 20 C",
+    "evidence_dataset": "aphi",
+    "derivation": {
+      "en": [
+        "Under exp(+jωt), reconstruct J=−σ(jωA+∇φ) from the original saved A and φ fields. Compare current conservation and normalized potential/gauge residuals using the exact preserved inputs.",
+        "This entry changes only diagnostic sampling density. It recomputes derivatives on saved fields and tests reproducibility against the original diagnostic quantities; it performs no new field solve.",
+        "The saved scalar-potential/gauge checks remain failed. Preserve mesh, excitation, gauge and boundary assumptions. Continue only after identifying a consistent formulation and passing conservation, gauge and mesh studies."
+      ],
+      "zh-CN": [
+        "采用 exp(+jωt)，由原保存的 A、φ 场重构 J=−σ(jωA+∇φ)，在原输入下比较电流守恒和归一化电势、规范残差。",
+        "本入口仅改变诊断采样密度，在保存场上复算导数并与原诊断量比较可复现性，不产生新的物理场解。",
+        "原电势与规范验收仍为失败。保留网格、激励、规范及边界假设；明确一致形式并通过守恒、规范和网格研究后再推进。"
+      ]
+    },
+    "history": "data/evidence/v1.0.0-rc.1/; litz-research data fetch aphi",
+    "language": "en",
+    "title": "Preserved A–φ field diagnostics",
+    "usage": "Read actual saved fields and reproduce J, phi and gauge residuals. Original field parameters remain visible.",
+    "path": "models/aphi/notebooks/aphi_en.nb"
+  },
+  {
+    "route": "aphi",
+    "model_id": "aphi",
+    "titles": {
+      "en": "Preserved A–φ field diagnostics",
+      "zh-CN": "保存 A–φ 场诊断"
+    },
+    "equation": "J=−σ(jωA+∇φ); ∇·J=0",
+    "references": [
+      "FEMDOC",
+      "GMRES1986"
+    ],
+    "parameters": {
+      "sampling_points": 32
+    },
+    "tutorial_instructions": {
+      "en": "Read actual saved fields and reproduce J, phi and gauge residuals. Original field parameters remain visible.",
+      "zh-CN": "读取实际保存场，复算 J、电势与规范残差，保留原场参数。"
+    },
+    "fixed_conventions": "SI; exp(+j omega t); RMS; sigma=58 MS/m; mu_r=1; 20 C",
+    "evidence_dataset": "aphi",
+    "derivation": {
+      "en": [
+        "Under exp(+jωt), reconstruct J=−σ(jωA+∇φ) from the original saved A and φ fields. Compare current conservation and normalized potential/gauge residuals using the exact preserved inputs.",
+        "This entry changes only diagnostic sampling density. It recomputes derivatives on saved fields and tests reproducibility against the original diagnostic quantities; it performs no new field solve.",
+        "The saved scalar-potential/gauge checks remain failed. Preserve mesh, excitation, gauge and boundary assumptions. Continue only after identifying a consistent formulation and passing conservation, gauge and mesh studies."
+      ],
+      "zh-CN": [
+        "采用 exp(+jωt)，由原保存的 A、φ 场重构 J=−σ(jωA+∇φ)，在原输入下比较电流守恒和归一化电势、规范残差。",
+        "本入口仅改变诊断采样密度，在保存场上复算导数并与原诊断量比较可复现性，不产生新的物理场解。",
+        "原电势与规范验收仍为失败。保留网格、激励、规范及边界假设；明确一致形式并通过守恒、规范和网格研究后再推进。"
+      ]
+    },
+    "history": "data/evidence/v1.0.0-rc.1/; litz-research data fetch aphi",
+    "language": "zh-CN",
+    "title": "保存 A–φ 场诊断",
+    "usage": "读取实际保存场，复算 J、电势与规范残差，保留原场参数。",
+    "path": "models/aphi/notebooks/aphi_zh-CN.nb"
+  },
+  {
+    "route": "wolfram",
+    "model_id": "wolfram",
+    "titles": {
+      "en": "Wolfram environment and execution",
+      "zh-CN": "Wolfram 环境与执行"
+    },
+    "equation": "Independent kernel execution and native frontend rendering",
+    "references": [
+      "WOLFRAM",
+      "AGENTTOOLS"
+    ],
+    "parameters": {},
+    "tutorial_instructions": {
+      "en": "Probe the local kernel, then follow the MCP workflow for actual tool and Notebook operations.",
+      "zh-CN": "检查本机内核，再按 MCP 工作流验收真实工具调用和 Notebook 操作。"
+    },
+    "fixed_conventions": "SI; exp(+j omega t); RMS; sigma=58 MS/m; mu_r=1; 20 C",
+    "evidence_dataset": "wolfram",
+    "derivation": {
+      "en": [
+        "Probe the actual local kernel and arithmetic first. The native Notebook runs the same saved task interface as the CLI in an independent process. The MCP example separately checks tool discovery, numerical evaluation, TestReport, Notebook writing and reading.",
+        "A working connection is distinct from a successful numerical test or field acceptance. Record the installed AgentTools version and visible tool schemas before using version-specific arguments."
+      ],
+      "zh-CN": [
+        "先检查实际本机内核与算术。原生 Notebook 在独立进程调用与 CLI 相同的保存任务接口；MCP 案例另行检查工具发现、数值执行、TestReport 及 Notebook 写入回读。",
+        "连接成功、数值测试成功和场解验收分别记录；使用版本相关参数前核对实际 AgentTools 版本与可见工具 schema。"
+      ]
+    },
+    "history": "data/evidence/v1.0.0-rc.1/; litz-research data fetch analytic",
+    "language": "en",
+    "title": "Wolfram environment and execution",
+    "usage": "Probe the local kernel, then follow the MCP workflow for actual tool and Notebook operations.",
+    "path": "adapters/wolfram/notebooks/wolfram_en.nb"
+  },
+  {
+    "route": "wolfram",
+    "model_id": "wolfram",
+    "titles": {
+      "en": "Wolfram environment and execution",
+      "zh-CN": "Wolfram 环境与执行"
+    },
+    "equation": "Independent kernel execution and native frontend rendering",
+    "references": [
+      "WOLFRAM",
+      "AGENTTOOLS"
+    ],
+    "parameters": {},
+    "tutorial_instructions": {
+      "en": "Probe the local kernel, then follow the MCP workflow for actual tool and Notebook operations.",
+      "zh-CN": "检查本机内核，再按 MCP 工作流验收真实工具调用和 Notebook 操作。"
+    },
+    "fixed_conventions": "SI; exp(+j omega t); RMS; sigma=58 MS/m; mu_r=1; 20 C",
+    "evidence_dataset": "wolfram",
+    "derivation": {
+      "en": [
+        "Probe the actual local kernel and arithmetic first. The native Notebook runs the same saved task interface as the CLI in an independent process. The MCP example separately checks tool discovery, numerical evaluation, TestReport, Notebook writing and reading.",
+        "A working connection is distinct from a successful numerical test or field acceptance. Record the installed AgentTools version and visible tool schemas before using version-specific arguments."
+      ],
+      "zh-CN": [
+        "先检查实际本机内核与算术。原生 Notebook 在独立进程调用与 CLI 相同的保存任务接口；MCP 案例另行检查工具发现、数值执行、TestReport 及 Notebook 写入回读。",
+        "连接成功、数值测试成功和场解验收分别记录；使用版本相关参数前核对实际 AgentTools 版本与可见工具 schema。"
+      ]
+    },
+    "history": "data/evidence/v1.0.0-rc.1/; litz-research data fetch analytic",
+    "language": "zh-CN",
+    "title": "Wolfram 环境与执行",
+    "usage": "检查本机内核，再按 MCP 工作流验收真实工具调用和 Notebook 操作。",
+    "path": "adapters/wolfram/notebooks/wolfram_zh-CN.nb"
+  },
+  {
+    "route": "ansys",
+    "model_id": "ansys",
+    "titles": {
+      "en": "Ansys MCP and Maxwell workflow",
+      "zh-CN": "Ansys MCP 与 Maxwell 工作流"
+    },
+    "equation": "Common terminal voltage and total RMS current",
+    "references": [
+      "PYAEDTMCP",
+      "PYAEDT"
+    ],
+    "parameters": {},
+    "tutorial_instructions": {
+      "en": "Run resource preflight; execute the native seven-strand MCP example when Maxwell is available.",
+      "zh-CN": "执行资源预检；Maxwell 可用时运行原生七股 MCP 案例。"
+    },
+    "fixed_conventions": "SI; exp(+j omega t); RMS; sigma=58 MS/m; mu_r=1; 20 C",
+    "evidence_dataset": "ansys",
+    "derivation": {
+      "en": [
+        "This Notebook performs the resource preflight. The complete MCP case starts an owned Student gRPC Desktop, connects the upstream server, constructs seven voltage windings and a controlled return, and solves two linear bases plus a constrained final case.",
+        "AEDT voltage inputs are peak values; the adapter converts RMS inputs by √2 and reconstructs RMS complex currents and power. Maxwell CPython/PyAEDT execution differs from the embedded AEDT RunScript environment.",
+        "Inspect actual units, axial model depth, frequency, project contents, mesh statistics, complex strand currents and input/loss balance. A one-pass Student mesh supports only the explicitly reported comparison scope."
+      ],
+      "zh-CN": [
+        "本 Notebook 执行资源预检。完整 MCP 案例启动所属 Student gRPC Desktop，连接官方服务，构建七个电压绕组和受控回流，求解两个线性基工况与最终受约束工况。",
+        "AEDT 电压输入为峰值；适配层把 RMS 输入乘 √2，并重构 RMS 复电流及功率。CPython/PyAEDT 执行环境与 AEDT 内置 RunScript 不同。",
+        "检查实际单位、轴向模型深度、频率、工程内容、网格、复电流及输入损耗平衡；单遍 Student 网格仅支持明示的比较范围。"
+      ]
+    },
+    "history": "data/evidence/v1.0.0-rc.1/; litz-research data fetch ansys",
+    "language": "en",
+    "title": "Ansys MCP and Maxwell workflow",
+    "usage": "Run resource preflight; execute the native seven-strand MCP example when Maxwell is available.",
+    "path": "adapters/ansys/notebooks/ansys_en.nb"
+  },
+  {
+    "route": "ansys",
+    "model_id": "ansys",
+    "titles": {
+      "en": "Ansys MCP and Maxwell workflow",
+      "zh-CN": "Ansys MCP 与 Maxwell 工作流"
+    },
+    "equation": "Common terminal voltage and total RMS current",
+    "references": [
+      "PYAEDTMCP",
+      "PYAEDT"
+    ],
+    "parameters": {},
+    "tutorial_instructions": {
+      "en": "Run resource preflight; execute the native seven-strand MCP example when Maxwell is available.",
+      "zh-CN": "执行资源预检；Maxwell 可用时运行原生七股 MCP 案例。"
+    },
+    "fixed_conventions": "SI; exp(+j omega t); RMS; sigma=58 MS/m; mu_r=1; 20 C",
+    "evidence_dataset": "ansys",
+    "derivation": {
+      "en": [
+        "This Notebook performs the resource preflight. The complete MCP case starts an owned Student gRPC Desktop, connects the upstream server, constructs seven voltage windings and a controlled return, and solves two linear bases plus a constrained final case.",
+        "AEDT voltage inputs are peak values; the adapter converts RMS inputs by √2 and reconstructs RMS complex currents and power. Maxwell CPython/PyAEDT execution differs from the embedded AEDT RunScript environment.",
+        "Inspect actual units, axial model depth, frequency, project contents, mesh statistics, complex strand currents and input/loss balance. A one-pass Student mesh supports only the explicitly reported comparison scope."
+      ],
+      "zh-CN": [
+        "本 Notebook 执行资源预检。完整 MCP 案例启动所属 Student gRPC Desktop，连接官方服务，构建七个电压绕组和受控回流，求解两个线性基工况与最终受约束工况。",
+        "AEDT 电压输入为峰值；适配层把 RMS 输入乘 √2，并重构 RMS 复电流及功率。CPython/PyAEDT 执行环境与 AEDT 内置 RunScript 不同。",
+        "检查实际单位、轴向模型深度、频率、工程内容、网格、复电流及输入损耗平衡；单遍 Student 网格仅支持明示的比较范围。"
+      ]
+    },
+    "history": "data/evidence/v1.0.0-rc.1/; litz-research data fetch ansys",
+    "language": "zh-CN",
+    "title": "Ansys MCP 与 Maxwell 工作流",
+    "usage": "执行资源预检；Maxwell 可用时运行原生七股 MCP 案例。",
+    "path": "adapters/ansys/notebooks/ansys_zh-CN.nb"
+  },
+  {
+    "route": "gpu",
+    "model_id": "gpu",
+    "titles": {
+      "en": "GPU execution and CPU comparison",
+      "zh-CN": "GPU 执行与 CPU 对照"
+    },
+    "equation": "Same-input double-precision numerical comparison",
+    "references": [
+      "CUDA"
+    ],
+    "parameters": {
+      "matrix_size": 128,
+      "fft_size": 4096
+    },
+    "tutorial_instructions": {
+      "en": "Run a small GPU/CPU comparison; retain toolchain and numerical error.",
+      "zh-CN": "运行小型 GPU/CPU 对照，保存工具链和数值误差。"
+    },
+    "fixed_conventions": "SI; exp(+j omega t); RMS; sigma=58 MS/m; mu_r=1; 20 C",
+    "evidence_dataset": "gpu",
+    "derivation": {
+      "en": [
+        "Execute the same small double-precision operations on CPU and GPU: matrix multiplication, a complex linear system with known solution and true residual, FFT and inverse roundtrip.",
+        "The comparison verifies arithmetic and runtime equivalence for the stated inputs. It does not establish a new physical solution, large-scale convergence or a performance advantage for a different workload."
+      ],
+      "zh-CN": [
+        "在 CPU 与 GPU 上执行相同的小型双精度运算：矩阵乘法、已知解复线性系统及真实残差、FFT 与逆变换回读。",
+        "对照验收当前输入的算术和运行时一致性；新物理场解、大规模收敛和其他负载性能须分别验证。"
+      ]
+    },
+    "history": "data/evidence/v1.0.0-rc.1/; litz-research data fetch gpu",
+    "language": "en",
+    "title": "GPU execution and CPU comparison",
+    "usage": "Run a small GPU/CPU comparison; retain toolchain and numerical error.",
+    "path": "adapters/gpu/notebooks/gpu_en.nb"
+  },
+  {
+    "route": "gpu",
+    "model_id": "gpu",
+    "titles": {
+      "en": "GPU execution and CPU comparison",
+      "zh-CN": "GPU 执行与 CPU 对照"
+    },
+    "equation": "Same-input double-precision numerical comparison",
+    "references": [
+      "CUDA"
+    ],
+    "parameters": {
+      "matrix_size": 128,
+      "fft_size": 4096
+    },
+    "tutorial_instructions": {
+      "en": "Run a small GPU/CPU comparison; retain toolchain and numerical error.",
+      "zh-CN": "运行小型 GPU/CPU 对照，保存工具链和数值误差。"
+    },
+    "fixed_conventions": "SI; exp(+j omega t); RMS; sigma=58 MS/m; mu_r=1; 20 C",
+    "evidence_dataset": "gpu",
+    "derivation": {
+      "en": [
+        "Execute the same small double-precision operations on CPU and GPU: matrix multiplication, a complex linear system with known solution and true residual, FFT and inverse roundtrip.",
+        "The comparison verifies arithmetic and runtime equivalence for the stated inputs. It does not establish a new physical solution, large-scale convergence or a performance advantage for a different workload."
+      ],
+      "zh-CN": [
+        "在 CPU 与 GPU 上执行相同的小型双精度运算：矩阵乘法、已知解复线性系统及真实残差、FFT 与逆变换回读。",
+        "对照验收当前输入的算术和运行时一致性；新物理场解、大规模收敛和其他负载性能须分别验证。"
+      ]
+    },
+    "history": "data/evidence/v1.0.0-rc.1/; litz-research data fetch gpu",
+    "language": "zh-CN",
+    "title": "GPU 执行与 CPU 对照",
+    "usage": "运行小型 GPU/CPU 对照，保存工具链和数值误差。",
+    "path": "adapters/gpu/notebooks/gpu_zh-CN.nb"
+  }
+]

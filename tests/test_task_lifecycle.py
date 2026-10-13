@@ -1,0 +1,60 @@
+"""Exercise process isolation and restart identity, not implementation mirrors."""
+from pathlib import Path
+import os,shutil,subprocess,sys,tempfile,time,unittest
+from litz_research.common import project,write
+from litz_research.tasks import execute,submit,status,resume,bounded_process
+from litz_research.processes import stop_owned
+
+class LifecycleTests(unittest.TestCase):
+    def fixture(self,folder):
+        root=Path(folder);source=project()
+        (root/'configs').mkdir()
+        (root/'pyproject.toml').write_text('[project]\nname="fixture"\n')
+        for name in ['reference_parameters.json','reference_values.json']:shutil.copy2(source/'configs'/name,root/'configs'/name)
+        return root
+
+    def wait(self,root,rid):
+        deadline=time.monotonic()+15
+        while time.monotonic()<deadline:
+            result=status(root,rid)
+            if result['execution_status'] not in {'submitted','running'}:
+                import psutil,json
+                identity=json.loads((root/'outputs/.jobs'/(rid+'.process.json')).read_text())
+                try:alive=psutil.Process(identity['pid']).create_time()==identity['created']
+                except psutil.Error:alive=False
+                if not alive:return result
+            time.sleep(.05)
+        self.fail('Analytical worker did not finish')
+
+    def test_async_restart_preserves_inputs_and_rejects_duplicate_identity(self):
+        with tempfile.TemporaryDirectory(prefix='litz lifecycle space ') as tmp:
+            root=self.fixture(tmp)
+            submit(root,'analytic','first',supplied={'frequency_Hz':100000.})
+            self.assertEqual(self.wait(root,'first')['physical_acceptance_status'],'passed')
+            with self.assertRaises((FileExistsError,ValueError)):submit(root,'analytic','first')
+            restarted=resume(root,'first','second')
+            self.assertEqual(restarted['parent']['resume_method'],'restart_from_verified_saved_inputs')
+            self.assertEqual(self.wait(root,'second')['parameters']['frequency_Hz'],100000.)
+
+    def test_restart_rejects_a_corrupted_saved_source(self):
+        with tempfile.TemporaryDirectory() as tmp:
+            root=self.fixture(tmp);execute(root,'analytic','first')
+            (root/'outputs/first/source_snapshot/configs/reference_parameters.json').write_text('{}')
+            with self.assertRaisesRegex(ValueError,'checkpoint identity'):resume(root,'first','second')
+            self.assertFalse((root/'outputs/second').exists())
+
+    def test_timeout_releases_only_owned_processes(self):
+        import psutil
+        twin=subprocess.Popen([sys.executable,'-c','import time;time.sleep(30)'],creationflags=subprocess.CREATE_NO_WINDOW if os.name=='nt' else 0)
+        try:
+            created=psutil.Process(twin.pid).create_time()
+            self.assertFalse(stop_owned(twin.pid,created+1))
+            with tempfile.TemporaryDirectory() as tmp:
+                root=Path(tmp)
+                result=bounded_process([sys.executable,'-c','import time;time.sleep(30)'],root,root,dict(os.environ),{'cpu_threads':8,'task_memory_bytes':24*2**30,'system_reserve_bytes':8*2**30,'timeout_seconds':.2})
+                self.assertEqual(result['failure_reason'],'timeout')
+                self.assertIsNone(twin.poll())
+        finally:
+            twin.terminate();twin.wait(timeout=5)
+
+if __name__=='__main__':unittest.main()

@@ -1,0 +1,44 @@
+{
+  "route": "rt0",
+  "model_id": "rt0",
+  "titles": {
+    "en": "Vector RT0 volume PEEC",
+    "zh-CN": "向量 RT0 体积 PEEC"
+  },
+  "equation": "(R+jωL)i+e=Cᵀv; Ci=b",
+  "references": [
+    "P03",
+    "RUEHLI1974",
+    "RT1977",
+    "GMRES1986"
+  ],
+  "parameters": {
+    "dimensions": [
+      2,
+      2,
+      3
+    ],
+    "cell_width_m": 0.0005,
+    "quadrature_order": 6,
+    "excitation": "field"
+  },
+  "tutorial_instructions": {
+    "en": "Choose field or transport excitation. The field case has 1 mT RMS imposed Bz and zero net transport.",
+    "zh-CN": "选择外场或输运激励。外场算例为 1 mT RMS Bz、零净输运。"
+  },
+  "fixed_conventions": "SI; exp(+j omega t); RMS; sigma=58 MS/m; mu_r=1; 20 C",
+  "evidence_dataset": "rt0",
+  "derivation": {
+    "en": [
+      "Lowest-order Raviart–Thomas face-flux degrees of freedom represent a vector current field with cellwise divergence. Adjacent cells share oriented face fluxes; the incidence matrix C enforces discrete current continuity.",
+      "The mixed PEEC system is (R+jωL)i+e=Cᵀv with Ci=b. In the imposed-field tutorial Bz=1 mT RMS and net transport is zero; calculate dissipated power from the reconstructed current and resistive quadratic form.",
+      "Check the true linear residual, continuity, quadrature and spatial sensitivity. Imposed-field loss is a diagnostic observable; dividing it by a separate transport current squared would not define intrinsic conductor resistance."
+    ],
+    "zh-CN": [
+      "最低阶 Raviart–Thomas 面通量自由度表示具有单元散度的向量电流；相邻单元共享带方向的面通量，关联矩阵 C 实现离散电流连续性。",
+      "混合 PEEC 系统为 (R+jωL)i+e=Cᵀv、Ci=b。外场教程采用 Bz=1 mT RMS、零净输运，分别由重构电流与电阻二次型计算损耗。",
+      "检查真实线性残差、连续性、积分及空间敏感性。外场损耗是诊断量；用另设输运电流的平方去除它，不能据此定义内禀电阻。"
+    ]
+  },
+  "history": "data/evidence/v1.0.0-rc.1/; litz-research data fetch rt0"
+}

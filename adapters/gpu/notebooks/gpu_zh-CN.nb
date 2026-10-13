@@ -1,0 +1,1439 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Wolfram 15.0' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       154,          7]
+NotebookDataLength[     73650,       1429]
+NotebookOptionsPosition[     69040,       1315]
+NotebookOutlinePosition[     70687,       1362]
+CellTagsIndexPosition[     70609,       1357]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+
+Cell[CellGroupData[{
+Cell["GPU \:6267\:884c\:4e0e CPU \:5bf9\:7167", "Title",
+ Evaluatable->False,ExpressionUUID->"0906ae2b-5672-cf45-ac85-7f97d0156b48"],
+
+Cell["\:7f2a\:96e8\:8f69 / Miao Yuxuan \[CenterDot] \:6dee\:5357\:5e08\:8303\
+\:5b66\:9662 / Huainan Normal University", "Subtitle",
+ Evaluatable->False,ExpressionUUID->"fb5541b6-c06d-8545-97a5-af61df7d4d26"],
+
+Cell[CellGroupData[{
+
+Cell["\:6a21\:578b\:3001\:8f93\:5165\:4e0e\:9002\:7528\:8303\:56f4", "Section",
+ Evaluatable->False,ExpressionUUID->"cba7052a-6cae-b34d-9ec1-c8d36ba91566"],
+
+Cell["Same-input double-precision numerical comparison", "Text",
+ Evaluatable->False,ExpressionUUID->"28a51598-f9c3-8642-a938-f7820c319940"],
+
+Cell["SI; exp(+j omega t); RMS; sigma=58 MS/m; mu_r=1; 20 C", "Text",
+ Evaluatable->False,ExpressionUUID->"03f52240-04ae-9d40-8a94-d1c766c94b27"],
+
+Cell["\:8fd0\:884c\:5c0f\:578b GPU/CPU \:5bf9\:7167\:ff0c\:4fdd\:5b58\:5de5\
+\:5177\:94fe\:548c\:6570\:503c\:8bef\:5dee\:3002", "Text",
+ Evaluatable->False,ExpressionUUID->"c52a9638-5741-404c-8013-95e3fa234a52"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["\:63a8\:5bfc\:4e0e\:7ed3\:679c\:89e3\:91ca", "Section",
+ Evaluatable->False,ExpressionUUID->"27de9d18-7905-4f42-b81f-81ba1bbc6497"],
+
+Cell["\:5728 CPU \:4e0e GPU \:4e0a\:6267\:884c\:76f8\:540c\:7684\:5c0f\:578b\
+\:53cc\:7cbe\:5ea6\:8fd0\:7b97\:ff1a\:77e9\:9635\:4e58\:6cd5\:3001\:5df2\:77e5\
+\:89e3\:590d\:7ebf\:6027\:7cfb\:7edf\:53ca\:771f\:5b9e\:6b8b\:5dee\:3001FFT \
+\:4e0e\:9006\:53d8\:6362\:56de\:8bfb\:3002", "Text",
+ Evaluatable->False,ExpressionUUID->"b2727063-d78c-7543-8c2f-191fb0d19d05"],
+
+Cell["\:5bf9\:7167\:9a8c\:6536\:5f53\:524d\:8f93\:5165\:7684\:7b97\:672f\:548c\
+\:8fd0\:884c\:65f6\:4e00\:81f4\:6027\:ff1b\:65b0\:7269\:7406\:573a\:89e3\:3001\
+\:5927\:89c4\:6a21\:6536\:655b\:548c\:5176\:4ed6\:8d1f\:8f7d\:6027\:80fd\:987b\
+\:5206\:522b\:9a8c\:8bc1\:3002", "Text",
+ Evaluatable->False,ExpressionUUID->"b38be3f3-8512-9b45-8dd7-8ee02d60ae05"],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"projectRoot", "=", 
+   RowBox[{"NestWhile", "[", 
+    RowBox[{"DirectoryName", ",", 
+     RowBox[{"NotebookDirectory", "[", "]"}], ",", 
+     RowBox[{
+      RowBox[{
+       RowBox[{"!", 
+        RowBox[{"FileExistsQ", "[", 
+         RowBox[{"FileNameJoin", "[", 
+          RowBox[{"{", 
+           RowBox[{"#1", ",", "\"\<pyproject.toml\>\""}], "}"}], "]"}], 
+         "]"}]}], "&&", 
+       RowBox[{
+        RowBox[{"DirectoryName", "[", "#1", "]"}], "=!=", "#1"}]}], "&"}]}], 
+    "]"}]}], ";", 
+  RowBox[{"Get", "[", 
+   RowBox[{"FileNameJoin", "[", 
+    RowBox[{"{", 
+     RowBox[{
+     "projectRoot", ",", "\"\<shared\>\"", ",", "\"\<wolfram\>\"", 
+      ",", "\"\<ResearchNotebook.wl\>\""}], "}"}], "]"}], "]"}], 
+  ";"}]], "Input",
+ Evaluatable->True,
+ InitializationCell->True,
+ CellTags->"research-input",
+ CellLabel->" In[2]:=",ExpressionUUID->"11b63c34-edfe-6049-9cc0-c96ec5f55ff6"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["\:53ef\:7f16\:8f91\:53c2\:6570", "Section",
+ Evaluatable->False,ExpressionUUID->"fbcab35c-2c04-134d-b375-29a6e361939e"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"parameters", "=", 
+   RowBox[{"\[LeftAssociation]", 
+    RowBox[{
+     RowBox[{"\"\<matrix_size\>\"", "\[Rule]", "128"}], ",", 
+     RowBox[{"\"\<fft_size\>\"", "\[Rule]", "4096"}]}], 
+    "\[RightAssociation]"}]}], ";", "parameters"}]], "Input",
+ Evaluatable->True,
+ CellTags->"research-input",
+ CellLabel->" In[3]:=",ExpressionUUID->"1e469b84-df98-114c-95b5-c872b3df55b5"],
+
+Cell[OutputFormData["\<\
+<|matrix_size -> 128, fft_size -> 4096|>\
+\>"], "Output",
+ CellChangeTimes->{4.0009000453029175`*^9},
+ CellTags->"research-input",
+ CellLabel->" Out[3]=",ExpressionUUID->"2fb7e8a3-dd7b-8045-b82d-61c5f177ed61"]
+}, Open  ]]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["\:72ec\:7acb\:8fdb\:7a0b\:6267\:884c\:4e0e\:7ed3\:679c", "Section",
+ Evaluatable->False,ExpressionUUID->"66f19d42-53ab-7d44-a879-b20c948e2400"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"research", "=", 
+   RowBox[{"LitzNotebook`RunResearch", "[", 
+    RowBox[{"projectRoot", ",", "\"\<gpu\>\"", ",", "parameters"}], "]"}]}], ";", 
+  RowBox[{"LitzNotebook`ResearchSummary", "[", "research", "]"}]}]], "Input",
+ Evaluatable->True,
+ CellTags->"research-input",
+ CellLabel->" In[4]:=",ExpressionUUID->"6df199de-4b69-144e-b138-23b2aab135f1"],
+
+Cell[OutputFormData["\<\
+<|run_id -> notebook_gpu_20261014010725_a7e9c088, source_model -> gpu, 
+ 
+>   execution_status -> completed, 
+ 
+>   physical_acceptance_status -> passed_test_scope_only|>\
+\>"], "Output",
+ CellChangeTimes->{4.0009001004843006`*^9},
+ CellTags->"research-input",
+ CellLabel->" Out[4]=",ExpressionUUID->"b051b678-bf69-1a4c-b6f7-e70fecea284b"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"LitzNotebook`DisplayResearch", "[", "research", "]"}]], "Input",
+ Evaluatable->True,
+ CellTags->"research-input",
+ CellLabel->" In[5]:=",ExpressionUUID->"08f2a661-5629-604c-b32c-c73c72cc15e7"],
+
+Cell[BoxData[
+ TagBox[GridBox[{
+    {
+     TagBox[
+      TagBox[
+       DynamicModuleBox[{TypeSystem`NestedGrid`PackagePrivate`$state$$ = <|
+        "InitialData" -> <|
+          "run_id" -> "notebook_gpu_20261014010725_a7e9c088", "scope" -> 
+           "Small Real64/ComplexReal64 GPU/CPU multiplication, known complex \
+solution, residual and cuFFT comparison. Synthetic numerical validation \
+only.", "checks" -> {<|
+             "name" -> "GPU_CPU_multiply", "actual" -> 6.865585115616994*^-17,
+               "tolerance" -> Rational[1, 10000000000], "passed" -> True|>, <|
+             "name" -> "GPU_complex_known_solution", "actual" -> 
+              6.440458231932587*^-16, "tolerance" -> Rational[1, 10000000000],
+               "passed" -> True|>, <|
+             "name" -> "GPU_complex_residual", "actual" -> 
+              6.435589404766025*^-16, "tolerance" -> Rational[1, 10000000000],
+               "passed" -> True|>, <|
+             "name" -> "GPU_FFT_CPU", "actual" -> 5.970807729216827*^-16, 
+              "tolerance" -> Rational[1, 10000000000], "passed" -> True|>, <|
+             "name" -> "GPU_FFT_roundtrip", "actual" -> 
+              7.922889821012764*^-16, "tolerance" -> Rational[1, 10000000000],
+               "passed" -> True|>}|>, "AllowEmbedding" -> True, 
+         "InitialShape" -> 
+         TypeSystem`PackageScope`DocumentShape[<|{"run_id"} -> 
+            TypeSystem`PackageScope`AtomShape[403.20000000000005`], {"scope"} -> 
+            TypeSystem`PackageScope`AtomShape[560.], {"checks"} -> 
+            TypeSystem`PackageScope`ElidedShape[1]|>, 1], "InitialType" -> 
+         TypeSystem`Struct[{"run_id", "scope", "checks"}, {
+            TypeSystem`Atom[String], 
+            TypeSystem`Atom[String], 
+            TypeSystem`Vector[
+             TypeSystem`Struct[{"name", "actual", "tolerance", "passed"}, {
+               TypeSystem`Atom[String], 
+               TypeSystem`Atom[Real], 
+               TypeSystem`Atom[Real], 
+               TypeSystem`Atom[TypeSystem`Boolean]}], 5]}], "Meta" -> <||>, 
+         "RowTarget" -> 20, "ColumnTarget" -> 10, "Shape" -> 
+         TypeSystem`PackageScope`DocumentShape[<|{"run_id"} -> 
+            TypeSystem`PackageScope`AtomShape[403.20000000000005`], {"scope"} -> 
+            TypeSystem`PackageScope`AtomShape[560.], {"checks"} -> 
+            TypeSystem`PackageScope`ElidedShape[1]|>, 1], "Type" -> 
+         TypeSystem`Struct[{"run_id", "scope", "checks"}, {
+            TypeSystem`Atom[String], 
+            TypeSystem`Atom[String], 
+            TypeSystem`Vector[
+             TypeSystem`Struct[{"name", "actual", "tolerance", "passed"}, {
+               TypeSystem`Atom[String], 
+               TypeSystem`Atom[Real], 
+               TypeSystem`Atom[Real], 
+               TypeSystem`Atom[TypeSystem`Boolean]}], 5]}], "Path" -> {}, 
+         "DisplayedRowCount" -> 20, "DisplayedColumnCount" -> 10, 
+         "DataRowCount" -> 3, "DataColumnCount" -> 1, "SortPaths" -> {}, 
+         "SortDirections" -> {}, "HiddenItemsMap" -> Null, "UpdateType" -> 
+         1|>, TypeSystem`NestedGrid`PackagePrivate`$outputID$$, 
+        TypeSystem`NestedGrid`PackagePrivate`$path$$ = {}, 
+        TypeSystem`NestedGrid`PackagePrivate`$vPos$$ = 1, 
+        TypeSystem`NestedGrid`PackagePrivate`$hPos$$ = 1, 
+        TypeSystem`NestedGrid`PackagePrivate`$grid$$ = 
+        DynamicModule[{
+         TypeSystem`NestedGrid`PackagePrivate`renderedGrid = Deploy[
+            Style[
+             Grid[{{
+                Item[
+                 Pane[
+                  Annotation[
+                   EventHandler[
+                    MouseAppearance[
+                    Mouseover["run_id", 
+                    Style[
+                    "run_id", FontColor -> 
+                    RGBColor[
+                    0.2749633796890805, 0.536987306253161, 
+                    0.791992189065661]]], "LinkHand"], {"MouseClicked", 1} :> 
+                    If[
+                    TypeSystem`NestedGrid`PackagePrivate`checkInteractivity[
+                    TypeSystem`NestedGrid`PackagePrivate`$state$$], 
+                    TypeSystem`NestedGrid`PackagePrivate`updateState[
+                    TypeSystem`NestedGrid`PackagePrivate`$state$$, 
+                    TypeSystem`NestedGrid`PackagePrivate`$path$$, 
+                    TypeSystem`NestedGrid`PackagePrivate`$vPos$$, 
+                    TypeSystem`NestedGrid`PackagePrivate`$hPos$$, 
+                    TypeSystem`NestedGrid`PackagePrivate`$grid$$, 
+                    TypeSystem`NestedGrid`PackagePrivate`localHold[
+                    TypeSystem`NestedGrid`PackagePrivate`localHold[
+                    TypeSystem`NestedGrid`PackagePrivate`$outputID$$]]][{
+                    Key["run_id"]}, 1]]], 
+                   TypeSystem`NestedGrid`PackagePrivate`$SliceMarker[
+                    TypeSystem`NestedGrid`PackagePrivate`localHold[
+                    TypeSystem`NestedGrid`PackagePrivate`$outputID$$]][{
+                    Key["run_id"]}, "RowHeader", False], "Mouse"], 
+                  ImageSize -> {{1, Full}, Automatic}, 
+                  ImageMargins -> {{5, 3}, {4, 5}}], Background -> 
+                 RGBColor[
+                  0.9500473017990948, 0.9500473017990948, 0.9500473017990948],
+                  Alignment -> {Left, Baseline}], 
+                Item[
+                 Pane[
+                  Annotation["notebook_gpu_20261014010725_a7e9c088", 
+                   TypeSystem`NestedGrid`PackagePrivate`$SliceMarker[
+                    TypeSystem`NestedGrid`PackagePrivate`localHold[
+                    TypeSystem`NestedGrid`PackagePrivate`$outputID$$]][{
+                    Key["run_id"]}, "Item", False], "Mouse"], 
+                  ImageSize -> {{403.20000000000005`, Full}, Automatic}, 
+                  ImageMargins -> {{5, 3}, {4, 5}}], 
+                 ItemSize -> {Full, Automatic}]}, {
+                Item[
+                 Pane[
+                  Annotation[
+                   EventHandler[
+                    MouseAppearance[
+                    Mouseover["scope", 
+                    Style[
+                    "scope", FontColor -> 
+                    RGBColor[
+                    0.2749633796890805, 0.536987306253161, 
+                    0.791992189065661]]], "LinkHand"], {"MouseClicked", 1} :> 
+                    If[
+                    TypeSystem`NestedGrid`PackagePrivate`checkInteractivity[
+                    TypeSystem`NestedGrid`PackagePrivate`$state$$], 
+                    TypeSystem`NestedGrid`PackagePrivate`updateState[
+                    TypeSystem`NestedGrid`PackagePrivate`$state$$, 
+                    TypeSystem`NestedGrid`PackagePrivate`$path$$, 
+                    TypeSystem`NestedGrid`PackagePrivate`$vPos$$, 
+                    TypeSystem`NestedGrid`PackagePrivate`$hPos$$, 
+                    TypeSystem`NestedGrid`PackagePrivate`$grid$$, 
+                    TypeSystem`NestedGrid`PackagePrivate`localHold[
+                    TypeSystem`NestedGrid`PackagePrivate`localHold[
+                    TypeSystem`NestedGrid`PackagePrivate`$outputID$$]]][{
+                    Key["scope"]}, 1]]], 
+                   TypeSystem`NestedGrid`PackagePrivate`$SliceMarker[
+                    TypeSystem`NestedGrid`PackagePrivate`localHold[
+                    TypeSystem`NestedGrid`PackagePrivate`$outputID$$]][{
+                    Key["scope"]}, "RowHeader", False], "Mouse"], 
+                  ImageSize -> {{1, Full}, Automatic}, 
+                  ImageMargins -> {{5, 3}, {4, 5}}], Background -> 
+                 RGBColor[
+                  0.9500473017990948, 0.9500473017990948, 0.9500473017990948],
+                  Alignment -> {Left, Baseline}], 
+                Item[
+                 Pane[
+                  Annotation[
+                  "Small Real64/ComplexReal64 GPU/CPU multiplication, known \
+complex solution, residual and cuFFT comparison. Synthetic numerical \
+validation only.", 
+                   TypeSystem`NestedGrid`PackagePrivate`$SliceMarker[
+                    TypeSystem`NestedGrid`PackagePrivate`localHold[
+                    TypeSystem`NestedGrid`PackagePrivate`$outputID$$]][{
+                    Key["scope"]}, "Item", False], "Mouse"], 
+                  ImageSize -> {{560., Full}, Automatic}, 
+                  ImageMargins -> {{5, 3}, {4, 5}}], 
+                 ItemSize -> {Full, Automatic}]}, {
+                Item[
+                 Pane[
+                  Annotation[
+                   EventHandler[
+                    MouseAppearance[
+                    Mouseover["checks", 
+                    Style[
+                    "checks", FontColor -> 
+                    RGBColor[
+                    0.2749633796890805, 0.536987306253161, 
+                    0.791992189065661]]], "LinkHand"], {"MouseClicked", 1} :> 
+                    If[
+                    TypeSystem`NestedGrid`PackagePrivate`checkInteractivity[
+                    TypeSystem`NestedGrid`PackagePrivate`$state$$], 
+                    TypeSystem`NestedGrid`PackagePrivate`updateState[
+                    TypeSystem`NestedGrid`PackagePrivate`$state$$, 
+                    TypeSystem`NestedGrid`PackagePrivate`$path$$, 
+                    TypeSystem`NestedGrid`PackagePrivate`$vPos$$, 
+                    TypeSystem`NestedGrid`PackagePrivate`$hPos$$, 
+                    TypeSystem`NestedGrid`PackagePrivate`$grid$$, 
+                    TypeSystem`NestedGrid`PackagePrivate`localHold[
+                    TypeSystem`NestedGrid`PackagePrivate`localHold[
+                    TypeSystem`NestedGrid`PackagePrivate`$outputID$$]]][{
+                    Key["checks"]}, 1]]], 
+                   TypeSystem`NestedGrid`PackagePrivate`$SliceMarker[
+                    TypeSystem`NestedGrid`PackagePrivate`localHold[
+                    TypeSystem`NestedGrid`PackagePrivate`$outputID$$]][{
+                    Key["checks"]}, "RowHeader", False], "Mouse"], 
+                  ImageSize -> {{1, Full}, Automatic}, 
+                  ImageMargins -> {{5, 3}, {4, 5}}], Background -> 
+                 RGBColor[
+                  0.9500473017990948, 0.9500473017990948, 0.9500473017990948],
+                  Alignment -> {Left, Baseline}], 
+                Item[
+                 Pane[
+                  Annotation[
+                   EventHandler[
+                    MouseAppearance[
+                    Mouseover[
+                    Style[
+                    Row[{"\[ThinSpace]{ ", 
+                    Subscript["\[Ellipsis]", 5], " }\[ThinSpace]"}], 
+                    GrayLevel[0.5]], 
+                    Style[
+                    Style[
+                    Row[{"\[ThinSpace]{ ", 
+                    Subscript["\[Ellipsis]", 5], " }\[ThinSpace]"}], 
+                    GrayLevel[0.5]], FontColor -> 
+                    RGBColor[
+                    0.2749633796890805, 0.536987306253161, 
+                    0.791992189065661]]], "LinkHand"], {"MouseClicked", 1} :> 
+                    If[
+                    TypeSystem`NestedGrid`PackagePrivate`checkInteractivity[
+                    TypeSystem`NestedGrid`PackagePrivate`$state$$], 
+                    TypeSystem`NestedGrid`PackagePrivate`updateState[
+                    TypeSystem`NestedGrid`PackagePrivate`$state$$, 
+                    TypeSystem`NestedGrid`PackagePrivate`$path$$, 
+                    TypeSystem`NestedGrid`PackagePrivate`$vPos$$, 
+                    TypeSystem`NestedGrid`PackagePrivate`$hPos$$, 
+                    TypeSystem`NestedGrid`PackagePrivate`$grid$$, 
+                    TypeSystem`NestedGrid`PackagePrivate`localHold[
+                    TypeSystem`NestedGrid`PackagePrivate`localHold[
+                    TypeSystem`NestedGrid`PackagePrivate`$outputID$$]]][{
+                    Key["checks"]}, 4]]], 
+                   TypeSystem`NestedGrid`PackagePrivate`$SliceMarker[
+                    TypeSystem`NestedGrid`PackagePrivate`localHold[
+                    TypeSystem`NestedGrid`PackagePrivate`$outputID$$]][{
+                    Key["checks"]}, "Item", False], "Mouse"], 
+                  ImageMargins -> {{5, 3}, {4, 5}}], BaseStyle -> {
+                   GrayLevel[0.5]}]}}, 
+              BaseStyle -> {
+               ContextMenu -> 
+                Dynamic[
+                 TypeSystem`NestedGrid`PackagePrivate`$contextMenuTrigger; 
+                  Which[TypeSystem`NestedGrid`PackagePrivate`$lastOutputID =!= 
+                    TypeSystem`NestedGrid`PackagePrivate`localHold[
+                    TypeSystem`NestedGrid`PackagePrivate`$outputID$$], {}, 
+                    TypeSystem`NestedGrid`PackagePrivate`$contextMenuTrigger === 
+                    TypeSystem`NestedGrid`PackagePrivate`$\
+lastContextMenuTrigger, TypeSystem`NestedGrid`PackagePrivate`$lastContextMenu,
+                     True, TypeSystem`NestedGrid`PackagePrivate`$\
+lastContextMenuTrigger = 
+                    TypeSystem`NestedGrid`PackagePrivate`$contextMenuTrigger; 
+                    TypeSystem`NestedGrid`PackagePrivate`$lastContextMenu = 
+                    Block[{TypeSystem`NestedGrid`PackagePrivate`$\
+globalScrollPos = {TypeSystem`NestedGrid`PackagePrivate`$vPos$$, 
+                    TypeSystem`NestedGrid`PackagePrivate`$hPos$$}}, 
+                    
+                    With[{TypeSystem`NestedGrid`PackagePrivate`lastPath$ = 
+                    TypeSystem`NestedGrid`PackagePrivate`$lastPath, 
+                    TypeSystem`NestedGrid`PackagePrivate`lastPathType$ = 
+                    TypeSystem`NestedGrid`PackagePrivate`$lastPathType, 
+                    TypeSystem`NestedGrid`PackagePrivate`isLeafHeader$ = 
+                    TypeSystem`NestedGrid`PackagePrivate`$\
+lastPathIsLeafHeader, TypeSystem`NestedGrid`PackagePrivate`headerHidden$ = And[
+                    MatchQ[TypeSystem`NestedGrid`PackagePrivate`$lastPathType, 
+                    Alternatives["RowHeader", "ColumnHeader"]], 
+                    TypeSystem`NestedGrid`PackagePrivate`headerHiddenQ[
+                    TypeSystem`NestedGrid`PackagePrivate`$lastPath, 
+                    TypeSystem`NestedGrid`PackagePrivate`$state$$]], 
+                    TypeSystem`NestedGrid`PackagePrivate`allHidden$ = 
+                    TypeSystem`NestedGrid`PackagePrivate`allHiddenQ[
+                    TypeSystem`NestedGrid`PackagePrivate`$lastPath, 
+                    TypeSystem`NestedGrid`PackagePrivate`$state$$], 
+                    TypeSystem`NestedGrid`PackagePrivate`anyHidden$ = 
+                    TypeSystem`NestedGrid`PackagePrivate`anyHiddenQ[
+                    TypeSystem`NestedGrid`PackagePrivate`$lastPath, 
+                    TypeSystem`NestedGrid`PackagePrivate`$state$$], 
+                    TypeSystem`NestedGrid`PackagePrivate`sortDirection$ = 
+                    TypeSystem`NestedGrid`PackagePrivate`columnSortDirection[
+                    TypeSystem`NestedGrid`PackagePrivate`$lastPath, 
+                    TypeSystem`NestedGrid`PackagePrivate`$state$$[
+                    "SortPaths"], 
+                    TypeSystem`NestedGrid`PackagePrivate`$state$$[
+                    "SortDirections"]], 
+                    TypeSystem`NestedGrid`PackagePrivate`haveData$ = Not[
+                    FailureQ[
+                    TypeSystem`NestedGrid`PackagePrivate`datasetInitialData[
+                    TypeSystem`NestedGrid`PackagePrivate`$state$$]]], 
+                    TypeSystem`NestedGrid`PackagePrivate`isKeyDummy$ = Not[
+                    FreeQ[
+                    TypeSystem`NestedGrid`PackagePrivate`$lastPath, Keys]]}, 
+                    Join[{
+                    If[
+                    Or[
+                    Not[TypeSystem`NestedGrid`PackagePrivate`haveData$], 
+                    Not[TypeSystem`NestedGrid`PackagePrivate`anyHidden$], 
+                    TypeSystem`NestedGrid`PackagePrivate`isKeyDummy$], 
+                    Nothing, 
+                    MenuItem[
+                    "Show " <> 
+                    Which[TypeSystem`NestedGrid`PackagePrivate`lastPathType$ == 
+                    "Item", "", 
+                    TypeSystem`NestedGrid`PackagePrivate`lastPathType$ == 
+                    "RowHeader", "Row", 
+                    TypeSystem`NestedGrid`PackagePrivate`lastPathType$ == 
+                    "ColumnHeader", "Column", True, ""], 
+                    KernelExecute[
+                    TypeSystem`NestedGrid`PackagePrivate`updateHiddenItems[
+                    TypeSystem`NestedGrid`PackagePrivate`$state$$, 
+                    TypeSystem`NestedGrid`PackagePrivate`$path$$, 
+                    TypeSystem`NestedGrid`PackagePrivate`$vPos$$, 
+                    TypeSystem`NestedGrid`PackagePrivate`$hPos$$, 
+                    TypeSystem`NestedGrid`PackagePrivate`$grid$$, 
+                    TypeSystem`NestedGrid`PackagePrivate`localHold[
+                    TypeSystem`NestedGrid`PackagePrivate`localHold[
+                    TypeSystem`NestedGrid`PackagePrivate`$outputID$$]]][
+                    TypeSystem`NestedGrid`PackagePrivate`lastPath$, 
+                    "remove"]], MenuEvaluator -> Automatic]], 
+                    If[
+                    Or[
+                    Not[TypeSystem`NestedGrid`PackagePrivate`haveData$], 
+                    TypeSystem`NestedGrid`PackagePrivate`pathEmptyQ[
+                    TypeSystem`NestedGrid`PackagePrivate`$lastPath, 
+                    TypeSystem`NestedGrid`PackagePrivate`$state$$], 
+                    TypeSystem`NestedGrid`PackagePrivate`isKeyDummy$, 
+                    And[
+                    TypeSystem`NestedGrid`PackagePrivate`allHidden$, 
+                    TypeSystem`NestedGrid`PackagePrivate`headerHidden$]], 
+                    Nothing, 
+                    MenuItem[
+                    "Hide " <> 
+                    Which[TypeSystem`NestedGrid`PackagePrivate`lastPathType$ == 
+                    "Item", "", 
+                    TypeSystem`NestedGrid`PackagePrivate`lastPathType$ == 
+                    "RowHeader", "Row", 
+                    TypeSystem`NestedGrid`PackagePrivate`lastPathType$ == 
+                    "ColumnHeader", "Column", True, ""], 
+                    KernelExecute[
+                    TypeSystem`NestedGrid`PackagePrivate`updateHiddenItems[
+                    TypeSystem`NestedGrid`PackagePrivate`$state$$, 
+                    TypeSystem`NestedGrid`PackagePrivate`$path$$, 
+                    TypeSystem`NestedGrid`PackagePrivate`$vPos$$, 
+                    TypeSystem`NestedGrid`PackagePrivate`$hPos$$, 
+                    TypeSystem`NestedGrid`PackagePrivate`$grid$$, 
+                    TypeSystem`NestedGrid`PackagePrivate`localHold[
+                    TypeSystem`NestedGrid`PackagePrivate`localHold[
+                    TypeSystem`NestedGrid`PackagePrivate`$outputID$$]]][
+                    TypeSystem`NestedGrid`PackagePrivate`lastPath$, "add"]], 
+                    MenuEvaluator -> Automatic]], Delimiter}, 
+                    If[
+                    And[TypeSystem`NestedGrid`PackagePrivate`haveData$, 
+                    MatchQ[TypeSystem`NestedGrid`PackagePrivate`lastPathType$, 
+                    Alternatives["ColumnHeader", "KeyDummy"]], 
+                    TypeSystem`NestedGrid`PackagePrivate`isLeafHeader$, 
+                    Not[TypeSystem`NestedGrid`PackagePrivate`allHidden$]], {
+                    If[
+                    TypeSystem`NestedGrid`PackagePrivate`sortDirection$ =!= 
+                    "Ascending", 
+                    MenuItem["Sort", 
+                    KernelExecute[
+                    TypeSystem`NestedGrid`PackagePrivate`updateSort[
+                    TypeSystem`NestedGrid`PackagePrivate`$state$$, 
+                    TypeSystem`NestedGrid`PackagePrivate`$path$$, 
+                    TypeSystem`NestedGrid`PackagePrivate`$vPos$$, 
+                    TypeSystem`NestedGrid`PackagePrivate`$hPos$$, 
+                    TypeSystem`NestedGrid`PackagePrivate`$grid$$, 
+                    TypeSystem`NestedGrid`PackagePrivate`localHold[
+                    TypeSystem`NestedGrid`PackagePrivate`$outputID$$]][
+                    TypeSystem`NestedGrid`PackagePrivate`lastPath$, 
+                    "Ascending"]], MenuEvaluator -> Automatic], Nothing], 
+                    If[
+                    TypeSystem`NestedGrid`PackagePrivate`sortDirection$ =!= 
+                    "Descending", 
+                    MenuItem["Reverse Sort", 
+                    KernelExecute[
+                    TypeSystem`NestedGrid`PackagePrivate`updateSort[
+                    TypeSystem`NestedGrid`PackagePrivate`$state$$, 
+                    TypeSystem`NestedGrid`PackagePrivate`$path$$, 
+                    TypeSystem`NestedGrid`PackagePrivate`$vPos$$, 
+                    TypeSystem`NestedGrid`PackagePrivate`$hPos$$, 
+                    TypeSystem`NestedGrid`PackagePrivate`$grid$$, 
+                    TypeSystem`NestedGrid`PackagePrivate`localHold[
+                    TypeSystem`NestedGrid`PackagePrivate`$outputID$$]][
+                    TypeSystem`NestedGrid`PackagePrivate`lastPath$, 
+                    "Descending"]], MenuEvaluator -> Automatic], Nothing], 
+                    If[
+                    TypeSystem`NestedGrid`PackagePrivate`sortDirection$ =!= 
+                    None, 
+                    MenuItem["Unsort", 
+                    KernelExecute[
+                    TypeSystem`NestedGrid`PackagePrivate`updateSort[
+                    TypeSystem`NestedGrid`PackagePrivate`$state$$, 
+                    TypeSystem`NestedGrid`PackagePrivate`$path$$, 
+                    TypeSystem`NestedGrid`PackagePrivate`$vPos$$, 
+                    TypeSystem`NestedGrid`PackagePrivate`$hPos$$, 
+                    TypeSystem`NestedGrid`PackagePrivate`$grid$$, 
+                    TypeSystem`NestedGrid`PackagePrivate`localHold[
+                    TypeSystem`NestedGrid`PackagePrivate`$outputID$$]][
+                    TypeSystem`NestedGrid`PackagePrivate`lastPath$, None]], 
+                    MenuEvaluator -> Automatic], Nothing], Delimiter}, {}], {
+                    MenuItem["Copy Position to Clipboard", 
+                    KernelExecute[
+                    TypeSystem`NestedGrid`PackagePrivate`toCurrentPosition[
+                    TypeSystem`NestedGrid`PackagePrivate`copyClip]], 
+                    MenuEvaluator -> Automatic], 
+                    If[TypeSystem`NestedGrid`PackagePrivate`haveData$, 
+                    MenuItem["Copy Data to Clipboard", 
+                    KernelExecute[
+                    TypeSystem`NestedGrid`PackagePrivate`toCurrentData[
+                    TypeSystem`NestedGrid`PackagePrivate`$state$$, 
+                    TypeSystem`NestedGrid`PackagePrivate`copyClip]], 
+                    MenuEvaluator -> Automatic], Nothing], Delimiter, 
+                    MenuItem["Paste Position in New Cell", 
+                    KernelExecute[
+                    TypeSystem`NestedGrid`PackagePrivate`toCurrentPosition[
+                    TypeSystem`NestedGrid`PackagePrivate`cellPaste]], 
+                    MenuEvaluator -> Automatic], 
+                    If[TypeSystem`NestedGrid`PackagePrivate`haveData$, 
+                    MenuItem["Paste Data in New Cell", 
+                    KernelExecute[
+                    TypeSystem`NestedGrid`PackagePrivate`toCurrentData[
+                    TypeSystem`NestedGrid`PackagePrivate`$state$$, 
+                    TypeSystem`NestedGrid`PackagePrivate`cellPaste]], 
+                    MenuEvaluator -> Automatic], Nothing]}]]]]], FontFamily -> 
+                "Source Sans Pro", FontSize -> 14, FontWeight -> Plain}, 
+              Dividers -> All, FrameStyle -> 
+              RGBColor[
+               0.749003690406716, 0.749003690406716, 0.749003690406716], 
+              Spacings -> {0, 0}, Alignment -> Left, 
+              BaseStyle -> {
+               FontFamily -> "Source Sans Pro", FontSize -> 14, FontWeight -> 
+                Plain}], LineBreakWithin -> False, ContextMenu -> {}, 
+             NumberMarks -> False, ShowAutoStyles -> False]], 
+          TypeSystem`NestedGrid`PackagePrivate`initialQ = True}, 
+         Dynamic[
+          TypeSystem`NestedGrid`PackagePrivate`setupViewPath[
+          TypeSystem`NestedGrid`PackagePrivate`$path$$, If[
+             Not[TypeSystem`NestedGrid`PackagePrivate`initialQ], 
+             
+             Module[{TypeSystem`NestedGrid`PackagePrivate`tmpGrid$ = $Failed, 
+               TypeSystem`NestedGrid`PackagePrivate`tmpData$ = 
+               TypeSystem`NestedGrid`PackagePrivate`datasetData[
+                TypeSystem`NestedGrid`PackagePrivate`$state$$]}, 
+              TypeSystem`NestedGrid`PackagePrivate`tmpGrid$ = If[
+                 FailureQ[TypeSystem`NestedGrid`PackagePrivate`tmpData$], 
+                 TypeSystem`NestedGrid`PackagePrivate`renderedGrid, 
+                 TypeSystem`NestedGrid`PackagePrivate`renderGrid[
+                 TypeSystem`NestedGrid`PackagePrivate`$state$$, 
+                  TypeSystem`NestedGrid`PackagePrivate`$path$$, 
+                  TypeSystem`NestedGrid`PackagePrivate`$vPos$$, 
+                  TypeSystem`NestedGrid`PackagePrivate`$hPos$$, 
+                  TypeSystem`NestedGrid`PackagePrivate`$grid$$, 
+                  TypeSystem`NestedGrid`PackagePrivate`localHold[
+                  TypeSystem`NestedGrid`PackagePrivate`$outputID$$]][
+                 TypeSystem`NestedGrid`PackagePrivate`tmpData$]]; If[
+                Not[
+                 FailureQ[TypeSystem`NestedGrid`PackagePrivate`tmpGrid$]], 
+                TypeSystem`NestedGrid`PackagePrivate`renderedGrid = 
+                TypeSystem`NestedGrid`PackagePrivate`tmpGrid$]; Null]]; 
+           TypeSystem`NestedGrid`PackagePrivate`initialQ = False; 
+           TypeSystem`NestedGrid`PackagePrivate`$vPos$$; 
+           TypeSystem`NestedGrid`PackagePrivate`$hPos$$; If[
+             FailureQ[TypeSystem`NestedGrid`PackagePrivate`renderedGrid], 
+             TypeSystem`SparseGrid[
+              TypeSystem`H["(data no longer present)"]], 
+             TypeSystem`NestedGrid`PackagePrivate`renderedGrid]], 
+          TrackedSymbols :> {
+           TypeSystem`NestedGrid`PackagePrivate`$vPos$$, 
+            TypeSystem`NestedGrid`PackagePrivate`$hPos$$}], 
+         DynamicModuleValues :> {}], 
+        TypeSystem`NestedGrid`PackagePrivate`$topBar$$ = Dynamic[
+         TypeSystem`NestedGrid`PackagePrivate`makeFramedBar[
+          TypeSystem`PackageScope`SubViewPathbar[
+          TypeSystem`NestedGrid`PackagePrivate`$path$$, 
+           TypeSystem`NestedGrid`PackagePrivate`updateState[
+           TypeSystem`NestedGrid`PackagePrivate`$state$$, 
+            TypeSystem`NestedGrid`PackagePrivate`$path$$, 
+            TypeSystem`NestedGrid`PackagePrivate`$vPos$$, 
+            TypeSystem`NestedGrid`PackagePrivate`$hPos$$, 
+            TypeSystem`NestedGrid`PackagePrivate`$grid$$, 
+            TypeSystem`NestedGrid`PackagePrivate`localHold[
+            TypeSystem`NestedGrid`PackagePrivate`$outputID$$]]]], 
+         TrackedSymbols :> {TypeSystem`NestedGrid`PackagePrivate`$path$$}], 
+        TypeSystem`NestedGrid`PackagePrivate`$bottomBar$$ = Dynamic[
+         Replace[
+          Replace[
+          TypeSystem`NestedGrid`PackagePrivate`mouseAnnotation$$, {
+           TypeSystem`NestedGrid`PackagePrivate`$SliceMarker[
+              TypeSystem`NestedGrid`PackagePrivate`localHold[
+              TypeSystem`NestedGrid`PackagePrivate`$outputID$$]][Null, 
+              Blank[]] -> "", 
+            TypeSystem`NestedGrid`PackagePrivate`$SliceMarker[
+              TypeSystem`NestedGrid`PackagePrivate`localHold[
+              TypeSystem`NestedGrid`PackagePrivate`$outputID$$]][
+              Pattern[TypeSystem`NestedGrid`PackagePrivate`path$, 
+               Blank[]], 
+              Pattern[TypeSystem`NestedGrid`PackagePrivate`pathType$, 
+               Blank[]], 
+              Pattern[TypeSystem`NestedGrid`PackagePrivate`isLeafHeader$, 
+               Blank[]]] :> (
+             Increment[
+              TypeSystem`NestedGrid`PackagePrivate`$contextMenuTrigger]; 
+             TypeSystem`NestedGrid`PackagePrivate`$lastPath = 
+              TypeSystem`NestedGrid`PackagePrivate`path$; 
+             TypeSystem`NestedGrid`PackagePrivate`$lastPathType = 
+              TypeSystem`NestedGrid`PackagePrivate`pathType$; 
+             TypeSystem`NestedGrid`PackagePrivate`$lastPathIsLeafHeader = 
+              TypeSystem`NestedGrid`PackagePrivate`isLeafHeader$; 
+             TypeSystem`NestedGrid`PackagePrivate`$lastOutputID = 
+              TypeSystem`NestedGrid`PackagePrivate`localHold[
+               TypeSystem`NestedGrid`PackagePrivate`$outputID$$]; 
+             TypeSystem`NestedGrid`PackagePrivate`makePathTrail[
+              TypeSystem`NestedGrid`PackagePrivate`path$, 
+               TypeSystem`NestedGrid`PackagePrivate`makePathElements]), Null :> 
+            Spacer[10], Blank[] :> Spacer[10]}], 
+          Pattern[TypeSystem`NestedGrid`PackagePrivate`bar, 
+            Except[
+             Alternatives[
+              Blank[Spacer], ""]]] :> 
+          TypeSystem`NestedGrid`PackagePrivate`makeFramedPathbar[
+           TypeSystem`NestedGrid`PackagePrivate`bar]], 
+         TrackedSymbols :> {
+          TypeSystem`NestedGrid`PackagePrivate`mouseAnnotation$$}], 
+        TypeSystem`NestedGrid`PackagePrivate`mouseAnnotation$$ = Null}, 
+        DynamicWrapperBox[
+         DynamicBox[ToBoxes[
+           Dataset`DatasetContent[
+           2, "Path" -> Hold[TypeSystem`NestedGrid`PackagePrivate`$path$$], 
+            "Grid" -> Hold[TypeSystem`NestedGrid`PackagePrivate`$grid$$], 
+            "State" -> Hold[TypeSystem`NestedGrid`PackagePrivate`$state$$], 
+            "VPos" -> Hold[TypeSystem`NestedGrid`PackagePrivate`$vPos$$], 
+            "HPos" -> Hold[TypeSystem`NestedGrid`PackagePrivate`$hPos$$], 
+            "TopBar" -> Hold[TypeSystem`NestedGrid`PackagePrivate`$topBar$$], 
+            "BottomBar" -> 
+            Hold[TypeSystem`NestedGrid`PackagePrivate`$bottomBar$$], 
+            "OutputID" -> Hold[
+              TypeSystem`NestedGrid`PackagePrivate`localHold[
+              TypeSystem`NestedGrid`PackagePrivate`$outputID$$]]], 
+           StandardForm],
+          
+          ImageSizeCache->{
+           748.1240015029907, {37.531033203125, 43.262966796875}},
+          
+          TrackedSymbols:>{
+           TypeSystem`NestedGrid`PackagePrivate`$state$$, 
+            TypeSystem`NestedGrid`PackagePrivate`$grid$$}], 
+         TypeSystem`NestedGrid`PackagePrivate`mouseAnnotation$$ = 
+         MouseAnnotation[],
+         ImageSizeCache->{
+          748.1240015029907, {37.531033203125, 43.262966796875}}],
+        BaseStyle->{
+         LineBreakWithin -> False, 
+          LightDarkAutoColorRules -> <|"MarkedColors" -> True|>},
+        DynamicModuleValues:>{},
+        Initialization:>(TypeSystem`NestedGrid`PackagePrivate`$outputID$$ = 
+         CreateUUID[]),
+        UnsavedVariables:>{TypeSystem`NestedGrid`PackagePrivate`$outputID$$}],
+       Deploy,
+       DefaultBaseStyle->"Deploy"],
+      Dataset`InterpretDataset[1],
+      Editable->False,
+      SelectWithContents->True,
+      Selectable->False]},
+    {
+     GraphicsBox[{{}, 
+       InterpretationBox[{
+         TagBox[
+          TagBox[
+           {RGBColor[0.24, 0.6, 0.8], PointSize[0.0055000000000000005`], 
+            AbsoluteThickness[2], PointBox[CompressedData["
+1:eJw9WXlczOv3n4oiYSgtWgzZQoSyL29Zos1UtlKa9r1m2mummtC1hZKtKCN7
+oSy3aykNoUiaRHaGVuKaiyKSr9dvzufXyz/H83nOec72PssM945w9lNl/flT
+/b9/9KeYr75Rv6FWpY+U/gPBs3l3Lg3pRXQfLD2sGfHr5sP5SpoNvQMDzb8U
+/Ee0DoTl66NuzVKUK2l9PJ6Xef5KyHuijbDJ6KTQxL0PlDQHtqtOmyVk9yX+
+I/D0eGgjx7Ob+I2Ef/hpc1PT23R/NIz7v9wxN/gb0WMxI+WYINGghb4fBwNJ
+zrKAaa10PgGrpFsfbbvfQfRE9PvcYGbW91+iLZAp2+2a6su8ZzI2ZN3mVqb3
+o/dMgb3O5YXzRIz+U3HNaE/7iDXMuSXGB5skx97UpftWOO3ZnjaJrU30NJy+
+U9lbq+AZyZuO65f+feFtzbx/BmZbbyo8tlSFvp+JtDq+/MgvdeI/C31+bt80
+aP9H0m82EhtO9Rm0T5fO52DjKWubcFc20XNx/M3B7PwR7cR/Hni2Cr1Ia3Xi
+Px/Tk++Id/r/R+eAj/3+k5n7Xyv5i4GkDINro/w16fsFWDO0pNlSc7CSFi9A
+Sk5aY07uB3qPNc5McgO3YhCdW+NmreWYNHwl/gshLCx+nNLyi/gvxOt560Sz
+o4kfaxGCmo2/V7beV34vXoTISn6h3RCG/2IkoZbndvI7nS9GzdcFEx49ryf+
+S/CgzuTA/Pv9SP4SQFyj3fCd0c8GQnvxqJFGFB9iG7yLNpGFsbTJXksR09q8
+M7SZ4kW8FGWm+zt+n+2i+8vgPc5r5qgfZF/xMlwYKGv1PTOC7ttiZNnb99rz
+fhB/W/jFRXkvi5fT++3wslZP9PpqN/G3w64p9/4OzyZ7s+wROVlcq9ugT++3
+xwmXcl5eFuMvB/SkmxgUtTwi/g5ou7j7nTy8P507Ymd0+pn4Ijnxd8SV8rUP
+NSYy+bMc69xKko+o/qDz5dBuF3w71axD97mweLHt+l4j+h5cHOMY87mdFJ9i
+LqxUfp69az1Eqa+Ui5l2750n5jD55gRxgGy9lQ35E05Ype3fY+s/gOzlBHNX
+6eQpAaSv1AmJhQNmVZcy9nFG7WMPk7p2eg+ccck9ZHP6DDW674xlfTOz/aXN
+yvdInXF0LcdZbwqL7O+Cj7kVcyLUCK/gAoWZ9u9ETU2674JZZbZX/PtqKflL
+XVAkC8xw92XwZgVMt0yY2H2zF8lfAfW0Op2h3Rzyxwps/VVWvtmG8l+6AsvU
+mvTrHNsoPlai6PDqulgjijeshNvub9/iw/qT/JU4MvOmyV+pZE/pShTsPzKW
+36JH8lfBieUz8bx2J9l/FdhT7Jt6naX4FK9C1x3303V7epP8P9/bcwZDSvqx
+VkN9W3PmQbU3JH81+EMPvOSZUv6JV2Pk5NcqxVsG0v3VGDpjz8FAMHizBjsP
+pHZbnSN7Yw1qGmPliX1bKd7W4JOBSfWEHRSf0jX4+X7P+Oe7zpL/XLHtlIut
+/BXjf1cIGhZXLG4j/mJXuC6v8v7SNJTku0JlYv5gQ3PG/m740eeSJCjtCb3f
+DdWV+Wfzr7Dovht6RY7WF53+QPZzQ9Vf6mKRG4NvazFjjWHh7wbCQ6xFUZlx
+VlJXCem/FtOye7G+W/Sm96/FJC3+gNzzDN67I8nUrf526ROyvzvct2d0qUgp
+/8XuWH/1deGyfPKP1B1nF3957yHWoPd7YKGec+fMAnWS74Er9ZlPVp9+Tvc9
+UL/xzCWrTUz8e0ChUXnxljfhJWsd3MqW/G1wlvIZ6/CW80hzFVuH/L8O3Y+M
+c6SplB/SdQgtuNMue/OJ7O+J+qzO6e1HyN/whG7YHNFfGzl03xOqI9e9mXmF
+4lPqiWHHSv9RczQi+Twcary2r6qwS8mPw4Ph6brqvOMUv+Dhw9Q2Rb0h1U8e
+D6yujsrN/1A9F/Ow9l1/4ydjVZX8JDwILiztOj6AiRcetpjqdTyOGKKk5TyM
+9KnclaRJeMTywo+Bzwa7R70g+V4wZA3fcTOI4gdeGMN6dbN6MNE8L6y99x83
+94WakhZ74fkSaenjVVR/JV74vdfx+W1Per/UC48fzdsY8+mbkr/cC/666+Y6
+6DP46o2m+1cG9537L8n3xt1DndO3fGTw0BsnxjUaDBH/VtI8byQMvDhoaeVw
+sq83nByXfet5YaykJd7IdAmKSV9I9pV6Y61f+eWs/tQvyL1h1lBhlPiB6a98
+IJ6dMnW/JeU3xweXPq+s/N5B/RR8UN2ZxtN3ovrD84FVuvXdmpkUL2IftGSN
+mR+2PFtpT4kPos90T5ojpHOpD861uTUFVv9Unst9YKinFmvnoaD48cVKqyc7
+L90m/3B8Yf3z1dGsde9Ivi/c+j8xz7xsQvJ9MTkqbGNmN71P7IvhrZv4dp9/
+KmmJLyZ07EnzHEf5I/XF7fan1k7qbPK/L9qt9U467yI8Z/kh/1tsR7hrB9nf
+D7/6dpkvO0f+hR98kscZPrWl+Of5oaz9i/mETMb+fnCbNnvsVU+KX4kfsp/v
+H7hT/pDk+6G/TYfOYBkj3w+r9cI0F1Qx/ak/2Es77aZdVif7+8OyU541SYWp
+B/7w9T1mfjK6lOLfH70WDH15oRfxE/uj1OWrhvc+wiOJP4qbkosMB1K9lvoj
+1/HbkxDr62R/fwhFRaeXGT0n+wdg0LjqpWOzqX/gBOBEJ3uq3l6qFwjADF3X
+E5HLKR55AQh62rnp4xLCH3EAPmkP3bjiAOWTJAD77Y/qSFIJX6UB2PgldYN1
+OvlbHgAfs0FzvcuZ+A9E5ZuEH90dpC8nEIt6vLaabaH6hkCEfX+S8+JtFekf
+CL2k1muHggeQ/oGonZxaqDuf8FUSiFmdlqdub2HkByL78gX/XXv6kv0DIUif
+rlE3QEV5zgqCim3rOZsSojlBmCK0rKrxrCP5Qdi8uS7nZpuB8pwXhL3l3hPZ
+meRfcRAsnF9PqUitJf2DsObhKfVHbXfI/0Fo2RdveyfqAekfhK3Pp1b0fGXq
+ZzC6M+3O2Ob8Vn7PCcaioU0/++Qx/UgwTPUlX270UHzwgnFh83RbjddMfxOM
+G6eiuld3kT8kwbg4R62PgzpTr4ORyXu52LqLyf9gmKf7fdO73E7+D8HDp7Wd
+RhlUDzghqJqUlVGoMCT5IXjweH9JtYDBnxC03Wna9bbPS9I/BJH1XzYMNiV8
+lIRA1fJtSjCb5iVpCFaeWplgYK9H9g9B+4SIklcSRv9QbL/7Y0zpXMb/ofgc
+XqlWZaeqPEco7uo6nv+uTnjAC0WvVS0PVmSYkP9D8SW992PDwjLKv1AsqRix
+uMRUn/QPxbPZ4tmhmymf5aGY4TuqKHL8d9I/DFN3Ds4o2zyY/B+GZ7yBd/ve
+MiL5YYjZd+tcpRbFKy8Mh1bHHPKUUv8nDkNd3vm+o/NJP0kYbDqMbz0xa6P8
+C8OQokCPDymvKP/CUKyb45Kjw9T/cMw6olvxxPcr5V84VDT+nqoiJDxCOHTU
+rliei6L+lxcO0Zu6F8/+fx4Kh6TjYsVcPXXyfziud7vIsoopn6XhiGHxVmR6
+kL3k4agXTjcun8r0DxGQHGze3uPCxH8EnIw8HS+4Uj4hAuyHvIHmLU1k/wjo
+Oy57NEiP6p04Akdr0qwa9tF9SQTM49t+VXLek/wIrBxocOtzdinFfwQOPfj+
+3WUk+YPFx8eigkbt3/Q9m49+lleO7gqnfoLDx8aNL3Wa86n+W/AxvLk1WrSE
++hPwMXNa2IrNHJLP5cNTnPvM2ukKvZcP0+vO0rC/finv8/m4UVTG+zWF4kvM
+x0257HjZUor/DD4c7LMl+/n0PgkfKe2qoV97Uz0p5mPbgjUHT66jfk3Kh+3U
+Z+tsEmk+lvHhFHldHFZF8SznQ1Ff8yV3ENlbwccbUdW95md0zhLgxt6U1Im3
+Kd7YAgwfsOhh5cdh5A8BtE3S7k0/SvXTQoCiIouBwXnvCJ8EMFvXUxdoQf0t
+VwAV96E9HY9oXuAJIDy7YoSLFtVXvgCpi/Kdjc0IX8UC7Ptvu33mCfo+Q4Be
+XiKf35YMngpQOkikaX2N6k2xAL7j8o7fTCdaKoCtyhLDn3cpfmUCdEwrf7x8
+DuWTXABWsyTfNIvwWCGArPrFsNHT6b2sSCyuy2qZm0/4xI7ELPmvzZ816XtO
+JD7VbExwfdxJ+kdisvWSC66vqT9HJHLTF2puvUA0NxJzDjuUZXlT/8OLhHmM
+cU7xIYonfiS8Jyxcws6j/BdH4jdL6NR2i+b7jEh06pTOMUoi/JRE4u2VKSsi
+mgmviiNRUNO4WypqJHyLhMfoVo+8LHq/LBItHz9Pmzmkh+I9EloH/9nFzfis
+pBWRGKB29dJIf2b+ioJr5aKM3D00b7Gj0BOg+37nMsJfThQeB52xERXS/sIi
+Cvdc6jMzQPIQhfMn9jeEpw8n/aOgdXmQ667RTL2KwpoDP+eaVlK88aOwfpek
+QVRK/hJH4Wj55O0vS2m+yYjCHqdxXPU1tA+RRKH/radac9TJXsVRmHf/wepe
+OfReaRS+pa3cs3ct+VMWBWffV606jVQP5FHw/+lvcWAUzXOKKKxyFMi2vGXy
+PxpbLw+Q/hhB99nReHj4eFOjL/VXnGhwdqhm6N4gfLWIxsHqjV2H9Al/EQ0V
+l1c+Dm7Un3Kj4btucnP0EaZeRKO1dJSb08pBynN+NCa136jIqWP2EdHIkiRO
+8/Y9R/pHIz/ilrvFF6aeRsPZzGyW1XBD8n809qvlnwwY2kP+j4ahh9HCebVX
+lLQsGuHXHeSXL7wlvI/G11kDnpV4M/n/536ez+kYB8p3VgwEJfPWs+9WKr9n
+x8BB99h8Pw16HycGagURxT3TSL5FDH5q3X5xZTfhGWIg7KqpfvPos5LmxqDr
+UeCwTYMJ33gxqPlkoesWQvbmxyD/zvqPglqKb3EMppW8G/e2843SXhkxsNp+
+d+Hh0bR/kMTAMvreKaSTf4pjIDu4N4NbTvVLGoO0DnP/FiMNJS2LweltBV9f
+6FO8y2PQGiH5KRSPVZ4rYpAsKnp35pg66R+L5FOp49v8KF/YsXCYsrxgUiH1
+p5xYxA330tw9i/LPIhbl0c/buwcMVPJDLLJnnGhLtaN9EDcWzif+zvuwkNE/
+Fu9Z6c8zV1H/x4/FvSV+kXIBs0/78/1s1OzcS/1XRiw0MscPDT9B8iSxmFEf
+4XpqHOlbHItvW2/O11Oj/l0aiyq+6gDLd1SPZbF4ZrXhv5N7iJ88FgUeu7Kv
+5tC5IhZh+lqzxVtpXmHF4cEKObslkfCWHQc9tvR+8ThmHopDyILjnWOyad62
+iMPiTz1jDrQQ/iIOnsMnfVn5gvCbGwfHizKLwG/0Pl4cGt2XP6joTf0kPw58
+t3TJJNC8Io5DikDD0bmb5GXE4Znhq0/222l+l8TBUDfI8a/nNL8Xx2FHyYHF
+PyoNyP9xOFofsT4gbaTye1kc8ntvsxklpP5HHgeNa/K5OsfoPYo46P44eU+1
+ltmfxSM+r2tmbpwq6R+P9aNV17tr0fzBicfJ5u4+H9OpHlrEo2DRQd36sVTv
+EY+24ZVROi/J39x4KOatYtXo0TzPi4d5t/Hi2yZU3/nxCGlcoh9+WJ38H4+e
+jviLgtKhpH88aj9oGXMzqN+VxMOuMu2d7gEG/+PhVTmxyNCT9lXSeKwyiIzs
+dKR4ksWDvSvtgEdFLukfD82Q1x1zTSjfFfF4+7L6+jY5s89PgMLMr+r4DtKX
+nYDx/WrzO8uY+p8Atzkq/y0Xysj/CdAL6MdzOEf9ABJQP133dNZz2mdyE9Cb
+PytUsp3ex0tA0/Nc1b8/kD34CXD5bndEo41+fxAnYFKNonmcAeVvRgI6tJKj
+pg6l+UqSgEelth5vagh/ixMwQjvY8vNtBv8TUNd6b+7zBWQ/WQKSp234y6rk
+McV/AiT1K4T/DSN8UiSA++Go/pqLzPyViGEnRz3gKr5Q/idCwFNUGawmeZxE
+OOw/XlnBonyySMT8oq2bRpRT/UUiyuK1e3V+pX09N/HPvHEj9JgD5TsvEYd3
+HA0eMYPyj58IuzcbCo3DaR4VJyLpfOr+/Ddkr4xEWAb5x23ypniSJGLoobgd
+BmVk7+JEVNm8q0YR+VOaiJ/f5JzxNtSvyBIRGHrD9p9qpv9LRENJdpPHWLKX
+IhEan8/6ew+hfR5LiME6T+ZUaraQ/4W4F1T4MFvG9L9CbDH3tTQ7SvluIcSC
+Vy/6Z22legAhHFgNJTm2pB9XiK+jQw81FdK+mSfE2+TDXv1f0jzBF2K256R/
+g4yZ/a4QV3s3Gi2/wegvhJra4B+HblC+S4SY3ypMPZZA8V0sRHZFw7J+TZRP
+UiHKs6S6gVup35L9kbfW8q55B+GzXIgLLi+S9r6g3zcUQuhpxHdJKpnfX0Ro
+Dm47krGN5iu2CL+Sda4ecSL7cES4W7twtvVo+j3IQoT713qP2TGA6gVE6Hf8
+WX7WE9p/cEUorp5hsP4l9Ys8ESZt4f3mTaffZ/gipAyTFNrsY/bTIgjub1r0
+YT3FY4YIajZbc6dcJXkSEbwiPjnOHfGI/C9C2ol9Dl4/66j/F0E1f02INIf6
+DZkINrGT6/K+Ur2Qi3CCFfj0qYT6U4UIpi9nSE4cZfZfSWicP2xH0gTCQ3YS
+AguXzvdpp/0cJwmtXKtRpv9eoPxPwqbmgRs2aFM9RhLKPm/WSTegeYT7h9/N
+A0Wv/Cn+eElYZqTZ4DOd+kd+EoYf3KF4KiY8FidBUvDul5UeM/8k4VrepLeH
+mflOkoRYXmO8w1Xqn4qTkHp16blLR5l9dBLmCarnDjHUUp7LkrCnHz8jegHh
+izwJ2zIH5SVWE34pkqCZm/jJdBrNk6xk5Pr0jXfmkj3YyTDZPPVDwlKyFycZ
+kw/2P1fzjvoXi2Q4hu1s26n9hfI/GWLT85vtx1wk/ZOhM2vb9LwPTP+fjPcC
+64Vx/oSv/GSEl2/c2zSL9BEn425Bjv0/VrQvzkhGjTZbJuqkfa0kGTOvq4r5
+I6up/03Ghsnzqh+9pf2LNBkxP67cSq2g/a0sGV4uX4dZniJ58uQ/8173m7v7
+qJ9XJMPOQZ4wI5/B/xSM9wq7df8q+YedAov7F8fUmDL6p2CN+u7MwtfN5P8U
+PLWt6Dcv4iPpn4JFWX9Z21dRPnNToBLYEbY7hvCSl4KmwzdO3H9A+xB+CsY1
+a1/vP4TwVZwCrcZxBQfcCX8yUvBkol2eeyDJl6Qgwnekg1TVVEkXp+DB+W08
+TxbtX6UpKHHJNvMcTngp+0P7ttz13cPgfwpqTRLeGagRf8UfffeWbubLyf4s
+MV7aGv+zY4sO/gcUPgKE
+             "]]},
+           Annotation[#, "Charting`Private`Tag#1"]& ],
+          {
+          "WolframDynamicHighlight", <|
+           "Label" -> {"XYLabel"}, "Ball" -> {"IndicatedBall"}|>}], 
+         StyleBox[
+          DynamicBox[(Charting`HighlightActionBox["DynamicHighlight", {}, 
+            Slot["HighlightElements"], 
+            Slot["LayoutOptions"], 
+            Slot["Meta"], 
+            Charting`HighlightActionFunction["DynamicHighlight", {{
+               Annotation[{
+                 Directive[
+                  PointSize[0.0055000000000000005`], 
+                  RGBColor[0.24, 0.6, 0.8], 
+                  AbsoluteThickness[2]], 
+                 Point[CompressedData["
+1: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
+MV7aGv+zY4sO/gcUPgKE
+                  "]]}, "Charting`Private`Tag#1"]}}, <|
+             "HighlightElements" -> <|
+               "Label" -> {"XYLabel"}, "Ball" -> {"IndicatedBall"}|>, 
+              "LayoutOptions" -> <|
+               "PanelPlotLayout" -> <||>, 
+                "PlotRange" -> {{0., 512.}, {-10.260555339956973`, 
+                 12.250945914587602`}}, 
+                "Frame" -> {{True, True}, {True, True}}, 
+                "AxesOrigin" -> {0., 0}, 
+                "ImageSize" -> {360, 360/GoldenRatio}, "Axes" -> {True, True},
+                 "LabelStyle" -> {}, "AspectRatio" -> GoldenRatio^(-1), 
+                "DefaultStyle" -> {
+                  Directive[
+                   PointSize[0.0055000000000000005`], 
+                   RGBColor[0.24, 0.6, 0.8], 
+                   AbsoluteThickness[2]]}, 
+                "HighlightLabelingFunctions" -> <|
+                 "CoordinatesToolOptions" -> ({
+                    (Identity[#]& )[
+                    Part[#, 1]], 
+                    (Identity[#]& )[
+                    Part[#, 2]]}& ), 
+                  "ScalingFunctions" -> {{Identity, Identity}, {
+                    Identity, Identity}}|>, "Primitives" -> {}, "GCFlag" -> 
+                False|>, 
+              "Meta" -> <|
+               "DefaultHighlight" -> {"Dynamic", None}, "Index" -> {}, 
+                "Function" -> ListPlot, "GroupHighlight" -> False|>|>]]& )[<|
+            "HighlightElements" -> <|
+              "Label" -> {"XYLabel"}, "Ball" -> {"IndicatedBall"}|>, 
+             "LayoutOptions" -> <|
+              "PanelPlotLayout" -> <||>, 
+               "PlotRange" -> {{0., 512.}, {-10.260555339956973`, 
+                12.250945914587602`}}, 
+               "Frame" -> {{True, True}, {True, True}}, 
+               "AxesOrigin" -> {0., 0}, "ImageSize" -> {360, 360/GoldenRatio},
+                "Axes" -> {True, True}, "LabelStyle" -> {}, "AspectRatio" -> 
+               GoldenRatio^(-1), "DefaultStyle" -> {
+                 Directive[
+                  PointSize[0.0055000000000000005`], 
+                  RGBColor[0.24, 0.6, 0.8], 
+                  AbsoluteThickness[2]]}, 
+               "HighlightLabelingFunctions" -> <|"CoordinatesToolOptions" -> ({
+                   (Identity[#]& )[
+                    Part[#, 1]], 
+                   (Identity[#]& )[
+                    Part[#, 2]]}& ), 
+                 "ScalingFunctions" -> {{Identity, Identity}, {
+                   Identity, Identity}}|>, "Primitives" -> {}, "GCFlag" -> 
+               False|>, 
+             "Meta" -> <|
+              "DefaultHighlight" -> {"Dynamic", None}, "Index" -> {}, 
+               "Function" -> ListPlot, "GroupHighlight" -> False|>|>],
+           
+           ImageSizeCache->{{4.503599627370496*^15, -4.503599627370496*^15}, {
+            4.503599627370496*^15, -4.503599627370496*^15}}],
+          Selectable->False]},
+        Annotation[{{
+           Annotation[{
+             Directive[
+              PointSize[0.0055000000000000005`], 
+              RGBColor[0.24, 0.6, 0.8], 
+              AbsoluteThickness[2]], 
+             Point[CompressedData["
+1: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
+MV7aGv+zY4sO/gcUPgKE
+              "]]}, "Charting`Private`Tag#1"]}}, <|
+         "HighlightElements" -> <|
+           "Label" -> {"XYLabel"}, "Ball" -> {"IndicatedBall"}|>, 
+          "LayoutOptions" -> <|
+           "PanelPlotLayout" -> <||>, 
+            "PlotRange" -> {{0., 512.}, {-10.260555339956973`, 
+             12.250945914587602`}}, "Frame" -> {{True, True}, {True, True}}, 
+            "AxesOrigin" -> {0., 0}, "ImageSize" -> {360, 360/GoldenRatio}, 
+            "Axes" -> {True, True}, "LabelStyle" -> {}, "AspectRatio" -> 
+            GoldenRatio^(-1), "DefaultStyle" -> {
+              Directive[
+               PointSize[0.0055000000000000005`], 
+               RGBColor[0.24, 0.6, 0.8], 
+               AbsoluteThickness[2]]}, 
+            "HighlightLabelingFunctions" -> <|"CoordinatesToolOptions" -> ({
+                (Identity[#]& )[
+                 Part[#, 1]], 
+                (Identity[#]& )[
+                 Part[#, 2]]}& ), 
+              "ScalingFunctions" -> {{Identity, Identity}, {
+                Identity, Identity}}|>, "Primitives" -> {}, "GCFlag" -> 
+            False|>, 
+          "Meta" -> <|
+           "DefaultHighlight" -> {"Dynamic", None}, "Index" -> {}, "Function" -> 
+            ListPlot, "GroupHighlight" -> False|>|>, 
+         "DynamicHighlight"]], {{}, {}}},
+      AspectRatio->NCache[GoldenRatio^(-1), 0.6180339887498948],
+      Axes->{True, True},
+      AxesLabel->{None, None},
+      AxesOrigin->{0., 0},
+      BaseStyle->{FontFamily -> "Times New Roman", FontSize -> 12},
+      DefaultBaseStyle->{"PlotGraphics", "Graphics"},
+      DisplayFunction->Identity,
+      Frame->{{True, True}, {True, True}},
+      FrameLabel->{{None, None}, {None, None}},
+      FrameTicks->{{Automatic, Automatic}, {Automatic, Automatic}},
+      GridLines->{None, None},
+      GridLinesStyle->Directive[
+        GrayLevel[0.5, 0.4]],
+      ImageSize->700,
+      Method->{
+       "AxisPadding" -> Scaled[0.02], "DefaultBoundaryStyle" -> Automatic, 
+        "DefaultGraphicsInteraction" -> {
+         "Version" -> 1.2, "TrackMousePosition" -> {True, False}, 
+          "Effects" -> {
+           "Highlight" -> {"ratio" -> 2}, "HighlightPoint" -> {"ratio" -> 2}, 
+            "Droplines" -> {
+             "freeformCursorMode" -> True, 
+              "placement" -> {"x" -> "All", "y" -> "None"}}}}, 
+        "DefaultMeshStyle" -> AbsolutePointSize[6], "DefaultPlotStyle" -> {
+          Directive[
+           RGBColor[0.24, 0.6, 0.8], 
+           AbsoluteThickness[2]], 
+          Directive[
+           RGBColor[0.95, 0.627, 0.1425], 
+           AbsoluteThickness[2]], 
+          Directive[
+           RGBColor[0.455, 0.7, 0.21], 
+           AbsoluteThickness[2]], 
+          Directive[
+           RGBColor[0.922526, 0.385626, 0.209179], 
+           AbsoluteThickness[2]], 
+          Directive[
+           RGBColor[0.578, 0.51, 0.85], 
+           AbsoluteThickness[2]], 
+          Directive[
+           RGBColor[0.772079, 0.431554, 0.102387], 
+           AbsoluteThickness[2]], 
+          Directive[
+           RGBColor[0., 0.6, 0.6], 
+           AbsoluteThickness[2]], 
+          Directive[
+           RGBColor[0.9, 0.36, 0.684], 
+           AbsoluteThickness[2]], 
+          Directive[
+           RGBColor[0.56, 0.7, 0.], 
+           AbsoluteThickness[2]], 
+          Directive[
+           RGBColor[0.9, 0.54, 0.], 
+           AbsoluteThickness[2]], 
+          Directive[
+           RGBColor[0.585, 0.5976, 0.9], 
+           AbsoluteThickness[2]], 
+          Directive[
+           RGBColor[0.9, 0.45, 0.45], 
+           AbsoluteThickness[2]], 
+          Directive[
+           RGBColor[0.7632186717367253, 0.8174402144034898, 0.], 
+           AbsoluteThickness[2]], 
+          Directive[
+           RGBColor[
+           0.8554632469481959, 0.24885384718327969`, 0.833405387394855], 
+           AbsoluteThickness[2]], 
+          Directive[
+           RGBColor[
+           0.032972823413648836`, 0.7396719749139476, 0.534700104525218], 
+           AbsoluteThickness[2]]}, "DomainPadding" -> Scaled[0.02], 
+        "PointSizeFunction" -> "SmallPointSize", "RangePadding" -> 
+        Scaled[0.05], "OptimizePlotMarkers" -> True, "IncludeHighlighting" -> 
+        Automatic, "HighlightStyle" -> Automatic, "OptimizePlotMarkers" -> 
+        True, "IncludeHighlighting" -> "CurrentPoint", "HighlightStyle" -> 
+        Automatic, "OptimizePlotMarkers" -> True, 
+        "CoordinatesToolOptions" -> {"DisplayFunction" -> ({
+            (Identity[#]& )[
+             Part[#, 1]], 
+            (Identity[#]& )[
+             Part[#, 2]]}& ), "CopiedValueFunction" -> ({
+            (Identity[#]& )[
+             Part[#, 1]], 
+            (Identity[#]& )[
+             Part[#, 2]]}& )}},
+      PlotInteractivity:>True,
+      PlotRange->{{0., 512.}, {-10.260555339956973`, 12.250945914587602`}},
+      PlotRangeClipping->True,
+      PlotRangePadding->{{
+         Scaled[0.02], 
+         Scaled[0.02]}, {
+         Scaled[0.05], 
+         Scaled[0.05]}},
+      Ticks->{Automatic, Automatic}]}
+   },
+   DefaultBaseStyle->"Column",
+   GridBoxAlignment->{"Columns" -> {{Left}}},
+   GridBoxItemSize->{"Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}},
+   GridBoxSpacings->{"Columns" -> {{Automatic}}, "Rows" -> {{1.2}}}],
+  "Column"]], "Output",ExpressionUUID->"970326cc-47e3-4d40-a50f-68eba7d56e72"]
+}, Open  ]]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["\:9a8c\:6536\:4e0e\:63a5\:7eed", "Section",
+ Evaluatable->False,ExpressionUUID->"7889296e-e79e-2a4e-9206-db5e6ee271aa"],
+
+Cell["\<\
+\:6838\:5bf9\:7ed3\:679c\:4e2d\:7684 checks\:3001execution_status \:548c \
+physical_acceptance_status\:3002\:5b8c\:6574\:6536\:655b\:4e0e\:7ed3\:6784\
+\:7814\:7a76\:6309\:8def\:7ebf README \:7ee7\:7eed\:3002\
+\>", "Text",
+ Evaluatable->False,ExpressionUUID->"69c1f002-d897-f849-9a37-b9386b625509"],
+
+Cell["\<\
+Sources: CUDA; references/library.bib and references/sources.json\
+\>", "Text",
+ Evaluatable->False,ExpressionUUID->"7b11f13c-e310-d84a-ad90-b7a1f7b9298a"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["\:5386\:53f2\:8bc1\:636e", "Section",
+ Evaluatable->False,ExpressionUUID->"ce8f10fe-7518-4246-bf17-7b7a8d3041e5"],
+
+Cell["data/evidence/v1.0.0-rc.1/; litz-research data fetch gpu", "Text",
+ Evaluatable->False,ExpressionUUID->"d0ba584a-e38a-9f44-9299-704f217b0986"]
+}, Open  ]]
+}, Open  ]]
+},
+InitializationCellEvaluation->False,
+InitializationCellWarning->False,
+WindowSize->{582, 601},
+WindowMargins->{{0, Automatic}, {Automatic, 0}},
+Visible->False,
+TaggingRules-><|
+ "route" -> "gpu", "language" -> "zh-CN", "source" -> 
+  "configs/research_notebooks.json"|>,
+CellContext->Notebook,
+DefaultNewCellStyle->"Input",
+CommonDefaultFormatTypes->{"Output"->StandardForm},
+FrontEndVersion->"15.0 for Microsoft Windows (64-bit) (2026\:5e745\:670815\
+\:65e5)",
+StyleDefinitions->"Default.nb",
+ExpressionUUID->"cf7d396a-b81a-d74d-a766-ace25fcae87b"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{
+ "research-input"->{
+  Cell[2507, 62, 928, 27, 120, "Input",ExpressionUUID->"11b63c34-edfe-6049-9cc0-c96ec5f55ff6",
+   Evaluatable->True,
+   InitializationCell->True,
+   CellTags->"research-input"],
+  Cell[3622, 99, 409, 10, 28, "Input",ExpressionUUID->"1e469b84-df98-114c-95b5-c872b3df55b5",
+   Evaluatable->True,
+   CellTags->"research-input"],
+  Cell[4034, 111, 234, 5, 37, "Output",ExpressionUUID->"2fb7e8a3-dd7b-8045-b82d-61c5f177ed61",
+   CellTags->"research-input"],
+  Cell[4491, 127, 385, 8, 66, "Input",ExpressionUUID->"6df199de-4b69-144e-b138-23b2aab135f1",
+   Evaluatable->True,
+   CellTags->"research-input"],
+  Cell[4879, 137, 364, 9, 77, "Output",ExpressionUUID->"b051b678-bf69-1a4c-b6f7-e70fecea284b",
+   CellTags->"research-input"],
+  Cell[5280, 151, 216, 4, 28, "Input",ExpressionUUID->"08f2a661-5629-604c-b32c-c73c72cc15e7",
+   Evaluatable->True,
+   CellTags->"research-input"]}
+ }
+*)
+(*CellTagsIndex
+CellTagsIndex->{
+ {"research-input", 69709, 1336}
+ }
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[CellGroupData[{
+Cell[576, 22, 132, 1, 96, "Title",ExpressionUUID->"0906ae2b-5672-cf45-ac85-7f97d0156b48",
+ Evaluatable->False],
+Cell[711, 25, 208, 2, 83, "Subtitle",ExpressionUUID->"fb5541b6-c06d-8545-97a5-af61df7d4d26",
+ Evaluatable->False],
+Cell[CellGroupData[{
+Cell[944, 31, 155, 1, 66, "Section",ExpressionUUID->"cba7052a-6cae-b34d-9ec1-c8d36ba91566",
+ Evaluatable->False],
+Cell[1102, 34, 140, 1, 33, "Text",ExpressionUUID->"28a51598-f9c3-8642-a938-f7820c319940",
+ Evaluatable->False],
+Cell[1245, 37, 145, 1, 33, "Text",ExpressionUUID->"03f52240-04ae-9d40-8a94-d1c766c94b27",
+ Evaluatable->False],
+Cell[1393, 40, 211, 2, 33, "Text",ExpressionUUID->"c52a9638-5741-404c-8013-95e3fa234a52",
+ Evaluatable->False]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[1641, 47, 137, 1, 66, "Section",ExpressionUUID->"27de9d18-7905-4f42-b81f-81ba1bbc6497",
+ Evaluatable->False],
+Cell[1781, 50, 364, 4, 55, "Text",ExpressionUUID->"b2727063-d78c-7543-8c2f-191fb0d19d05",
+ Evaluatable->False],
+Cell[2148, 56, 356, 4, 55, "Text",ExpressionUUID->"b38be3f3-8512-9b45-8dd7-8ee02d60ae05",
+ Evaluatable->False],
+Cell[2507, 62, 928, 27, 120, "Input",ExpressionUUID->"11b63c34-edfe-6049-9cc0-c96ec5f55ff6",
+ Evaluatable->True,
+ InitializationCell->True,
+ CellTags->"research-input"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[3472, 94, 125, 1, 66, "Section",ExpressionUUID->"fbcab35c-2c04-134d-b375-29a6e361939e",
+ Evaluatable->False],
+Cell[CellGroupData[{
+Cell[3622, 99, 409, 10, 28, "Input",ExpressionUUID->"1e469b84-df98-114c-95b5-c872b3df55b5",
+ Evaluatable->True,
+ CellTags->"research-input"],
+Cell[4034, 111, 234, 5, 37, "Output",ExpressionUUID->"2fb7e8a3-dd7b-8045-b82d-61c5f177ed61",
+ CellTags->"research-input"]
+}, Open  ]]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[4317, 122, 149, 1, 66, "Section",ExpressionUUID->"66f19d42-53ab-7d44-a879-b20c948e2400",
+ Evaluatable->False],
+Cell[CellGroupData[{
+Cell[4491, 127, 385, 8, 66, "Input",ExpressionUUID->"6df199de-4b69-144e-b138-23b2aab135f1",
+ Evaluatable->True,
+ CellTags->"research-input"],
+Cell[4879, 137, 364, 9, 77, "Output",ExpressionUUID->"b051b678-bf69-1a4c-b6f7-e70fecea284b",
+ CellTags->"research-input"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[5280, 151, 216, 4, 28, "Input",ExpressionUUID->"08f2a661-5629-604c-b32c-c73c72cc15e7",
+ Evaluatable->True,
+ CellTags->"research-input"],
+Cell[5499, 157, 62554, 1126, 548, "Output",ExpressionUUID->"970326cc-47e3-4d40-a50f-68eba7d56e72"]
+}, Open  ]]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[68102, 1289, 125, 1, 66, "Section",ExpressionUUID->"7889296e-e79e-2a4e-9206-db5e6ee271aa",
+ Evaluatable->False],
+Cell[68230, 1292, 307, 5, 55, "Text",ExpressionUUID->"69c1f002-d897-f849-9a37-b9386b625509",
+ Evaluatable->False],
+Cell[68540, 1299, 165, 3, 33, "Text",ExpressionUUID->"7b11f13c-e310-d84a-ad90-b7a1f7b9298a",
+ Evaluatable->False]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[68742, 1307, 119, 1, 66, "Section",ExpressionUUID->"ce8f10fe-7518-4246-bf17-7b7a8d3041e5",
+ Evaluatable->False],
+Cell[68864, 1310, 148, 1, 33, "Text",ExpressionUUID->"d0ba584a-e38a-9f44-9299-704f217b0986",
+ Evaluatable->False]
+}, Open  ]]
+}, Open  ]]
+}
+]
+*)
+
+(* End of internal cache information *)
+

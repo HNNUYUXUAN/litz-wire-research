@@ -1,0 +1,1328 @@
+[
+  {
+    "id": "AEDT",
+    "type": "webpage",
+    "title": "Ansys Electronics Desktop / Maxwell",
+    "URL": "https://www.ansys.com/products/electronics/ansys-maxwell",
+    "author": [
+      {
+        "literal": "{ANSYS, Inc.}"
+      }
+    ],
+    "issued": {
+      "date-parts": [
+        [
+          2026
+        ]
+      ]
+    }
+  },
+  {
+    "id": "AGENTTOOLS",
+    "type": "webpage",
+    "title": "Wolfram AgentTools",
+    "URL": "https://github.com/WolframResearch/AgentTools",
+    "author": [
+      {
+        "literal": "{Wolfram Research}"
+      }
+    ],
+    "issued": {
+      "date-parts": [
+        [
+          2026
+        ]
+      ]
+    }
+  },
+  {
+    "id": "ANSYSCOMMONMCP",
+    "type": "webpage",
+    "title": "ansys-common-mcp",
+    "URL": "https://github.com/ansys/pyansys-common-mcp",
+    "version": "0.3.5",
+    "author": [
+      {
+        "literal": "{ANSYS, Inc."
+      },
+      {
+        "literal": "contributors}"
+      }
+    ],
+    "issued": {
+      "date-parts": [
+        [
+          2026
+        ]
+      ]
+    }
+  },
+  {
+    "id": "BESSEL",
+    "type": "webpage",
+    "title": "NIST Digital Library of Mathematical Functions, Modified Bessel Functions",
+    "URL": "https://dlmf.nist.gov/10.25",
+    "author": [
+      {
+        "literal": "{NIST}"
+      }
+    ],
+    "issued": {
+      "date-parts": [
+        [
+          2026
+        ]
+      ]
+    }
+  },
+  {
+    "id": "BIBTEXPARSE",
+    "type": "webpage",
+    "title": "bibtexparser",
+    "URL": "https://github.com/sciunto-org/python-bibtexparser",
+    "author": [
+      {
+        "literal": "{bibtexparser contributors}"
+      }
+    ],
+    "issued": {
+      "date-parts": [
+        [
+          2026
+        ]
+      ]
+    }
+  },
+  {
+    "id": "C01",
+    "type": "article-journal",
+    "title": "基于半解析有限元的利兹线交流电阻分析",
+    "DOI": "10.12263/dzxb.20230001",
+    "URL": "https://doi.org/10.12263/DZXB.20230001",
+    "container-title": "电子学报",
+    "volume": "51",
+    "issue": "12",
+    "page": "3457--3462",
+    "author": [
+      {
+        "literal": "金峰逸"
+      },
+      {
+        "literal": "马玉芳"
+      }
+    ],
+    "issued": {
+      "date-parts": [
+        [
+          2023
+        ]
+      ]
+    }
+  },
+  {
+    "id": "C02",
+    "type": "article-journal",
+    "title": "基于PGD和等效复磁导率的高频变压器矩形利兹线损耗快速计算模型",
+    "DOI": "10.13336/j.1003-6520.hve.20251272",
+    "URL": "https://doi.org/10.13336/j.1003-6520.hve.20251272",
+    "container-title": "高电压技术",
+    "volume": "52",
+    "issue": "7",
+    "page": "3350--3359",
+    "author": [
+      {
+        "literal": "钟立国"
+      },
+      {
+        "literal": "阎秀恪"
+      },
+      {
+        "literal": "任自艳"
+      },
+      {
+        "literal": "张殿海"
+      },
+      {
+        "literal": "张艳丽"
+      }
+    ],
+    "issued": {
+      "date-parts": [
+        [
+          2026
+        ]
+      ]
+    }
+  },
+  {
+    "id": "C03",
+    "type": "article-journal",
+    "title": "基于等效媒质理论的高频变压器利兹线周期性结构均质化建模方法",
+    "DOI": "10.13336/j.1003-6520.hve.20240638",
+    "URL": "https://doi.org/10.13336/j.1003-6520.hve.20240638",
+    "container-title": "高电压技术",
+    "volume": "50",
+    "issue": "10",
+    "page": "4440--4449",
+    "author": [
+      {
+        "literal": "李元"
+      },
+      {
+        "literal": "林金山"
+      },
+      {
+        "literal": "邵先军"
+      },
+      {
+        "literal": "杨智"
+      },
+      {
+        "literal": "张大宁"
+      },
+      {
+        "literal": "张冠军"
+      }
+    ],
+    "issued": {
+      "date-parts": [
+        [
+          2024
+        ]
+      ]
+    }
+  },
+  {
+    "id": "C04",
+    "type": "article-journal",
+    "title": "非完全绞合利兹线的高频损耗特性分析与计算",
+    "DOI": "10.13336/j.1003-6520.hve.20211960",
+    "URL": "https://doi.org/10.13336/j.1003-6520.hve.20211960",
+    "container-title": "高电压技术",
+    "volume": "49",
+    "issue": "5",
+    "page": "2180--2193",
+    "author": [
+      {
+        "literal": "陈彬"
+      },
+      {
+        "literal": "陶鑫"
+      },
+      {
+        "literal": "万妮娜"
+      },
+      {
+        "literal": "方春华"
+      },
+      {
+        "literal": "唐波"
+      }
+    ],
+    "issued": {
+      "date-parts": [
+        [
+          2023
+        ]
+      ]
+    }
+  },
+  {
+    "id": "CODEX",
+    "type": "webpage",
+    "title": "Codex",
+    "URL": "https://developers.openai.com/codex/",
+    "author": [
+      {
+        "literal": "{OpenAI}"
+      }
+    ],
+    "issued": {
+      "date-parts": [
+        [
+          2026
+        ]
+      ]
+    }
+  },
+  {
+    "id": "CUDA",
+    "type": "webpage",
+    "title": "Wolfram CUDALink and WolframGPUSDK",
+    "URL": "https://reference.wolfram.com/language/CUDALink/guide/CUDALink.html",
+    "author": [
+      {
+        "literal": "{Wolfram Research}"
+      }
+    ],
+    "issued": {
+      "date-parts": [
+        [
+          2026
+        ]
+      ]
+    }
+  },
+  {
+    "id": "E01",
+    "type": "article-journal",
+    "title": "PACK Litz wire table",
+    "URL": "",
+    "container-title": "Manufacturer specification snapshot",
+    "author": [
+      {
+        "literal": "Rudolf Pack GmbH & Co. KG"
+      }
+    ],
+    "issued": {
+      "date-parts": [
+        [
+          2016
+        ]
+      ]
+    }
+  },
+  {
+    "id": "E02",
+    "type": "article-journal",
+    "title": "Design of RUPALIT high-frequency litz wire",
+    "URL": "",
+    "container-title": "Manufacturer document 2/0226/1",
+    "author": [
+      {
+        "literal": "Rudolf Pack GmbH & Co. KG"
+      }
+    ],
+    "issued": {
+      "date-parts": [
+        [
+          2026
+        ]
+      ]
+    }
+  },
+  {
+    "id": "E03",
+    "type": "article-journal",
+    "title": "Overview magnet wire (enamelled copper wire)",
+    "URL": "",
+    "container-title": "Manufacturer materials overview",
+    "author": [
+      {
+        "literal": "Rudolf Pack GmbH & Co. KG"
+      }
+    ],
+    "issued": {
+      "date-parts": [
+        [
+          2020
+        ]
+      ]
+    }
+  },
+  {
+    "id": "FAST_MCP",
+    "type": "webpage",
+    "title": "FastMCP",
+    "URL": "https://github.com/PrefectHQ/fastmcp",
+    "author": [
+      {
+        "literal": "{Prefect Technologies"
+      },
+      {
+        "literal": "FastMCP contributors}"
+      }
+    ],
+    "issued": {
+      "date-parts": [
+        [
+          2026
+        ]
+      ]
+    }
+  },
+  {
+    "id": "FEMDOC",
+    "type": "webpage",
+    "title": "Wolfram quasistatic magnetic field models",
+    "URL": "https://reference.wolfram.com/language/PDEModels/tutorial/Electromagnetics/QuasistaticMagneticFields.html",
+    "author": [
+      {
+        "literal": "{Wolfram Research}"
+      }
+    ],
+    "issued": {
+      "date-parts": [
+        [
+          2026
+        ]
+      ]
+    }
+  },
+  {
+    "id": "FONTS",
+    "type": "webpage",
+    "title": "SimSun and Times New Roman",
+    "URL": "https://learn.microsoft.com/en-us/typography/fonts/",
+    "author": [
+      {
+        "literal": "{Microsoft"
+      },
+      {
+        "literal": "font copyright holders}"
+      }
+    ],
+    "issued": {
+      "date-parts": [
+        [
+          2026
+        ]
+      ]
+    }
+  },
+  {
+    "id": "GMRES1986",
+    "type": "article-journal",
+    "title": "GMRES: A Generalized Minimal Residual Algorithm for Solving Nonsymmetric Linear Systems",
+    "DOI": "10.1137/0907058",
+    "URL": "https://doi.org/10.1137/0907058",
+    "container-title": "SIAM Journal on Scientific and Statistical Computing",
+    "volume": "7",
+    "issue": "3",
+    "page": "856--869",
+    "author": [
+      {
+        "literal": "Saad, Youcef"
+      },
+      {
+        "literal": "Schultz, Martin H."
+      }
+    ],
+    "issued": {
+      "date-parts": [
+        [
+          1986
+        ]
+      ]
+    }
+  },
+  {
+    "id": "IEEE",
+    "type": "webpage",
+    "title": "IEEEtran",
+    "URL": "https://github.com/bardsoftware/template-ieee-transactions",
+    "author": [
+      {
+        "literal": "{Michael Shell"
+      },
+      {
+        "literal": "copyright holders}"
+      }
+    ],
+    "issued": {
+      "date-parts": [
+        [
+          2026
+        ]
+      ]
+    }
+  },
+  {
+    "id": "MARKDOWNIT",
+    "type": "webpage",
+    "title": "markdown-it-py and mdit-py-plugins",
+    "URL": "https://github.com/executablebooks/markdown-it-py",
+    "author": [
+      {
+        "literal": "{Executable Books contributors}"
+      }
+    ],
+    "issued": {
+      "date-parts": [
+        [
+          2026
+        ]
+      ]
+    }
+  },
+  {
+    "id": "MATH",
+    "type": "webpage",
+    "title": "mpmath",
+    "URL": "https://mpmath.org/",
+    "author": [
+      {
+        "literal": "{mpmath developers}"
+      }
+    ],
+    "issued": {
+      "date-parts": [
+        [
+          2026
+        ]
+      ]
+    }
+  },
+  {
+    "id": "MATPLOTLIB",
+    "type": "webpage",
+    "title": "Matplotlib",
+    "URL": "https://matplotlib.org/",
+    "author": [
+      {
+        "literal": "{Matplotlib developers}"
+      }
+    ],
+    "issued": {
+      "date-parts": [
+        [
+          2026
+        ]
+      ]
+    }
+  },
+  {
+    "id": "MCP",
+    "type": "webpage",
+    "title": "Model Context Protocol",
+    "URL": "https://modelcontextprotocol.io/",
+    "author": [
+      {
+        "literal": "{Model Context Protocol contributors}"
+      }
+    ],
+    "issued": {
+      "date-parts": [
+        [
+          2026
+        ]
+      ]
+    }
+  },
+  {
+    "id": "MCPSDK",
+    "type": "webpage",
+    "title": "MCP Python SDK",
+    "URL": "https://github.com/modelcontextprotocol/python-sdk",
+    "author": [
+      {
+        "literal": "{Model Context Protocol contributors}"
+      }
+    ],
+    "issued": {
+      "date-parts": [
+        [
+          2026
+        ]
+      ]
+    }
+  },
+  {
+    "id": "MDURL",
+    "type": "webpage",
+    "title": "mdurl",
+    "URL": "https://github.com/executablebooks/mdurl",
+    "author": [
+      {
+        "literal": "{mdurl contributors}"
+      }
+    ],
+    "issued": {
+      "date-parts": [
+        [
+          2026
+        ]
+      ]
+    }
+  },
+  {
+    "id": "N01",
+    "type": "article-journal",
+    "title": "AC Impedance Modeling of Composite Litz Wire With Nonideal Transposition Based on Improved Discrete Transposition Model",
+    "DOI": "10.1109/TPEL.2026.3661080",
+    "URL": "https://doi.org/10.1109/TPEL.2026.3661080",
+    "container-title": "IEEE TPEL",
+    "volume": "41",
+    "issue": "7",
+    "page": "11003--11019",
+    "author": [
+      {
+        "literal": "Xinsheng Zhang"
+      },
+      {
+        "literal": "Fei Xiao"
+      },
+      {
+        "literal": "Ruitian Wang"
+      },
+      {
+        "literal": "Shunjun Chen"
+      },
+      {
+        "literal": "Xuexin Fan"
+      },
+      {
+        "literal": "Xin Li"
+      }
+    ],
+    "issued": {
+      "date-parts": [
+        [
+          2026
+        ]
+      ]
+    }
+  },
+  {
+    "id": "NUMPY",
+    "type": "webpage",
+    "title": "NumPy",
+    "URL": "https://numpy.org/",
+    "author": [
+      {
+        "literal": "{NumPy developers}"
+      }
+    ],
+    "issued": {
+      "date-parts": [
+        [
+          2026
+        ]
+      ]
+    }
+  },
+  {
+    "id": "P01",
+    "type": "article-journal",
+    "title": "Numerical Modeling of Litz Wires Based on Discrete Transpositions of Strands and 2-D Finite Element Analysis",
+    "DOI": "10.1109/TPEL.2023.3240338",
+    "URL": "https://doi.org/10.1109/TPEL.2023.3240338",
+    "container-title": "IEEE TPEL",
+    "volume": "38",
+    "issue": "5",
+    "page": "6710--6719",
+    "author": [
+      {
+        "literal": "Silvano Cruciani"
+      },
+      {
+        "literal": "Tommaso Campi"
+      },
+      {
+        "literal": "Francesca Maradei"
+      },
+      {
+        "literal": "Mauro Feliziani"
+      }
+    ],
+    "issued": {
+      "date-parts": [
+        [
+          2023
+        ]
+      ]
+    }
+  },
+  {
+    "id": "P02",
+    "type": "article-journal",
+    "title": "Modeling of Litz Wire Winding AC Resistance Based on Improved Segmented Equivalent Circuit",
+    "DOI": "10.1109/TPEL.2023.3321327",
+    "URL": "https://doi.org/10.1109/TPEL.2023.3321327",
+    "container-title": "IEEE TPEL",
+    "volume": "39",
+    "issue": "1",
+    "page": "1135--1149",
+    "author": [
+      {
+        "literal": "Yueyin Wang"
+      },
+      {
+        "literal": "Wu Chen"
+      },
+      {
+        "literal": "Zhan Shen"
+      }
+    ],
+    "issued": {
+      "date-parts": [
+        [
+          2024
+        ]
+      ]
+    }
+  },
+  {
+    "id": "P03",
+    "type": "article-journal",
+    "title": "Calculation of Power Losses in Litz Wire Systems by Coupling FEM and PEEC Method",
+    "DOI": "10.1109/TPEL.2015.2499793",
+    "URL": "https://doi.org/10.1109/TPEL.2015.2499793",
+    "container-title": "IEEE TPEL",
+    "volume": "31",
+    "issue": "9",
+    "page": "6442--6449",
+    "author": [
+      {
+        "literal": "Andreas Roßkopf"
+      },
+      {
+        "literal": "Eberhard Bär"
+      },
+      {
+        "literal": "Christopher Joffe"
+      },
+      {
+        "literal": "Clemens Bonse"
+      }
+    ],
+    "issued": {
+      "date-parts": [
+        [
+          2016
+        ]
+      ]
+    }
+  },
+  {
+    "id": "P04",
+    "type": "article-journal",
+    "title": "Finite element modeling of eddy currents in a multiconductor system with quasi-2D symmetry",
+    "DOI": "10.1108/COMPEL-01-2025-0031",
+    "URL": "https://doi.org/10.1108/COMPEL-01-2025-0031",
+    "container-title": "COMPEL",
+    "volume": "44",
+    "issue": "5",
+    "page": "730--742",
+    "author": [
+      {
+        "literal": "Tamás Bakondi"
+      },
+      {
+        "literal": "Sándor Bilicz"
+      },
+      {
+        "literal": "Szabolcs Gyimóthy"
+      }
+    ],
+    "issued": {
+      "date-parts": [
+        [
+          2025
+        ]
+      ]
+    }
+  },
+  {
+    "id": "P05",
+    "type": "article-journal",
+    "title": "An Improved Continuum Skin and Proximity Effect Model for Hexagonally Packed Wires",
+    "DOI": "10.1016/j.cam.2012.04.009",
+    "URL": "https://doi.org/10.1016/j.cam.2012.04.009",
+    "container-title": "JCAM",
+    "volume": "236",
+    "issue": "18",
+    "page": "4635--4644",
+    "author": [
+      {
+        "literal": "David C. Meeker"
+      }
+    ],
+    "issued": {
+      "date-parts": [
+        [
+          2012
+        ]
+      ]
+    }
+  },
+  {
+    "id": "P07",
+    "type": "article-journal",
+    "title": "Measurement and Characterization of High Frequency Losses in Nonideal Litz Wires",
+    "DOI": "10.1109/tpel.2011.2143729",
+    "URL": "",
+    "container-title": "IEEE TPEL",
+    "volume": "26",
+    "issue": "11",
+    "page": "3386--3394",
+    "author": [
+      {
+        "literal": "Hans Rossmanith"
+      },
+      {
+        "literal": "Marc Doebroenti"
+      },
+      {
+        "literal": "Manfred Albach"
+      },
+      {
+        "literal": "Dietmar Exner"
+      }
+    ],
+    "issued": {
+      "date-parts": [
+        [
+          2011
+        ]
+      ]
+    }
+  },
+  {
+    "id": "P08",
+    "type": "article-journal",
+    "title": "Enhancing litz wire power loss calculations by combining a sparse strand element equivalent circuit method with a voronoi based geometry model",
+    "DOI": "10.1109/tpel.2022.3169992",
+    "URL": "",
+    "container-title": "IEEE TPEL accepted manuscript; final volume/pages not checked",
+    "author": [
+      {
+        "literal": "Andreas Rosskopf"
+      },
+      {
+        "literal": "Carla Brunner"
+      }
+    ],
+    "issued": {
+      "date-parts": [
+        [
+          2022
+        ]
+      ]
+    }
+  },
+  {
+    "id": "P09",
+    "type": "article-journal",
+    "title": "Closed-form complex permeability expression for proximity-effect homogenisation of litz-wire windings",
+    "DOI": "10.1049/iet-smt.2019.0377",
+    "URL": "https://doi.org/10.1049/iet-smt.2019.0377",
+    "container-title": "IET SMT",
+    "volume": "14",
+    "issue": "3",
+    "page": "287--291",
+    "author": [
+      {
+        "literal": "Korawich Niyomsatian"
+      },
+      {
+        "literal": "Johan Gyselinck"
+      },
+      {
+        "literal": "Ruth V. Sabariego"
+      }
+    ],
+    "issued": {
+      "date-parts": [
+        [
+          2020
+        ]
+      ]
+    }
+  },
+  {
+    "id": "PDFIUM",
+    "type": "webpage",
+    "title": "pypdfium2",
+    "URL": "https://github.com/pypdfium2-team/pypdfium2",
+    "author": [
+      {
+        "literal": "{pypdfium2 contributors}"
+      }
+    ],
+    "issued": {
+      "date-parts": [
+        [
+          2026
+        ]
+      ]
+    }
+  },
+  {
+    "id": "PILLOW",
+    "type": "webpage",
+    "title": "Pillow",
+    "URL": "https://python-pillow.org/",
+    "author": [
+      {
+        "literal": "{Pillow contributors}"
+      }
+    ],
+    "issued": {
+      "date-parts": [
+        [
+          2026
+        ]
+      ]
+    }
+  },
+  {
+    "id": "POWERSHELL",
+    "type": "webpage",
+    "title": "PowerShell",
+    "URL": "https://github.com/PowerShell/PowerShell",
+    "author": [
+      {
+        "literal": "{Microsoft"
+      },
+      {
+        "literal": "contributors}"
+      }
+    ],
+    "issued": {
+      "date-parts": [
+        [
+          2026
+        ]
+      ]
+    }
+  },
+  {
+    "id": "PSUTIL",
+    "type": "webpage",
+    "title": "psutil",
+    "URL": "https://github.com/giampaolo/psutil",
+    "author": [
+      {
+        "literal": "{Giampaolo Rodola"
+      },
+      {
+        "literal": "contributors}"
+      }
+    ],
+    "issued": {
+      "date-parts": [
+        [
+          2026
+        ]
+      ]
+    }
+  },
+  {
+    "id": "PYAEDT",
+    "type": "webpage",
+    "title": "PyAEDT",
+    "URL": "https://github.com/ansys/pyaedt",
+    "author": [
+      {
+        "literal": "{ANSYS, Inc.}"
+      }
+    ],
+    "issued": {
+      "date-parts": [
+        [
+          2026
+        ]
+      ]
+    }
+  },
+  {
+    "id": "PYAEDTMCP",
+    "type": "webpage",
+    "title": "PyAEDT-MCP",
+    "URL": "https://github.com/ansys/pyaedt-mcp",
+    "author": [
+      {
+        "literal": "{ANSYS, Inc.}"
+      }
+    ],
+    "issued": {
+      "date-parts": [
+        [
+          2026
+        ]
+      ]
+    }
+  },
+  {
+    "id": "PYPDF",
+    "type": "webpage",
+    "title": "pypdf",
+    "URL": "https://pypdf.readthedocs.io/",
+    "author": [
+      {
+        "literal": "{pypdf contributors}"
+      }
+    ],
+    "issued": {
+      "date-parts": [
+        [
+          2026
+        ]
+      ]
+    }
+  },
+  {
+    "id": "PYTHON",
+    "type": "webpage",
+    "title": "Python",
+    "URL": "https://www.python.org/",
+    "author": [
+      {
+        "literal": "{Python Software Foundation}"
+      }
+    ],
+    "issued": {
+      "date-parts": [
+        [
+          2026
+        ]
+      ]
+    }
+  },
+  {
+    "id": "REPO1",
+    "type": "webpage",
+    "title": "Litz Wire Losses with Custom Twisting",
+    "URL": "https://github.com/otvam/litz_wire_losses_twisting",
+    "author": [
+      {
+        "literal": "{otvam}"
+      }
+    ],
+    "issued": {
+      "date-parts": [
+        [
+          2026
+        ]
+      ]
+    }
+  },
+  {
+    "id": "REPO2",
+    "type": "webpage",
+    "title": "Litz Wire Losses with FEM and MATLAB",
+    "URL": "https://github.com/ethz-pes/litz_wire_losses_fem_matlab",
+    "author": [
+      {
+        "literal": "{ethz-pes}"
+      }
+    ],
+    "issued": {
+      "date-parts": [
+        [
+          2026
+        ]
+      ]
+    }
+  },
+  {
+    "id": "REPO3",
+    "type": "webpage",
+    "title": "An Open-Source FEM Magnetics Toolbox for Power Electronic Magnetic Components",
+    "URL": "https://github.com/upb-lea/FEM_Magnetics_Toolbox",
+    "author": [
+      {
+        "literal": "{upb-lea}"
+      }
+    ],
+    "issued": {
+      "date-parts": [
+        [
+          2026
+        ]
+      ]
+    }
+  },
+  {
+    "id": "REPO4",
+    "type": "webpage",
+    "title": "PyPEEC - 3D Quasi-Magnetostatic FFT/PEEC Solver",
+    "URL": "https://github.com/otvam/pypeec",
+    "author": [
+      {
+        "literal": "{otvam}"
+      }
+    ],
+    "issued": {
+      "date-parts": [
+        [
+          2026
+        ]
+      ]
+    }
+  },
+  {
+    "id": "REPO6",
+    "type": "webpage",
+    "title": "TexGen is a geometric textile modelling software package to be used for obtaining engineering properties of woven textiles and textile composites.",
+    "URL": "https://github.com/louisepb/TexGen",
+    "author": [
+      {
+        "literal": "{louisepb}"
+      }
+    ],
+    "issued": {
+      "date-parts": [
+        [
+          2026
+        ]
+      ]
+    }
+  },
+  {
+    "id": "REPORTLAB",
+    "type": "webpage",
+    "title": "ReportLab",
+    "URL": "https://www.reportlab.com/",
+    "author": [
+      {
+        "literal": "{ReportLab contributors}"
+      }
+    ],
+    "issued": {
+      "date-parts": [
+        [
+          2026
+        ]
+      ]
+    }
+  },
+  {
+    "id": "RT1977",
+    "type": "chapter",
+    "title": "A mixed finite element method for 2-nd order elliptic problems",
+    "DOI": "10.1007/bfb0064470",
+    "URL": "https://doi.org/10.1007/bfb0064470",
+    "volume": "606",
+    "page": "292--315",
+    "container-title": "Mathematical Aspects of Finite Element Methods",
+    "author": [
+      {
+        "literal": "Raviart, P. A."
+      },
+      {
+        "literal": "Thomas, J. M."
+      }
+    ],
+    "issued": {
+      "date-parts": [
+        [
+          1977
+        ]
+      ]
+    }
+  },
+  {
+    "id": "RUEHLI1974",
+    "type": "article-journal",
+    "title": "Equivalent Circuit Models for Three-Dimensional Multiconductor Systems",
+    "DOI": "10.1109/tmtt.1974.1128204",
+    "URL": "https://doi.org/10.1109/tmtt.1974.1128204",
+    "container-title": "IEEE Transactions on Microwave Theory and Techniques",
+    "volume": "22",
+    "issue": "3",
+    "page": "216--221",
+    "author": [
+      {
+        "literal": "Ruehli, A.E."
+      }
+    ],
+    "issued": {
+      "date-parts": [
+        [
+          1974
+        ]
+      ]
+    }
+  },
+  {
+    "id": "S02",
+    "type": "article-journal",
+    "title": "Simplified Design Method for Litz Wire",
+    "DOI": "10.1109/apec.2014.6803681",
+    "URL": "",
+    "container-title": "APEC 2014",
+    "author": [
+      {
+        "literal": "Charles R. Sullivan"
+      },
+      {
+        "literal": "Richard Y. Zhang"
+      }
+    ],
+    "issued": {
+      "date-parts": [
+        [
+          2014
+        ]
+      ]
+    }
+  },
+  {
+    "id": "S03",
+    "type": "article-journal",
+    "title": "Analytical Model for Effects of Twisting on Litz-Wire Losses",
+    "DOI": "10.1109/compel.2014.6877187",
+    "URL": "https://doi.org/10.1109/COMPEL.2014.6877187",
+    "container-title": "IEEE COMPEL:1–10",
+    "author": [
+      {
+        "literal": "Charles R. Sullivan"
+      },
+      {
+        "literal": "Richard Y. Zhang"
+      }
+    ],
+    "issued": {
+      "date-parts": [
+        [
+          2014
+        ]
+      ]
+    }
+  },
+  {
+    "id": "S04",
+    "type": "article-journal",
+    "title": "Realistic Litz Wire Characterization using Fast Numerical Simulations",
+    "DOI": "10.1109/apec.2014.6803390",
+    "URL": "",
+    "container-title": "APEC 2014",
+    "author": [
+      {
+        "literal": "Richard Y. Zhang"
+      },
+      {
+        "literal": "Jacob K. White"
+      },
+      {
+        "literal": "John G. Kassakian"
+      },
+      {
+        "literal": "Charles R. Sullivan"
+      }
+    ],
+    "issued": {
+      "date-parts": [
+        [
+          2014
+        ]
+      ]
+    }
+  },
+  {
+    "id": "S05",
+    "type": "article-journal",
+    "title": "Litz Wire Losses: Effects of Twisting Imperfections",
+    "DOI": "10.1109/compel.2017.8013327",
+    "URL": "https://doi.org/10.1109/COMPEL.2017.8013327",
+    "container-title": "IEEE COMPEL",
+    "author": [
+      {
+        "literal": "Thomas Guillod"
+      },
+      {
+        "literal": "Jonas E. Huber"
+      },
+      {
+        "literal": "Florian Krismer"
+      },
+      {
+        "literal": "Johann W. Kolar"
+      }
+    ],
+    "issued": {
+      "date-parts": [
+        [
+          2017
+        ]
+      ]
+    }
+  },
+  {
+    "id": "S06",
+    "type": "article-journal",
+    "title": "Simulation of Eddy Current Losses in Twisted Wires",
+    "DOI": "10.3311/ppee.22800",
+    "URL": "https://doi.org/10.3311/PPee.22800",
+    "container-title": "Periodica Polytechnica EECS",
+    "volume": "68",
+    "issue": "2",
+    "page": "149--156",
+    "author": [
+      {
+        "literal": "Tamás Bakondi"
+      }
+    ],
+    "issued": {
+      "date-parts": [
+        [
+          2024
+        ]
+      ]
+    }
+  },
+  {
+    "id": "SETUPTOOLS",
+    "type": "webpage",
+    "title": "setuptools",
+    "URL": "https://setuptools.pypa.io/",
+    "author": [
+      {
+        "literal": "{Python Packaging Authority}"
+      }
+    ],
+    "issued": {
+      "date-parts": [
+        [
+          2026
+        ]
+      ]
+    }
+  },
+  {
+    "id": "TEX",
+    "type": "webpage",
+    "title": "XeLaTeX, BibTeX, latexmk and MiKTeX",
+    "URL": "https://miktex.org/",
+    "author": [
+      {
+        "literal": "{TeX ecosystem contributors}"
+      }
+    ],
+    "issued": {
+      "date-parts": [
+        [
+          2026
+        ]
+      ]
+    }
+  },
+  {
+    "id": "WOLFRAM",
+    "type": "webpage",
+    "title": "Wolfram Language and Notebook",
+    "URL": "https://www.wolfram.com/language/",
+    "author": [
+      {
+        "literal": "{Wolfram Research}"
+      }
+    ],
+    "issued": {
+      "date-parts": [
+        [
+          2026
+        ]
+      ]
+    }
+  },
+  {
+    "id": "WOLFRAMCLIENT",
+    "type": "webpage",
+    "title": "Wolfram Client Library for Python",
+    "URL": "https://github.com/WolframResearch/WolframClientForPython",
+    "author": [
+      {
+        "literal": "{Wolfram Research}"
+      }
+    ],
+    "issued": {
+      "date-parts": [
+        [
+          2026
+        ]
+      ]
+    }
+  }
+]

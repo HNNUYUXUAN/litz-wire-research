@@ -23,3 +23,9 @@ Select a route with `litz-research data fetch <dataset>`. Dependencies are resto
 The catalogue in `data/catalog.json` is authoritative for ordered parts, dependencies, file identities and checksums. Compressed sizes count objects owned by each dataset; shared dependencies add their own download size. All parts are at most 128 MiB.
 
 Route records distinguish external-field loss, conductor transport quantities, geometrical observations, and three-dimensional diagnostic results. Use the corresponding model definitions and acceptance records when comparing quantities.
+
+## Versioned evidence mounts
+
+Historical science retains `v1.0.0-rc.1` and its original bytes/hashes under `data/evidence/v1.0.0-rc.1/`. The `automation-rc2` dataset restores current workflow artifacts under `data/evidence/v1.0.0-rc.2/`. New calculations write only to `outputs/`. Each dataset may declare source_version; its catalogued hashes determine restored identity.
+
+`automation-rc2` includes source snapshots, visible tool events, native Maxwell files, twenty Notebook run records and derivation lineage for normalized machine paths. Original request/source identities remain in run manifests; evidence_derivation.json maps raw identities to restored public derivatives. Source and request replay uses the current portable sequence generators.

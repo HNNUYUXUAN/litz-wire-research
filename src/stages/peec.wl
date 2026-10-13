@@ -1,11 +1,2 @@
-Get[FileNameJoin[{stageRoot,"src","PEEC.wl"}]];
-peCases={};
-Do[Print["LONGITUDINAL PEEC cross=",m];peOne=TimeConstrained[LitzPEEC`LongitudinalModel[m,.04,200000.],600,$Aborted];
- If[!AssociationQ[peOne],stageCheck["PEEC_assembly",1,0,"PEEC"];Break[]];AppendTo[peCases,peOne];
- Scan[stageCheck["PEEC_"<>ToString[m]<>"_"<>#,peOne["solution"][#],10.^-8,"longitudinal_PEEC"]&,{"linear_residual","current_residual","common_voltage_residual","power_residual"}];
- stageCheck["PEEC_L_passivity_"<>ToString[m],Max[0.,-peOne["minimum_L_eigenvalue_H"]],10.^-14,"longitudinal_PEEC"];
- Print[KeyTake[peOne,{"filaments","assembly_seconds","Rac_ohm_per_axial_m","Bessel_Rac_relative_error"}]];
- stageData=<|"source_model"->"longitudinal_PEEC","cases"->peCases|>;stageSave[],{m,{6,10,14}}];
-stageData=<|"source_model"->"longitudinal_PEEC","cases"->peCases,"assumptions"->"Finite straight volume filaments with common end voltage, total 20 A RMS; mu_r=1; sigma=58 MS/m; exp(+j omega t); no prescribed equal currents. Square transverse cells approximate a circle; actual area is reported and Bessel comparison uses equal area. Exact axial pair integral; singular self convolution/Duffy integration and 4-point per-axis mutual Gauss quadrature. No epsilon regularization. Longitudinal basis excludes transverse circulation: full vector voxel/face-flux implementation required separately. X is partial total finite conductor inductance, not Q1 internal X. This route is not yet a converged 3D result."|>;
-stageFigure["PEEC_Rac_convergence",ListLinePlot[Table[{c["filaments"],c["Rac_ohm_per_axial_m"] 1000},{c,peCases}],Frame->True,FrameLabel->{"filaments","Rac (mOhm / axial m)"},PlotMarkers->Automatic,ImageSize->600]];
-If[Length[peCases]>0,peLast=Last[peCases];stageFigure["PEEC_current_map",ListDensityPlot[MapThread[Append,{1000 peLast["centers_m"],Abs[peLast["solution"]["currents"]]/peLast["cell_width_m"]^2/10.^6}],FrameLabel->{"x (mm)","y (mm)"},PlotLegends->Automatic,ImageSize->600]]];
+(* Compatibility entry; maintained implementation: models/peec/src/stages/peec.wl *)
+Get[FileNameJoin[{NestWhile[DirectoryName,DirectoryName[$InputFileName],!FileExistsQ[FileNameJoin[{#,"pyproject.toml"}]]&],"models","peec","src","stages","peec.wl"}]];

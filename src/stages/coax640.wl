@@ -1,13 +1,2 @@
-Get[FileNameJoin[{stageRoot,"src","CoaxFEM.wl"}]];
-c640Cases={};c640Failed=None;
-Do[Print["640-strand converged-area specification ",spec];c640=LitzCoax`SolveCoax[640,.0001,spec[[1]],spec[[2]],spec[[3]],64];
- If[!AssociationQ[c640],c640Failed=c640;stageCheck["640_solver",1,0,"2D_coax_FEM"];Break[]];AppendTo[c640Cases,c640];
- Scan[stageCheck["640_"<>StringRiffle[ToString/@spec,"_"]<>"_"<>#,c640[#],If[#=="power_residual",.001,10.^-8],"2D_coax_FEM"]&,{"linear_residual","current_residual","power_residual"}];
- stageCheck["640_actual_polygon_copper_area",Max[0.,5.*^-6-c640["polygonal_bundle_area_m2"]],10.^-15,"actual_FEM_geometry_area"];
- stageData=<|"source_model"->"640_strand_area_and_convergence_coax_FEM","cases"->c640Cases|>;stageSave[];
- Print[KeyTake[c640,{"nodes","polygonal_bundle_area_m2","bundle_Rac_ohm_per_m","solve_seconds"}]],{spec,{{.6,2.,1.5},{.3,2.,1.5},{.15,2.,1.5},{.15,3.,1.5},{.15,2.,2.}}}];
-If[Length[c640Cases]>=3,stageCheck["640_fine_mesh_change",Abs[c640Cases[[3]]["bundle_Rac_ohm_per_m"]/c640Cases[[2]]["bundle_Rac_ohm_per_m"]-1],.01,"2D_coax_FEM"];c640Area=c640Cases[[3]]["polygonal_bundle_area_m2"];c640Rdc=1/(5.8*^7 c640Area);
- c640Baseline=<|"source_model"->"Bessel_equal_actual_FEM_copper_area_internal_impedance","actual_area_m2"->c640Area,"diameter_m"->2 Sqrt[c640Area/Pi],"Rdc_ohm_per_m"->c640Rdc,"Rac_ohm_per_m"->Re[LitzPhysics`WireZ[Sqrt[c640Area/Pi],200000.]],"loss_W_per_m"->400 Re[LitzPhysics`WireZ[Sqrt[c640Area/Pi],200000.]]|>;
- If[Length[c640Cases]==5,stageCheck["640_return_distance_sensitivity",Abs[c640Cases[[4]]["bundle_Rac_ohm_per_m"]/c640Cases[[3]]["bundle_Rac_ohm_per_m"]-1],.01,"controlled_return_FEM"];stageCheck["640_outer_domain_sensitivity",Abs[c640Cases[[5]]["bundle_Rac_ohm_per_m"]/c640Cases[[3]]["bundle_Rac_ohm_per_m"]-1],.01,"controlled_outer_boundary_FEM"]];
- stageFigure["640_mesh_convergence",ListLinePlot[({#["nodes"],#["bundle_Rac_ohm_per_m"]*1000}&/@Take[c640Cases,3]),Frame->True,FrameLabel->{"nodes","bundle Rac (mOhm/axial m)"},ImageSize->600]]];
-stageData=<|"source_model"->"640_strand_area_and_convergence_coax_FEM","cases"->c640Cases,"equal_actual_area_solid_internal_baseline"->If[ValueQ[c640Baseline],c640Baseline,None],"first_failure"->c640Failed,"assumptions"->"640 straight insulated copper strands, common axial voltage and 20 A total; explicit coaxial copper return -20 A. At least 64 segments per circle; actual polygonal copper area checked >=5 mm^2. Three independent interior meshes and fine-grid return/outer sensitivity. Equal-actual-area solid Bessel is internal impedance reference, not identical return port X. This is an infinite axial straight-bundle model; no finite ends or transposed topology ranking."|>;
+(* Compatibility entry; maintained implementation: models/common_terminal/src/stages/coax640.wl *)
+Get[FileNameJoin[{NestWhile[DirectoryName,DirectoryName[$InputFileName],!FileExistsQ[FileNameJoin[{#,"pyproject.toml"}]]&],"models","common_terminal","src","stages","coax640.wl"}]];

@@ -1,0 +1,74 @@
+"""Native seven-strand Maxwell case, called inside the upstream MCP Python session."""
+from pathlib import Path
+import cmath,json,math,sys,time
+import numpy as np
+from ansys.aedt.core import Maxwell2d
+from ansys.aedt.core.generic.constants import SolutionsMaxwell2D
+
+def execute(root,output,port,parameters=None):
+    root=Path(root);out=Path(output);out.mkdir(parents=True,exist_ok=False)
+    import hashlib,shutil
+    sources={}
+    for source in [Path(__file__),root/'adapters/ansys/ansys_validate.py',root/'adapters/ansys/StartMCP.py']:
+        target=out/'source_snapshot'/source.name;target.parent.mkdir(exist_ok=True);shutil.copy2(source,target)
+        sources[source.relative_to(root).as_posix()]=hashlib.sha256(source.read_bytes()).hexdigest()
+    (out/'run_manifest.json').write_text(json.dumps({'source_snapshot_timing':'before_model_creation','sources':sources},indent=2))
+    p={'frequency_Hz':200000.,'current_RMS_A':20.,'diameter_m':0.0001,'return_factor':2.,'outer_factor':1.5}|(parameters or {})
+    if set(p)!={'frequency_Hz','current_RMS_A','diameter_m','return_factor','outer_factor'}:raise ValueError('Unsupported Maxwell parameter')
+    sys.path.insert(0,str(root/'adapters/ansys'))
+    from ansys_validate import read_shorttest_solution
+    app=Maxwell2d(project=str(out/'seven_strand.aedt'),design='CommonTerminal7',solution_type=SolutionsMaxwell2D.ACMagnetic,version='2025.2',port=port,new_desktop=False,student_version=True,non_graphical=True,close_on_exit=False)
+    if app.solution_type!=SolutionsMaxwell2D.ACMagnetic:raise RuntimeError('Wrong actual solution type: '+str(app.solution_type))
+    app.modeler.model_units='mm';app.materials.add_material('litz_copper').conductivity=5.8e7
+    app.materials.add_material('litz_air').permittivity=1.
+    app.change_design_settings({'BackgroundMaterialName':'litz_air','ModelDepth':'1000mm'})
+    from ansys.aedt.core.generic.numbers_utils import decompose_variable_value
+    depth,depth_unit=decompose_variable_value(app.model_depth)
+    if app.modeler.model_units!='mm' or depth_unit!='mm' or abs(float(depth)-1000)>1e-9:
+        raise RuntimeError('Actual Maxwell units/depth do not match the one-metre case')
+    d=p['diameter_m']*1000.;radius=d/2
+    centers=[[0.,0.]]+[[1.2*d*math.cos(k*math.pi/3),1.2*d*math.sin(k*math.pi/3)] for k in range(6)]
+    wires=[app.modeler.create_circle([*xy,0],radius,num_sides=42,name='Copper_'+str(i+1),material='litz_copper') for i,xy in enumerate(centers)]
+    bundle_radius=1.2*d+radius;ri=p['return_factor']*bundle_radius;ro=ri+max(4*radius,.3);domain=p['outer_factor']*ro
+    ret=app.modeler.create_circle([0,0,0],ro,num_sides=96,name='ReturnOuter',material='litz_copper')
+    hole=app.modeler.create_circle([0,0,0],ri,num_sides=96,name='ReturnInner');app.modeler.subtract(ret,hole,keep_originals=False)
+    air=app.modeler.create_circle([0,0,0],domain,num_sides=96,name='Air',material='litz_air');app.modeler.subtract(air,[x.name for x in wires]+[ret.name],keep_originals=True)
+    # Apply the Dirichlet condition to every outer polygon edge.
+    app.assign_vector_potential([e for e in air.edges if math.hypot(e.midpoint[0],e.midpoint[1])>domain*.99],vector_value=0)
+    windings=[]
+    for obj in [*wires,ret]:
+        name='ReturnWinding' if obj==ret else 'W_'+obj.name
+        winding=app.assign_winding(assignment=[obj.name],winding_type='Voltage',is_solid=True,voltage='1V',phase='0deg',parallel_branches=1,current=0,name=name)
+        if not winding:raise RuntimeError('Voltage winding assignment failed: '+name)
+        windings.append(winding)
+    app.eddy_effects_on([x.name for x in wires]+[ret.name],enable_eddy_effects=True,enable_displacement_current=False)
+    setup=app.create_setup('LitzSetup');setup.props['Frequency']=str(p['frequency_Hz'])+'Hz';setup.props['MaximumPasses']=1;setup.props['MinimumPasses']=1;setup.props['PercentError']=20;setup.update()
+    report={'source_model':'Ansys_Maxwell2D_native_seven_strand_common_voltage','execution_status':'running','physical_acceptance_status':'not_verified','parameters':p,'axial_depth_m':1,'solves':[],'port':port,'mesh_scope':'One-pass polygonal mesh; full spatial and boundary convergence not_run','phasor':'exp(+j omega t), RMS; AEDT source values are peak'}
+    def save(): (out/'results.json').write_text(json.dumps(report,indent=2),encoding='utf-8')
+    save()
+    def solve(label,vs,vr):
+        folder=out/label;folder.mkdir();voltages={}
+        for winding in windings:
+            value=vr if winding.name=='ReturnWinding' else vs
+            winding.props['Voltage']=str(abs(value)*math.sqrt(2))+'V';winding.props['Phase']=str(math.degrees(cmath.phase(value)))+'deg';winding.update();voltages[winding.name]=value
+        app.save_project()
+        if not app.analyze_setup(setup.name,cores=4,use_auto_settings=False,revert_to_initial_mesh=True):raise RuntimeError('Maxwell solve failed: '+label)
+        data=read_shorttest_solution(app,folder,voltages,[x.name for x in wires]+[ret.name])
+        if data['errors']:raise RuntimeError('Postprocessing failed: '+str(data['errors']))
+        app.export_mesh_stats(setup.name,output_file=str(folder/'mesh_stats.csv'))
+        report['solves'].append({'label':label,'data':data,'voltage_RMS_V':{'source':{'real':vs.real,'imag':vs.imag},'return':{'real':vr.real,'imag':vr.imag}}});save()
+        return data
+    def currents(data):return np.array([complex(data[k]['real'],data[k]['imag']) for k in ['source_current_RMS_A','return_current_RMS_A']])
+    a=solve('basis_source',1+0j,0+0j);b=solve('basis_return',0+0j,1+0j)
+    voltage=np.linalg.solve(np.column_stack([currents(a),currents(b)]),np.array([p['current_RMS_A'],-p['current_RMS_A']]))
+    final=solve('constrained20A',complex(voltage[0]),complex(voltage[1]))
+    current_error=float(np.linalg.norm(currents(final)-[p['current_RMS_A'],-p['current_RMS_A']])/np.linalg.norm([p['current_RMS_A'],-p['current_RMS_A']]))
+    loss=sum(v for k,v in final['solid_losses_W'].items() if k not in {'ReturnWinding','total'})
+    report.update(execution_status='completed',physical_acceptance_status='passed_port_and_power_scope_only' if current_error<1e-8 and final['power_relative_difference']<1e-8 else 'failed',current_constraint_relative_error=current_error,power_relative_error=final['power_relative_difference'],bundle_Rac_ohm_per_m=loss/p['current_RMS_A']**2,source_geometry={'strand_centers_mm':centers,'strand_radius_mm':radius,'return_inner_radius_mm':ri,'return_outer_radius_mm':ro,'domain_radius_mm':domain,'strand_segments':42,'return_segments':96},project='seven_strand.aedt')
+    import platform,importlib.metadata
+    report['environment']={'python':platform.python_version(),'pyaedt':importlib.metadata.version('pyaedt'),'aedt':app.desktop_class.aedt_version,'model_units':app.modeler.model_units,'model_depth':app.model_depth,'frequency_setting':setup.props['Frequency'],'solver_cores':4}
+    app.save_project()
+    project=out/'seven_strand.aedt'
+    report['project_readback']={'design_present':b'CommonTerminal7' in project.read_bytes(),'sha256':hashlib.sha256(project.read_bytes()).hexdigest()}
+    save()
+    return report

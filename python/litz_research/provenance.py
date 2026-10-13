@@ -14,6 +14,7 @@ def numeric_tree(value, path=()):
 
 def portable_text(text):
     """Normalize recorded machine locations while retaining relative suffixes."""
+    text=re.sub(r"(?i)[A-Z]:[\\/]+Workspaces[\\/]+repos[\\/]+litz-wire-research", "${PROJECT_ROOT}",text)
     text=re.sub(r"(?i)[A-Z]:[\\/]+Workspaces[\\/]+repos[\\/]+litz-wire-modeling-src", "${PROJECT_ROOT}",text)
     text=re.sub(r"(?i)[A-Z]:[\\/]+Workspaces[\\/]+repos[\\/]+litz-wire-modeling", "${SOURCE_ARCHIVE}",text)
     text=re.sub(r"(?i)[A-Z]:[\\/]+Workspaces[\\/]+archives", "${ARCHIVE_ROOT}",text)

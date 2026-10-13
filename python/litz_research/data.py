@@ -9,7 +9,7 @@ import tempfile
 import urllib.error
 import urllib.parse
 import urllib.request
-from .common import read, safe_path, sha
+from .common import read, safe_path, sha, evidence_root
 
 class CredentialRedirect(urllib.request.HTTPRedirectHandler):
     def redirect_request(self, req, fp, code, msg, headers, newurl):
@@ -32,7 +32,7 @@ def download(url, destination, expected_hash, expected_bytes, private=False):
         if sha(partial) != expected_hash:
             raise ValueError("Partial download checksum mismatch: " + destination.name)
         partial.replace(destination); return destination
-    headers = {"User-Agent":"litz-research/1.0.0rc1", "Accept":"application/octet-stream"}
+    headers = {"User-Agent":"litz-research/1.0.0rc2", "Accept":"application/octet-stream"}
     if offset: headers["Range"] = f"bytes={offset}-"
     if private:
         if urllib.parse.urlparse(url).hostname != "api.github.com":
@@ -114,7 +114,7 @@ def fetch(root, dataset_id, cache, offline=False):
     for record in dataset["files"]:
         source = cached_object(cache,record["sha256"])
         if not source.is_file() or sha(source) != record["sha256"]: raise ValueError("Required cached object: " + record["sha256"])
-        dest = safe_path(root,record["path"])
+        dest = safe_path(evidence_root(root,dataset.get('source_version')),record["path"])
         if dest.exists() and sha(dest) != record["sha256"]: raise ValueError("Local file has independent edits: " + record["path"])
         dest.parent.mkdir(parents=True,exist_ok=True)
         if not dest.exists(): shutil.copyfile(source,dest)
@@ -127,7 +127,7 @@ def verify(root,dataset_id=None):
         if dataset_id and name != dataset_id:continue
         errors=[]
         for record in dataset["files"]:
-            path=safe_path(root,record["path"])
+            path=safe_path(evidence_root(root,dataset.get('source_version')),record["path"])
             if not path.is_file():errors.append({"path":record["path"],"status":"missing","command":f"litz-research data fetch {name}"})
             elif path.stat().st_size!=record["bytes"] or sha(path)!=record["sha256"]:errors.append({"path":record["path"],"status":"checksum_mismatch"})
         results.append(dict(dataset=name,files=len(dataset["files"]),status="passed" if not errors else "failed",errors=errors))

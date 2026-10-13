@@ -882,206 +882,28 @@
   },
   "references": [
     {
-      "id": "P01",
-      "file": "references/literature_20261004_delivery/P01_Cruciani_2023_DTM.pdf",
-      "original_download_name": "qy_Numerical_Modeling_of_Litz_Wires_Based_on_Discrete_Transpositions_of_Strands_.pdf",
-      "bytes": 8041476,
-      "sha256": "9d503433b14f41bbece6569a9695713e982034c884da644547ecf43f80c261cd",
-      "pages": 10,
-      "text_characters": 42745,
-      "source_model": "published_literature",
-      "execution_status": "received_pdf_verified_not_replicated",
-      "acquisition_route": "user-retrieved literature delivery",
-      "title": "Numerical Modeling of Litz Wires Based on Discrete Transpositions of Strands and 2-D Finite Element Analysis",
-      "authors": [
-        "Silvano Cruciani",
-        "Tommaso Campi",
-        "Francesca Maradei",
-        "Mauro Feliziani"
-      ],
-      "year": 2023,
-      "venue": "IEEE TPEL 38(5):6710–6719",
-      "doi": "10.1109/TPEL.2023.3240338",
-      "evidence_level": "F",
-      "fulltext_status": "received_pdf_verified",
-      "reading_scope": "Assumptions, key equations, principal appendix arguments and validation cases; selected equation pages visually checked; not replicated",
-      "acquired_on": "2026-10-04",
-      "license_note": "Original publisher copyright and access notices retained; redistribution permission not established",
-      "canonical_url": "https://doi.org/10.1109/TPEL.2023.3240338",
-      "doi_found_in_extracted_text": true
+      "id": "P01"
     },
     {
-      "id": "N01",
-      "file": "references/literature_20261004_delivery/N01_Zhang_2026_iDTM.pdf",
-      "original_download_name": "qy_AC_Impedance_Modeling_of_Composite_Litz_Wire_With_Nonideal_Transposition_Base.pdf",
-      "bytes": 7320153,
-      "sha256": "ac0ed95823e991b1a58b269492591094ca78efd74760f9adf7f49e4152ee0de7",
-      "pages": 17,
-      "text_characters": 68911,
-      "source_model": "published_literature",
-      "execution_status": "received_pdf_verified_not_replicated",
-      "acquisition_route": "user-retrieved literature delivery",
-      "title": "AC Impedance Modeling of Composite Litz Wire With Nonideal Transposition Based on Improved Discrete Transposition Model",
-      "authors": [
-        "Xinsheng Zhang",
-        "Fei Xiao",
-        "Ruitian Wang",
-        "Shunjun Chen",
-        "Xuexin Fan",
-        "Xin Li"
-      ],
-      "year": 2026,
-      "venue": "IEEE TPEL 41(7):11003–11019",
-      "doi": "10.1109/TPEL.2026.3661080",
-      "evidence_level": "F",
-      "fulltext_status": "received_pdf_verified",
-      "reading_scope": "Assumptions, key equations, principal appendix arguments and validation cases; selected equation pages visually checked; not replicated",
-      "acquired_on": "2026-10-04",
-      "license_note": "Original publisher copyright and access notices retained; redistribution permission not established",
-      "canonical_url": "https://doi.org/10.1109/TPEL.2026.3661080",
-      "doi_found_in_extracted_text": true
+      "id": "N01"
     },
     {
-      "id": "P02",
-      "file": "references/literature_20261004_delivery/P02_Wang_2024_iSEC.pdf",
-      "original_download_name": "qy_Modeling of Litz Wire Winding AC Resistance Based onImproved Segmented Equiv.pdf",
-      "bytes": 2934547,
-      "sha256": "9ffdc2c5f150c3f7d08e154a851d11ebe49d81715080c18b5408df23d8d79efe",
-      "pages": 15,
-      "text_characters": 63860,
-      "source_model": "published_literature",
-      "execution_status": "received_pdf_verified_not_replicated",
-      "acquisition_route": "user-retrieved literature delivery",
-      "title": "Modeling of Litz Wire Winding AC Resistance Based on Improved Segmented Equivalent Circuit",
-      "authors": [
-        "Yueyin Wang",
-        "Wu Chen",
-        "Zhan Shen"
-      ],
-      "year": 2024,
-      "venue": "IEEE TPEL 39(1):1135–1149",
-      "doi": "10.1109/TPEL.2023.3321327",
-      "evidence_level": "F",
-      "fulltext_status": "received_pdf_verified",
-      "reading_scope": "Assumptions, key equations, principal appendix arguments and validation cases; selected equation pages visually checked; not replicated",
-      "acquired_on": "2026-10-04",
-      "license_note": "Original publisher copyright and access notices retained; redistribution permission not established",
-      "canonical_url": "https://doi.org/10.1109/TPEL.2023.3321327",
-      "doi_found_in_extracted_text": true
+      "id": "P02"
     },
     {
-      "id": "P03",
-      "file": "references/literature_20261004_delivery/P03_Rosskopf_2016_FEM_PEEC.pdf",
-      "original_download_name": "qy_Calculation_of_Power_Losses_in_Litz_Wire_Systems_by_Coupling_FEM_and_PEEC_Met.pdf",
-      "bytes": 750730,
-      "sha256": "6c588998d179bc6f927a02af712baf025707f7928f639bbdf6607c9628908949",
-      "pages": 8,
-      "text_characters": 40221,
-      "source_model": "published_literature",
-      "execution_status": "received_pdf_verified_not_replicated",
-      "acquisition_route": "user-retrieved literature delivery",
-      "title": "Calculation of Power Losses in Litz Wire Systems by Coupling FEM and PEEC Method",
-      "authors": [
-        "Andreas Roßkopf",
-        "Eberhard Bär",
-        "Christopher Joffe",
-        "Clemens Bonse"
-      ],
-      "year": 2016,
-      "venue": "IEEE TPEL 31(9):6442–6449",
-      "doi": "10.1109/TPEL.2015.2499793",
-      "evidence_level": "F",
-      "fulltext_status": "received_pdf_verified",
-      "reading_scope": "Assumptions, key equations, principal appendix arguments and validation cases; selected equation pages visually checked; not replicated",
-      "acquired_on": "2026-10-04",
-      "license_note": "Original publisher copyright and access notices retained; redistribution permission not established",
-      "canonical_url": "https://doi.org/10.1109/TPEL.2015.2499793",
-      "doi_found_in_extracted_text": true
+      "id": "P03"
     },
     {
-      "id": "P04",
-      "file": "references/literature_20261004_delivery/P04_Bakondi_2025_quasi2D.pdf",
-      "original_download_name": "qy_Finite element modeling of eddy currents in amulticonductor system with quas.pdf",
-      "bytes": 1161816,
-      "sha256": "8d5057337d91ba5ecec5d72ffc5121d39092ab0895da0308ff582319b1a83f16",
-      "pages": 13,
-      "text_characters": 32940,
-      "source_model": "published_literature",
-      "execution_status": "received_pdf_verified_not_replicated",
-      "acquisition_route": "user-retrieved literature delivery",
-      "title": "Finite element modeling of eddy currents in a multiconductor system with quasi-2D symmetry",
-      "authors": [
-        "Tamás Bakondi",
-        "Sándor Bilicz",
-        "Szabolcs Gyimóthy"
-      ],
-      "year": 2025,
-      "venue": "COMPEL 44(5):730–742",
-      "doi": "10.1108/COMPEL-01-2025-0031",
-      "evidence_level": "F",
-      "fulltext_status": "received_pdf_verified",
-      "reading_scope": "Assumptions, key equations, principal appendix arguments and validation cases; selected equation pages visually checked; not replicated",
-      "acquired_on": "2026-10-04",
-      "license_note": "Original publisher copyright and access notices retained; redistribution permission not established",
-      "canonical_url": "https://doi.org/10.1108/COMPEL-01-2025-0031",
-      "doi_found_in_extracted_text": true
+      "id": "P04"
     },
     {
-      "id": "P05",
-      "file": "references/literature_20261004_delivery/P05_Meeker_2012_continuum.pdf",
-      "original_download_name": "qy_An improved continuum skin and proximity effect modelfor hexagonally packed .pdf",
-      "bytes": 809942,
-      "sha256": "45659dbf37e1deb29d3fa07b639f298e8c98f0807ab0244f24e15e104566434f",
-      "pages": 10,
-      "text_characters": 21900,
-      "source_model": "published_literature",
-      "execution_status": "received_pdf_verified_not_replicated",
-      "acquisition_route": "user-retrieved literature delivery",
-      "title": "An Improved Continuum Skin and Proximity Effect Model for Hexagonally Packed Wires",
-      "authors": [
-        "David C. Meeker"
-      ],
-      "year": 2012,
-      "venue": "JCAM 236(18):4635–4644",
-      "doi": "10.1016/j.cam.2012.04.009",
-      "evidence_level": "F",
-      "fulltext_status": "received_pdf_verified",
-      "reading_scope": "Assumptions, key equations, principal appendix arguments and validation cases; selected equation pages visually checked; not replicated",
-      "acquired_on": "2026-10-04",
-      "license_note": "Original publisher copyright and access notices retained; redistribution permission not established",
-      "canonical_url": "https://doi.org/10.1016/j.cam.2012.04.009",
-      "doi_found_in_extracted_text": true
+      "id": "P05"
     },
     {
-      "id": "P09",
-      "file": "references/literature_20261004_delivery/P09_Niyomsatian_2020_complex_mu.pdf",
-      "original_download_name": "qy_Closed-form complex permeability expression forproximity-effect homogenisati.pdf",
-      "bytes": 1656398,
-      "sha256": "6d33e353622ddf3fc7614ef3cf120d841a61f4c94ec404f6e9fa287450b9b3ff",
-      "pages": 5,
-      "text_characters": 26973,
-      "source_model": "published_literature",
-      "execution_status": "received_pdf_verified_not_replicated",
-      "acquisition_route": "user-retrieved literature delivery",
-      "title": "Closed-form complex permeability expression for proximity-effect homogenisation of litz-wire windings",
-      "authors": [
-        "Korawich Niyomsatian",
-        "Johan Gyselinck",
-        "Ruth V. Sabariego"
-      ],
-      "year": 2020,
-      "venue": "IET SMT 14(3):287–291",
-      "doi": "10.1049/iet-smt.2019.0377",
-      "evidence_level": "F",
-      "fulltext_status": "received_pdf_verified",
-      "reading_scope": "Assumptions, key equations, principal appendix arguments and validation cases; selected equation pages visually checked; not replicated",
-      "acquired_on": "2026-10-04",
-      "license_note": "Original publisher copyright and access notices retained; redistribution permission not established",
-      "canonical_url": "https://doi.org/10.1049/iet-smt.2019.0377",
-      "doi_found_in_extracted_text": true
+      "id": "P09"
     }
   ],
-  "bibtex": "manuscript/references.bib",
+  "bibtex": "references/library.bib",
   "frozen_bundle": "data/publication/closure",
   "panel_run": "data/publication",
   "scientific_hashes": {
@@ -1105,5 +927,6 @@
     "mdit-py-plugins": "0.5.0",
     "mdurl": "0.1.2"
   },
-  "panel_overrides": {}
+  "panel_overrides": {},
+  "reference_numbering": "first_appearance_shared_bilingual"
 }

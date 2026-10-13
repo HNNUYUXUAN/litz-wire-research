@@ -25,9 +25,44 @@ def project(value=None):
     else:
         candidates = [Path.cwd(), *Path.cwd().parents, Path(__file__).resolve().parents[2]]
     for root in candidates:
-        if (root / "manuscript/publication.json").is_file() and (root / "configs/reference_parameters.json").is_file():
+        if ((root / "pyproject.toml").is_file() or (root / "manuscript/publication.json").is_file()) and (root / "configs/reference_parameters.json").is_file():
             return root
     raise ValueError("Select a research checkout with --project PATH or LITZ_PROJECT.")
+
+def evidence_root(root, version=None):
+    """Versioned restoration root; archive member names retain original identity."""
+    c = read(Path(root) / "data/catalog.json")
+    identity = version or c["tag"]
+    if not re.fullmatch(r"[A-Za-z0-9._-]+", identity):
+        raise ValueError("Invalid evidence version")
+    return Path(root) / "data/evidence" / identity
+
+def evidence_path(root, relative, version=None):
+    root = Path(root)
+    c = read(root / "data/catalog.json")
+    name=str(relative).replace('\\','/')
+    matches=[(r,d.get('source_version',c['tag'])) for d in c['datasets'].values() for r in d['files'] if r['path']==name or r['path'].startswith(name.rstrip('/')+'/')]
+    versions=[version] if version else list(dict.fromkeys(v for r,v in matches)) or [c['tag']]
+    for identity in versions:
+        mounted=safe_path(evidence_root(root,identity),relative)
+        if mounted.is_file() or mounted.is_dir():
+            exact=[r for r,v in matches if v==identity and r['path']==name]
+            if mounted.is_file() and exact and any(sha(mounted)!=r['sha256'] for r in exact):
+                raise ValueError('Frozen evidence checksum mismatch: '+str(relative))
+            return mounted
+    legacy = safe_path(root, relative)
+    exact=[r for r,v in matches if r['path']==name and (not version or v==version)]
+    if legacy.is_file() and exact and all(sha(legacy) == r["sha256"] for r in exact):
+        return legacy
+    raise FileNotFoundError("Missing frozen evidence: " + str(relative) + "; use litz-research data fetch <dataset>.")
+
+def resolve_read_path(root, relative):
+    path = Path(relative)
+    if path.is_absolute():
+        if path.exists():return path
+        relative=path.relative_to(root)
+    direct=safe_path(root,relative)
+    return direct if direct.exists() else evidence_path(root,str(relative).replace('\\','/'))
 
 def safe_path(root, relative):
     path = Path(relative)

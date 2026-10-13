@@ -1,0 +1,6 @@
+{
+  "execution_status": "failed",
+  "protocol_status": "passed",
+  "tool_call_status": "failed",
+  "error": "MCP tool returned an error: run_python_code; [\"Error executing code: could not convert string to float: '1000mm'\"]"
+}
