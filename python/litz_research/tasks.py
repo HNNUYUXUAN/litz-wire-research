@@ -138,14 +138,14 @@ def execute(root, model, run_id, case='tutorial', supplied=None):
 
 def bounded_process(cmd,root,out,env,policy):
     import psutil
-    from .processes import stop_owned
+    from .processes import stop_owned,owned_tree
     started=time.monotonic();started_wall=time.time();owned={};samples=[];reason=None;receipt=False
     with (out/'run_log.txt').open('w',encoding='utf-8') as log,(out/'stderr.txt').open('w',encoding='utf-8') as error:
         process=subprocess.Popen(cmd,cwd=root,env=env,stdout=log,stderr=error,creationflags=subprocess.CREATE_NO_WINDOW if os.name=='nt' else 0)
         parent=psutil.Process(process.pid);owned[parent.pid]=parent.create_time()
         while process.poll() is None:
             try:
-                children=[parent,*parent.children(recursive=True)];rss=0
+                children=owned_tree(parent);rss=0
                 for child in children:
                     owned[child.pid]=child.create_time();rss+=child.memory_info().rss
                     if hasattr(child,'cpu_affinity'):child.cpu_affinity(child.cpu_affinity()[:8])

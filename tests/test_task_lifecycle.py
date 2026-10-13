@@ -69,4 +69,15 @@ class LifecycleTests(unittest.TestCase):
         finally:
             twin.terminate();twin.wait(timeout=5)
 
+    def test_reused_parent_pid_does_not_adopt_an_older_process(self):
+        from litz_research.processes import owned_tree
+        class Process:
+            def __init__(self,pid,created,children=()):self.pid=pid;self.created=created;self.descendants=list(children)
+            def create_time(self):return self.created
+            def children(self,recursive=False):return self.descendants
+        unrelated=Process(2,10);grandchild=Process(4,22)
+        child=Process(3,21,[grandchild,Process(5,19)])
+        root=Process(1,20,[unrelated,child])
+        self.assertEqual([p.pid for p in owned_tree(root)],[1,3,4])
+
 if __name__=='__main__':unittest.main()

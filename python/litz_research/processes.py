@@ -2,6 +2,20 @@
 import os
 import ctypes
 
+def owned_tree(root):
+    """Reject false child edges created when Windows reuses an exited parent PID."""
+    import psutil
+    result=[root];seen={root.pid};index=0
+    while index<len(result):
+        parent=result[index];index+=1
+        try:
+            parent_created=parent.create_time()
+            for child in parent.children(recursive=False):
+                if child.pid not in seen and child.create_time()>=parent_created:
+                    seen.add(child.pid);result.append(child)
+        except (psutil.NoSuchProcess,psutil.AccessDenied):pass
+    return result
+
 def stop_owned(pid,created):
     if os.name!='nt':
         import psutil

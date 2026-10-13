@@ -15,13 +15,14 @@ def main():
     try:
         desktop=Desktop(version=a.version,non_graphical=True,new_desktop=True,student_version=True,close_on_exit=True)
         import psutil
+        from litz_research.processes import owned_tree
         aedt=psutil.Process(desktop.aedt_process_id);owned[aedt.pid]=aedt.create_time()
         (out/'aedt_session.json').write_text(json.dumps({'port':desktop.port,'version':desktop.aedt_version,'student_version':True,'pid':aedt.pid,'process_created':aedt.create_time(),'started_UTC':datetime.now(timezone.utc).isoformat()},indent=2))
         owner=psutil.Process();samples=[];start=time.monotonic();reason='stop_requested'
         while time.monotonic()-start<a.timeout and not (out/'stop_session').exists():
-            children=owner.children(recursive=True)
+            children=owned_tree(owner)[1:]
             try:
-                if aedt.create_time()==owned[aedt.pid]:children+=[aedt,*aedt.children(recursive=True)]
+                if aedt.create_time()==owned[aedt.pid]:children+=owned_tree(aedt)
             except psutil.Error:pass
             children=list({child.pid:child for child in children}.values());rss=owner.memory_info().rss
             for child in children:

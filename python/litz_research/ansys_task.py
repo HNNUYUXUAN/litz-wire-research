@@ -36,9 +36,9 @@ def execute(root,out,parameters):
         try:owner.wait(timeout=30)
         except subprocess.TimeoutExpired:
             import psutil
-            from .processes import stop_owned
+            from .processes import stop_owned,owned_tree
             if (session/'aedt_session.json').exists():
                 receipt=read(session/'aedt_session.json');stop_owned(receipt['pid'],receipt['process_created'])
             process=psutil.Process(owner.pid)
-            for child in reversed([process,*process.children(recursive=True)]):stop_owned(child.pid,child.create_time())
+            for child in reversed(owned_tree(process)):stop_owned(child.pid,child.create_time())
         log.close()
