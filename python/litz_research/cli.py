@@ -79,11 +79,12 @@ def model_catalog(root):
         row['source_files']=[mapping.get(path,path) for path in row['source_files']]
         row['legacy_command']=row['command']
         row['legacy_scope']=row['scope']
-        row['scope']={'rt0':'Small vector face-flux cuboid tutorial; imposed field or transport. Full matrix-free campaigns use legacy_command.', 'aphi':'Recompute derivatives and failed phi/gauge checks on three preserved cylinder fields; sampling changes do not solve new fields.', 'ansys':'Resource preflight only. Execute automation/examples/ansys-native for the actual MCP Maxwell case.'}.get(row['id'],row['scope'])
-        row['cases']=['tutorial','diagnostic'] if row['id']=='aphi' else ['tutorial','preflight'] if row['id']=='ansys' else ['tutorial','frequency-sweep'] if row['id']=='analytic' else ['tutorial']
+        row['scope']={'rt0':'Small vector face-flux cuboid tutorial; imposed field or transport. Full matrix-free campaigns use legacy_command.', 'aphi':'Recompute derivatives and failed phi/gauge checks on three preserved cylinder fields; sampling changes do not solve new fields.', 'ansys':'Default resource preflight; case maxwell-seven owns an Ansys MCP session and solves the native model through the shared task interface.'}.get(row['id'],row['scope'])
+        row['cases']=['tutorial','diagnostic'] if row['id']=='aphi' else ['tutorial','preflight','maxwell-seven'] if row['id']=='ansys' else ['tutorial','frequency-sweep'] if row['id']=='analytic' else ['tutorial']
         row['supported_parameters']=DEFAULTS[row['id']]
         row['route']=ROUTES[row['id']]
-        row['command']=f"litz-research run {row['id']} --case {row['cases'][-1] if row['id'] in {'aphi','ansys'} else 'tutorial'} --run-id {row['id'].replace('-','_')}_example_01"
+        default_case='diagnostic' if row['id']=='aphi' else 'preflight' if row['id']=='ansys' else 'tutorial'
+        row['command']=f"litz-research run {row['id']} --case {default_case} --run-id {row['id'].replace('-','_')}_example_01"
         row['inspect_command']=row['command']+' --dry-run'
         row['interface']='cli_run'
         row["source_available"] = all((root / path).is_file() for path in row["source_files"])
@@ -131,7 +132,7 @@ def parser():
     r.add_argument("model",choices=[*RUN_MODELS,'rt0','aphi','ansys','wolfram'])
     r.add_argument("--run-id",default=None)
     r.add_argument("--dry-run",action="store_true",help="Show source inputs, dependencies, workload, and launch conditions")
-    r.add_argument("--case",choices=['tutorial','diagnostic','frequency-sweep','preflight'])
+    r.add_argument("--case",choices=['tutorial','diagnostic','frequency-sweep','preflight','maxwell-seven'])
     r.add_argument("--parameters",help="JSON file containing explicitly supported model parameters")
     jobs=sub.add_parser('jobs',help='Submit, inspect, cancel or continue a bounded local task').add_subparsers(dest='action',required=True)
     js=jobs.add_parser('submit');js.add_argument('model');js.add_argument('--run-id',required=True);js.add_argument('--case',default='tutorial');js.add_argument('--parameters')

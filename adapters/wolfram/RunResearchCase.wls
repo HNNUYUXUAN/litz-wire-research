@@ -24,6 +24,8 @@ Switch[model,
  Get[FileNameJoin[{root,"models","common_terminal","src","CoaxFEM.wl"}]];
  data=LitzCoax`SolveCoax[p["strands"],p["diameter_m"],p["mesh_factor"],p["return_factor"],p["outer_factor"],p["minimum_segments"]];If[!AssociationQ[data],Print[data];Exit[1]];
  Scan[check[#,data[#],10^-8]&,{"linear_residual","current_residual","power_residual"}];
+ data["bundle_Rdc_ohm_per_m"]=1/(5.8*^7 data["polygonal_bundle_area_m2"]);data["Rac_over_Rdc"]=data["bundle_Rac_ohm_per_m"]/data["bundle_Rdc_ohm_per_m"];
+ data["copper_volume_m3_per_axial_m"]=data["polygonal_bundle_area_m2"];data["arc_lengths_m"]=ConstantArray[1.,p["strands"]];data["arc_length_growth_factors"]=ConstantArray[1.,p["strands"]];data["current_max_relative_complex_deviation"]=Max[Abs[data["strand_currents_RMS_A"]-20./p["strands"]]]/(20./p["strands"]);
  fig=ListPlot[Transpose[{Re[data["strand_currents_RMS_A"]],Im[data["strand_currents_RMS_A"]]}],Frame->True,FrameLabel->{"Re I (A RMS)","Im I (A RMS)"},PlotRange->All];scope="Common-voltage 2D straight insulated strands and controlled coaxial return. 200 kHz, 20 A RMS; small tutorial has insufficient copper for final Q2 design.",
  "geometry",
  data=LitzPhysics`Topology[p["kind"],p["strands"],p["length_m"],p["pitch_m"],p["diameter_m"]];

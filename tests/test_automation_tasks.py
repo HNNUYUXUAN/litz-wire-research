@@ -75,5 +75,7 @@ class AutomationTests(unittest.TestCase):
     def test_parameters_must_be_actual_supported_inputs(self):
         with self.assertRaises(ValueError):parameters('aphi',{'frequency_Hz':100000})
         with self.assertRaises(ValueError):parameters('fem2',{'radius_m':.002})
+        with self.assertRaises(ValueError):parameters('fem2',case='preflight')
+        self.assertEqual(parameters('ansys',{'frequency_Hz':100000},case='maxwell-seven')['frequency_Hz'],100000)
 
 if __name__=='__main__':unittest.main()

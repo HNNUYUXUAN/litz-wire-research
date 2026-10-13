@@ -6,13 +6,20 @@ from ansys.aedt.core import Maxwell2d
 from ansys.aedt.core.generic.constants import SolutionsMaxwell2D
 
 def execute(root,output,port,parameters=None):
-    root=Path(root);out=Path(output);out.mkdir(parents=True,exist_ok=False)
+    root=Path(root);out=Path(output)
+    if out.exists():
+        request=json.loads((out/'request.json').read_text(encoding='utf-8')) if (out/'request.json').exists() else {}
+        if request.get('model')!='ansys' or request.get('case')!='maxwell-seven':raise FileExistsError('Choose a new run directory')
+    else:out.mkdir(parents=True)
+    with (out/'native_model_started.json').open('x',encoding='utf-8') as receipt:json.dump({'run_id':out.name,'execution_status':'model_creation_started'},receipt)
     import hashlib,shutil
     sources={}
     for source in [Path(__file__),root/'adapters/ansys/ansys_validate.py',root/'adapters/ansys/StartMCP.py']:
         target=out/'source_snapshot'/source.name;target.parent.mkdir(exist_ok=True);shutil.copy2(source,target)
         sources[source.relative_to(root).as_posix()]=hashlib.sha256(source.read_bytes()).hexdigest()
-    (out/'run_manifest.json').write_text(json.dumps({'source_snapshot_timing':'before_model_creation','sources':sources},indent=2))
+    manifest=json.loads((out/'run_manifest.json').read_text(encoding='utf-8')) if (out/'run_manifest.json').exists() else {'run_id':out.name,'sources':sources}
+    manifest.update(source_snapshot_timing='before_model_creation',native_sources=sources)
+    (out/'run_manifest.json').write_text(json.dumps(manifest,indent=2))
     p={'frequency_Hz':200000.,'current_RMS_A':20.,'diameter_m':0.0001,'return_factor':2.,'outer_factor':1.5}|(parameters or {})
     if set(p)!={'frequency_Hz','current_RMS_A','diameter_m','return_factor','outer_factor'}:raise ValueError('Unsupported Maxwell parameter')
     sys.path.insert(0,str(root/'adapters/ansys'))
@@ -70,5 +77,11 @@ def execute(root,output,port,parameters=None):
     app.save_project()
     project=out/'seven_strand.aedt'
     report['project_readback']={'design_present':b'CommonTerminal7' in project.read_bytes(),'sha256':hashlib.sha256(project.read_bytes()).hexdigest()}
+    report['run_id']=out.name
+    copper_area=7*42/2*(p['diameter_m']/2)**2*math.sin(2*math.pi/42)
+    rdc=1/(5.8e7*copper_area);mean_current=p['current_RMS_A']/7
+    strand_currents=[complex(final['winding_currents_RMS_A']['W_Copper_'+str(i+1)]['real'],final['winding_currents_RMS_A']['W_Copper_'+str(i+1)]['imag']) for i in range(7)]
+    report.update(bundle_Rdc_ohm_per_m=rdc,Rac_over_Rdc=report['bundle_Rac_ohm_per_m']/rdc,bundle_loss_W_per_m=loss,polygonal_copper_area_m2=copper_area,copper_volume_m3_per_axial_m=copper_area,arc_lengths_m=[1.]*7,arc_length_growth_factors=[1.]*7,current_max_relative_complex_deviation=max(abs(i-mean_current) for i in strand_currents)/mean_current,scope='Straight insulated seven-strand pure transport; controlled copper return; prescribed 20 C conductivity; no thermal solve; insufficient copper for final Q2.')
+    report['checks']=[{'name':'total_complex_current','actual':current_error,'tolerance':1e-8,'passed':current_error<1e-8},{'name':'input_loss_power','actual':final['power_relative_difference'],'tolerance':1e-8,'passed':final['power_relative_difference']<1e-8},{'name':'saved_native_design','actual':report['project_readback']['design_present'],'passed':report['project_readback']['design_present']}]
     save()
     return report

@@ -43,6 +43,18 @@ class LifecycleTests(unittest.TestCase):
             with self.assertRaisesRegex(ValueError,'checkpoint identity'):resume(root,'first','second')
             self.assertFalse((root/'outputs/second').exists())
 
+    def test_queued_cancel_can_restart_without_a_solver_checkpoint(self):
+        from litz_research.tasks import plan
+        from litz_research.common import sha
+        with tempfile.TemporaryDirectory() as tmp:
+            root=self.fixture(tmp);ticket=root/'outputs/.jobs/first.json'
+            write(ticket,plan(root,'analytic','first'))
+            write(ticket.with_name('first.process.json'),{'ticket_sha256':sha(ticket)})
+            ticket.with_suffix('.cancel').touch();execute(root,'analytic','first')
+            restarted=resume(root,'first','second')
+            self.assertFalse(restarted['parent']['original_solver_started'])
+            self.assertEqual(self.wait(root,'second')['physical_acceptance_status'],'passed')
+
     def test_timeout_releases_only_owned_processes(self):
         import psutil
         twin=subprocess.Popen([sys.executable,'-c','import time;time.sleep(30)'],creationflags=subprocess.CREATE_NO_WINDOW if os.name=='nt' else 0)

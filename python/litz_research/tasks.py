@@ -37,6 +37,7 @@ DEFAULTS = {
 def parameters(model, supplied=None, case='tutorial'):
     if model not in ROUTES:raise ValueError('Unknown model: '+model)
     p=dict(DEFAULTS[model]);supplied=supplied or {}
+    if model=='ansys' and case=='maxwell-seven':p={'frequency_Hz':200000.,'current_RMS_A':20.,'diameter_m':0.0001,'return_factor':2.,'outer_factor':1.5}
     if set(supplied)-set(p):raise ValueError('Unsupported parameters: '+', '.join(sorted(set(supplied)-set(p))))
     p.update(supplied)
     for k,v in p.items():
@@ -55,7 +56,8 @@ def parameters(model, supplied=None, case='tutorial'):
         if len(p['dimensions'])!=3 or any(not isinstance(n,int) or not 2<=n<=4 for n in p['dimensions']):raise ValueError('Tutorial dimensions must contain three integers 2..4')
         if p['excitation'] not in {'field','transport'}:raise ValueError('Excitation must be field or transport')
     if model=='gpu' and (not isinstance(p['matrix_size'],int) or not isinstance(p['fft_size'],int) or p['matrix_size']>512 or p['fft_size']>16384):raise ValueError('GPU tutorial exceeds its validated small workload')
-    if case not in {'tutorial','diagnostic','frequency-sweep','preflight'}:raise ValueError('Unknown case: '+case)
+    allowed={'tutorial'}|({'diagnostic'} if model=='aphi' else {'frequency-sweep'} if model=='analytic' else {'preflight','maxwell-seven'} if model=='ansys' else set())
+    if case not in allowed:raise ValueError('Unsupported case for '+model+': '+case)
     if case=='frequency-sweep' and model!='analytic':raise ValueError('frequency-sweep belongs to the Python analytical model')
     return p
 
@@ -74,6 +76,10 @@ def plan(root, model, run_id, case='tutorial', supplied=None):
         from .common import evidence_path
         try:evidence_path(root,'outputs/rerun_20261005_fem3_cylinder_report/results.wxf')
         except FileNotFoundError:diagnostics.append('Fetch the aphi dataset.')
+    if model=='ansys' and case=='maxwell-seven':
+        local=read(root/'litz.config.json') if (root/'litz.config.json').exists() else {}
+        executable=tool(root,'ansys_python') or local.get('mcp_servers',{}).get('ansys',{}).get('command')
+        if not executable or not Path(executable).is_file():diagnostics.append('Configure the Ansys MCP Python executable for maxwell-seven.')
     return dict(model=model,route=ROUTES[model],case=case,run_id=run_id,parameters=p,dispatch_status='blocked' if diagnostics else 'ready',diagnostics=diagnostics,execution_status='plan_only',resource_policy={'cpu_threads':8,'task_memory_bytes':24*2**30,'system_reserve_bytes':8*2**30,'timeout_seconds':1200},output='outputs/'+run_id)
 
 def execute(root, model, run_id, case='tutorial', supplied=None):
@@ -103,7 +109,10 @@ def execute(root, model, run_id, case='tutorial', supplied=None):
             from .analytical import execute as analytical_execute
             result=analytical_execute(root,out,request['parameters'],case)
         elif model=='ansys':
-            result={'run_id':run_id,'source_model':'Maxwell_resource_preflight','execution_status':'preflight_only','physical_acceptance_status':'not_run','solver_started':False,'resource_policy':request['resource_policy'],'scope':'Use the Ansys MCP end-to-end example to create and solve the native seven-strand model.'}
+            if case=='maxwell-seven':
+                from .ansys_task import execute as execute_native
+                result=execute_native(root,out,request['parameters'])
+            else:result={'run_id':run_id,'source_model':'Maxwell_resource_preflight','execution_status':'preflight_only','physical_acceptance_status':'not_run','solver_started':False,'resource_policy':request['resource_policy'],'scope':'Use case maxwell-seven or the Ansys MCP example for the actual native solve.'}
         else:
             env=dict(os.environ,LITZ_PROJECT=str(root),LITZ_RUN_ID=run_id,LITZ_TUTORIAL_MODEL=model,LITZ_CLOSURE_CPU_THREADS='8',LITZ_RAM_BUDGET=str(24*2**30))
             if model=='aphi':
@@ -146,6 +155,7 @@ def bounded_process(cmd,root,out,env,policy):
                 if free<policy['system_reserve_bytes']:reason='system_memory_reserve'
                 if time.monotonic()-started>policy['timeout_seconds']:reason='timeout'
                 if (out/'cancel_requested.json').exists() or (root/'outputs/.jobs'/(out.name+'.cancel')).exists():reason='cancelled'
+                if env.get('LITZ_PARENT_RUN_ID') and (root/'outputs/.jobs'/(env['LITZ_PARENT_RUN_ID']+'.cancel')).exists():reason='cancelled'
                 completion=policy.get('completion_file')
                 if completion and Path(completion).exists() and Path(completion).stat().st_mtime>=started_wall:
                     # A saved frontend receipt is the completion boundary. Some
@@ -183,7 +193,7 @@ def submit(root,model,run_id,case='tutorial',supplied=None):
     import threading
     threading.Thread(target=proc.wait,daemon=True).start()
     import psutil
-    write(queue/(run_id+'.process.json'),{'pid':proc.pid,'created':psutil.Process(proc.pid).create_time()})
+    write(queue/(run_id+'.process.json'),{'pid':proc.pid,'created':psutil.Process(proc.pid).create_time(),'ticket_sha256':sha(ticket)})
     return request|{'execution_status':'submitted','pid':proc.pid}
 
 def status(root,run_id):
@@ -204,7 +214,15 @@ def status(root,run_id):
 def resume(root,run_id,new_run_id):
     state=status(root,run_id)
     if state['execution_status'] in {'submitted','running'}:raise ValueError('The original task is still active; query or cancel it before restarting.')
-    out=root/'outputs'/run_id;request=read(out/'request.json');manifest=read(out/'run_manifest.json')
+    out=root/'outputs'/run_id
+    if not (out/'request.json').exists() and state.get('solver_started') is False:
+        ticket=root/'outputs/.jobs'/(run_id+'.json');identity=read(root/'outputs/.jobs'/(run_id+'.process.json'))
+        if sha(ticket)!=identity.get('ticket_sha256'):raise ValueError('Queued input identity changed')
+        request=read(ticket);result=submit(root,request['model'],new_run_id,request['case'],request['parameters'])
+        parent={'parent_run_id':run_id,'resume_method':'restart_from_verified_queued_inputs','original_solver_started':False}
+        write(root/'outputs/.jobs'/(new_run_id+'.parent.json'),parent)
+        return result|{'parent':parent}
+    request=read(out/'request.json');manifest=read(out/'run_manifest.json')
     if sha(out/'request.json')!=manifest['request_sha256']:raise ValueError('Saved task input identity changed')
     for relative,identity in manifest['sources'].items():
         if sha(out/'source_snapshot'/relative)!=identity:raise ValueError('Saved source checkpoint identity changed: '+relative)

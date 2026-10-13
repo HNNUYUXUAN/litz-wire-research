@@ -44,8 +44,10 @@ def doctor(root):
     ap=tool(root,'ansys_python');ws=tool(root,'wolframscript')
     return {'execution_status':'completed','upstreams':read(root/'automation/mcp/upstreams.lock.json'),'servers':{'wolfram':{'launcher_found':bool(ws),'protocol_status':'not_probed'},'ansys':{'launcher_found':bool(ap),'protocol_status':'not_probed'}},'commands':['litz-research automation probe wolfram --run-id wolfram_mcp_01','litz-research automation probe ansys --run-id ansys_mcp_01'],'harnesses':{'codex':'see automation/harnesses/codex','generic_mcp':'see automation/harnesses/generic'}}
 
-def probe(root,server,run_id,sequence=None):
+def probe(root,server,run_id,sequence=None,parent_run_id=None):
     out=run_directory(root,run_id)
+    import psutil
+    write(out/'process_status.json',{'run_id':run_id,'source_model':'MCP_'+server,'execution_status':'running','pid':os.getpid(),'process_created':psutil.Process().create_time()})
     import shutil
     from .tasks import source_manifest
     from .common import sha
@@ -64,12 +66,14 @@ def probe(root,server,run_id,sequence=None):
     write(out/'mcp_request.json',{'server':configured,'calls':calls,'upstreams':read(root/'automation/mcp/upstreams.lock.json')})
     write(out/'run_manifest.json',{'run_id':run_id,'source_snapshot_timing':'before_mcp_initialization','sources':sources,'request_sha256':sha(out/'mcp_request.json')})
     env=dict(os.environ,LITZ_PROJECT=str(root))
+    if parent_run_id:env['LITZ_PARENT_RUN_ID']=parent_run_id
     from .tasks import bounded_process
     result=bounded_process([sys.executable,str(root/'automation/mcp/client.py'),'--request',str(out/'mcp_request.json'),'--output',str(out)],root,out,env,{'cpu_threads':8,'task_memory_bytes':24*2**30,'system_reserve_bytes':8*2**30,'timeout_seconds':1800,'completion_file':str(out/'mcp_completion.json')})
     if (out/'protocol_report.json').exists():result.update(read(out/'protocol_report.json'))
     elif (out/'mcp_completion.json').exists():
         result.update(read(out/'mcp_completion.json'));write(out/'protocol_report.json',read(out/'mcp_completion.json'))
     write(out/'results.json',result)
+    write(out/'process_status.json',{k:result.get(k) for k in ['execution_status','actual_exit_code','failure_reason']})
     return {k:v for k,v in result.items() if k!='events'}|{'run_id':run_id,'event_log':'outputs/'+run_id+'/mcp_events.jsonl'}
 
 def dispatch(root,args):
