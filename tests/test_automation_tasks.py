@@ -1,6 +1,6 @@
 """Physical parameter propagation, evidence identity and task cancellation tests."""
 from pathlib import Path
-import hashlib,json,tempfile,unittest,shutil
+import hashlib,json,tempfile,unittest,shutil,os
 from litz_research.common import project,write,evidence_path,evidence_root,sha
 from litz_research.tasks import execute,parameters
 from litz_research.analytical import solve
@@ -62,8 +62,15 @@ class AutomationTests(unittest.TestCase):
             relative='outputs/'+('long_snapshot_'*6)+'/source_snapshot/'+('subdirectory_'*6)+'/source.json'
             write(root/'data/catalog.json',{'tag':'fixture','datasets':{'snapshot':{'dependencies':[],'objects':[{'sha256':identity,'bytes':len(data)}],'files':[{'path':relative,'sha256':identity,'bytes':len(data)}],'parts':[]}}})
             obj=cached_object(cache,identity);obj.parent.mkdir(parents=True);obj.write_bytes(data)
-            self.assertEqual(fetch(root,'snapshot',cache,offline=True)[0]['status'],'passed')
-            self.assertEqual(sha(evidence_path(root,relative)),identity)
+            try:
+                self.assertEqual(fetch(root,'snapshot',cache,offline=True)[0]['status'],'passed')
+                self.assertEqual(sha(evidence_path(root,relative)),identity)
+            finally:
+                # tempfile's Windows cleanup also needs the extended prefix
+                # once this fixture intentionally exceeds MAX_PATH.
+                branch=(evidence_root(root)/'outputs').resolve()
+                assert branch.is_relative_to(root.resolve())
+                if branch.exists():shutil.rmtree('\\\\?\\'+str(branch) if os.name=='nt' else branch)
 
     def test_parameters_must_be_actual_supported_inputs(self):
         with self.assertRaises(ValueError):parameters('aphi',{'frequency_Hz':100000})
