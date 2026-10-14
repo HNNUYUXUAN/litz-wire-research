@@ -1,0 +1,194 @@
+[
+  {
+    "theme": "connections",
+    "language": "en",
+    "variant": 1,
+    "path": "outputs/review/visual-candidates/connections-en-1.svg",
+    "sha256": "94fb6630456d116ac68d75f192dada40957d5830b2926cdd45f97ceff99659c2",
+    "selected": true
+  },
+  {
+    "theme": "connections",
+    "language": "zh-CN",
+    "variant": 1,
+    "path": "outputs/review/visual-candidates/connections-zh-CN-1.svg",
+    "sha256": "c47b6ecf7c50570edf14cba36531260e22ef0acdeddcc05ad7507e97bc573422",
+    "selected": true
+  },
+  {
+    "theme": "connections",
+    "language": "en",
+    "variant": 2,
+    "path": "outputs/review/visual-candidates/connections-en-2.svg",
+    "sha256": "b718b8682c43e2d082913015c315f27a3d5f4fe2cc55502d59091f8938e19021",
+    "selected": false
+  },
+  {
+    "theme": "connections",
+    "language": "zh-CN",
+    "variant": 2,
+    "path": "outputs/review/visual-candidates/connections-zh-CN-2.svg",
+    "sha256": "26a579aef04aab89257b2a2e56c3c4a27f9fbe347003ba513999393599692b33",
+    "selected": false
+  },
+  {
+    "theme": "connections",
+    "language": "en",
+    "variant": 3,
+    "path": "outputs/review/visual-candidates/connections-en-3.svg",
+    "sha256": "19023493be7050a22226412e91e8787338315d53e890e0a16b8d8094f3fab3c6",
+    "selected": false
+  },
+  {
+    "theme": "connections",
+    "language": "zh-CN",
+    "variant": 3,
+    "path": "outputs/review/visual-candidates/connections-zh-CN-3.svg",
+    "sha256": "65f347cf59cfaf1d232c5100fcf77c4c97865fb9932bf362392ea0b6115df32c",
+    "selected": false
+  },
+  {
+    "theme": "research-loop",
+    "language": "en",
+    "variant": 1,
+    "path": "outputs/review/visual-candidates/research-loop-en-1.svg",
+    "sha256": "1567327bdfe058001290de2ce6ea66b8ffaebaee103daf88a7fcb990fa091fdf",
+    "selected": true
+  },
+  {
+    "theme": "research-loop",
+    "language": "zh-CN",
+    "variant": 1,
+    "path": "outputs/review/visual-candidates/research-loop-zh-CN-1.svg",
+    "sha256": "3c3cf9bf74bcee09b016a4ac327e3dc44f02db7e591c9727e7aefd3b12beaad1",
+    "selected": true
+  },
+  {
+    "theme": "research-loop",
+    "language": "en",
+    "variant": 2,
+    "path": "outputs/review/visual-candidates/research-loop-en-2.svg",
+    "sha256": "61f24b73a8dfb04fdd3399aab7508cfb466ee05cbbf615b7490cf04dde9536bd",
+    "selected": false
+  },
+  {
+    "theme": "research-loop",
+    "language": "zh-CN",
+    "variant": 2,
+    "path": "outputs/review/visual-candidates/research-loop-zh-CN-2.svg",
+    "sha256": "5875ef631bcba81c6f541a694ea7f98be82dae8d10fe16aa14e9007076c9274a",
+    "selected": false
+  },
+  {
+    "theme": "research-loop",
+    "language": "en",
+    "variant": 3,
+    "path": "outputs/review/visual-candidates/research-loop-en-3.svg",
+    "sha256": "46b6c3633c7b66c6b05b0e76c65b26805ebcba3511a045673b8e85e2f35395f4",
+    "selected": false
+  },
+  {
+    "theme": "research-loop",
+    "language": "zh-CN",
+    "variant": 3,
+    "path": "outputs/review/visual-candidates/research-loop-zh-CN-3.svg",
+    "sha256": "e30933a10ce7ccc5dc0b1245868776bef90b5de342377416dde0233c2dd115ad",
+    "selected": false
+  },
+  {
+    "theme": "model-hierarchy",
+    "language": "en",
+    "variant": 1,
+    "path": "outputs/review/visual-candidates/model-hierarchy-en-1.svg",
+    "sha256": "714d77a2735e6c1a8d74571f6a1ac83b2f56fae1cef12427b1bafe107bf81bd3",
+    "selected": true
+  },
+  {
+    "theme": "model-hierarchy",
+    "language": "zh-CN",
+    "variant": 1,
+    "path": "outputs/review/visual-candidates/model-hierarchy-zh-CN-1.svg",
+    "sha256": "37fe47d684ce62cc9a2d8ca96abd58b1aa91eed2c7d6b7fa7c4bb9523d259270",
+    "selected": true
+  },
+  {
+    "theme": "model-hierarchy",
+    "language": "en",
+    "variant": 2,
+    "path": "outputs/review/visual-candidates/model-hierarchy-en-2.svg",
+    "sha256": "2931089b94f4b93f9cb5c721ae8658720a8486c084d6f8777af25a33e44bce54",
+    "selected": false
+  },
+  {
+    "theme": "model-hierarchy",
+    "language": "zh-CN",
+    "variant": 2,
+    "path": "outputs/review/visual-candidates/model-hierarchy-zh-CN-2.svg",
+    "sha256": "6f85aaca19cbc91687385b883b5c67a0742529cf140e9a7f22e11cf17c0fe996",
+    "selected": false
+  },
+  {
+    "theme": "model-hierarchy",
+    "language": "en",
+    "variant": 3,
+    "path": "outputs/review/visual-candidates/model-hierarchy-en-3.svg",
+    "sha256": "544bcce6f68732c4da685e1a18a1ec2d154f5584cad477f8e74b260ec8e420c8",
+    "selected": false
+  },
+  {
+    "theme": "model-hierarchy",
+    "language": "zh-CN",
+    "variant": 3,
+    "path": "outputs/review/visual-candidates/model-hierarchy-zh-CN-3.svg",
+    "sha256": "f8b11ba5f92f8d133009f28c4884416dd8e9d85590a917cce7f67781cff04fed",
+    "selected": false
+  },
+  {
+    "theme": "cross-solver",
+    "language": "en",
+    "variant": 1,
+    "path": "outputs/review/visual-candidates/cross-solver-en-1.svg",
+    "sha256": "a077e193e3a9d6d138a1c8824bb8f2b23499059bfddbda18bd31cf57db352440",
+    "selected": true
+  },
+  {
+    "theme": "cross-solver",
+    "language": "zh-CN",
+    "variant": 1,
+    "path": "outputs/review/visual-candidates/cross-solver-zh-CN-1.svg",
+    "sha256": "c99ac7cfde5ed43c0e12a9e17052dc19f1934d7d142225c22fc6367af5a39ec7",
+    "selected": true
+  },
+  {
+    "theme": "cross-solver",
+    "language": "en",
+    "variant": 2,
+    "path": "outputs/review/visual-candidates/cross-solver-en-2.svg",
+    "sha256": "78d18ff224bc0589663982ff2be4bfe910496ccfe03f1eba58a07e89ef5f15d4",
+    "selected": false
+  },
+  {
+    "theme": "cross-solver",
+    "language": "zh-CN",
+    "variant": 2,
+    "path": "outputs/review/visual-candidates/cross-solver-zh-CN-2.svg",
+    "sha256": "82ca951df9f66e575f6a0acdb18fd04a4c669c2a4df67331f689ed7b12579767",
+    "selected": false
+  },
+  {
+    "theme": "cross-solver",
+    "language": "en",
+    "variant": 3,
+    "path": "outputs/review/visual-candidates/cross-solver-en-3.svg",
+    "sha256": "417c7620121300a8e9d0e2ba4452d9ad54e097f1c0769184f204b0be37bf8ae8",
+    "selected": false
+  },
+  {
+    "theme": "cross-solver",
+    "language": "zh-CN",
+    "variant": 3,
+    "path": "outputs/review/visual-candidates/cross-solver-zh-CN-3.svg",
+    "sha256": "6c4533d2f17a0fdfc00a822104282ea4da75d6cd5f8bc9cff03493b24ec0494a",
+    "selected": false
+  }
+]

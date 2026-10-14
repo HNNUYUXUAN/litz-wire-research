@@ -1,18 +1,20 @@
-# Scientific modules and runners
+# Scientific modules and compatibility entry points
 
-The installable entry is `litz-research`; see the [developer guide](../docs/development.md).
+The installed entry point is `litz-research`; see [Development](../docs/development.md). This directory preserves existing invocation paths. Maintained implementations reside in `models/`, `adapters/`, `shared/` and `tools/publication/`.
 
 | Module | Responsibility |
 | --- | --- |
 | Q1Analytical.wl | Round-wire Bessel impedance, complex current and independent area integrals |
-| NotebookPhysics.wl | Analytical, disk FEM, field–circuit and trajectory models |
-| CoaxFEM.wl | Sparse multistrand fields with controlled return geometry |
-| PEEC.wl | Finite-length longitudinal partial-element model |
-| VoxelPEEC.wl, VoxelOperator.wl | Volume-flux representation and matrix-free RT0 operator |
-| GPUValidation.wl and GPU kernel modules | Device arithmetic and CPU/GPU equivalence |
+| NotebookPhysics.wl | Analytical, disk FEM, circuit-field and trajectory models |
+| CoaxFEM.wl | Sparse multistrand field solutions with a controlled return |
+| PEEC.wl | Finite-length longitudinal partial elements |
+| VoxelPEEC.wl, VoxelOperator.wl | Voxel flux representation and matrix-free RT0 operators |
+| GPUValidation.wl and associated kernels | Device arithmetic and CPU/GPU equivalence checks |
 | ansys_validate.py, ansys_native3d.py | Maxwell adapters and independent acceptance |
-| RunNotebookStage.ps1 / .wls | Resource-supervised stages, unique runs and source snapshots |
-| PublicationManuscripts.py | Canonical Markdown parsing and multi-format scholarly editions |
-| BuildPublicationDocuments.wls | Notebook frontend build, render and viewpoint roundtrip |
+| RunNotebookStage.ps1 / .wls | Resource supervision, unique run IDs and source snapshots |
+| PublicationManuscripts.py | Shared Markdown parsing and scholarly formats |
+| BuildPublicationDocuments.wls | Notebook frontend construction, rendering and viewpoint roundtrip |
 
-`RunCalibration.wls` provides a standalone fresh-kernel analytical run. `stages/` contains route implementations. Scientific outputs record model identity, inputs, scope, execution and acceptance. Build stages read the shared manifest and frozen publication data.
+`RunCalibration.wls` provides analytical checks in a clean kernel. Scientific outputs identify their model, inputs, scope, execution status and physical acceptance. Publication builds read the common manifest and saved scientific quantities.
+
+[简体中文](README.zh-CN.md)

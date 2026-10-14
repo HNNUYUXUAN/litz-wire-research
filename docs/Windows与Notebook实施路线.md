@@ -12,12 +12,13 @@ Windows 基线使用 Wolfram 15.0。科学内核与 Notebook 前端分别验收�
 
 ```powershell
 litz-research data fetch publication-inputs
+python tools/PreparePublicationInputs.py
 litz-research build --run-id publication_local_01 --stage all
 ```
 
 正文主源是 `manuscript/` 中的双语 Markdown 和共享清单。构建按依赖生成文档结构、独立图的组合、Notebook、LaTeX 和 PDF。Notebook 保存正文、公式、静态图件及原生 Graphics3D；打开后可以旋转和缩放三维视图。模型运行由独立计算入口调用。
 
-Notebook 验收包含实际前端打开、保存、回读和各章节渲染；三维视角变更后再次保存回读并核对几何内容。PDF 使用 XeLaTeX、BibTeX 和 latexmk，检查引用、字体嵌入、裁切和逐页渲染。宋体及 Times New Roman 由本机字体环境提供。
+Notebook 验收包含实际前端打开、保存、回读和各章节渲染；三维视角变更后再次保存回读并核对几何内容。PDF 使用 XeLaTeX 和 latexmk，参考文献从统一题录生成，检查引用、字体嵌入、裁切和逐页渲染。宋体及 Times New Roman 由本机字体环境提供。
 
 ## 数据恢复
 

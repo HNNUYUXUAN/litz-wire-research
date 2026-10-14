@@ -1,6 +1,6 @@
 # 有限长度纵向 PEEC
 
-Miao Yuxuan · Huainan Normal University
+缪雨轩 · 淮南师范学院
 
 ## 模型与假设
 
@@ -28,7 +28,7 @@ litz-research run peec --case tutorial --parameters models/peec/examples/tutoria
 
 ## 来源
 
-[P03](../../references/README.md), [RUEHLI1974](../../references/README.md)
+[P03](../../references/README.zh-CN.md), [RUEHLI1974](../../references/README.zh-CN.md)
 
 ## 推导与结果解释
 

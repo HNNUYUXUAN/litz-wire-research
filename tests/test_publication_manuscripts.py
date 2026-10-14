@@ -14,7 +14,9 @@ class PublicationAcceptance(unittest.TestCase):
   self.assertAlmostEqual(self.q['coax_area']['value']*self.q['coax_area']['display_scale'],5.018477584873505,12)
  def test_si_reference_layer(self):
   self.assertEqual(self.q['skin_depth']['unit'],'m');self.assertAlmostEqual(self.q['skin_depth']['value'],.00014777165489999475,16)
-  self.assertEqual(self.q['q1_rac']['unit'],'ohm/m');self.assertEqual(self.q['q1_rac']['formatted'],'20.016203628')
+  self.assertEqual(self.q['q1_rac']['unit'],'ohm/m')
+  self.assertAlmostEqual(self.q['q1_rac']['value'],.020016203627649,14)
+  self.assertEqual(self.q['q1_rac']['formatted'],'20.0162')  # Approved sample-09 reading precision.
  def test_matched_canonical_block_identities(self):
   for ed in self.m['edition'].values():
    for ch in ed['chapters']:
@@ -43,5 +45,20 @@ class PublicationAcceptance(unittest.TestCase):
   baseline=p.input_path(self.m['panel_run']);data=p.read(baseline/'panel_manifest.json')
   for panel in data['panels']:
    for a in panel['assets']:self.assertEqual(p.sha(baseline/a['path_relative_to_run']),a['sha256'])
+ def test_english_translation_guard(self):
+  import tempfile
+  with tempfile.TemporaryDirectory() as folder:
+   source=Path(folder)/'en'/'chapter.md';source.parent.mkdir()
+   source.write_text('<!-- id: paragraph -->\n{{figref:q1_profile}} 未翻译段落。',encoding='utf-8')
+   with self.assertRaisesRegex(ValueError,'Untranslated'):p.blocks(source)
+ def test_ieee_classes_and_legacy_alias(self):
+  from ScholarlyLatex import render
+  d=dict(title='Example',author='Author',affiliation='Institution',language='en',form='chapter',cells=[],references=[])
+  call=lambda layout:render({'references':[]},d,layout,p.tex_escape,lambda c:'',p.reference_text)
+  self.assertIn(r'\documentclass[conference]{IEEEtran}',call('ieee-conference'))
+  self.assertIn(r'\documentclass[journal,10pt]{IEEEtran}',call('ieee-journal'))
+  self.assertEqual(call('ieee'),call('ieee-journal'))
+  self.assertNotIn('geometry}',call('ieee-conference'))
+  self.assertIn(r'\documentclass[11pt,a4paper]{article}',call('single'))
 
 if __name__=='__main__':unittest.main()

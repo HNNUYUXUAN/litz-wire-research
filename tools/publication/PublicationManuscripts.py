@@ -55,7 +55,13 @@ def metrics(m):
  return result
 
 def blocks(path):
- text=Path(path).read_text(encoding='utf-8');parts=re.split(r'<!-- id: ([\w.]+) -->\s*',text)
+ text=Path(path).read_text(encoding='utf-8')
+ if Path(path).parent.name=='en' and re.search(r'[\u4e00-\u9fff]',text):
+  raise ValueError('Untranslated Chinese prose in English manuscript: '+str(path))
+ for token in re.findall(r'\{\{([^}]+)\}\}',text):
+  if token not in ['sources','tables'] and not re.fullmatch(r'(metric|equation|eqref|figure|figref):\w+',token):
+   raise ValueError('Unsupported manuscript token '+token+' in '+str(path))
+ parts=re.split(r'<!-- id: ([\w.]+) -->\s*',text)
  if parts[0].strip():raise ValueError('Every authoring block requires a stable identity: '+str(path))
  result=[{'id':parts[i],'markdown':parts[i+1].strip()} for i in range(1,len(parts),2)]
  if len({x['id'] for x in result})!=len(result):raise ValueError('Duplicate paragraph identity')
@@ -70,7 +76,11 @@ def numbering(m,edition):
    found[kind].append(key)
  return {kind:{key:i+1 for i,key in enumerate(ids)} for kind,ids in found.items()}
 
-def reference_text(r,num):return f"[{num}] {', '.join(r['authors'])}. {r['title']}. {r['venue']}, {r['year']}. "+('https://doi.org/'+r['doi'] if r.get('doi') else r.get('url',''))
+def reference_text(r,num):
+ clean=lambda value:re.sub(r'[{}]','',value)
+ authors=', '.join(clean(a) for a in r['authors'])
+ publication=', '.join(str(value) for value in [r['venue'],r.get('version'),r['year']] if value)
+ return f"[{num}] {authors}. {clean(r['title'])}. {publication}. "+('https://doi.org/'+r['doi'] if r.get('doi') else r.get('url',''))
 
 def tex_escape(s):
  result=[]
@@ -156,8 +166,9 @@ def figure(run,m,edition,lang,fid,num):
   if not (run/(asset+suffix)).exists():raise FileNotFoundError(asset+suffix)
  return dict(type='figure',id=fid,number=num,panels=[f'panels/{lang}/{p}.wl' for p in ps],panel_ids=ps,pdf=asset+'.pdf',png=asset+'.png',width_mm=182 if len(ps)>1 else 88.9,title=('图 ' if lang=='zh-CN' else 'Fig. ')+str(num)+'. '+spec['title'][lang],description=spec['descriptions'][edition][lang],source_models=spec['source_models'])
 
-def source_cells(run,m):
- return [dict(type='text',text='来源清单 / Source manifest: source_provenance.json; quantities.json; asset_sources.json.'),dict(type='table',title='冻结来源与完整性 / Frozen sources and integrity',rows=[['Source','SHA256']]+[[p,h] for p,h in m['scientific_hashes'].items()])]
+def source_cells(run,m,lang):
+ zh=lang=='zh-CN'
+ return [dict(type='text',text=('来源清单：' if zh else 'Source manifests: ')+'source_provenance.json; quantities.json; asset_sources.json.'),dict(type='table',title='冻结来源与完整性' if zh else 'Frozen sources and integrity',rows=[['来源' if zh else 'Source','SHA256']]+[[p,h] for p,h in m['scientific_hashes'].items()])]
 
 def chapter(run,m,ed,lang,ch,nums,quantities):
  label=str(int(ch['id'])) if ch['id'].isdigit() else ch['id']
@@ -167,7 +178,7 @@ def chapter(run,m,ed,lang,ch,nums,quantities):
   if marker:
    kind,key=marker.groups()
    c=dict(type='equation',id=key,number=nums['equation'][key],**m['equations'][key]) if kind=='equation' else figure(run,m,ed,lang,key,nums['figure'][key]);cells.append(c)
-  elif text=='{{sources}}':cells+=source_cells(run,m)
+  elif text=='{{sources}}':cells+=source_cells(run,m,lang)
   elif text=='{{tables}}':cells+=table_cells(run,lang)
   else:
    parsed=parser.parse(text)
@@ -197,7 +208,7 @@ def markdown_cells(cells):
 
 def build_documents(run,m,args):
  quantities=read(run/'quantities.json');docs=[];nb=[]
- for ed in (['report','paper'] if args.edition=='all' else [args.edition]):
+ for ed in (list(m['edition']) if args.edition=='all' else [args.edition]):
   from litz_research.references import publication_references,citation_order
   keys=citation_order(ROOT,m,ed)
   m['references']=publication_references(ROOT,keys+[r['id'] for r in m['references'] if r['id'] not in keys])
@@ -206,7 +217,7 @@ def build_documents(run,m,args):
   nums=numbering(m,ed)
   for lang in (['zh-CN','en'] if args.language=='all' else [args.language]):
    chapters=[chapter(run,m,ed,lang,ch,nums,quantities) for ch in m['edition'][ed]['chapters']]
-   merged_id=ed+'_'+lang;common={'edition':ed,'language':lang,'author':m['author'][lang],'affiliation':m['affiliation'][lang]}
+   merged_id=ed+'_'+lang;common={'edition':ed,'language':lang,'author':m['author'][lang],'affiliation':m['affiliation'][lang],'citation_keys':[r['id'] for r in m['references']]}
    refnums={r['id']:i+1 for i,r in enumerate(m['references'])}
    def refcells(keys):return [dict(type='heading',level=1,text='参考文献' if lang=='zh-CN' else 'References',tag='references')]+[dict(type='text',text=reference_text(r,refnums[r['id']])) for r in m['references'] if r['id'] in keys]
    abstract=display_text(m['edition'][ed]['abstract'][lang],nums,quantities,refnums,lang)
@@ -254,60 +265,16 @@ def figure_tex(c):
  return [r'\centering',r'\setcounter{figure}{'+str(c['number']-1)+'}',r'\refstepcounter{figure}\label{fig:'+c['id']+'}',r'\hypertarget{fig-'+c['id']+'}{}',r'\includegraphics[width='+str(c['width_mm'])+'mm]{../../../'+c['pdf']+'}',r'\par\vspace{4pt}{\small\centering '+tex_escape(c['title'])+r'\par}',r'\vspace{3pt}{\small\raggedright '+tex_escape(c['description'])+r'\par}']
 
 def latex_source(run,m,d,layout):
- ieee=layout=='ieee';tex=[]
- if ieee:tex+=[r'\documentclass[journal,10pt]{IEEEtran}',r'\setlength{\textwidth}{182mm}',r'\setlength{\columnsep}{4.2mm}']
- else:tex+=[r'\documentclass[11pt]{article}',r'\usepackage[paperwidth=210mm,paperheight=297mm,textwidth=182mm,top=20mm,bottom=22mm]{geometry}']
- tex += [r'\usepackage{amsmath,amssymb,newtxmath}',r'\usepackage[no-math]{fontspec}',r'\setmainfont{Times New Roman}',r'\usepackage{xeCJK}',r'\setCJKmainfont[AutoFakeBold=2]{SimSun}',r'\usepackage{graphicx,booktabs,array,hyperref,placeins}',r'\hypersetup{hidelinks,unicode=true}',r'\raggedbottom',r'\setlength{\emergencystretch}{2em}',r'\renewcommand{\arraystretch}{1.15}',r'\begin{document}',r'\title{'+tex_escape(d['title'])+'}']
- # Reading layout keeps text, equations and floats in a shared visual rhythm.
- preamble=[r'\renewcommand{\topfraction}{0.92}',r'\renewcommand{\bottomfraction}{0.82}',r'\renewcommand{\textfraction}{0.08}',r'\renewcommand{\floatpagefraction}{0.65}',r'\setcounter{topnumber}{3}',r'\setcounter{bottomnumber}{2}',r'\setcounter{totalnumber}{4}',r'\setlength{\textfloatsep}{12pt plus 3pt minus 2pt}',r'\setlength{\floatsep}{10pt plus 2pt minus 2pt}',r'\setlength{\intextsep}{12pt plus 2pt minus 2pt}',r'\makeatletter',r'\setlength{\@fptop}{0pt}',r'\setlength{\@fpsep}{14pt}',r'\setlength{\@fpbot}{0pt plus 1fil}',r'\makeatother']
- if not ieee:preamble += [r'\linespread{1.16}',r'\setlength{\parindent}{2em}',r'\setlength{\parskip}{3pt plus 1pt}',r'\makeatletter',r'\renewcommand{\section}{\@startsection{section}{1}{0pt}{2.0ex plus .4ex}{.9ex}{\normalfont\large\bfseries}}',r'\renewcommand{\subsection}{\@startsection{subsection}{2}{0pt}{1.5ex plus .3ex}{.6ex}{\normalfont\normalsize\bfseries}}',r'\makeatother']
- tex[tex.index(r'\begin{document}'):tex.index(r'\begin{document}')]=preamble
- tex += [r'\author{'+tex_escape(d['author'])+(r'\\' if not ieee else r'\thanks{')+tex_escape(d['affiliation'])+('}' if ieee else '')+'}',r'\date{}' if not ieee else '',r'\maketitle']
- if d['form']=='chapter':tex += [r'\noindent '+tex_escape('合并稿对应章节 / Chapter in merged manuscript: ')+r'\href{'+d['parent']+'_'+layout+'.pdf#chapter-'+d['chapter']+'}{'+tex_escape(d['chapter'])+r'}\par']
- for c in layout_cells(d['cells'],layout):
-  t=c['type']
-  if t=='heading':
-   if c['level']==1:tex += [r'\clearpage' if c['tag']=='chapter-S1' else r'\FloatBarrier']
-   command='section' if c['level']==1 else 'subsection';tex += ['\\'+command+'*{'+tex_escape(c['text'])+'}',r'\hypertarget{'+c['tag']+'}{}',r'\pdfbookmark['+str(c['level']-1)+']{'+tex_escape(c['text'])+'}{bookmark-'+c['tag']+'}']
-  elif t=='text':
-   text=tex_escape(c['text'])
-   for link in c.get('links',[]):
-    destination=d.get('parent',d['id'])+'_'+layout+'.pdf#'+link['tag']
-    text=text.replace(link['text'],r'\href{'+destination+'}{'+link['text']+'}')
-   tex += [text+'\n\n']
-  elif t=='equation':tex += [equations_tex(c)]
-  elif t=='figure_pair':
-   tex += [r'\begin{figure}[!htbp]',r'\centering']
-   for index,panel in enumerate(c['figures']):
-    if index:tex += [r'\hfill']
-    tex += [r'\begin{minipage}[t]{88.9mm}',r'\vspace{0pt}']+figure_tex(panel)+[r'\end{minipage}']
-   tex += [r'\end{figure}']
-  elif t=='figure':
-   full=c['width_mm']>90;env='figure*' if ieee and full else 'figure';path='../../../'+c['pdf']
-   tex += [r'\begin{'+env+'}[!htbp]']+figure_tex(c)+[r'\end{'+env+'}']
-  elif t=='table':
-   # Table values retain source units. Source hashes are typeset as breakable strings.
-   rs=c['rows'];n=len(rs[0]);env='table*' if ieee else 'table';width=r'\textwidth'
-   tex += [r'\begin{'+env+'}[!htbp]',r'\centering{\footnotesize '+tex_escape(c['title'])+r'}\par',r'\begingroup\footnotesize\begin{tabular}{'+('|'.join('p{'+str((177.8-4*n)/n)+'mm}' for _ in range(n)))+'}',r'\toprule']
-   def breakable(v):return r'\seqsplit{'+tex_escape(v)+'}' if re.fullmatch('[0-9a-f]{64}',v) else tex_escape(v).replace(r'\_',r'\_\allowbreak ')
-   tex += [' & '.join(breakable(v) for v in row)+r'\\' for row in rs];tex += [r'\bottomrule\end{tabular}\endgroup',r'\end{'+env+'}']
- refnums={r['id']:i+1 for i,r in enumerate(m['references'])}
- if d['references']:
-  tex += [r'\clearpage',r'\renewcommand{\refname}{'+('参考文献' if d['language']=='zh-CN' else 'References')+'}',r'\begin{thebibliography}{99}']
-  for r in m['references']:
-   if r['id'] in d['references']:tex += [r'\bibitem['+str(refnums[r['id']])+']{'+r['id']+'} '+tex_escape(reference_text(r,refnums[r['id']]).split('] ',1)[1])]
-  tex += [r'\end{thebibliography}']
- tex += [r'\end{document}']
- # seqsplit is used only for fixed-length integrity strings.
- tex.insert(tex.index(r'\begin{document}'),r'\usepackage{seqsplit}')
- return '\n'.join(tex)+'\n'
+ from ScholarlyLatex import render
+ return render(m,d,layout,tex_escape,equations_tex,reference_text)
+
 
 def prepare_latex(run,m,args):
  shutil.copy2(ROOT/'latex/IEEEtran.cls',run/'IEEEtran.cls');shutil.copy2(ROOT/m['bibtex'],run/'references.bib')
  docs=read(run/'document_structure.json');records=[]
  for d in docs:
   folder=run/'documents'/d['edition']/d['language'];shutil.copy2(ROOT/'latex/IEEEtran.cls',folder/'IEEEtran.cls')
-  for layout in (['single','ieee'] if args.layout=='all' else [args.layout]):
+  for layout in (['single','ieee-journal','ieee-conference'] if args.layout=='all' else [args.layout]):
    p=folder/(d['id']+'_'+layout+'.tex');p.write_text(latex_source(run,m,d,layout),encoding='utf-8');records.append(dict(document=d['id'],layout=layout,tex=p.relative_to(run).as_posix(),pdf=p.with_suffix('.pdf').relative_to(run).as_posix(),source_sha256=sha(p)))
  write(run/'pdf_manifest.json',records)
 
@@ -344,7 +311,7 @@ def verify(run,m):
    check(d['id']+'/verbatim_markdown',markdown_cells(d['cells']) in (run/parent['markdown']).read_text(encoding='utf-8'))
   else:
    ids=[c['id'] for c in d['cells'] if c['type']=='figure'];check(d['id']+'/figure_display_unique',len(ids)==len(set(ids)))
- for ed in ['report','paper']:
+ for ed in m['edition']:
   ds=[d for d in docs if d['edition']==ed and d['form']=='merged']
   if len(ds)==2:check(ed+'/paired_blocks',ds[0]['block_ids']==ds[1]['block_ids']);check(ed+'/paired_numbering',ds[0]['numbering']==ds[1]['numbering'])
  if (run/'compile_status.json').exists():
@@ -399,11 +366,11 @@ def package(run,m):
   for p in selected:z.write(p,p.relative_to(run).as_posix())
   for d in read(run/'document_structure.json'):z.write(ROOT/d['notebook'],'notebooks/'+d['id']+'.nb')
   source_files=[p for p in (ROOT/'manuscript').rglob('*') if p.is_file()]+[p for p in (ROOT/'src').iterdir() if p.is_file() and p.suffix in ['.py','.wl','.wls','.ps1']]
-  source_files += [p for p in (ROOT/'python/litz_research').rglob('*.py')]+[ROOT/p for p in ['pyproject.toml','README.zh-CN.md','LICENSE','CITATION.cff','requirements-windows-py312.lock']]+[p for p in (ROOT/'LICENSES').iterdir() if p.is_file()]+[p for p in (ROOT/'docs').rglob('*.md')]
+  source_files += [p for p in (ROOT/'python/litz_research').rglob('*.py')]+[ROOT/p for p in ['pyproject.toml','LICENSE','CITATION.cff','requirements-windows-py312.lock']]+[p for p in (ROOT/'LICENSES').iterdir() if p.is_file()]+[p for p in (ROOT/'docs').rglob('*.md')]
   source_files += [p for folder in ['models','adapters','shared','automation','tools','references','configs'] for p in (ROOT/folder).rglob('*') if p.is_file() and '__pycache__' not in p.parts and p.suffix in ['.py','.wl','.wls','.wlt','.ps1','.json','.md','.toml','.bib','.nb']]
-  source_files += [ROOT/'data/catalog.json',ROOT/'AGENTS.md']
+  source_files += [ROOT/'data/catalog.json',ROOT/'AGENTS.md',ROOT/'AGENTS.zh-CN.md']+[p for p in (ROOT/'tests').rglob('*') if p.is_file() and p.suffix in ['.py','.wlt','.md']]
   source_files=list(dict.fromkeys(source_files))
-  source_files += [p for p in (ROOT/'latex').iterdir() if p.is_file()]
+  source_files += [p for p in (ROOT/'latex').rglob('*') if p.is_file() and p.suffix in ['.tex','.cls','.md']]
   for p in source_files:z.write(p,p.relative_to(ROOT).as_posix())
   portable=json.loads(json.dumps(m));portable.update(panel_run='.',panel_overrides={},frozen_bundle='datasets/closure',package_run_id=run.name+'__portable')
   portable_manifest=json.dumps(portable,ensure_ascii=False,indent=2)+'\n';z.writestr('manuscript/publication_portable.json',portable_manifest)
@@ -414,12 +381,14 @@ def package(run,m):
   for p in (input_path(m['panel_run'])/'field_data').glob('*'):
    if p.is_file():z.write(p,'field_data/'+p.name);extra_files.append(dict(path='field_data/'+p.name,sha256=sha(p)))
   extra_files.append(dict(path='manuscript/publication_portable.json',sha256=hashlib.sha256(portable_manifest.encode()).hexdigest()))
-  instructions='# Litz portable publication edition\n\nMiao Yuxuan · Huainan Normal University.\n\nMerged texts and chapter excerpts are in documents/; native notebooks are in notebooks/. Independent panels and compositions are in panels/ and composites/. Field samples and complete numeric tables are in field_data/ and tables/.\n\nInstall the package in a Python virtual environment and configure Wolfram and XeLaTeX for the corresponding stages:\n\n```powershell\npython -m pip install -e ".[documents,figures]"\n./src/RunPublicationEdition.ps1 -RunId portable_YYYYMMDD_01 -SourceManifest manuscript/publication_portable.json -Stage all\n```\n\nCanonical Markdown sources and shared identities are in manuscript/. Research datasets retain original solver projects, checkpoint arrays and execution logs, with identities recorded in the source catalog.\n'
+  instructions='# Litz portable publication edition\n\nMiao Yuxuan · Huainan Normal University.\n\nComplete bilingual manuscripts are in documents/; native notebooks are in notebooks/. Independent panels and compositions are in panels/ and composites/. Field samples and complete numeric tables are in field_data/ and tables/.\n\nInstall the package in a Python virtual environment and configure Wolfram and XeLaTeX for the corresponding stages:\n\n```powershell\npython -m pip install -e ".[documents,figures]"\n./src/RunPublicationEdition.ps1 -RunId portable_YYYYMMDD_01 -SourceManifest manuscript/publication_portable.json -Stage all\n```\n\nCanonical Markdown sources and shared identities are in manuscript/. Research datasets retain original solver projects, checkpoint arrays and execution logs, with identities recorded in the source catalog.\n'
   z.writestr('README.md',instructions);extra_files.append(dict(path='README.md',sha256=hashlib.sha256(instructions.encode()).hexdigest()))
+  instructions_zh='# Litz 学术成稿包\n\n[English](README.md) · [简体中文](README.zh-CN.md)\n\n三部作品的完整中英文稿件及三种 PDF/LaTeX 版式位于 documents/，六份原生 Notebook 位于 notebooks/。panels/ 与 composites/ 保存独立图件与组图；field_data/ 与 tables/ 保存场样本与数值表。latex/templates/ 提供六份可编辑模板。\n\n安装独立 Python 环境并配置 Wolfram 和 XeLaTeX 后，可按英文入口中的命令重建。manuscript/ 保存正文与公共编号身份，验证 JSON 记录编译、前端回读和图件来源。原始求解工程、检查点和日志由数据目录索引。\n'
+  z.writestr('README.zh-CN.md',instructions_zh);extra_files.append(dict(path='README.zh-CN.md',sha256=hashlib.sha256(instructions_zh.encode()).hexdigest()))
  write(run/'package_manifest.json',dict(archive=archive.name,sha256=sha(archive),files=[dict(path=p.relative_to(run).as_posix(),sha256=sha(p)) for p in selected]+[dict(path=p.relative_to(ROOT).as_posix(),sha256=sha(p)) for p in source_files]+extra_files,notebooks=[dict(path=d['notebook'],sha256=sha(ROOT/d['notebook'])) for d in read(run/'document_structure.json')],portable_source_manifest='manuscript/publication_portable.json',raw_archive_scope='Original solver projects, checkpoint arrays and logs are indexed in the complete repository archive.'))
 
 def main(argv=None):
- p=argparse.ArgumentParser(description=__doc__);p.add_argument('--run-id',required=True);p.add_argument('--edition',choices=['report','paper','all'],default='all');p.add_argument('--language',choices=['zh-CN','en','all'],default='all');p.add_argument('--source-manifest',default='manuscript/publication.json');p.add_argument('--form',choices=['merged','chapters','all'],default='all');p.add_argument('--layout',choices=['single','ieee','all'],default='all');p.add_argument('--stage',choices=['preflight','specimen','panels','compose','documents','notebooks','pdf','verify','package','all'],default='all');a=p.parse_args(argv)
+ p=argparse.ArgumentParser(description=__doc__);p.add_argument('--run-id',required=True);p.add_argument('--edition',choices=['report','paper','automation','all'],default='all');p.add_argument('--language',choices=['zh-CN','en','all'],default='all');p.add_argument('--source-manifest',default='manuscript/publication.json');p.add_argument('--form',choices=['merged','chapters','all'],default='merged');p.add_argument('--layout',choices=['single','ieee','ieee-journal','ieee-conference','all'],default='all');p.add_argument('--stage',choices=['preflight','specimen','panels','compose','documents','notebooks','pdf','verify','package','all'],default='all');a=p.parse_args(argv)
  if not re.fullmatch(r'[A-Za-z0-9_-]+',a.run_id):p.error('Run ID: letters, digits, underscore and hyphen')
  run=ROOT/'outputs'/a.run_id;m=read(ROOT/a.source_manifest);run.mkdir(exist_ok=True)
  from litz_research.references import publication_references
@@ -434,12 +403,12 @@ def main(argv=None):
  hardware=control.hardware();write(run/'environment.json',hardware)
  if hardware['free_RAM_bytes']<8*control.GIB:raise RuntimeError('System free-memory reserve: 8 GiB required')
  snapshot=run/'source_snapshot';snapshot.mkdir(exist_ok=True)
- for file in list((ROOT/'tools/publication').glob('Publication*.py'))+[ROOT/'tools/publication/BuildPublicationEdition.py',ROOT/'tools/publication/BuildPublicationDocuments.wls',ROOT/'tools/publication/PublicationStyles.wl']:
+ for file in list((ROOT/'tools/publication').glob('Publication*.py'))+[ROOT/'tools/publication/ScholarlyLatex.py']+[ROOT/'tools/publication/BuildPublicationEdition.py',ROOT/'tools/publication/BuildPublicationDocuments.wls',ROOT/'tools/publication/PublicationStyles.wl']:
   dest=snapshot/file.name
   if not dest.exists():shutil.copy2(file,dest)
  stage_sources=run/'stage_sources'/a.stage;stage_sources.mkdir(parents=True,exist_ok=True)
  source_bindings={}
- for source in list((ROOT/'tools/publication').glob('Publication*.py'))+[ROOT/'tools/publication/BuildPublicationEdition.py',ROOT/'tools/publication/BuildPublicationDocuments.wls',ROOT/'tools/publication/PublicationStyles.wl']:
+ for source in list((ROOT/'tools/publication').glob('Publication*.py'))+[ROOT/'tools/publication/ScholarlyLatex.py']+[ROOT/'tools/publication/BuildPublicationEdition.py',ROOT/'tools/publication/BuildPublicationDocuments.wls',ROOT/'tools/publication/PublicationStyles.wl']:
   identity=sha(source);destination=stage_sources/(identity[:12]+'_'+source.name)
   if not destination.exists():shutil.copy2(source,destination)
   source_bindings[source.relative_to(ROOT).as_posix()]=dict(sha256=identity,snapshot=destination.relative_to(run).as_posix())

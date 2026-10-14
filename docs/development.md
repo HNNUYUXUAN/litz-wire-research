@@ -1,42 +1,29 @@
 # Development
 
-## Module layout
+[简体中文](development.zh-CN.md)
 
-`python/litz_research/` contains installation, CLI orchestration, configuration, the independent Python Bessel calibration, and dataset transfer. `src/` contains the Wolfram models, stage runners, Ansys adapters, and publication builders. `configs/` defines physical inputs. `tests/` contains Wolfram and Python regression checks. `manuscript/publication.json` binds paired paragraphs, equations, figures and frozen observables.
+## Code and scientific inputs
 
-Extend a model through an explicit input record and a uniquely named run directory. Archive `source_model`, `run_id`, `execution_status`, `physical_acceptance_status`, units, phasor convention, material parameters, source hashes, elapsed time, and actual exit status. A completed solver call and a passed physical validation have distinct meanings. Preserve complex values as real and imaginary parts; amplitude and phase are derived quantities.
+`models/` owns the seven physical routes; `adapters/` connects Wolfram, Ansys and GPU execution; `automation/` supplies workflows, skills and MCP/client setup. `shared/` provides common numerical and path utilities. `python/litz_research/` supplies the CLI, task management, data restoration and independent analytical implementation. `src/` retains compatibility entry points. Scholarly builders live in `tools/publication/`.
 
-## Environments
+New cases use explicit parameter files and unique run IDs. Record source hashes, units, phasor conventions, material and boundary conditions, actual exit status, execution status and physical acceptance. Complex values retain real and imaginary components. [Acceptance targets](../tests/ACCEPTANCE.md) define the checks appropriate to each model.
 
-Python 3.11+ supports reading datasets and the analytical example. Install editable extras for document and figure handling. Wolfram 15.0 on Windows is the recorded scientific baseline; a licensed kernel runs the scientific modules and the frontend renders `.nb` documents and native three-dimensional graphics. XeLaTeX, BibTeX and latexmk compile the academic editions. Font matching uses locally installed SimSun and Times New Roman. Fonts are installed separately under their own licenses.
+## Runtime
 
-The retained PowerShell solver supervisor binds processes to their creation identities, records a process tree, checks available memory and preserves exit codes. The current configuration limits work to eight logical processors and 24 GiB with an 8 GiB system reserve. Model-specific predictions can impose a smaller budget. Ansys adapters require Maxwell and a compatible PyAEDT installation; Student-specific element and four-core limits remain part of each run's acceptance conditions. GPU routes require the recorded Wolfram CUDALink environment and same-model CPU comparisons.
+Python 3.11+ supports the base analytical and data interfaces. The Ansys MCP environment requires Python 3.12+ and its separate pinned dependency set. Document construction uses licensed Wolfram for native Notebooks, XeLaTeX and latexmk for PDFs, and locally installed SimSun and Times New Roman.
 
-Executable configuration has two layers: `LITZ_<TOOL>` environment variables, followed by `tools.<tool>` in local `litz.config.json`, then PATH. Example:
-
-```json
-{"tools": {"wolframscript": "wolframscript", "xelatex": "xelatex", "bibtex": "bibtex", "latexmk": "latexmk"}}
+```powershell
+python -m venv .venv
+.venv/Scripts/python.exe -m pip install -e ".[documents,figures,automation,audit]"
+.venv/Scripts/litz-research.exe doctor
 ```
 
-## Validation
+Executable lookup follows `LITZ_<TOOL>`, then `tools.<tool>` in local `litz.config.json`, then PATH. For example, set `LITZ_WOLFRAMSCRIPT`, `LITZ_XELATEX` or `LITZ_LATEXMK` for an explicitly selected installation. The resource policy is eight logical processors, 24 GiB task memory and an 8 GiB system free-memory reserve; solver licenses can impose smaller limits.
 
-```sh
-python -m unittest discover -s tests -p test_research_cli.py
-litz-research run analytic --run-id analytical_validation_01
-litz-research run wolfram-analytic --run-id wolfram_validation_01
-litz-research data verify
-```
+## Verification and manuscript work
 
-Scientific tolerances are defined in `tests/ACCEPTANCE.md`. Extend tests when a change affects physical conventions, data identities, constrained currents, independent power balance, operator action, or resource ownership. Small numerical changes require focused regression; conclusions based on large retained computations are linked to the preserved evidence.
+Use focused tests for changes to physical equations, port constraints, power integration, data identity or process ownership. Python tests are discovered with `python -m unittest discover -s tests`; optional scientific dependencies and retained datasets are documented by the affected tests and route guides. New solver runs use their own IDs.
 
-## Dataset schema
+Paired Markdown chapters and `manuscript/publication.json` define three complete works. Equations, quantities, figure identities and per-work citation maps are shared across formats. The [publication guide](editions.md) explains builds, templates and portable packages. Bilingual reader prose is maintained in Markdown; index builders read it and generate inventories rather than replacing it with hard-coded drafts.
 
-`data/catalog.json` contains named datasets, dependencies, ordered archive parts, object SHA256 and byte counts, and logical file paths. Parts concatenate to a gzip-compressed tar stream. Tar members are `objects/<sha256>` and contain only regular files. Shared objects are assigned to one dataset and referenced by dependency. `data fetch` checks part hashes, archive coverage and object hashes before restoring logical paths. Existing local files are verified before reuse. Offline mode uses the same cache and checks.
-
-Each source record in `provenance/` binds original and candidate SHA256, origin, rights, processing and scientific review. Metadata derivatives retain a mapping to their original identities. Credentials stay with the local authentication provider. Dataset attachment URLs are populated from the private draft Release; download authorization is limited to the GitHub API host.
-
-## Publications
-
-Edit paired Markdown paragraphs and shared definitions first, then use `litz-research build`. Chapter files are extracted from the merged document structure. The build tracks hashes for source dependencies, independent figure panels, composed panels, compiled PDFs and saved Notebooks. Changes to scientific data require a distinct source identity and documented acceptance. Stage recovery reuses verified artifacts belonging to the same run and input manifest.
-
-Full Python regression requires the optional modeling/document dependencies: `python -m pip install -e ".[automation,figures,documents,ansys,audit]" -c automation/mcp/project-environment.lock`. The basic analytical and MCP client installation remains smaller.
+`data/catalog.json` specifies archive parts, content objects, dependencies and original relative paths. The restorer verifies part, object and file hashes before reuse. Offline restoration uses the same checks. Source records distinguish original files, metadata derivatives and new run artifacts.

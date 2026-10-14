@@ -1,10 +1,16 @@
-# Datasets / 数据集
+# Research datasets
 
-Select a route with `litz-research data fetch <dataset>`. Dependencies are restored automatically. Use `data verify <dataset>` to check the resulting files. Academic viewing uses `academic-editions`; rebuilding the editions uses `publication-inputs`. Cross-route validation fixtures are in `research-records`.
+[简体中文](datasets.zh-CN.md)
 
-使用 `litz-research data fetch <dataset>` 获取路线及依赖；完整测试所需的跨路线输入位于 `research-records`。`research-shared` 保存去重后的共享对象，由所属路线映射到实际文件路径。各数据集保留原始运行的执行状态、模型范围和物理验收状态。
+Select the required route through the CLI. Dependencies are restored with it; verify file identities after restoration:
 
-| Dataset | Files | Compressed MiB | Contents |
+```powershell
+litz-research data list
+litz-research data fetch publication-inputs
+litz-research data verify publication-inputs
+```
+
+| Dataset | File mappings | Compressed MiB | Contents |
 | --- | ---: | ---: | --- |
 | `academic-editions` | 665 | 337.48 | Bilingual reports, papers, chapters, Notebooks, PDFs, figures and document acceptance records |
 | `analytic` | 874 | 1.38 | Round-wire Bessel calibration, radial profiles and analytical acceptance records |
@@ -19,13 +25,14 @@ Select a route with `litz-research data fetch <dataset>`. Dependencies are resto
 | `research-records` | 11,389 | 929.57 | Cross-route run records, handoff inputs, validation summaries and retained source snapshots |
 | `research-shared` | 0 | 125.87 | Content objects shared by route datasets; restored through their dependent file mappings |
 | `rt0` | 3,613 | 522.57 | Imposed-field RT0 solutions, flux reconstruction, spatial convergence and operator checks |
+| `automation-rc2` | 10,569 | 14.70 | Actual Codex/MCP automation cases, bounded task snapshots, Maxwell projects, route regressions and twenty native Notebook execution records |
 
-The catalogue in `data/catalog.json` is authoritative for ordered parts, dependencies, file identities and checksums. Compressed sizes count objects owned by each dataset; shared dependencies add their own download size. All parts are at most 128 MiB.
+## Identity and offline restoration
 
-Route records distinguish external-field loss, conductor transport quantities, geometrical observations, and three-dimensional diagnostic results. Use the corresponding model definitions and acceptance records when comparing quantities.
+`data/catalog.json` defines part order, dependencies, object and file SHA256 identities. Compressed sizes count each dataset’s own parts; shared dependencies add to the first download. Parts are at most 128 MiB. Historical scientific records restore beneath `data/evidence/v1.0.0-rc.1/`, and automation records beneath `data/evidence/v1.0.0-rc.2/`, preserving original relative paths. New runs write to `outputs/`.
 
-## Versioned evidence mounts
+```powershell
+litz-research data fetch publication-inputs --offline --cache "C:/Research Cache"
+```
 
-Historical science retains `v1.0.0-rc.1` and its original bytes/hashes under `data/evidence/v1.0.0-rc.1/`. The `automation-rc2` dataset restores current workflow artifacts under `data/evidence/v1.0.0-rc.2/`. New calculations write only to `outputs/`. Each dataset may declare source_version; its catalogued hashes determine restored identity.
-
-`automation-rc2` includes source snapshots, visible tool events, native Maxwell files, twenty Notebook run records and derivation lineage for normalized machine paths. Original request/source identities remain in run manifests; evidence_derivation.json maps raw identities to restored public derivatives. Source and request replay uses the current portable sequence generators.
+The restorer checks parts, archive membership, objects and final files; existing files are reused after hash verification. Corrupt objects produce explicit diagnostics. Imposed-field loss, transport resistance, geometric quantities and three-dimensional diagnostics retain their model definitions. Current local editions are indexed in [Publications](../publications/README.md); `academic-editions` locates historical editions.

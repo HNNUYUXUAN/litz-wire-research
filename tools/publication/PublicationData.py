@@ -11,8 +11,9 @@ import re
 import shutil
 
 ROOT=next(p for p in Path(__file__).resolve().parents if (p / "pyproject.toml").is_file() and (p / "configs/reference_parameters.json").is_file())
-BUNDLE=ROOT/'outputs/closure_20261005_manuscript_bundle_final_02'
-SCIENCE=(ROOT/'docs/总控/当前运行索引.json',ROOT/'outputs/prewrite_closure_state.json')
+from litz_research.common import resolve_read_path, constrain
+BUNDLE=resolve_read_path(ROOT,'outputs/closure_20261005_manuscript_bundle_final_02')
+SCIENCE=tuple(resolve_read_path(ROOT,p) for p in ('docs/总控/当前运行索引.json','outputs/prewrite_closure_state.json'))
 def sha(p):
     h=hashlib.sha256()
     with Path(p).open('rb') as stream:
@@ -27,7 +28,7 @@ class FrozenData:
         self.run=Path(run);self.sources={};self.checks=[]
         self.before={str(p.relative_to(ROOT)).replace('\\','/'):sha(p) for p in SCIENCE}
     def bind(self,p):
-        p=Path(p);self.sources[p.relative_to(ROOT).as_posix()]=sha(p);return p
+        p=resolve_read_path(ROOT,p);self.sources[p.relative_to(ROOT).as_posix()]=sha(p);return p
     def json(self,p):return read(self.bind(p))
     def csv(self,p):
         with self.bind(p).open(encoding='utf-8-sig',newline='') as stream:
@@ -161,6 +162,7 @@ class FrozenData:
             outputs_sha256={p.relative_to(self.run).as_posix():sha(p) for p in (self.run/'field_data').iterdir()}))
 
 def main():
+    constrain()
     parser=argparse.ArgumentParser(description=__doc__);parser.add_argument('--run-id',required=True);a=parser.parse_args()
     if not re.fullmatch('[A-Za-z0-9_-]+',a.run_id):parser.error('Safe run ID required')
     run=ROOT/'outputs'/a.run_id;run.mkdir(exist_ok=False);data=FrozenData(run)

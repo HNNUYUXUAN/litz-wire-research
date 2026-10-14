@@ -18,9 +18,16 @@ import xml.etree.ElementTree as ET
 import PreManuscriptClosure as control
 
 ROOT = next(p for p in Path(__file__).resolve().parents if (p / "pyproject.toml").is_file() and (p / "configs/reference_parameters.json").is_file())
-BUNDLE = ROOT / "outputs/closure_20261005_manuscript_bundle_final_02"
-TABLES = ROOT / "data/publication/tables"
-SCIENCE_FILES = (ROOT / "docs/总控/当前运行索引.json", ROOT / "outputs/prewrite_closure_state.json")
+from litz_research.common import resolve_read_path
+def archived_path(relative):
+    # Composition and LaTeX-only packages do not require field-reconstruction inputs.
+    # A consumer that opens an unavailable legacy input still receives an I/O error.
+    try:return resolve_read_path(ROOT,relative)
+    except FileNotFoundError:return ROOT/relative
+
+BUNDLE = archived_path("outputs/closure_20261005_manuscript_bundle_final_02")
+TABLES = archived_path("data/publication/tables")
+SCIENCE_FILES = tuple(archived_path(p) for p in ("docs/总控/当前运行索引.json", "outputs/prewrite_closure_state.json"))
 
 
 def sha(path):
@@ -132,10 +139,11 @@ def native_run(run, request, script="BuildPublicationFigures.wls", suffix=""):
     from litz_research.common import tool
     executable=tool(ROOT,"wolframscript")
     if not executable:raise RuntimeError("Wolfram stage requires LITZ_WOLFRAMSCRIPT or wolframscript on PATH")
-    command=[executable,"-file",str(ROOT/"src"/script),str(request)]
-    sources={str(p.relative_to(ROOT)):sha(p) for p in [ROOT/'src'/script,ROOT/'src/PublicationStyles.wl',ROOT/'src/BuildPublicationEdition.py',ROOT/'src/PublicationLineArt.wl']}
+    source_files=[ROOT/'tools/publication'/name for name in (script,'PublicationStyles.wl','BuildPublicationEdition.py','PublicationLineArt.wl')]
+    command=[executable,"-file",str(source_files[0]),str(request)]
+    sources={str(p.relative_to(ROOT)):sha(p) for p in source_files}
     snapshot=monitor/'source_snapshot';snapshot.mkdir()
-    for p in [ROOT/'src'/script,ROOT/'src/PublicationStyles.wl',ROOT/'src/BuildPublicationEdition.py',ROOT/'src/PublicationLineArt.wl']:shutil.copy2(p,snapshot/p.name)
+    for p in source_files:shutil.copy2(p,snapshot/p.name)
     write(monitor/'source_binding_before.json',sources)
     result=control.run_custom_monitored(command,monitor,environment,budget)
     changed=[p for p,h in sources.items() if sha(ROOT/p)!=h]

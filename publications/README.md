@@ -1,22 +1,18 @@
-# Research publications
+# Complete research publications
 
-The complete bilingual reports and papers below retain their frozen scientific source identity. Lightweight previews are available directly in Git. The approved Chinese paper specimen records the editorial and plotting convention for the next scholarly edition.
+[English](README.md) · [简体中文](README.zh-CN.md)
 
-| Edition | Read | Download PDF |
-| --- | --- | --- |
-| paper / zh-CN | [Markdown](paper/zh-CN/README.md) | [paper_zh-CN_single.pdf](https://github.com/HNNUYUXUAN/litz-wire-research/releases) |
-| paper / en | [Markdown](paper/en/README.md) | [paper_en_single.pdf](https://github.com/HNNUYUXUAN/litz-wire-research/releases) |
-| report / zh-CN | [Markdown](report/zh-CN/README.md) | [report_zh-CN_single.pdf](https://github.com/HNNUYUXUAN/litz-wire-research/releases) |
-| report / en | [Markdown](report/en/README.md) | [report_en_single.pdf](https://github.com/HNNUYUXUAN/litz-wire-research/releases) |
+Each work has complete Chinese and English Markdown, a native Wolfram Notebook, and LaTeX/PDF in general single-column, IEEE journal and IEEE conference layouts. Local build artifacts below are supplied in the delivery package.
 
-The candidate Release is private and draft; use authenticated GitHub access. Full Notebooks, figures and historical evidence are restored with `litz-research data fetch academic-editions`. The mount is `data/evidence/v1.0.0-rc.1/`; original relative paths are preserved.
+| Work / language | Markdown | Notebook | PDF: single / journal / conference |
+| --- | --- | --- | --- |
+| Litz 线分层建模与数值验证：完整研究报告 / zh-CN | [Markdown](report/zh-CN/README.md) | [Wolfram](../notebooks/publication/publication_review_20261015_03/report/zh-CN/report_zh-CN.nb) | [single](../outputs/publication_review_20261015_03/documents/report/zh-CN/report_zh-CN_single.pdf) · [ieee-journal](../outputs/publication_review_20261015_03/documents/report/zh-CN/report_zh-CN_ieee-journal.pdf) · [ieee-conference](../outputs/publication_review_20261015_03/documents/report/zh-CN/report_zh-CN_ieee-conference.pdf) |
+| Litz-Wire Modeling and Numerical Verification: Comprehensive Research Report / en | [Markdown](report/en/README.md) | [Wolfram](../notebooks/publication/publication_review_20261015_03/report/en/report_en.nb) | [single](../outputs/publication_review_20261015_03/documents/report/en/report_en_single.pdf) · [ieee-journal](../outputs/publication_review_20261015_03/documents/report/en/report_en_ieee-journal.pdf) · [ieee-conference](../outputs/publication_review_20261015_03/documents/report/en/report_en_ieee-conference.pdf) |
+| Litz 线的分层验证、共端复电流分配与有限长度纵向 PEEC / zh-CN | [Markdown](paper/zh-CN/README.md) | [Wolfram](../notebooks/publication/publication_review_20261015_03/paper/zh-CN/paper_zh-CN.nb) | [single](../outputs/publication_review_20261015_03/documents/paper/zh-CN/paper_zh-CN_single.pdf) · [ieee-journal](../outputs/publication_review_20261015_03/documents/paper/zh-CN/paper_zh-CN_ieee-journal.pdf) · [ieee-conference](../outputs/publication_review_20261015_03/documents/paper/zh-CN/paper_zh-CN_ieee-conference.pdf) |
+| Hierarchical Verification, Common-Terminal Current Sharing, and Finite-Length Longitudinal PEEC for Litz-Wire Modeling / en | [Markdown](paper/en/README.md) | [Wolfram](../notebooks/publication/publication_review_20261015_03/paper/en/paper_en.nb) | [single](../outputs/publication_review_20261015_03/documents/paper/en/paper_en_single.pdf) · [ieee-journal](../outputs/publication_review_20261015_03/documents/paper/en/paper_en_ieee-journal.pdf) · [ieee-conference](../outputs/publication_review_20261015_03/documents/paper/en/paper_en_ieee-conference.pdf) |
+| 智能体驱动的可复核建模与仿真：Wolfram–Ansys MCP 工作流及 Litz 案例 / zh-CN | [Markdown](automation/zh-CN/README.md) | [Wolfram](../notebooks/publication/publication_review_20261015_03/automation/zh-CN/automation_zh-CN.nb) | [single](../outputs/publication_review_20261015_03/documents/automation/zh-CN/automation_zh-CN_single.pdf) · [ieee-journal](../outputs/publication_review_20261015_03/documents/automation/zh-CN/automation_zh-CN_ieee-journal.pdf) · [ieee-conference](../outputs/publication_review_20261015_03/documents/automation/zh-CN/automation_zh-CN_ieee-conference.pdf) |
+| Agent-Driven Reviewable Modeling and Simulation: A Wolfram–Ansys MCP Workflow with Litz-Wire Cases / en | [Markdown](automation/en/README.md) | [Wolfram](../notebooks/publication/publication_review_20261015_03/automation/en/automation_en.nb) | [single](../outputs/publication_review_20261015_03/documents/automation/en/automation_en_single.pdf) · [ieee-journal](../outputs/publication_review_20261015_03/documents/automation/en/automation_en_ieee-journal.pdf) · [ieee-conference](../outputs/publication_review_20261015_03/documents/automation/en/automation_en_ieee-conference.pdf) |
 
-[Approved specimen](../docs/revision-sample-review.zh-CN.md) · [Editorial convention](../manuscript/style.json) · [Citation guide](../docs/citation-guide.md)
+Figures, quantities and physical acceptance retain their frozen sources. The two-dimensional Maxwell MCP comparison, three-dimensional Ansys diagnostics and A–φ acceptance are treated separately.
 
-Download a single PDF from the authenticated draft / 从授权草稿获取单份 PDF：
-
-```powershell
-gh release download v1.0.0-rc.2 --repo HNNUYUXUAN/litz-wire-research --pattern paper_zh-CN_single.pdf --dir build/reading
-```
-
-Use the exact filename from the table for the other editions. The approved specimen is `approved_paper_zh-CN.pdf`; the current citation-chain compile is `paper_zh-CN_rc2_reference.pdf`.
+[LaTeX / templates](../latex/README.md) · [Editorial style](../docs/editorial-style.md)

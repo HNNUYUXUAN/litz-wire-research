@@ -1,6 +1,6 @@
 # 几何与换位
 
-Miao Yuxuan · Huainan Normal University
+缪雨轩 · 淮南师范学院
 
 ## 模型与假设
 
@@ -28,7 +28,7 @@ litz-research run geometry --case tutorial --parameters models/geometry/examples
 
 ## 来源
 
-[P01](../../references/README.md), [N01](../../references/README.md)
+[P01](../../references/README.zh-CN.md), [N01](../../references/README.zh-CN.md)
 
 ## 推导与结果解释
 

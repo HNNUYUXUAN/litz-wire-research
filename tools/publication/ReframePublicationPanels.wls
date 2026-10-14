@@ -9,21 +9,22 @@ out=request["output_directory"];records={};failures={};
 label[s_]:=LitzPublication`PublicationText[s,9.5];
 exportPanel[spec_]:=Module[{source,g,base,layout,pad,frame,sz,canvas,labels,new,legend,bar,range,fn,ticks,colors,path,assets={},r,ext,kind,primitives,diagnostic},
  If[FileHash[spec["source_expression"],"SHA256","HexString"] =!= spec["source_expression_sha256"],AppendTo[failures,"Source identity: "<>spec["id"]];Return[]];
- source=Get[spec["source_expression"]];base=source[[1]];layout=spec["layout"];
+ source=Get[spec["source_expression"]];base=If[Head[source]===Graphics,source,source[[1]]];layout=spec["layout"];
  pad=layout["padding_pt"];frame=layout["frame_pt"];sz=layout["plot_image_pt"];canvas=layout["canvas_pt"];kind=spec["layout_kind"];
  labels=(FrameLabel/.Options[base,FrameLabel])/.Rule[FontSize,_]:>Rule[FontSize,9.5];
  new=Show[base,ImageSize->sz,ImagePadding->pad,AspectRatio->frame[[2]]/frame[[1]],
    FrameLabel->labels,BaseStyle->{FontFamily->"Times New Roman",FontSize->9.5},
    FrameTicksStyle->Directive[FontFamily->"Times New Roman",FontSize->9],Background->White];
+ If[spec["id"]==="coax640_mesh",new=Show[new,FrameTicks->{{Automatic,None},{{{150000,"150k"},{250000,"250k"},{400000,"400k"}},None}}]];
  diagnostic=<|"numeric_graphics_preserved"->SameQ[base[[1]],new[[1]]],
   "source_primitives_sha256"->Hash[base[[1]],"SHA256","HexString"],"output_primitives_sha256"->Hash[new[[1]],"SHA256","HexString"],
   "source_plot_range"->(PlotRange/.Options[base,PlotRange]),"output_plot_range"->(PlotRange/.Options[new,PlotRange])|>;
  primitives={Inset[new,{0,0},{Left,Bottom},sz]};
  If[kind==="curve",
-   legend=source[[2,1]]/.Rule[FontSize,_]:>Rule[FontSize,9];
+   If[Head[source]===Legended,legend=source[[2,1]]/.Rule[FontSize,_]:>Rule[FontSize,9];
    legend=legend/.Rule[LegendMarkerSize,_]:>Rule[LegendMarkerSize,{16,9}];
    legend=Framed[legend,Background->None,FrameStyle->None,FrameMargins->3];
-   AppendTo[primitives,If[spec["legend_anchor"]==="right",Inset[legend,{238,178},{Right,Top}],Inset[legend,{238,48},{Right,Bottom}]]],
+   AppendTo[primitives,If[spec["legend_anchor"]==="right",Inset[legend,{238,178},{Right,Top}],Inset[legend,{238,48},{Right,Bottom}]]]],
    bar=First@Cases[source,_BarLegend,Infinity];
    fn=bar[[1,1]];range=bar[[1,2]];
    AssociateTo[diagnostic,{"color_range"->range,"color_function_sha256"->Hash[fn,"SHA256","HexString"],"color_endpoint_rgb"->(List@@ColorConvert[fn[#],"RGB"]&/@range)}];

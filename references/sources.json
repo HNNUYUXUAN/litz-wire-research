@@ -1,11 +1,17 @@
 {
-  "schema_version": 1,
+  "schema_version": 2,
   "sources": [
     {
       "key": "P01",
       "category": "literature",
-      "role": "Litz-wire modeling method and comparison / Litz 线建模方法与比较",
-      "use_status": "reviewed literature / 已核查文献",
+      "role": {
+        "en": "Litz-wire modeling method and comparison",
+        "zh-CN": "Litz 线建模方法与比较"
+      },
+      "use_status": {
+        "en": "reviewed literature",
+        "zh-CN": "已核查文献"
+      },
       "locations": [
         "manuscript/",
         "models/"
@@ -16,8 +22,14 @@
     {
       "key": "N01",
       "category": "literature",
-      "role": "Litz-wire modeling method and comparison / Litz 线建模方法与比较",
-      "use_status": "reviewed literature / 已核查文献",
+      "role": {
+        "en": "Litz-wire modeling method and comparison",
+        "zh-CN": "Litz 线建模方法与比较"
+      },
+      "use_status": {
+        "en": "reviewed literature",
+        "zh-CN": "已核查文献"
+      },
       "locations": [
         "manuscript/",
         "models/"
@@ -28,8 +40,14 @@
     {
       "key": "P02",
       "category": "literature",
-      "role": "Litz-wire modeling method and comparison / Litz 线建模方法与比较",
-      "use_status": "reviewed literature / 已核查文献",
+      "role": {
+        "en": "Litz-wire modeling method and comparison",
+        "zh-CN": "Litz 线建模方法与比较"
+      },
+      "use_status": {
+        "en": "reviewed literature",
+        "zh-CN": "已核查文献"
+      },
       "locations": [
         "manuscript/",
         "models/"
@@ -40,8 +58,14 @@
     {
       "key": "P03",
       "category": "literature",
-      "role": "Litz-wire modeling method and comparison / Litz 线建模方法与比较",
-      "use_status": "reviewed literature / 已核查文献",
+      "role": {
+        "en": "Litz-wire modeling method and comparison",
+        "zh-CN": "Litz 线建模方法与比较"
+      },
+      "use_status": {
+        "en": "reviewed literature",
+        "zh-CN": "已核查文献"
+      },
       "locations": [
         "manuscript/",
         "models/"
@@ -52,8 +76,14 @@
     {
       "key": "P04",
       "category": "literature",
-      "role": "Litz-wire modeling method and comparison / Litz 线建模方法与比较",
-      "use_status": "reviewed literature / 已核查文献",
+      "role": {
+        "en": "Litz-wire modeling method and comparison",
+        "zh-CN": "Litz 线建模方法与比较"
+      },
+      "use_status": {
+        "en": "reviewed literature",
+        "zh-CN": "已核查文献"
+      },
       "locations": [
         "manuscript/",
         "models/"
@@ -64,8 +94,14 @@
     {
       "key": "P05",
       "category": "literature",
-      "role": "Litz-wire modeling method and comparison / Litz 线建模方法与比较",
-      "use_status": "reviewed literature / 已核查文献",
+      "role": {
+        "en": "Litz-wire modeling method and comparison",
+        "zh-CN": "Litz 线建模方法与比较"
+      },
+      "use_status": {
+        "en": "reviewed literature",
+        "zh-CN": "已核查文献"
+      },
       "locations": [
         "manuscript/",
         "models/"
@@ -76,8 +112,14 @@
     {
       "key": "P09",
       "category": "literature",
-      "role": "Litz-wire modeling method and comparison / Litz 线建模方法与比较",
-      "use_status": "reviewed literature / 已核查文献",
+      "role": {
+        "en": "Litz-wire modeling method and comparison",
+        "zh-CN": "Litz 线建模方法与比较"
+      },
+      "use_status": {
+        "en": "reviewed literature",
+        "zh-CN": "已核查文献"
+      },
       "locations": [
         "manuscript/",
         "models/"
@@ -88,8 +130,14 @@
     {
       "key": "C01",
       "category": "literature",
-      "role": "Research literature index / 研究文献索引",
-      "use_status": "historically reviewed; see dated source record / 历史只读核查，详见带日期的来源记录",
+      "role": {
+        "en": "Research literature index",
+        "zh-CN": "研究文献索引"
+      },
+      "use_status": {
+        "en": "historically reviewed; see dated source record",
+        "zh-CN": "历史只读核查，详见带日期的来源记录"
+      },
       "locations": [
         "references/"
       ],
@@ -100,8 +148,14 @@
     {
       "key": "C02",
       "category": "literature",
-      "role": "Research literature index / 研究文献索引",
-      "use_status": "historically reviewed; see dated source record / 历史只读核查，详见带日期的来源记录",
+      "role": {
+        "en": "Research literature index",
+        "zh-CN": "研究文献索引"
+      },
+      "use_status": {
+        "en": "historically reviewed; see dated source record",
+        "zh-CN": "历史只读核查，详见带日期的来源记录"
+      },
       "locations": [
         "references/"
       ],
@@ -112,8 +166,14 @@
     {
       "key": "C03",
       "category": "literature",
-      "role": "Research literature index / 研究文献索引",
-      "use_status": "historically reviewed; see dated source record / 历史只读核查，详见带日期的来源记录",
+      "role": {
+        "en": "Research literature index",
+        "zh-CN": "研究文献索引"
+      },
+      "use_status": {
+        "en": "historically reviewed; see dated source record",
+        "zh-CN": "历史只读核查，详见带日期的来源记录"
+      },
       "locations": [
         "references/"
       ],
@@ -124,8 +184,14 @@
     {
       "key": "C04",
       "category": "literature",
-      "role": "Research literature index / 研究文献索引",
-      "use_status": "historically reviewed; see dated source record / 历史只读核查，详见带日期的来源记录",
+      "role": {
+        "en": "Research literature index",
+        "zh-CN": "研究文献索引"
+      },
+      "use_status": {
+        "en": "historically reviewed; see dated source record",
+        "zh-CN": "历史只读核查，详见带日期的来源记录"
+      },
       "locations": [
         "references/"
       ],
@@ -136,8 +202,14 @@
     {
       "key": "S03",
       "category": "literature",
-      "role": "Research literature index / 研究文献索引",
-      "use_status": "historically reviewed; see dated source record / 历史只读核查，详见带日期的来源记录",
+      "role": {
+        "en": "Research literature index",
+        "zh-CN": "研究文献索引"
+      },
+      "use_status": {
+        "en": "historically reviewed; see dated source record",
+        "zh-CN": "历史只读核查，详见带日期的来源记录"
+      },
       "locations": [
         "references/"
       ],
@@ -148,8 +220,14 @@
     {
       "key": "S05",
       "category": "literature",
-      "role": "Research literature index / 研究文献索引",
-      "use_status": "historically reviewed; see dated source record / 历史只读核查，详见带日期的来源记录",
+      "role": {
+        "en": "Research literature index",
+        "zh-CN": "研究文献索引"
+      },
+      "use_status": {
+        "en": "historically reviewed; see dated source record",
+        "zh-CN": "历史只读核查，详见带日期的来源记录"
+      },
       "locations": [
         "references/"
       ],
@@ -160,8 +238,14 @@
     {
       "key": "S06",
       "category": "literature",
-      "role": "Research literature index / 研究文献索引",
-      "use_status": "historically reviewed; see dated source record / 历史只读核查，详见带日期的来源记录",
+      "role": {
+        "en": "Research literature index",
+        "zh-CN": "研究文献索引"
+      },
+      "use_status": {
+        "en": "historically reviewed; see dated source record",
+        "zh-CN": "历史只读核查，详见带日期的来源记录"
+      },
       "locations": [
         "references/"
       ],
@@ -172,8 +256,14 @@
     {
       "key": "P07",
       "category": "literature",
-      "role": "Research literature index / 研究文献索引",
-      "use_status": "historically reviewed; see dated source record / 历史只读核查，详见带日期的来源记录",
+      "role": {
+        "en": "Research literature index",
+        "zh-CN": "研究文献索引"
+      },
+      "use_status": {
+        "en": "historically reviewed; see dated source record",
+        "zh-CN": "历史只读核查，详见带日期的来源记录"
+      },
       "locations": [
         "references/"
       ],
@@ -184,8 +274,14 @@
     {
       "key": "P08",
       "category": "literature",
-      "role": "Research literature index / 研究文献索引",
-      "use_status": "historically reviewed; see dated source record / 历史只读核查，详见带日期的来源记录",
+      "role": {
+        "en": "Research literature index",
+        "zh-CN": "研究文献索引"
+      },
+      "use_status": {
+        "en": "historically reviewed; see dated source record",
+        "zh-CN": "历史只读核查，详见带日期的来源记录"
+      },
       "locations": [
         "references/"
       ],
@@ -196,8 +292,14 @@
     {
       "key": "E01",
       "category": "literature",
-      "role": "Research literature index / 研究文献索引",
-      "use_status": "historically reviewed; see dated source record / 历史只读核查，详见带日期的来源记录",
+      "role": {
+        "en": "Research literature index",
+        "zh-CN": "研究文献索引"
+      },
+      "use_status": {
+        "en": "historically reviewed; see dated source record",
+        "zh-CN": "历史只读核查，详见带日期的来源记录"
+      },
       "locations": [
         "references/"
       ],
@@ -208,8 +310,14 @@
     {
       "key": "E02",
       "category": "literature",
-      "role": "Research literature index / 研究文献索引",
-      "use_status": "historically reviewed; see dated source record / 历史只读核查，详见带日期的来源记录",
+      "role": {
+        "en": "Research literature index",
+        "zh-CN": "研究文献索引"
+      },
+      "use_status": {
+        "en": "historically reviewed; see dated source record",
+        "zh-CN": "历史只读核查，详见带日期的来源记录"
+      },
       "locations": [
         "references/"
       ],
@@ -220,8 +328,14 @@
     {
       "key": "E03",
       "category": "literature",
-      "role": "Research literature index / 研究文献索引",
-      "use_status": "historically reviewed; see dated source record / 历史只读核查，详见带日期的来源记录",
+      "role": {
+        "en": "Research literature index",
+        "zh-CN": "研究文献索引"
+      },
+      "use_status": {
+        "en": "historically reviewed; see dated source record",
+        "zh-CN": "历史只读核查，详见带日期的来源记录"
+      },
       "locations": [
         "references/"
       ],
@@ -232,8 +346,14 @@
     {
       "key": "S02",
       "category": "literature",
-      "role": "Research literature index / 研究文献索引",
-      "use_status": "historically reviewed; see dated source record / 历史只读核查，详见带日期的来源记录",
+      "role": {
+        "en": "Research literature index",
+        "zh-CN": "研究文献索引"
+      },
+      "use_status": {
+        "en": "historically reviewed; see dated source record",
+        "zh-CN": "历史只读核查，详见带日期的来源记录"
+      },
       "locations": [
         "references/"
       ],
@@ -244,8 +364,14 @@
     {
       "key": "S04",
       "category": "literature",
-      "role": "Research literature index / 研究文献索引",
-      "use_status": "historically reviewed; see dated source record / 历史只读核查，详见带日期的来源记录",
+      "role": {
+        "en": "Research literature index",
+        "zh-CN": "研究文献索引"
+      },
+      "use_status": {
+        "en": "historically reviewed; see dated source record",
+        "zh-CN": "历史只读核查，详见带日期的来源记录"
+      },
       "locations": [
         "references/"
       ],
@@ -256,8 +382,14 @@
     {
       "key": "WOLFRAM",
       "category": "software",
-      "role": "Symbolic/numerical modeling and native Notebooks / 符号与数值建模及原生 Notebook",
-      "use_status": "used dependency or research tool / 实际使用的依赖或研究工具",
+      "role": {
+        "en": "Symbolic/numerical modeling and native Notebooks",
+        "zh-CN": "符号与数值建模及原生 Notebook"
+      },
+      "use_status": {
+        "en": "used dependency or research tool",
+        "zh-CN": "实际使用的依赖或研究工具"
+      },
       "locations": [
         "automation/",
         "models/",
@@ -270,8 +402,14 @@
     {
       "key": "AGENTTOOLS",
       "category": "software",
-      "role": "Wolfram MCP tools / Wolfram MCP 工具",
-      "use_status": "used dependency or research tool / 实际使用的依赖或研究工具",
+      "role": {
+        "en": "Wolfram MCP tools",
+        "zh-CN": "Wolfram MCP 工具"
+      },
+      "use_status": {
+        "en": "used dependency or research tool",
+        "zh-CN": "实际使用的依赖或研究工具"
+      },
       "locations": [
         "automation/",
         "models/",
@@ -284,8 +422,14 @@
     {
       "key": "PYAEDTMCP",
       "category": "software",
-      "role": "AEDT MCP automation / AEDT 的 MCP 自动化连接",
-      "use_status": "used dependency or research tool / 实际使用的依赖或研究工具",
+      "role": {
+        "en": "AEDT MCP automation",
+        "zh-CN": "AEDT 的 MCP 自动化连接"
+      },
+      "use_status": {
+        "en": "used dependency or research tool",
+        "zh-CN": "实际使用的依赖或研究工具"
+      },
       "locations": [
         "automation/",
         "models/",
@@ -298,8 +442,14 @@
     {
       "key": "PYAEDT",
       "category": "software",
-      "role": "AEDT modeling and postprocessing / AEDT 建模与后处理",
-      "use_status": "used dependency or research tool / 实际使用的依赖或研究工具",
+      "role": {
+        "en": "AEDT modeling and postprocessing",
+        "zh-CN": "AEDT 建模与后处理"
+      },
+      "use_status": {
+        "en": "used dependency or research tool",
+        "zh-CN": "实际使用的依赖或研究工具"
+      },
       "locations": [
         "automation/",
         "models/",
@@ -312,8 +462,14 @@
     {
       "key": "CODEX",
       "category": "software",
-      "role": "Research agent harness and coding assistance / 研究智能体执行框架与代码辅助",
-      "use_status": "used dependency or research tool / 实际使用的依赖或研究工具",
+      "role": {
+        "en": "Research-agent execution, coding, translation and editorial assistance; OpenAI image generation for conceptual illustrations",
+        "zh-CN": "研究智能体执行、代码、翻译与成稿辅助；OpenAI 图像生成用于概念插图"
+      },
+      "use_status": {
+        "en": "used dependency or research tool",
+        "zh-CN": "实际使用的依赖或研究工具"
+      },
       "locations": [
         "automation/",
         "models/",
@@ -326,8 +482,14 @@
     {
       "key": "MCP",
       "category": "software",
-      "role": "Tool transport and discovery protocol / 工具传输与发现协议",
-      "use_status": "used dependency or research tool / 实际使用的依赖或研究工具",
+      "role": {
+        "en": "Tool transport and discovery protocol",
+        "zh-CN": "工具传输与发现协议"
+      },
+      "use_status": {
+        "en": "used dependency or research tool",
+        "zh-CN": "实际使用的依赖或研究工具"
+      },
       "locations": [
         "automation/",
         "models/",
@@ -340,8 +502,14 @@
     {
       "key": "AEDT",
       "category": "software",
-      "role": "Independent electromagnetic field solver / 独立电磁场求解器",
-      "use_status": "used dependency or research tool / 实际使用的依赖或研究工具",
+      "role": {
+        "en": "Independent electromagnetic field solver",
+        "zh-CN": "独立电磁场求解器"
+      },
+      "use_status": {
+        "en": "used dependency or research tool",
+        "zh-CN": "实际使用的依赖或研究工具"
+      },
       "locations": [
         "automation/",
         "models/",
@@ -354,8 +522,14 @@
     {
       "key": "CUDA",
       "category": "software",
-      "role": "GPU numerical execution and CPU comparison / GPU 数值执行与 CPU 对照",
-      "use_status": "used dependency or research tool / 实际使用的依赖或研究工具",
+      "role": {
+        "en": "GPU numerical execution and CPU comparison",
+        "zh-CN": "GPU 数值执行与 CPU 对照"
+      },
+      "use_status": {
+        "en": "used dependency or research tool",
+        "zh-CN": "实际使用的依赖或研究工具"
+      },
       "locations": [
         "automation/",
         "models/",
@@ -368,8 +542,14 @@
     {
       "key": "PYTHON",
       "category": "software",
-      "role": "CLI and orchestration runtime / 命令行与任务调度运行环境",
-      "use_status": "used dependency or research tool / 实际使用的依赖或研究工具",
+      "role": {
+        "en": "CLI and orchestration runtime",
+        "zh-CN": "命令行与任务调度运行环境"
+      },
+      "use_status": {
+        "en": "used dependency or research tool",
+        "zh-CN": "实际使用的依赖或研究工具"
+      },
       "locations": [
         "automation/",
         "models/",
@@ -382,8 +562,14 @@
     {
       "key": "MATH",
       "category": "software",
-      "role": "Independent high-precision Bessel calibration / 独立高精度贝塞尔函数校准",
-      "use_status": "used dependency or research tool / 实际使用的依赖或研究工具",
+      "role": {
+        "en": "Independent high-precision Bessel calibration",
+        "zh-CN": "独立高精度贝塞尔函数校准"
+      },
+      "use_status": {
+        "en": "used dependency or research tool",
+        "zh-CN": "实际使用的依赖或研究工具"
+      },
       "locations": [
         "automation/",
         "models/",
@@ -396,8 +582,14 @@
     {
       "key": "NUMPY",
       "category": "software",
-      "role": "Arrays and port calibration / 数组计算与端口校准",
-      "use_status": "used dependency or research tool / 实际使用的依赖或研究工具",
+      "role": {
+        "en": "Arrays and port calibration",
+        "zh-CN": "数组计算与端口校准"
+      },
+      "use_status": {
+        "en": "used dependency or research tool",
+        "zh-CN": "实际使用的依赖或研究工具"
+      },
       "locations": [
         "automation/",
         "models/",
@@ -410,8 +602,14 @@
     {
       "key": "MATPLOTLIB",
       "category": "software",
-      "role": "Data visualization / 数据制图",
-      "use_status": "used dependency or research tool / 实际使用的依赖或研究工具",
+      "role": {
+        "en": "Data visualization",
+        "zh-CN": "数据制图"
+      },
+      "use_status": {
+        "en": "used dependency or research tool",
+        "zh-CN": "实际使用的依赖或研究工具"
+      },
       "locations": [
         "automation/",
         "models/",
@@ -424,8 +622,14 @@
     {
       "key": "PILLOW",
       "category": "software",
-      "role": "Image processing and inspection / 图像处理与检查",
-      "use_status": "used dependency or research tool / 实际使用的依赖或研究工具",
+      "role": {
+        "en": "Image processing and inspection",
+        "zh-CN": "图像处理与检查"
+      },
+      "use_status": {
+        "en": "used dependency or research tool",
+        "zh-CN": "实际使用的依赖或研究工具"
+      },
       "locations": [
         "automation/",
         "models/",
@@ -438,8 +642,14 @@
     {
       "key": "PYPDF",
       "category": "software",
-      "role": "PDF structure and verification / PDF 结构检查与验收",
-      "use_status": "used dependency or research tool / 实际使用的依赖或研究工具",
+      "role": {
+        "en": "PDF structure and verification",
+        "zh-CN": "PDF 结构检查与验收"
+      },
+      "use_status": {
+        "en": "used dependency or research tool",
+        "zh-CN": "实际使用的依赖或研究工具"
+      },
       "locations": [
         "automation/",
         "models/",
@@ -452,8 +662,14 @@
     {
       "key": "PDFIUM",
       "category": "software",
-      "role": "PDF rendering / PDF 渲染",
-      "use_status": "used dependency or research tool / 实际使用的依赖或研究工具",
+      "role": {
+        "en": "PDF rendering",
+        "zh-CN": "PDF 渲染"
+      },
+      "use_status": {
+        "en": "used dependency or research tool",
+        "zh-CN": "实际使用的依赖或研究工具"
+      },
       "locations": [
         "automation/",
         "models/",
@@ -466,8 +682,14 @@
     {
       "key": "REPORTLAB",
       "category": "software",
-      "role": "Document production / 文档制作",
-      "use_status": "used dependency or research tool / 实际使用的依赖或研究工具",
+      "role": {
+        "en": "Document production",
+        "zh-CN": "文档制作"
+      },
+      "use_status": {
+        "en": "used dependency or research tool",
+        "zh-CN": "实际使用的依赖或研究工具"
+      },
       "locations": [
         "automation/",
         "models/",
@@ -480,8 +702,14 @@
     {
       "key": "MARKDOWNIT",
       "category": "software",
-      "role": "Markdown and mathematical document parsing / Markdown 与数学文档解析",
-      "use_status": "used dependency or research tool / 实际使用的依赖或研究工具",
+      "role": {
+        "en": "Markdown and mathematical document parsing",
+        "zh-CN": "Markdown 与数学文档解析"
+      },
+      "use_status": {
+        "en": "used dependency or research tool",
+        "zh-CN": "实际使用的依赖或研究工具"
+      },
       "locations": [
         "automation/",
         "models/",
@@ -494,8 +722,14 @@
     {
       "key": "MDURL",
       "category": "software",
-      "role": "Markdown URL parsing / Markdown 链接解析",
-      "use_status": "used dependency or research tool / 实际使用的依赖或研究工具",
+      "role": {
+        "en": "Markdown URL parsing",
+        "zh-CN": "Markdown 链接解析"
+      },
+      "use_status": {
+        "en": "used dependency or research tool",
+        "zh-CN": "实际使用的依赖或研究工具"
+      },
       "locations": [
         "automation/",
         "models/",
@@ -508,8 +742,14 @@
     {
       "key": "SETUPTOOLS",
       "category": "software",
-      "role": "Package installation / 软件包安装",
-      "use_status": "used dependency or research tool / 实际使用的依赖或研究工具",
+      "role": {
+        "en": "Package installation",
+        "zh-CN": "软件包安装"
+      },
+      "use_status": {
+        "en": "used dependency or research tool",
+        "zh-CN": "实际使用的依赖或研究工具"
+      },
       "locations": [
         "automation/",
         "models/",
@@ -522,8 +762,14 @@
     {
       "key": "PSUTIL",
       "category": "software",
-      "role": "Process ownership and resource monitoring / 进程归属与资源监测",
-      "use_status": "used dependency or research tool / 实际使用的依赖或研究工具",
+      "role": {
+        "en": "Process ownership and resource monitoring",
+        "zh-CN": "进程归属与资源监测"
+      },
+      "use_status": {
+        "en": "used dependency or research tool",
+        "zh-CN": "实际使用的依赖或研究工具"
+      },
       "locations": [
         "automation/",
         "models/",
@@ -536,8 +782,14 @@
     {
       "key": "BIBTEXPARSE",
       "category": "software",
-      "role": "Canonical bibliography parsing / 统一题录解析",
-      "use_status": "used dependency or research tool / 实际使用的依赖或研究工具",
+      "role": {
+        "en": "Canonical bibliography parsing",
+        "zh-CN": "统一题录解析"
+      },
+      "use_status": {
+        "en": "used dependency or research tool",
+        "zh-CN": "实际使用的依赖或研究工具"
+      },
       "locations": [
         "automation/",
         "models/",
@@ -550,8 +802,14 @@
     {
       "key": "MCPSDK",
       "category": "software",
-      "role": "Standard client protocol acceptance / 标准客户端协议验收",
-      "use_status": "used dependency or research tool / 实际使用的依赖或研究工具",
+      "role": {
+        "en": "Standard client protocol acceptance",
+        "zh-CN": "标准客户端协议验收"
+      },
+      "use_status": {
+        "en": "used dependency or research tool",
+        "zh-CN": "实际使用的依赖或研究工具"
+      },
       "locations": [
         "automation/",
         "models/",
@@ -564,8 +822,14 @@
     {
       "key": "FAST_MCP",
       "category": "software",
-      "role": "MCP server framework / MCP 服务框架",
-      "use_status": "used dependency or research tool / 实际使用的依赖或研究工具",
+      "role": {
+        "en": "MCP server framework",
+        "zh-CN": "MCP 服务框架"
+      },
+      "use_status": {
+        "en": "used dependency or research tool",
+        "zh-CN": "实际使用的依赖或研究工具"
+      },
       "locations": [
         "automation/",
         "models/",
@@ -578,8 +842,14 @@
     {
       "key": "WOLFRAMCLIENT",
       "category": "software",
-      "role": "WXF and Wolfram interoperability / WXF 与 Wolfram 数据互操作",
-      "use_status": "used dependency or research tool / 实际使用的依赖或研究工具",
+      "role": {
+        "en": "WXF and Wolfram interoperability",
+        "zh-CN": "WXF 与 Wolfram 数据互操作"
+      },
+      "use_status": {
+        "en": "used dependency or research tool",
+        "zh-CN": "实际使用的依赖或研究工具"
+      },
       "locations": [
         "automation/",
         "models/",
@@ -592,8 +862,14 @@
     {
       "key": "POWERSHELL",
       "category": "software",
-      "role": "Windows process supervision / Windows 进程监控",
-      "use_status": "used dependency or research tool / 实际使用的依赖或研究工具",
+      "role": {
+        "en": "Windows process supervision",
+        "zh-CN": "Windows 进程监控"
+      },
+      "use_status": {
+        "en": "used dependency or research tool",
+        "zh-CN": "实际使用的依赖或研究工具"
+      },
       "locations": [
         "automation/",
         "models/",
@@ -606,8 +882,14 @@
     {
       "key": "TEX",
       "category": "software",
-      "role": "Academic document compilation / 学术文档编译",
-      "use_status": "used dependency or research tool / 实际使用的依赖或研究工具",
+      "role": {
+        "en": "Academic document compilation",
+        "zh-CN": "学术文档编译"
+      },
+      "use_status": {
+        "en": "used dependency or research tool",
+        "zh-CN": "实际使用的依赖或研究工具"
+      },
       "locations": [
         "automation/",
         "models/",
@@ -620,8 +902,14 @@
     {
       "key": "IEEE",
       "category": "software",
-      "role": "IEEE-style document class / IEEE 文档排版类",
-      "use_status": "used dependency or research tool / 实际使用的依赖或研究工具",
+      "role": {
+        "en": "IEEE-style document class",
+        "zh-CN": "IEEE 文档排版类"
+      },
+      "use_status": {
+        "en": "used dependency or research tool",
+        "zh-CN": "实际使用的依赖或研究工具"
+      },
       "locations": [
         "automation/",
         "models/",
@@ -634,8 +922,14 @@
     {
       "key": "FONTS",
       "category": "software",
-      "role": "Chinese and Latin document typography / 中英文文档字体排版",
-      "use_status": "used dependency or research tool / 实际使用的依赖或研究工具",
+      "role": {
+        "en": "Chinese and Latin document typography",
+        "zh-CN": "中英文文档字体排版"
+      },
+      "use_status": {
+        "en": "used dependency or research tool",
+        "zh-CN": "实际使用的依赖或研究工具"
+      },
       "locations": [
         "automation/",
         "models/",
@@ -648,8 +942,14 @@
     {
       "key": "BESSEL",
       "category": "method",
-      "role": "Bessel definitions and conventions / 贝塞尔函数定义与约定",
-      "use_status": "method reference / 方法参考",
+      "role": {
+        "en": "Bessel definitions and conventions",
+        "zh-CN": "贝塞尔函数定义与约定"
+      },
+      "use_status": {
+        "en": "method reference",
+        "zh-CN": "方法参考"
+      },
       "locations": [
         "automation/",
         "models/",
@@ -662,8 +962,14 @@
     {
       "key": "FEMDOC",
       "category": "method",
-      "role": "FEM and A-phi method documentation / 有限元及 A–φ 方法文档",
-      "use_status": "method reference / 方法参考",
+      "role": {
+        "en": "FEM and A-phi method documentation",
+        "zh-CN": "有限元及 A–φ 方法文档"
+      },
+      "use_status": {
+        "en": "method reference",
+        "zh-CN": "方法参考"
+      },
       "locations": [
         "automation/",
         "models/",
@@ -676,8 +982,14 @@
     {
       "key": "REPO1",
       "category": "repository",
-      "role": "Published method and implementation reference / 已发表方法与实现参考",
-      "use_status": "read-only reviewed / 只读核查",
+      "role": {
+        "en": "Twisting-aware Litz loss modeling",
+        "zh-CN": "Litz 换位结构与损耗建模"
+      },
+      "use_status": {
+        "en": "read-only reviewed",
+        "zh-CN": "只读核查"
+      },
       "license": "BSD-2-Clause",
       "version": "3a7ed32f2e6c669c819b9b292077ac21c3945ede",
       "distribution": "bibliographic metadata",
@@ -690,8 +1002,14 @@
     {
       "key": "REPO2",
       "category": "repository",
-      "role": "Published method and implementation reference / 已发表方法与实现参考",
-      "use_status": "read-only reviewed / 只读核查",
+      "role": {
+        "en": "FEM-based Litz loss analysis",
+        "zh-CN": "基于有限元的 Litz 损耗分析"
+      },
+      "use_status": {
+        "en": "read-only reviewed",
+        "zh-CN": "只读核查"
+      },
       "license": "BSD-2-Clause",
       "version": "952503bee97c400de667acb7c7c850c6fe9a62a1",
       "distribution": "bibliographic metadata",
@@ -704,8 +1022,14 @@
     {
       "key": "REPO3",
       "category": "repository",
-      "role": "Published method and implementation reference / 已发表方法与实现参考",
-      "use_status": "read-only reviewed / 只读核查",
+      "role": {
+        "en": "Magnetic-component finite-element modeling",
+        "zh-CN": "磁性元件有限元建模"
+      },
+      "use_status": {
+        "en": "read-only reviewed",
+        "zh-CN": "只读核查"
+      },
       "license": "GPL-3.0",
       "version": "05425e56fe9f6077e565b0950e877b035d906f15",
       "distribution": "bibliographic metadata",
@@ -718,8 +1042,14 @@
     {
       "key": "REPO4",
       "category": "repository",
-      "role": "Published method and implementation reference / 已发表方法与实现参考",
-      "use_status": "read-only reviewed / 只读核查",
+      "role": {
+        "en": "Voxel PEEC formulation and solver organization",
+        "zh-CN": "体素 PEEC 方法与求解器组织"
+      },
+      "use_status": {
+        "en": "read-only reviewed",
+        "zh-CN": "只读核查"
+      },
       "license": "MPL-2.0",
       "version": "v5.8.0",
       "distribution": "bibliographic metadata",
@@ -732,8 +1062,14 @@
     {
       "key": "REPO6",
       "category": "repository",
-      "role": "Published method and implementation reference / 已发表方法与实现参考",
-      "use_status": "read-only reviewed / 只读核查",
+      "role": {
+        "en": "Textile centerline geometry and structural representation",
+        "zh-CN": "纺织中心线几何与结构表达"
+      },
+      "use_status": {
+        "en": "read-only reviewed",
+        "zh-CN": "只读核查"
+      },
       "license": "GPL-2.0",
       "version": "99eb6db4ea72679ccbdfea01a3ce2f72fee07b8a",
       "distribution": "bibliographic metadata",
@@ -746,8 +1082,14 @@
     {
       "key": "RUEHLI1974",
       "category": "literature",
-      "role": "Foundational partial-element equivalent-circuit formulation / 部分元等效电路基本方法",
-      "use_status": "method attribution; DOI metadata verified via Crossref; implementation independently coded / 方法归属；DOI 题录经 Crossref 核实；实现独立编写",
+      "role": {
+        "en": "Foundational partial-element equivalent-circuit formulation",
+        "zh-CN": "部分元等效电路基本方法"
+      },
+      "use_status": {
+        "en": "method attribution; DOI metadata verified via Crossref; implementation independently coded",
+        "zh-CN": "方法归属；DOI 题录经 Crossref 核实；实现独立编写"
+      },
       "locations": [
         "models/peec/src/PEEC.wl",
         "models/rt0/src/VoxelOperator.wl"
@@ -759,8 +1101,14 @@
     {
       "key": "RT1977",
       "category": "literature",
-      "role": "Lowest-order mixed finite-element flux basis / 最低阶混合有限元通量基函数",
-      "use_status": "method attribution; DOI metadata verified via Crossref; implementation independently coded / 方法归属；DOI 题录经 Crossref 核实；实现独立编写",
+      "role": {
+        "en": "Lowest-order mixed finite-element flux basis",
+        "zh-CN": "最低阶混合有限元通量基函数"
+      },
+      "use_status": {
+        "en": "method attribution; DOI metadata verified via Crossref; implementation independently coded",
+        "zh-CN": "方法归属；DOI 题录经 Crossref 核实；实现独立编写"
+      },
       "locations": [
         "models/rt0/src/VoxelOperator.wl"
       ],
@@ -771,8 +1119,14 @@
     {
       "key": "GMRES1986",
       "category": "literature",
-      "role": "Restarted nonsymmetric Krylov iteration and true residual checks / 重启式非对称 Krylov 迭代与真实残差检查",
-      "use_status": "method attribution; DOI metadata verified via Crossref; implementation independently coded / 方法归属；DOI 题录经 Crossref 核实；实现独立编写",
+      "role": {
+        "en": "Restarted nonsymmetric Krylov iteration and true residual checks",
+        "zh-CN": "重启式非对称 Krylov 迭代与真实残差检查"
+      },
+      "use_status": {
+        "en": "method attribution; DOI metadata verified via Crossref; implementation independently coded",
+        "zh-CN": "方法归属；DOI 题录经 Crossref 核实；实现独立编写"
+      },
       "locations": [
         "models/rt0/src/VoxelOperator.wl",
         "models/aphi/"
@@ -784,8 +1138,14 @@
     {
       "key": "ANSYSCOMMONMCP",
       "category": "software",
-      "role": "Shared PyAnsys MCP runtime and server utilities / 共用 PyAnsys MCP 运行环境与服务工具",
-      "use_status": "actual runtime dependency / 实际运行依赖",
+      "role": {
+        "en": "Shared PyAnsys MCP runtime and server utilities",
+        "zh-CN": "共用 PyAnsys MCP 运行环境与服务工具"
+      },
+      "use_status": {
+        "en": "actual runtime dependency",
+        "zh-CN": "实际运行依赖"
+      },
       "version": "0.3.5",
       "license": "Apache-2.0",
       "locations": [

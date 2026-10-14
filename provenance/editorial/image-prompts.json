@@ -1,0 +1,18 @@
+[
+  {
+    "id": "overview-en",
+    "prompt": "Create a wide landscape 16:9 academic editorial illustration, pure white background, copper and blue-gray palette, delicate precise technical linework. Main title exact: 'Litz Wire Research'. Subtitle exact: 'Agent-driven modeling and simulation'. A left-to-right composition: abstract notebook with a research question icon, a central small network of computational nodes, then two scientific workspace windows with a copper strand cross section and a tetrahedral mesh, ending with a tidy research manuscript. Show a gently curved fine copper wire bundle along the bottom. Conceptual scientific workflow, no fake numeric values, no logos, no people. Spacious clear composition and restrained watercolor accents. High quality publication cover artwork.",
+    "tool": "image_gen",
+    "selection_status": "candidate",
+    "artifact": "outputs/review/visual-candidates/overview-en.png",
+    "sha256": "af1ebc3deca7bac07de16932a46327cb6bfa85d5fac4a14abe2b44c2bcdc37e1"
+  },
+  {
+    "id": "overview-zh",
+    "prompt": "Create a wide landscape 16:9 academic editorial illustration, pure white background, copper and blue-gray palette, delicate precise technical linework. Main title exact Chinese: 'Litz 线研究'. Subtitle exact Chinese: '智能体驱动的建模与仿真'. A left-to-right composition: abstract notebook with a research question icon, a central small network of computational nodes, then two scientific workspace windows with a copper strand cross section and a tetrahedral mesh, ending with a tidy research manuscript. Show a gently curved fine copper wire bundle along the bottom. Conceptual scientific workflow, no fake numeric values, no logos, no people. Spacious clear composition and restrained watercolor accents. High quality publication cover artwork. Chinese text clean and legible.",
+    "tool": "image_gen",
+    "selection_status": "candidate",
+    "artifact": "outputs/review/visual-candidates/overview-zh.png",
+    "sha256": "f737c8f5ee8aec78ddf765fad32883b71e14901adeab2ce3482eccfb81fa0dbe"
+  }
+]

@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="600" viewBox="0 0 1200 600" role="img" aria-labelledby="title desc">
+<title id="title">Wolfram—Maxwell 共同端口比较</title>
+<desc id="desc">七股直束 · 受控铜回流 · 共同端电压与总电流</desc>
+<defs><marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0,0 L10,5 L0,10 Z" fill="#31556a"/></marker></defs>
+<rect width="1200" height="600" fill="white"/>
+<text x="600" y="57" text-anchor="middle" font-family="Arial,Microsoft YaHei,sans-serif" font-size="32" font-weight="bold" fill="#31556a">Wolfram—Maxwell 共同端口比较</text>
+<text x="600" y="95" text-anchor="middle" font-family="Arial,Microsoft YaHei,sans-serif" font-size="17" font-weight="normal" fill="#31556a">七股直束 · 受控铜回流 · 共同端电压与总电流</text>
+<path d="M600.0,220 L305.0,290" stroke="#31556a" stroke-width="2" fill="none" marker-end="url(#arrow)"/>
+<path d="M600.0,220 L895.0,290" stroke="#31556a" stroke-width="2" fill="none" marker-end="url(#arrow)"/>
+<path d="M305.0,380 L600.0,455" stroke="#31556a" stroke-width="2" fill="none" marker-end="url(#arrow)"/>
+<path d="M895.0,380 L600.0,455" stroke="#31556a" stroke-width="2" fill="none" marker-end="url(#arrow)"/>
+<rect x="360" y="130" width="480" height="90" rx="10" fill="#f2f6f8" stroke="#31556a" stroke-width="1.5"/>
+<path d="M380,147 H420" stroke="#b57043" stroke-width="4"/>
+<text x="600.0" y="173" text-anchor="middle" font-family="Arial,Microsoft YaHei,sans-serif" font-size="21" font-weight="bold" fill="#31556a">对齐输入与观测量</text>
+<text x="600.0" y="200" text-anchor="middle" font-family="Arial,Microsoft YaHei,sans-serif" font-size="15" font-weight="normal" fill="#31556a">几何 · 材料 · 频率 · RMS · 边界</text>
+<rect x="90" y="290" width="430" height="90" rx="10" fill="#f2f6f8" stroke="#31556a" stroke-width="1.5"/>
+<path d="M110,307 H150" stroke="#b57043" stroke-width="4"/>
+<text x="305.0" y="333" text-anchor="middle" font-family="Arial,Microsoft YaHei,sans-serif" font-size="21" font-weight="bold" fill="#31556a">Wolfram 场路实现</text>
+<text x="305.0" y="360" text-anchor="middle" font-family="Arial,Microsoft YaHei,sans-serif" font-size="15" font-weight="normal" fill="#31556a">独立网格与求解记录</text>
+<rect x="680" y="290" width="430" height="90" rx="10" fill="#f2f6f8" stroke="#31556a" stroke-width="1.5"/>
+<path d="M700,307 H740" stroke="#b57043" stroke-width="4"/>
+<text x="895.0" y="333" text-anchor="middle" font-family="Arial,Microsoft YaHei,sans-serif" font-size="21" font-weight="bold" fill="#31556a">Maxwell 原生模型</text>
+<text x="895.0" y="360" text-anchor="middle" font-family="Arial,Microsoft YaHei,sans-serif" font-size="15" font-weight="normal" fill="#31556a">MCP → PyAEDT → AEDT</text>
+<rect x="360" y="455" width="480" height="90" rx="10" fill="#f2f6f8" stroke="#31556a" stroke-width="1.5"/>
+<path d="M380,472 H420" stroke="#b57043" stroke-width="4"/>
+<text x="600.0" y="498" text-anchor="middle" font-family="Arial,Microsoft YaHei,sans-serif" font-size="21" font-weight="bold" fill="#31556a">复电流 · 损耗 · Rac · 数值范围</text>
+<text x="600.0" y="525" text-anchor="middle" font-family="Arial,Microsoft YaHei,sans-serif" font-size="15" font-weight="normal" fill="#31556a">相同定义下比较，结合网格与边界敏感性解释</text>
+</svg>

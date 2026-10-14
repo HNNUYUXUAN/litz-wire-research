@@ -1,6 +1,6 @@
 # 共端复电流分配
 
-Miao Yuxuan · Huainan Normal University
+缪雨轩 · 淮南师范学院
 
 ## 模型与假设
 
@@ -28,7 +28,7 @@ litz-research run coax --case tutorial --parameters models/common_terminal/examp
 
 ## 来源
 
-[P01](../../references/README.md), [P02](../../references/README.md)
+[P01](../../references/README.zh-CN.md), [P02](../../references/README.zh-CN.md)
 
 ## 推导与结果解释
 

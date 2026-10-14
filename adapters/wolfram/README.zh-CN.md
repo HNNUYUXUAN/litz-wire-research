@@ -1,6 +1,6 @@
 # Wolfram 环境与执行
 
-Miao Yuxuan · Huainan Normal University
+缪雨轩 · 淮南师范学院
 
 ## 模型与假设
 
@@ -28,7 +28,7 @@ litz-research run wolfram --case tutorial --parameters adapters/wolfram/examples
 
 ## 来源
 
-[WOLFRAM](../../references/README.md), [AGENTTOOLS](../../references/README.md)
+[WOLFRAM](../../references/README.zh-CN.md), [AGENTTOOLS](../../references/README.zh-CN.md)
 
 ## 推导与结果解释
 

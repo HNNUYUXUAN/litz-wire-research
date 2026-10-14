@@ -1,0 +1,60 @@
+\documentclass[11pt,a4paper]{article}
+\usepackage[textwidth=182mm,top=20mm,bottom=22mm]{geometry}
+\usepackage{amsmath,amssymb,newtxmath}
+\usepackage[no-math]{fontspec}
+\setmainfont{Times New Roman}
+\usepackage{xeCJK}
+\setCJKmainfont[AutoFakeBold=2]{SimSun}
+\usepackage{graphicx,booktabs,array,tabularx,seqsplit,xurl,hyperref}
+\hypersetup{hidelinks,unicode=true,pdftitle={研究论文模板},pdfauthor={作者姓名}}
+\setlength{\emergencystretch}{2em}
+\raggedbottom
+\renewcommand{\arraystretch}{1.15}
+\usepackage{caption}
+\captionsetup[figure]{font=small,justification=centering,singlelinecheck=false}
+\linespread{1.16}
+\setlength{\parindent}{2em}
+\setlength{\parskip}{3pt plus 1pt}
+\renewcommand{\topfraction}{0.92}
+\renewcommand{\textfraction}{0.08}
+\renewcommand{\floatpagefraction}{0.75}
+\renewcommand{\figurename}{图}
+\renewcommand{\tablename}{表}
+\renewcommand{\abstractname}{摘要}
+\begin{document}
+\title{研究论文模板}
+\author{作者姓名\\单位名称}
+\date{}
+\maketitle
+\begin{abstract}
+概述研究问题、方法、主要结果和适用范围。
+\end{abstract}
+\noindent\textbf{关键词：}模型；验证\par
+\section{方法}
+\hypertarget{chapter-01}{}
+使用 SI 单位和 RMS 相量。圆线解的特殊函数定义见文献 [1]。
+
+\begin{equation}\delta=\frac{1}{\sqrt{\pi f\mu\sigma}}\label{eq:skin}\end{equation}
+\begin{table}[!htbp]
+\centering
+\caption{符号及单位}
+\begingroup\footnotesize
+\begin{tabularx}{\textwidth}{>{\raggedright\arraybackslash}X>{\raggedright\arraybackslash}X}
+\toprule
+Symbol & Unit\\
+\midrule
+f & Hz\\
+σ & S/m\\
+\bottomrule
+\end{tabularx}\endgroup
+\end{table}
+\section{结果与讨论}
+\hypertarget{chapter-02}{}
+将图件替换为可追溯的研究结果，说明比较条件、误差与结论。
+
+\renewcommand{\refname}{参考文献}
+\begin{figure}[!htbp]\centering\fbox{\rule{0pt}{22mm}\rule{.8\linewidth}{0pt}}\caption{图件位置示例；请替换为实际结果。}\label{fig:example}\end{figure}
+\begin{thebibliography}{99}
+\bibitem[1]{BESSEL} NIST. NIST Digital Library of Mathematical Functions, Modified Bessel Functions. 2026. \url{https://dlmf.nist.gov/10.25}
+\end{thebibliography}
+\end{document}

@@ -1,6 +1,6 @@
 # 保存 A–φ 场诊断
 
-Miao Yuxuan · Huainan Normal University
+缪雨轩 · 淮南师范学院
 
 ## 模型与假设
 
@@ -28,7 +28,7 @@ litz-research run aphi --case diagnostic --parameters models/aphi/examples/tutor
 
 ## 来源
 
-[FEMDOC](../../references/README.md), [GMRES1986](../../references/README.md)
+[FEMDOC](../../references/README.zh-CN.md), [GMRES1986](../../references/README.zh-CN.md)
 
 ## 推导与结果解释
 

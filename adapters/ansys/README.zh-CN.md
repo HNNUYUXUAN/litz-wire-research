@@ -1,6 +1,6 @@
 # Ansys MCP 与 Maxwell 工作流
 
-Miao Yuxuan · Huainan Normal University
+缪雨轩 · 淮南师范学院
 
 ## 模型与假设
 
@@ -28,7 +28,7 @@ litz-research run ansys --case preflight --parameters adapters/ansys/examples/tu
 
 ## 来源
 
-[PYAEDTMCP](../../references/README.md), [PYAEDT](../../references/README.md)
+[PYAEDTMCP](../../references/README.zh-CN.md), [PYAEDT](../../references/README.zh-CN.md)
 
 ## 推导与结果解释
 

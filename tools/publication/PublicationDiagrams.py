@@ -48,14 +48,13 @@ def diagram(identity,lang):
   label('Zi + e = V1     Σ Iₖ = Iₜ',[126,26],11)
   label(tr('未知量：i、V；回流端场独立','Unknowns: i, V; separate return field'),[126,9],9)
  elif identity=='ansys_limits':
-  height=254
-  group('license',[[3,76],[249,249]],'Ansys Student · v252')
-  node('two_d',[67,189],[110,68],[tr('二维网格','2D mesh'),'2000',tr('三角形','triangles')],'none')
-  node('three_d',[190,189],[102,68],[tr('三维网格','3D mesh'),'64000 / 8000',tr('体 / 面单元','volume / surface')],'none')
-  node('cores',[126,110],[224,40],['CPU · 4 '+tr('核','cores')],'none')
-  group('interface',[[3,3],[249,66]],tr('接口诊断','Interface diagnostics'))
-  label(tr('电流密度表达式 J','Current-density expression J'),[126,37],10)
-  label(tr('表达式探针 → 场积分核验','Expression probe → field-integral check'),[126,17],9)
+  height=168
+  group('license',[[3,49],[249,165]],'Ansys Student · v252')
+  node('two_d',[65,114],[110,56],[tr('二维三角形','2D triangles'),'2000'],'none')
+  node('three_d',[188,114],[110,56],[tr('三维体 / 面单元','3D volume / surface'),'64000 / 8000'],'none')
+  label('CPU · 4 '+tr('核','cores'),[126,66],10)
+  group('interface',[[3,3],[249,43]],tr('场量核验','Field checks'))
+  label(tr('J 表达式 → 电流与功率积分','J expression → current / power integrals'),[126,18],9)
  else:raise ValueError(identity)
  semantics=dict(id=identity,nodes=[{k:v for k,v in n.items() if k in ['id','lines','icon']} for n in nodes],edges=[{k:v for k,v in e.items() if k in ['source','target','label','style']} for e in edges],groups=[{k:v for k,v in g.items() if k in ['id','label']} for g in groups])
  layout=dict(width=252,height=height,nodes=nodes,edges=edges,groups=groups,labels=labels,wires=wires,dots=dots)

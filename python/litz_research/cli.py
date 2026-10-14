@@ -148,8 +148,8 @@ def parser():
     refs=sub.add_parser('references',help='Build or verify the unified source and citation index');refs.add_argument('action',choices=['build','verify'])
     b=sub.add_parser("build",help="Build the bilingual academic editions")
     b.add_argument("--run-id",required=True)
-    for name,choices in {"edition":["report","paper","all"],"language":["zh-CN","en","all"],"form":["merged","chapters","all"],"layout":["single","ieee","all"],"stage":["preflight","panels","compose","documents","notebooks","pdf","verify","package","all"]}.items():
-        b.add_argument("--"+name,choices=choices,default="all")
+    for name,choices in {"edition":["report","paper","automation","all"],"language":["zh-CN","en","all"],"form":["merged","chapters","all"],"layout":["single","ieee","ieee-journal","ieee-conference","all"],"stage":["preflight","panels","compose","documents","notebooks","pdf","verify","package","all"]}.items():
+        b.add_argument("--"+name,choices=choices,default="merged" if name=="form" else "all")
     b.add_argument("--source-manifest",default="manuscript/publication.json")
     v=sub.add_parser("verify",help="Check release data and manuscript input identities")
     v.add_argument("--run-id")

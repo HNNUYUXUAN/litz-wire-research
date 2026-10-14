@@ -1,8 +1,8 @@
 <!-- id: B.triangle_derivation.heading -->
-## Triangle Derivation
+## Current and power integration on linear triangles
 
 <!-- id: B.triangle_derivation.p1 -->
-On a linear triangle, J=ΣₐNaJa. Current integration uses A/3 for each shape function. Joule integration uses the mass matrix and Joule expression in {{eqref:E09}}. Material markers assign each cell to a strand, the return, or air. Coordinates are converted to metres before area evaluation, and the integrated power is independently compared with the archived scalar.
+Complex current density in a linear triangle is interpolated as J=ΣₐNaJa. The area integral of each shape function is AT/3, giving the element's complex current directly. Joule loss uses the consistent mass matrix in {{eqref:E09}}. Material tags associate each element with a strand, return, or air, and areas are calculated after converting coordinates to metres. Material-wise current and loss sums are independently checked against the original field–circuit scalars.
 
 <!-- id: B.report_rt0.heading -->
 ## RT0 Face Flux and Lightweight Field Recovery

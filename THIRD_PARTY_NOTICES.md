@@ -38,3 +38,5 @@
 | REPO4 | MPL-2.0 | bibliographic metadata |
 | REPO6 | GPL-2.0 | bibliographic metadata |
 | ANSYSCOMMONMCP | Apache-2.0 | external dependency; upstream copyright retained |
+
+Original upstream notices are retained in LICENSES/third-party. Bibliography, pinned revisions and use records are indexed in references/sources.json. Commercial software and fonts are installed and used under their respective licenses.

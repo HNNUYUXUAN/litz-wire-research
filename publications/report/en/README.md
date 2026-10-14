@@ -24,26 +24,26 @@ Miao Yuxuan · Huainan Normal University
 
 High-frequency loss in Litz wire depends on strand skin effect, local proximity fields, complex current sharing, transposition paths, and terminal constraints. This study establishes a reproducible hierarchy of numerical verification in which the physical content retained by each model is stated explicitly. Individually insulated strands connected in parallel are described by a common terminal voltage and a total complex-current constraint, yielding a current-sharing criterion within a specified linear field–circuit model. Finite-length longitudinal PEEC is then examined through independent changes in axial length, mutual and self integration, and cross-sectional discretization.
 
-For copper at 200 kHz, 20 A RMS, and 20 °C, the round-wire analytical solution and independent two-dimensional calibration establish an internal-field reference. The 640-strand common-terminal model has controlled mesh, return, and exterior-boundary checks. The final 5024-degree-of-freedom longitudinal model gives an axial resistance of 20.012738 mΩ/m, differing by 0.044582% from its equal-area Bessel reference. The final two loss changes in the fixed-cuboid imposed-field RT0 example are 0.655090% and 0.362916%; this example tests an imposed-field operator and does not measure Litz transport resistance. Unsuccessful three-dimensional A–φ validation, new Ansys interfaces, and unresolved realistic-geometry ranking remain explicit boundaries. These results support numerical conclusions within stated models, without establishing the superiority of actual multilevel or cross-layer Litz structures.
+For copper at 200 kHz, 20 A RMS, and 20 °C, the round-wire analytical solution and independent two-dimensional calibration establish an internal-field reference. The 640-strand common-terminal model has controlled mesh, return, and exterior-boundary checks. The final 5024-degree-of-freedom longitudinal model gives an axial resistance of 20.012738 mΩ/m, differing by 0.044582% from its equal-area Bessel reference. The final two loss changes in the fixed-cuboid imposed-field RT0 example are 0.655090% and 0.362916%; this example tests an imposed-field operator and does not measure Litz transport resistance. Unsuccessful three-dimensional A–φ validation, native three-dimensional Ansys interfaces, and unresolved realistic-geometry ranking remain explicit boundaries. These results support numerical conclusions within stated models, without establishing the superiority of actual multilevel or cross-layer Litz structures.
 
 Keywords: Litz wire; hierarchical verification; skin and proximity effects; common-terminal circuits; finite-length PEEC; reproducible numerical research
 
 <a id="chapter-01"></a>
-## 01 Introduction and Research Questions
+## 1 Introduction and Research Questions
 
 <a id="01.introduction.heading"></a>
-### Introduction
+### 1.1 High-frequency loss and current sharing
 
-Dividing a copper cross-section into many fine strands does not by itself guarantee a reduction in high-frequency loss. Strand diameter sets the local skin-effect scale; neighboring conductors and the return determine the surrounding magnetic field; longitudinal positions and common terminals determine complex strand currents. Comparing geometry alone, nominal copper area, or an assumed average current merges distinct mechanisms into a single indicator. A defensible structural comparison first identifies the fields and constraints retained by a model and then checks the numerical uncertainty relevant to those quantities.
+Litz wire controls high-frequency current through strand insulation and longitudinal transposition. Strand diameter sets the local skin-effect scale, neighboring conductors and the return shape proximity fields, and common terminals couple the complex strand currents. A structural comparison therefore requires both an electromagnetic model and consistent definitions of copper area, axial length, and terminal conditions.
 
-Existing approaches address different scales. DTM combines discrete transpositions with two-dimensional FEM [1], linking strand-position permutations to cross-sectional fields; iDTM additionally considers nonideal hierarchical and subbundle transpositions [2]. The improved segmented equivalent circuit [3] constructs a reduced circuit under its stated winding and layer assumptions. FEM–PEEC coupling [4] and quasi-two-dimensional multiconductor modeling [5] use different macroscopic fields, axial electric fields, and current constraints. Continuum models [6] and complex-permeability homogenization [7] reduce the cost of large winding simulations, but their average fields do not directly replace strand-resolved complex currents or realistic end regions.
+Discrete-transposition modeling with two-dimensional FEM (DTM) [1] connects strand-position permutations to cross-sectional fields. Its extension to nonideal compound transposition (iDTM) [2] treats hierarchical and subbundle effects. Improved segmented equivalent circuits [3], FEM–PEEC coupling [4], and quasi-two-dimensional multiconductor formulations [5] use different reductions of field and circuit behavior. Continuum models [6] and complex-permeability homogenization [7] reduce the cost of winding calculations. Their results must be interpreted through the fields, current constraints, and boundary conditions retained by each method.
 
-The emphasis here is a set of comparable quantities and verification relationships needed for structural research. The first contribution separates the analytical, two-dimensional, longitudinal, and full-component voxel models according to what each can verify. The second derives a current-sharing condition from the common-terminal augmented system and states its model scope. The third performs single-factor sensitivity checks for finite-length longitudinal PEEC while interpreting CPU/GPU agreement separately from physical validation. Traditional multilevel Litz remains a strong baseline. Cross-layer geometry is a candidate for subsequent verification, without a presumed performance advantage.
+This work connects three levels through reviewable numerical verification: round-wire analysis, multistrand two-dimensional common-terminal coupling, and finite-length longitudinal PEEC. The analytical solution supplies an internal-impedance reference; the two-dimensional model solves both intrastand fields and complex strand currents; the longitudinal model examines the influence of the finite-length kernel and integration settings on resistance. Traditional multilevel Litz provides the baseline for subsequent structural comparisons, while cross-layer paths are candidate geometries to be evaluated. The numerical conclusions apply to the degrees of freedom and boundary conditions retained at each level.
 
 <a id="01.scope.heading"></a>
-### Scope
+### 1.2 Research questions and contributions
 
-Three questions organize the verification: whether independent discretizations reproduce the local skin-effect reference; which algebraic conditions determine complex current sharing under common terminals; and how strongly the resistance obtained from a finite longitudinal kernel depends on length and integration settings. The contributions are consistent observables, inspectable verification relationships, and quantitative evidence within each model, supporting the selection of the next model for realistic transposition research.
+This paper addresses three related questions: whether independent discretizations reproduce round-wire skin current and loss; how uniform complex strand currents can be characterized under common terminal voltage; and how finite-length longitudinal PEEC resistance responds to length, integration, and cross-sectional discretization. We organize verification by observable, derive a current-sharing condition for a specified linear field–circuit model, and report quantitative results for a 640-strand two-dimensional case and longitudinal cases with 1264 and 5024 degrees of freedom. Supplementary three-dimensional imposed-field, potential-diagnostic, and interface cases identify the implementation's applicability and the conditions required for further research.
 
 <a id="fig-model_hierarchy"></a>
 ![Fig. 1](../../assets/en/model_hierarchy.png)
@@ -52,31 +52,33 @@ Three questions organize the verification: whether independent discretizations r
 
 Transport models are grouped by physical object and observable: round-wire internal fields support analytical and two-dimensional calibration, multistrand field–circuit models resolve common-terminal phasor currents, and longitudinal PEEC examines finite-length effects. Links identify internal-field calibration or equal-area resistance references. RT0 imposed-field loss and three-dimensional A–φ diagnostics occupy separate research scopes.
 
+Agent workflows connect source, Wolfram/Ansys MCP, bounded runners, and independent acceptance throughout the research. Six recorded case classes cover calibration, model construction and solution, cross-solver comparison, frequency extension, interface repair, and numerical failure diagnosis. This report connects the physical models to those execution records, showing how investigators can locate inputs, repeat calculations, and continue model development. [8, 9, 10]
+
 <a id="chapter-02"></a>
-## 02 Physical Conventions and Model Hierarchy
+## 2 Physical Conventions and Model Hierarchy
 
 <a id="02.conventions.heading"></a>
-### Operating Conditions, Quantities, and Fair Comparisons
+### 2.1 Operating conditions and comparison quantities
 
-Calculations use SI units, exp(jωt), and RMS phasors. Copper at 20 °C has conductivity 5.8×10⁷ S/m and relative permeability one. The main transport condition is 200 kHz and 20 A RMS with no independent imposed field. Strands are insulated along their paths and connected in parallel at the ends. Every per-metre quantity refers to axial length; actual strand arc lengths are reported separately. A finite-segment terminal voltage V and the axial electric field used by a two-dimensional model have different units, so their length normalization must remain explicit.
+Calculations use SI units, the exp(jωt) time convention, and RMS phasors. Copper at 20 °C has conductivity σ=5.8×10⁷ S/m and relative permeability μr=1. The principal transport condition is 200 kHz and 20 A RMS, with zero independent imposed field. Strands are insulated along their lengths and connected in parallel at their ends. Resistance and loss are normalized by axial length; actual strand arc lengths enter copper volume and DC resistance separately. Finite-segment terminal voltage is measured in V, while the two-dimensional axial terminal field is measured in V/m, with the chosen axial length connecting the two.
 
-The original Q1 conductor with diameter 2 mm is retained as an analytical calibration. Its copper area is 3.141593 mm² and its DC current density is 6.366198 A/mm², exceeding the 4 A/mm² constraint; it therefore does not satisfy the final design condition. Q2 requires at least 5 mm² nominal copper area. The ideal circular area of 640 strands of diameter 0.100 mm is 5.026548 mm², whereas the original two-dimensional 64-sided approximation has an area of approximately 5.018478 mm². Equal-copper references should use the actual chosen area to avoid interpreting an area-discretization difference as a purely electromagnetic improvement.
+The original Q1 round wire, 2 mm in diameter, provides an analytical calibration. Its copper area is 3.141593 mm² and its mean DC current density at 20 A is 6.366198 A/mm², exceeding the specified limit of 4 A/mm². Q2 therefore requires at least 5 mm² copper cross-section. For 640 strands of copper diameter 0.100 mm, the ideal circular area is 5.026548 mm². Each strand in the two-dimensional model is represented by a 64-sided polygon, giving an actual copper area of 5.01848 mm². Equal-copper comparisons use this discrete area so that the electromagnetic reference incorporates the same geometric approximation.
 
-For unequal strand lengths, DC resistance follows from the sum of parallel conductances [(1)](README.md#E01). Copper volume, arc-length growth, absolute AC resistance, its ratio to DC resistance, loss, and complex strand currents are all reported rather than reducing the comparison to one ratio. RMS Joule loss uses [(2)](README.md#E02) without the one-half factor associated with peak phasors. With an independent imposed field, absorbed power includes work done by that excitation. RT0 imposed-field loss cannot be divided unconditionally by 20² and named intrinsic transport resistance. Equal nominal copper area also does not imply equal copper volume per axial metre.
+For unequal strand arc lengths, parallel conductances determine DC resistance and the sum of strand area–length products determines copper volume, as in [(1)](README.md#E01). We examine absolute AC resistance, Rac/Rdc, copper loss, and complex current sharing. Equation [(2)](README.md#E02) gives RMS Joule loss and defines resistance from copper dissipation under pure transport excitation. The supplementary RT0 case uses an independent imposed field and zero net transport, so its absorbed power is reported separately as imposed-field loss.
 
 <a id="02.maxwell.heading"></a>
-### Maxwell
+### 2.2 Maxwell
 
 In the magnetoquasistatic approximation, conduction dominates displacement current and charge continuity gives ∇·J=0. With exp(jωt), Faraday’s law is ∇×E=−jωB and Ohm’s law is J=σE. Materials, excitation, return, and boundary conditions define a boundary-value problem. Mapping its comparable observables to the next discretization establishes the verification sequence used here.
 
 <a id="02.hierarchy.heading"></a>
-### Model Hierarchy and Verification Methods
+### 2.3 Model hierarchy and verification relationships
 
-The hierarchy is organized by unknowns and comparable observables. The analytical round wire supplies internal impedance and radial current for a homogeneous long straight conductor; two-dimensional diffusion verifies the same internal-field problem. The multistrand two-dimensional common-terminal model additionally retains intrastand fields, complex current sharing, and an explicit return, while omitting longitudinal transposition and finite end regions. Longitudinal PEEC retains a finite-length partial-inductance kernel and common-terminal constraints but lacks complete transverse current loops. The three-component RT0 imposed-field example tests a three-dimensional operator, continuity, and field absorption; it remains distinct from transport in curved Litz geometry.
+The models are related as shown in Fig. 1. Analytical round-wire and two-dimensional diffusion models share the long, straight internal-field problem, allowing radial current and internal resistance to be compared. The two-dimensional common-terminal model additionally retains intrastand distributions, interstrand currents, and a controlled return, supporting field–circuit analysis of a specified cross-section. Longitudinal PEEC uses a finite-length partial-inductance kernel to examine the effect of length on axial currents. The three-component RT0 model uses imposed-field absorption in a cuboid to test three-dimensional continuity and discrete operators. Transposition paths and actual end regions require corresponding longitudinal or transverse degrees of freedom in subsequent structural research.
 
-Verification combines solver residuals, constraints, independent power evaluation, and parameter sensitivities. The retained targets are 10⁻⁸ for true linear residuals and common-terminal or total-current constraints, 0.1% for independent power balance, and 1% for relevant mesh, segmentation, boundary, and length changes. Analytical references and analytical current/power integrals have their own stricter targets. RT0 keeps a true GMRES residual target of 10⁻¹¹ and an integration sensitivity target of 0.1%; CPU/GPU matrix and complex-current comparisons use 10⁻¹⁰. These are definitions of the checks performed in this study, not a claim that every physical problem has already attained the same accuracy.
+Verification comprises equation solution, physical constraints, power consistency, and parameter sensitivity. Targets are 10⁻⁸ for true linear residuals, common-terminal conditions, and total complex current; 0.1% for independent power balance; and 1% for changes in mesh, segmentation, boundary, and length. Analytical reference values and current/power integrals use thresholds of 10⁻⁶ and 10⁻⁸, respectively. The RT0 GMRES true-residual target is 10⁻¹¹, its quadrature-sensitivity target is 0.1%, and same-model CPU/GPU matrix and complex-current comparisons use 10⁻¹⁰.
 
-Evidence can be cross-compared only under shared assumptions; a conclusion does not propagate automatically along a diagram arrow. A small linear residual indicates that the assembled system was solved accurately but does not exclude omitted physics or an incorrect boundary. Power balance constrains consistency between the discretization and postprocessing, yet a conservative but inappropriate model may also balance power. Agreement between two levels limits variation under a specified perturbation; it is not an unconditional error bound or a statistical confidence interval. Execution status, numerical-check status, and physical applicability are therefore archived separately.
+These checks answer different questions. Residuals measure the accuracy of the discrete-system solution, power balance tests field–circuit and postprocessing consistency, and parameter sensitivity describes changes over specified perturbations. Model omissions, boundary approximations, and experimental deviations require their own evidence. We therefore distinguish numerical checks from physical applicability and interpret finite sensitivity studies as local validation rather than a common upper bound on total model error.
 
 <a id="E01"></a>
 $$
@@ -89,19 +91,19 @@ P_{\mathrm{Cu}}=\int_{\Omega_{\mathrm{Cu}}}|\mathbf J|^2/\sigma\,\mathrm d\Omega
 $$
 
 <a id="chapter-03"></a>
-## 03 Round-Wire Analysis and Two-Dimensional Calibration
+## 3 Round-Wire Analysis and Two-Dimensional Calibration
 
 <a id="03.round_derivation.heading"></a>
-### Round Derivation
+### 3.1 Round-wire radial equation and normalization
 
-The axial current in a round wire satisfies (1/r)d(r dJz/dr)/dr=κ²Jz. Regularity at the axis selects I₀(κr). The identity ∫₀ᵃ rI₀(κr)dr=aI₁(κa)/κ together with the total-current constraint determines the normalization. The surface axial electric field divided by total current gives the internal impedance; its real part is checked by an independent Joule integral. Thus the derivation connects analytical shape, normalization, and power.
+Axial current inside a long straight round wire satisfies (1/r)d(r dJz/dr)/dr=κ²Jz. Finiteness at the axis selects I₀(κr), and the total complex-current constraint together with ∫₀ᵃrI₀(κr)dr=aI₁(κa)/κ fixes its coefficient. Surface axial electric field divided by total current gives internal impedance per unit length. An independent Joule integral of current density checks the relationship between its real part and loss. The derivation uses the same RMS phasors as the main text.
 
 <a id="03.analytic.heading"></a>
-### Round-Wire Analysis and Independent Two-Dimensional Calibration
+### 3.2 Round-wire internal-field calibration
 
-The long straight round-wire internal solution uses modified Bessel functions [(3)](README.md#E03). At 200 kHz, the skin depth is 0.147771655 mm, producing pronounced surface concentration relative to the 1 mm radius. Frozen analytical values are 5.488101486 mΩ/m DC resistance, 20.016203628 mΩ/m AC resistance, a ratio of 3.647199980, and loss of 8.006481451 W/m. This internal impedance excludes the external inductance determined by the return path. Radial phase retains the original complex phasor and is displayed with a continuous nearest-neighbor 360° lift; unwrapping changes the display, not the underlying data.
+The radial current and internal impedance of a long straight round wire follow [(3)](README.md#E03). At 200 kHz, the skin depth δ=0.147772 mm is approximately 0.148 times the radius, and current concentrates near the surface. DC resistance is 5.4881 mΩ/m, AC resistance is 20.0162 mΩ/m, and Rac/Rdc=3.64720, giving a loss of 8.00648 W/m. The radial profiles and cross-sectional magnitude appear in Fig. 2 and Fig. 3. Radial phase is continuously unwrapped, showing the amplitude attenuation and phase change associated with skin diffusion. The analytical impedance concerns the conductor's internal field.
 
-Independent two-dimensional disk diffusion uses 353, 1389, and 5573 nodes and is normalized by total complex current. The finest relative AC-resistance error against the analytical reference is 1.79233×10⁻⁶, and the power-integral discrepancy is 3.06800×10⁻⁶. These results support discretization and normalization for the isolated internal-field problem. Its boundary conditions differ from a finite three-dimensional end region, so this error cannot be transferred directly to that problem. The analytical cross-sectional image is formed by linear interpolation of radial analytical magnitudes followed by an axisymmetric mapping.
+Independent two-dimensional disk diffusion uses three meshes with 353, 1389, and 5573 nodes, normalized by total complex current. With refinement, relative Rac error against analysis decreases from 7.05×10⁻³ to 2.30×10⁻⁴ and finally 1.79×10⁻⁶. The finest-grid relative power-integral difference is 3.07×10⁻⁶, as shown in Fig. 4. These results verify discretization, normalization, and power postprocessing for the isolated round-wire internal-field problem. The cross-sectional illustration uses linear interpolation of analytical radial samples and an axisymmetric mapping; subsequent multistrand models use their actual conductor field solutions.
 
 <a id="E03"></a>
 $$
@@ -130,35 +132,35 @@ The copper conductor has diameter 2 mm and carries 20 A RMS at 200 kHz. The colo
 The copper conductor has diameter 2 mm and carries 20 A RMS at 200 kHz. Three grids and independent power integrals concern the same internal-field problem. Resistance is referenced to the internal Bessel solution of the same round wire. Power is evaluated by independent integration over the material region.
 
 <a id="chapter-04"></a>
-## 04 Multistrand Common-Terminal Circuits and Sharing Criterion
+## 4 Multistrand Common-Terminal Circuits and Sharing Criterion
 
 <a id="04.common.heading"></a>
-### Common-Terminal Field–Circuit Model and Complex Current Sharing
+### 4.1 Common-terminal coupling and uniform complex currents
 
-Parallel terminals do not require strand currents to be prescribed as equal. Let Z denote the coupled impedance matrix of a specified linear model, e the independently induced term, and i the complex strand-current vector. Common terminal voltage and total current form the augmented system [(4)](README.md#E04). The implementation solves this system rather than relying on an explicit matrix inverse. Both magnitude and phase are determined by the coupled field–circuit problem. Comparing only current magnitudes overlooks the relationship between individual phasors and their complex sum.
+The common endpoints, strand branches, and return are related in Fig. 5. Let Z be the coupled impedance matrix of a specified linear model, e the independently induced voltage, i the complex strand currents, and V the common terminal voltage. The port equation Zi+e=V1 and total-current constraint 1ᵀi=It form [(4)](README.md#E04). Solving the augmented system yields both magnitude and phase; It/N serves as a reference for the resulting current distribution.
 
-Assuming a unique solution of the augmented system, substitution of i=(It/N)1 into the terminal equation shows that equal current sharing holds exactly when [(It/N)Z1+e] lies in the span of 1. Projection by Q gives [(5)](README.md#E05). Without an independent imposed field, the condition reduces to equality of impedance row sums. With an imposed field, the induced term can preserve or break it. This algebraic criterion applies to the specified Z, e, and terminal model; it is not a theorem of equal sharing for arbitrary continuously transposed three-dimensional geometry.
+When the augmented system has a unique solution, substitution of i=(It/N)1 shows that uniform currents exist if and only if every component of (It/N)Z1+e is equal. Projecting this vector onto the subspace orthogonal to 1 gives [(5)](README.md#E05). Without an independent imposed field, the condition reduces to equal row sums of Z; with an imposed field, the induced term also determines current sharing. This necessary and sufficient condition applies to the selected impedance model and terminal conditions, expressing the effect of transposition through changes in coupling and induced voltages.
 
-The two-dimensional common-terminal FEM solves the shared axial electric field together with Az degrees of freedom. The preserved u and terminal field are measured in V/m, with Jz=σ(v−u); the return uses its own terminal field, and air is not assigned conductor current. Figures reconstruct Jz from original nodes and material triangles and retain the original coordinate scaling in the integrals. Independent linear-triangle mass integration is compared with complex strand currents, bundle and return losses, and copper area, making the color map auditable. The preserved u itself is not current density.
+The two-dimensional common-terminal FEM solves the shared axial terminal field jointly with Az degrees of freedom. In conductors, Jz=σ(v−u), where both v and the saved variable u are expressed in V/m; the return conductor uses its corresponding terminal field. Current and loss are integrated on material-tagged linear triangles after coordinates are converted from mm to m. Strand currents, bundle loss, return loss, and copper area are independently compared with the original field–circuit results, treating air and conductor regions separately.
 
 <a id="04.sharing_derivation.heading"></a>
-### Sharing Derivation
+### 4.2 Derivation of the uniform complex-current condition
 
-Sufficiency of the sharing criterion follows from uniqueness of the port solution. If the projection condition holds, every component of (It/N)Z1+e is equal, so a common voltage exists for which the equal-current vector satisfies both the port equations and the total-current constraint. Necessity follows by substitution of an existing equal-current solution. Numerical sharing is assessed using normalized complex-current deviation, with magnitude and phase reported to retain the information in phasor addition.
+If a uniform-current solution exists, substituting i=(It/N)1 into the port equation makes all components of (It/N)Z1+e equal, establishing necessity of the projection condition. Conversely, when the projection condition holds, this vector equals a scalar V times 1. The uniform-current vector then satisfies both the port equation and the total-current constraint; uniqueness of the augmented solution makes it the actual solution, establishing sufficiency. Numerical results use sqrt(mean(|ik−It/N|²))/|It/N| for normalized RMS complex-current deviation and show individual magnitudes and phases.
 
 <a id="04.coax_results.heading"></a>
-### The 640-Strand Two-Dimensional Result and Its Boundaries
+### 4.3 Common-terminal currents and loss in a 640-strand straight bundle
 
-The frozen three-grid, return, and exterior checks for the 640-strand straight bundle contain 23 passing checks. The final AC-resistance mesh change is 0.011902%, the return-distance change is 0.000495%, and the exterior-boundary change is 0.000270%, all below the route-specific 1% target. These results show stability of the specified two-dimensional common-terminal model under the perturbations examined; they do not establish convergence of finite end regions in an actual manufactured bundle. Bundle resistance and return loss are reported separately so that heating in the return is not mistaken for an intrinsic conductor improvement.
+Three meshes and variations of return distance and exterior domain complete 23 checks. The final mesh refinement changes Rac by 0.011902%; return-distance and exterior-domain changes are 0.000495% and 0.000270%, respectively, as shown in Fig. 8. These changes remain below the 1% comparison target over the tested perturbations, supporting numerical stability of the specified two-dimensional common-terminal result. Its applicability is a straight two-dimensional bundle with a controlled return; finite end regions and longitudinal coupling in actual wound structures require further verification.
 
-Individual magnitude and phase reveal current sharing under the common voltage. A line at It/N is only a reference, not a prescribed constraint. Consistency between current integration and the common-terminal condition is a prerequisite for interpreting sharing. In a two-dimensional straight bundle, reducing strand diameter does not imply longitudinal exchange of strand positions. The principal role of this model is to verify multistrand field–circuit coupling with controlled boundaries and provide cross-sectional evidence for later transposition modeling. Final structural ranking still requires a model or experiment that retains longitudinal coupling, actual terminals, and relevant numerical uncertainty.
+Fig. 6 shows current magnitude and phase by physical strand identity, with It/N as the equal-current reference. Magnitude and phase jointly determine each strand's contribution to total transport current, so current sharing is evaluated using complex currents. Fig. 7 gives the corresponding cross-sectional fields, connecting strand statistics with spatial position. In this axially invariant straight bundle, the skin-effect scale within each fine strand coexists with collective current redistribution caused by magnetic coupling across the bundle. Longitudinal transposition requires a separate representation of position changes.
 
 <a id="04.interpretation.heading"></a>
-### Interpretation
+### 4.4 Interpretation
 
 The 640-strand section distinguishes the skin-effect scale of an individual fine strand from collective current redistribution in the bundle. Inner and outer strands experience different magnetic coupling; under a common terminal field, this difference appears in current magnitude and phase. DC area supplies a reference for copper utilization, the bundle Joule integral gives transport loss, and the separate return integral describes energy allocation across the complete field–circuit system.
 
-The 640-strand bundle has Rac=15.793003197 mΩ per axial metre, bundle loss 6.317201279 W per axial metre, return loss 2.196205516 W per axial metre, and actual copper area 5.018478 mm². The shared axial terminal field is 0.411856245+j(4.064969103) V/m. The normalized RMS complex-current deviation is 1.854214; the phasor sum recovers the total 20 A RMS transport current.
+The actual copper cross-section of the two-dimensional 640-strand model is 5.01848 mm². Bundle AC resistance is 15.793 mΩ per axial metre, bundle loss is 6.3172 W per axial metre, and return loss is 2.19621 W per axial metre. Separate integration identifies dissipation in the bundle and return. The common axial terminal field is 0.411856+j(4.06497) V/m. Complex strand currents sum to 20 A RMS, while their normalized RMS complex-current deviation is 1.85421, demonstrating substantial interstrand differences in this common-terminal straight bundle.
 
 <a id="E04"></a>
 $$
@@ -199,22 +201,22 @@ Strands are insulated along their paths and connected in parallel at both ends; 
 Mesh, return, and exterior tests each vary one factor. Variation is normalized from resistance differences between the specified adjacent cases. Mesh, return distance, and exterior size use separate sequences.
 
 <a id="chapter-05"></a>
-## 05 Transposition Models, Real Geometry, and Equal-Copper Comparisons
+## 5 Transposition Models, Real Geometry, and Equal-Copper Comparisons
 
 <a id="05.geometry.heading"></a>
-### Geometry, Actual Arc Length, and Discrete Transposition
+### 5.1 Geometry sampling and discrete transposition
 
-Archived straight, single-level, traditional multilevel, and cross-layer centerlines support checks of physical strand identity, period, gap, curvature, arc length, and copper volume. Axial sampling at 400, 800, and 1600 segments and 60 geometry checks support numerical consistency of these quantities; the historical wrapper exit and the unrecorded native kernel exit retain their original status. The 24-strand specimen with 0.100 mm copper diameter has only about 0.1885 mm² nominal copper area. It illustrates construction and is not a final bundle satisfying the 5 mm² requirement. Three-dimensional material, lighting, and rotatable views are reading aids.
+Fig. 9 shows straight, single-level, traditional multilevel and cross-layer centerlines. The geometry records preserve strand identity, periodicity, clearance, curvature, actual arc length and copper volume. Axial sampling at 400, 800 and 1600 points and 60 checks support sampling consistency for these quantities. The illustrated 24-strand structure with a copper diameter of 0.100 mm has a nominal copper area of approximately 0.1885 mm² and demonstrates geometry construction. A structure meeting the minimum 5 mm² copper area requires separate construction and verification. Three-dimensional views reveal spatial paths; the corresponding field-circuit model evaluates electromagnetic performance.
 
-The current DTM/iDTM demonstration uses additive discrete blocks [(6)](README.md#E06). Reordering the same weighted impedance blocks does not change their sum. Equal sharing in that implementation therefore does not prove the equivalence of distinct realistic transposition paths or the superiority of a cross-layer structure over traditional multilevel Litz. Comparison with [1, 2] should examine longitudinal transposition, noncommuting hierarchical operations, local-field assumptions, and terminals rather than borrowing the method name alone. Geometric fairness, model adequacy, and performance improvement are three questions requiring separate evidence.
+The current DTM/iDTM demonstration uses the additive discrete blocks in [(6)](README.md#E06). For the same weighted impedance blocks, their sum is invariant to ordering; this implementation therefore checks identity mappings and circuit accumulation of the specified blocks. Comparing actual transposition paths additionally requires longitudinal position changes, noncommuting relationships between levels, local fields, and terminal conditions. These assumptions determine comparability with the literature [1, 2].
 
 <a id="05.dtm_derivation.heading"></a>
-### Dtm Derivation
+### 5.2 Mapping strand identity to cross-sectional position
 
-Let Ps map fixed physical strand identities to spatial positions in section s. The local current is Ps i and the voltage in identity coordinates is PsᵀZsPs i. Summation over series segments Δzs yields the total impedance. Position permutation and current identity therefore have separate records; K, 2K, and 4K segmentation checks concern the same paths and physical strands. Period, gap, and arc-length checks constrain geometric feasibility and copper usage separately.
+Let Ps map fixed physical strand identities to spatial positions in cross-section s. Local currents are Ps i, and local voltages transformed back to identity coordinates are PsᵀZsPs i. Summing in series with segment lengths Δzs gives [(6)](README.md#E06). Position and identity are retained separately; K, 2K, and 4K segmentation comparisons use the same trajectory and strands. Periodicity, clearance, and curvature check the paths, while actual arc lengths and copper volume quantify material use.
 
 <a id="05.report_geometry.heading"></a>
-### Geometry Sampling and Equal-Copper Checks
+### 5.3 Geometry Sampling and Equal-Copper Checks
 
 Trajectory recovery preserves physical strand IDs instead of renaming strands by cross-sectional order. Period checks distinguish position closure from identity permutation; gap and curvature checks use physical units, and arc length is integrated from sampled paths and compared with doubled sampling. Copper volume and DC resistance use actual strand lengths; the axial length is not substituted for every helical branch. Local cropping and display subsampling are recorded under the publication run, while complete original centerlines remain available.
 
@@ -233,30 +235,30 @@ $$
 Panels show straight, single-level, local multilevel, and cross-layer structures. The 24-strand structures use a copper diameter of 0.100 mm, and the multilevel panel shows a 3 mm detail. Blue markers preserve selected physical strand identities.
 
 <a id="chapter-06"></a>
-## 06 Finite-Length Longitudinal PEEC
+## 6 Finite-Length Longitudinal PEEC
 
 <a id="06.peec_method.heading"></a>
-### Finite-Length Longitudinal PEEC: Theory and Discretization
+### 6.1 Finite-length longitudinal PEEC
 
-The longitudinal model carries axial, uniform-in-length complex current in cross-sectional volume filaments. The ohmic term is each filament’s finite-segment resistance, and partial inductance is obtained by integrating the finite-volume 1/|r−r′| kernel [(7)](README.md#E08). A common port and total-current constraint are again solved through [(4)](README.md#E04). Here, 1264 and 5024 count volume-filament degrees of freedom, not insulated Litz strands. Radial concentration can appear through cross-sectional current redistribution, but the basis contains neither complete transverse eddy-current loops nor realistic end redistribution.
+Longitudinal PEEC divides the cross-section into volume filaments, each carrying an axial complex current density uniform along its length. Ohmic resistance and finite-volume partial inductance follow [(7)](README.md#E08), forming Z=R+jωL before the common-port and total-current constraints in [(4)](README.md#E04) are applied. The counts 1264 and 5024 denote volume-filament degrees of freedom in a continuous conductor. Differences between their currents represent internal current concentration within the longitudinal basis.
 
-Mutual-integration order and self-integration accuracy are archived as separate options. The fixed 1264-degree-of-freedom cross-section is first examined at lengths 0.16, 0.32, and 0.64 m. Integration checks then hold length fixed and change one factor at a time across mutual orders q=4, 6, and 8 and self settings 10/8 to 12/10. The representative 5024 model rechecks the final two lengths and integration settings. Because m40 and m80 have slightly different actual copper areas, each level is interpreted against its own equal-area Bessel reference; an area change is not concealed as pure discretization error.
+The longitudinal case has a nominal round-wire diameter of 2 mm. The m40 and m80 square filaments are 0.050 and 0.025 mm wide, giving actual cross-sectional areas of 3.16 and 3.14 mm². Sensitivity studies vary length, mutual integration, or self integration independently. The 1264-degree-of-freedom model uses one cross-section at lengths 0.16, 0.32, and 0.64 m. At fixed length, mutual quadrature order q is increased through 4, 6, and 8, while self-integration settings increase from 10/8 to 12/10. These pairs are AccuracyGoal and PrecisionGoal, the target absolute and relative precision digits. The 5024-degree-of-freedom model checks lengths 0.32 and 0.64 m and the same integration changes. Because the two cross-sectional discretizations have slightly different copper areas, each resistance is compared with its own equal-area Bessel reference; changes between discretizations include both discretization and area approximation.
 
-The external magnetic contribution to partial inductance differs from the internal Bessel impedance of a long straight wire. Analytical comparison therefore focuses on AC resistance while retaining length and actual area. Length variation limits sensitivity of the present finite-kernel calculation to the chosen length but does not introduce transverse basis functions. In comparison with FEM–PEEC literature [4], the longitudinal volume basis, excitation, return, and feedback treatment must each be identified. An assumption of one coupling implementation should not be generalized to every PEEC method.
+The partial-inductance kernel includes magnetic coupling around finite conductors, whereas the Bessel solution gives the internal impedance of a long straight round wire. We compare their dissipative component Rac while retaining length and area conditions. The length study measures sensitivity of the current kernel and longitudinal basis. Transverse loops, curved strands, and actual end-current redistribution require extended degrees of freedom. The connection to FEM–PEEC coupling [4] lies in a joint field–circuit description; excitation, return, and field-feedback choices must be compared for each implementation.
 
 <a id="06.peec_derivation.heading"></a>
-### Peec Derivation
+### 6.2 Longitudinal filament basis and kernel integration
 
-Within each volume filament, current is represented by the constant axial density iα/Aα. Projection of the volume-integral vector potential onto the testing filament and integration along length produces the symmetric partial-inductance matrix. The self kernel is integrable but singular at coincidence and uses a dedicated accuracy setting; mutual terms use an independent order. Combining finite-segment ohmic resistance with jωL forms Z, after which the common-terminal augmented system determines filament currents and terminal voltage.
+Within volume filament α, current density is constant at iα/Aα and directed axially. Volume integration of vector potential gives the induced electric field in a testing filament; integration along its length yields a symmetric partial-inductance matrix. Coincident points produce an integrable self-term singularity treated with dedicated precision settings, while mutual terms use a separate quadrature order. Ohmic resistance and jωL form the coupled matrix, solved jointly with common terminal voltage and total current. The basis determines the current directions represented by this model.
 
 <a id="06.peec_results.heading"></a>
-### Longitudinal PEEC Sensitivity and Results
+### 6.3 Length and integration sensitivity of longitudinal PEEC
 
-For 1264 degrees of freedom, the 0.16, 0.32, and 0.64 m cases give axial AC resistances of 19.899215, 19.958642, and 19.988477 mΩ/m. Both length increments change resistance by less than 1%, and the 0.32-to-0.64 m change at 5024 degrees of freedom also meets the target. Mutual orders q4/6/8, self settings 10/8 to 12/10, and the coarse-to-fine comparison of the actual cross-sections satisfy the bounded campaign criteria. One factor changes at a time. The unexecuted 1.28 m level remains unexecuted and is not assigned an extrapolated result or a zero error.
+For the 1264-degree-of-freedom model, resistances at 0.16, 0.32, and 0.64 m are 19.8992, 19.9586, and 19.9885 mΩ per axial metre. Consecutive length changes are 0.298640% and 0.149482%. The 5024-degree-of-freedom model changes by 0.148730% from 0.32 to 0.64 m, as shown in Fig. 11. Resistance changes decrease with increasing length, and all tested increments are below 1%. The sequence characterizes sensitivity over the 0.16–0.64 m interval.
 
-The final 5024-degree-of-freedom case at axial length 0.64 m, mutual order q4, and self setting 12/10 gives 20.012738128 mΩ/m AC resistance, a ratio to DC resistance of 3.644719868, and loss of 8.005095251 W/m. Its difference from the equal-area Bessel reference is 0.044582%. The cross-sectional color map is reconstructed from preserved filament currents and square cells. A filament-current deviation describes redistribution inside the discretized conductor; it is not a sharing metric for physical insulated Litz strands.
+At 5024 degrees of freedom, Lz=0.64 m, mutual order q=4, and self-integration settings 12/10, Rac=20.0127 mΩ per axial metre, Rac/Rdc=3.64472, and loss is 8.00510 W per axial metre. Resistance differs by 0.044582% from the equal-area Bessel reference for this discretization. Fig. 10 reconstructs the cross-sectional current distribution from saved filament currents and square cells, showing surface concentration within the conductor. These degrees of freedom discretize a continuous conductor; their current variation has a different meaning from current sharing among insulated strands.
 
-Length sensitivity and the analytical reference answer different questions. The former examines variation of the finite-length kernel over the chosen interval; the latter checks resistance against the comparable scale of long straight-wire internal behavior. Agreement does not eliminate a boundary or basis limitation. In particular, a small integration change supports the present integration implementation but supplies no additional evidence for real end regions, transverse currents in curved strands, or redistribution at terminals. The result is therefore described as bounded acceptance within the longitudinal model.
+Results for mutual order q=4→6→8 and self settings 10/8→12/10 appear in Fig. 12. Across both model sizes, the largest relative resistance change from mutual integration is 1.21×10⁻⁵ and the largest relative complex-current change is 1.60×10⁻⁵. Corresponding maxima for self integration are 6.75×10⁻¹¹ and 7.10×10⁻¹¹. Coarse-to-fine cross-sectional resistance changes at 0.32 and 0.64 m are 0.122127% and 0.121376%, respectively, and include changes in actual area. Thus integration settings have a smaller effect than length and cross-sectional discretization in these tests. Analytical references and sensitivities jointly support resistance calculation within the longitudinal model; actual end regions and transverse-current errors remain model-level research questions.
 
 <a id="E08"></a>
 $$
@@ -285,13 +287,13 @@ Resistance per axial length is compared at archived lengths for the same cross-s
 Mutual order and self accuracy are compared in separate single-factor tests. Mutual settings are q4, q6, and q8; self settings are 10/8 and 12/10. Comparisons retain the same cross-section and axial length.
 
 <a id="chapter-07"></a>
-## 07 RT0 Three-Dimensional Imposed-Field Example
+## 7 RT0 Three-Dimensional Imposed-Field Example
 
-The RT0 example is fixed to a homogeneous 1×1×2 mm copper cuboid at 200 kHz, an imposed Bz of 1 mT RMS, and zero net transport. Three-component current is represented by face-flux degrees of freedom; continuity, common-port conditions, and imposed-field power are checked separately. With common integration order q14, 8192, 16000, and 27648 cells yield losses of 0.927463, 0.933539, and 0.936927 mW. The final two changes are 0.655090% and 0.362916%, both below 1%. The q18 comparison on the final grid changes loss by 1.54941×10⁻⁸ and complex face flux by 1.39291×10⁻⁸, below the 0.1% integration target.
+The case is a homogeneous copper cuboid of 1×1×2 mm at 200 kHz, with imposed Bz=1 mT RMS and zero net transport. Three-component current is represented by face-flux degrees of freedom, with separate continuity, port-constraint, and imposed-field power checks. At quadrature q=14, meshes of 8192, 16000, and 27648 cells give losses of 0.927463, 0.933539, and 0.936927 mW. Consecutive refinement changes are 0.655090% and 0.362916%, below the 1% target. Increasing the finest case to q=18 changes loss and complex face flux relatively by 1.55×10⁻⁸ and 1.39×10⁻⁸, respectively, below the 0.1% quadrature target; see Fig. 15.
 
-Field figures are reconstructed from saved face fluxes. Cell-center J is the mean of opposing face fluxes divided by cell area. Cell-average loss density uses the exact local RT0 overlap integral and is not replaced by center |J|²/σ. Three-dimensional arrows display only the real part at phasor phase zero, with a common length scale; the color scale uses the complex RMS vector norm. The actual section position, sparse vector samples, and full-volume integration are identified separately so that a sampled visualization is not interpreted as a whole-field integral or maximum.
+Sections and vectors in Fig. 13 and Fig. 14 are reconstructed from saved face fluxes. Cell-center current is obtained by averaging opposite-face fluxes and dividing by face area. Cell-average loss density uses the full local RT0 overlap integral and therefore includes within-cell variation. Arrows show the real current at zero phase with one common length scale; color represents the complex RMS norm. Section locations and vector samples follow the figure annotations, while volume integration uses all cells.
 
-The archived GMRES iteration count is 35 for each level, with true residuals meeting the 10⁻¹¹ target. Null metrics and the failed status in the original q18 summary remain unchanged; the new CSV postprocessing checks are separate evidence. Memory rejection by an older dense algorithm and successful solution by the newer matrix-free implementation belong to different implementations and must not be merged into one status. The conclusion is limited to the fixed imposed-field cuboid, without curved Litz masks, independent boundary-flux validation, or realistic transport terminals.
+Each mesh records 35 GMRES iterations and meets the 10⁻¹¹ true-residual target. Spatial and quadrature comparisons jointly support the fixed-cuboid imposed-field result. Applicability has yet to extend to curved Litz masks, independently validated boundary fluxes, and actual transport terminals. The original q=18 summary's missing metrics and failure status, CSV-based postprocessing acceptance, and resource records for dense and matrix-free implementations are retained separately to preserve the relationship between solution and interpretation.
 
 <a id="fig-rt0_sections"></a>
 ![Fig. 13](../../assets/en/rt0_sections.png)
@@ -315,11 +317,11 @@ The 1×1×2 mm copper cuboid is excited at 200 kHz by a 1 mT RMS field with zero
 The 1×1×2 mm copper cuboid is excited at 200 kHz by a 1 mT RMS field with zero net transport. The q14 spatial sequence and final q18 comparison use the same imposed-field condition. The spatial sequence contains 8192, 16000, and 27648 cells. Integration is compared on the final successful grid.
 
 <a id="chapter-08"></a>
-## 08 Three-Dimensional A–φ Fields and Diagnostics
+## 8 Three-Dimensional A–φ Fields and Diagnostics
 
-A–φ current must be reconstructed from the actual preserved A and gradient of φ [(8)](README.md#E07); an unsuccessful φ field must not be replaced by an analytical value. The three cylinder meshes contain 1683, 3672, and 9108 nodes. Radial J calibration on the finest level meets its threshold, while φ and gauge residuals remain unsuccessful on all three original levels; J also fails on the coarser levels. Manufactured-solution checks test the specified equations and implementation but do not automatically validate these physical cylinder solutions.
+The A–φ model recovers current using [(8)](README.md#E07) from saved A and actual gradients of φ. The three cylinder meshes contain 1683, 3672, and 9108 nodes; results appear in Fig. 17. Radial J calibration meets its target on the finest mesh, while φ and gauge residuals fail on all three; the two coarser meshes also fail the J target. Manufactured-solution checks support correspondence between the tested equations and implementation, while physical cylinder calibration reveals field–potential consistency questions requiring further research.
 
-Diagnostic figures use 128 preserved field and derivative samples with explicit node identities, showing A, φ, J, and the actual gradient of φ separately. They are not inferred from a decorative surface and are not whole-field extrema. Boundary, scaling, derivative, and postprocessing diagnostics should distinguish implementation defects from approximation errors. Once the bounded revision limit is reached, failures are archived with triggers, minimal reproductions, and conditions for further research. Direct factorization, out-of-core, and iterative failures likewise retain their distinct causes.
+Fig. 16 uses 128 explicitly identified nodal samples to display A, φ, J and the actual φ gradient at those locations. The reproduction materials retain boundary, scaling, derivative and postprocessing diagnostics, together with failure causes for direct factorization, out-of-core and iterative routes. These records help distinguish implementation problems from discretization errors. The current cylinder results have not passed physical acceptance.
 
 <a id="E07"></a>
 $$
@@ -341,11 +343,11 @@ Panels show A, φ, J, and the actual gradient of φ. The 128 selected nodes reta
 Three grids and their metric targets are shown separately. The three cylinder levels contain 1683, 3672, and 9108 nodes. Errors are normalized by their respective acceptance targets, with the horizontal line indicating a unit ratio.
 
 <a id="chapter-09"></a>
-## 09 Ansys Cases and Interface Verification
+## 9 Ansys Cases and Interface Verification
 
-The historical valid seven-strand two-dimensional port short test uses 704 cells and includes two voltage basis solutions and an actual ±20 A field solution. Common terminal voltage, complex strand currents, and independent power support this single-level example; it is not three-grid convergence. New fixed-mesh and precision attempts did not produce the required full validation. Native three-dimensional J-expression probes also did not yield an accepted physical solution, so no field-result image or invented numerical value is supplied for them.
+The historical two-dimensional seven-strand port test uses 704 elements, two voltage basis solutions, and a third actual ±20 A field solution. Common terminal voltage, complex strand currents, and independent power establish field–circuit consistency on that mesh; current results appear in Fig. 18. Validation concerns one mesh. Subsequent fixed-mesh and precision attempts have not completed the required three-level checks, and the native three-dimensional J-expression probe has not produced an acceptable physical solution.
 
-Archived boundaries use the checked v252 Student limits of 2000 two-dimensional triangles, 64000 three-dimensional volume cells or 8000 surface cells, and four CPU cores. Interface errors, mesh or license limits, and numerical errors have different meanings and are recorded separately. Actual terminals, curved STL geometry, and full-copper-area large bundles still require suitable licensing, mesh capability, and independent validation. A limited short test cannot support a recommendation about realistic transposition performance.
+Fig. 19 summarizes the verified Ansys Student v252 limits: up to 2000 triangles in two dimensions, 64000 volume elements and 8000 surface elements in three dimensions, and at most four processor cores. Interface capability, licensed model size and numerical accuracy separately constrain executable validation. Actual terminations, curved STL geometry and large bundles with sufficient copper area require licensing and mesh capacity appropriate to the target geometry, followed by sensitivity and power-balance checks.
 
 <a id="fig-ansys_seven_current"></a>
 ![Fig. 18](../../assets/en/ansys_seven_current.png)
@@ -359,22 +361,24 @@ The valid 704-cell port short test provides strand magnitudes and phases. Curren
 
 <p align="center">Fig. 19. Ansys Student capacity and interface diagnostics.</p>
 
-Ansys Student v252 permits up to 2000 two-dimensional triangles, 64000 three-dimensional volume elements, and 8000 surface elements, with at most 4 CPU cores. Parallel groups identify the license limits. Probes of the current-density expression J are recorded separately from mesh capacity; actual solution status is reported in the three-dimensional diagnostics.
+License capacity and field-check entry points for Ansys Student v252: 2000 triangles in two dimensions, 64000 volume and 8000 surface elements in three dimensions, and up to four compute cores. Capacity information is retained from rc.1 records; figure sources were checked on 2026-10-15.
+
+The rc.2 records additionally complete two-dimensional Maxwell construction, solution, and project readback through PyAEDT-MCP, with task cancellation and linked restart records. A seven-strand straight-bundle comparison with Wolfram aligns cross-section, material, frequency, return, and total-current constraints. Relative complex-current L2 and bundle Rac differences are 0.0106814% and 0.00132823%, respectively. The implementations use independent meshes, Maxwell performs one adaptive pass, and spatial and boundary convergence remain to be checked. This success establishes the corresponding two-dimensional port workflow; three-dimensional interfaces and transposed structures with sufficient copper require their own field solutions and acceptance. [10, 11]
 
 <a id="chapter-10"></a>
 ## 10 Implementation, CPU/GPU Comparison, and Resources
 
 <a id="10.compute.heading"></a>
-### CPU/GPU Equivalence and Resource Boundaries
+### 10.1 CPU/GPU numerical comparison and computational scale
 
-CPU/GPU comparisons hold the longitudinal model and discretization fixed. At 5024 degrees of freedom, relative differences are 7.48149×10⁻¹⁶ for the L matrix and 7.78082×10⁻¹⁴ for complex current, below the 10⁻¹⁰ target; the 1264 comparison also passes. This supports equivalence of the implemented CPU/GPU algorithms for the compared matrix and port solution. It adds no physical content to the model, and timings from different sizes or integration settings cannot establish a speedup.
+With identical model, discretization, and integration settings, the 5024-degree-of-freedom CPU/GPU partial-inductance matrices differ relatively by 7.48×10⁻¹⁶ and their complex currents by 7.78×10⁻¹⁴. The 1264-degree-of-freedom case also meets the 10⁻¹⁰ comparison threshold, as shown in Fig. 20. These results establish numerical agreement between the two implemented algorithms for the compared matrices and port solutions. Performance comparisons additionally require matching timing boundaries; stage times and resource samples are retained, while physical conclusions rely on the model checks described above.
 
-Historical 9856-degree-of-freedom results recover only part of the available current and related data. Missing complete matrices, common voltage, or full fields prevent an upgrade to full validation. The 20108 and larger cases retain their archived resource boundaries and exits. Resource curves use attributable process-tree samples only; short peaks may be missed and records mixed with unrelated PIDs are excluded. Computational capability and physical failure are interpreted separately: unavailable resources are not acceptance, and completed execution is not physical validation.
+Fig. 21 shows sampled memory usage for identifiable owned process trees; short peaks between samples may exceed the displayed curve. At larger scales, the 9856-degree-of-freedom case retains recoverable partial currents and related results, while its complete matrix, common voltage and full-field coverage are itemized in the data inventory. Cases with 20108 or more degrees of freedom record resource requirements and termination boundaries. These records inform the cost of further computation; complete numerical verification rests on cases with the corresponding acceptance data.
 
 <a id="10.workflow.heading"></a>
-### Workflow
+### 10.2 Computation and document construction
 
-Reproduction has separate entry points for research computation and publication building. The research entry reads original inputs and solver settings and performs the corresponding validation. The publication entry reads frozen data, verified independent panels, and Markdown prose to produce chapters, merged texts, and multiple formats. Each stage records input and output hashes and reuses a completed stage only when dependencies and products agree. Independent panels retain vector curves and fonts; composition manifests record panel identities and layout parameters.
+Research entry points read model inputs and solver settings and produce run records and corresponding checks. Document entry points read saved quantities, figures, and Markdown prose to generate complete manuscripts. Input, source, and output hashes identify each build. Individual figures retain vector curves and font information, while composites record panel identities and layout parameters. The following source table links observables in the text to specific files and acceptance records.
 
 <a id="fig-gpu_equivalence"></a>
 ![Fig. 20](../../assets/en/gpu_equivalence.png)
@@ -394,31 +398,33 @@ Curves use archived time and memory samples. Time is measured from the start of 
 ## 11 General Discussion
 
 <a id="11.discussion.heading"></a>
-### Discussion: Model Uncertainty and Relation to Literature
+### 11.1 Interpretation of current sharing and loss
 
-The results show that equal sharing and low loss are not a single issue determined only by strand size. The common-terminal model permits self-consistent changes in both current magnitude and phase, whereas current geometry displays supply paths and arc-length costs. A realistic comparison must carry these terminal constraints into an electromagnetic model with adequate longitudinal coupling and use consistent actual copper area, return, and length definitions. A proposed improvement must also exceed relevant numerical uncertainty; a small solver residual cannot cancel unresolved model error.
+The three result levels answer the questions posed in the introduction. Round-wire analysis and two-dimensional calibration establish a local skin-effect reference. The 640-strand results show that common terminal voltage permits substantially different complex strand currents, so strand size and interstrand uniformity require separate assessment. Longitudinal PEEC quantifies length and integration effects for its chosen basis. Structural comparisons consequently require control of actual copper area, return, terminals, and axial length, together with transposition-induced changes in coupling. Small discretization changes help identify numerically stable intervals; structural advantages must still be compared with relevant model errors and experimental uncertainty.
 
-The relationship to [1, 2] concerns transposition representation and scope rather than replication of all published experiments. The connection to [3] is an interpretable reduced circuit, but its winding-specific experimental error is not imported as this project’s accuracy. Common voltage and total-current constraints in [5] provide a methodological link; its frequencies, dimensions, and quasi-two-dimensional assumptions do not directly validate the present 200 kHz large bundle. Homogenization studies [6, 7] also emphasize consistent allocation of macroscopic fields and microscopic local losses to avoid double counting. Averaging does not automatically establish uniform strand currents.
+DTM and iDTM [1, 2] provide a foundation for connecting longitudinal positions with cross-sectional fields. The common-terminal criterion expresses uniform-current requirements as an algebraic condition on the coupled matrix and induced terms, helping test whether a transposition approximation retains important differences. The segmented circuits of iSEC [3] and current constraints of quasi-two-dimensional methods [5] also show the need for joint field–circuit solution. Continuum and complex-permeability methods [6, 7] lower macroscopic computational cost; strand currents and local losses require recovery consistent with their averaging assumptions. These works inform the methods, while our quantitative verification uses its own operating conditions, discretizations, and error records. Comparing experimental accuracy across methods requires a common case.
 
-No thermal model or experimental measurement is available here to test winding tolerances, terminal contacts, insulation thickness, or temperature rise. RT0 imposed-field refinement and longitudinal PEEC agreement with analytical resistance provide localized evidence. Unsuccessful three-dimensional A–φ validation and native Ansys interfaces remain practical research boundaries. A subsequent priority is an affordable small-strand three-dimensional cross-check with real ends, return, and transverse degrees of freedom, followed by full-copper-area multilevel baselines and candidate structures, and ultimately controlled measurement.
+The main current uncertainty arises from differences between actual structures and simplified models. A straight two-dimensional bundle omits longitudinal transposition, and longitudinal PEEC omits transverse loops and actual end-current redistribution. The RT0 imposed-field case tests absorption in a fixed cuboid. Supplementary three-dimensional A–φ cylinder calibration retains failures in φ and gauge residuals, while the native three-dimensional Ansys interface has not produced an acceptable field solution. Temperature rise, insulation thickness, winding tolerances, and terminal contacts require thermal modeling and experimental assessment. These factors limit transfer of the present results to actual Litz performance.
 
 <a id="11.recommendations.heading"></a>
-### Recommendations
+### 11.2 Priorities for subsequent verification
 
-Further research should follow the remaining model gaps: establish boundary, gauge, and terminal-field consistency on an affordable three-dimensional calibration body; introduce realistic terminals and transverse freedom for a small strand count; and then compare full-copper multilevel and cross-layer structures. Experiments should measure impedance at common frequency, temperature, return, and axial length, with terminal resistance and geometric tolerances recorded. Proposed improvements should be compared with both numerical and measurement uncertainty.
+Subsequent work should first establish consistent boundaries, gauge treatment, terminal fields, and independent power integrals on manageable three-dimensional cylinders and small-strand structures. Actual terminals and transverse degrees of freedom can then be introduced before comparing traditional multilevel and cross-layer structures meeting the copper-area requirement. Experiments can measure complex impedance at matched frequency, temperature, return, and axial length while recording terminal resistance and geometric tolerances. This sequence separates numerical implementation errors, geometric approximations, and manufacturing deviations and supplies a comparable basis for structural ranking.
 
 <a id="chapter-12"></a>
 ## 12 Conclusions
 
-First, the hierarchical framework records shared physical content separately from each model’s omissions, allowing analytical, two-dimensional, longitudinal, and three-dimensional imposed-field results to be used within comparable scopes. Second, the common-terminal augmented system provides a complex-current sharing criterion for the specified linear model, avoiding validation by prescribed equal currents. Third, the executed length and integration sensitivities of finite-length longitudinal PEEC meet the bounded campaign targets, and the final resistance agrees with its equal-area analytical reference. This conclusion remains limited by the longitudinal basis.
+Under common phasor, length, and area definitions, this paper establishes verification relationships among round-wire analysis, two-dimensional common-terminal coupling, and finite-length longitudinal PEEC. The finest two-dimensional internal-field mesh has a relative analytical resistance error of 1.79×10⁻⁶. For parallel-connected strands, uniform currents are characterized by a zero differential-subspace projection of coupled impedance and imposed-field induction. Complex currents in the 640-strand straight bundle show that common terminals and fine subdivision must be assessed together with magnetic coupling. Longitudinal PEEC meets the relevant sensitivity targets for the tested lengths and integration settings; the final 5024-degree-of-freedom resistance differs by 0.044582% from its equal-area Bessel reference.
 
-The 640-strand two-dimensional field, fixed imposed-field RT0 cuboid, and same-model CPU/GPU comparisons provide frozen evidence that can be redrawn. Three-dimensional electromagnetic ranking of realistic transposed bundles, thermal modeling, and experimental validation remain open. Failure routes retain triggers, original results, and the capabilities required to continue.
+These results provide local-field references, common-terminal constraints, and finite-length computational benchmarks for research on actual transposition. RT0 imposed-field cases, CPU/GPU comparisons, and three-dimensional diagnostics further describe the implementations' ranges. Ranking actual Litz structures requires three-dimensional verification with end regions and transverse degrees of freedom, followed by thermal assessment and controlled experiments.
+
+The accompanying automation workflows connect source identity, tool events, and scientific acceptance into research records that can be continued. Existing Codex, Wolfram, and Ansys cases verify execution and recovery for specified tasks. Broader client compatibility, repeated-task success rates, and operational-efficiency evaluation can be studied using a common task set.
 
 <a id="chapter-A"></a>
 ## A Mathematical Derivations
 
 <a id="A.report_derivation.heading"></a>
-### Analytical Normalization, Circuit Constraints, and Element Integrals
+### A.1 Analytical Normalization, Circuit Constraints, and Element Integrals
 
 Round-wire normalization first requires 2π∫₀ᵃ r Jz(r) dr=It. The identity d[r I₁(κr)]/dr=κr I₀(κr) then gives the normalization denominator. Dividing the boundary axial electric field Jz(a)/σ by It yields the internal impedance per unit length. The independent Joule integral is compared with |It|² Re(zint) under the RMS convention. High-precision quadrature error checks only the stated analytical formula; finite ends, external return inductance, temperature changes, and insulation are not included in that analytical accuracy.
 
@@ -427,20 +433,22 @@ Linear-triangle recovery uses the actual physical area aT. With nodal eₖ=v−u
 Necessity and sufficiency of the common-terminal criterion depend on the same linear system and uniqueness of its solution. Necessity follows by substituting equal currents into the voltage equation. Sufficiency follows because a vector removed by Q can be represented as V1 and then satisfies the augmented system together with total current. Conductor contacts, additional terminal impedances, nonlinear material, or a missing induced term change that system. Reuse of the criterion in a new model therefore begins by reconstructing Z, e, and the constraints, rather than copying an earlier conclusion.
 
 <a id="A.sharing_derivation.heading"></a>
-### Sharing Derivation
+### A.2 Derivation of the uniform complex-current condition
 
-Sufficiency of the sharing criterion follows from uniqueness of the port solution. If the projection condition holds, every component of (It/N)Z1+e is equal, so a common voltage exists for which the equal-current vector satisfies both the port equations and the total-current constraint. Necessity follows by substitution of an existing equal-current solution. Numerical sharing is assessed using normalized complex-current deviation, with magnitude and phase reported to retain the information in phasor addition.
+If a uniform-current solution exists, substituting i=(It/N)1 into the port equation makes all components of (It/N)Z1+e equal, establishing necessity of the projection condition. Conversely, when the projection condition holds, this vector equals a scalar V times 1. The uniform-current vector then satisfies both the port equation and the total-current constraint; uniqueness of the augmented solution makes it the actual solution, establishing sufficiency. Numerical results use sqrt(mean(|ik−It/N|²))/|It/N| for normalized RMS complex-current deviation and show individual magnitudes and phases.
+
+The modified Bessel functions used for the round-wire reference follow the definitions in [12]. Partial-inductance construction follows the PEEC framework [13]; the face-flux approximation is related to the Raviart–Thomas family [14]. GMRES supplies the iterative linear-solver framework [15], while the finite-element implementation and boundary treatment are documented in [16].
 
 <a id="chapter-B"></a>
 ## B Discretization and Postprocessing
 
 <a id="B.triangle_derivation.heading"></a>
-### Triangle Derivation
+### B.1 Current and power integration on linear triangles
 
-On a linear triangle, J=ΣₐNaJa. Current integration uses A/3 for each shape function. Joule integration uses the mass matrix and Joule expression in [(9)](README.md#E09). Material markers assign each cell to a strand, the return, or air. Coordinates are converted to metres before area evaluation, and the integrated power is independently compared with the archived scalar.
+Complex current density in a linear triangle is interpolated as J=ΣₐNaJa. The area integral of each shape function is AT/3, giving the element's complex current directly. Joule loss uses the consistent mass matrix in [(9)](README.md#E09). Material tags associate each element with a strand, return, or air, and areas are calculated after converting coordinates to metres. Material-wise current and loss sums are independently checked against the original field–circuit scalars.
 
 <a id="B.report_rt0.heading"></a>
-### RT0 Face Flux and Lightweight Field Recovery
+### B.2 RT0 Face Flux and Lightweight Field Recovery
 
 Original RT0 face fluxes are stored by direction and integer grid identity. For each cell axis, opposing fluxes q− and q+ give the center component (q−+q+)/(2h²) and local resistive power [|q−|²+|q+|²+Re(q−*q+)]/(3σh). Summing all three axes and all cells recovers total loss. Faces omitted at insulating sides have structural zero flux in the original discretization; this zero is not an independently solved boundary-flux validation.
 
@@ -454,77 +462,113 @@ $$
 <a id="chapter-C"></a>
 ## C Acceptance, Diagnostics, and Reproduction
 
-Each route retains model, parameter, source-code, and run identities. Original WXF files, checkpoints, Ansys projects, logs, and failure files are not overwritten by conversions. JSON/CSV companions retain real and imaginary parts, units, and strand identity. Ambiguous historical unit annotations are interpreted through source-model definitions and additional notes without rewriting original files. Per-figure mappings record data sources, expressions, independent PDF/SVG/PNG hashes, and composition layout. Valid field integrals and complete spatial-field exports remain separate records; partial recovery is not expanded into an invented complete field.
+Route inventories connect original WXF files, checkpoints, Ansys projects, logs, and postprocessing outputs through model, parameter, source, and run identities. JSON/CSV retain real and imaginary components, units, and strand identities. Where a source field's unit label is ambiguous, canonical quantities follow the source model definition and document the conversion. Figure mappings further connect data, plotting expressions, independent PDF/SVG/PNG exports, and composite layouts. Inventories identify the coverage of scalar integrals, spatial fields, and partially recovered results separately.
 
-A minimal failure reproduction includes triggering inputs, the actual error, targeted corrections attempted, stop conditions, and the resources or license needed to continue. Repeated solving of identical code and inputs after a known interface error does not create additional scientific evidence. New inventories point to existing sources and logs without deleting historical abnormal exits or backfilling successful postprocessing as successful original solving. This preserves usable research boundaries for subsequent investigators.
+Failure cases retain triggering inputs, actual errors, targeted revisions, stopping conditions, and requirements for continued research. Missing wrapper/kernel exit information in geometry validation, missing metrics and failure status in the original RT0 q=18 summary, and abnormal exits at larger PEEC scales remain as recorded. The longitudinal PEEC 1.28 m case is unexecuted. Postprocessing acceptance has an independent identity, allowing data recovery, numerical execution, and physical validation to be distinguished.
 
-Publication runs limit CPU threads, task memory, and reserved system memory and perform cache reading and postprocessing only. Notebooks save static text, equations, and graphics. Native Graphics3D permits front-end rotation, but opening a manuscript does not run FEM, PEEC, or GPU solving. Missing attachments identify the specific file. Restoration in a path containing spaces, hash consistency, and lightweight reading are part of handover acceptance. Successful layout or export does not change physical acceptance.
+Formal Notebooks contain static prose, equations, and figures, with native Graphics3D supporting frontend rotation. Dataset inventories locate reading attachments, while separate entry points execute research calculations. Migration checks cover relative links, attachment reads, file SHA256 identities, and lightweight execution in paths containing spaces. Document build records include thread, memory, and environment information for reproduction on systems with the required dependencies.
 
-q1_fem2_convergence.csv
+Round-wire two-dimensional calibration
 
-| nodes | h_over_a | Rac_ohm_per_m | Rac_relative_error |
+| Nodes | h/a | Rac (mΩ/m) | Relative resistance error |
 | --- | --- | --- | --- |
-| 353 | 0.24 | 0.02015722 | 0.007045247 |
-| 1389 | 0.12 | 0.02002081 | 0.0002302695 |
-| 5573 | 0.06 | 0.02001617 | 1.79233e-06 |
+| 353 | 0.24 | 20.1572 | 0.00704525 |
+| 1389 | 0.12 | 20.0208 | 0.000230269 |
+| 5573 | 0.06 | 20.0162 | 1.79233e-06 |
 
-peec_length.csv
+Longitudinal PEEC length sensitivity
 
-| filaments | length_m | Rac_ohm_per_axial_m | Rac_over_Rdc |
+| Degrees of freedom | Length (m) | Rac (mΩ/axial m) | Rac/Rdc |
 | --- | --- | --- | --- |
-| 1264 | 0.16 | 0.01989922 | 3.647128 |
-| 1264 | 0.32 | 0.01995864 | 3.65802 |
-| 1264 | 0.64 | 0.01998848 | 3.663488 |
-| 5024 | 0.32 | 0.01998302 | 3.639307 |
-| 5024 | 0.64 | 0.02001274 | 3.64472 |
+| 1264 | 0.16 | 19.8992 | 3.64713 |
+| 1264 | 0.32 | 19.9586 | 3.65802 |
+| 1264 | 0.64 | 19.9885 | 3.66349 |
+| 5024 | 0.32 | 19.983 | 3.63931 |
+| 5024 | 0.64 | 20.0127 | 3.64472 |
 
-rt0_cases.csv
+RT0 imposed-field loss and quadrature order
 
-| cells | recomputed_loss_W |
-| --- | --- |
-| 8192 | 0.0009274631 |
-| 16000 | 0.0009335389 |
-| 27648 | 0.0009369268 |
-| 27648 | 0.0009369268 |
-
-gpu_equivalence.csv
-
-| filaments | L_matrix_relative_error | current_relative_error |
+| Cells | Quadrature order | Loss (mW) |
 | --- | --- | --- |
-| 1264 | 7.075722e-16 | 3.281741e-14 |
-| 5024 | 7.481492e-16 | 7.780817e-14 |
+| 8192 | 14 | 0.927463 |
+| 16000 | 14 | 0.933539 |
+| 27648 | 14 | 0.936927 |
+| 27648 | 18 | 0.936927 |
+
+CPU/GPU comparison for the same model
+
+| Degrees of freedom | Relative inductance difference | Relative current difference |
+| --- | --- | --- |
+| 1264 | 7.07572e-16 | 3.28174e-14 |
+| 5024 | 7.48149e-16 | 7.78082e-14 |
+
+PEEC sensitivity plot indices and values
+
+| Plot index | Single-factor comparison | Plotted relative change (%) |
+| --- | --- | --- |
+| 1 | length_016_032 | 0.29864 |
+| 2 | length_032_064 | 0.149482 |
+| 3 | fine_length_032_064 | 0.14873 |
+| 4 | mutual_q4_to6 | 0.001597 |
+| 5 | mutual_q6_to8 | 0.000588978 |
+| 6 | fine_mutual_q4_to6 | 0.000462112 |
+| 7 | fine_mutual_q6_to8 | 0.000169935 |
+| 8 | self_10p8_to12p10 | 7.09596e-09 |
+| 9 | fine_self_10p8_to12p10 | 1.84501e-09 |
+| 10 | spatial_l032 | 0.122127 |
+| 11 | spatial_l064 | 0.121376 |
 
 <a id="chapter-D"></a>
 ## D Data Sources and Environment Handoff
 
-Reproduction has separate entry points for research computation and publication building. The research entry reads original inputs and solver settings and performs the corresponding validation. The publication entry reads frozen data, verified independent panels, and Markdown prose to produce chapters, merged texts, and multiple formats. Each stage records input and output hashes and reuses a completed stage only when dependencies and products agree. Independent panels retain vector curves and fonts; composition manifests record panel identities and layout parameters.
+Research entry points read model inputs and solver settings and produce run records and corresponding checks. Document entry points read saved quantities, figures, and Markdown prose to generate complete manuscripts. Input, source, and output hashes identify each build. Individual figures retain vector curves and font information, while composites record panel identities and layout parameters. The following source table links observables in the text to specific files and acceptance records.
 
-来源清单 / Source manifest: source_provenance.json; quantities.json; asset_sources.json.
+Source manifests: source_provenance.json; quantities.json; asset_sources.json.
 
-冻结来源与完整性 / Frozen sources and integrity
+Frozen sources and integrity
 
 | Source | SHA256 |
 | --- | --- |
 | docs/总控/当前运行索引.json | 3324976d4af8f58e60820a88ae978246443f78fbdd0cfa1050e86809110ae60d |
 | outputs/prewrite_closure_state.json | 80a66afa79c321a89f730b102af0e70125f6e1655372717d6b59f470c6520e71 |
+
+<a id="D.automation.heading"></a>
+### D.1 Agent workflows and software connections
+
+Codex invokes pinned AgentTools and PyAEDT-MCP through a standard MCP client bridge. Workflows define tasks and acceptance, adapters manage software connections, and model source defines deterministic computation. Formal tasks bind parameters, source hashes, and run identifiers. Status queries follow long tasks, and cancellation targets the owned process tree. Recovery uses verified inputs and checkpoints; tutorial restarts establish a linked new run identity.
+
+Wolfram records cover analytical integrals, testing, graphics, and Notebook save/readback. Ansys records cover initialization, discovery, actual calls, AEDT execution, and structured results. Repair of a unit-conversion API retains failed and successful calls with unchanged physical parameters. A–φ readback retains completed execution together with failed potential and gauge acceptance. Separate protocol, program, and scientific states let subsequent research target the actual failure layer.
 <a id="references"></a>
 ## References
 
-[1] Silvano Cruciani, Tommaso Campi, Francesca Maradei, Mauro Feliziani. Numerical Modeling of Litz Wires Based on Discrete Transpositions of Strands and 2-D Finite Element Analysis. IEEE TPEL 38(5):6710–6719, 2023. https://doi.org/10.1109/TPEL.2023.3240338
+[1] Silvano Cruciani, Tommaso Campi, Francesca Maradei, Mauro Feliziani. Numerical Modeling of Litz Wires Based on Discrete Transpositions of Strands and 2-D Finite Element Analysis. IEEE TPEL, 38, 5, 6710--6719, 2023. https://doi.org/10.1109/TPEL.2023.3240338
 
-[2] Xinsheng Zhang, Fei Xiao, Ruitian Wang, Shunjun Chen, Xuexin Fan, Xin Li. AC Impedance Modeling of Composite Litz Wire With Nonideal Transposition Based on Improved Discrete Transposition Model. IEEE TPEL 41(7):11003–11019, 2026. https://doi.org/10.1109/TPEL.2026.3661080
+[2] Xinsheng Zhang, Fei Xiao, Ruitian Wang, Shunjun Chen, Xuexin Fan, Xin Li. AC Impedance Modeling of Composite Litz Wire With Nonideal Transposition Based on Improved Discrete Transposition Model. IEEE TPEL, 41, 7, 11003--11019, 2026. https://doi.org/10.1109/TPEL.2026.3661080
 
-[3] Yueyin Wang, Wu Chen, Zhan Shen. Modeling of Litz Wire Winding AC Resistance Based on Improved Segmented Equivalent Circuit. IEEE TPEL 39(1):1135–1149, 2024. https://doi.org/10.1109/TPEL.2023.3321327
+[3] Yueyin Wang, Wu Chen, Zhan Shen. Modeling of Litz Wire Winding AC Resistance Based on Improved Segmented Equivalent Circuit. IEEE TPEL, 39, 1, 1135--1149, 2024. https://doi.org/10.1109/TPEL.2023.3321327
 
-[4] Andreas Roßkopf, Eberhard Bär, Christopher Joffe, Clemens Bonse. Calculation of Power Losses in Litz Wire Systems by Coupling FEM and PEEC Method. IEEE TPEL 31(9):6442–6449, 2016. https://doi.org/10.1109/TPEL.2015.2499793
+[4] Andreas Roßkopf, Eberhard Bär, Christopher Joffe, Clemens Bonse. Calculation of Power Losses in Litz Wire Systems by Coupling FEM and PEEC Method. IEEE TPEL, 31, 9, 6442--6449, 2016. https://doi.org/10.1109/TPEL.2015.2499793
 
-[5] Tamás Bakondi, Sándor Bilicz, Szabolcs Gyimóthy. Finite element modeling of eddy currents in a multiconductor system with quasi-2D symmetry. COMPEL 44(5):730–742, 2025. https://doi.org/10.1108/COMPEL-01-2025-0031
+[5] Tamás Bakondi, Sándor Bilicz, Szabolcs Gyimóthy. Finite element modeling of eddy currents in a multiconductor system with quasi-2D symmetry. COMPEL, 44, 5, 730--742, 2025. https://doi.org/10.1108/COMPEL-01-2025-0031
 
-[6] David C. Meeker. An Improved Continuum Skin and Proximity Effect Model for Hexagonally Packed Wires. JCAM 236(18):4635–4644, 2012. https://doi.org/10.1016/j.cam.2012.04.009
+[6] David C. Meeker. An Improved Continuum Skin and Proximity Effect Model for Hexagonally Packed Wires. JCAM, 236, 18, 4635--4644, 2012. https://doi.org/10.1016/j.cam.2012.04.009
 
-[7] Korawich Niyomsatian, Johan Gyselinck, Ruth V. Sabariego. Closed-form complex permeability expression for proximity-effect homogenisation of litz-wire windings. IET SMT 14(3):287–291, 2020. https://doi.org/10.1049/iet-smt.2019.0377
+[7] Korawich Niyomsatian, Johan Gyselinck, Ruth V. Sabariego. Closed-form complex permeability expression for proximity-effect homogenisation of litz-wire windings. IET SMT, 14, 3, 287--291, 2020. https://doi.org/10.1049/iet-smt.2019.0377
 
+[8] OpenAI. Codex. 2026. https://developers.openai.com/codex/
 
-## Chapters / 章节
+[9] Wolfram Research. Wolfram AgentTools. 2026. https://github.com/WolframResearch/AgentTools
 
-[01](chapters/report_en_01.md) · [02](chapters/report_en_02.md) · [03](chapters/report_en_03.md) · [04](chapters/report_en_04.md) · [05](chapters/report_en_05.md) · [06](chapters/report_en_06.md) · [07](chapters/report_en_07.md) · [08](chapters/report_en_08.md) · [09](chapters/report_en_09.md) · [10](chapters/report_en_10.md) · [11](chapters/report_en_11.md) · [12](chapters/report_en_12.md) · [A](chapters/report_en_A.md) · [B](chapters/report_en_B.md) · [C](chapters/report_en_C.md) · [D](chapters/report_en_D.md)
+[10] ANSYS, Inc.. PyAEDT-MCP. 2026. https://github.com/ansys/pyaedt-mcp
+
+[11] ANSYS, Inc.. PyAEDT. 2026. https://github.com/ansys/pyaedt
+
+[12] NIST. NIST Digital Library of Mathematical Functions, Modified Bessel Functions. 2026. https://dlmf.nist.gov/10.25
+
+[13] Ruehli, A.E.. Equivalent Circuit Models for Three-Dimensional Multiconductor Systems. IEEE Transactions on Microwave Theory and Techniques, 22, 3, 216--221, 1974. https://doi.org/10.1109/tmtt.1974.1128204
+
+[14] Raviart, P. A., Thomas, J. M.. A mixed finite element method for 2-nd order elliptic problems. Mathematical Aspects of Finite Element Methods, Springer, 606, 292--315, 1977. https://doi.org/10.1007/bfb0064470
+
+[15] Saad, Youcef, Schultz, Martin H.. GMRES: A Generalized Minimal Residual Algorithm for Solving Nonsymmetric Linear Systems. SIAM Journal on Scientific and Statistical Computing, 7, 3, 856--869, 1986. https://doi.org/10.1137/0907058
+
+[16] Wolfram Research. Wolfram quasistatic magnetic field models. 2026. https://reference.wolfram.com/language/PDEModels/tutorial/Electromagnetics/QuasistaticMagneticFields.html

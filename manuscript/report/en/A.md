@@ -11,7 +11,10 @@ Linear-triangle recovery uses the actual physical area aT. With nodal eₖ=v−u
 Necessity and sufficiency of the common-terminal criterion depend on the same linear system and uniqueness of its solution. Necessity follows by substituting equal currents into the voltage equation. Sufficiency follows because a vector removed by Q can be represented as V1 and then satisfies the augmented system together with total current. Conductor contacts, additional terminal impedances, nonlinear material, or a missing induced term change that system. Reuse of the criterion in a new model therefore begins by reconstructing Z, e, and the constraints, rather than copying an earlier conclusion.
 
 <!-- id: A.sharing_derivation.heading -->
-## Sharing Derivation
+## Derivation of the uniform complex-current condition
 
 <!-- id: A.sharing_derivation.p1 -->
-Sufficiency of the sharing criterion follows from uniqueness of the port solution. If the projection condition holds, every component of (It/N)Z1+e is equal, so a common voltage exists for which the equal-current vector satisfies both the port equations and the total-current constraint. Necessity follows by substitution of an existing equal-current solution. Numerical sharing is assessed using normalized complex-current deviation, with magnitude and phase reported to retain the information in phasor addition.
+If a uniform-current solution exists, substituting i=(It/N)1 into the port equation makes all components of (It/N)Z1+e equal, establishing necessity of the projection condition. Conversely, when the projection condition holds, this vector equals a scalar V times 1. The uniform-current vector then satisfies both the port equation and the total-current constraint; uniqueness of the augmented solution makes it the actual solution, establishing sufficiency. Numerical results use sqrt(mean(|ik−It/N|²))/|It/N| for normalized RMS complex-current deviation and show individual magnitudes and phases.
+
+<!-- id: A.method.sources -->
+The modified Bessel functions used for the round-wire reference follow the definitions in [@BESSEL]. Partial-inductance construction follows the PEEC framework [@RUEHLI1974]; the face-flux approximation is related to the Raviart–Thomas family [@RT1977]. GMRES supplies the iterative linear-solver framework [@GMRES1986], while the finite-element implementation and boundary treatment are documented in [@FEMDOC].

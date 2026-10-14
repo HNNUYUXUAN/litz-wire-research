@@ -1,54 +1,49 @@
-"""Create stable, lightweight reading entries from explicitly frozen editions."""
+"""Build complete bilingual reading entries from an explicit publication run."""
 from pathlib import Path
-import json,re,shutil
+import argparse, re
 from PIL import Image
-from litz_research.common import evidence_root,sha,write,read
+from litz_research.common import sha, write, read
+ROOT = Path(__file__).resolve().parents[1]
 
-def main():
-    root=Path(__file__).resolve().parents[1];mount=evidence_root(root)
-    base=mount/'outputs/publication_rc1_20261007_01';records=[]
-    for edition in ['paper','report']:
-        for lang in ['zh-CN','en']:
-            source=base/'documents'/edition/lang/(edition+'_'+lang+'.md')
-            if not source.exists():raise FileNotFoundError(source)
-            text=source.read_text(encoding='utf-8');target=root/'publications'/edition/lang;target.mkdir(parents=True,exist_ok=True)
-            def image(match):
-                label,relative=match.groups();original=(source.parent/relative).resolve()
-                if not original.is_file():raise FileNotFoundError(original)
-                dest=root/'publications/assets'/lang/original.name;dest.parent.mkdir(parents=True,exist_ok=True)
-                with Image.open(original) as picture:
-                    picture.thumbnail((1200,1200));picture.convert('RGB').save(dest,optimize=True)
-                records.append({'path':dest.relative_to(root).as_posix(),'source':original.relative_to(mount).as_posix(),'source_sha256':sha(original),'sha256':sha(dest),'processing':'RGB preview; bounded dimensions; same figure identity'})
-                return '!['+label+'](../../assets/'+lang+'/'+dest.name+')'
-            text=re.sub(r'!\[([^\]]*)\]\(([^)]+)\)',image,text).replace(edition+'_'+lang+'.md#','README.md#')
-            chapters=[]
-            for chapter in sorted(source.parent.glob(edition+'_'+lang+'_*.md')):
-                folder=target/'chapters';folder.mkdir(exist_ok=True)
-                body=re.sub(r'!\[([^\]]*)\]\(([^)]+)\)',image,chapter.read_text(encoding='utf-8'))
-                body=body.replace('../../assets/','../../../assets/').replace(edition+'_'+lang+'.md#','../README.md#')
-                destination=folder/chapter.name;destination.write_text(body,encoding='utf-8')
-                chapters.append('['+chapter.stem.rsplit('_',1)[-1]+'](chapters/'+chapter.name+')')
-                records.append({'path':destination.relative_to(root).as_posix(),'source':chapter.relative_to(mount).as_posix(),'source_sha256':sha(chapter),'sha256':sha(destination),'processing':'stable chapter reading path; parent numbering retained'})
-            text+='\n\n## Chapters / 章节\n\n'+' · '.join(chapters)+'\n'
-            (target/'README.md').write_text(text,encoding='utf-8')
-            records.append({'path':(target/'README.md').relative_to(root).as_posix(),'source':source.relative_to(mount).as_posix(),'source_sha256':sha(source),'processing':'stable reading path and lightweight figure links'})
-    text='''# Research publications
-
-The complete bilingual reports and papers below retain their frozen scientific source identity. Lightweight previews are available directly in Git. The approved Chinese paper specimen records the editorial and plotting convention for the next scholarly edition.
-
-| Edition | Read | Download PDF |
-| --- | --- | --- |
-'''
-    for edition in ['paper','report']:
-        for lang in ['zh-CN','en']:
-            asset=edition+'_'+lang+'_single.pdf'
-            release=root/'provenance/rc2/release.json'
-            link=read(release)['url'] if release.exists() else 'https://github.com/HNNUYUXUAN/litz-wire-research/releases'
-            text+='| '+edition+' / '+lang+' | [Markdown]('+edition+'/'+lang+'/README.md) | ['+asset+']('+link+') |\n'
-    text+='\nThe candidate Release is private and draft; use authenticated GitHub access. Full Notebooks, figures and historical evidence are restored with `litz-research data fetch academic-editions`. The mount is `data/evidence/v1.0.0-rc.1/`; original relative paths are preserved.\n\n[Approved specimen](../docs/revision-sample-review.zh-CN.md) · [Editorial convention](../manuscript/style.json) · [Citation guide](../docs/citation-guide.md)\n'
-    text+='\nDownload one authenticated draft PDF with `gh release download v1.0.0-rc.2 --repo HNNUYUXUAN/litz-wire-research --pattern paper_zh-CN_single.pdf --dir build/reading`; use the table filename for other editions.\n'
-    (root/'publications/README.md').write_text(text,encoding='utf-8')
-    write(root/'publications/manifest.json',{'source_edition':'publication_rc1_20261007_01','approved_specimen':'publication_20261013_paper_sample_09','files':records})
-    print('Stable reading documents',4,'preview/source records',len(records))
-
-if __name__=='__main__':main()
+def build(run_id):
+    base = ROOT/'outputs'/run_id
+    documents = read(base/'document_manifest.json')['documents']
+    if len(documents) != 6 or any(d['form'] != 'merged' for d in documents):
+        raise ValueError('Six complete bilingual manuscripts are required')
+    records = []
+    for d in documents:
+        source = base/d['markdown']
+        target = ROOT/'publications'/d['edition']/d['language']/'README.md'
+        target.parent.mkdir(parents=True, exist_ok=True)
+        def image(match):
+            label, relative = match.groups()
+            original = (source.parent/relative).resolve()
+            dest = ROOT/'publications/assets'/d['language']/original.name
+            dest.parent.mkdir(parents=True, exist_ok=True)
+            with Image.open(original) as picture:
+                picture.thumbnail((1600,1600))
+                picture.convert('RGB').save(dest,optimize=True)
+            records.append(dict(path=dest.relative_to(ROOT).as_posix(),source=original.relative_to(ROOT).as_posix(),source_sha256=sha(original),sha256=sha(dest),processing='RGB preview bounded to 1600 pixels'))
+            return '!['+label+'](../../assets/'+d['language']+'/'+dest.name+')'
+        body = re.sub(r'!\[([^\]]*)\]\(([^)]+)\)',image,source.read_text(encoding='utf-8'))
+        body = body.replace(d['id']+'.md#','README.md#')
+        target.write_text(body,encoding='utf-8')
+        records.append(dict(path=target.relative_to(ROOT).as_posix(),source=source.relative_to(ROOT).as_posix(),source_sha256=sha(source),sha256=sha(target)))
+    for lang in ['en','zh-CN']:
+        zh = lang == 'zh-CN'
+        lines = ['# '+('完整学术稿件' if zh else 'Complete research publications'),'',
+                 '[English](README.md) · [简体中文](README.zh-CN.md)','',
+                 ('三部作品各含中英文完整 Markdown、原生 Wolfram Notebook，以及通用单栏、IEEE 期刊和 IEEE 会议三种 LaTeX/PDF。下列文件为本地构建产物，随交付包提供。' if zh else 'Each work has complete Chinese and English Markdown, a native Wolfram Notebook, and LaTeX/PDF in general single-column, IEEE journal and IEEE conference layouts. Local build artifacts below are supplied in the delivery package.'),'',
+                 '| '+('作品 / 语言 | Markdown | Notebook | PDF：单栏 / 期刊 / 会议 |' if zh else 'Work / language | Markdown | Notebook | PDF: single / journal / conference |'),
+                 '| --- | --- | --- | --- |']
+        for d in documents:
+            pdfs = ' · '.join('['+layout+'](../outputs/'+run_id+'/documents/'+d['edition']+'/'+d['language']+'/'+d['id']+'_'+layout+'.pdf)' for layout in ['single','ieee-journal','ieee-conference'])
+            lines.append('| '+d['title']+' / '+d['language']+' | [Markdown]('+d['edition']+'/'+d['language']+'/README.md) | [Wolfram](../'+d['notebook']+') | '+pdfs+' |')
+        lines += ['',('图件、数字和物理验收保留冻结来源。二维 Maxwell MCP 比较、三维 Ansys 诊断与 A–φ 验收分别叙述。' if zh else 'Figures, quantities and physical acceptance retain their frozen sources. The two-dimensional Maxwell MCP comparison, three-dimensional Ansys diagnostics and A–φ acceptance are treated separately.'),'',
+                  '[LaTeX / templates](../latex/README'+('.zh-CN' if zh else '')+'.md) · [Editorial style](../docs/editorial-style'+('.zh-CN' if zh else '')+'.md)','']
+        (ROOT/'publications'/('README.zh-CN.md' if zh else 'README.md')).write_text('\n'.join(lines),encoding='utf-8')
+    write(ROOT/'publications/manifest.json',dict(source_edition=run_id,approved_specimen='publication_20261013_paper_sample_09',files=records))
+    print('Complete manuscripts',len(documents),'preview/source records',len(records))
+if __name__ == '__main__':
+    p=argparse.ArgumentParser(description=__doc__);p.add_argument('--run-id',required=True)
+    build(p.parse_args().run_id)

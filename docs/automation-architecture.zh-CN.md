@@ -12,6 +12,6 @@ jobs submit 返回运行号，status 查询所属任务，cancel 请求取消。
 
 连接、工具调用、求解与物理验收各有独立状态。API 可能返回 isError=false 的错误文本，仍须判定失败。预算耗尽、中断、不收敛和物理失败保留实际状态。共同端电压与总电流联立求复电流；外场损耗、几何观察和输运电阻分别解释。A–φ 显示及采样使用原保存场，原规范失败继续保留。
 
-从[方法与证据对应表](method-evidence-map.md)、[真实案例](../automation/examples/verification.json)和[来源体系](../references/README.zh-CN.md)继续研究。Codex 经标准 MCP 客户端桥接完成端到端验收；其他客户端按实际测试状态记录。
+从[方法与证据对应表](method-evidence-map.zh-CN.md)、[真实案例](../automation/examples/verification.json)和[来源体系](../references/README.zh-CN.md)继续研究。Codex 经标准 MCP 客户端桥接完成端到端验收；其他客户端按实际测试状态记录。
 
 Ansys 的 maxwell-seven 案例已接入统一任务接口，实际验收了提交、状态、取消、会话关闭及新身份接续。详见 provenance/rc2/native_task_lifecycle.json。

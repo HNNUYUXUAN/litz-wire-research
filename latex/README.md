@@ -1,17 +1,18 @@
-# LaTeX builds
+# LaTeX construction
 
-The academic editions use the shared Markdown sources in `manuscript/` and the publication manifest. XeLaTeX renders SimSun for Chinese and Times New Roman for Western text and numbers. Mathematical typesetting uses the installed TeX math packages. IEEEtran is distributed under its upstream LPPL terms.
+Paired Markdown and the shared manifest in `manuscript/` supply the scholarly manuscripts. XeLaTeX uses SimSun for Chinese, Times New Roman for Latin text and numbers, and TeX mathematics packages. IEEEtran retains its upstream LPPL license.
 
-Install the document dependencies and check the toolchain from the project root:
+Install `.[documents,figures]` and run `litz-research doctor`. Restore the required evidence and prepare the figure inputs as described in [Editions](../docs/editions.md), then use:
 
-```sh
-python -m pip install -e ".[documents,figures]"
-litz-research doctor
-litz-research data fetch publication-inputs
+```powershell
 litz-research build --run-id paper_example_01 --edition paper --language en --form merged --layout all --stage documents
 litz-research build --run-id paper_example_01 --edition paper --language en --form merged --layout all --stage pdf
 ```
 
-Set `LITZ_XELATEX`, `LITZ_BIBTEX`, and `LITZ_LATEXMK` when executables are outside PATH. Install SimSun and Times New Roman through a licensed operating-system or font distribution. The template smoke files provide a small standalone example; the complete manuscripts and their numbering come from the unified build.
+`--edition` accepts `report`, `paper` and `automation`; `--layout` accepts `single`, `ieee-journal`, `ieee-conference` and `all`. The legacy `ieee` selector aliases the journal layout.
 
-Compiled files, logs, dependency versions, source hashes, and actual exit codes are saved under the selected run directory in `outputs/`. PDF checks use pypdf and pypdfium2 from the document dependency group.
+Set `LITZ_XELATEX` and `LITZ_LATEXMK` when the executables are outside PATH. Install fonts through a licensed operating-system or font distribution. [Independent templates](templates/README.md) illustrate prose, equations, tables and references in each layout. Complete manuscripts obtain numbering from their shared document structure.
+
+Compiler logs, tool versions, source hashes and actual exit codes are stored under the run in `outputs/`. PDF checks use pypdf and pypdfium2.
+
+[简体中文](README.zh-CN.md)

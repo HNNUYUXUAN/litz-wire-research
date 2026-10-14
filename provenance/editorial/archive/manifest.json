@@ -1,0 +1,22 @@
+[
+  {
+    "original_path": "docs/candidate-review.md",
+    "archive_path": "provenance/editorial/archive/candidate-review.md",
+    "sha256": "0f034c6f9c7ba535253099ae6a9eb87785cea4eaa6a1f3cd4a9a623327e242c5"
+  },
+  {
+    "original_path": "docs/候选版审阅.md",
+    "archive_path": "provenance/editorial/archive/候选版审阅.md",
+    "sha256": "141597dbd55665bb43f7fc24024cfba0e589f2d1744c00b1797f67f381a13eb7"
+  },
+  {
+    "original_path": "docs/revision-plan.zh-CN.md",
+    "archive_path": "provenance/editorial/archive/revision-plan.zh-CN.md",
+    "sha256": "877720b9cba68ae71a1b6801de8d405baf3eb478a74e9d1db4f92e20af40fb5c"
+  },
+  {
+    "original_path": "docs/revision-sample-review.zh-CN.md",
+    "archive_path": "provenance/editorial/archive/revision-sample-review.zh-CN.md",
+    "sha256": "461f85f7384914f2e481ace06b87f8c733bdd7768e0a4062858c7cce4f1ab029"
+  }
+]

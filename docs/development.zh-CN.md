@@ -1,20 +1,29 @@
 # 开发说明
 
-`python/litz_research/` 实现安装入口、命令行、配置、独立 Python Bessel 校准及数据下载。`src/` 保存 Wolfram 科学模块、阶段运行器、Ansys 适配和文档构建；`configs/` 保存物理输入；`tests/` 保存回归；`manuscript/publication.json` 统一正文、公式、图件和量值身份。
+[English](development.md)
 
-模型扩展使用明确的输入记录和独立运行号，保存 `source_model`、`run_id`、执行状态、物理验收状态、单位、相量约定、材料参数、源码哈希、用时和实际退出码。复数保留实部与虚部，幅值与相位由它们计算。物理约定与容差以建模约定和 `tests/ACCEPTANCE.md` 为准。
+## 源码与科学输入
 
-Python 3.11+ 支持数据读取和解析例子。文档构建依赖通过安装 extras 配置。现有科学基线为 Windows Wolfram 15.0；内核用于科学模块，前端用于 Notebook 和原生三维图形。PDF 使用 XeLaTeX、BibTeX、latexmk，字体为本机宋体和 Times New Roman，各字体遵循自身安装许可。
+`models/` 保存七条物理路线；`adapters/` 连接 Wolfram、Ansys 和 GPU 执行；`automation/` 提供工作流、技能及 MCP／客户端配置；`shared/` 提供共用数值和路径工具。`python/litz_research/` 实现 CLI、任务管理、数据恢复与独立解析模型。`src/` 保留兼容入口，学术构建实现位于 `tools/publication/`。
 
-工具位置按 `LITZ_<工具名>` 环境变量、本地 `litz.config.json` 的 `tools` 字段、PATH 顺序解析。运行器记录本轮进程树及创建身份，保留准确退出码。当前资源策略为八线程、24 GiB 任务内存和 8 GiB 系统余量。Ansys 需要 Maxwell 和匹配的 PyAEDT；Student 网格与四核限制按算例执行。GPU 路线使用对应 Wolfram CUDALink 环境及同模型 CPU 对照。
+新增案例使用明确参数文件和唯一运行号。记录源码哈希、单位、相量约定、材料、边界、实际退出码、执行状态和物理验收。复数保留实部与虚部。[验收标准](../tests/ACCEPTANCE.zh-CN.md)定义各模型需要的检查。
+
+## 运行环境
+
+基础解析和数据接口支持 Python 3.11 或更新版本。Ansys MCP 使用 Python 3.12 或更新版本及独立固定依赖。成稿通过具有许可证的 Wolfram 创建原生 Notebook，通过 XeLaTeX 和 latexmk 编译 PDF，并使用本机宋体与 Times New Roman。
 
 ```powershell
-python -m unittest discover -s tests -p test_research_cli.py
-litz-research run analytic --run-id analytical_validation_01
-litz-research run wolfram-analytic --run-id wolfram_validation_01
-litz-research data verify
+python -m venv .venv
+.venv/Scripts/python.exe -m pip install -e ".[documents,figures,automation,audit]"
+.venv/Scripts/litz-research.exe doctor
 ```
 
-数据目录记录数据集依赖、按顺序拼接的 gzip tar 分片、对象哈希和逻辑文件路径。分片还原后仅包含 `objects/<sha256>` 普通文件。共享对象通过数据集依赖复用。下载、解包和逻辑路径恢复分别核对哈希；已有文件核对后复用，离线模式使用同一缓存。来源记录逐件绑定原始哈希、候选哈希、权利归属、处理方法及科学核验。
+可执行文件依次从 `LITZ_<TOOL>`、本地 `litz.config.json` 的 `tools.<tool>` 和 PATH 解析。例如，用 `LITZ_WOLFRAMSCRIPT`、`LITZ_XELATEX`、`LITZ_LATEXMK` 指定安装位置。资源策略为八个逻辑处理器、24 GiB 任务内存及 8 GiB 系统空闲内存，求解器许可可进一步限制资源。
 
-修改成稿时先编辑中英文对应段落和共享清单，再统一构建。章节稿从合并稿结构提取；源码、单图、组图、PDF 和保存后的 Notebook 均记录哈希。修改科学数据时建立独立来源身份和验收记录。同一运行号的恢复步骤核对输入清单及已完成依赖。
+## 验证与稿件维护
+
+物理方程、端口约束、功率积分、数据身份或进程归属发生改变时执行针对性测试。Python 测试入口为 `python -m unittest discover -s tests`；所需可选依赖及历史数据由对应测试和路线指南说明。新的求解使用独立运行号。
+
+双语 Markdown 章节与 `manuscript/publication.json` 定义三部完整作品。公式、量值、图件身份及每部作品的引用编号在各格式间共用。[稿件指南](editions.zh-CN.md)说明构建、模板和可迁移包。面向读者的双语正文直接维护于 Markdown，索引生成器读取正文并生成清单。
+
+`data/catalog.json` 定义分片、内容对象、依赖和原相对路径。恢复器在复用数据前检查分片、对象和文件哈希；离线恢复使用相同检查。来源记录分别保存原件、元数据派生副本和新运行产物。

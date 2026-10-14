@@ -1,1542 +1,700 @@
 {
-  "source_edition": "publication_rc1_20261007_01",
+  "source_edition": "publication_review_20261015_03",
   "approved_specimen": "publication_20261013_paper_sample_09",
   "files": [
     {
       "path": "publications/assets/zh-CN/model_hierarchy.png",
-      "source": "outputs/publication_rc1_20261007_01/panels/zh-CN/model_hierarchy.png",
-      "source_sha256": "a490ea3f415d7af2c74ead02f59e0ab86df7351fd56909576107a04282a7cb77",
-      "sha256": "c86e77a0fc4dc728705196a7993961e9aa303d2b4517febbc3040abee64afb1a",
-      "processing": "RGB preview; bounded dimensions; same figure identity"
-    },
-    {
-      "path": "publications/assets/zh-CN/common_terminal.png",
-      "source": "outputs/publication_rc1_20261007_01/panels/zh-CN/common_terminal.png",
-      "source_sha256": "2234cf650ee16e4f3e3be9e641872d27d3a7abb71819628670138c9a34772554",
-      "sha256": "24be1eea566053518ee824a99429fad58f6a2321c2e919bff6f0cfa683a2f94f",
-      "processing": "RGB preview; bounded dimensions; same figure identity"
+      "source": "outputs/publication_review_20261015_03/panels/zh-CN/model_hierarchy.png",
+      "source_sha256": "a9cec85d2829e55eb31536d449f0d58e5b5ef47ba62540dd0d4e46655c8c43c3",
+      "sha256": "335f24c48e11853e64f905697971fc4c429b3fd1033803027e6446362397a1a3",
+      "processing": "RGB preview bounded to 1600 pixels"
     },
     {
       "path": "publications/assets/zh-CN/q1_profile.png",
-      "source": "outputs/publication_rc1_20261007_01/composites/zh-CN/q1_profile.png",
-      "source_sha256": "0dd766b005e223c310dce27df327d2a39f5d13e14fd09137ae9f8252b9715142",
-      "sha256": "fc46d7e15cba9c26b2408bc1caa33a1dce6d2027b675aabfc5e2bb3df5be3f65",
-      "processing": "RGB preview; bounded dimensions; same figure identity"
+      "source": "outputs/publication_review_20261015_03/composites/zh-CN/q1_profile.png",
+      "source_sha256": "eea46fe9fa03f0a1f2b008f4addda85d29f16d113727a7baae1c4218dc2c85e9",
+      "sha256": "755d9375f16e1db11478e31497646bd56dae6b86fffb3c820c0b7f878f9b8d13",
+      "processing": "RGB preview bounded to 1600 pixels"
     },
     {
       "path": "publications/assets/zh-CN/q1_cross_section.png",
-      "source": "outputs/publication_rc1_20261007_01/panels/zh-CN/q1_cross_section.png",
-      "source_sha256": "96328fae9d0641d4841ad36ae27f444cb4d757ec22cd6bff68cc8dc564143f79",
-      "sha256": "ee179e7e13ed5f0bcd2ac24fc0abcf9d4e5220b4f6d48ace998558d940de5294",
-      "processing": "RGB preview; bounded dimensions; same figure identity"
+      "source": "outputs/publication_review_20261015_03/panels/zh-CN/q1_cross_section.png",
+      "source_sha256": "321148a4252badeb3c3fa55670eb0264b75bb4c155816e75cdfe1e9b8bee25a2",
+      "sha256": "a1bb8f5b32727fc959460fa86b1dcfb304b1feaaba15064f0826a43ba70da9f9",
+      "processing": "RGB preview bounded to 1600 pixels"
     },
     {
       "path": "publications/assets/zh-CN/q1_fem_error.png",
-      "source": "outputs/publication_rc1_20261007_01/panels/zh-CN/q1_fem_error.png",
-      "source_sha256": "cdc9b971cde31f5b218a025410e55f0e1c2dae1763790865cfbeb8cb3b7f6115",
-      "sha256": "2df2944b8ed9597132a8f1de9fdb963b1bea0cfb7618de7191fed899843c4768",
-      "processing": "RGB preview; bounded dimensions; same figure identity"
-    },
-    {
-      "path": "publications/assets/zh-CN/coax640_currents.png",
-      "source": "outputs/publication_rc1_20261007_01/composites/zh-CN/coax640_currents.png",
-      "source_sha256": "c8ca05145127b46cf897286646f3e1e21faeca153d5318c2efe5e3dd21a4e3a6",
-      "sha256": "31cb56f09ef6ae8f181e6ba7cdab21ed8670249791903cd0bd5323474f9e8e78",
-      "processing": "RGB preview; bounded dimensions; same figure identity"
-    },
-    {
-      "path": "publications/assets/zh-CN/coax640_fields.png",
-      "source": "outputs/publication_rc1_20261007_01/composites/zh-CN/coax640_fields.png",
-      "source_sha256": "59c41822246d3249d2c2f3debaa31f5b6680a64df5a3344d33033c4c5924636a",
-      "sha256": "0e2109b05f869eba805cc6d0f5a988e732154dc144ab8bd42bf7bf5668e2edab",
-      "processing": "RGB preview; bounded dimensions; same figure identity"
-    },
-    {
-      "path": "publications/assets/zh-CN/coax640_mesh.png",
-      "source": "outputs/publication_rc1_20261007_01/panels/zh-CN/coax640_mesh.png",
-      "source_sha256": "e029226158ee9746a272f8b6c8f96cc7879cbc7ab0518fdb7fcdd392122ccfa1",
-      "sha256": "228851ea55c2cf8cd19fce9d265920e0ced9441ce7394ba318119e8ca11c2d60",
-      "processing": "RGB preview; bounded dimensions; same figure identity"
-    },
-    {
-      "path": "publications/assets/zh-CN/peec_cross_section.png",
-      "source": "outputs/publication_rc1_20261007_01/panels/zh-CN/peec_cross_section.png",
-      "source_sha256": "8884d2a49227350f0d6fea2f0d352676a5ecc6f29528a7247fef468349070209",
-      "sha256": "d4f521e45593013cf48f587f7197ebc9fc8b92c1c43e0df141f8b7e394de6a5d",
-      "processing": "RGB preview; bounded dimensions; same figure identity"
-    },
-    {
-      "path": "publications/assets/zh-CN/peec_length.png",
-      "source": "outputs/publication_rc1_20261007_01/panels/zh-CN/peec_length.png",
-      "source_sha256": "81b3a635192e80b4c9a64bc616815d3a30bd79908b1c432b43881ed2dc740d72",
-      "sha256": "22b11a895d342140be9613aba14944083f92d0f4261f52fe1f34eedcb0c152f3",
-      "processing": "RGB preview; bounded dimensions; same figure identity"
-    },
-    {
-      "path": "publications/assets/zh-CN/peec_sensitivity.png",
-      "source": "outputs/publication_rc1_20261007_01/panels/zh-CN/peec_sensitivity.png",
-      "source_sha256": "03a3f0f173bd0d5f087f0af9c5b65d892ec57c851f3e57c80e1f8e397fe5836f",
-      "sha256": "66f60214fcefe445ce51a2c412da740d01b9a6cb74fa80c8bee61e3e5293b888",
-      "processing": "RGB preview; bounded dimensions; same figure identity"
-    },
-    {
-      "path": "publications/assets/zh-CN/gpu_equivalence.png",
-      "source": "outputs/publication_rc1_20261007_01/panels/zh-CN/gpu_equivalence.png",
-      "source_sha256": "545eb6330acd038c13d2e1ade8307cd29518ad828e9943ef0b3dfb4a4ee91498",
-      "sha256": "d256335806aabbc4a7a1ce2e214edb8e5cc22363e8988a30ce1e59b19fd4b10a",
-      "processing": "RGB preview; bounded dimensions; same figure identity"
-    },
-    {
-      "path": "publications/assets/zh-CN/resource_memory.png",
-      "source": "outputs/publication_rc1_20261007_01/panels/zh-CN/resource_memory.png",
-      "source_sha256": "2ffd5b53bcba3e18a5721089093fe8a3fb6bceb6b21279fb6729e9637e0488d0",
-      "sha256": "f8fd0bc8c36bf0622988b4b0cc6ef3f3cfc45d9d9cc0a4a0268695f097599b68",
-      "processing": "RGB preview; bounded dimensions; same figure identity"
-    },
-    {
-      "path": "publications/assets/zh-CN/geometry_comparison.png",
-      "source": "outputs/publication_rc1_20261007_01/composites/zh-CN/geometry_comparison.png",
-      "source_sha256": "e2e8bebc30b620a95f395eabd0a38d70df96a53b4bfb37934f68b917e73c236d",
-      "sha256": "ecb1776a7d0f4d2b535ba92d947ac27eac9497abc150abf82151e9d99eb21cbc",
-      "processing": "RGB preview; bounded dimensions; same figure identity"
-    },
-    {
-      "path": "publications/assets/zh-CN/rt0_sections.png",
-      "source": "outputs/publication_rc1_20261007_01/composites/zh-CN/rt0_sections.png",
-      "source_sha256": "c6909bb060f9e1599e9b785f863ae2ff1b86ab3120d313e4f976d355f76997b2",
-      "sha256": "3e57ba4075340137341a4cee0d412eafd3437f9282ec70d809f9099c8e489890",
-      "processing": "RGB preview; bounded dimensions; same figure identity"
-    },
-    {
-      "path": "publications/assets/zh-CN/rt0_vectors.png",
-      "source": "outputs/publication_rc1_20261007_01/panels/zh-CN/rt0_vectors.png",
-      "source_sha256": "b14c832c38fd32e565b2254e568ccbb54a7b60771052e84fdc00340cd5d1745c",
-      "sha256": "cc429927a7a0bd7ba99332aa5a69dd748a392279cdb2e7b6067a4f83c0da5fcf",
-      "processing": "RGB preview; bounded dimensions; same figure identity"
-    },
-    {
-      "path": "publications/assets/zh-CN/rt0_spatial.png",
-      "source": "outputs/publication_rc1_20261007_01/panels/zh-CN/rt0_spatial.png",
-      "source_sha256": "4ef73ceabb323e95147ff4e5067f219f42b5bca1005e6ad515d0cbc9018f2b59",
-      "sha256": "453907cabede54b2636f90f67359c1572c919f2a4cd5d33c94b4a657553dcf92",
-      "processing": "RGB preview; bounded dimensions; same figure identity"
-    },
-    {
-      "path": "publications/assets/zh-CN/aphi_preserved.png",
-      "source": "outputs/publication_rc1_20261007_01/composites/zh-CN/aphi_preserved.png",
-      "source_sha256": "1b8e3859e522429ef9b0a48fe7b36cdb6d4a2cabc97d2b126a3de305bb9d7075",
-      "sha256": "7d6a0b589eda699327a3802c8835aae94fb3a97447e4ce275cda0c9da9ebb4e2",
-      "processing": "RGB preview; bounded dimensions; same figure identity"
-    },
-    {
-      "path": "publications/assets/zh-CN/aphi_gates.png",
-      "source": "outputs/publication_rc1_20261007_01/panels/zh-CN/aphi_gates.png",
-      "source_sha256": "f65c9af5be50311587c7930fb45da94d5958b5e44956cf88913628e1eadcf11c",
-      "sha256": "afd17fbc3eb2b1a41ab3d8b8181b4a04658b54bae620ad9ba66198000bd715be",
-      "processing": "RGB preview; bounded dimensions; same figure identity"
-    },
-    {
-      "path": "publications/assets/zh-CN/ansys_seven_current.png",
-      "source": "outputs/publication_rc1_20261007_01/panels/zh-CN/ansys_seven_current.png",
-      "source_sha256": "119e112339749a6f4c9bfc0f5a987cdf8b0b47cf29ea8cc3c45dfcd32ccddfd9",
-      "sha256": "593fed1fce56008969570d54623bd57fec52538a84a36a96edc682aab810d155",
-      "processing": "RGB preview; bounded dimensions; same figure identity"
-    },
-    {
-      "path": "publications/assets/zh-CN/ansys_limits.png",
-      "source": "outputs/publication_rc1_20261007_01/panels/zh-CN/ansys_limits.png",
-      "source_sha256": "b82a91fcc5bf400333a42d4d36defebd39d3a36ecdd92a3a99d0e1c2313d791a",
-      "sha256": "d78bf5a3572b7b3f09bd4dba5cc600692a4124386fc25438e031a0c7cee9cdf2",
-      "processing": "RGB preview; bounded dimensions; same figure identity"
-    },
-    {
-      "path": "publications/paper/zh-CN/chapters/paper_zh-CN_01.md",
-      "source": "outputs/publication_rc1_20261007_01/documents/paper/zh-CN/paper_zh-CN_01.md",
-      "source_sha256": "7c60aac30a2c40c891ebdcca3f684a97d164d5cf2bd1eaa94ea333c03898e9fa",
-      "sha256": "9891201df6d65654297867c33f8298d7ddf70f71d7e532affa57f52f7b1f4869",
-      "processing": "stable chapter reading path; parent numbering retained"
-    },
-    {
-      "path": "publications/assets/zh-CN/model_hierarchy.png",
-      "source": "outputs/publication_rc1_20261007_01/panels/zh-CN/model_hierarchy.png",
-      "source_sha256": "a490ea3f415d7af2c74ead02f59e0ab86df7351fd56909576107a04282a7cb77",
-      "sha256": "c86e77a0fc4dc728705196a7993961e9aa303d2b4517febbc3040abee64afb1a",
-      "processing": "RGB preview; bounded dimensions; same figure identity"
+      "source": "outputs/publication_review_20261015_03/panels/zh-CN/q1_fem_error.png",
+      "source_sha256": "b699a4047bf6c806c15f256cf5c1c969604a5c56f93a253ec4c0b3707d6dfde7",
+      "sha256": "bbd3d3950790ff4710dc355eceaece39fe8880442c03f957ad3590ed33de5f1e",
+      "processing": "RGB preview bounded to 1600 pixels"
     },
     {
       "path": "publications/assets/zh-CN/common_terminal.png",
-      "source": "outputs/publication_rc1_20261007_01/panels/zh-CN/common_terminal.png",
-      "source_sha256": "2234cf650ee16e4f3e3be9e641872d27d3a7abb71819628670138c9a34772554",
-      "sha256": "24be1eea566053518ee824a99429fad58f6a2321c2e919bff6f0cfa683a2f94f",
-      "processing": "RGB preview; bounded dimensions; same figure identity"
-    },
-    {
-      "path": "publications/paper/zh-CN/chapters/paper_zh-CN_02.md",
-      "source": "outputs/publication_rc1_20261007_01/documents/paper/zh-CN/paper_zh-CN_02.md",
-      "source_sha256": "523d920093f62db508838030b1300af02531270dc6945b63217754616caba016",
-      "sha256": "4bafb877b707bbd7cbd5eaba0c728e042d2bb136d75e7198262aba87979871ef",
-      "processing": "stable chapter reading path; parent numbering retained"
-    },
-    {
-      "path": "publications/assets/zh-CN/q1_profile.png",
-      "source": "outputs/publication_rc1_20261007_01/composites/zh-CN/q1_profile.png",
-      "source_sha256": "0dd766b005e223c310dce27df327d2a39f5d13e14fd09137ae9f8252b9715142",
-      "sha256": "fc46d7e15cba9c26b2408bc1caa33a1dce6d2027b675aabfc5e2bb3df5be3f65",
-      "processing": "RGB preview; bounded dimensions; same figure identity"
-    },
-    {
-      "path": "publications/assets/zh-CN/q1_cross_section.png",
-      "source": "outputs/publication_rc1_20261007_01/panels/zh-CN/q1_cross_section.png",
-      "source_sha256": "96328fae9d0641d4841ad36ae27f444cb4d757ec22cd6bff68cc8dc564143f79",
-      "sha256": "ee179e7e13ed5f0bcd2ac24fc0abcf9d4e5220b4f6d48ace998558d940de5294",
-      "processing": "RGB preview; bounded dimensions; same figure identity"
-    },
-    {
-      "path": "publications/assets/zh-CN/q1_fem_error.png",
-      "source": "outputs/publication_rc1_20261007_01/panels/zh-CN/q1_fem_error.png",
-      "source_sha256": "cdc9b971cde31f5b218a025410e55f0e1c2dae1763790865cfbeb8cb3b7f6115",
-      "sha256": "2df2944b8ed9597132a8f1de9fdb963b1bea0cfb7618de7191fed899843c4768",
-      "processing": "RGB preview; bounded dimensions; same figure identity"
+      "source": "outputs/publication_review_20261015_03/panels/zh-CN/common_terminal.png",
+      "source_sha256": "483135b8c67c14a92db198585d19361c4c60c7dafbe32613f12b010e02eb6d3e",
+      "sha256": "36f61a9f0752700fef98b38bd98fd5675c56a96c7b348e262ab1fbea321235ab",
+      "processing": "RGB preview bounded to 1600 pixels"
     },
     {
       "path": "publications/assets/zh-CN/coax640_currents.png",
-      "source": "outputs/publication_rc1_20261007_01/composites/zh-CN/coax640_currents.png",
-      "source_sha256": "c8ca05145127b46cf897286646f3e1e21faeca153d5318c2efe5e3dd21a4e3a6",
-      "sha256": "31cb56f09ef6ae8f181e6ba7cdab21ed8670249791903cd0bd5323474f9e8e78",
-      "processing": "RGB preview; bounded dimensions; same figure identity"
+      "source": "outputs/publication_review_20261015_03/composites/zh-CN/coax640_currents.png",
+      "source_sha256": "6fbf707bcdba08c475a82940744c8356496fe3a9d17daab2bda4f4ac5ed74180",
+      "sha256": "8e950c0fd16f8fbb0f8984542797b5236c381fe90873b3c7338e5ff38e699ff4",
+      "processing": "RGB preview bounded to 1600 pixels"
     },
     {
       "path": "publications/assets/zh-CN/coax640_fields.png",
-      "source": "outputs/publication_rc1_20261007_01/composites/zh-CN/coax640_fields.png",
+      "source": "outputs/publication_review_20261015_03/composites/zh-CN/coax640_fields.png",
       "source_sha256": "59c41822246d3249d2c2f3debaa31f5b6680a64df5a3344d33033c4c5924636a",
-      "sha256": "0e2109b05f869eba805cc6d0f5a988e732154dc144ab8bd42bf7bf5668e2edab",
-      "processing": "RGB preview; bounded dimensions; same figure identity"
+      "sha256": "836daeb306f0bcdb7fa4447ff8f40a6e1e0695ff773b3fbecc1b942e2c18ea66",
+      "processing": "RGB preview bounded to 1600 pixels"
     },
     {
       "path": "publications/assets/zh-CN/coax640_mesh.png",
-      "source": "outputs/publication_rc1_20261007_01/panels/zh-CN/coax640_mesh.png",
-      "source_sha256": "e029226158ee9746a272f8b6c8f96cc7879cbc7ab0518fdb7fcdd392122ccfa1",
-      "sha256": "228851ea55c2cf8cd19fce9d265920e0ced9441ce7394ba318119e8ca11c2d60",
-      "processing": "RGB preview; bounded dimensions; same figure identity"
-    },
-    {
-      "path": "publications/assets/zh-CN/peec_cross_section.png",
-      "source": "outputs/publication_rc1_20261007_01/panels/zh-CN/peec_cross_section.png",
-      "source_sha256": "8884d2a49227350f0d6fea2f0d352676a5ecc6f29528a7247fef468349070209",
-      "sha256": "d4f521e45593013cf48f587f7197ebc9fc8b92c1c43e0df141f8b7e394de6a5d",
-      "processing": "RGB preview; bounded dimensions; same figure identity"
-    },
-    {
-      "path": "publications/assets/zh-CN/peec_length.png",
-      "source": "outputs/publication_rc1_20261007_01/panels/zh-CN/peec_length.png",
-      "source_sha256": "81b3a635192e80b4c9a64bc616815d3a30bd79908b1c432b43881ed2dc740d72",
-      "sha256": "22b11a895d342140be9613aba14944083f92d0f4261f52fe1f34eedcb0c152f3",
-      "processing": "RGB preview; bounded dimensions; same figure identity"
-    },
-    {
-      "path": "publications/assets/zh-CN/peec_sensitivity.png",
-      "source": "outputs/publication_rc1_20261007_01/panels/zh-CN/peec_sensitivity.png",
-      "source_sha256": "03a3f0f173bd0d5f087f0af9c5b65d892ec57c851f3e57c80e1f8e397fe5836f",
-      "sha256": "66f60214fcefe445ce51a2c412da740d01b9a6cb74fa80c8bee61e3e5293b888",
-      "processing": "RGB preview; bounded dimensions; same figure identity"
-    },
-    {
-      "path": "publications/assets/zh-CN/gpu_equivalence.png",
-      "source": "outputs/publication_rc1_20261007_01/panels/zh-CN/gpu_equivalence.png",
-      "source_sha256": "545eb6330acd038c13d2e1ade8307cd29518ad828e9943ef0b3dfb4a4ee91498",
-      "sha256": "d256335806aabbc4a7a1ce2e214edb8e5cc22363e8988a30ce1e59b19fd4b10a",
-      "processing": "RGB preview; bounded dimensions; same figure identity"
-    },
-    {
-      "path": "publications/assets/zh-CN/resource_memory.png",
-      "source": "outputs/publication_rc1_20261007_01/panels/zh-CN/resource_memory.png",
-      "source_sha256": "2ffd5b53bcba3e18a5721089093fe8a3fb6bceb6b21279fb6729e9637e0488d0",
-      "sha256": "f8fd0bc8c36bf0622988b4b0cc6ef3f3cfc45d9d9cc0a4a0268695f097599b68",
-      "processing": "RGB preview; bounded dimensions; same figure identity"
-    },
-    {
-      "path": "publications/paper/zh-CN/chapters/paper_zh-CN_03.md",
-      "source": "outputs/publication_rc1_20261007_01/documents/paper/zh-CN/paper_zh-CN_03.md",
-      "source_sha256": "082281a98e21a07b577357c9429bc0a1a998e6e7bf967d4dc3fa41b422a79240",
-      "sha256": "8b340c50cf71f8757d555b4cef9bee11375da2b4d837debfbcdac0a541b954d7",
-      "processing": "stable chapter reading path; parent numbering retained"
-    },
-    {
-      "path": "publications/paper/zh-CN/chapters/paper_zh-CN_04.md",
-      "source": "outputs/publication_rc1_20261007_01/documents/paper/zh-CN/paper_zh-CN_04.md",
-      "source_sha256": "72fd484d96c5e95c302571e3622382bd07d9c327627a2d4cbf13122096297173",
-      "sha256": "4af6c4dea86ce15127c9623fc97071b2a910e6a3f2948e580075231130a78ddf",
-      "processing": "stable chapter reading path; parent numbering retained"
-    },
-    {
-      "path": "publications/paper/zh-CN/chapters/paper_zh-CN_05.md",
-      "source": "outputs/publication_rc1_20261007_01/documents/paper/zh-CN/paper_zh-CN_05.md",
-      "source_sha256": "757b08276e2626981d61e49bcbc1cd0aa038ec2b401104d201c2e5b3aeeabb49",
-      "sha256": "d85f73516e8b2d10dc38abf6dc394cc86daedd8f0d1a12ae288689250dc047c2",
-      "processing": "stable chapter reading path; parent numbering retained"
-    },
-    {
-      "path": "publications/paper/zh-CN/chapters/paper_zh-CN_S1.md",
-      "source": "outputs/publication_rc1_20261007_01/documents/paper/zh-CN/paper_zh-CN_S1.md",
-      "source_sha256": "6a28e1a8e1df6d6e1503630b4bde960a8a44b3403ac27a2daaea0b685c01a36f",
-      "sha256": "1d530a3a36b0f5e57e4d4c03b0a652cb41a304baeb8d439a383b3e81360a799a",
-      "processing": "stable chapter reading path; parent numbering retained"
+      "source": "outputs/publication_review_20261015_03/panels/zh-CN/coax640_mesh.png",
+      "source_sha256": "7e1ed30b9aa6129c102b12154a450793cdd053079787141d0f4e61ce937fdb4a",
+      "sha256": "64aafcd9a39b620c8eedc8b0ecd7e4fb25a35edd7a90790ece4ff0ef7cc0cf31",
+      "processing": "RGB preview bounded to 1600 pixels"
     },
     {
       "path": "publications/assets/zh-CN/geometry_comparison.png",
-      "source": "outputs/publication_rc1_20261007_01/composites/zh-CN/geometry_comparison.png",
-      "source_sha256": "e2e8bebc30b620a95f395eabd0a38d70df96a53b4bfb37934f68b917e73c236d",
-      "sha256": "ecb1776a7d0f4d2b535ba92d947ac27eac9497abc150abf82151e9d99eb21cbc",
-      "processing": "RGB preview; bounded dimensions; same figure identity"
-    },
-    {
-      "path": "publications/assets/zh-CN/rt0_sections.png",
-      "source": "outputs/publication_rc1_20261007_01/composites/zh-CN/rt0_sections.png",
-      "source_sha256": "c6909bb060f9e1599e9b785f863ae2ff1b86ab3120d313e4f976d355f76997b2",
-      "sha256": "3e57ba4075340137341a4cee0d412eafd3437f9282ec70d809f9099c8e489890",
-      "processing": "RGB preview; bounded dimensions; same figure identity"
-    },
-    {
-      "path": "publications/assets/zh-CN/rt0_vectors.png",
-      "source": "outputs/publication_rc1_20261007_01/panels/zh-CN/rt0_vectors.png",
-      "source_sha256": "b14c832c38fd32e565b2254e568ccbb54a7b60771052e84fdc00340cd5d1745c",
-      "sha256": "cc429927a7a0bd7ba99332aa5a69dd748a392279cdb2e7b6067a4f83c0da5fcf",
-      "processing": "RGB preview; bounded dimensions; same figure identity"
-    },
-    {
-      "path": "publications/assets/zh-CN/rt0_spatial.png",
-      "source": "outputs/publication_rc1_20261007_01/panels/zh-CN/rt0_spatial.png",
-      "source_sha256": "4ef73ceabb323e95147ff4e5067f219f42b5bca1005e6ad515d0cbc9018f2b59",
-      "sha256": "453907cabede54b2636f90f67359c1572c919f2a4cd5d33c94b4a657553dcf92",
-      "processing": "RGB preview; bounded dimensions; same figure identity"
-    },
-    {
-      "path": "publications/assets/zh-CN/aphi_preserved.png",
-      "source": "outputs/publication_rc1_20261007_01/composites/zh-CN/aphi_preserved.png",
-      "source_sha256": "1b8e3859e522429ef9b0a48fe7b36cdb6d4a2cabc97d2b126a3de305bb9d7075",
-      "sha256": "7d6a0b589eda699327a3802c8835aae94fb3a97447e4ce275cda0c9da9ebb4e2",
-      "processing": "RGB preview; bounded dimensions; same figure identity"
-    },
-    {
-      "path": "publications/assets/zh-CN/aphi_gates.png",
-      "source": "outputs/publication_rc1_20261007_01/panels/zh-CN/aphi_gates.png",
-      "source_sha256": "f65c9af5be50311587c7930fb45da94d5958b5e44956cf88913628e1eadcf11c",
-      "sha256": "afd17fbc3eb2b1a41ab3d8b8181b4a04658b54bae620ad9ba66198000bd715be",
-      "processing": "RGB preview; bounded dimensions; same figure identity"
-    },
-    {
-      "path": "publications/assets/zh-CN/ansys_seven_current.png",
-      "source": "outputs/publication_rc1_20261007_01/panels/zh-CN/ansys_seven_current.png",
-      "source_sha256": "119e112339749a6f4c9bfc0f5a987cdf8b0b47cf29ea8cc3c45dfcd32ccddfd9",
-      "sha256": "593fed1fce56008969570d54623bd57fec52538a84a36a96edc682aab810d155",
-      "processing": "RGB preview; bounded dimensions; same figure identity"
-    },
-    {
-      "path": "publications/assets/zh-CN/ansys_limits.png",
-      "source": "outputs/publication_rc1_20261007_01/panels/zh-CN/ansys_limits.png",
-      "source_sha256": "b82a91fcc5bf400333a42d4d36defebd39d3a36ecdd92a3a99d0e1c2313d791a",
-      "sha256": "d78bf5a3572b7b3f09bd4dba5cc600692a4124386fc25438e031a0c7cee9cdf2",
-      "processing": "RGB preview; bounded dimensions; same figure identity"
-    },
-    {
-      "path": "publications/paper/zh-CN/chapters/paper_zh-CN_S2.md",
-      "source": "outputs/publication_rc1_20261007_01/documents/paper/zh-CN/paper_zh-CN_S2.md",
-      "source_sha256": "86ef01ca4b252aaf83ea45e3e55578d358e9e04d412f8dae791d08bb8fa5e33e",
-      "sha256": "6a866f0a2fbc5c6d0e23830e2dff8b2fa3a881bafe7cc06bea7e24cb37f48b7e",
-      "processing": "stable chapter reading path; parent numbering retained"
-    },
-    {
-      "path": "publications/paper/zh-CN/chapters/paper_zh-CN_S3.md",
-      "source": "outputs/publication_rc1_20261007_01/documents/paper/zh-CN/paper_zh-CN_S3.md",
-      "source_sha256": "1753939781a5b3fcd38e74e9dff6cf25475ab750554cf5153cc00bc28467bb1d",
-      "sha256": "ff48d7fd535b443f50dc278f5e9bba62c0da90a184ca76550c6e720adf30e17f",
-      "processing": "stable chapter reading path; parent numbering retained"
-    },
-    {
-      "path": "publications/paper/zh-CN/README.md",
-      "source": "outputs/publication_rc1_20261007_01/documents/paper/zh-CN/paper_zh-CN.md",
-      "source_sha256": "5b7b5f716ab58342477bea8342e8b0883b2b35a6ac63ec7e9694e2f68e4cea58",
-      "processing": "stable reading path and lightweight figure links"
-    },
-    {
-      "path": "publications/assets/en/model_hierarchy.png",
-      "source": "outputs/publication_rc1_20261007_01/panels/en/model_hierarchy.png",
-      "source_sha256": "9bef23b573184abe5ca06a608c0577b56338928d7a9986b283c880c9ca6fb1e9",
-      "sha256": "09bad17e32fcfcc73b5a9839e3e5597e1ad3e67e08b73ee4f5f2c19420b67692",
-      "processing": "RGB preview; bounded dimensions; same figure identity"
-    },
-    {
-      "path": "publications/assets/en/common_terminal.png",
-      "source": "outputs/publication_rc1_20261007_01/panels/en/common_terminal.png",
-      "source_sha256": "4dd55d4ea66a625cdd5cde805ab6999efd4703cada4a554896a0b1d354edeb5d",
-      "sha256": "2ecfe336ea329128c0570bcb79a343dbb8186e46a4f5d1dd819b4da91c8e3284",
-      "processing": "RGB preview; bounded dimensions; same figure identity"
-    },
-    {
-      "path": "publications/assets/en/q1_profile.png",
-      "source": "outputs/publication_rc1_20261007_01/composites/en/q1_profile.png",
-      "source_sha256": "2f9c9098d2e9d4e061068e69be4b19a4087afa09b60fecf636580e208db1cfa0",
-      "sha256": "061d457a722c9575138e089c82344e70f7f8af508c665334bc10332754a7b712",
-      "processing": "RGB preview; bounded dimensions; same figure identity"
-    },
-    {
-      "path": "publications/assets/en/q1_cross_section.png",
-      "source": "outputs/publication_rc1_20261007_01/panels/en/q1_cross_section.png",
-      "source_sha256": "72e4777eb857a4cde50fdd330159890835033fb4f27f4d02cb2c973bae707762",
-      "sha256": "ee179e7e13ed5f0bcd2ac24fc0abcf9d4e5220b4f6d48ace998558d940de5294",
-      "processing": "RGB preview; bounded dimensions; same figure identity"
-    },
-    {
-      "path": "publications/assets/en/q1_fem_error.png",
-      "source": "outputs/publication_rc1_20261007_01/panels/en/q1_fem_error.png",
-      "source_sha256": "2f76caca99085177056728e650ec2d429cb4ed528e893e8c28db09322e62ccd8",
-      "sha256": "df70bbacabdcbe874e3571e8df890b95a214b32ba6db7d9cc22cef66ff871fd4",
-      "processing": "RGB preview; bounded dimensions; same figure identity"
-    },
-    {
-      "path": "publications/assets/en/coax640_currents.png",
-      "source": "outputs/publication_rc1_20261007_01/composites/en/coax640_currents.png",
-      "source_sha256": "5eefdb9585fc3fd582aae943f31fc664c24e50ed75c6b5c0e917631dac3849ca",
-      "sha256": "da3e426e12ee97a4635c486bea4485e173c413fb33bc15d46c3179a4477316c0",
-      "processing": "RGB preview; bounded dimensions; same figure identity"
-    },
-    {
-      "path": "publications/assets/en/coax640_fields.png",
-      "source": "outputs/publication_rc1_20261007_01/composites/en/coax640_fields.png",
-      "source_sha256": "bac65f2ddbd35087635b018fc18aecc5caa6a2a13de7f470e82e0ed804ae852d",
-      "sha256": "538db2a22a25729436071d67e51ad96b2d34562d38eb05b4aae75b95809fa9f6",
-      "processing": "RGB preview; bounded dimensions; same figure identity"
-    },
-    {
-      "path": "publications/assets/en/coax640_mesh.png",
-      "source": "outputs/publication_rc1_20261007_01/panels/en/coax640_mesh.png",
-      "source_sha256": "3e328484845bdde17900797f7458a80c4ba356e050174c89323df3141366e35b",
-      "sha256": "be21145e0dfead361430afc32b46a735efff9eb52a0bb4a82fbfe72851f2a3b0",
-      "processing": "RGB preview; bounded dimensions; same figure identity"
-    },
-    {
-      "path": "publications/assets/en/peec_cross_section.png",
-      "source": "outputs/publication_rc1_20261007_01/panels/en/peec_cross_section.png",
-      "source_sha256": "d194c7d09b39077fa9a5c38723b2961a79e2cc1d89de39a6f8679b9fe4c43172",
-      "sha256": "d4f521e45593013cf48f587f7197ebc9fc8b92c1c43e0df141f8b7e394de6a5d",
-      "processing": "RGB preview; bounded dimensions; same figure identity"
-    },
-    {
-      "path": "publications/assets/en/peec_length.png",
-      "source": "outputs/publication_rc1_20261007_01/panels/en/peec_length.png",
-      "source_sha256": "6140cfbf4aeefa779aa6f73c91e30d9dcc8718a73b15c4e2eae91d68c1b64089",
-      "sha256": "aa10a3710ce4ffe2fdefd0091852d1d4fbeb8daa243544361b9c709dfaaec4db",
-      "processing": "RGB preview; bounded dimensions; same figure identity"
-    },
-    {
-      "path": "publications/assets/en/peec_sensitivity.png",
-      "source": "outputs/publication_rc1_20261007_01/panels/en/peec_sensitivity.png",
-      "source_sha256": "94325c0e13390537544982b23bd1b5cfae1db533b61f99c9d7b80d8c7df6ff26",
-      "sha256": "57f5928dba6e6d71f5ae5d214e63d4eca10f38de7148cb09f9ab21c71bcbb5a9",
-      "processing": "RGB preview; bounded dimensions; same figure identity"
-    },
-    {
-      "path": "publications/assets/en/gpu_equivalence.png",
-      "source": "outputs/publication_rc1_20261007_01/panels/en/gpu_equivalence.png",
-      "source_sha256": "41d3b27a4cbb018f3fb0cd6a48505fc47e6023747eb0c5d71abf02ee69d8cfdf",
-      "sha256": "2f31b642413f310c606bb53a757c058a3db511efc63412381484ca14b7d3f651",
-      "processing": "RGB preview; bounded dimensions; same figure identity"
-    },
-    {
-      "path": "publications/assets/en/resource_memory.png",
-      "source": "outputs/publication_rc1_20261007_01/panels/en/resource_memory.png",
-      "source_sha256": "96c68ff99ddd219017352f02ea255c8b5591de25ffd9561f7763e300c7c0ba30",
-      "sha256": "6ba2613d485878ba97285e443442c420ac18f81917eb565837fb3f7c76dab53d",
-      "processing": "RGB preview; bounded dimensions; same figure identity"
-    },
-    {
-      "path": "publications/assets/en/geometry_comparison.png",
-      "source": "outputs/publication_rc1_20261007_01/composites/en/geometry_comparison.png",
-      "source_sha256": "847cc5a75edee5d402fe7a932f568190ca8529ece84e595812c3dbf47a9d6aa2",
-      "sha256": "3c015d04f01b2359de38d2a8a0b6a3108a1175daa9c92eb9ea739eaf681a88b9",
-      "processing": "RGB preview; bounded dimensions; same figure identity"
-    },
-    {
-      "path": "publications/assets/en/rt0_sections.png",
-      "source": "outputs/publication_rc1_20261007_01/composites/en/rt0_sections.png",
-      "source_sha256": "c6909bb060f9e1599e9b785f863ae2ff1b86ab3120d313e4f976d355f76997b2",
-      "sha256": "3e57ba4075340137341a4cee0d412eafd3437f9282ec70d809f9099c8e489890",
-      "processing": "RGB preview; bounded dimensions; same figure identity"
-    },
-    {
-      "path": "publications/assets/en/rt0_vectors.png",
-      "source": "outputs/publication_rc1_20261007_01/panels/en/rt0_vectors.png",
-      "source_sha256": "953deae1d949f941416d616135d8f5742259fd41d36c9ace8260ad78c510cebf",
-      "sha256": "cc429927a7a0bd7ba99332aa5a69dd748a392279cdb2e7b6067a4f83c0da5fcf",
-      "processing": "RGB preview; bounded dimensions; same figure identity"
-    },
-    {
-      "path": "publications/assets/en/rt0_spatial.png",
-      "source": "outputs/publication_rc1_20261007_01/panels/en/rt0_spatial.png",
-      "source_sha256": "0a479fde3f1c8d157f5719674cee9ba9ff073c4db6e875e019fff59bef14ebb7",
-      "sha256": "87f844dc9b815591761c0474c4a077c0dbd6ebd56859490097b9fee2e8a9cfd9",
-      "processing": "RGB preview; bounded dimensions; same figure identity"
-    },
-    {
-      "path": "publications/assets/en/aphi_preserved.png",
-      "source": "outputs/publication_rc1_20261007_01/composites/en/aphi_preserved.png",
-      "source_sha256": "1b8e3859e522429ef9b0a48fe7b36cdb6d4a2cabc97d2b126a3de305bb9d7075",
-      "sha256": "7d6a0b589eda699327a3802c8835aae94fb3a97447e4ce275cda0c9da9ebb4e2",
-      "processing": "RGB preview; bounded dimensions; same figure identity"
-    },
-    {
-      "path": "publications/assets/en/aphi_gates.png",
-      "source": "outputs/publication_rc1_20261007_01/panels/en/aphi_gates.png",
-      "source_sha256": "13cc1add5c13a65ae9ef914a15d3ae3f2f94d090c4363814381cf2255fd66c2f",
-      "sha256": "f4880f60815de7478ee29cd3c9d6a171aa1f184f5b53c1db767a703f83e8144f",
-      "processing": "RGB preview; bounded dimensions; same figure identity"
-    },
-    {
-      "path": "publications/assets/en/ansys_seven_current.png",
-      "source": "outputs/publication_rc1_20261007_01/panels/en/ansys_seven_current.png",
-      "source_sha256": "c67ecce865c9b7e256cb4860a0e1ed4ee867167f3e4b03b9c786234b619fd48f",
-      "sha256": "454f0763e2aafb3d9182ac3115ef7ec1dd92b931a1fee521aa8a065627000f09",
-      "processing": "RGB preview; bounded dimensions; same figure identity"
-    },
-    {
-      "path": "publications/assets/en/ansys_limits.png",
-      "source": "outputs/publication_rc1_20261007_01/panels/en/ansys_limits.png",
-      "source_sha256": "001c7b2366adcf6daf3e7b343e93ed31b03b3e3b8d5a3cf430a17fe645ad8d0b",
-      "sha256": "eaf4878ce7588ae07090de79e504584c3e8ef5f02fbfd467ded701aa109e8919",
-      "processing": "RGB preview; bounded dimensions; same figure identity"
-    },
-    {
-      "path": "publications/paper/en/chapters/paper_en_01.md",
-      "source": "outputs/publication_rc1_20261007_01/documents/paper/en/paper_en_01.md",
-      "source_sha256": "3a513791778c5e1de31db2e3a1058d99fbb4f5f08ed3141bb353db4f00ce6e9e",
-      "sha256": "dca63f789e5e432291730583ad247a356b710f13e8e5334c730d1414894502c2",
-      "processing": "stable chapter reading path; parent numbering retained"
-    },
-    {
-      "path": "publications/assets/en/model_hierarchy.png",
-      "source": "outputs/publication_rc1_20261007_01/panels/en/model_hierarchy.png",
-      "source_sha256": "9bef23b573184abe5ca06a608c0577b56338928d7a9986b283c880c9ca6fb1e9",
-      "sha256": "09bad17e32fcfcc73b5a9839e3e5597e1ad3e67e08b73ee4f5f2c19420b67692",
-      "processing": "RGB preview; bounded dimensions; same figure identity"
-    },
-    {
-      "path": "publications/assets/en/common_terminal.png",
-      "source": "outputs/publication_rc1_20261007_01/panels/en/common_terminal.png",
-      "source_sha256": "4dd55d4ea66a625cdd5cde805ab6999efd4703cada4a554896a0b1d354edeb5d",
-      "sha256": "2ecfe336ea329128c0570bcb79a343dbb8186e46a4f5d1dd819b4da91c8e3284",
-      "processing": "RGB preview; bounded dimensions; same figure identity"
-    },
-    {
-      "path": "publications/paper/en/chapters/paper_en_02.md",
-      "source": "outputs/publication_rc1_20261007_01/documents/paper/en/paper_en_02.md",
-      "source_sha256": "6b2ba27afcea2723a27fcd73417374cd30085489f86c4a8bae4befd75f41fc0e",
-      "sha256": "d2d6168febf482233142afbbecfba04fb49c9f425276cd5d0a2e8df96ec03a4a",
-      "processing": "stable chapter reading path; parent numbering retained"
-    },
-    {
-      "path": "publications/assets/en/q1_profile.png",
-      "source": "outputs/publication_rc1_20261007_01/composites/en/q1_profile.png",
-      "source_sha256": "2f9c9098d2e9d4e061068e69be4b19a4087afa09b60fecf636580e208db1cfa0",
-      "sha256": "061d457a722c9575138e089c82344e70f7f8af508c665334bc10332754a7b712",
-      "processing": "RGB preview; bounded dimensions; same figure identity"
-    },
-    {
-      "path": "publications/assets/en/q1_cross_section.png",
-      "source": "outputs/publication_rc1_20261007_01/panels/en/q1_cross_section.png",
-      "source_sha256": "72e4777eb857a4cde50fdd330159890835033fb4f27f4d02cb2c973bae707762",
-      "sha256": "ee179e7e13ed5f0bcd2ac24fc0abcf9d4e5220b4f6d48ace998558d940de5294",
-      "processing": "RGB preview; bounded dimensions; same figure identity"
-    },
-    {
-      "path": "publications/assets/en/q1_fem_error.png",
-      "source": "outputs/publication_rc1_20261007_01/panels/en/q1_fem_error.png",
-      "source_sha256": "2f76caca99085177056728e650ec2d429cb4ed528e893e8c28db09322e62ccd8",
-      "sha256": "df70bbacabdcbe874e3571e8df890b95a214b32ba6db7d9cc22cef66ff871fd4",
-      "processing": "RGB preview; bounded dimensions; same figure identity"
-    },
-    {
-      "path": "publications/assets/en/coax640_currents.png",
-      "source": "outputs/publication_rc1_20261007_01/composites/en/coax640_currents.png",
-      "source_sha256": "5eefdb9585fc3fd582aae943f31fc664c24e50ed75c6b5c0e917631dac3849ca",
-      "sha256": "da3e426e12ee97a4635c486bea4485e173c413fb33bc15d46c3179a4477316c0",
-      "processing": "RGB preview; bounded dimensions; same figure identity"
-    },
-    {
-      "path": "publications/assets/en/coax640_fields.png",
-      "source": "outputs/publication_rc1_20261007_01/composites/en/coax640_fields.png",
-      "source_sha256": "bac65f2ddbd35087635b018fc18aecc5caa6a2a13de7f470e82e0ed804ae852d",
-      "sha256": "538db2a22a25729436071d67e51ad96b2d34562d38eb05b4aae75b95809fa9f6",
-      "processing": "RGB preview; bounded dimensions; same figure identity"
-    },
-    {
-      "path": "publications/assets/en/coax640_mesh.png",
-      "source": "outputs/publication_rc1_20261007_01/panels/en/coax640_mesh.png",
-      "source_sha256": "3e328484845bdde17900797f7458a80c4ba356e050174c89323df3141366e35b",
-      "sha256": "be21145e0dfead361430afc32b46a735efff9eb52a0bb4a82fbfe72851f2a3b0",
-      "processing": "RGB preview; bounded dimensions; same figure identity"
-    },
-    {
-      "path": "publications/assets/en/peec_cross_section.png",
-      "source": "outputs/publication_rc1_20261007_01/panels/en/peec_cross_section.png",
-      "source_sha256": "d194c7d09b39077fa9a5c38723b2961a79e2cc1d89de39a6f8679b9fe4c43172",
-      "sha256": "d4f521e45593013cf48f587f7197ebc9fc8b92c1c43e0df141f8b7e394de6a5d",
-      "processing": "RGB preview; bounded dimensions; same figure identity"
-    },
-    {
-      "path": "publications/assets/en/peec_length.png",
-      "source": "outputs/publication_rc1_20261007_01/panels/en/peec_length.png",
-      "source_sha256": "6140cfbf4aeefa779aa6f73c91e30d9dcc8718a73b15c4e2eae91d68c1b64089",
-      "sha256": "aa10a3710ce4ffe2fdefd0091852d1d4fbeb8daa243544361b9c709dfaaec4db",
-      "processing": "RGB preview; bounded dimensions; same figure identity"
-    },
-    {
-      "path": "publications/assets/en/peec_sensitivity.png",
-      "source": "outputs/publication_rc1_20261007_01/panels/en/peec_sensitivity.png",
-      "source_sha256": "94325c0e13390537544982b23bd1b5cfae1db533b61f99c9d7b80d8c7df6ff26",
-      "sha256": "57f5928dba6e6d71f5ae5d214e63d4eca10f38de7148cb09f9ab21c71bcbb5a9",
-      "processing": "RGB preview; bounded dimensions; same figure identity"
-    },
-    {
-      "path": "publications/assets/en/gpu_equivalence.png",
-      "source": "outputs/publication_rc1_20261007_01/panels/en/gpu_equivalence.png",
-      "source_sha256": "41d3b27a4cbb018f3fb0cd6a48505fc47e6023747eb0c5d71abf02ee69d8cfdf",
-      "sha256": "2f31b642413f310c606bb53a757c058a3db511efc63412381484ca14b7d3f651",
-      "processing": "RGB preview; bounded dimensions; same figure identity"
-    },
-    {
-      "path": "publications/assets/en/resource_memory.png",
-      "source": "outputs/publication_rc1_20261007_01/panels/en/resource_memory.png",
-      "source_sha256": "96c68ff99ddd219017352f02ea255c8b5591de25ffd9561f7763e300c7c0ba30",
-      "sha256": "6ba2613d485878ba97285e443442c420ac18f81917eb565837fb3f7c76dab53d",
-      "processing": "RGB preview; bounded dimensions; same figure identity"
-    },
-    {
-      "path": "publications/paper/en/chapters/paper_en_03.md",
-      "source": "outputs/publication_rc1_20261007_01/documents/paper/en/paper_en_03.md",
-      "source_sha256": "1b7068f581a7b00fdca376745fe65fa52d43dcac81665bb78a10a90e99145dba",
-      "sha256": "c98158c187fd343875fa5062a0d398a0b36b13fb073e3d9db8c7a7b007c9339d",
-      "processing": "stable chapter reading path; parent numbering retained"
-    },
-    {
-      "path": "publications/paper/en/chapters/paper_en_04.md",
-      "source": "outputs/publication_rc1_20261007_01/documents/paper/en/paper_en_04.md",
-      "source_sha256": "021798d8076814d28fe3971d3fae033e61ebb828a1cec3335229f19bcb3108cf",
-      "sha256": "2f5aeed0bb58df90e3f28dc0aff519d182c546bb92ca03bb821b832f36a6e19f",
-      "processing": "stable chapter reading path; parent numbering retained"
-    },
-    {
-      "path": "publications/paper/en/chapters/paper_en_05.md",
-      "source": "outputs/publication_rc1_20261007_01/documents/paper/en/paper_en_05.md",
-      "source_sha256": "64427818da7b51619c4a3dda62605f7f12455d18c12dd490d88b05ebf0a8043a",
-      "sha256": "45b02cafb2f09a83f5f685ccb32d783941d3a48cd56f1c1eaf09aaa81ddc3bfc",
-      "processing": "stable chapter reading path; parent numbering retained"
-    },
-    {
-      "path": "publications/paper/en/chapters/paper_en_S1.md",
-      "source": "outputs/publication_rc1_20261007_01/documents/paper/en/paper_en_S1.md",
-      "source_sha256": "fc10dcd7d7ff7077abe9bc553752777ac2782b3b8fade11a1ecf7f525f703c28",
-      "sha256": "1f0551d75b3aff615f45624fe4e9ce7bc0b19d83098cee4b1a2f58693d61b5e0",
-      "processing": "stable chapter reading path; parent numbering retained"
-    },
-    {
-      "path": "publications/assets/en/geometry_comparison.png",
-      "source": "outputs/publication_rc1_20261007_01/composites/en/geometry_comparison.png",
-      "source_sha256": "847cc5a75edee5d402fe7a932f568190ca8529ece84e595812c3dbf47a9d6aa2",
-      "sha256": "3c015d04f01b2359de38d2a8a0b6a3108a1175daa9c92eb9ea739eaf681a88b9",
-      "processing": "RGB preview; bounded dimensions; same figure identity"
-    },
-    {
-      "path": "publications/assets/en/rt0_sections.png",
-      "source": "outputs/publication_rc1_20261007_01/composites/en/rt0_sections.png",
-      "source_sha256": "c6909bb060f9e1599e9b785f863ae2ff1b86ab3120d313e4f976d355f76997b2",
-      "sha256": "3e57ba4075340137341a4cee0d412eafd3437f9282ec70d809f9099c8e489890",
-      "processing": "RGB preview; bounded dimensions; same figure identity"
-    },
-    {
-      "path": "publications/assets/en/rt0_vectors.png",
-      "source": "outputs/publication_rc1_20261007_01/panels/en/rt0_vectors.png",
-      "source_sha256": "953deae1d949f941416d616135d8f5742259fd41d36c9ace8260ad78c510cebf",
-      "sha256": "cc429927a7a0bd7ba99332aa5a69dd748a392279cdb2e7b6067a4f83c0da5fcf",
-      "processing": "RGB preview; bounded dimensions; same figure identity"
-    },
-    {
-      "path": "publications/assets/en/rt0_spatial.png",
-      "source": "outputs/publication_rc1_20261007_01/panels/en/rt0_spatial.png",
-      "source_sha256": "0a479fde3f1c8d157f5719674cee9ba9ff073c4db6e875e019fff59bef14ebb7",
-      "sha256": "87f844dc9b815591761c0474c4a077c0dbd6ebd56859490097b9fee2e8a9cfd9",
-      "processing": "RGB preview; bounded dimensions; same figure identity"
-    },
-    {
-      "path": "publications/assets/en/aphi_preserved.png",
-      "source": "outputs/publication_rc1_20261007_01/composites/en/aphi_preserved.png",
-      "source_sha256": "1b8e3859e522429ef9b0a48fe7b36cdb6d4a2cabc97d2b126a3de305bb9d7075",
-      "sha256": "7d6a0b589eda699327a3802c8835aae94fb3a97447e4ce275cda0c9da9ebb4e2",
-      "processing": "RGB preview; bounded dimensions; same figure identity"
-    },
-    {
-      "path": "publications/assets/en/aphi_gates.png",
-      "source": "outputs/publication_rc1_20261007_01/panels/en/aphi_gates.png",
-      "source_sha256": "13cc1add5c13a65ae9ef914a15d3ae3f2f94d090c4363814381cf2255fd66c2f",
-      "sha256": "f4880f60815de7478ee29cd3c9d6a171aa1f184f5b53c1db767a703f83e8144f",
-      "processing": "RGB preview; bounded dimensions; same figure identity"
-    },
-    {
-      "path": "publications/assets/en/ansys_seven_current.png",
-      "source": "outputs/publication_rc1_20261007_01/panels/en/ansys_seven_current.png",
-      "source_sha256": "c67ecce865c9b7e256cb4860a0e1ed4ee867167f3e4b03b9c786234b619fd48f",
-      "sha256": "454f0763e2aafb3d9182ac3115ef7ec1dd92b931a1fee521aa8a065627000f09",
-      "processing": "RGB preview; bounded dimensions; same figure identity"
-    },
-    {
-      "path": "publications/assets/en/ansys_limits.png",
-      "source": "outputs/publication_rc1_20261007_01/panels/en/ansys_limits.png",
-      "source_sha256": "001c7b2366adcf6daf3e7b343e93ed31b03b3e3b8d5a3cf430a17fe645ad8d0b",
-      "sha256": "eaf4878ce7588ae07090de79e504584c3e8ef5f02fbfd467ded701aa109e8919",
-      "processing": "RGB preview; bounded dimensions; same figure identity"
-    },
-    {
-      "path": "publications/paper/en/chapters/paper_en_S2.md",
-      "source": "outputs/publication_rc1_20261007_01/documents/paper/en/paper_en_S2.md",
-      "source_sha256": "4886a1cd087a8a3d766dfd81cc9c0dd98b36e345556902c65167f4c29622984e",
-      "sha256": "ec2459deb301ac2cb346ba6539071290e3d215f8f6e187759f010588c511c676",
-      "processing": "stable chapter reading path; parent numbering retained"
-    },
-    {
-      "path": "publications/paper/en/chapters/paper_en_S3.md",
-      "source": "outputs/publication_rc1_20261007_01/documents/paper/en/paper_en_S3.md",
-      "source_sha256": "46b74a48e13585c354cb223aacfd3e0b54f89fa505ec7e332ad60e23953b0d09",
-      "sha256": "ad1bf07baa9dc9d61aef6b065d8ac9fab941999d9fe243bf4ac1a7d43125fa79",
-      "processing": "stable chapter reading path; parent numbering retained"
-    },
-    {
-      "path": "publications/paper/en/README.md",
-      "source": "outputs/publication_rc1_20261007_01/documents/paper/en/paper_en.md",
-      "source_sha256": "c664bae28b3554f956a26574d0cd7fbdba2b1c8474d3df922289f2ff0ea73bd1",
-      "processing": "stable reading path and lightweight figure links"
-    },
-    {
-      "path": "publications/assets/zh-CN/model_hierarchy.png",
-      "source": "outputs/publication_rc1_20261007_01/panels/zh-CN/model_hierarchy.png",
-      "source_sha256": "a490ea3f415d7af2c74ead02f59e0ab86df7351fd56909576107a04282a7cb77",
-      "sha256": "c86e77a0fc4dc728705196a7993961e9aa303d2b4517febbc3040abee64afb1a",
-      "processing": "RGB preview; bounded dimensions; same figure identity"
-    },
-    {
-      "path": "publications/assets/zh-CN/q1_profile.png",
-      "source": "outputs/publication_rc1_20261007_01/composites/zh-CN/q1_profile.png",
-      "source_sha256": "0dd766b005e223c310dce27df327d2a39f5d13e14fd09137ae9f8252b9715142",
-      "sha256": "fc46d7e15cba9c26b2408bc1caa33a1dce6d2027b675aabfc5e2bb3df5be3f65",
-      "processing": "RGB preview; bounded dimensions; same figure identity"
-    },
-    {
-      "path": "publications/assets/zh-CN/q1_cross_section.png",
-      "source": "outputs/publication_rc1_20261007_01/panels/zh-CN/q1_cross_section.png",
-      "source_sha256": "96328fae9d0641d4841ad36ae27f444cb4d757ec22cd6bff68cc8dc564143f79",
-      "sha256": "ee179e7e13ed5f0bcd2ac24fc0abcf9d4e5220b4f6d48ace998558d940de5294",
-      "processing": "RGB preview; bounded dimensions; same figure identity"
-    },
-    {
-      "path": "publications/assets/zh-CN/q1_fem_error.png",
-      "source": "outputs/publication_rc1_20261007_01/panels/zh-CN/q1_fem_error.png",
-      "source_sha256": "cdc9b971cde31f5b218a025410e55f0e1c2dae1763790865cfbeb8cb3b7f6115",
-      "sha256": "2df2944b8ed9597132a8f1de9fdb963b1bea0cfb7618de7191fed899843c4768",
-      "processing": "RGB preview; bounded dimensions; same figure identity"
-    },
-    {
-      "path": "publications/assets/zh-CN/common_terminal.png",
-      "source": "outputs/publication_rc1_20261007_01/panels/zh-CN/common_terminal.png",
-      "source_sha256": "2234cf650ee16e4f3e3be9e641872d27d3a7abb71819628670138c9a34772554",
-      "sha256": "24be1eea566053518ee824a99429fad58f6a2321c2e919bff6f0cfa683a2f94f",
-      "processing": "RGB preview; bounded dimensions; same figure identity"
-    },
-    {
-      "path": "publications/assets/zh-CN/coax640_currents.png",
-      "source": "outputs/publication_rc1_20261007_01/composites/zh-CN/coax640_currents.png",
-      "source_sha256": "c8ca05145127b46cf897286646f3e1e21faeca153d5318c2efe5e3dd21a4e3a6",
-      "sha256": "31cb56f09ef6ae8f181e6ba7cdab21ed8670249791903cd0bd5323474f9e8e78",
-      "processing": "RGB preview; bounded dimensions; same figure identity"
-    },
-    {
-      "path": "publications/assets/zh-CN/coax640_fields.png",
-      "source": "outputs/publication_rc1_20261007_01/composites/zh-CN/coax640_fields.png",
-      "source_sha256": "59c41822246d3249d2c2f3debaa31f5b6680a64df5a3344d33033c4c5924636a",
-      "sha256": "0e2109b05f869eba805cc6d0f5a988e732154dc144ab8bd42bf7bf5668e2edab",
-      "processing": "RGB preview; bounded dimensions; same figure identity"
-    },
-    {
-      "path": "publications/assets/zh-CN/coax640_mesh.png",
-      "source": "outputs/publication_rc1_20261007_01/panels/zh-CN/coax640_mesh.png",
-      "source_sha256": "e029226158ee9746a272f8b6c8f96cc7879cbc7ab0518fdb7fcdd392122ccfa1",
-      "sha256": "228851ea55c2cf8cd19fce9d265920e0ced9441ce7394ba318119e8ca11c2d60",
-      "processing": "RGB preview; bounded dimensions; same figure identity"
-    },
-    {
-      "path": "publications/assets/zh-CN/geometry_comparison.png",
-      "source": "outputs/publication_rc1_20261007_01/composites/zh-CN/geometry_comparison.png",
-      "source_sha256": "e2e8bebc30b620a95f395eabd0a38d70df96a53b4bfb37934f68b917e73c236d",
-      "sha256": "ecb1776a7d0f4d2b535ba92d947ac27eac9497abc150abf82151e9d99eb21cbc",
-      "processing": "RGB preview; bounded dimensions; same figure identity"
+      "source": "outputs/publication_review_20261015_03/composites/zh-CN/geometry_comparison.png",
+      "source_sha256": "82f95947edfda3ba7e0012f508129c0a355882828e2609813207a5f0fd1460a2",
+      "sha256": "3355904decd733ff7cdbf6f2f51c2b89de93bc54a9b9b0eb1345579275cab882",
+      "processing": "RGB preview bounded to 1600 pixels"
     },
     {
       "path": "publications/assets/zh-CN/peec_cross_section.png",
-      "source": "outputs/publication_rc1_20261007_01/panels/zh-CN/peec_cross_section.png",
-      "source_sha256": "8884d2a49227350f0d6fea2f0d352676a5ecc6f29528a7247fef468349070209",
-      "sha256": "d4f521e45593013cf48f587f7197ebc9fc8b92c1c43e0df141f8b7e394de6a5d",
-      "processing": "RGB preview; bounded dimensions; same figure identity"
+      "source": "outputs/publication_review_20261015_03/panels/zh-CN/peec_cross_section.png",
+      "source_sha256": "bda77c032323998778600aab814b31de2d40571b1d4a888240c24e8e35ba68bd",
+      "sha256": "d2078124943937e6f7820095f45ef22a1125a66350ef4ef1f11b26373d96fc74",
+      "processing": "RGB preview bounded to 1600 pixels"
     },
     {
       "path": "publications/assets/zh-CN/peec_length.png",
-      "source": "outputs/publication_rc1_20261007_01/panels/zh-CN/peec_length.png",
-      "source_sha256": "81b3a635192e80b4c9a64bc616815d3a30bd79908b1c432b43881ed2dc740d72",
-      "sha256": "22b11a895d342140be9613aba14944083f92d0f4261f52fe1f34eedcb0c152f3",
-      "processing": "RGB preview; bounded dimensions; same figure identity"
+      "source": "outputs/publication_review_20261015_03/panels/zh-CN/peec_length.png",
+      "source_sha256": "dddf5550be77e6b27f1d1dfc44f815b363e178bd460660d00d6d43c3a5e1c5f7",
+      "sha256": "ebc759bdb381bd6c9c3defa63da872323071b11f6ed886cd3787611414af861e",
+      "processing": "RGB preview bounded to 1600 pixels"
     },
     {
       "path": "publications/assets/zh-CN/peec_sensitivity.png",
-      "source": "outputs/publication_rc1_20261007_01/panels/zh-CN/peec_sensitivity.png",
-      "source_sha256": "03a3f0f173bd0d5f087f0af9c5b65d892ec57c851f3e57c80e1f8e397fe5836f",
-      "sha256": "66f60214fcefe445ce51a2c412da740d01b9a6cb74fa80c8bee61e3e5293b888",
-      "processing": "RGB preview; bounded dimensions; same figure identity"
+      "source": "outputs/publication_review_20261015_03/panels/zh-CN/peec_sensitivity.png",
+      "source_sha256": "d0be16e0d00a8f7c65644eadb4445386f166cf6b97d30eb964eb52205427e808",
+      "sha256": "ffd80b947e2bc0cb73bbb885f5dd8ef758d718293794024abbe6c4c6b9ea39c0",
+      "processing": "RGB preview bounded to 1600 pixels"
     },
     {
       "path": "publications/assets/zh-CN/rt0_sections.png",
-      "source": "outputs/publication_rc1_20261007_01/composites/zh-CN/rt0_sections.png",
+      "source": "outputs/publication_review_20261015_03/composites/zh-CN/rt0_sections.png",
       "source_sha256": "c6909bb060f9e1599e9b785f863ae2ff1b86ab3120d313e4f976d355f76997b2",
-      "sha256": "3e57ba4075340137341a4cee0d412eafd3437f9282ec70d809f9099c8e489890",
-      "processing": "RGB preview; bounded dimensions; same figure identity"
+      "sha256": "8dcb8aa88e8d11079d2f7ece5373ef63839b6f278b3e66783bf734cabc6f7a01",
+      "processing": "RGB preview bounded to 1600 pixels"
     },
     {
       "path": "publications/assets/zh-CN/rt0_vectors.png",
-      "source": "outputs/publication_rc1_20261007_01/panels/zh-CN/rt0_vectors.png",
-      "source_sha256": "b14c832c38fd32e565b2254e568ccbb54a7b60771052e84fdc00340cd5d1745c",
-      "sha256": "cc429927a7a0bd7ba99332aa5a69dd748a392279cdb2e7b6067a4f83c0da5fcf",
-      "processing": "RGB preview; bounded dimensions; same figure identity"
+      "source": "outputs/publication_review_20261015_03/panels/zh-CN/rt0_vectors.png",
+      "source_sha256": "3a9fc149ddebc1c609734113de21332946c98125a75d4e645486093791020229",
+      "sha256": "1bdb2cfab7a3c7a6ae4130a92654d87c55f8ee08549db335e242061cc30f1d88",
+      "processing": "RGB preview bounded to 1600 pixels"
     },
     {
       "path": "publications/assets/zh-CN/rt0_spatial.png",
-      "source": "outputs/publication_rc1_20261007_01/panels/zh-CN/rt0_spatial.png",
-      "source_sha256": "4ef73ceabb323e95147ff4e5067f219f42b5bca1005e6ad515d0cbc9018f2b59",
-      "sha256": "453907cabede54b2636f90f67359c1572c919f2a4cd5d33c94b4a657553dcf92",
-      "processing": "RGB preview; bounded dimensions; same figure identity"
+      "source": "outputs/publication_review_20261015_03/panels/zh-CN/rt0_spatial.png",
+      "source_sha256": "71ebd3da2e70ffc37fbb85cb7e9ed3887fdd9df465cc4e3a1c6b88aaf4bc2f0c",
+      "sha256": "0d07fc21aaff6f9ef57304d1c99056ffe8409603b8074a3c4e5f517be01bdd4e",
+      "processing": "RGB preview bounded to 1600 pixels"
     },
     {
       "path": "publications/assets/zh-CN/aphi_preserved.png",
-      "source": "outputs/publication_rc1_20261007_01/composites/zh-CN/aphi_preserved.png",
+      "source": "outputs/publication_review_20261015_03/composites/zh-CN/aphi_preserved.png",
       "source_sha256": "1b8e3859e522429ef9b0a48fe7b36cdb6d4a2cabc97d2b126a3de305bb9d7075",
-      "sha256": "7d6a0b589eda699327a3802c8835aae94fb3a97447e4ce275cda0c9da9ebb4e2",
-      "processing": "RGB preview; bounded dimensions; same figure identity"
+      "sha256": "5531e9dd4feaab55718c56f590636c1248cd9dd89ea2ff409f4fbfd1b9331fcb",
+      "processing": "RGB preview bounded to 1600 pixels"
     },
     {
       "path": "publications/assets/zh-CN/aphi_gates.png",
-      "source": "outputs/publication_rc1_20261007_01/panels/zh-CN/aphi_gates.png",
-      "source_sha256": "f65c9af5be50311587c7930fb45da94d5958b5e44956cf88913628e1eadcf11c",
-      "sha256": "afd17fbc3eb2b1a41ab3d8b8181b4a04658b54bae620ad9ba66198000bd715be",
-      "processing": "RGB preview; bounded dimensions; same figure identity"
+      "source": "outputs/publication_review_20261015_03/panels/zh-CN/aphi_gates.png",
+      "source_sha256": "46fa359ab6eaef117e47e592af02c72a74bb30bc42a6d9875bd28d0a82849ecd",
+      "sha256": "e3d1ff0f0471741be2707bc6028371fa3789916f0ba083af4333e889daea0cbc",
+      "processing": "RGB preview bounded to 1600 pixels"
     },
     {
       "path": "publications/assets/zh-CN/ansys_seven_current.png",
-      "source": "outputs/publication_rc1_20261007_01/panels/zh-CN/ansys_seven_current.png",
-      "source_sha256": "119e112339749a6f4c9bfc0f5a987cdf8b0b47cf29ea8cc3c45dfcd32ccddfd9",
-      "sha256": "593fed1fce56008969570d54623bd57fec52538a84a36a96edc682aab810d155",
-      "processing": "RGB preview; bounded dimensions; same figure identity"
+      "source": "outputs/publication_review_20261015_03/panels/zh-CN/ansys_seven_current.png",
+      "source_sha256": "3a712afd6fd55ec91c3f1b07c0ad49158d8a0d03e20879a5a562cb0cc1c0bde8",
+      "sha256": "b8c7780a462410dac5eff10f50cae15c3b664507f9bd5fd8dc95c9c1ef1d9c6b",
+      "processing": "RGB preview bounded to 1600 pixels"
     },
     {
       "path": "publications/assets/zh-CN/ansys_limits.png",
-      "source": "outputs/publication_rc1_20261007_01/panels/zh-CN/ansys_limits.png",
-      "source_sha256": "b82a91fcc5bf400333a42d4d36defebd39d3a36ecdd92a3a99d0e1c2313d791a",
-      "sha256": "d78bf5a3572b7b3f09bd4dba5cc600692a4124386fc25438e031a0c7cee9cdf2",
-      "processing": "RGB preview; bounded dimensions; same figure identity"
+      "source": "outputs/publication_review_20261015_03/panels/zh-CN/ansys_limits.png",
+      "source_sha256": "e520ad99072ad8a323b13af932e07b80a4ad50ce6a356f4d8de398230d5a19fb",
+      "sha256": "aa9a9ead2c101bef3df68bbe2e9578201540ed0ef6904defb2dfe6604545c56a",
+      "processing": "RGB preview bounded to 1600 pixels"
     },
     {
       "path": "publications/assets/zh-CN/gpu_equivalence.png",
-      "source": "outputs/publication_rc1_20261007_01/panels/zh-CN/gpu_equivalence.png",
-      "source_sha256": "545eb6330acd038c13d2e1ade8307cd29518ad828e9943ef0b3dfb4a4ee91498",
-      "sha256": "d256335806aabbc4a7a1ce2e214edb8e5cc22363e8988a30ce1e59b19fd4b10a",
-      "processing": "RGB preview; bounded dimensions; same figure identity"
+      "source": "outputs/publication_review_20261015_03/panels/zh-CN/gpu_equivalence.png",
+      "source_sha256": "710c05867fe0c6d90e04e35bb69aec5b8c390eac7319e9435b21f7a98c372ab2",
+      "sha256": "f07f23177644694b674a878ab1853207c64f7dce2d2ccd659d07fb35a20fb051",
+      "processing": "RGB preview bounded to 1600 pixels"
     },
     {
       "path": "publications/assets/zh-CN/resource_memory.png",
-      "source": "outputs/publication_rc1_20261007_01/panels/zh-CN/resource_memory.png",
-      "source_sha256": "2ffd5b53bcba3e18a5721089093fe8a3fb6bceb6b21279fb6729e9637e0488d0",
-      "sha256": "f8fd0bc8c36bf0622988b4b0cc6ef3f3cfc45d9d9cc0a4a0268695f097599b68",
-      "processing": "RGB preview; bounded dimensions; same figure identity"
-    },
-    {
-      "path": "publications/assets/zh-CN/model_hierarchy.png",
-      "source": "outputs/publication_rc1_20261007_01/panels/zh-CN/model_hierarchy.png",
-      "source_sha256": "a490ea3f415d7af2c74ead02f59e0ab86df7351fd56909576107a04282a7cb77",
-      "sha256": "c86e77a0fc4dc728705196a7993961e9aa303d2b4517febbc3040abee64afb1a",
-      "processing": "RGB preview; bounded dimensions; same figure identity"
-    },
-    {
-      "path": "publications/report/zh-CN/chapters/report_zh-CN_01.md",
-      "source": "outputs/publication_rc1_20261007_01/documents/report/zh-CN/report_zh-CN_01.md",
-      "source_sha256": "8744f3e5f61d5e2f22da9b17f751b2b99ab0e2f57fbf45659dd74111a39e08a4",
-      "sha256": "b48aa0aea120f0f1a61dcf538bf2485f7effdff5e02c490b9dd26a7aabc208d9",
-      "processing": "stable chapter reading path; parent numbering retained"
-    },
-    {
-      "path": "publications/report/zh-CN/chapters/report_zh-CN_02.md",
-      "source": "outputs/publication_rc1_20261007_01/documents/report/zh-CN/report_zh-CN_02.md",
-      "source_sha256": "4ca9a05ce010d3ee5727ac072fb31d1bad363487d6b58d4cefdacc83578156e1",
-      "sha256": "a2193a868856792d8201b185772d8d29cdd71c1aed15b67f40dd1c5babf191ec",
-      "processing": "stable chapter reading path; parent numbering retained"
-    },
-    {
-      "path": "publications/assets/zh-CN/q1_profile.png",
-      "source": "outputs/publication_rc1_20261007_01/composites/zh-CN/q1_profile.png",
-      "source_sha256": "0dd766b005e223c310dce27df327d2a39f5d13e14fd09137ae9f8252b9715142",
-      "sha256": "fc46d7e15cba9c26b2408bc1caa33a1dce6d2027b675aabfc5e2bb3df5be3f65",
-      "processing": "RGB preview; bounded dimensions; same figure identity"
-    },
-    {
-      "path": "publications/assets/zh-CN/q1_cross_section.png",
-      "source": "outputs/publication_rc1_20261007_01/panels/zh-CN/q1_cross_section.png",
-      "source_sha256": "96328fae9d0641d4841ad36ae27f444cb4d757ec22cd6bff68cc8dc564143f79",
-      "sha256": "ee179e7e13ed5f0bcd2ac24fc0abcf9d4e5220b4f6d48ace998558d940de5294",
-      "processing": "RGB preview; bounded dimensions; same figure identity"
-    },
-    {
-      "path": "publications/assets/zh-CN/q1_fem_error.png",
-      "source": "outputs/publication_rc1_20261007_01/panels/zh-CN/q1_fem_error.png",
-      "source_sha256": "cdc9b971cde31f5b218a025410e55f0e1c2dae1763790865cfbeb8cb3b7f6115",
-      "sha256": "2df2944b8ed9597132a8f1de9fdb963b1bea0cfb7618de7191fed899843c4768",
-      "processing": "RGB preview; bounded dimensions; same figure identity"
-    },
-    {
-      "path": "publications/report/zh-CN/chapters/report_zh-CN_03.md",
-      "source": "outputs/publication_rc1_20261007_01/documents/report/zh-CN/report_zh-CN_03.md",
-      "source_sha256": "2badd54c3e278b2725adcb7ae557edf16125d77217584a52ab6d471ff461aa27",
-      "sha256": "9de95c13965a629a98e44257fb33a6b88ddbf32373d8c92eeae947db1caeffbc",
-      "processing": "stable chapter reading path; parent numbering retained"
-    },
-    {
-      "path": "publications/assets/zh-CN/common_terminal.png",
-      "source": "outputs/publication_rc1_20261007_01/panels/zh-CN/common_terminal.png",
-      "source_sha256": "2234cf650ee16e4f3e3be9e641872d27d3a7abb71819628670138c9a34772554",
-      "sha256": "24be1eea566053518ee824a99429fad58f6a2321c2e919bff6f0cfa683a2f94f",
-      "processing": "RGB preview; bounded dimensions; same figure identity"
-    },
-    {
-      "path": "publications/assets/zh-CN/coax640_currents.png",
-      "source": "outputs/publication_rc1_20261007_01/composites/zh-CN/coax640_currents.png",
-      "source_sha256": "c8ca05145127b46cf897286646f3e1e21faeca153d5318c2efe5e3dd21a4e3a6",
-      "sha256": "31cb56f09ef6ae8f181e6ba7cdab21ed8670249791903cd0bd5323474f9e8e78",
-      "processing": "RGB preview; bounded dimensions; same figure identity"
-    },
-    {
-      "path": "publications/assets/zh-CN/coax640_fields.png",
-      "source": "outputs/publication_rc1_20261007_01/composites/zh-CN/coax640_fields.png",
-      "source_sha256": "59c41822246d3249d2c2f3debaa31f5b6680a64df5a3344d33033c4c5924636a",
-      "sha256": "0e2109b05f869eba805cc6d0f5a988e732154dc144ab8bd42bf7bf5668e2edab",
-      "processing": "RGB preview; bounded dimensions; same figure identity"
-    },
-    {
-      "path": "publications/assets/zh-CN/coax640_mesh.png",
-      "source": "outputs/publication_rc1_20261007_01/panels/zh-CN/coax640_mesh.png",
-      "source_sha256": "e029226158ee9746a272f8b6c8f96cc7879cbc7ab0518fdb7fcdd392122ccfa1",
-      "sha256": "228851ea55c2cf8cd19fce9d265920e0ced9441ce7394ba318119e8ca11c2d60",
-      "processing": "RGB preview; bounded dimensions; same figure identity"
-    },
-    {
-      "path": "publications/report/zh-CN/chapters/report_zh-CN_04.md",
-      "source": "outputs/publication_rc1_20261007_01/documents/report/zh-CN/report_zh-CN_04.md",
-      "source_sha256": "b6ee6990a19d63e805aa1bb0dfb60a739ff481ef660730f1b0bd1fafc96a10f6",
-      "sha256": "5f8ca76b48eca84ebb19f9a85471656fb3301d5768a20b7f531d9d563e6e48a4",
-      "processing": "stable chapter reading path; parent numbering retained"
-    },
-    {
-      "path": "publications/assets/zh-CN/geometry_comparison.png",
-      "source": "outputs/publication_rc1_20261007_01/composites/zh-CN/geometry_comparison.png",
-      "source_sha256": "e2e8bebc30b620a95f395eabd0a38d70df96a53b4bfb37934f68b917e73c236d",
-      "sha256": "ecb1776a7d0f4d2b535ba92d947ac27eac9497abc150abf82151e9d99eb21cbc",
-      "processing": "RGB preview; bounded dimensions; same figure identity"
-    },
-    {
-      "path": "publications/report/zh-CN/chapters/report_zh-CN_05.md",
-      "source": "outputs/publication_rc1_20261007_01/documents/report/zh-CN/report_zh-CN_05.md",
-      "source_sha256": "eddaa04257000d04cd999585dca1043374625cc84afbecaa8952c97ee17e9ff2",
-      "sha256": "b0e40fd976cb899c287addae233f96db443423f4d375cc03f16f5e491394cb9c",
-      "processing": "stable chapter reading path; parent numbering retained"
-    },
-    {
-      "path": "publications/assets/zh-CN/peec_cross_section.png",
-      "source": "outputs/publication_rc1_20261007_01/panels/zh-CN/peec_cross_section.png",
-      "source_sha256": "8884d2a49227350f0d6fea2f0d352676a5ecc6f29528a7247fef468349070209",
-      "sha256": "d4f521e45593013cf48f587f7197ebc9fc8b92c1c43e0df141f8b7e394de6a5d",
-      "processing": "RGB preview; bounded dimensions; same figure identity"
-    },
-    {
-      "path": "publications/assets/zh-CN/peec_length.png",
-      "source": "outputs/publication_rc1_20261007_01/panels/zh-CN/peec_length.png",
-      "source_sha256": "81b3a635192e80b4c9a64bc616815d3a30bd79908b1c432b43881ed2dc740d72",
-      "sha256": "22b11a895d342140be9613aba14944083f92d0f4261f52fe1f34eedcb0c152f3",
-      "processing": "RGB preview; bounded dimensions; same figure identity"
-    },
-    {
-      "path": "publications/assets/zh-CN/peec_sensitivity.png",
-      "source": "outputs/publication_rc1_20261007_01/panels/zh-CN/peec_sensitivity.png",
-      "source_sha256": "03a3f0f173bd0d5f087f0af9c5b65d892ec57c851f3e57c80e1f8e397fe5836f",
-      "sha256": "66f60214fcefe445ce51a2c412da740d01b9a6cb74fa80c8bee61e3e5293b888",
-      "processing": "RGB preview; bounded dimensions; same figure identity"
-    },
-    {
-      "path": "publications/report/zh-CN/chapters/report_zh-CN_06.md",
-      "source": "outputs/publication_rc1_20261007_01/documents/report/zh-CN/report_zh-CN_06.md",
-      "source_sha256": "17aa4dd77303164651f82ed2b96b5a95472353e5d8edd8f4de03aacfd03cf7bc",
-      "sha256": "0a407c71b6bc023e3f35e114ec0fec34c7037d45fb5beb59cdb053a326955aeb",
-      "processing": "stable chapter reading path; parent numbering retained"
-    },
-    {
-      "path": "publications/assets/zh-CN/rt0_sections.png",
-      "source": "outputs/publication_rc1_20261007_01/composites/zh-CN/rt0_sections.png",
-      "source_sha256": "c6909bb060f9e1599e9b785f863ae2ff1b86ab3120d313e4f976d355f76997b2",
-      "sha256": "3e57ba4075340137341a4cee0d412eafd3437f9282ec70d809f9099c8e489890",
-      "processing": "RGB preview; bounded dimensions; same figure identity"
-    },
-    {
-      "path": "publications/assets/zh-CN/rt0_vectors.png",
-      "source": "outputs/publication_rc1_20261007_01/panels/zh-CN/rt0_vectors.png",
-      "source_sha256": "b14c832c38fd32e565b2254e568ccbb54a7b60771052e84fdc00340cd5d1745c",
-      "sha256": "cc429927a7a0bd7ba99332aa5a69dd748a392279cdb2e7b6067a4f83c0da5fcf",
-      "processing": "RGB preview; bounded dimensions; same figure identity"
-    },
-    {
-      "path": "publications/assets/zh-CN/rt0_spatial.png",
-      "source": "outputs/publication_rc1_20261007_01/panels/zh-CN/rt0_spatial.png",
-      "source_sha256": "4ef73ceabb323e95147ff4e5067f219f42b5bca1005e6ad515d0cbc9018f2b59",
-      "sha256": "453907cabede54b2636f90f67359c1572c919f2a4cd5d33c94b4a657553dcf92",
-      "processing": "RGB preview; bounded dimensions; same figure identity"
-    },
-    {
-      "path": "publications/report/zh-CN/chapters/report_zh-CN_07.md",
-      "source": "outputs/publication_rc1_20261007_01/documents/report/zh-CN/report_zh-CN_07.md",
-      "source_sha256": "0af954727a9797f244d6779b91f34275d2d5bb726f2fbb13d458e8dede2c5db6",
-      "sha256": "73146ae152106dedd3d56f05cd73295fc725f17aab519aaa25e7c9fd02c85c38",
-      "processing": "stable chapter reading path; parent numbering retained"
-    },
-    {
-      "path": "publications/assets/zh-CN/aphi_preserved.png",
-      "source": "outputs/publication_rc1_20261007_01/composites/zh-CN/aphi_preserved.png",
-      "source_sha256": "1b8e3859e522429ef9b0a48fe7b36cdb6d4a2cabc97d2b126a3de305bb9d7075",
-      "sha256": "7d6a0b589eda699327a3802c8835aae94fb3a97447e4ce275cda0c9da9ebb4e2",
-      "processing": "RGB preview; bounded dimensions; same figure identity"
-    },
-    {
-      "path": "publications/assets/zh-CN/aphi_gates.png",
-      "source": "outputs/publication_rc1_20261007_01/panels/zh-CN/aphi_gates.png",
-      "source_sha256": "f65c9af5be50311587c7930fb45da94d5958b5e44956cf88913628e1eadcf11c",
-      "sha256": "afd17fbc3eb2b1a41ab3d8b8181b4a04658b54bae620ad9ba66198000bd715be",
-      "processing": "RGB preview; bounded dimensions; same figure identity"
-    },
-    {
-      "path": "publications/report/zh-CN/chapters/report_zh-CN_08.md",
-      "source": "outputs/publication_rc1_20261007_01/documents/report/zh-CN/report_zh-CN_08.md",
-      "source_sha256": "b732399f413cb8aef6906fca9b2605ec9c2b3ded6f00ecf1ffa96f760572e384",
-      "sha256": "45eee32557a8c112d9b4bbd96b288e7562df71d3889d8d5bf1c157c89d0a0096",
-      "processing": "stable chapter reading path; parent numbering retained"
-    },
-    {
-      "path": "publications/assets/zh-CN/ansys_seven_current.png",
-      "source": "outputs/publication_rc1_20261007_01/panels/zh-CN/ansys_seven_current.png",
-      "source_sha256": "119e112339749a6f4c9bfc0f5a987cdf8b0b47cf29ea8cc3c45dfcd32ccddfd9",
-      "sha256": "593fed1fce56008969570d54623bd57fec52538a84a36a96edc682aab810d155",
-      "processing": "RGB preview; bounded dimensions; same figure identity"
-    },
-    {
-      "path": "publications/assets/zh-CN/ansys_limits.png",
-      "source": "outputs/publication_rc1_20261007_01/panels/zh-CN/ansys_limits.png",
-      "source_sha256": "b82a91fcc5bf400333a42d4d36defebd39d3a36ecdd92a3a99d0e1c2313d791a",
-      "sha256": "d78bf5a3572b7b3f09bd4dba5cc600692a4124386fc25438e031a0c7cee9cdf2",
-      "processing": "RGB preview; bounded dimensions; same figure identity"
-    },
-    {
-      "path": "publications/report/zh-CN/chapters/report_zh-CN_09.md",
-      "source": "outputs/publication_rc1_20261007_01/documents/report/zh-CN/report_zh-CN_09.md",
-      "source_sha256": "c93fcb114d383e917c0bfb2ff0cf53923b569007912ac68a4acd0a8bdb70bfa0",
-      "sha256": "41dc0f91e197086432957c85b8b1dcbbb6c2e9d906045fa3b6ab19441b1ece3e",
-      "processing": "stable chapter reading path; parent numbering retained"
-    },
-    {
-      "path": "publications/assets/zh-CN/gpu_equivalence.png",
-      "source": "outputs/publication_rc1_20261007_01/panels/zh-CN/gpu_equivalence.png",
-      "source_sha256": "545eb6330acd038c13d2e1ade8307cd29518ad828e9943ef0b3dfb4a4ee91498",
-      "sha256": "d256335806aabbc4a7a1ce2e214edb8e5cc22363e8988a30ce1e59b19fd4b10a",
-      "processing": "RGB preview; bounded dimensions; same figure identity"
-    },
-    {
-      "path": "publications/assets/zh-CN/resource_memory.png",
-      "source": "outputs/publication_rc1_20261007_01/panels/zh-CN/resource_memory.png",
-      "source_sha256": "2ffd5b53bcba3e18a5721089093fe8a3fb6bceb6b21279fb6729e9637e0488d0",
-      "sha256": "f8fd0bc8c36bf0622988b4b0cc6ef3f3cfc45d9d9cc0a4a0268695f097599b68",
-      "processing": "RGB preview; bounded dimensions; same figure identity"
-    },
-    {
-      "path": "publications/report/zh-CN/chapters/report_zh-CN_10.md",
-      "source": "outputs/publication_rc1_20261007_01/documents/report/zh-CN/report_zh-CN_10.md",
-      "source_sha256": "b76fcfde7842e0f97810e431148e64d2ece1b894eb8f1eb71782cac3751fa5d9",
-      "sha256": "106c14681cf826ffa4767a3d83e11ac61c4cd129a940b8b78c4e4a63bec209f6",
-      "processing": "stable chapter reading path; parent numbering retained"
-    },
-    {
-      "path": "publications/report/zh-CN/chapters/report_zh-CN_11.md",
-      "source": "outputs/publication_rc1_20261007_01/documents/report/zh-CN/report_zh-CN_11.md",
-      "source_sha256": "80685343c2b88465610f196f538f49e82da5b88be36a1b908fcf93e0aa54dc78",
-      "sha256": "90d54c0d9c520b4f44229fb03581ca4011a3bcac01367bbc47f9ff7c5cb5ed03",
-      "processing": "stable chapter reading path; parent numbering retained"
-    },
-    {
-      "path": "publications/report/zh-CN/chapters/report_zh-CN_12.md",
-      "source": "outputs/publication_rc1_20261007_01/documents/report/zh-CN/report_zh-CN_12.md",
-      "source_sha256": "2840015385b6b2b6414f61c64b49ee3b79a133793ab822570271dabe3f10e383",
-      "sha256": "3c19ffbce63281bbeed1510279fbfe4bab9f449171e67ff21e5e2316b0bf067c",
-      "processing": "stable chapter reading path; parent numbering retained"
-    },
-    {
-      "path": "publications/report/zh-CN/chapters/report_zh-CN_A.md",
-      "source": "outputs/publication_rc1_20261007_01/documents/report/zh-CN/report_zh-CN_A.md",
-      "source_sha256": "acb5f26c49850f074bf0d8487ff438ed27a502abfcc91e0dd621f191461bda18",
-      "sha256": "6dfaf8fe594943590d1ae1c99ce0c6b5909c059997a661ab106a7d660a8624f5",
-      "processing": "stable chapter reading path; parent numbering retained"
-    },
-    {
-      "path": "publications/report/zh-CN/chapters/report_zh-CN_B.md",
-      "source": "outputs/publication_rc1_20261007_01/documents/report/zh-CN/report_zh-CN_B.md",
-      "source_sha256": "a47b645cab356c6df43b24d8dc7dbd5b4136b6852e44411647505a6a64ccf889",
-      "sha256": "f1a3a178b508e8d181ff1ce9a5bf8f03ff720fa10558ce109f423b7ec0ce2cca",
-      "processing": "stable chapter reading path; parent numbering retained"
-    },
-    {
-      "path": "publications/report/zh-CN/chapters/report_zh-CN_C.md",
-      "source": "outputs/publication_rc1_20261007_01/documents/report/zh-CN/report_zh-CN_C.md",
-      "source_sha256": "49a7fcdc845125c390e5a06231d1d2dcb358911b764282ef34e8f57e41348876",
-      "sha256": "77b41e1ab8bbc29adbd3b484bf94464fe172a67a93506801dcb65fc43f61bc4a",
-      "processing": "stable chapter reading path; parent numbering retained"
-    },
-    {
-      "path": "publications/report/zh-CN/chapters/report_zh-CN_D.md",
-      "source": "outputs/publication_rc1_20261007_01/documents/report/zh-CN/report_zh-CN_D.md",
-      "source_sha256": "c6e26909b1b8bdafa256e7d8ba1a356913f4e297cea62300ee4e2116c1aa3c47",
-      "sha256": "fb6b891bce8494a2339efe3369a834140fc4c61f70b4995c45ad3ec3228e67a6",
-      "processing": "stable chapter reading path; parent numbering retained"
+      "source": "outputs/publication_review_20261015_03/panels/zh-CN/resource_memory.png",
+      "source_sha256": "47e88aa5c5f96f6f0e7ec1f2ae79d7a80c82b45d77908aa5f010b0cd27bf9119",
+      "sha256": "cb018b53da9c20bffd00744bd19b68fe83fe866fa5c7543e471596cd2604d36e",
+      "processing": "RGB preview bounded to 1600 pixels"
     },
     {
       "path": "publications/report/zh-CN/README.md",
-      "source": "outputs/publication_rc1_20261007_01/documents/report/zh-CN/report_zh-CN.md",
-      "source_sha256": "26c3b73ba449bb8274a963951e115bb77138c5aebcced6ca176393f890f2ce79",
-      "processing": "stable reading path and lightweight figure links"
+      "source": "outputs/publication_review_20261015_03/documents/report/zh-CN/report_zh-CN.md",
+      "source_sha256": "4bb2e298069cb2b07bbf351cfe995b9667caa38391de151f669d48f5757abf0d",
+      "sha256": "c16e5a99830f6e3bde67f28c819dd636fc8d8a89ef113626424f0aa33b4233bc"
     },
     {
       "path": "publications/assets/en/model_hierarchy.png",
-      "source": "outputs/publication_rc1_20261007_01/panels/en/model_hierarchy.png",
-      "source_sha256": "9bef23b573184abe5ca06a608c0577b56338928d7a9986b283c880c9ca6fb1e9",
-      "sha256": "09bad17e32fcfcc73b5a9839e3e5597e1ad3e67e08b73ee4f5f2c19420b67692",
-      "processing": "RGB preview; bounded dimensions; same figure identity"
+      "source": "outputs/publication_review_20261015_03/panels/en/model_hierarchy.png",
+      "source_sha256": "b686f3ae66317135a7d89e32229ed96fe864f2f3fd43bf5a9b719f82927fefb7",
+      "sha256": "8279bd037feed38e1aa8bdfef52db327934d90402038483370718d7703eb51c4",
+      "processing": "RGB preview bounded to 1600 pixels"
     },
     {
       "path": "publications/assets/en/q1_profile.png",
-      "source": "outputs/publication_rc1_20261007_01/composites/en/q1_profile.png",
-      "source_sha256": "2f9c9098d2e9d4e061068e69be4b19a4087afa09b60fecf636580e208db1cfa0",
-      "sha256": "061d457a722c9575138e089c82344e70f7f8af508c665334bc10332754a7b712",
-      "processing": "RGB preview; bounded dimensions; same figure identity"
+      "source": "outputs/publication_review_20261015_03/composites/en/q1_profile.png",
+      "source_sha256": "1b246bbdeeca0582f6ddf98b312f5455e4fb1544db12f268bfa42a73e33657fc",
+      "sha256": "6da7e9912274979eb99e2dd29d7f4993effc70e77984ed99efbf7f87bd1c0ed1",
+      "processing": "RGB preview bounded to 1600 pixels"
     },
     {
       "path": "publications/assets/en/q1_cross_section.png",
-      "source": "outputs/publication_rc1_20261007_01/panels/en/q1_cross_section.png",
-      "source_sha256": "72e4777eb857a4cde50fdd330159890835033fb4f27f4d02cb2c973bae707762",
-      "sha256": "ee179e7e13ed5f0bcd2ac24fc0abcf9d4e5220b4f6d48ace998558d940de5294",
-      "processing": "RGB preview; bounded dimensions; same figure identity"
+      "source": "outputs/publication_review_20261015_03/panels/en/q1_cross_section.png",
+      "source_sha256": "cf937b48000e3c64e2dc71d2e5f134350cc3441f157ec31037d3a401e7bca1be",
+      "sha256": "a1bb8f5b32727fc959460fa86b1dcfb304b1feaaba15064f0826a43ba70da9f9",
+      "processing": "RGB preview bounded to 1600 pixels"
     },
     {
       "path": "publications/assets/en/q1_fem_error.png",
-      "source": "outputs/publication_rc1_20261007_01/panels/en/q1_fem_error.png",
-      "source_sha256": "2f76caca99085177056728e650ec2d429cb4ed528e893e8c28db09322e62ccd8",
-      "sha256": "df70bbacabdcbe874e3571e8df890b95a214b32ba6db7d9cc22cef66ff871fd4",
-      "processing": "RGB preview; bounded dimensions; same figure identity"
+      "source": "outputs/publication_review_20261015_03/panels/en/q1_fem_error.png",
+      "source_sha256": "e4df310bc5fffe137da48e3e3d8b5d9ec9b30deee94f78201489f7aa0b147456",
+      "sha256": "9cd237f2a0318243f11ab240f3a1ca89d30073888d465a977d93547c45da02a3",
+      "processing": "RGB preview bounded to 1600 pixels"
     },
     {
       "path": "publications/assets/en/common_terminal.png",
-      "source": "outputs/publication_rc1_20261007_01/panels/en/common_terminal.png",
-      "source_sha256": "4dd55d4ea66a625cdd5cde805ab6999efd4703cada4a554896a0b1d354edeb5d",
-      "sha256": "2ecfe336ea329128c0570bcb79a343dbb8186e46a4f5d1dd819b4da91c8e3284",
-      "processing": "RGB preview; bounded dimensions; same figure identity"
+      "source": "outputs/publication_review_20261015_03/panels/en/common_terminal.png",
+      "source_sha256": "a01e29805e62aa8ffcf5499b698ec937ba41631eb027875ad83d18ba69d7af7c",
+      "sha256": "1b7a83a466fcc361dd243eef5e4ae56e9bda33902ddccb3cb1faf00db6164d6d",
+      "processing": "RGB preview bounded to 1600 pixels"
     },
     {
       "path": "publications/assets/en/coax640_currents.png",
-      "source": "outputs/publication_rc1_20261007_01/composites/en/coax640_currents.png",
-      "source_sha256": "5eefdb9585fc3fd582aae943f31fc664c24e50ed75c6b5c0e917631dac3849ca",
-      "sha256": "da3e426e12ee97a4635c486bea4485e173c413fb33bc15d46c3179a4477316c0",
-      "processing": "RGB preview; bounded dimensions; same figure identity"
+      "source": "outputs/publication_review_20261015_03/composites/en/coax640_currents.png",
+      "source_sha256": "f8ddcba9472341b2f38b86246af75932903fde79af46906918ed085fb244180e",
+      "sha256": "764cc097272125b6449399603a607cb58ac61bc298b811b88158092642e85e99",
+      "processing": "RGB preview bounded to 1600 pixels"
     },
     {
       "path": "publications/assets/en/coax640_fields.png",
-      "source": "outputs/publication_rc1_20261007_01/composites/en/coax640_fields.png",
+      "source": "outputs/publication_review_20261015_03/composites/en/coax640_fields.png",
       "source_sha256": "bac65f2ddbd35087635b018fc18aecc5caa6a2a13de7f470e82e0ed804ae852d",
-      "sha256": "538db2a22a25729436071d67e51ad96b2d34562d38eb05b4aae75b95809fa9f6",
-      "processing": "RGB preview; bounded dimensions; same figure identity"
+      "sha256": "fea8e63deab65650050642ad6130c8f1e5d65cdb2ff32d6f2c1264154487107a",
+      "processing": "RGB preview bounded to 1600 pixels"
     },
     {
       "path": "publications/assets/en/coax640_mesh.png",
-      "source": "outputs/publication_rc1_20261007_01/panels/en/coax640_mesh.png",
-      "source_sha256": "3e328484845bdde17900797f7458a80c4ba356e050174c89323df3141366e35b",
-      "sha256": "be21145e0dfead361430afc32b46a735efff9eb52a0bb4a82fbfe72851f2a3b0",
-      "processing": "RGB preview; bounded dimensions; same figure identity"
+      "source": "outputs/publication_review_20261015_03/panels/en/coax640_mesh.png",
+      "source_sha256": "a87916b2f6650de12d997e7bf547e3c445775ac8a778d2876e7cb0182fdc5699",
+      "sha256": "f65e2f791792bddbe8bb7c45e6cec2f400959348589acc3abf4088848566240d",
+      "processing": "RGB preview bounded to 1600 pixels"
     },
     {
       "path": "publications/assets/en/geometry_comparison.png",
-      "source": "outputs/publication_rc1_20261007_01/composites/en/geometry_comparison.png",
-      "source_sha256": "847cc5a75edee5d402fe7a932f568190ca8529ece84e595812c3dbf47a9d6aa2",
-      "sha256": "3c015d04f01b2359de38d2a8a0b6a3108a1175daa9c92eb9ea739eaf681a88b9",
-      "processing": "RGB preview; bounded dimensions; same figure identity"
+      "source": "outputs/publication_review_20261015_03/composites/en/geometry_comparison.png",
+      "source_sha256": "987fad194984b42f400a7d53fa124cf61d1bd3b81b5196feeaf9e9bc14f781d9",
+      "sha256": "1a4f2988e6d8232a9406d909be7ddecc3b5d8fb3cbf6cc80c9d74a148bfcfce2",
+      "processing": "RGB preview bounded to 1600 pixels"
     },
     {
       "path": "publications/assets/en/peec_cross_section.png",
-      "source": "outputs/publication_rc1_20261007_01/panels/en/peec_cross_section.png",
-      "source_sha256": "d194c7d09b39077fa9a5c38723b2961a79e2cc1d89de39a6f8679b9fe4c43172",
-      "sha256": "d4f521e45593013cf48f587f7197ebc9fc8b92c1c43e0df141f8b7e394de6a5d",
-      "processing": "RGB preview; bounded dimensions; same figure identity"
+      "source": "outputs/publication_review_20261015_03/panels/en/peec_cross_section.png",
+      "source_sha256": "9ca61d4c793f10ef06e24d437d35b7f5eaf961ca51fa17d4e660a4be069e2d24",
+      "sha256": "d2078124943937e6f7820095f45ef22a1125a66350ef4ef1f11b26373d96fc74",
+      "processing": "RGB preview bounded to 1600 pixels"
     },
     {
       "path": "publications/assets/en/peec_length.png",
-      "source": "outputs/publication_rc1_20261007_01/panels/en/peec_length.png",
-      "source_sha256": "6140cfbf4aeefa779aa6f73c91e30d9dcc8718a73b15c4e2eae91d68c1b64089",
-      "sha256": "aa10a3710ce4ffe2fdefd0091852d1d4fbeb8daa243544361b9c709dfaaec4db",
-      "processing": "RGB preview; bounded dimensions; same figure identity"
+      "source": "outputs/publication_review_20261015_03/panels/en/peec_length.png",
+      "source_sha256": "53c182168a31b3625e11aaaa996aa561d8a314e37f274c8a2675394abc11e678",
+      "sha256": "fadd15ab9c977865681afeff39cb2959b9524e760ebc4a66be56f266c412787b",
+      "processing": "RGB preview bounded to 1600 pixels"
     },
     {
       "path": "publications/assets/en/peec_sensitivity.png",
-      "source": "outputs/publication_rc1_20261007_01/panels/en/peec_sensitivity.png",
-      "source_sha256": "94325c0e13390537544982b23bd1b5cfae1db533b61f99c9d7b80d8c7df6ff26",
-      "sha256": "57f5928dba6e6d71f5ae5d214e63d4eca10f38de7148cb09f9ab21c71bcbb5a9",
-      "processing": "RGB preview; bounded dimensions; same figure identity"
+      "source": "outputs/publication_review_20261015_03/panels/en/peec_sensitivity.png",
+      "source_sha256": "fd69a435f2ba57eab28b5c2721b11034e80d071c37ad0d814cd400823fb13da9",
+      "sha256": "b4d0f747ec4c756af19b70394ef9f781ccf0455614867fdf12e9b89d0fd93599",
+      "processing": "RGB preview bounded to 1600 pixels"
     },
     {
       "path": "publications/assets/en/rt0_sections.png",
-      "source": "outputs/publication_rc1_20261007_01/composites/en/rt0_sections.png",
+      "source": "outputs/publication_review_20261015_03/composites/en/rt0_sections.png",
       "source_sha256": "c6909bb060f9e1599e9b785f863ae2ff1b86ab3120d313e4f976d355f76997b2",
-      "sha256": "3e57ba4075340137341a4cee0d412eafd3437f9282ec70d809f9099c8e489890",
-      "processing": "RGB preview; bounded dimensions; same figure identity"
+      "sha256": "8dcb8aa88e8d11079d2f7ece5373ef63839b6f278b3e66783bf734cabc6f7a01",
+      "processing": "RGB preview bounded to 1600 pixels"
     },
     {
       "path": "publications/assets/en/rt0_vectors.png",
-      "source": "outputs/publication_rc1_20261007_01/panels/en/rt0_vectors.png",
-      "source_sha256": "953deae1d949f941416d616135d8f5742259fd41d36c9ace8260ad78c510cebf",
-      "sha256": "cc429927a7a0bd7ba99332aa5a69dd748a392279cdb2e7b6067a4f83c0da5fcf",
-      "processing": "RGB preview; bounded dimensions; same figure identity"
+      "source": "outputs/publication_review_20261015_03/panels/en/rt0_vectors.png",
+      "source_sha256": "a35cb66cf415c49854cf9d1ad2032cea2c5be74f61c18c95c3198bc8d2461632",
+      "sha256": "1bdb2cfab7a3c7a6ae4130a92654d87c55f8ee08549db335e242061cc30f1d88",
+      "processing": "RGB preview bounded to 1600 pixels"
     },
     {
       "path": "publications/assets/en/rt0_spatial.png",
-      "source": "outputs/publication_rc1_20261007_01/panels/en/rt0_spatial.png",
-      "source_sha256": "0a479fde3f1c8d157f5719674cee9ba9ff073c4db6e875e019fff59bef14ebb7",
-      "sha256": "87f844dc9b815591761c0474c4a077c0dbd6ebd56859490097b9fee2e8a9cfd9",
-      "processing": "RGB preview; bounded dimensions; same figure identity"
+      "source": "outputs/publication_review_20261015_03/panels/en/rt0_spatial.png",
+      "source_sha256": "bd2623ae45fe444e1b738702b78aa702a2ddbdbb8c0d1bd0c0822c8330171c95",
+      "sha256": "054aa8a5d97b0f31e40ebff481bab0f70ab3804a58cd9bb100789282f75cbc6a",
+      "processing": "RGB preview bounded to 1600 pixels"
     },
     {
       "path": "publications/assets/en/aphi_preserved.png",
-      "source": "outputs/publication_rc1_20261007_01/composites/en/aphi_preserved.png",
-      "source_sha256": "1b8e3859e522429ef9b0a48fe7b36cdb6d4a2cabc97d2b126a3de305bb9d7075",
-      "sha256": "7d6a0b589eda699327a3802c8835aae94fb3a97447e4ce275cda0c9da9ebb4e2",
-      "processing": "RGB preview; bounded dimensions; same figure identity"
+      "source": "outputs/publication_review_20261015_03/composites/en/aphi_preserved.png",
+      "source_sha256": "08aa7de18b95d937c600d60e85dab63c2ca97d9ee56b66c31f1c5597ab31eeba",
+      "sha256": "047925e077ac7e95486c03f254f29422581925e8d4c760983f4797232531c182",
+      "processing": "RGB preview bounded to 1600 pixels"
     },
     {
       "path": "publications/assets/en/aphi_gates.png",
-      "source": "outputs/publication_rc1_20261007_01/panels/en/aphi_gates.png",
-      "source_sha256": "13cc1add5c13a65ae9ef914a15d3ae3f2f94d090c4363814381cf2255fd66c2f",
-      "sha256": "f4880f60815de7478ee29cd3c9d6a171aa1f184f5b53c1db767a703f83e8144f",
-      "processing": "RGB preview; bounded dimensions; same figure identity"
+      "source": "outputs/publication_review_20261015_03/panels/en/aphi_gates.png",
+      "source_sha256": "666593f068082b1d8b12d79157da8f513e0afa4fec4e64d92df029401770fb0e",
+      "sha256": "845bc2c58d3fb3437dcb16c1e2ab7f24a0a3e4f574ce6a6459be97fa773ebdb1",
+      "processing": "RGB preview bounded to 1600 pixels"
     },
     {
       "path": "publications/assets/en/ansys_seven_current.png",
-      "source": "outputs/publication_rc1_20261007_01/panels/en/ansys_seven_current.png",
-      "source_sha256": "c67ecce865c9b7e256cb4860a0e1ed4ee867167f3e4b03b9c786234b619fd48f",
-      "sha256": "454f0763e2aafb3d9182ac3115ef7ec1dd92b931a1fee521aa8a065627000f09",
-      "processing": "RGB preview; bounded dimensions; same figure identity"
+      "source": "outputs/publication_review_20261015_03/panels/en/ansys_seven_current.png",
+      "source_sha256": "ebe370bb78c32f1f2823629b6318706f67bd9fc40c16ceac69be98f9ef33e697",
+      "sha256": "53d1f4392254e9e46f91d57a3fcde04912b3bc453c7a355d9708d5384997563b",
+      "processing": "RGB preview bounded to 1600 pixels"
     },
     {
       "path": "publications/assets/en/ansys_limits.png",
-      "source": "outputs/publication_rc1_20261007_01/panels/en/ansys_limits.png",
-      "source_sha256": "001c7b2366adcf6daf3e7b343e93ed31b03b3e3b8d5a3cf430a17fe645ad8d0b",
-      "sha256": "eaf4878ce7588ae07090de79e504584c3e8ef5f02fbfd467ded701aa109e8919",
-      "processing": "RGB preview; bounded dimensions; same figure identity"
+      "source": "outputs/publication_review_20261015_03/panels/en/ansys_limits.png",
+      "source_sha256": "730bcbe4f0389758abbeb7cd64bd3cc1ca6419a10daa4dfd1c251ccc04072abb",
+      "sha256": "b7bae5e4651db9954e29cdc8b05b33e058c5f1985614879e31ed34058abb5def",
+      "processing": "RGB preview bounded to 1600 pixels"
     },
     {
       "path": "publications/assets/en/gpu_equivalence.png",
-      "source": "outputs/publication_rc1_20261007_01/panels/en/gpu_equivalence.png",
-      "source_sha256": "41d3b27a4cbb018f3fb0cd6a48505fc47e6023747eb0c5d71abf02ee69d8cfdf",
-      "sha256": "2f31b642413f310c606bb53a757c058a3db511efc63412381484ca14b7d3f651",
-      "processing": "RGB preview; bounded dimensions; same figure identity"
+      "source": "outputs/publication_review_20261015_03/panels/en/gpu_equivalence.png",
+      "source_sha256": "d73aefdabfaea401c6de392932f62590e12ab87a83a931e75c8e3af5a10c0efc",
+      "sha256": "0c76d78ce8d70a2879176a6112d0280ae393bcd1e54a9c0d1424ab9c1932bd27",
+      "processing": "RGB preview bounded to 1600 pixels"
     },
     {
       "path": "publications/assets/en/resource_memory.png",
-      "source": "outputs/publication_rc1_20261007_01/panels/en/resource_memory.png",
-      "source_sha256": "96c68ff99ddd219017352f02ea255c8b5591de25ffd9561f7763e300c7c0ba30",
-      "sha256": "6ba2613d485878ba97285e443442c420ac18f81917eb565837fb3f7c76dab53d",
-      "processing": "RGB preview; bounded dimensions; same figure identity"
-    },
-    {
-      "path": "publications/assets/en/model_hierarchy.png",
-      "source": "outputs/publication_rc1_20261007_01/panels/en/model_hierarchy.png",
-      "source_sha256": "9bef23b573184abe5ca06a608c0577b56338928d7a9986b283c880c9ca6fb1e9",
-      "sha256": "09bad17e32fcfcc73b5a9839e3e5597e1ad3e67e08b73ee4f5f2c19420b67692",
-      "processing": "RGB preview; bounded dimensions; same figure identity"
-    },
-    {
-      "path": "publications/report/en/chapters/report_en_01.md",
-      "source": "outputs/publication_rc1_20261007_01/documents/report/en/report_en_01.md",
-      "source_sha256": "2a6d31f71f5390f6f64dc110cf64ba64a7ff549a16c1477dcfa085784898b3b6",
-      "sha256": "4e604c4540a375a6328dbb9196367345f1315b75d0a89dc2981b9384ee719b3d",
-      "processing": "stable chapter reading path; parent numbering retained"
-    },
-    {
-      "path": "publications/report/en/chapters/report_en_02.md",
-      "source": "outputs/publication_rc1_20261007_01/documents/report/en/report_en_02.md",
-      "source_sha256": "533510ace13e6aacbb312ba6d82aff4cd45092ad6d73221dcdaa9e39f3b15ea2",
-      "sha256": "7bb9cb50ba90cae98c720c038cf7627f060f3f7270e218f7a8c6e6994eeb497f",
-      "processing": "stable chapter reading path; parent numbering retained"
-    },
-    {
-      "path": "publications/assets/en/q1_profile.png",
-      "source": "outputs/publication_rc1_20261007_01/composites/en/q1_profile.png",
-      "source_sha256": "2f9c9098d2e9d4e061068e69be4b19a4087afa09b60fecf636580e208db1cfa0",
-      "sha256": "061d457a722c9575138e089c82344e70f7f8af508c665334bc10332754a7b712",
-      "processing": "RGB preview; bounded dimensions; same figure identity"
-    },
-    {
-      "path": "publications/assets/en/q1_cross_section.png",
-      "source": "outputs/publication_rc1_20261007_01/panels/en/q1_cross_section.png",
-      "source_sha256": "72e4777eb857a4cde50fdd330159890835033fb4f27f4d02cb2c973bae707762",
-      "sha256": "ee179e7e13ed5f0bcd2ac24fc0abcf9d4e5220b4f6d48ace998558d940de5294",
-      "processing": "RGB preview; bounded dimensions; same figure identity"
-    },
-    {
-      "path": "publications/assets/en/q1_fem_error.png",
-      "source": "outputs/publication_rc1_20261007_01/panels/en/q1_fem_error.png",
-      "source_sha256": "2f76caca99085177056728e650ec2d429cb4ed528e893e8c28db09322e62ccd8",
-      "sha256": "df70bbacabdcbe874e3571e8df890b95a214b32ba6db7d9cc22cef66ff871fd4",
-      "processing": "RGB preview; bounded dimensions; same figure identity"
-    },
-    {
-      "path": "publications/report/en/chapters/report_en_03.md",
-      "source": "outputs/publication_rc1_20261007_01/documents/report/en/report_en_03.md",
-      "source_sha256": "fa6ddd6a813960b8da3d2c8b4e8e83f4caa103f840095ccc664973fd1dd32b4a",
-      "sha256": "ebcc9f793fcc5e1b396a3455ee19bee74e825b49894ace4a0f4e97e9fa53b0e1",
-      "processing": "stable chapter reading path; parent numbering retained"
-    },
-    {
-      "path": "publications/assets/en/common_terminal.png",
-      "source": "outputs/publication_rc1_20261007_01/panels/en/common_terminal.png",
-      "source_sha256": "4dd55d4ea66a625cdd5cde805ab6999efd4703cada4a554896a0b1d354edeb5d",
-      "sha256": "2ecfe336ea329128c0570bcb79a343dbb8186e46a4f5d1dd819b4da91c8e3284",
-      "processing": "RGB preview; bounded dimensions; same figure identity"
-    },
-    {
-      "path": "publications/assets/en/coax640_currents.png",
-      "source": "outputs/publication_rc1_20261007_01/composites/en/coax640_currents.png",
-      "source_sha256": "5eefdb9585fc3fd582aae943f31fc664c24e50ed75c6b5c0e917631dac3849ca",
-      "sha256": "da3e426e12ee97a4635c486bea4485e173c413fb33bc15d46c3179a4477316c0",
-      "processing": "RGB preview; bounded dimensions; same figure identity"
-    },
-    {
-      "path": "publications/assets/en/coax640_fields.png",
-      "source": "outputs/publication_rc1_20261007_01/composites/en/coax640_fields.png",
-      "source_sha256": "bac65f2ddbd35087635b018fc18aecc5caa6a2a13de7f470e82e0ed804ae852d",
-      "sha256": "538db2a22a25729436071d67e51ad96b2d34562d38eb05b4aae75b95809fa9f6",
-      "processing": "RGB preview; bounded dimensions; same figure identity"
-    },
-    {
-      "path": "publications/assets/en/coax640_mesh.png",
-      "source": "outputs/publication_rc1_20261007_01/panels/en/coax640_mesh.png",
-      "source_sha256": "3e328484845bdde17900797f7458a80c4ba356e050174c89323df3141366e35b",
-      "sha256": "be21145e0dfead361430afc32b46a735efff9eb52a0bb4a82fbfe72851f2a3b0",
-      "processing": "RGB preview; bounded dimensions; same figure identity"
-    },
-    {
-      "path": "publications/report/en/chapters/report_en_04.md",
-      "source": "outputs/publication_rc1_20261007_01/documents/report/en/report_en_04.md",
-      "source_sha256": "9c63779372e78a494927a1e32443a30a80f7f388c192b3328f08034321fe60fd",
-      "sha256": "c035248c1de3f9fd274521d507e875da453b09072311a3e9c1a2dfd1b9957878",
-      "processing": "stable chapter reading path; parent numbering retained"
-    },
-    {
-      "path": "publications/assets/en/geometry_comparison.png",
-      "source": "outputs/publication_rc1_20261007_01/composites/en/geometry_comparison.png",
-      "source_sha256": "847cc5a75edee5d402fe7a932f568190ca8529ece84e595812c3dbf47a9d6aa2",
-      "sha256": "3c015d04f01b2359de38d2a8a0b6a3108a1175daa9c92eb9ea739eaf681a88b9",
-      "processing": "RGB preview; bounded dimensions; same figure identity"
-    },
-    {
-      "path": "publications/report/en/chapters/report_en_05.md",
-      "source": "outputs/publication_rc1_20261007_01/documents/report/en/report_en_05.md",
-      "source_sha256": "f9ee4c856f405dc14c28ef755be95a5edae6458ee3ea07628818125d899443e8",
-      "sha256": "4aad139408563d8265757ff9de4481091730d6a05b64ce704d585a57e0915f95",
-      "processing": "stable chapter reading path; parent numbering retained"
-    },
-    {
-      "path": "publications/assets/en/peec_cross_section.png",
-      "source": "outputs/publication_rc1_20261007_01/panels/en/peec_cross_section.png",
-      "source_sha256": "d194c7d09b39077fa9a5c38723b2961a79e2cc1d89de39a6f8679b9fe4c43172",
-      "sha256": "d4f521e45593013cf48f587f7197ebc9fc8b92c1c43e0df141f8b7e394de6a5d",
-      "processing": "RGB preview; bounded dimensions; same figure identity"
-    },
-    {
-      "path": "publications/assets/en/peec_length.png",
-      "source": "outputs/publication_rc1_20261007_01/panels/en/peec_length.png",
-      "source_sha256": "6140cfbf4aeefa779aa6f73c91e30d9dcc8718a73b15c4e2eae91d68c1b64089",
-      "sha256": "aa10a3710ce4ffe2fdefd0091852d1d4fbeb8daa243544361b9c709dfaaec4db",
-      "processing": "RGB preview; bounded dimensions; same figure identity"
-    },
-    {
-      "path": "publications/assets/en/peec_sensitivity.png",
-      "source": "outputs/publication_rc1_20261007_01/panels/en/peec_sensitivity.png",
-      "source_sha256": "94325c0e13390537544982b23bd1b5cfae1db533b61f99c9d7b80d8c7df6ff26",
-      "sha256": "57f5928dba6e6d71f5ae5d214e63d4eca10f38de7148cb09f9ab21c71bcbb5a9",
-      "processing": "RGB preview; bounded dimensions; same figure identity"
-    },
-    {
-      "path": "publications/report/en/chapters/report_en_06.md",
-      "source": "outputs/publication_rc1_20261007_01/documents/report/en/report_en_06.md",
-      "source_sha256": "d7a3910666558419da77db0a021e360d41b10a39f910d37933dbf581746db197",
-      "sha256": "f40a4cfcb8b75c004a6470fc5e4d227b742081a87a8cae34f7662b6e5ef12a0c",
-      "processing": "stable chapter reading path; parent numbering retained"
-    },
-    {
-      "path": "publications/assets/en/rt0_sections.png",
-      "source": "outputs/publication_rc1_20261007_01/composites/en/rt0_sections.png",
-      "source_sha256": "c6909bb060f9e1599e9b785f863ae2ff1b86ab3120d313e4f976d355f76997b2",
-      "sha256": "3e57ba4075340137341a4cee0d412eafd3437f9282ec70d809f9099c8e489890",
-      "processing": "RGB preview; bounded dimensions; same figure identity"
-    },
-    {
-      "path": "publications/assets/en/rt0_vectors.png",
-      "source": "outputs/publication_rc1_20261007_01/panels/en/rt0_vectors.png",
-      "source_sha256": "953deae1d949f941416d616135d8f5742259fd41d36c9ace8260ad78c510cebf",
-      "sha256": "cc429927a7a0bd7ba99332aa5a69dd748a392279cdb2e7b6067a4f83c0da5fcf",
-      "processing": "RGB preview; bounded dimensions; same figure identity"
-    },
-    {
-      "path": "publications/assets/en/rt0_spatial.png",
-      "source": "outputs/publication_rc1_20261007_01/panels/en/rt0_spatial.png",
-      "source_sha256": "0a479fde3f1c8d157f5719674cee9ba9ff073c4db6e875e019fff59bef14ebb7",
-      "sha256": "87f844dc9b815591761c0474c4a077c0dbd6ebd56859490097b9fee2e8a9cfd9",
-      "processing": "RGB preview; bounded dimensions; same figure identity"
-    },
-    {
-      "path": "publications/report/en/chapters/report_en_07.md",
-      "source": "outputs/publication_rc1_20261007_01/documents/report/en/report_en_07.md",
-      "source_sha256": "4dbce19f6b21a05682bc16a3bdd3f8dc571e60b61fc51c639f482fe57cbf12ac",
-      "sha256": "28e2ea3761cf9ee81923abfc98d0b1f45cc87a6ace8ce72540a5635f1b497c6d",
-      "processing": "stable chapter reading path; parent numbering retained"
-    },
-    {
-      "path": "publications/assets/en/aphi_preserved.png",
-      "source": "outputs/publication_rc1_20261007_01/composites/en/aphi_preserved.png",
-      "source_sha256": "1b8e3859e522429ef9b0a48fe7b36cdb6d4a2cabc97d2b126a3de305bb9d7075",
-      "sha256": "7d6a0b589eda699327a3802c8835aae94fb3a97447e4ce275cda0c9da9ebb4e2",
-      "processing": "RGB preview; bounded dimensions; same figure identity"
-    },
-    {
-      "path": "publications/assets/en/aphi_gates.png",
-      "source": "outputs/publication_rc1_20261007_01/panels/en/aphi_gates.png",
-      "source_sha256": "13cc1add5c13a65ae9ef914a15d3ae3f2f94d090c4363814381cf2255fd66c2f",
-      "sha256": "f4880f60815de7478ee29cd3c9d6a171aa1f184f5b53c1db767a703f83e8144f",
-      "processing": "RGB preview; bounded dimensions; same figure identity"
-    },
-    {
-      "path": "publications/report/en/chapters/report_en_08.md",
-      "source": "outputs/publication_rc1_20261007_01/documents/report/en/report_en_08.md",
-      "source_sha256": "3c5e49b3f28d088ec9e9754f6a223d2b138c4a1370bd9070d39dde1f3ca421a9",
-      "sha256": "1916ed8f5d77f0a41e43e72df56fb91863494d234a62bd6de39f3adfe0446af8",
-      "processing": "stable chapter reading path; parent numbering retained"
-    },
-    {
-      "path": "publications/assets/en/ansys_seven_current.png",
-      "source": "outputs/publication_rc1_20261007_01/panels/en/ansys_seven_current.png",
-      "source_sha256": "c67ecce865c9b7e256cb4860a0e1ed4ee867167f3e4b03b9c786234b619fd48f",
-      "sha256": "454f0763e2aafb3d9182ac3115ef7ec1dd92b931a1fee521aa8a065627000f09",
-      "processing": "RGB preview; bounded dimensions; same figure identity"
-    },
-    {
-      "path": "publications/assets/en/ansys_limits.png",
-      "source": "outputs/publication_rc1_20261007_01/panels/en/ansys_limits.png",
-      "source_sha256": "001c7b2366adcf6daf3e7b343e93ed31b03b3e3b8d5a3cf430a17fe645ad8d0b",
-      "sha256": "eaf4878ce7588ae07090de79e504584c3e8ef5f02fbfd467ded701aa109e8919",
-      "processing": "RGB preview; bounded dimensions; same figure identity"
-    },
-    {
-      "path": "publications/report/en/chapters/report_en_09.md",
-      "source": "outputs/publication_rc1_20261007_01/documents/report/en/report_en_09.md",
-      "source_sha256": "b22166a0c80b90186c0650809ad1be4459a601bc360f91df4263466d01d707b3",
-      "sha256": "c812069f1722fb3efe914aa1a27364676deb590298625f4d590f179a03ad58c6",
-      "processing": "stable chapter reading path; parent numbering retained"
-    },
-    {
-      "path": "publications/assets/en/gpu_equivalence.png",
-      "source": "outputs/publication_rc1_20261007_01/panels/en/gpu_equivalence.png",
-      "source_sha256": "41d3b27a4cbb018f3fb0cd6a48505fc47e6023747eb0c5d71abf02ee69d8cfdf",
-      "sha256": "2f31b642413f310c606bb53a757c058a3db511efc63412381484ca14b7d3f651",
-      "processing": "RGB preview; bounded dimensions; same figure identity"
-    },
-    {
-      "path": "publications/assets/en/resource_memory.png",
-      "source": "outputs/publication_rc1_20261007_01/panels/en/resource_memory.png",
-      "source_sha256": "96c68ff99ddd219017352f02ea255c8b5591de25ffd9561f7763e300c7c0ba30",
-      "sha256": "6ba2613d485878ba97285e443442c420ac18f81917eb565837fb3f7c76dab53d",
-      "processing": "RGB preview; bounded dimensions; same figure identity"
-    },
-    {
-      "path": "publications/report/en/chapters/report_en_10.md",
-      "source": "outputs/publication_rc1_20261007_01/documents/report/en/report_en_10.md",
-      "source_sha256": "f6eee492023288b4da59e33de308b7d2de90904ad20e456463db251aa1ba5a48",
-      "sha256": "029f4e6df1e699ddf15ea752c80a7c4957d49eadde38149f5354a8fe0c78e28d",
-      "processing": "stable chapter reading path; parent numbering retained"
-    },
-    {
-      "path": "publications/report/en/chapters/report_en_11.md",
-      "source": "outputs/publication_rc1_20261007_01/documents/report/en/report_en_11.md",
-      "source_sha256": "4319fa03c5f13448716689ad7f41cef5989167dd4b66f1127fd9a96d94d6404c",
-      "sha256": "b8f1de105e97d925c7d63d3f862599a003d8f363bee293a68a43f3e7c1ab6424",
-      "processing": "stable chapter reading path; parent numbering retained"
-    },
-    {
-      "path": "publications/report/en/chapters/report_en_12.md",
-      "source": "outputs/publication_rc1_20261007_01/documents/report/en/report_en_12.md",
-      "source_sha256": "4fa520b7cf947fa8d2a486df16eb8b0314bd44138249c61227bfd8a6d6280c9a",
-      "sha256": "a155d91156aefaeb6b0a024a86556ce02419da8a1b81e78973cdfe7f67e4f1c5",
-      "processing": "stable chapter reading path; parent numbering retained"
-    },
-    {
-      "path": "publications/report/en/chapters/report_en_A.md",
-      "source": "outputs/publication_rc1_20261007_01/documents/report/en/report_en_A.md",
-      "source_sha256": "a9c74e0c8d8f928df2173a1fbd6ce444396ba015222e9d31d6b558fd3d08f9f2",
-      "sha256": "9b353c37f6e6cea0daef2bdf02160dc967c6bd4655d247fe36deac8ddee86cf0",
-      "processing": "stable chapter reading path; parent numbering retained"
-    },
-    {
-      "path": "publications/report/en/chapters/report_en_B.md",
-      "source": "outputs/publication_rc1_20261007_01/documents/report/en/report_en_B.md",
-      "source_sha256": "96f2d6698df75d6b5a50f332557d84287c4dd5d497a4a6d7a951e81650718eac",
-      "sha256": "3575508505ff4c8a3b196e3485f61f5f3f84ade6ccff17ae81a02ee21caa7c4a",
-      "processing": "stable chapter reading path; parent numbering retained"
-    },
-    {
-      "path": "publications/report/en/chapters/report_en_C.md",
-      "source": "outputs/publication_rc1_20261007_01/documents/report/en/report_en_C.md",
-      "source_sha256": "96f9e61e3d0c413bbdb762489c7fc3d9b393990d2a92099c2f0fda40f28496ca",
-      "sha256": "f1370ec49024c27d8a28842e48f041dc95727e612bee9815bccb88c99ee1c1f7",
-      "processing": "stable chapter reading path; parent numbering retained"
-    },
-    {
-      "path": "publications/report/en/chapters/report_en_D.md",
-      "source": "outputs/publication_rc1_20261007_01/documents/report/en/report_en_D.md",
-      "source_sha256": "d13615bbfb00802943673b9e644f5ca40abf8fa6316ef1aece9dbd2c36a828d2",
-      "sha256": "8bb0b3fbe9e8dfb4b22e438b844bbf4d2951fce92db08712c2cb7eed8b21ef43",
-      "processing": "stable chapter reading path; parent numbering retained"
+      "source": "outputs/publication_review_20261015_03/panels/en/resource_memory.png",
+      "source_sha256": "88a85afea81b039ac90336cccf46354c1e222c41e68c3e00f471b2750c8da973",
+      "sha256": "25627673d157450f3e9d70d876f12c5d3d90eed99a4d4924a49b3c0f2004969d",
+      "processing": "RGB preview bounded to 1600 pixels"
     },
     {
       "path": "publications/report/en/README.md",
-      "source": "outputs/publication_rc1_20261007_01/documents/report/en/report_en.md",
-      "source_sha256": "50b669cdb264dfcd01ef911e6d123f14501377e8d282b5c27b1c5b3e6a307c5a",
-      "processing": "stable reading path and lightweight figure links"
+      "source": "outputs/publication_review_20261015_03/documents/report/en/report_en.md",
+      "source_sha256": "3024213f6664c451df6bc17a35d8444e6c5108a5ba3daf88611ea0dd1dbcee59",
+      "sha256": "f992445b67da7b5fc79cd325af9e6da9ef40707b029314495980747b91de716e"
+    },
+    {
+      "path": "publications/assets/zh-CN/model_hierarchy.png",
+      "source": "outputs/publication_review_20261015_03/panels/zh-CN/model_hierarchy.png",
+      "source_sha256": "a9cec85d2829e55eb31536d449f0d58e5b5ef47ba62540dd0d4e46655c8c43c3",
+      "sha256": "335f24c48e11853e64f905697971fc4c429b3fd1033803027e6446362397a1a3",
+      "processing": "RGB preview bounded to 1600 pixels"
+    },
+    {
+      "path": "publications/assets/zh-CN/common_terminal.png",
+      "source": "outputs/publication_review_20261015_03/panels/zh-CN/common_terminal.png",
+      "source_sha256": "483135b8c67c14a92db198585d19361c4c60c7dafbe32613f12b010e02eb6d3e",
+      "sha256": "36f61a9f0752700fef98b38bd98fd5675c56a96c7b348e262ab1fbea321235ab",
+      "processing": "RGB preview bounded to 1600 pixels"
+    },
+    {
+      "path": "publications/assets/zh-CN/q1_profile.png",
+      "source": "outputs/publication_review_20261015_03/composites/zh-CN/q1_profile.png",
+      "source_sha256": "eea46fe9fa03f0a1f2b008f4addda85d29f16d113727a7baae1c4218dc2c85e9",
+      "sha256": "755d9375f16e1db11478e31497646bd56dae6b86fffb3c820c0b7f878f9b8d13",
+      "processing": "RGB preview bounded to 1600 pixels"
+    },
+    {
+      "path": "publications/assets/zh-CN/q1_cross_section.png",
+      "source": "outputs/publication_review_20261015_03/panels/zh-CN/q1_cross_section.png",
+      "source_sha256": "321148a4252badeb3c3fa55670eb0264b75bb4c155816e75cdfe1e9b8bee25a2",
+      "sha256": "a1bb8f5b32727fc959460fa86b1dcfb304b1feaaba15064f0826a43ba70da9f9",
+      "processing": "RGB preview bounded to 1600 pixels"
+    },
+    {
+      "path": "publications/assets/zh-CN/q1_fem_error.png",
+      "source": "outputs/publication_review_20261015_03/panels/zh-CN/q1_fem_error.png",
+      "source_sha256": "b699a4047bf6c806c15f256cf5c1c969604a5c56f93a253ec4c0b3707d6dfde7",
+      "sha256": "bbd3d3950790ff4710dc355eceaece39fe8880442c03f957ad3590ed33de5f1e",
+      "processing": "RGB preview bounded to 1600 pixels"
+    },
+    {
+      "path": "publications/assets/zh-CN/coax640_currents.png",
+      "source": "outputs/publication_review_20261015_03/composites/zh-CN/coax640_currents.png",
+      "source_sha256": "6fbf707bcdba08c475a82940744c8356496fe3a9d17daab2bda4f4ac5ed74180",
+      "sha256": "8e950c0fd16f8fbb0f8984542797b5236c381fe90873b3c7338e5ff38e699ff4",
+      "processing": "RGB preview bounded to 1600 pixels"
+    },
+    {
+      "path": "publications/assets/zh-CN/coax640_fields.png",
+      "source": "outputs/publication_review_20261015_03/composites/zh-CN/coax640_fields.png",
+      "source_sha256": "59c41822246d3249d2c2f3debaa31f5b6680a64df5a3344d33033c4c5924636a",
+      "sha256": "836daeb306f0bcdb7fa4447ff8f40a6e1e0695ff773b3fbecc1b942e2c18ea66",
+      "processing": "RGB preview bounded to 1600 pixels"
+    },
+    {
+      "path": "publications/assets/zh-CN/coax640_mesh.png",
+      "source": "outputs/publication_review_20261015_03/panels/zh-CN/coax640_mesh.png",
+      "source_sha256": "7e1ed30b9aa6129c102b12154a450793cdd053079787141d0f4e61ce937fdb4a",
+      "sha256": "64aafcd9a39b620c8eedc8b0ecd7e4fb25a35edd7a90790ece4ff0ef7cc0cf31",
+      "processing": "RGB preview bounded to 1600 pixels"
+    },
+    {
+      "path": "publications/assets/zh-CN/peec_length.png",
+      "source": "outputs/publication_review_20261015_03/panels/zh-CN/peec_length.png",
+      "source_sha256": "dddf5550be77e6b27f1d1dfc44f815b363e178bd460660d00d6d43c3a5e1c5f7",
+      "sha256": "ebc759bdb381bd6c9c3defa63da872323071b11f6ed886cd3787611414af861e",
+      "processing": "RGB preview bounded to 1600 pixels"
+    },
+    {
+      "path": "publications/assets/zh-CN/peec_cross_section.png",
+      "source": "outputs/publication_review_20261015_03/panels/zh-CN/peec_cross_section.png",
+      "source_sha256": "bda77c032323998778600aab814b31de2d40571b1d4a888240c24e8e35ba68bd",
+      "sha256": "d2078124943937e6f7820095f45ef22a1125a66350ef4ef1f11b26373d96fc74",
+      "processing": "RGB preview bounded to 1600 pixels"
+    },
+    {
+      "path": "publications/assets/zh-CN/peec_sensitivity.png",
+      "source": "outputs/publication_review_20261015_03/panels/zh-CN/peec_sensitivity.png",
+      "source_sha256": "d0be16e0d00a8f7c65644eadb4445386f166cf6b97d30eb964eb52205427e808",
+      "sha256": "ffd80b947e2bc0cb73bbb885f5dd8ef758d718293794024abbe6c4c6b9ea39c0",
+      "processing": "RGB preview bounded to 1600 pixels"
+    },
+    {
+      "path": "publications/assets/zh-CN/gpu_equivalence.png",
+      "source": "outputs/publication_review_20261015_03/panels/zh-CN/gpu_equivalence.png",
+      "source_sha256": "710c05867fe0c6d90e04e35bb69aec5b8c390eac7319e9435b21f7a98c372ab2",
+      "sha256": "f07f23177644694b674a878ab1853207c64f7dce2d2ccd659d07fb35a20fb051",
+      "processing": "RGB preview bounded to 1600 pixels"
+    },
+    {
+      "path": "publications/assets/zh-CN/resource_memory.png",
+      "source": "outputs/publication_review_20261015_03/panels/zh-CN/resource_memory.png",
+      "source_sha256": "47e88aa5c5f96f6f0e7ec1f2ae79d7a80c82b45d77908aa5f010b0cd27bf9119",
+      "sha256": "cb018b53da9c20bffd00744bd19b68fe83fe866fa5c7543e471596cd2604d36e",
+      "processing": "RGB preview bounded to 1600 pixels"
+    },
+    {
+      "path": "publications/assets/zh-CN/geometry_comparison.png",
+      "source": "outputs/publication_review_20261015_03/composites/zh-CN/geometry_comparison.png",
+      "source_sha256": "82f95947edfda3ba7e0012f508129c0a355882828e2609813207a5f0fd1460a2",
+      "sha256": "3355904decd733ff7cdbf6f2f51c2b89de93bc54a9b9b0eb1345579275cab882",
+      "processing": "RGB preview bounded to 1600 pixels"
+    },
+    {
+      "path": "publications/assets/zh-CN/rt0_spatial.png",
+      "source": "outputs/publication_review_20261015_03/panels/zh-CN/rt0_spatial.png",
+      "source_sha256": "71ebd3da2e70ffc37fbb85cb7e9ed3887fdd9df465cc4e3a1c6b88aaf4bc2f0c",
+      "sha256": "0d07fc21aaff6f9ef57304d1c99056ffe8409603b8074a3c4e5f517be01bdd4e",
+      "processing": "RGB preview bounded to 1600 pixels"
+    },
+    {
+      "path": "publications/assets/zh-CN/rt0_sections.png",
+      "source": "outputs/publication_review_20261015_03/composites/zh-CN/rt0_sections.png",
+      "source_sha256": "c6909bb060f9e1599e9b785f863ae2ff1b86ab3120d313e4f976d355f76997b2",
+      "sha256": "8dcb8aa88e8d11079d2f7ece5373ef63839b6f278b3e66783bf734cabc6f7a01",
+      "processing": "RGB preview bounded to 1600 pixels"
+    },
+    {
+      "path": "publications/assets/zh-CN/rt0_vectors.png",
+      "source": "outputs/publication_review_20261015_03/panels/zh-CN/rt0_vectors.png",
+      "source_sha256": "3a9fc149ddebc1c609734113de21332946c98125a75d4e645486093791020229",
+      "sha256": "1bdb2cfab7a3c7a6ae4130a92654d87c55f8ee08549db335e242061cc30f1d88",
+      "processing": "RGB preview bounded to 1600 pixels"
+    },
+    {
+      "path": "publications/assets/zh-CN/aphi_gates.png",
+      "source": "outputs/publication_review_20261015_03/panels/zh-CN/aphi_gates.png",
+      "source_sha256": "46fa359ab6eaef117e47e592af02c72a74bb30bc42a6d9875bd28d0a82849ecd",
+      "sha256": "e3d1ff0f0471741be2707bc6028371fa3789916f0ba083af4333e889daea0cbc",
+      "processing": "RGB preview bounded to 1600 pixels"
+    },
+    {
+      "path": "publications/assets/zh-CN/aphi_preserved.png",
+      "source": "outputs/publication_review_20261015_03/composites/zh-CN/aphi_preserved.png",
+      "source_sha256": "1b8e3859e522429ef9b0a48fe7b36cdb6d4a2cabc97d2b126a3de305bb9d7075",
+      "sha256": "5531e9dd4feaab55718c56f590636c1248cd9dd89ea2ff409f4fbfd1b9331fcb",
+      "processing": "RGB preview bounded to 1600 pixels"
+    },
+    {
+      "path": "publications/assets/zh-CN/ansys_seven_current.png",
+      "source": "outputs/publication_review_20261015_03/panels/zh-CN/ansys_seven_current.png",
+      "source_sha256": "3a712afd6fd55ec91c3f1b07c0ad49158d8a0d03e20879a5a562cb0cc1c0bde8",
+      "sha256": "b8c7780a462410dac5eff10f50cae15c3b664507f9bd5fd8dc95c9c1ef1d9c6b",
+      "processing": "RGB preview bounded to 1600 pixels"
+    },
+    {
+      "path": "publications/assets/zh-CN/ansys_limits.png",
+      "source": "outputs/publication_review_20261015_03/panels/zh-CN/ansys_limits.png",
+      "source_sha256": "e520ad99072ad8a323b13af932e07b80a4ad50ce6a356f4d8de398230d5a19fb",
+      "sha256": "aa9a9ead2c101bef3df68bbe2e9578201540ed0ef6904defb2dfe6604545c56a",
+      "processing": "RGB preview bounded to 1600 pixels"
+    },
+    {
+      "path": "publications/paper/zh-CN/README.md",
+      "source": "outputs/publication_review_20261015_03/documents/paper/zh-CN/paper_zh-CN.md",
+      "source_sha256": "f5b43dbe04d1872525885b6f13753b5664a2269f950fcd5c54aadc839d89e1f9",
+      "sha256": "0e8c7314dcd51b02d483fb5d4fed60ed06292bc798e5bb3bb3ef07b805f9c107"
+    },
+    {
+      "path": "publications/assets/en/model_hierarchy.png",
+      "source": "outputs/publication_review_20261015_03/panels/en/model_hierarchy.png",
+      "source_sha256": "b686f3ae66317135a7d89e32229ed96fe864f2f3fd43bf5a9b719f82927fefb7",
+      "sha256": "8279bd037feed38e1aa8bdfef52db327934d90402038483370718d7703eb51c4",
+      "processing": "RGB preview bounded to 1600 pixels"
+    },
+    {
+      "path": "publications/assets/en/common_terminal.png",
+      "source": "outputs/publication_review_20261015_03/panels/en/common_terminal.png",
+      "source_sha256": "a01e29805e62aa8ffcf5499b698ec937ba41631eb027875ad83d18ba69d7af7c",
+      "sha256": "1b7a83a466fcc361dd243eef5e4ae56e9bda33902ddccb3cb1faf00db6164d6d",
+      "processing": "RGB preview bounded to 1600 pixels"
+    },
+    {
+      "path": "publications/assets/en/q1_profile.png",
+      "source": "outputs/publication_review_20261015_03/composites/en/q1_profile.png",
+      "source_sha256": "1b246bbdeeca0582f6ddf98b312f5455e4fb1544db12f268bfa42a73e33657fc",
+      "sha256": "6da7e9912274979eb99e2dd29d7f4993effc70e77984ed99efbf7f87bd1c0ed1",
+      "processing": "RGB preview bounded to 1600 pixels"
+    },
+    {
+      "path": "publications/assets/en/q1_cross_section.png",
+      "source": "outputs/publication_review_20261015_03/panels/en/q1_cross_section.png",
+      "source_sha256": "cf937b48000e3c64e2dc71d2e5f134350cc3441f157ec31037d3a401e7bca1be",
+      "sha256": "a1bb8f5b32727fc959460fa86b1dcfb304b1feaaba15064f0826a43ba70da9f9",
+      "processing": "RGB preview bounded to 1600 pixels"
+    },
+    {
+      "path": "publications/assets/en/q1_fem_error.png",
+      "source": "outputs/publication_review_20261015_03/panels/en/q1_fem_error.png",
+      "source_sha256": "e4df310bc5fffe137da48e3e3d8b5d9ec9b30deee94f78201489f7aa0b147456",
+      "sha256": "9cd237f2a0318243f11ab240f3a1ca89d30073888d465a977d93547c45da02a3",
+      "processing": "RGB preview bounded to 1600 pixels"
+    },
+    {
+      "path": "publications/assets/en/coax640_currents.png",
+      "source": "outputs/publication_review_20261015_03/composites/en/coax640_currents.png",
+      "source_sha256": "f8ddcba9472341b2f38b86246af75932903fde79af46906918ed085fb244180e",
+      "sha256": "764cc097272125b6449399603a607cb58ac61bc298b811b88158092642e85e99",
+      "processing": "RGB preview bounded to 1600 pixels"
+    },
+    {
+      "path": "publications/assets/en/coax640_fields.png",
+      "source": "outputs/publication_review_20261015_03/composites/en/coax640_fields.png",
+      "source_sha256": "bac65f2ddbd35087635b018fc18aecc5caa6a2a13de7f470e82e0ed804ae852d",
+      "sha256": "fea8e63deab65650050642ad6130c8f1e5d65cdb2ff32d6f2c1264154487107a",
+      "processing": "RGB preview bounded to 1600 pixels"
+    },
+    {
+      "path": "publications/assets/en/coax640_mesh.png",
+      "source": "outputs/publication_review_20261015_03/panels/en/coax640_mesh.png",
+      "source_sha256": "a87916b2f6650de12d997e7bf547e3c445775ac8a778d2876e7cb0182fdc5699",
+      "sha256": "f65e2f791792bddbe8bb7c45e6cec2f400959348589acc3abf4088848566240d",
+      "processing": "RGB preview bounded to 1600 pixels"
+    },
+    {
+      "path": "publications/assets/en/peec_length.png",
+      "source": "outputs/publication_review_20261015_03/panels/en/peec_length.png",
+      "source_sha256": "53c182168a31b3625e11aaaa996aa561d8a314e37f274c8a2675394abc11e678",
+      "sha256": "fadd15ab9c977865681afeff39cb2959b9524e760ebc4a66be56f266c412787b",
+      "processing": "RGB preview bounded to 1600 pixels"
+    },
+    {
+      "path": "publications/assets/en/peec_cross_section.png",
+      "source": "outputs/publication_review_20261015_03/panels/en/peec_cross_section.png",
+      "source_sha256": "9ca61d4c793f10ef06e24d437d35b7f5eaf961ca51fa17d4e660a4be069e2d24",
+      "sha256": "d2078124943937e6f7820095f45ef22a1125a66350ef4ef1f11b26373d96fc74",
+      "processing": "RGB preview bounded to 1600 pixels"
+    },
+    {
+      "path": "publications/assets/en/peec_sensitivity.png",
+      "source": "outputs/publication_review_20261015_03/panels/en/peec_sensitivity.png",
+      "source_sha256": "fd69a435f2ba57eab28b5c2721b11034e80d071c37ad0d814cd400823fb13da9",
+      "sha256": "b4d0f747ec4c756af19b70394ef9f781ccf0455614867fdf12e9b89d0fd93599",
+      "processing": "RGB preview bounded to 1600 pixels"
+    },
+    {
+      "path": "publications/assets/en/gpu_equivalence.png",
+      "source": "outputs/publication_review_20261015_03/panels/en/gpu_equivalence.png",
+      "source_sha256": "d73aefdabfaea401c6de392932f62590e12ab87a83a931e75c8e3af5a10c0efc",
+      "sha256": "0c76d78ce8d70a2879176a6112d0280ae393bcd1e54a9c0d1424ab9c1932bd27",
+      "processing": "RGB preview bounded to 1600 pixels"
+    },
+    {
+      "path": "publications/assets/en/resource_memory.png",
+      "source": "outputs/publication_review_20261015_03/panels/en/resource_memory.png",
+      "source_sha256": "88a85afea81b039ac90336cccf46354c1e222c41e68c3e00f471b2750c8da973",
+      "sha256": "25627673d157450f3e9d70d876f12c5d3d90eed99a4d4924a49b3c0f2004969d",
+      "processing": "RGB preview bounded to 1600 pixels"
+    },
+    {
+      "path": "publications/assets/en/geometry_comparison.png",
+      "source": "outputs/publication_review_20261015_03/composites/en/geometry_comparison.png",
+      "source_sha256": "987fad194984b42f400a7d53fa124cf61d1bd3b81b5196feeaf9e9bc14f781d9",
+      "sha256": "1a4f2988e6d8232a9406d909be7ddecc3b5d8fb3cbf6cc80c9d74a148bfcfce2",
+      "processing": "RGB preview bounded to 1600 pixels"
+    },
+    {
+      "path": "publications/assets/en/rt0_spatial.png",
+      "source": "outputs/publication_review_20261015_03/panels/en/rt0_spatial.png",
+      "source_sha256": "bd2623ae45fe444e1b738702b78aa702a2ddbdbb8c0d1bd0c0822c8330171c95",
+      "sha256": "054aa8a5d97b0f31e40ebff481bab0f70ab3804a58cd9bb100789282f75cbc6a",
+      "processing": "RGB preview bounded to 1600 pixels"
+    },
+    {
+      "path": "publications/assets/en/rt0_sections.png",
+      "source": "outputs/publication_review_20261015_03/composites/en/rt0_sections.png",
+      "source_sha256": "c6909bb060f9e1599e9b785f863ae2ff1b86ab3120d313e4f976d355f76997b2",
+      "sha256": "8dcb8aa88e8d11079d2f7ece5373ef63839b6f278b3e66783bf734cabc6f7a01",
+      "processing": "RGB preview bounded to 1600 pixels"
+    },
+    {
+      "path": "publications/assets/en/rt0_vectors.png",
+      "source": "outputs/publication_review_20261015_03/panels/en/rt0_vectors.png",
+      "source_sha256": "a35cb66cf415c49854cf9d1ad2032cea2c5be74f61c18c95c3198bc8d2461632",
+      "sha256": "1bdb2cfab7a3c7a6ae4130a92654d87c55f8ee08549db335e242061cc30f1d88",
+      "processing": "RGB preview bounded to 1600 pixels"
+    },
+    {
+      "path": "publications/assets/en/aphi_gates.png",
+      "source": "outputs/publication_review_20261015_03/panels/en/aphi_gates.png",
+      "source_sha256": "666593f068082b1d8b12d79157da8f513e0afa4fec4e64d92df029401770fb0e",
+      "sha256": "845bc2c58d3fb3437dcb16c1e2ab7f24a0a3e4f574ce6a6459be97fa773ebdb1",
+      "processing": "RGB preview bounded to 1600 pixels"
+    },
+    {
+      "path": "publications/assets/en/aphi_preserved.png",
+      "source": "outputs/publication_review_20261015_03/composites/en/aphi_preserved.png",
+      "source_sha256": "08aa7de18b95d937c600d60e85dab63c2ca97d9ee56b66c31f1c5597ab31eeba",
+      "sha256": "047925e077ac7e95486c03f254f29422581925e8d4c760983f4797232531c182",
+      "processing": "RGB preview bounded to 1600 pixels"
+    },
+    {
+      "path": "publications/assets/en/ansys_seven_current.png",
+      "source": "outputs/publication_review_20261015_03/panels/en/ansys_seven_current.png",
+      "source_sha256": "ebe370bb78c32f1f2823629b6318706f67bd9fc40c16ceac69be98f9ef33e697",
+      "sha256": "53d1f4392254e9e46f91d57a3fcde04912b3bc453c7a355d9708d5384997563b",
+      "processing": "RGB preview bounded to 1600 pixels"
+    },
+    {
+      "path": "publications/assets/en/ansys_limits.png",
+      "source": "outputs/publication_review_20261015_03/panels/en/ansys_limits.png",
+      "source_sha256": "730bcbe4f0389758abbeb7cd64bd3cc1ca6419a10daa4dfd1c251ccc04072abb",
+      "sha256": "b7bae5e4651db9954e29cdc8b05b33e058c5f1985614879e31ed34058abb5def",
+      "processing": "RGB preview bounded to 1600 pixels"
+    },
+    {
+      "path": "publications/paper/en/README.md",
+      "source": "outputs/publication_review_20261015_03/documents/paper/en/paper_en.md",
+      "source_sha256": "e0fd568998ce631863185e043dece7978e143d1ef5191c7ba63adb4214eeeace",
+      "sha256": "fb66a6f6bc216b6cb2803d6924cd7a1c19eeaa1db76f53a8152a9319ecd917f8"
+    },
+    {
+      "path": "publications/assets/zh-CN/model_hierarchy.png",
+      "source": "outputs/publication_review_20261015_03/panels/zh-CN/model_hierarchy.png",
+      "source_sha256": "a9cec85d2829e55eb31536d449f0d58e5b5ef47ba62540dd0d4e46655c8c43c3",
+      "sha256": "335f24c48e11853e64f905697971fc4c429b3fd1033803027e6446362397a1a3",
+      "processing": "RGB preview bounded to 1600 pixels"
+    },
+    {
+      "path": "publications/assets/zh-CN/common_terminal.png",
+      "source": "outputs/publication_review_20261015_03/panels/zh-CN/common_terminal.png",
+      "source_sha256": "483135b8c67c14a92db198585d19361c4c60c7dafbe32613f12b010e02eb6d3e",
+      "sha256": "36f61a9f0752700fef98b38bd98fd5675c56a96c7b348e262ab1fbea321235ab",
+      "processing": "RGB preview bounded to 1600 pixels"
+    },
+    {
+      "path": "publications/assets/zh-CN/q1_profile.png",
+      "source": "outputs/publication_review_20261015_03/composites/zh-CN/q1_profile.png",
+      "source_sha256": "eea46fe9fa03f0a1f2b008f4addda85d29f16d113727a7baae1c4218dc2c85e9",
+      "sha256": "755d9375f16e1db11478e31497646bd56dae6b86fffb3c820c0b7f878f9b8d13",
+      "processing": "RGB preview bounded to 1600 pixels"
+    },
+    {
+      "path": "publications/assets/zh-CN/aphi_gates.png",
+      "source": "outputs/publication_review_20261015_03/panels/zh-CN/aphi_gates.png",
+      "source_sha256": "46fa359ab6eaef117e47e592af02c72a74bb30bc42a6d9875bd28d0a82849ecd",
+      "sha256": "e3d1ff0f0471741be2707bc6028371fa3789916f0ba083af4333e889daea0cbc",
+      "processing": "RGB preview bounded to 1600 pixels"
+    },
+    {
+      "path": "publications/assets/zh-CN/geometry_comparison.png",
+      "source": "outputs/publication_review_20261015_03/composites/zh-CN/geometry_comparison.png",
+      "source_sha256": "82f95947edfda3ba7e0012f508129c0a355882828e2609813207a5f0fd1460a2",
+      "sha256": "3355904decd733ff7cdbf6f2f51c2b89de93bc54a9b9b0eb1345579275cab882",
+      "processing": "RGB preview bounded to 1600 pixels"
+    },
+    {
+      "path": "publications/automation/zh-CN/README.md",
+      "source": "outputs/publication_review_20261015_03/documents/automation/zh-CN/automation_zh-CN.md",
+      "source_sha256": "5eab2be3802dc4c3197735ca7efcaceda1bd8f9d492f12564ab562d6ec156618",
+      "sha256": "596afefeb9fa427e101e16a8d4c2cc82920aaa7e88a7df1efa2db7f4ece71146"
+    },
+    {
+      "path": "publications/assets/en/model_hierarchy.png",
+      "source": "outputs/publication_review_20261015_03/panels/en/model_hierarchy.png",
+      "source_sha256": "b686f3ae66317135a7d89e32229ed96fe864f2f3fd43bf5a9b719f82927fefb7",
+      "sha256": "8279bd037feed38e1aa8bdfef52db327934d90402038483370718d7703eb51c4",
+      "processing": "RGB preview bounded to 1600 pixels"
+    },
+    {
+      "path": "publications/assets/en/common_terminal.png",
+      "source": "outputs/publication_review_20261015_03/panels/en/common_terminal.png",
+      "source_sha256": "a01e29805e62aa8ffcf5499b698ec937ba41631eb027875ad83d18ba69d7af7c",
+      "sha256": "1b7a83a466fcc361dd243eef5e4ae56e9bda33902ddccb3cb1faf00db6164d6d",
+      "processing": "RGB preview bounded to 1600 pixels"
+    },
+    {
+      "path": "publications/assets/en/q1_profile.png",
+      "source": "outputs/publication_review_20261015_03/composites/en/q1_profile.png",
+      "source_sha256": "1b246bbdeeca0582f6ddf98b312f5455e4fb1544db12f268bfa42a73e33657fc",
+      "sha256": "6da7e9912274979eb99e2dd29d7f4993effc70e77984ed99efbf7f87bd1c0ed1",
+      "processing": "RGB preview bounded to 1600 pixels"
+    },
+    {
+      "path": "publications/assets/en/aphi_gates.png",
+      "source": "outputs/publication_review_20261015_03/panels/en/aphi_gates.png",
+      "source_sha256": "666593f068082b1d8b12d79157da8f513e0afa4fec4e64d92df029401770fb0e",
+      "sha256": "845bc2c58d3fb3437dcb16c1e2ab7f24a0a3e4f574ce6a6459be97fa773ebdb1",
+      "processing": "RGB preview bounded to 1600 pixels"
+    },
+    {
+      "path": "publications/assets/en/geometry_comparison.png",
+      "source": "outputs/publication_review_20261015_03/composites/en/geometry_comparison.png",
+      "source_sha256": "987fad194984b42f400a7d53fa124cf61d1bd3b81b5196feeaf9e9bc14f781d9",
+      "sha256": "1a4f2988e6d8232a9406d909be7ddecc3b5d8fb3cbf6cc80c9d74a148bfcfce2",
+      "processing": "RGB preview bounded to 1600 pixels"
+    },
+    {
+      "path": "publications/automation/en/README.md",
+      "source": "outputs/publication_review_20261015_03/documents/automation/en/automation_en.md",
+      "source_sha256": "dcf3ca3e9a66df860dffe0fd94505fb701449b9144a2ca6b2cd94907c63ab3ff",
+      "sha256": "8a361dfbd710fafc28988a98c582340818a9228eb659ab0724ed6cc489d044b3"
     }
   ]
 }

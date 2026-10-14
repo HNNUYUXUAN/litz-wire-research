@@ -1,26 +1,9 @@
-# Candidate review
+# Reviewing a research edition
 
-Version `v1.0.0-rc.1` is the private candidate for the Litz Wire Research snapshot. The repository has an independent history, with scientific evidence derived from source baseline `7f98a4092654125597bb843f7ee0e6a586041c7a`.
+[简体中文](candidate-review.zh-CN.md)
 
-## Review paths
+Start with the [publication index](../publications/README.md). Read the complete work in the format suitable for your task: PDF for page layout, Notebook for native figures, Markdown for textual comparison, or LaTeX for formatting and reuse.
 
-- Read [the English entry](../README.md) or [the Chinese entry](../README.zh-CN.md).
-- Select a [complete paper, report, or chapter](editions.md).
-- Inspect [scientific acceptance](../tests/ACCEPTANCE.md), [per-file provenance](../provenance/candidate_files.json), and [license categories](../LICENSES/README.md).
-- Install the command-line tool and run the analytical example. Select datasets with `litz-research data list` and `data fetch <dataset>`.
+Check the model assumptions and observed quantities before comparing numbers. Follow figure sources and citation keys to the method, implementation, checks and saved run. Distinguish the two-dimensional Maxwell MCP case from three-dimensional diagnostic cases, and evaluate sensitivity evidence alongside agreement between solvers.
 
-The candidate contains 13 datasets, 31,950 restored file identities and 8,953 unique content objects. Sixty-five compressed parts total 7,605,595,016 bytes; each part is at most 128 MiB. Original scientific bytes and metadata derivatives have separate source and release hashes.
-
-## Acceptance evidence
-
-Local records in [provenance/validation](../provenance/validation/) cover independent Python and Wolfram analytical regressions, installation in a fresh virtual environment, dataset restoration, document builds, and migration through a directory containing spaces. All 104 PDFs were compiled and their 411 pages rendered. All 52 Notebooks were opened, saved, read back, and rendered; native 3D view changes were saved and recovered. Visual comparison with the accepted source edition identified 16 PDF pages and 18 Notebook render chunks requiring individual review, all completed.
-
-The publication preserves model assumptions and scientific acceptance states. Consult the discussion and diagnostic appendices when evaluating A–φ, Ansys, RT0, finite-length PEEC, and transposition claims.
-
-Remote recovery downloaded all 65 parts from the private release and restored all 31,950 file identities across 13 datasets. The release also carries licenses, citation metadata, the installable wheel, provenance inventories, dataset manifests and SHA256 checksums. HTTP range resumption and corruption detection were exercised against an actual release attachment.
-
-## Public-version review
-
-Review the scientific scope, attribution, dual licensing of Notebook cells, bibliography links, download experience, and the scholarly editions. Public visibility and the final archival state are the next release-stage decisions. The private candidate and its draft release provide the complete materials for that review.
-
-For the public edition, publish the reviewed release, use its public attachment URLs in the catalogue and set `private` to `false`. Verify anonymous downloads against the same SHA256 records before setting the final repository archival state. The current candidate uses authenticated draft-release API URLs.
+Document acceptance records include compilation, font embedding, rendered pages, frontend Notebook readback and three-dimensional viewpoint checks. Use the delivered manifest to verify file hashes. Source edits and local delivery identity are recorded with the package.

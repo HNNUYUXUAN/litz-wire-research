@@ -1,6 +1,6 @@
 # 单圆线解析校准
 
-Miao Yuxuan · Huainan Normal University
+缪雨轩 · 淮南师范学院
 
 ## 模型与假设
 
@@ -28,7 +28,7 @@ litz-research run wolfram-analytic --case tutorial --parameters models/analytic/
 
 ## 来源
 
-[BESSEL](../../references/README.md)
+[BESSEL](../../references/README.zh-CN.md)
 
 ## 推导与结果解释
 

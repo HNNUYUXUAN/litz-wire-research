@@ -1,0 +1,49 @@
+\documentclass[journal,10pt]{IEEEtran}
+\usepackage{amsmath,amssymb,newtxmath}
+\usepackage[no-math]{fontspec}
+\setmainfont{Times New Roman}
+\usepackage{xeCJK}
+\setCJKmainfont[AutoFakeBold=2]{SimSun}
+\usepackage{graphicx,booktabs,array,tabularx,seqsplit,xurl,hyperref}
+\hypersetup{hidelinks,unicode=true,pdftitle={Research manuscript template},pdfauthor={Author name}}
+\setlength{\emergencystretch}{2em}
+\raggedbottom
+\renewcommand{\arraystretch}{1.15}
+\begin{document}
+\title{Research manuscript template}
+\author{Author name\thanks{Institution}}
+\maketitle
+\begin{abstract}
+Summarize the question, method, principal findings and scope.
+\end{abstract}
+\begin{IEEEkeywords}
+modeling; validation
+\end{IEEEkeywords}
+\section{Methods}
+\hypertarget{chapter-01}{}
+Use SI units and RMS phasors. Reference [1] defines the special functions used by the round-wire solution.
+
+\begin{equation}\delta=\frac{1}{\sqrt{\pi f\mu\sigma}}\label{eq:skin}\end{equation}
+\begin{table*}[!htbp]
+\centering
+\caption{Symbols and units}
+\begingroup\footnotesize
+\begin{tabularx}{\textwidth}{>{\raggedright\arraybackslash}X>{\raggedright\arraybackslash}X}
+\toprule
+Symbol & Unit\\
+\midrule
+f & Hz\\
+σ & S/m\\
+\bottomrule
+\end{tabularx}\endgroup
+\end{table*}
+\section{Results and discussion}
+\hypertarget{chapter-02}{}
+Replace the illustration with traceable results and explain comparison conditions, errors and conclusions.
+
+\renewcommand{\refname}{References}
+\begin{figure}[!htbp]\centering\fbox{\rule{0pt}{22mm}\rule{.8\linewidth}{0pt}}\caption{Figure placement example; replace with actual results.}\label{fig:example}\end{figure}
+\begin{thebibliography}{99}
+\bibitem[1]{BESSEL} NIST. NIST Digital Library of Mathematical Functions, Modified Bessel Functions. 2026. \url{https://dlmf.nist.gov/10.25}
+\end{thebibliography}
+\end{document}

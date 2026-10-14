@@ -1,6 +1,6 @@
 # GPU 执行与 CPU 对照
 
-Miao Yuxuan · Huainan Normal University
+缪雨轩 · 淮南师范学院
 
 ## 模型与假设
 
@@ -28,7 +28,7 @@ litz-research run gpu --case tutorial --parameters adapters/gpu/examples/tutoria
 
 ## 来源
 
-[CUDA](../../references/README.md)
+[CUDA](../../references/README.zh-CN.md)
 
 ## 推导与结果解释
 

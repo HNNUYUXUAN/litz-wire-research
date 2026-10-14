@@ -1,20 +1,16 @@
 # Litz Wire Research
 
-**Miao Yuxuan / 缪雨轩 · Huainan Normal University / 淮南师范学院**
+![Litz](publications/assets/overview/en/project.png)
+
+**Miao Yuxuan · Huainan Normal University**
 
 A reproducible scientific modeling workflow driven by Codex or another MCP-compatible agent, with Litz-wire loss as a complete research case.
 
 [English](README.md) · [简体中文](README.zh-CN.md) · [Automation](automation/README.md) · [Publications](publications/README.md) · [Sources and acknowledgments](references/README.md)
 
-```mermaid
-flowchart LR
-  Q[Research question] --> A[Codex / MCP agent]
-  A --> M[Wolfram / Ansys MCP]
-  M --> S[Saved model and bounded solver]
-  S --> V[Independent scientific checks]
-  V --> A
-  V --> N[Notebook and research findings]
-```
+![System connections](publications/assets/overview/en/connections.svg)
+
+Read the [complete report, automation methods paper and physics paper](publications/README.md): six bilingual manuscripts, native Notebooks and eighteen PDFs.
 
 ## From a question to evidence
 
@@ -70,3 +66,17 @@ Each route includes bilingual interactive Notebooks, editable tutorial inputs, s
 [Publications](publications/README.md) · [Datasets](docs/datasets.md) · [Citation guide](docs/citation-guide.md) · [Acknowledgments](ACKNOWLEDGMENTS.md) · [Licenses](LICENSES/README.md)
 
 Original software uses MIT; original text, figures and data use CC BY 4.0. Upstream software retains its own license. Wolfram and Ansys are external licensed applications. This candidate repository remains private with a draft release while its handoff is reviewed.
+
+## From models to research conclusions
+
+Each of the seven routes retains its degrees of freedom, excitation, boundaries and acceptance records. Select a model suited to the question, then extend and check it through the research workflows.
+
+![Models](publications/assets/overview/en/model-hierarchy.svg)
+
+![Research loop](publications/assets/overview/en/research-loop.svg)
+
+![Cross-solver comparison](publications/assets/overview/en/cross-solver.svg)
+
+![Research sketch](publications/assets/overview/en/research-sketch.png)
+
+[Complete local delivery and verification](publications/DELIVERY.md)

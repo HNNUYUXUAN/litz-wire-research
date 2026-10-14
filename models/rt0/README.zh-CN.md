@@ -1,6 +1,6 @@
 # 向量 RT0 体积 PEEC
 
-Miao Yuxuan · Huainan Normal University
+缪雨轩 · 淮南师范学院
 
 ## 模型与假设
 
@@ -28,7 +28,7 @@ litz-research run rt0 --case tutorial --parameters models/rt0/examples/tutorial.
 
 ## 来源
 
-[P03](../../references/README.md), [RUEHLI1974](../../references/README.md), [RT1977](../../references/README.md), [GMRES1986](../../references/README.md)
+[P03](../../references/README.zh-CN.md), [RUEHLI1974](../../references/README.zh-CN.md), [RT1977](../../references/README.zh-CN.md), [GMRES1986](../../references/README.zh-CN.md)
 
 ## 推导与结果解释
 

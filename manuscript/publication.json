@@ -16,8 +16,8 @@
         "en": "Litz-Wire Modeling and Numerical Verification: Comprehensive Research Report"
       },
       "abstract": {
-        "zh-CN": "Litz 线的高频损耗取决于单股趋肤、局部邻近场、股间复电流分配、换位路径及端部约束。本文建立可复现的分层数值验证框架，区分各层实际保留的物理内容。沿途绝缘、端部并联的股线采用共同端电压和总复电流约束，并在指定线性场路模型内给出均流判据。有限长度纵向 PEEC 则独立检查轴向长度、互项与自项积分及横向离散的影响。\n\n在 200 kHz、20 A RMS、20 ℃ 铜导体工况下，单圆线解析与独立二维校准建立了内场参考，640 股二维共端模型具有受控网格、回流和外域检查。5024 自由度纵向模型末档 Rac 为 20.012738 mΩ/轴向m，与本档等面积 Bessel 参照相差 0.044582%。固定长方体外场 RT0 算例的末两次损耗变化为 0.655090% 和 0.362916%；它检验外场算子，不能作为 Litz 输运电阻。三维 A–φ、Ansys 新接口及真实性能排名的未通过边界继续保留。结果支持限定模型内的数值结论，不证明实际多级或跨层 Litz 的性能优劣。",
-        "en": "High-frequency loss in Litz wire depends on strand skin effect, local proximity fields, complex current sharing, transposition paths, and terminal constraints. This study establishes a reproducible hierarchy of numerical verification in which the physical content retained by each model is stated explicitly. Individually insulated strands connected in parallel are described by a common terminal voltage and a total complex-current constraint, yielding a current-sharing criterion within a specified linear field–circuit model. Finite-length longitudinal PEEC is then examined through independent changes in axial length, mutual and self integration, and cross-sectional discretization.\n\nFor copper at 200 kHz, 20 A RMS, and 20 °C, the round-wire analytical solution and independent two-dimensional calibration establish an internal-field reference. The 640-strand common-terminal model has controlled mesh, return, and exterior-boundary checks. The final 5024-degree-of-freedom longitudinal model gives an axial resistance of 20.012738 mΩ/m, differing by 0.044582% from its equal-area Bessel reference. The final two loss changes in the fixed-cuboid imposed-field RT0 example are 0.655090% and 0.362916%; this example tests an imposed-field operator and does not measure Litz transport resistance. Unsuccessful three-dimensional A–φ validation, new Ansys interfaces, and unresolved realistic-geometry ranking remain explicit boundaries. These results support numerical conclusions within stated models, without establishing the superiority of actual multilevel or cross-layer Litz structures."
+        "zh-CN": "Litz 线的高频损耗取决于单股趋肤、局部邻近场、股间复电流分配、换位路径及端部约束。本文建立可复现的分层数值验证框架，区分各层实际保留的物理内容。沿途绝缘、端部并联的股线采用共同端电压和总复电流约束，并在指定线性场路模型内给出均流判据。有限长度纵向 PEEC 则独立检查轴向长度、互项与自项积分及横向离散的影响。\n\n在 200 kHz、20 A RMS、20 ℃ 铜导体工况下，单圆线解析与独立二维校准建立了内场参考，640 股二维共端模型具有受控网格、回流和外域检查。5024 自由度纵向模型末档 Rac 为 20.012738 mΩ/轴向m，与本档等面积 Bessel 参照相差 0.044582%。固定长方体外场 RT0 算例的末两次损耗变化为 0.655090% 和 0.362916%；它检验外场算子，不能作为 Litz 输运电阻。三维 A–φ、Ansys 原生三维接口及真实性能排名的未通过边界继续保留。结果支持限定模型内的数值结论，不证明实际多级或跨层 Litz 的性能优劣。",
+        "en": "High-frequency loss in Litz wire depends on strand skin effect, local proximity fields, complex current sharing, transposition paths, and terminal constraints. This study establishes a reproducible hierarchy of numerical verification in which the physical content retained by each model is stated explicitly. Individually insulated strands connected in parallel are described by a common terminal voltage and a total complex-current constraint, yielding a current-sharing criterion within a specified linear field–circuit model. Finite-length longitudinal PEEC is then examined through independent changes in axial length, mutual and self integration, and cross-sectional discretization.\n\nFor copper at 200 kHz, 20 A RMS, and 20 °C, the round-wire analytical solution and independent two-dimensional calibration establish an internal-field reference. The 640-strand common-terminal model has controlled mesh, return, and exterior-boundary checks. The final 5024-degree-of-freedom longitudinal model gives an axial resistance of 20.012738 mΩ/m, differing by 0.044582% from its equal-area Bessel reference. The final two loss changes in the fixed-cuboid imposed-field RT0 example are 0.655090% and 0.362916%; this example tests an imposed-field operator and does not measure Litz transport resistance. Unsuccessful three-dimensional A–φ validation, native three-dimensional Ansys interfaces, and unresolved realistic-geometry ranking remain explicit boundaries. These results support numerical conclusions within stated models, without establishing the superiority of actual multilevel or cross-layer Litz structures."
       },
       "chapters": [
         {
@@ -204,8 +204,8 @@
         "en": "Hierarchical Verification, Common-Terminal Current Sharing, and Finite-Length Longitudinal PEEC for Litz-Wire Modeling"
       },
       "abstract": {
-        "zh-CN": "Litz 线的高频损耗取决于单股趋肤、局部邻近场、股间复电流分配、换位路径及端部约束。本文建立可复现的分层数值验证框架，区分各层实际保留的物理内容。沿途绝缘、端部并联的股线采用共同端电压和总复电流约束，并在指定线性场路模型内给出均流判据。有限长度纵向 PEEC 则独立检查轴向长度、互项与自项积分及横向离散的影响。\n\n在 200 kHz、20 A RMS、20 ℃ 铜导体工况下，单圆线解析与独立二维校准建立了内场参考，640 股二维共端模型具有受控网格、回流和外域检查。5024 自由度纵向模型末档 Rac 为 20.012738 mΩ/轴向m，与本档等面积 Bessel 参照相差 0.044582%。固定长方体外场 RT0 算例的末两次损耗变化为 0.655090% 和 0.362916%；它检验外场算子，不能作为 Litz 输运电阻。三维 A–φ、Ansys 新接口及真实性能排名的未通过边界继续保留。结果支持限定模型内的数值结论，不证明实际多级或跨层 Litz 的性能优劣。",
-        "en": "High-frequency loss in Litz wire depends on strand skin effect, local proximity fields, complex current sharing, transposition paths, and terminal constraints. This study establishes a reproducible hierarchy of numerical verification in which the physical content retained by each model is stated explicitly. Individually insulated strands connected in parallel are described by a common terminal voltage and a total complex-current constraint, yielding a current-sharing criterion within a specified linear field–circuit model. Finite-length longitudinal PEEC is then examined through independent changes in axial length, mutual and self integration, and cross-sectional discretization.\n\nFor copper at 200 kHz, 20 A RMS, and 20 °C, the round-wire analytical solution and independent two-dimensional calibration establish an internal-field reference. The 640-strand common-terminal model has controlled mesh, return, and exterior-boundary checks. The final 5024-degree-of-freedom longitudinal model gives an axial resistance of 20.012738 mΩ/m, differing by 0.044582% from its equal-area Bessel reference. The final two loss changes in the fixed-cuboid imposed-field RT0 example are 0.655090% and 0.362916%; this example tests an imposed-field operator and does not measure Litz transport resistance. Unsuccessful three-dimensional A–φ validation, new Ansys interfaces, and unresolved realistic-geometry ranking remain explicit boundaries. These results support numerical conclusions within stated models, without establishing the superiority of actual multilevel or cross-layer Litz structures."
+        "zh-CN": "Litz 线的高频损耗取决于单股趋肤、局部邻近场、股间复电流分配、换位路径及端部约束。本文建立可复现的分层数值验证框架，区分各层实际保留的物理内容。沿途绝缘、端部并联的股线采用共同端电压和总复电流约束，并在指定线性场路模型内给出均流判据。有限长度纵向 PEEC 则独立检查轴向长度、互项与自项积分及横向离散的影响。\n\n在 200 kHz、20 A RMS、20 ℃ 铜导体工况下，单圆线解析与独立二维校准建立了内场参考，640 股二维共端模型具有受控网格、回流和外域检查。5024 自由度纵向模型末档 Rac 为 20.012738 mΩ/轴向m，与本档等面积 Bessel 参照相差 0.044582%。固定长方体外场 RT0 算例的末两次损耗变化为 0.655090% 和 0.362916%；它检验外场算子，不能作为 Litz 输运电阻。三维 A–φ、Ansys 原生三维接口及真实性能排名的未通过边界继续保留。结果支持限定模型内的数值结论，不证明实际多级或跨层 Litz 的性能优劣。",
+        "en": "High-frequency loss in Litz wire depends on strand skin effect, local proximity fields, complex current sharing, transposition paths, and terminal constraints. This study establishes a reproducible hierarchy of numerical verification in which the physical content retained by each model is stated explicitly. Individually insulated strands connected in parallel are described by a common terminal voltage and a total complex-current constraint, yielding a current-sharing criterion within a specified linear field–circuit model. Finite-length longitudinal PEEC is then examined through independent changes in axial length, mutual and self integration, and cross-sectional discretization.\n\nFor copper at 200 kHz, 20 A RMS, and 20 °C, the round-wire analytical solution and independent two-dimensional calibration establish an internal-field reference. The 640-strand common-terminal model has controlled mesh, return, and exterior-boundary checks. The final 5024-degree-of-freedom longitudinal model gives an axial resistance of 20.012738 mΩ/m, differing by 0.044582% from its equal-area Bessel reference. The final two loss changes in the fixed-cuboid imposed-field RT0 example are 0.655090% and 0.362916%; this example tests an imposed-field operator and does not measure Litz transport resistance. Unsuccessful three-dimensional A–φ validation, native three-dimensional Ansys interfaces, and unresolved realistic-geometry ranking remain explicit boundaries. These results support numerical conclusions within stated models, without establishing the superiority of actual multilevel or cross-layer Litz structures."
       },
       "chapters": [
         {
@@ -297,6 +297,84 @@
           }
         }
       ]
+    },
+    "automation": {
+      "title": {
+        "zh-CN": "智能体驱动的可复核建模与仿真：Wolfram–Ansys MCP 工作流及 Litz 案例",
+        "en": "Agent-Driven Reviewable Modeling and Simulation: A Wolfram–Ansys MCP Workflow with Litz-Wire Cases"
+      },
+      "abstract": {
+        "zh-CN": "本文提出以任务身份、保存源码和独立验收为基础的智能体建模与仿真流程，通过 Codex、Wolfram 和 Ansys MCP 将研究问题连接到可追溯的计算产物。工作流、执行适配与物理模型分别承担任务组织、软件连接及数值实现，并通过共同参数和结果接口协作。六类已有案例覆盖解析校准与 Notebook、Maxwell 原生建模求解、跨求解器比较、频率扩展、接口修复和 A–φ 失败诊断。七股共同端口比较的复电流相对 L2 差异为 0.0106814%，电阻相对差异为 0.00132823%；这些结果对应保存网格，空间与边界收敛尚待进一步检查。案例说明了协议状态、执行状态和物理验收如何共同支持研究接续。工作流、配置、适配代码、模型与运行记录共同构成可复用的研究材料。",
+        "en": "This paper presents an agent-driven modeling and simulation workflow built on task identities, saved source, and independent acceptance. Codex, Wolfram, and Ansys MCP connect research questions to traceable computational artifacts. Workflows, execution adapters, and physical models organize tasks, software connections, and numerical implementations through common parameter and result interfaces. Six recorded case classes cover analytical calibration and Notebooks, native Maxwell construction and solution, cross-solver comparison, frequency extension, interface repair, and A–φ failure diagnosis. A seven-strand common-port comparison gives a relative complex-current L2 difference of 0.0106814% and a relative resistance difference of 0.00132823%. These values concern the retained meshes; spatial and boundary convergence require further examination. The cases demonstrate how protocol status, execution status, and physical acceptance jointly support continued research. Workflows, configurations, adapter code, models, and run records provide reusable research materials."
+      },
+      "chapters": [
+        {
+          "id": "01",
+          "title": {
+            "zh-CN": "研究问题与方法定位",
+            "en": "Research questions and method"
+          },
+          "sources": {
+            "zh-CN": "manuscript/automation/zh-CN/01.md",
+            "en": "manuscript/automation/en/01.md"
+          }
+        },
+        {
+          "id": "02",
+          "title": {
+            "zh-CN": "软件连接与分层架构",
+            "en": "Software connections and layered architecture"
+          },
+          "sources": {
+            "zh-CN": "manuscript/automation/zh-CN/02.md",
+            "en": "manuscript/automation/en/02.md"
+          }
+        },
+        {
+          "id": "03",
+          "title": {
+            "zh-CN": "任务身份与物理验收",
+            "en": "Task identity and physical acceptance"
+          },
+          "sources": {
+            "zh-CN": "manuscript/automation/zh-CN/03.md",
+            "en": "manuscript/automation/en/03.md"
+          }
+        },
+        {
+          "id": "04",
+          "title": {
+            "zh-CN": "建模、扩展与跨求解器比较",
+            "en": "Modeling, extension, and cross-solver comparison"
+          },
+          "sources": {
+            "zh-CN": "manuscript/automation/zh-CN/04.md",
+            "en": "manuscript/automation/en/04.md"
+          }
+        },
+        {
+          "id": "05",
+          "title": {
+            "zh-CN": "失败诊断与恢复",
+            "en": "Failure diagnosis and recovery"
+          },
+          "sources": {
+            "zh-CN": "manuscript/automation/zh-CN/05.md",
+            "en": "manuscript/automation/en/05.md"
+          }
+        },
+        {
+          "id": "06",
+          "title": {
+            "zh-CN": "讨论与结论",
+            "en": "Discussion and conclusions"
+          },
+          "sources": {
+            "zh-CN": "manuscript/automation/zh-CN/06.md",
+            "en": "manuscript/automation/en/06.md"
+          }
+        }
+      ]
     }
   },
   "keywords": {
@@ -364,6 +442,10 @@
         "paper": {
           "zh-CN": "输运模型按物理对象与观测量分组：圆线内场用于解析与二维校准，多股二维场路求解共同端口下的复电流，纵向 PEEC 检验有限长度效应。连线标明内部场校准或等面积电阻参照。RT0 外场损耗与三维 A–φ 场诊断各自构成独立研究范围。",
           "en": "Transport models are grouped by physical object and observable: round-wire internal fields support analytical and two-dimensional calibration, multistrand field–circuit models resolve common-terminal phasor currents, and longitudinal PEEC examines finite-length effects. Links identify internal-field calibration or equal-area resistance references. RT0 imposed-field loss and three-dimensional A–φ diagnostics occupy separate research scopes."
+        },
+        "automation": {
+          "zh-CN": "输运模型按物理对象与观测量分组：圆线内场用于解析与二维校准，多股二维场路求解共同端口下的复电流，纵向 PEEC 检验有限长度效应。连线标明内部场校准或等面积电阻参照。RT0 外场损耗与三维 A–φ 场诊断各自构成独立研究范围。",
+          "en": "Transport models are grouped by physical object and observable: round-wire internal fields support analytical and two-dimensional calibration, multistrand field–circuit models resolve common-terminal phasor currents, and longitudinal PEEC examines finite-length effects. Links identify internal-field calibration or equal-area resistance references. RT0 imposed-field loss and three-dimensional A–φ diagnostics occupy separate research scopes."
         }
       }
     },
@@ -390,6 +472,10 @@
         "paper": {
           "zh-CN": "铜导体直径 2 mm，200 kHz、20 A RMS。 (a) RMS 幅值；(b) 连续显示的相位。",
           "en": "The copper conductor has diameter 2 mm and carries 20 A RMS at 200 kHz. (a) RMS magnitude; (b) continuously displayed phase."
+        },
+        "automation": {
+          "zh-CN": "铜导体直径 2 mm，200 kHz、20 A RMS。 (a) RMS 幅值；(b) 连续显示的相位。 相位显示采用径向连续提升，幅值保留 RMS 归一化。径向样本来自保存的 Bessel 解析数据。",
+          "en": "The copper conductor has diameter 2 mm and carries 20 A RMS at 200 kHz. (a) RMS magnitude; (b) continuously displayed phase. Phase is displayed with a continuous radial lift, while magnitude retains RMS normalization. Radial samples come from preserved Bessel analytical data."
         }
       }
     },
@@ -415,6 +501,10 @@
         "paper": {
           "zh-CN": "铜导体直径 2 mm，200 kHz、20 A RMS。 色标显示轴向 RMS 电流密度。",
           "en": "The copper conductor has diameter 2 mm and carries 20 A RMS at 200 kHz. The color scale represents axial RMS current density."
+        },
+        "automation": {
+          "zh-CN": "铜导体直径 2 mm，200 kHz、20 A RMS。 色标显示轴向 RMS 电流密度。 径向样本经线性插值后作轴对称映射。坐标以毫米显示，电流密度以 A/mm² 显示。",
+          "en": "The copper conductor has diameter 2 mm and carries 20 A RMS at 200 kHz. The color scale represents axial RMS current density. Radial samples are linearly interpolated and mapped axisymmetrically. Coordinates are displayed in millimetres and current density in A/mm²."
         }
       }
     },
@@ -440,6 +530,10 @@
         "paper": {
           "zh-CN": "铜导体直径 2 mm，200 kHz、20 A RMS。 三档网格与独立功率积分对应同一内场问题。",
           "en": "The copper conductor has diameter 2 mm and carries 20 A RMS at 200 kHz. Three grids and independent power integrals concern the same internal-field problem."
+        },
+        "automation": {
+          "zh-CN": "铜导体直径 2 mm，200 kHz、20 A RMS。 三档网格与独立功率积分对应同一内场问题。 电阻参照为相同圆线的内部 Bessel 解。功率使用独立材料域积分计算。",
+          "en": "The copper conductor has diameter 2 mm and carries 20 A RMS at 200 kHz. Three grids and independent power integrals concern the same internal-field problem. Resistance is referenced to the internal Bessel solution of the same round wire. Power is evaluated by independent integration over the material region."
         }
       }
     },
@@ -463,6 +557,10 @@
           "en": "Strands are insulated along their paths and connected in parallel at both ends; their phasor currents follow from the common voltage and total-current constraints. The coupling matrix Z and excitation term e contain the impedance and field contributions retained by the model. The controlled return carries the opposite total current and has its own terminal field. Known inputs and unknown currents and voltage are identified."
         },
         "paper": {
+          "zh-CN": "各股沿途绝缘，在两端并联，逐股复电流由共同端电压及总电流约束求解。耦合矩阵 Z 与激励项 e 包含指定模型中的阻抗和场作用。受控回流承担反向总电流，并具有独立的端场。图中给出已知输入及待求复电流和电压。",
+          "en": "Strands are insulated along their paths and connected in parallel at both ends; their phasor currents follow from the common voltage and total-current constraints. The coupling matrix Z and excitation term e contain the impedance and field contributions retained by the model. The controlled return carries the opposite total current and has its own terminal field. Known inputs and unknown currents and voltage are identified."
+        },
+        "automation": {
           "zh-CN": "各股沿途绝缘，在两端并联，逐股复电流由共同端电压及总电流约束求解。耦合矩阵 Z 与激励项 e 包含指定模型中的阻抗和场作用。受控回流承担反向总电流，并具有独立的端场。图中给出已知输入及待求复电流和电压。",
           "en": "Strands are insulated along their paths and connected in parallel at both ends; their phasor currents follow from the common voltage and total-current constraints. The coupling matrix Z and excitation term e contain the impedance and field contributions retained by the model. The controlled return carries the opposite total current and has its own terminal field. Known inputs and unknown currents and voltage are identified."
         }
@@ -491,6 +589,10 @@
         "paper": {
           "zh-CN": "(a) 幅值；(b) 相位，按物理股线身份排列。",
           "en": "(a) Magnitude; (b) phase, ordered by physical strand identity."
+        },
+        "automation": {
+          "zh-CN": "(a) 幅值；(b) 相位，按物理股线身份排列。 虚线表示 It/N 的比较参照。幅值和相位使用相同的物理股线编号。",
+          "en": "(a) Magnitude; (b) phase, ordered by physical strand identity. A dashed line marks the comparison reference It/N. Magnitude and phase use identical physical strand numbering."
         }
       }
     },
@@ -517,6 +619,10 @@
         "paper": {
           "zh-CN": "(a) RMS 幅值；(b) 相位，材料标记识别各股。",
           "en": "(a) RMS magnitude; (b) phase, with material markers identifying strands."
+        },
+        "automation": {
+          "zh-CN": "(a) RMS 幅值；(b) 相位，材料标记识别各股。 电流按 Jz=σ(v−u) 从原节点场与端场恢复。独立功率使用线性三角形质量积分，显示采用单元中心采样。",
+          "en": "(a) RMS magnitude; (b) phase, with material markers identifying strands. Current is reconstructed as Jz=σ(v−u) from original nodal and terminal fields. Independent power uses linear-triangle mass integration, while visualization samples cell centers."
         }
       }
     },
@@ -547,6 +653,10 @@
         "paper": {
           "zh-CN": "面板依次展示直束、单级、传统多级局部和跨层结构。",
           "en": "Panels show straight, single-level, local multilevel, and cross-layer structures."
+        },
+        "automation": {
+          "zh-CN": "面板依次展示直束、单级、传统多级局部和跨层结构。 24 股结构使用 0.100 mm 铜径，传统多级面板展示 3 mm 局部。蓝色标记保持选定股线的物理身份。",
+          "en": "Panels show straight, single-level, local multilevel, and cross-layer structures. The 24-strand structures use a copper diameter of 0.100 mm, and the multilevel panel shows a 3 mm detail. Blue markers preserve selected physical strand identities."
         }
       }
     },
@@ -572,6 +682,10 @@
         "paper": {
           "zh-CN": "方形细丝单元的复电流恢复 RMS 幅值。",
           "en": "Complex currents in square volume filaments reconstruct the RMS magnitude."
+        },
+        "automation": {
+          "zh-CN": "方形细丝单元的复电流恢复 RMS 幅值。 代表模型含 5024 条纵向体积细丝，轴向长度 0.64 m。坐标和材料面积采用该档实际方形离散定义。",
+          "en": "Complex currents in square volume filaments reconstruct the RMS magnitude. The representative model contains 5024 longitudinal volume filaments and has axial length 0.64 m. Coordinates and material areas follow that level’s actual square-cell discretization."
         }
       }
     },
@@ -597,6 +711,10 @@
         "paper": {
           "zh-CN": "同一截面按保存的轴向长度比较单位长度电阻。",
           "en": "Resistance per axial length is compared at archived lengths for the same cross-section."
+        },
+        "automation": {
+          "zh-CN": "同一截面按保存的轴向长度比较单位长度电阻。 1264 自由度模型采用 0.16、0.32、0.64 m，5024 自由度复核末两档。积分参数在每个长度序列内固定。",
+          "en": "Resistance per axial length is compared at archived lengths for the same cross-section. The 1264-degree-of-freedom model uses 0.16, 0.32, and 0.64 m, while 5024 degrees of freedom recheck the final two levels. Integration settings remain fixed within each length sequence."
         }
       }
     },
@@ -622,6 +740,10 @@
         "paper": {
           "zh-CN": "各试验按网格、回流和外域分别改变一个因素。",
           "en": "Mesh, return, and exterior tests each vary one factor."
+        },
+        "automation": {
+          "zh-CN": "各试验按网格、回流和外域分别改变一个因素。 变化以相邻指定工况的电阻差归一化。网格、回流距离与外域大小各使用独立序列。",
+          "en": "Mesh, return, and exterior tests each vary one factor. Variation is normalized from resistance differences between the specified adjacent cases. Mesh, return distance, and exterior size use separate sequences."
         }
       }
     },
@@ -647,6 +769,10 @@
         "paper": {
           "zh-CN": "互项阶数与自项精度各自进行单因素对照。",
           "en": "Mutual order and self accuracy are compared in separate single-factor tests."
+        },
+        "automation": {
+          "zh-CN": "互项阶数与自项精度各自进行单因素对照。 互项使用 q4、q6、q8，自项使用 10/8 与 12/10。比较保留同一截面及轴向长度。",
+          "en": "Mutual order and self accuracy are compared in separate single-factor tests. Mutual settings are q4, q6, and q8; self settings are 10/8 and 12/10. Comparisons retain the same cross-section and axial length."
         }
       }
     },
@@ -673,6 +799,10 @@
         "paper": {
           "zh-CN": "铜长方体为 1×1×2 mm，200 kHz、1 mT RMS 外场、零净输运。 (a) 单元平均损耗密度；(b) 复 RMS 电流范数。",
           "en": "The 1×1×2 mm copper cuboid is excited at 200 kHz by a 1 mT RMS field with zero net transport. (a) Cell-average loss density; (b) complex RMS current norm."
+        },
+        "automation": {
+          "zh-CN": "铜长方体为 1×1×2 mm，200 kHz、1 mT RMS 外场、零净输运。 (a) 单元平均损耗密度；(b) 复 RMS 电流范数。 电流由相对面通量恢复，单元平均损耗采用 RT0 重叠积分。切面位置和色标对应归档的重构定义。",
+          "en": "The 1×1×2 mm copper cuboid is excited at 200 kHz by a 1 mT RMS field with zero net transport. (a) Cell-average loss density; (b) complex RMS current norm. Current is reconstructed from opposing face fluxes, and cell-average loss uses RT0 overlap integration. Section positions and color scales follow the archived reconstruction definitions."
         }
       }
     },
@@ -698,6 +828,10 @@
         "paper": {
           "zh-CN": "铜长方体为 1×1×2 mm，200 kHz、1 mT RMS 外场、零净输运。 箭头为固定相位的实部，色标为复 RMS 范数。",
           "en": "The 1×1×2 mm copper cuboid is excited at 200 kHz by a 1 mT RMS field with zero net transport. Arrows show the real part at a fixed phase; color represents the complex RMS norm."
+        },
+        "automation": {
+          "zh-CN": "铜长方体为 1×1×2 mm，200 kHz、1 mT RMS 外场、零净输运。 箭头为固定相位的实部，色标为复 RMS 范数。 矢量采用固定比例与稀疏单元采样。单元与面通量身份在保存的重构数据中对应。",
+          "en": "The 1×1×2 mm copper cuboid is excited at 200 kHz by a 1 mT RMS field with zero net transport. Arrows show the real part at a fixed phase; color represents the complex RMS norm. Vectors use a common scale and sparse cell sampling. Cell and face-flux identities correspond in the preserved reconstruction data."
         }
       }
     },
@@ -723,6 +857,10 @@
         "paper": {
           "zh-CN": "铜长方体为 1×1×2 mm，200 kHz、1 mT RMS 外场、零净输运。 q14 空间序列与末档 q18 对照使用相同外场工况。",
           "en": "The 1×1×2 mm copper cuboid is excited at 200 kHz by a 1 mT RMS field with zero net transport. The q14 spatial sequence and final q18 comparison use the same imposed-field condition."
+        },
+        "automation": {
+          "zh-CN": "铜长方体为 1×1×2 mm，200 kHz、1 mT RMS 外场、零净输运。 q14 空间序列与末档 q18 对照使用相同外场工况。 空间序列为 8192、16000、27648 单元。积分对照在最终成功网格上进行。",
+          "en": "The 1×1×2 mm copper cuboid is excited at 200 kHz by a 1 mT RMS field with zero net transport. The q14 spatial sequence and final q18 comparison use the same imposed-field condition. The spatial sequence contains 8192, 16000, and 27648 cells. Integration is compared on the final successful grid."
         }
       }
     },
@@ -751,6 +889,10 @@
         "paper": {
           "zh-CN": "面板分别给出 A、φ、J 和实际 φ 梯度。",
           "en": "Panels show A, φ, J, and the actual gradient of φ."
+        },
+        "automation": {
+          "zh-CN": "面板分别给出 A、φ、J 和实际 φ 梯度。 128 个指定节点保留其样本身份。色标使用实际保存的复数场与导数幅值。",
+          "en": "Panels show A, φ, J, and the actual gradient of φ. The 128 selected nodes retain their sample identities. Color scales use magnitudes of the actual saved complex fields and derivatives."
         }
       }
     },
@@ -776,6 +918,10 @@
         "paper": {
           "zh-CN": "三档网格与各指标门槛分别展示。",
           "en": "Three grids and their metric targets are shown separately."
+        },
+        "automation": {
+          "zh-CN": "三档网格与各指标门槛分别展示。 圆柱三档含 1683、3672、9108 节点。误差以各自验收门槛归一化，水平线标出单位比值。",
+          "en": "Three grids and their metric targets are shown separately. The three cylinder levels contain 1683, 3672, and 9108 nodes. Errors are normalized by their respective acceptance targets, with the horizontal line indicating a unit ratio."
         }
       }
     },
@@ -801,6 +947,10 @@
         "paper": {
           "zh-CN": "矩阵与复电流相对差使用同一离散和积分设置。",
           "en": "Relative matrix and complex-current differences use identical discretization and integration."
+        },
+        "automation": {
+          "zh-CN": "矩阵与复电流相对差使用同一离散和积分设置。 相对差针对 1264 和 5024 自由度分别计算。水平参照为 10⁻¹⁰ 算法对照门槛。",
+          "en": "Relative matrix and complex-current differences use identical discretization and integration. Relative differences are computed separately for 1264 and 5024 degrees of freedom. The horizontal reference is the 10⁻¹⁰ algorithm-comparison target."
         }
       }
     },
@@ -826,6 +976,10 @@
         "paper": {
           "zh-CN": "曲线使用归档的时间及内存样本。",
           "en": "Curves use archived time and memory samples."
+        },
+        "automation": {
+          "zh-CN": "曲线使用归档的时间及内存样本。 时间以对应运行的起点归一化。内存为可归属进程树的采样工作集。",
+          "en": "Curves use archived time and memory samples. Time is measured from the start of each corresponding run. Memory is the sampled working set of the attributable process tree."
         }
       }
     },
@@ -851,6 +1005,10 @@
         "paper": {
           "zh-CN": "704 单元有效端口短测给出逐股幅值与相位。",
           "en": "The valid 704-cell port short test provides strand magnitudes and phases."
+        },
+        "automation": {
+          "zh-CN": "704 单元有效端口短测给出逐股幅值与相位。 电流采用实际 ±20 A 场解的端口记录。幅值与相位对应同一七股编号。",
+          "en": "The valid 704-cell port short test provides strand magnitudes and phases. Currents use port records from the actual ±20 A field solution. Magnitudes and phases correspond to the same seven strand identities."
         }
       }
     },
@@ -870,42 +1028,736 @@
       },
       "descriptions": {
         "report": {
-          "zh-CN": "Ansys Student v252 的二维三角形、三维体单元与面单元上限分别为 2000、64000 和 8000，计算使用最多 4 核。并列分组表示各项许可限制。电流密度表达式 J 的接口探针与许可规模分别记录，实际求解状态见三维诊断。",
-          "en": "Ansys Student v252 permits up to 2000 two-dimensional triangles, 64000 three-dimensional volume elements, and 8000 surface elements, with at most 4 CPU cores. Parallel groups identify the license limits. Probes of the current-density expression J are recorded separately from mesh capacity; actual solution status is reported in the three-dimensional diagnostics."
+          "zh-CN": "Ansys Student v252 的许可规模及场量检查入口。二维上限为 2000 个三角形，三维上限为 64000 个体单元与 8000 个面单元，计算使用至多四核。许可边界来自 rc.1 保存记录，图件来源核对日期为 2026-10-15。",
+          "en": "License capacity and field-check entry points for Ansys Student v252: 2000 triangles in two dimensions, 64000 volume and 8000 surface elements in three dimensions, and up to four compute cores. Capacity information is retained from rc.1 records; figure sources were checked on 2026-10-15."
         },
         "paper": {
-          "zh-CN": "Ansys Student v252 的二维三角形、三维体单元与面单元上限分别为 2000、64000 和 8000，计算使用最多 4 核。并列分组表示各项许可限制。电流密度表达式 J 的接口探针与许可规模分别记录，实际求解状态见三维诊断。",
-          "en": "Ansys Student v252 permits up to 2000 two-dimensional triangles, 64000 three-dimensional volume elements, and 8000 surface elements, with at most 4 CPU cores. Parallel groups identify the license limits. Probes of the current-density expression J are recorded separately from mesh capacity; actual solution status is reported in the three-dimensional diagnostics."
+          "zh-CN": "Ansys Student v252 的许可规模及场量检查入口。二维上限为 2000 个三角形，三维上限为 64000 个体单元与 8000 个面单元，计算使用至多四核。许可边界来自 rc.1 保存记录，图件来源核对日期为 2026-10-15。",
+          "en": "License capacity and field-check entry points for Ansys Student v252: 2000 triangles in two dimensions, 64000 volume and 8000 surface elements in three dimensions, and up to four compute cores. Capacity information is retained from rc.1 records; figure sources were checked on 2026-10-15."
+        },
+        "automation": {
+          "zh-CN": "Ansys Student v252 的许可规模及场量检查入口。二维上限为 2000 个三角形，三维上限为 64000 个体单元与 8000 个面单元，计算使用至多四核。许可边界来自 rc.1 保存记录，图件来源核对日期为 2026-10-15。",
+          "en": "License capacity and field-check entry points for Ansys Student v252: 2000 triangles in two dimensions, 64000 volume and 8000 surface elements in three dimensions, and up to four compute cores. Capacity information is retained from rc.1 records; figure sources were checked on 2026-10-15."
         }
       }
     }
   },
   "references": [
     {
-      "id": "P01"
+      "id": "AEDT",
+      "title": "Ansys Electronics Desktop / Maxwell",
+      "authors": [
+        "{ANSYS, Inc.}"
+      ],
+      "year": 2026,
+      "doi": "",
+      "venue": "",
+      "url": "https://www.ansys.com/products/electronics/ansys-maxwell"
     },
     {
-      "id": "N01"
+      "id": "AGENTTOOLS",
+      "title": "Wolfram AgentTools",
+      "authors": [
+        "{Wolfram Research}"
+      ],
+      "year": 2026,
+      "doi": "",
+      "venue": "",
+      "url": "https://github.com/WolframResearch/AgentTools"
     },
     {
-      "id": "P02"
+      "id": "ANSYSCOMMONMCP",
+      "title": "ansys-common-mcp",
+      "authors": [
+        "{ANSYS, Inc.",
+        "contributors}"
+      ],
+      "year": 2026,
+      "doi": "",
+      "venue": "",
+      "url": "https://github.com/ansys/pyansys-common-mcp"
     },
     {
-      "id": "P03"
+      "id": "BESSEL",
+      "title": "NIST Digital Library of Mathematical Functions, Modified Bessel Functions",
+      "authors": [
+        "{NIST}"
+      ],
+      "year": 2026,
+      "doi": "",
+      "venue": "",
+      "url": "https://dlmf.nist.gov/10.25"
     },
     {
-      "id": "P04"
+      "id": "BIBTEXPARSE",
+      "title": "bibtexparser",
+      "authors": [
+        "{bibtexparser contributors}"
+      ],
+      "year": 2026,
+      "doi": "",
+      "venue": "",
+      "url": "https://github.com/sciunto-org/python-bibtexparser"
     },
     {
-      "id": "P05"
+      "id": "C01",
+      "title": "基于半解析有限元的利兹线交流电阻分析",
+      "authors": [
+        "金峰逸",
+        "马玉芳"
+      ],
+      "year": 2023,
+      "doi": "10.12263/dzxb.20230001",
+      "venue": "电子学报, 51, 12, 3457--3462",
+      "url": "https://doi.org/10.12263/DZXB.20230001"
     },
     {
-      "id": "P09"
+      "id": "C02",
+      "title": "基于PGD和等效复磁导率的高频变压器矩形利兹线损耗快速计算模型",
+      "authors": [
+        "钟立国",
+        "阎秀恪",
+        "任自艳",
+        "张殿海",
+        "张艳丽"
+      ],
+      "year": 2026,
+      "doi": "10.13336/j.1003-6520.hve.20251272",
+      "venue": "高电压技术, 52, 7, 3350--3359",
+      "url": "https://doi.org/10.13336/j.1003-6520.hve.20251272"
+    },
+    {
+      "id": "C03",
+      "title": "基于等效媒质理论的高频变压器利兹线周期性结构均质化建模方法",
+      "authors": [
+        "李元",
+        "林金山",
+        "邵先军",
+        "杨智",
+        "张大宁",
+        "张冠军"
+      ],
+      "year": 2024,
+      "doi": "10.13336/j.1003-6520.hve.20240638",
+      "venue": "高电压技术, 50, 10, 4440--4449",
+      "url": "https://doi.org/10.13336/j.1003-6520.hve.20240638"
+    },
+    {
+      "id": "C04",
+      "title": "非完全绞合利兹线的高频损耗特性分析与计算",
+      "authors": [
+        "陈彬",
+        "陶鑫",
+        "万妮娜",
+        "方春华",
+        "唐波"
+      ],
+      "year": 2023,
+      "doi": "10.13336/j.1003-6520.hve.20211960",
+      "venue": "高电压技术, 49, 5, 2180--2193",
+      "url": "https://doi.org/10.13336/j.1003-6520.hve.20211960"
+    },
+    {
+      "id": "CODEX",
+      "title": "Codex",
+      "authors": [
+        "{OpenAI}"
+      ],
+      "year": 2026,
+      "doi": "",
+      "venue": "",
+      "url": "https://developers.openai.com/codex/"
+    },
+    {
+      "id": "CUDA",
+      "title": "Wolfram CUDALink and WolframGPUSDK",
+      "authors": [
+        "{Wolfram Research}"
+      ],
+      "year": 2026,
+      "doi": "",
+      "venue": "",
+      "url": "https://reference.wolfram.com/language/CUDALink/guide/CUDALink.html"
+    },
+    {
+      "id": "E01",
+      "title": "PACK Litz wire table",
+      "authors": [
+        "Rudolf Pack GmbH & Co. KG"
+      ],
+      "year": 2016,
+      "doi": "",
+      "venue": "Manufacturer specification snapshot",
+      "url": ""
+    },
+    {
+      "id": "E02",
+      "title": "Design of RUPALIT high-frequency litz wire",
+      "authors": [
+        "Rudolf Pack GmbH & Co. KG"
+      ],
+      "year": 2026,
+      "doi": "",
+      "venue": "Manufacturer document 2/0226/1",
+      "url": ""
+    },
+    {
+      "id": "E03",
+      "title": "Overview magnet wire (enamelled copper wire)",
+      "authors": [
+        "Rudolf Pack GmbH & Co. KG"
+      ],
+      "year": 2020,
+      "doi": "",
+      "venue": "Manufacturer materials overview",
+      "url": ""
+    },
+    {
+      "id": "FAST_MCP",
+      "title": "FastMCP",
+      "authors": [
+        "{Prefect Technologies",
+        "FastMCP contributors}"
+      ],
+      "year": 2026,
+      "doi": "",
+      "venue": "",
+      "url": "https://github.com/PrefectHQ/fastmcp"
+    },
+    {
+      "id": "FEMDOC",
+      "title": "Wolfram quasistatic magnetic field models",
+      "authors": [
+        "{Wolfram Research}"
+      ],
+      "year": 2026,
+      "doi": "",
+      "venue": "",
+      "url": "https://reference.wolfram.com/language/PDEModels/tutorial/Electromagnetics/QuasistaticMagneticFields.html"
+    },
+    {
+      "id": "FONTS",
+      "title": "SimSun and Times New Roman",
+      "authors": [
+        "{Microsoft",
+        "font copyright holders}"
+      ],
+      "year": 2026,
+      "doi": "",
+      "venue": "",
+      "url": "https://learn.microsoft.com/en-us/typography/fonts/"
+    },
+    {
+      "id": "GMRES1986",
+      "title": "GMRES: A Generalized Minimal Residual Algorithm for Solving Nonsymmetric Linear Systems",
+      "authors": [
+        "Saad, Youcef",
+        "Schultz, Martin H."
+      ],
+      "year": 1986,
+      "doi": "10.1137/0907058",
+      "venue": "SIAM Journal on Scientific and Statistical Computing, 7, 3, 856--869",
+      "url": "https://doi.org/10.1137/0907058"
+    },
+    {
+      "id": "IEEE",
+      "title": "IEEEtran",
+      "authors": [
+        "{Michael Shell",
+        "copyright holders}"
+      ],
+      "year": 2026,
+      "doi": "",
+      "venue": "",
+      "url": "https://github.com/bardsoftware/template-ieee-transactions"
+    },
+    {
+      "id": "MARKDOWNIT",
+      "title": "markdown-it-py and mdit-py-plugins",
+      "authors": [
+        "{Executable Books contributors}"
+      ],
+      "year": 2026,
+      "doi": "",
+      "venue": "",
+      "url": "https://github.com/executablebooks/markdown-it-py"
+    },
+    {
+      "id": "MATH",
+      "title": "mpmath",
+      "authors": [
+        "{mpmath developers}"
+      ],
+      "year": 2026,
+      "doi": "",
+      "venue": "",
+      "url": "https://mpmath.org/"
+    },
+    {
+      "id": "MATPLOTLIB",
+      "title": "Matplotlib",
+      "authors": [
+        "{Matplotlib developers}"
+      ],
+      "year": 2026,
+      "doi": "",
+      "venue": "",
+      "url": "https://matplotlib.org/"
+    },
+    {
+      "id": "MCP",
+      "title": "Model Context Protocol",
+      "authors": [
+        "{Model Context Protocol contributors}"
+      ],
+      "year": 2026,
+      "doi": "",
+      "venue": "",
+      "url": "https://modelcontextprotocol.io/"
+    },
+    {
+      "id": "MCPSDK",
+      "title": "MCP Python SDK",
+      "authors": [
+        "{Model Context Protocol contributors}"
+      ],
+      "year": 2026,
+      "doi": "",
+      "venue": "",
+      "url": "https://github.com/modelcontextprotocol/python-sdk"
+    },
+    {
+      "id": "MDURL",
+      "title": "mdurl",
+      "authors": [
+        "{mdurl contributors}"
+      ],
+      "year": 2026,
+      "doi": "",
+      "venue": "",
+      "url": "https://github.com/executablebooks/mdurl"
+    },
+    {
+      "id": "N01",
+      "title": "AC Impedance Modeling of Composite Litz Wire With Nonideal Transposition Based on Improved Discrete Transposition Model",
+      "authors": [
+        "Xinsheng Zhang",
+        "Fei Xiao",
+        "Ruitian Wang",
+        "Shunjun Chen",
+        "Xuexin Fan",
+        "Xin Li"
+      ],
+      "year": 2026,
+      "doi": "10.1109/TPEL.2026.3661080",
+      "venue": "IEEE TPEL, 41, 7, 11003--11019",
+      "url": "https://doi.org/10.1109/TPEL.2026.3661080"
+    },
+    {
+      "id": "NUMPY",
+      "title": "NumPy",
+      "authors": [
+        "{NumPy developers}"
+      ],
+      "year": 2026,
+      "doi": "",
+      "venue": "",
+      "url": "https://numpy.org/"
+    },
+    {
+      "id": "P01",
+      "title": "Numerical Modeling of Litz Wires Based on Discrete Transpositions of Strands and 2-D Finite Element Analysis",
+      "authors": [
+        "Silvano Cruciani",
+        "Tommaso Campi",
+        "Francesca Maradei",
+        "Mauro Feliziani"
+      ],
+      "year": 2023,
+      "doi": "10.1109/TPEL.2023.3240338",
+      "venue": "IEEE TPEL, 38, 5, 6710--6719",
+      "url": "https://doi.org/10.1109/TPEL.2023.3240338"
+    },
+    {
+      "id": "P02",
+      "title": "Modeling of Litz Wire Winding AC Resistance Based on Improved Segmented Equivalent Circuit",
+      "authors": [
+        "Yueyin Wang",
+        "Wu Chen",
+        "Zhan Shen"
+      ],
+      "year": 2024,
+      "doi": "10.1109/TPEL.2023.3321327",
+      "venue": "IEEE TPEL, 39, 1, 1135--1149",
+      "url": "https://doi.org/10.1109/TPEL.2023.3321327"
+    },
+    {
+      "id": "P03",
+      "title": "Calculation of Power Losses in Litz Wire Systems by Coupling FEM and PEEC Method",
+      "authors": [
+        "Andreas Roßkopf",
+        "Eberhard Bär",
+        "Christopher Joffe",
+        "Clemens Bonse"
+      ],
+      "year": 2016,
+      "doi": "10.1109/TPEL.2015.2499793",
+      "venue": "IEEE TPEL, 31, 9, 6442--6449",
+      "url": "https://doi.org/10.1109/TPEL.2015.2499793"
+    },
+    {
+      "id": "P04",
+      "title": "Finite element modeling of eddy currents in a multiconductor system with quasi-2D symmetry",
+      "authors": [
+        "Tamás Bakondi",
+        "Sándor Bilicz",
+        "Szabolcs Gyimóthy"
+      ],
+      "year": 2025,
+      "doi": "10.1108/COMPEL-01-2025-0031",
+      "venue": "COMPEL, 44, 5, 730--742",
+      "url": "https://doi.org/10.1108/COMPEL-01-2025-0031"
+    },
+    {
+      "id": "P05",
+      "title": "An Improved Continuum Skin and Proximity Effect Model for Hexagonally Packed Wires",
+      "authors": [
+        "David C. Meeker"
+      ],
+      "year": 2012,
+      "doi": "10.1016/j.cam.2012.04.009",
+      "venue": "JCAM, 236, 18, 4635--4644",
+      "url": "https://doi.org/10.1016/j.cam.2012.04.009"
+    },
+    {
+      "id": "P07",
+      "title": "Measurement and Characterization of High Frequency Losses in Nonideal Litz Wires",
+      "authors": [
+        "Hans Rossmanith",
+        "Marc Doebroenti",
+        "Manfred Albach",
+        "Dietmar Exner"
+      ],
+      "year": 2011,
+      "doi": "10.1109/tpel.2011.2143729",
+      "venue": "IEEE TPEL, 26, 11, 3386--3394",
+      "url": ""
+    },
+    {
+      "id": "P08",
+      "title": "Enhancing litz wire power loss calculations by combining a sparse strand element equivalent circuit method with a voronoi based geometry model",
+      "authors": [
+        "Andreas Rosskopf",
+        "Carla Brunner"
+      ],
+      "year": 2022,
+      "doi": "10.1109/tpel.2022.3169992",
+      "venue": "IEEE TPEL accepted manuscript; final volume/pages not checked",
+      "url": ""
+    },
+    {
+      "id": "P09",
+      "title": "Closed-form complex permeability expression for proximity-effect homogenisation of litz-wire windings",
+      "authors": [
+        "Korawich Niyomsatian",
+        "Johan Gyselinck",
+        "Ruth V. Sabariego"
+      ],
+      "year": 2020,
+      "doi": "10.1049/iet-smt.2019.0377",
+      "venue": "IET SMT, 14, 3, 287--291",
+      "url": "https://doi.org/10.1049/iet-smt.2019.0377"
+    },
+    {
+      "id": "PDFIUM",
+      "title": "pypdfium2",
+      "authors": [
+        "{pypdfium2 contributors}"
+      ],
+      "year": 2026,
+      "doi": "",
+      "venue": "",
+      "url": "https://github.com/pypdfium2-team/pypdfium2"
+    },
+    {
+      "id": "PILLOW",
+      "title": "Pillow",
+      "authors": [
+        "{Pillow contributors}"
+      ],
+      "year": 2026,
+      "doi": "",
+      "venue": "",
+      "url": "https://python-pillow.org/"
+    },
+    {
+      "id": "POWERSHELL",
+      "title": "PowerShell",
+      "authors": [
+        "{Microsoft",
+        "contributors}"
+      ],
+      "year": 2026,
+      "doi": "",
+      "venue": "",
+      "url": "https://github.com/PowerShell/PowerShell"
+    },
+    {
+      "id": "PSUTIL",
+      "title": "psutil",
+      "authors": [
+        "{Giampaolo Rodola",
+        "contributors}"
+      ],
+      "year": 2026,
+      "doi": "",
+      "venue": "",
+      "url": "https://github.com/giampaolo/psutil"
+    },
+    {
+      "id": "PYAEDT",
+      "title": "PyAEDT",
+      "authors": [
+        "{ANSYS, Inc.}"
+      ],
+      "year": 2026,
+      "doi": "",
+      "venue": "",
+      "url": "https://github.com/ansys/pyaedt"
+    },
+    {
+      "id": "PYAEDTMCP",
+      "title": "PyAEDT-MCP",
+      "authors": [
+        "{ANSYS, Inc.}"
+      ],
+      "year": 2026,
+      "doi": "",
+      "venue": "",
+      "url": "https://github.com/ansys/pyaedt-mcp"
+    },
+    {
+      "id": "PYPDF",
+      "title": "pypdf",
+      "authors": [
+        "{pypdf contributors}"
+      ],
+      "year": 2026,
+      "doi": "",
+      "venue": "",
+      "url": "https://pypdf.readthedocs.io/"
+    },
+    {
+      "id": "PYTHON",
+      "title": "Python",
+      "authors": [
+        "{Python Software Foundation}"
+      ],
+      "year": 2026,
+      "doi": "",
+      "venue": "",
+      "url": "https://www.python.org/"
+    },
+    {
+      "id": "REPO1",
+      "title": "Litz Wire Losses with Custom Twisting",
+      "authors": [
+        "{otvam}"
+      ],
+      "year": 2026,
+      "doi": "",
+      "venue": "",
+      "url": "https://github.com/otvam/litz_wire_losses_twisting"
+    },
+    {
+      "id": "REPO2",
+      "title": "Litz Wire Losses with FEM and MATLAB",
+      "authors": [
+        "{ethz-pes}"
+      ],
+      "year": 2026,
+      "doi": "",
+      "venue": "",
+      "url": "https://github.com/ethz-pes/litz_wire_losses_fem_matlab"
+    },
+    {
+      "id": "REPO3",
+      "title": "An Open-Source FEM Magnetics Toolbox for Power Electronic Magnetic Components",
+      "authors": [
+        "{upb-lea}"
+      ],
+      "year": 2026,
+      "doi": "",
+      "venue": "",
+      "url": "https://github.com/upb-lea/FEM_Magnetics_Toolbox"
+    },
+    {
+      "id": "REPO4",
+      "title": "PyPEEC - 3D Quasi-Magnetostatic FFT/PEEC Solver",
+      "authors": [
+        "{otvam}"
+      ],
+      "year": 2026,
+      "doi": "",
+      "venue": "",
+      "url": "https://github.com/otvam/pypeec"
+    },
+    {
+      "id": "REPO6",
+      "title": "TexGen is a geometric textile modelling software package to be used for obtaining engineering properties of woven textiles and textile composites.",
+      "authors": [
+        "{louisepb}"
+      ],
+      "year": 2026,
+      "doi": "",
+      "venue": "",
+      "url": "https://github.com/louisepb/TexGen"
+    },
+    {
+      "id": "REPORTLAB",
+      "title": "ReportLab",
+      "authors": [
+        "{ReportLab contributors}"
+      ],
+      "year": 2026,
+      "doi": "",
+      "venue": "",
+      "url": "https://www.reportlab.com/"
+    },
+    {
+      "id": "RT1977",
+      "title": "A mixed finite element method for 2-nd order elliptic problems",
+      "authors": [
+        "Raviart, P. A.",
+        "Thomas, J. M."
+      ],
+      "year": 1977,
+      "doi": "10.1007/bfb0064470",
+      "venue": "606, 292--315",
+      "url": "https://doi.org/10.1007/bfb0064470"
+    },
+    {
+      "id": "RUEHLI1974",
+      "title": "Equivalent Circuit Models for Three-Dimensional Multiconductor Systems",
+      "authors": [
+        "Ruehli, A.E."
+      ],
+      "year": 1974,
+      "doi": "10.1109/tmtt.1974.1128204",
+      "venue": "IEEE Transactions on Microwave Theory and Techniques, 22, 3, 216--221",
+      "url": "https://doi.org/10.1109/tmtt.1974.1128204"
+    },
+    {
+      "id": "S02",
+      "title": "Simplified Design Method for Litz Wire",
+      "authors": [
+        "Charles R. Sullivan",
+        "Richard Y. Zhang"
+      ],
+      "year": 2014,
+      "doi": "10.1109/apec.2014.6803681",
+      "venue": "APEC 2014",
+      "url": ""
+    },
+    {
+      "id": "S03",
+      "title": "Analytical Model for Effects of Twisting on Litz-Wire Losses",
+      "authors": [
+        "Charles R. Sullivan",
+        "Richard Y. Zhang"
+      ],
+      "year": 2014,
+      "doi": "10.1109/compel.2014.6877187",
+      "venue": "IEEE COMPEL:1–10",
+      "url": "https://doi.org/10.1109/COMPEL.2014.6877187"
+    },
+    {
+      "id": "S04",
+      "title": "Realistic Litz Wire Characterization using Fast Numerical Simulations",
+      "authors": [
+        "Richard Y. Zhang",
+        "Jacob K. White",
+        "John G. Kassakian",
+        "Charles R. Sullivan"
+      ],
+      "year": 2014,
+      "doi": "10.1109/apec.2014.6803390",
+      "venue": "APEC 2014",
+      "url": ""
+    },
+    {
+      "id": "S05",
+      "title": "Litz Wire Losses: Effects of Twisting Imperfections",
+      "authors": [
+        "Thomas Guillod",
+        "Jonas E. Huber",
+        "Florian Krismer",
+        "Johann W. Kolar"
+      ],
+      "year": 2017,
+      "doi": "10.1109/compel.2017.8013327",
+      "venue": "IEEE COMPEL",
+      "url": "https://doi.org/10.1109/COMPEL.2017.8013327"
+    },
+    {
+      "id": "S06",
+      "title": "Simulation of Eddy Current Losses in Twisted Wires",
+      "authors": [
+        "Tamás Bakondi"
+      ],
+      "year": 2024,
+      "doi": "10.3311/ppee.22800",
+      "venue": "Periodica Polytechnica EECS, 68, 2, 149--156",
+      "url": "https://doi.org/10.3311/PPee.22800"
+    },
+    {
+      "id": "SETUPTOOLS",
+      "title": "setuptools",
+      "authors": [
+        "{Python Packaging Authority}"
+      ],
+      "year": 2026,
+      "doi": "",
+      "venue": "",
+      "url": "https://setuptools.pypa.io/"
+    },
+    {
+      "id": "TEX",
+      "title": "XeLaTeX, BibTeX, latexmk and MiKTeX",
+      "authors": [
+        "{TeX ecosystem contributors}"
+      ],
+      "year": 2026,
+      "doi": "",
+      "venue": "",
+      "url": "https://miktex.org/"
+    },
+    {
+      "id": "WOLFRAM",
+      "title": "Wolfram Language and Notebook",
+      "authors": [
+        "{Wolfram Research}"
+      ],
+      "year": 2026,
+      "doi": "",
+      "venue": "",
+      "url": "https://www.wolfram.com/language/"
+    },
+    {
+      "id": "WOLFRAMCLIENT",
+      "title": "Wolfram Client Library for Python",
+      "authors": [
+        "{Wolfram Research}"
+      ],
+      "year": 2026,
+      "doi": "",
+      "venue": "",
+      "url": "https://github.com/WolframResearch/WolframClientForPython"
     }
   ],
   "bibtex": "references/library.bib",
   "frozen_bundle": "data/publication/closure",
-  "panel_run": "data/publication",
+  "panel_run": "outputs/publication_redraw_20261015_01",
   "scientific_hashes": {
     "docs/总控/当前运行索引.json": "3324976d4af8f58e60820a88ae978246443f78fbdd0cfa1050e86809110ae60d",
     "outputs/prewrite_closure_state.json": "80a66afa79c321a89f730b102af0e70125f6e1655372717d6b59f470c6520e71"
@@ -927,6 +1779,30 @@
     "mdit-py-plugins": "0.5.0",
     "mdurl": "0.1.2"
   },
-  "panel_overrides": {},
-  "reference_numbering": "first_appearance_shared_bilingual"
+  "panel_overrides": {
+    "q1_cross_section": "outputs/publication_reframe_20261015_02",
+    "q1_fem_error": "outputs/publication_reframe_20261015_02",
+    "peec_length": "outputs/publication_reframe_20261015_02",
+    "peec_cross_section": "outputs/publication_reframe_20261015_02",
+    "coax640_mesh": "outputs/publication_reframe_20261015_03"
+  },
+  "reference_numbering": "first_appearance_shared_bilingual",
+  "quantity_display": {
+    "coax_rac": ".6g",
+    "coax_bundle_loss": ".6g",
+    "coax_return_loss": ".6g",
+    "coax_area": ".6g",
+    "coax_voltage_re": ".6g",
+    "coax_voltage_im": ".6g",
+    "coax_return_voltage_re": ".6g",
+    "coax_return_voltage_im": ".6g",
+    "coax_rdc": ".6g",
+    "coax_rac_rdc": ".6g",
+    "coax_spread": ".6g",
+    "peec_rac": ".6g",
+    "skin_depth": ".6g",
+    "q1_rac": ".6g",
+    "q1_rdc": ".6g",
+    "q1_loss": ".6g"
+  }
 }

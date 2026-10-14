@@ -1,6 +1,6 @@
 # 二维扩散有限元
 
-Miao Yuxuan · Huainan Normal University
+缪雨轩 · 淮南师范学院
 
 ## 模型与假设
 
@@ -28,7 +28,7 @@ litz-research run fem2 --case tutorial --parameters models/fem2/examples/tutoria
 
 ## 来源
 
-[FEMDOC](../../references/README.md), [P04](../../references/README.md)
+[FEMDOC](../../references/README.zh-CN.md), [P04](../../references/README.zh-CN.md)
 
 ## 推导与结果解释
 

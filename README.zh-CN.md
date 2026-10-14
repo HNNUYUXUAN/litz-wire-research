@@ -1,32 +1,28 @@
 # Litz Wire Research：智能体驱动建模与仿真
 
-**Miao Yuxuan / 缪雨轩 · Huainan Normal University / 淮南师范学院**
+![Litz](publications/assets/overview/zh-CN/project.png)
+
+**缪雨轩 · 淮南师范学院**
 
 以 Codex 或其他支持 MCP 的智能体驱动可复核科学建模，以 Litz 线损耗提供完整研究案例。
 
-[English](README.md) · [简体中文](README.zh-CN.md) · [Automation](automation/README.md) · [Publications](publications/README.md) · [Sources and acknowledgments](references/README.md)
+[English](README.md) · [简体中文](README.zh-CN.md) · [自动化研究](automation/README.zh-CN.md) · [完整稿件](publications/README.zh-CN.md) · [来源与致谢](references/README.zh-CN.md)
 
-```mermaid
-flowchart LR
-  Q[Research question] --> A[Codex / MCP agent]
-  A --> M[Wolfram / Ansys MCP]
-  M --> S[Saved model and bounded solver]
-  S --> V[Independent scientific checks]
-  V --> A
-  V --> N[Notebook and research findings]
-```
+![系统连接](publications/assets/overview/zh-CN/connections.svg)
+
+本地阅读：[完整报告、自动化方法论文与物理研究论文](publications/README.zh-CN.md)，含六份完整双语稿件、原生 Notebook 和十八份 PDF。
 
 ## 从研究问题到计算证据
 
 让智能体建立模型、执行求解、检查守恒并诊断失败。项目提供研究工作流、固定 MCP 接入、确定性运行器及完整工具和求解记录。可从 Wolfram 解析校准或 Maxwell 原生七股案例开始。
 
-- [Connect Codex](automation/harnesses/codex/README.md) · [Other MCP clients](automation/harnesses/generic/README.md)
-- [Complete automation examples](automation/examples/README.md) · [Architecture and extension](docs/automation-architecture.md)
-- [Reproduce](automation/workflows/reproduce/README.md) · [Extend a model](automation/workflows/extend-model/README.md) · [Compare solvers](automation/workflows/compare-solvers/README.md) · [Diagnose](automation/workflows/diagnose/README.md)
+- [接入 Codex](automation/harnesses/codex/README.zh-CN.md) · [其他 MCP 客户端](automation/harnesses/generic/README.zh-CN.md)
+- [完整自动化案例](automation/examples/README.zh-CN.md) · [架构与扩展](docs/automation-architecture.zh-CN.md)
+- [复现](automation/workflows/reproduce/README.zh-CN.md) · [扩展模型](automation/workflows/extend-model/README.zh-CN.md) · [跨求解器比较](automation/workflows/compare-solvers/README.zh-CN.md) · [诊断](automation/workflows/diagnose/README.zh-CN.md)
 
 任务示例：“通过 Wolfram 与 Maxwell 建立七股绝缘铜线在 200 kHz、20 A RMS 和受控同轴回流下的模型。联立求解共同端电压与复电流，核对功率，并报告网格精度限制。”
 
-[Actual execution and acceptance / 实际执行与验收](automation/examples/verification.json) · [Replay / 复现入口](automation/examples/README.md)
+[实际执行与验收](automation/examples/verification.json) · [复现入口](automation/examples/README.zh-CN.md)
 
 ## Litz 案例中的研究认识
 
@@ -34,11 +30,11 @@ flowchart LR
 
 从成稿中的解析径向分布、640 股复电流和 PEEC 敏感性图进入研究；每张图关联数据、模型和验收证据。
 
-![Round-wire radial current](publications/assets/zh-CN/q1_profile.png)
+![圆线径向电流](publications/assets/zh-CN/q1_profile.png)
 
-![Common-terminal strand currents](publications/assets/zh-CN/coax640_currents.png)
+![共端股线电流](publications/assets/zh-CN/coax640_currents.png)
 
-![PEEC sensitivity](publications/assets/zh-CN/peec_sensitivity.png)
+![PEEC 敏感性](publications/assets/zh-CN/peec_sensitivity.png)
 
 ## 运行第一个结果
 
@@ -53,20 +49,34 @@ python -m venv .venv
 
 ## 选择模型并继续研究
 
-| Route | Research entry |
+| 路线 | 研究入口 |
 | --- | --- |
-| Bessel calibration | [analytic](models/analytic/README.md) |
-| 2D field calibration | [fem2](models/fem2/README.md) |
-| Common-terminal currents | [common_terminal](models/common_terminal/README.md) |
-| Geometry and transposition | [geometry](models/geometry/README.md) |
-| Longitudinal PEEC | [peec](models/peec/README.md) |
-| RT0 volume model | [rt0](models/rt0/README.md) |
-| A–φ diagnostics | [aphi](models/aphi/README.md) |
+| Bessel 解析校准 | [analytic](models/analytic/README.zh-CN.md) |
+| 二维场校准 | [fem2](models/fem2/README.zh-CN.md) |
+| 共端电流 | [common_terminal](models/common_terminal/README.zh-CN.md) |
+| 几何与换位 | [geometry](models/geometry/README.zh-CN.md) |
+| 纵向 PEEC | [peec](models/peec/README.zh-CN.md) |
+| RT0 体模型 | [rt0](models/rt0/README.zh-CN.md) |
+| A–φ 诊断 | [aphi](models/aphi/README.zh-CN.md) |
 
 每条路线包含双语交互 Notebook、可编辑教程输入、源码和验收。先复现小型案例，再研究网格、边界和长度；真实换位、有限端场和实验沿保存的诊断资料继续推进。
 
 ## 阅读、引用与复用
 
-[Publications](publications/README.md) · [Datasets](docs/datasets.md) · [Citation guide](docs/citation-guide.md) · [Acknowledgments](ACKNOWLEDGMENTS.md) · [Licenses](LICENSES/README.md)
+[完整稿件](publications/README.zh-CN.md) · [数据集](docs/datasets.zh-CN.md) · [引用指南](docs/citation-guide.zh-CN.md) · [致谢](ACKNOWLEDGMENTS.zh-CN.md) · [许可](LICENSES/README.zh-CN.md)
 
 原创软件采用 MIT，原创文稿、图件与数据采用 CC BY 4.0；上游软件保留各自许可。Wolfram 与 Ansys 作为外部授权运行条件。候选仓库保持 Private，Release 保持 Draft。
+
+## 从模型到研究结论
+
+七条路线分别保留其自由度、激励、边界与验收记录。选择与研究问题相符的模型，再通过工作流扩展并检查。
+
+![模型层次](publications/assets/overview/zh-CN/model-hierarchy.svg)
+
+![研究循环](publications/assets/overview/zh-CN/research-loop.svg)
+
+![跨求解器协作](publications/assets/overview/zh-CN/cross-solver.svg)
+
+![研究手稿](publications/assets/overview/zh-CN/research-sketch.png)
+
+[本地完整交付与校验](publications/DELIVERY.zh-CN.md)

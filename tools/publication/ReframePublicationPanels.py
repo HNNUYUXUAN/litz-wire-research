@@ -4,15 +4,16 @@ import argparse, copy, json, re, shutil
 from BuildPublicationEdition import ROOT, read, write, sha, native_run
 
 
-def build(run_id, selected=None):
+def build(run_id, selected=None, source_run='data/publication'):
     if not re.fullmatch(r'[A-Za-z0-9_-]+', run_id):
         raise ValueError('Run ID uses letters, numbers, underscores and hyphens')
     run = ROOT / 'outputs' / run_id
     run.mkdir(parents=True, exist_ok=False)
     shutil.copy2(Path(__file__), run / Path(__file__).name)
-    base = ROOT / 'data/publication'
+    from litz_research.common import resolve_read_path
+    base = resolve_read_path(ROOT,source_run)
     ids = {'q1_cross_section': 'field', 'q1_fem_error': 'curve',
-           'peec_length': 'curve', 'peec_cross_section': 'field'}
+           'peec_length': 'curve', 'peec_cross_section': 'field', 'coax640_mesh': 'curve'}
     if selected:
         ids = {key: value for key,value in ids.items() if key in selected}
     layouts = {
@@ -84,6 +85,7 @@ def build(run_id, selected=None):
 if __name__ == '__main__':
     parser = argparse.ArgumentParser(__doc__)
     parser.add_argument('--run-id', required=True)
-    parser.add_argument('--panel', action='append', choices=['q1_cross_section','q1_fem_error','peec_length','peec_cross_section'])
+    parser.add_argument('--panel', action='append', choices=['q1_cross_section','q1_fem_error','peec_length','peec_cross_section','coax640_mesh'])
+    parser.add_argument('--source-run',default='data/publication')
     args=parser.parse_args()
-    build(args.run_id,args.panel)
+    build(args.run_id,args.panel,args.source_run)
