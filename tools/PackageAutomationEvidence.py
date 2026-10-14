@@ -18,6 +18,11 @@ def main():
         for file in (controls/folder).iterdir():
             if file.is_file() and file.suffix in {'.json','.png'}:selected[file.relative_to(root)]=file
     selected[(controls/'evidence_mount_verification.json').relative_to(root)]=controls/'evidence_mount_verification.json'
+    for file in (controls/'native_lifecycle_validation_01').glob('*.json'):selected[file.relative_to(root)]=file
+    recovery=controls/'recovery_verification_20261014_023334'
+    for name in ['recovery_receipt.json','historical_fixtures.json','verification.json']:
+        file=recovery/name
+        if file.exists():selected[file.relative_to(root)]=file
     staging=out/'files';objects={};files=[];lineage=[]
     text_suffixes={'.json','.jsonl','.txt','.log','.py','.wl','.wls','.wlt','.md','.toml','.bib','.ps1','.nb','.csv','.xml','.asol','.aedt'}
     for relative,source in sorted(selected.items()):

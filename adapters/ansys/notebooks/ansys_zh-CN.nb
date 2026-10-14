@@ -10,10 +10,10 @@
 NotebookFileLineBreakTest
 NotebookFileLineBreakTest
 NotebookDataPosition[       154,          7]
-NotebookDataLength[     81799,       1556]
-NotebookOptionsPosition[     77071,       1440]
-NotebookOutlinePosition[     78721,       1487]
-CellTagsIndexPosition[     78643,       1482]
+NotebookDataLength[     81853,       1558]
+NotebookOptionsPosition[     77125,       1442]
+NotebookOutlinePosition[     78775,       1489]
+CellTagsIndexPosition[     78697,       1484]
 WindowFrame->Normal*)
 
 (* Beginning of Notebook Content *)
@@ -121,9 +121,10 @@ Cell[BoxData[
 Cell[OutputFormData["\<\
 <||>\
 \>"], "Output",
- CellChangeTimes->{4.0008999402238045`*^9},
+ CellChangeTimes->{4.0008999402238045`*^9, 4.000923271047842*^9, 
+  4.0009245733981133`*^9},
  CellTags->"research-input",
- CellLabel->" Out[3]=",ExpressionUUID->"803eacbc-d9e8-3b4d-9e96-613d0d400258"]
+ CellLabel->" Out[3]=",ExpressionUUID->"2e19cd54-4e7a-a74b-a492-80ad5ca140d3"]
 }, Open  ]]
 }, Open  ]],
 
@@ -146,7 +147,7 @@ Cell[BoxData[
  CellLabel->" In[4]:=",ExpressionUUID->"262d8c92-9c4f-c446-9723-6bd26cdbfa81"],
 
 Cell[OutputFormData["\<\
-<|run_id -> notebook_ansys_20261014010540_acddf261, 
+<|run_id -> notebook_ansys_20261014075609_479e1f7e, 
  
 >   source_model -> Maxwell_resource_preflight, 
  
@@ -154,9 +155,10 @@ Cell[OutputFormData["\<\
  
 >   physical_acceptance_status -> not_run|>\
 \>"], "Output",
- CellChangeTimes->{4.00089994083515*^9},
+ CellChangeTimes->{4.00089994083515*^9, 4.0009232717127304`*^9, 
+  4.000924574033655*^9},
  CellTags->"research-input",
- CellLabel->" Out[4]=",ExpressionUUID->"5e172bac-0298-f444-b531-9a096313ca69"]
+ CellLabel->" Out[4]=",ExpressionUUID->"c9b0c7da-ed94-2248-aa5c-523d34e261f3"]
 }, Open  ]],
 
 Cell[CellGroupData[{
@@ -174,9 +176,9 @@ Cell[BoxData[
       TagBox[
        DynamicModuleBox[{TypeSystem`NestedGrid`PackagePrivate`$state$$ = <|
         "InitialData" -> <|
-          "run_id" -> "notebook_ansys_20261014010540_acddf261", "scope" -> 
-           "Use the Ansys MCP end-to-end example to create and solve the \
-native seven-strand model."|>, "AllowEmbedding" -> True, "InitialShape" -> 
+          "run_id" -> "notebook_ansys_20261014075609_479e1f7e", "scope" -> 
+           "Use case maxwell-seven or the Ansys MCP example for the actual \
+native solve."|>, "AllowEmbedding" -> True, "InitialShape" -> 
          TypeSystem`PackageScope`Limited[
            TypeSystem`PackageScope`ColumnShape[
             TypeSystem`PackageScope`KeyValueShape[
@@ -242,7 +244,7 @@ native seven-strand model."|>, "AllowEmbedding" -> True, "InitialShape" ->
                   Alignment -> {Left, Baseline}], 
                 Item[
                  Pane[
-                  Annotation["notebook_ansys_20261014010540_acddf261", 
+                  Annotation["notebook_ansys_20261014075609_479e1f7e", 
                    TypeSystem`NestedGrid`PackagePrivate`$SliceMarker[
                     TypeSystem`NestedGrid`PackagePrivate`localHold[
                     TypeSystem`NestedGrid`PackagePrivate`$outputID$$]][{
@@ -286,8 +288,8 @@ native seven-strand model."|>, "AllowEmbedding" -> True, "InitialShape" ->
                 Item[
                  Pane[
                   Annotation[
-                  "Use the Ansys MCP end-to-end example to create and solve \
-the native seven-strand model.", 
+                  "Use case maxwell-seven or the Ansys MCP example for the \
+actual native solve.", 
                    TypeSystem`NestedGrid`PackagePrivate`$SliceMarker[
                     TypeSystem`NestedGrid`PackagePrivate`localHold[
                     TypeSystem`NestedGrid`PackagePrivate`$outputID$$]][{
@@ -621,7 +623,7 @@ lastPathIsLeafHeader, TypeSystem`NestedGrid`PackagePrivate`headerHidden$ = And[
       TagBox[
        DynamicModuleBox[{TypeSystem`NestedGrid`PackagePrivate`$state$$ = <|
         "InitialData" -> <|
-          "run_id" -> "notebook_ansys_20261014010540_acddf261", 
+          "run_id" -> "notebook_ansys_20261014075609_479e1f7e", 
            "source_model" -> "Maxwell_resource_preflight", "execution_status" -> 
            "preflight_only", "physical_acceptance_status" -> "not_run", 
            "solver_started" -> False, 
@@ -629,9 +631,9 @@ lastPathIsLeafHeader, TypeSystem`NestedGrid`PackagePrivate`headerHidden$ = And[
             "cpu_threads" -> 8, "task_memory_bytes" -> 25769803776, 
              "system_reserve_bytes" -> 8589934592, "timeout_seconds" -> 
              1200|>, "scope" -> 
-           "Use the Ansys MCP end-to-end example to create and solve the \
-native seven-strand model.", "elapsed_seconds" -> 0.39099999999962165`|>, 
-         "AllowEmbedding" -> True, "InitialShape" -> 
+           "Use case maxwell-seven or the Ansys MCP example for the actual \
+native solve.", "elapsed_seconds" -> 0.40600000000267755`|>, "AllowEmbedding" -> 
+         True, "InitialShape" -> 
          TypeSystem`PackageScope`DocumentShape[<|{"run_id"} -> 
             TypeSystem`PackageScope`AtomShape[425.6], {"source_model"} -> 
             TypeSystem`PackageScope`AtomShape[291.20000000000005`], {
@@ -736,7 +738,7 @@ native seven-strand model.", "elapsed_seconds" -> 0.39099999999962165`|>,
                   Alignment -> {Left, Baseline}], 
                 Item[
                  Pane[
-                  Annotation["notebook_ansys_20261014010540_acddf261", 
+                  Annotation["notebook_ansys_20261014075609_479e1f7e", 
                    TypeSystem`NestedGrid`PackagePrivate`$SliceMarker[
                     TypeSystem`NestedGrid`PackagePrivate`localHold[
                     TypeSystem`NestedGrid`PackagePrivate`$outputID$$]][{
@@ -1024,8 +1026,8 @@ native seven-strand model.", "elapsed_seconds" -> 0.39099999999962165`|>,
                 Item[
                  Pane[
                   Annotation[
-                  "Use the Ansys MCP end-to-end example to create and solve \
-the native seven-strand model.", 
+                  "Use case maxwell-seven or the Ansys MCP example for the \
+actual native solve.", 
                    TypeSystem`NestedGrid`PackagePrivate`$SliceMarker[
                     TypeSystem`NestedGrid`PackagePrivate`localHold[
                     TypeSystem`NestedGrid`PackagePrivate`$outputID$$]][{
@@ -1069,7 +1071,7 @@ the native seven-strand model.",
                 Item[
                  Pane[
                   Annotation[
-                   RawBoxes["0.391"], 
+                   RawBoxes["0.406"], 
                    TypeSystem`NestedGrid`PackagePrivate`$SliceMarker[
                     TypeSystem`NestedGrid`PackagePrivate`localHold[
                     TypeSystem`NestedGrid`PackagePrivate`$outputID$$]][{
@@ -1406,7 +1408,7 @@ lastPathIsLeafHeader, TypeSystem`NestedGrid`PackagePrivate`headerHidden$ = And[
    GridBoxAlignment->{"Columns" -> {{Left}}},
    GridBoxItemSize->{"Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}},
    GridBoxSpacings->{"Columns" -> {{Automatic}}, "Rows" -> {{1.2}}}],
-  "Column"]], "Output",ExpressionUUID->"1be19dd2-cc69-b744-9b97-b0aff1e27be1"]
+  "Column"]], "Output",ExpressionUUID->"42573f5a-f29b-e640-8933-f5a64a5a947e"]
 }, Open  ]]
 }, Open  ]],
 
@@ -1467,21 +1469,21 @@ CellTagsIndex->{
   Cell[4189, 111, 275, 7, 28, "Input",ExpressionUUID->"dbe3fc4e-bab9-124d-ae00-403b769c918b",
    Evaluatable->True,
    CellTags->"research-input"],
-  Cell[4467, 120, 198, 5, 37, "Output",ExpressionUUID->"803eacbc-d9e8-3b4d-9e96-613d0d400258",
+  Cell[4467, 120, 247, 6, 37, "Output",ExpressionUUID->"2e19cd54-4e7a-a74b-a492-80ad5ca140d3",
    CellTags->"research-input"],
-  Cell[4888, 136, 390, 9, 66, "Input",ExpressionUUID->"262d8c92-9c4f-c446-9723-6bd26cdbfa81",
+  Cell[4937, 137, 390, 9, 66, "Input",ExpressionUUID->"262d8c92-9c4f-c446-9723-6bd26cdbfa81",
    Evaluatable->True,
    CellTags->"research-input"],
-  Cell[5281, 147, 383, 11, 98, "Output",ExpressionUUID->"5e172bac-0298-f444-b531-9a096313ca69",
+  Cell[5330, 148, 432, 12, 98, "Output",ExpressionUUID->"c9b0c7da-ed94-2248-aa5c-523d34e261f3",
    CellTags->"research-input"],
-  Cell[5701, 163, 216, 4, 28, "Input",ExpressionUUID->"73148dd0-e1da-5f47-9c69-427c2ac2ccd2",
+  Cell[5799, 165, 216, 4, 28, "Input",ExpressionUUID->"73148dd0-e1da-5f47-9c69-427c2ac2ccd2",
    Evaluatable->True,
    CellTags->"research-input"]}
  }
 *)
 (*CellTagsIndex
 CellTagsIndex->{
- {"research-input", 77742, 1461}
+ {"research-input", 77796, 1463}
  }
 *)
 (*NotebookFileOutline
@@ -1516,45 +1518,45 @@ Cell[3074, 74, 928, 27, 120, "Input",ExpressionUUID->"04809973-7633-034e-a7d1-41
  CellTags->"research-input"]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[4039, 106, 125, 1, 66, "Section",ExpressionUUID->"639f2720-7a4b-904c-84ea-ed32a1231388",
+Cell[4039, 106, 125, 1, 70, "Section",ExpressionUUID->"639f2720-7a4b-904c-84ea-ed32a1231388",
  Evaluatable->False],
 Cell[CellGroupData[{
 Cell[4189, 111, 275, 7, 28, "Input",ExpressionUUID->"dbe3fc4e-bab9-124d-ae00-403b769c918b",
  Evaluatable->True,
  CellTags->"research-input"],
-Cell[4467, 120, 198, 5, 37, "Output",ExpressionUUID->"803eacbc-d9e8-3b4d-9e96-613d0d400258",
+Cell[4467, 120, 247, 6, 37, "Output",ExpressionUUID->"2e19cd54-4e7a-a74b-a492-80ad5ca140d3",
  CellTags->"research-input"]
 }, Open  ]]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[4714, 131, 149, 1, 66, "Section",ExpressionUUID->"cc351883-47b0-2b43-b16b-50d64d75e5e7",
+Cell[4763, 132, 149, 1, 66, "Section",ExpressionUUID->"cc351883-47b0-2b43-b16b-50d64d75e5e7",
  Evaluatable->False],
 Cell[CellGroupData[{
-Cell[4888, 136, 390, 9, 66, "Input",ExpressionUUID->"262d8c92-9c4f-c446-9723-6bd26cdbfa81",
+Cell[4937, 137, 390, 9, 66, "Input",ExpressionUUID->"262d8c92-9c4f-c446-9723-6bd26cdbfa81",
  Evaluatable->True,
  CellTags->"research-input"],
-Cell[5281, 147, 383, 11, 98, "Output",ExpressionUUID->"5e172bac-0298-f444-b531-9a096313ca69",
+Cell[5330, 148, 432, 12, 98, "Output",ExpressionUUID->"c9b0c7da-ed94-2248-aa5c-523d34e261f3",
  CellTags->"research-input"]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[5701, 163, 216, 4, 28, "Input",ExpressionUUID->"73148dd0-e1da-5f47-9c69-427c2ac2ccd2",
+Cell[5799, 165, 216, 4, 28, "Input",ExpressionUUID->"73148dd0-e1da-5f47-9c69-427c2ac2ccd2",
  Evaluatable->True,
  CellTags->"research-input"],
-Cell[5920, 169, 70149, 1239, 300, "Output",ExpressionUUID->"1be19dd2-cc69-b744-9b97-b0aff1e27be1"]
+Cell[6018, 171, 70105, 1239, 300, "Output",ExpressionUUID->"42573f5a-f29b-e640-8933-f5a64a5a947e"]
 }, Open  ]]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[76118, 1414, 125, 1, 66, "Section",ExpressionUUID->"b252e925-ed01-7241-b5b5-d1460d512895",
+Cell[76172, 1416, 125, 1, 66, "Section",ExpressionUUID->"b252e925-ed01-7241-b5b5-d1460d512895",
  Evaluatable->False],
-Cell[76246, 1417, 307, 5, 55, "Text",ExpressionUUID->"10a68f50-4416-d941-9867-d59b045490ee",
+Cell[76300, 1419, 307, 5, 55, "Text",ExpressionUUID->"10a68f50-4416-d941-9867-d59b045490ee",
  Evaluatable->False],
-Cell[76556, 1424, 178, 3, 55, "Text",ExpressionUUID->"4eeb7535-cb92-1c4f-b7a7-e1405f0136ee",
+Cell[76610, 1426, 178, 3, 55, "Text",ExpressionUUID->"4eeb7535-cb92-1c4f-b7a7-e1405f0136ee",
  Evaluatable->False]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[76771, 1432, 119, 1, 66, "Section",ExpressionUUID->"4ad29a1b-978e-ce4e-8ef6-142bac95743b",
+Cell[76825, 1434, 119, 1, 66, "Section",ExpressionUUID->"4ad29a1b-978e-ce4e-8ef6-142bac95743b",
  Evaluatable->False],
-Cell[76893, 1435, 150, 1, 33, "Text",ExpressionUUID->"7dba2728-c762-5343-8a06-e382291821d4",
+Cell[76947, 1437, 150, 1, 33, "Text",ExpressionUUID->"7dba2728-c762-5343-8a06-e382291821d4",
  Evaluatable->False]
 }, Open  ]]
 }, Open  ]]

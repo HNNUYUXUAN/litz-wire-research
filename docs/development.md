@@ -38,3 +38,5 @@ Each source record in `provenance/` binds original and candidate SHA256, origin,
 ## Publications
 
 Edit paired Markdown paragraphs and shared definitions first, then use `litz-research build`. Chapter files are extracted from the merged document structure. The build tracks hashes for source dependencies, independent figure panels, composed panels, compiled PDFs and saved Notebooks. Changes to scientific data require a distinct source identity and documented acceptance. Stage recovery reuses verified artifacts belonging to the same run and input manifest.
+
+Full Python regression requires the optional modeling/document dependencies: `python -m pip install -e ".[automation,figures,documents,ansys,audit]" -c automation/mcp/project-environment.lock`. The basic analytical and MCP client installation remains smaller.

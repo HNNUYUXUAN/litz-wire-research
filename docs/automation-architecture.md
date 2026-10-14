@@ -2,7 +2,7 @@
 
 The reusable contribution is a closed research loop: question and scientific contract → agent workflow → MCP tools → saved source and bounded execution → independent acceptance → diagnosis or scholarly output. Litz provides numerical examples and explicit unresolved boundaries.
 
-`automation/` contains workflows, installable research skills, harness configuration and real tool sequences. `adapters/` owns runtime connection and execution. `models/` contains scientific implementations; `shared/` contains numerical/path/display helpers. The shared Python task interface joins CLI and native Notebooks, and is invoked by the Wolfram MCP example. Ansys MCP invokes its saved native adapter through CPython/PyAEDT.
+`automation/` contains workflows, installable research skills, harness configuration and real tool sequences. `adapters/` owns runtime connection and execution. `models/` contains scientific implementations; `shared/` contains numerical/path/display helpers. The shared Python task interface joins CLI and native Notebooks, and is invoked by the Wolfram MCP example. Ansys case maxwell-seven uses the same task submission/status/cancel/restart contract, owns its Student session, and invokes the native adapter through MCP and CPython/PyAEDT.
 
 ## Task and evidence contract
 

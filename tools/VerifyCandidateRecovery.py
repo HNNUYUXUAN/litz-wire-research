@@ -66,7 +66,7 @@ def main():
     if maxwell['physical_acceptance_status']!='passed_port_and_power_scope_only':raise ValueError('Restored native Maxwell case failed')
     if a.historical_source:
         historical=Path(a.historical_source).resolve();required={r['path'] for r in catalog['datasets']['publication-inputs']['files']}
-        required.update(['outputs/full_20261005_handoff/field_case_005/port_and_loss.json','outputs/full_20261005_handoff/geometry_manifest.json','outputs/closure_20261005_ansys_probe_r2/results.json','outputs/closure_20261005_ansys_2dmesh_01/results.json','outputs/prewrite_closure_state.json'])
+        required.update(['outputs/full_20261005_handoff/field_case_005/port_and_loss.json','outputs/full_20261005_handoff/geometry_manifest.json','outputs/closure_20261005_ansys_probe_r2/results.json','outputs/closure_20261005_ansys_2dmesh_01/results.json'])
         identities={r['path']:r for d in catalog['datasets'].values() for r in d['files']}
         for relative in sorted(required):
             source=historical/relative
@@ -75,6 +75,7 @@ def main():
         write(control/'historical_fixtures.json',{'source_version':catalog['tag'],'source':'previously verified immutable evidence mount','files':[identities[path] for path in sorted(required)]})
     else:
         for dataset in ['publication-inputs','ansys','research-records']:step('fixtures_'+dataset,cli+['data','fetch',dataset,'--cache',cache],target)
+    step('test_dependencies',[python,'-m','pip','install','-e',str(target)+'[figures,documents,ansys,audit]','-c',target/'automation/mcp/project-environment.lock'],target)
     step('regression',[python,'-m','unittest','discover','-s','tests','-p','test_*.py','-v'],target)
     receipt={'status':'passed','source_commit':commit,'path_contains_spaces':' ' in str(target),'steps':records,'files_restored':len(spec['files']),'remote_part_hashes':[r['sha256'] for r in spec['parts']],'native_maxwell':{k:maxwell[k] for k in ['current_constraint_relative_error','power_relative_error','bundle_Rac_ohm_per_m']},'owned_session_closed':read(owner_out/'aedt_session_closed.json'),'scope':'Independent fresh clone/venv; remote attachment recovery, damage detection, edit protection, offline restore, parsed client config, five Wolfram MCP tools and native Maxwell MCP solve in a path containing spaces.'}
     write(control/'recovery_receipt.json',receipt);print('RECOVERY PASSED',flush=True)

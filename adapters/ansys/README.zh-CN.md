@@ -39,3 +39,14 @@ AEDT 电压输入为峰值；适配层把 RMS 输入乘 √2，并重构 RMS 复
 ## 历史证据
 
 data/evidence/v1.0.0-rc.1/; litz-research data fetch ansys
+
+## 统一异步原生求解入口
+
+```powershell
+litz-research jobs submit ansys --case maxwell-seven --run-id maxwell_job_01
+litz-research jobs status maxwell_job_01
+litz-research jobs cancel maxwell_job_01
+litz-research jobs resume maxwell_job_01 --new-run-id maxwell_job_02
+```
+
+运行器启动所属 Student 会话，保存 MCP 发现、调用和原生结果；取消时关闭所属进程。接续核对保存输入及源码后使用新运行号。Notebook 仍默认执行轻量资源预检。

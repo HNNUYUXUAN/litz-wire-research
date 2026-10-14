@@ -10,10 +10,10 @@
 NotebookFileLineBreakTest
 NotebookFileLineBreakTest
 NotebookDataPosition[       154,          7]
-NotebookDataLength[     53763,       1111]
-NotebookOptionsPosition[     49030,        995]
-NotebookOutlinePosition[     50691,       1042]
-CellTagsIndexPosition[     50613,       1037]
+NotebookDataLength[     53859,       1113]
+NotebookOptionsPosition[     49126,        997]
+NotebookOutlinePosition[     50787,       1044]
+CellTagsIndexPosition[     50709,       1039]
 WindowFrame->Normal*)
 
 (* Beginning of Notebook Content *)
@@ -132,9 +132,10 @@ Cell[OutputFormData["\<\
  
 >   return_factor -> 2., outer_factor -> 1.5, minimum_segments -> 24|>\
 \>"], "Output",
- CellChangeTimes->{4.000899346949171*^9},
+ CellChangeTimes->{4.000899346949171*^9, 4.000922806872303*^9, 
+  4.000924133105686*^9},
  CellTags->"research-input",
- CellLabel->" Out[3]=",ExpressionUUID->"1bf840a1-ca0e-da4d-be1e-221683ffca0b"]
+ CellLabel->" Out[3]=",ExpressionUUID->"7fbd5531-4d15-0941-8641-bdfbd5048902"]
 }, Open  ]]
 }, Open  ]],
 
@@ -157,7 +158,7 @@ Cell[BoxData[
  CellLabel->" In[4]:=",ExpressionUUID->"862b8fb1-9938-b74c-b2e8-1eeeb6b84bb8"],
 
 Cell[OutputFormData["\<\
-<|run_id -> notebook_coax_20261014005546_0758f2d0, 
+<|run_id -> notebook_coax_20261014074849_31c607b1, 
  
 >   source_model -> 2D_linear_triangle_Az_common_voltage_coax_FEM, 
  
@@ -165,9 +166,10 @@ Cell[OutputFormData["\<\
  
 >   physical_acceptance_status -> passed_test_scope_only|>\
 \>"], "Output",
- CellChangeTimes->{4.000899371546509*^9},
+ CellChangeTimes->{4.000899371546509*^9, 4.0009228258361225`*^9, 
+  4.000924152203415*^9},
  CellTags->"research-input",
- CellLabel->" Out[4]=",ExpressionUUID->"00c19c84-2694-ad4d-970f-b6cd425053a5"]
+ CellLabel->" Out[4]=",ExpressionUUID->"44a00098-3360-0d49-9d21-05dae6e2a2ac"]
 }, Open  ]],
 
 Cell[CellGroupData[{
@@ -185,7 +187,7 @@ Cell[BoxData[
       TagBox[
        DynamicModuleBox[{TypeSystem`NestedGrid`PackagePrivate`$state$$ = <|
         "InitialData" -> <|
-          "run_id" -> "notebook_coax_20261014005546_0758f2d0", "scope" -> 
+          "run_id" -> "notebook_coax_20261014074849_31c607b1", "scope" -> 
            "Common-voltage 2D straight insulated strands and controlled \
 coaxial return. 200 kHz, 20 A RMS; small tutorial has insufficient copper for \
 final Q2 design.", 
@@ -273,7 +275,7 @@ final Q2 design.",
                   Alignment -> {Left, Baseline}], 
                 Item[
                  Pane[
-                  Annotation["notebook_coax_20261014005546_0758f2d0", 
+                  Annotation["notebook_coax_20261014074849_31c607b1", 
                    TypeSystem`NestedGrid`PackagePrivate`$SliceMarker[
                     TypeSystem`NestedGrid`PackagePrivate`localHold[
                     TypeSystem`NestedGrid`PackagePrivate`$outputID$$]][{
@@ -959,7 +961,7 @@ lastPathIsLeafHeader, TypeSystem`NestedGrid`PackagePrivate`headerHidden$ = And[
    GridBoxAlignment->{"Columns" -> {{Left}}},
    GridBoxItemSize->{"Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}},
    GridBoxSpacings->{"Columns" -> {{Automatic}}, "Rows" -> {{1.2}}}],
-  "Column"]], "Output",ExpressionUUID->"ea505bb2-a51f-8a4a-8f0a-0ae9d51514a0"]
+  "Column"]], "Output",ExpressionUUID->"a0c670e0-cb3c-4a43-a2d4-3bd45a75cff1"]
 }, Open  ]]
 }, Open  ]],
 
@@ -1022,21 +1024,21 @@ CellTagsIndex->{
   Cell[4222, 113, 665, 14, 85, "Input",ExpressionUUID->"52683e94-6620-1648-b460-1a2788ffbac6",
    Evaluatable->True,
    CellTags->"research-input"],
-  Cell[4890, 129, 323, 7, 57, "Output",ExpressionUUID->"1bf840a1-ca0e-da4d-be1e-221683ffca0b",
+  Cell[4890, 129, 370, 8, 57, "Output",ExpressionUUID->"7fbd5531-4d15-0941-8641-bdfbd5048902",
    CellTags->"research-input"],
-  Cell[5436, 147, 389, 9, 66, "Input",ExpressionUUID->"862b8fb1-9938-b74c-b2e8-1eeeb6b84bb8",
+  Cell[5483, 148, 389, 9, 66, "Input",ExpressionUUID->"862b8fb1-9938-b74c-b2e8-1eeeb6b84bb8",
    Evaluatable->True,
    CellTags->"research-input"],
-  Cell[5828, 158, 412, 11, 98, "Output",ExpressionUUID->"00c19c84-2694-ad4d-970f-b6cd425053a5",
+  Cell[5875, 159, 461, 12, 98, "Output",ExpressionUUID->"44a00098-3360-0d49-9d21-05dae6e2a2ac",
    CellTags->"research-input"],
-  Cell[6277, 174, 216, 4, 28, "Input",ExpressionUUID->"2af74f57-af07-e045-abf3-da542c5b7695",
+  Cell[6373, 176, 216, 4, 28, "Input",ExpressionUUID->"2af74f57-af07-e045-abf3-da542c5b7695",
    Evaluatable->True,
    CellTags->"research-input"]}
  }
 *)
 (*CellTagsIndex
 CellTagsIndex->{
- {"research-input", 49711, 1016}
+ {"research-input", 49807, 1018}
  }
 *)
 (*NotebookFileOutline
@@ -1071,45 +1073,45 @@ Cell[3107, 76, 928, 27, 120, "Input",ExpressionUUID->"3e96df7b-2ff7-4743-9020-69
  CellTags->"research-input"]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[4072, 108, 125, 1, 66, "Section",ExpressionUUID->"13bcd72c-9a6e-8a44-a31d-555ea74b3668",
+Cell[4072, 108, 125, 1, 70, "Section",ExpressionUUID->"13bcd72c-9a6e-8a44-a31d-555ea74b3668",
  Evaluatable->False],
 Cell[CellGroupData[{
 Cell[4222, 113, 665, 14, 85, "Input",ExpressionUUID->"52683e94-6620-1648-b460-1a2788ffbac6",
  Evaluatable->True,
  CellTags->"research-input"],
-Cell[4890, 129, 323, 7, 57, "Output",ExpressionUUID->"1bf840a1-ca0e-da4d-be1e-221683ffca0b",
+Cell[4890, 129, 370, 8, 57, "Output",ExpressionUUID->"7fbd5531-4d15-0941-8641-bdfbd5048902",
  CellTags->"research-input"]
 }, Open  ]]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[5262, 142, 149, 1, 66, "Section",ExpressionUUID->"aa143b96-3afe-b04d-b38a-495cee39f5aa",
+Cell[5309, 143, 149, 1, 70, "Section",ExpressionUUID->"aa143b96-3afe-b04d-b38a-495cee39f5aa",
  Evaluatable->False],
 Cell[CellGroupData[{
-Cell[5436, 147, 389, 9, 66, "Input",ExpressionUUID->"862b8fb1-9938-b74c-b2e8-1eeeb6b84bb8",
+Cell[5483, 148, 389, 9, 66, "Input",ExpressionUUID->"862b8fb1-9938-b74c-b2e8-1eeeb6b84bb8",
  Evaluatable->True,
  CellTags->"research-input"],
-Cell[5828, 158, 412, 11, 98, "Output",ExpressionUUID->"00c19c84-2694-ad4d-970f-b6cd425053a5",
+Cell[5875, 159, 461, 12, 98, "Output",ExpressionUUID->"44a00098-3360-0d49-9d21-05dae6e2a2ac",
  CellTags->"research-input"]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[6277, 174, 216, 4, 28, "Input",ExpressionUUID->"2af74f57-af07-e045-abf3-da542c5b7695",
+Cell[6373, 176, 216, 4, 28, "Input",ExpressionUUID->"2af74f57-af07-e045-abf3-da542c5b7695",
  Evaluatable->True,
  CellTags->"research-input"],
-Cell[6496, 180, 41523, 781, 554, "Output",ExpressionUUID->"ea505bb2-a51f-8a4a-8f0a-0ae9d51514a0"]
+Cell[6592, 182, 41523, 781, 554, "Output",ExpressionUUID->"a0c670e0-cb3c-4a43-a2d4-3bd45a75cff1"]
 }, Open  ]]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[48068, 967, 125, 1, 66, "Section",ExpressionUUID->"76047ab2-33c7-d742-95d2-ddb432b5d023",
+Cell[48164, 969, 125, 1, 66, "Section",ExpressionUUID->"76047ab2-33c7-d742-95d2-ddb432b5d023",
  Evaluatable->False],
-Cell[48196, 970, 307, 5, 55, "Text",ExpressionUUID->"654f24ea-bf4d-8547-8d39-0f6cc3356f94",
+Cell[48292, 972, 307, 5, 55, "Text",ExpressionUUID->"654f24ea-bf4d-8547-8d39-0f6cc3356f94",
  Evaluatable->False],
-Cell[48506, 977, 169, 3, 33, "Text",ExpressionUUID->"5dad8021-efc0-2349-bdf5-b2361d6167a9",
+Cell[48602, 979, 169, 3, 33, "Text",ExpressionUUID->"5dad8021-efc0-2349-bdf5-b2361d6167a9",
  Evaluatable->False]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[48712, 985, 119, 1, 66, "Section",ExpressionUUID->"60398846-24fb-7f4f-98cd-f23b1acbed25",
+Cell[48808, 987, 119, 1, 66, "Section",ExpressionUUID->"60398846-24fb-7f4f-98cd-f23b1acbed25",
  Evaluatable->False],
-Cell[48834, 988, 168, 3, 33, "Text",ExpressionUUID->"14aaa866-c768-1d48-ad95-268a7e4c58b4",
+Cell[48930, 990, 168, 3, 33, "Text",ExpressionUUID->"14aaa866-c768-1d48-ad95-268a7e4c58b4",
  Evaluatable->False]
 }, Open  ]]
 }, Open  ]]

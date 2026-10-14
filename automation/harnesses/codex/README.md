@@ -10,3 +10,5 @@
 For long execution: `litz-research jobs submit peec --case tutorial --run-id peec_job_01`, then `jobs status peec_job_01`. `jobs cancel` requests cancellation; `jobs resume --new-run-id` restarts from saved input under a linked identity.
 
 Reference verification uses Codex orchestrating the standard MCP client in automation/mcp/client.py and the official Wolfram tools. Native client registration is checked separately from this bridge. Model and client versions are recorded only when observable.
+
+[Official MCP configuration documentation](https://learn.chatgpt.com/docs/extend/mcp?surface=cli). The project generator locates the installed kernel through wolframscript when it is absent from PATH and records unresolved executable paths explicitly.

@@ -17,6 +17,13 @@
       "execution_status": "completed",
       "physical_acceptance_status": "comparison_observed_convergence_not_run",
       "attachment_path": "outputs/rc2_seven_comparison_verified_01"
+    },
+    {
+      "run_id": "rc2_final_seven_comparison_01",
+      "result_sha256": "e0cefd8d886b4798f7d2db7284edc6823be4bf06310d44737f80852041316e0b",
+      "execution_status": "completed",
+      "physical_acceptance_status": "comparison_observed_convergence_not_run",
+      "attachment_path": "outputs/rc2_final_seven_comparison_01"
     }
   ],
   "conclusion": "comparison_observed_convergence_not_run"

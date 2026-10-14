@@ -39,3 +39,14 @@ Inspect actual units, axial model depth, frequency, project contents, mesh stati
 ## Historical evidence
 
 data/evidence/v1.0.0-rc.1/; litz-research data fetch ansys
+
+## Shared asynchronous native case
+
+```powershell
+litz-research jobs submit ansys --case maxwell-seven --run-id maxwell_job_01
+litz-research jobs status maxwell_job_01
+litz-research jobs cancel maxwell_job_01
+litz-research jobs resume maxwell_job_01 --new-run-id maxwell_job_02
+```
+
+The runner owns the Student session, records MCP discovery/calls and native results, and closes the owned process tree on cancellation. Restart verifies saved inputs/source and uses a new run. The Notebook preflight is the lightweight default.

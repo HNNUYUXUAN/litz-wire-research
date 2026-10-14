@@ -4,7 +4,7 @@
 | --- | --- | --- |
 | WOLFRAM | proprietary | metadata and configuration; software installed separately |
 | AGENTTOOLS | MIT | metadata and configuration; software installed separately |
-| PYAEDTMCP | Apache-2.0 | metadata and configuration; software installed separately |
+| PYAEDTMCP | Apache-2.0 | fixed upstream source archive attachment and external runtime; Apache notice retained |
 | PYAEDT | MIT | metadata and configuration; software installed separately |
 | CODEX | service/software terms | metadata and configuration; software installed separately |
 | MCP | upstream specification terms | metadata and configuration; software installed separately |

@@ -94,8 +94,8 @@
       "sha256": "57ef86e3eac865555afc62720951fd78b7ff97d667533f95a6632b32e0a00bf5"
     },
     {
-      "run_id": "rc2_maxwell_mcp_verified_01",
-      "sha256": "1e826da6af695abcff977a02a4c3d68ac57ff77c3e5bec51f56d1a10d83f6bac"
+      "run_id": "native_restart_20261014_074719",
+      "sha256": "44e65ef4db4cbc40ea9f4b4d855f35647867daa9631e3c3abd398ed1ac59a564"
     }
   ]
 }

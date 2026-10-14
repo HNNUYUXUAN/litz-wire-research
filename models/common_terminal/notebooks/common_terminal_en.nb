@@ -10,10 +10,10 @@
 NotebookFileLineBreakTest
 NotebookFileLineBreakTest
 NotebookDataPosition[       154,          7]
-NotebookDataLength[     53286,       1109]
-NotebookOptionsPosition[     48555,        993]
-NotebookOutlinePosition[     50213,       1040]
-CellTagsIndexPosition[     50135,       1035]
+NotebookDataLength[     53384,       1111]
+NotebookOptionsPosition[     48655,        995]
+NotebookOutlinePosition[     50312,       1042]
+CellTagsIndexPosition[     50234,       1037]
 WindowFrame->Normal*)
 
 (* Beginning of Notebook Content *)
@@ -131,9 +131,10 @@ Cell[OutputFormData["\<\
  
 >   return_factor -> 2., outer_factor -> 1.5, minimum_segments -> 24|>\
 \>"], "Output",
- CellChangeTimes->{4.000899292366108*^9},
+ CellChangeTimes->{4.000899292366108*^9, 4.0009227682766857`*^9, 
+  4.0009240953308887`*^9},
  CellTags->"research-input",
- CellLabel->" Out[3]=",ExpressionUUID->"29cb16c3-83f5-be45-90a9-94e8d32646ad"]
+ CellLabel->" Out[3]=",ExpressionUUID->"ee39fcae-7aa1-1644-b9cc-4fd656ebe90e"]
 }, Open  ]]
 }, Open  ]],
 
@@ -156,7 +157,7 @@ Cell[BoxData[
  CellLabel->" In[4]:=",ExpressionUUID->"a02fb3e5-d9b3-ac43-ba40-9f526bd83e64"],
 
 Cell[OutputFormData["\<\
-<|run_id -> notebook_coax_20261014005452_1e5850fa, 
+<|run_id -> notebook_coax_20261014074811_6b136424, 
  
 >   source_model -> 2D_linear_triangle_Az_common_voltage_coax_FEM, 
  
@@ -164,9 +165,10 @@ Cell[OutputFormData["\<\
  
 >   physical_acceptance_status -> passed_test_scope_only|>\
 \>"], "Output",
- CellChangeTimes->{4.000899317968939*^9},
+ CellChangeTimes->{4.000899317968939*^9, 4.0009227871825256`*^9, 
+  4.000924113989155*^9},
  CellTags->"research-input",
- CellLabel->" Out[4]=",ExpressionUUID->"62765018-1c64-c744-806e-fc7d20c82a06"]
+ CellLabel->" Out[4]=",ExpressionUUID->"8bfa03a4-9001-8043-9653-dd1a67dcb9b8"]
 }, Open  ]],
 
 Cell[CellGroupData[{
@@ -184,7 +186,7 @@ Cell[BoxData[
       TagBox[
        DynamicModuleBox[{TypeSystem`NestedGrid`PackagePrivate`$state$$ = <|
         "InitialData" -> <|
-          "run_id" -> "notebook_coax_20261014005452_1e5850fa", "scope" -> 
+          "run_id" -> "notebook_coax_20261014074811_6b136424", "scope" -> 
            "Common-voltage 2D straight insulated strands and controlled \
 coaxial return. 200 kHz, 20 A RMS; small tutorial has insufficient copper for \
 final Q2 design.", 
@@ -272,7 +274,7 @@ final Q2 design.",
                   Alignment -> {Left, Baseline}], 
                 Item[
                  Pane[
-                  Annotation["notebook_coax_20261014005452_1e5850fa", 
+                  Annotation["notebook_coax_20261014074811_6b136424", 
                    TypeSystem`NestedGrid`PackagePrivate`$SliceMarker[
                     TypeSystem`NestedGrid`PackagePrivate`localHold[
                     TypeSystem`NestedGrid`PackagePrivate`$outputID$$]][{
@@ -958,7 +960,7 @@ lastPathIsLeafHeader, TypeSystem`NestedGrid`PackagePrivate`headerHidden$ = And[
    GridBoxAlignment->{"Columns" -> {{Left}}},
    GridBoxItemSize->{"Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}},
    GridBoxSpacings->{"Columns" -> {{Automatic}}, "Rows" -> {{1.2}}}],
-  "Column"]], "Output",ExpressionUUID->"2857e376-f139-0b44-95e9-36d0f33df6ea"]
+  "Column"]], "Output",ExpressionUUID->"f265e7dc-f8d1-6b4d-9d28-8542be474cf6"]
 }, Open  ]]
 }, Open  ]],
 
@@ -1013,28 +1015,28 @@ ExpressionUUID->"dc880c57-4ef1-894e-aec0-39bc0ffc1ceb"
 (*CellTagsOutline
 CellTagsIndex->{
  "research-input"->{
-  Cell[2738, 75, 928, 27, 120, "Input",ExpressionUUID->"2c3709c5-4a59-c348-b89a-2c14afe0dcff",
+  Cell[2738, 75, 928, 27, 70, "Input",ExpressionUUID->"2c3709c5-4a59-c348-b89a-2c14afe0dcff",
    Evaluatable->True,
    InitializationCell->True,
    CellTags->"research-input"],
   Cell[3842, 112, 665, 14, 85, "Input",ExpressionUUID->"9123fb82-b454-494a-950d-1af05bc41a77",
    Evaluatable->True,
    CellTags->"research-input"],
-  Cell[4510, 128, 323, 7, 57, "Output",ExpressionUUID->"29cb16c3-83f5-be45-90a9-94e8d32646ad",
+  Cell[4510, 128, 374, 8, 57, "Output",ExpressionUUID->"ee39fcae-7aa1-1644-b9cc-4fd656ebe90e",
    CellTags->"research-input"],
-  Cell[5035, 146, 389, 9, 66, "Input",ExpressionUUID->"a02fb3e5-d9b3-ac43-ba40-9f526bd83e64",
+  Cell[5086, 147, 389, 9, 66, "Input",ExpressionUUID->"a02fb3e5-d9b3-ac43-ba40-9f526bd83e64",
    Evaluatable->True,
    CellTags->"research-input"],
-  Cell[5427, 157, 412, 11, 98, "Output",ExpressionUUID->"62765018-1c64-c744-806e-fc7d20c82a06",
+  Cell[5478, 158, 461, 12, 98, "Output",ExpressionUUID->"8bfa03a4-9001-8043-9653-dd1a67dcb9b8",
    CellTags->"research-input"],
-  Cell[5876, 173, 216, 4, 28, "Input",ExpressionUUID->"412504eb-cdeb-c14c-a02b-256677f59c52",
+  Cell[5976, 175, 216, 4, 28, "Input",ExpressionUUID->"412504eb-cdeb-c14c-a02b-256677f59c52",
    Evaluatable->True,
    CellTags->"research-input"]}
  }
 *)
 (*CellTagsIndex
 CellTagsIndex->{
- {"research-input", 49233, 1014}
+ {"research-input", 49333, 1016}
  }
 *)
 (*NotebookFileOutline
@@ -1063,51 +1065,51 @@ Cell[2019, 59, 377, 6, 99, "Text",ExpressionUUID->"64790043-9497-f74d-8d63-7eaea
  Evaluatable->False],
 Cell[2399, 67, 336, 6, 99, "Text",ExpressionUUID->"d70b619d-0c2d-8a4b-9235-137dd9acb6e4",
  Evaluatable->False],
-Cell[2738, 75, 928, 27, 120, "Input",ExpressionUUID->"2c3709c5-4a59-c348-b89a-2c14afe0dcff",
+Cell[2738, 75, 928, 27, 70, "Input",ExpressionUUID->"2c3709c5-4a59-c348-b89a-2c14afe0dcff",
  Evaluatable->True,
  InitializationCell->True,
  CellTags->"research-input"]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[3703, 107, 114, 1, 66, "Section",ExpressionUUID->"5c15523b-0ba7-2747-82fd-171d67efe308",
+Cell[3703, 107, 114, 1, 70, "Section",ExpressionUUID->"5c15523b-0ba7-2747-82fd-171d67efe308",
  Evaluatable->False],
 Cell[CellGroupData[{
 Cell[3842, 112, 665, 14, 85, "Input",ExpressionUUID->"9123fb82-b454-494a-950d-1af05bc41a77",
  Evaluatable->True,
  CellTags->"research-input"],
-Cell[4510, 128, 323, 7, 57, "Output",ExpressionUUID->"29cb16c3-83f5-be45-90a9-94e8d32646ad",
+Cell[4510, 128, 374, 8, 57, "Output",ExpressionUUID->"ee39fcae-7aa1-1644-b9cc-4fd656ebe90e",
  CellTags->"research-input"]
 }, Open  ]]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[4882, 141, 128, 1, 66, "Section",ExpressionUUID->"110e3554-6312-7049-8748-e3f8435ba962",
+Cell[4933, 142, 128, 1, 70, "Section",ExpressionUUID->"110e3554-6312-7049-8748-e3f8435ba962",
  Evaluatable->False],
 Cell[CellGroupData[{
-Cell[5035, 146, 389, 9, 66, "Input",ExpressionUUID->"a02fb3e5-d9b3-ac43-ba40-9f526bd83e64",
+Cell[5086, 147, 389, 9, 66, "Input",ExpressionUUID->"a02fb3e5-d9b3-ac43-ba40-9f526bd83e64",
  Evaluatable->True,
  CellTags->"research-input"],
-Cell[5427, 157, 412, 11, 98, "Output",ExpressionUUID->"62765018-1c64-c744-806e-fc7d20c82a06",
+Cell[5478, 158, 461, 12, 98, "Output",ExpressionUUID->"8bfa03a4-9001-8043-9653-dd1a67dcb9b8",
  CellTags->"research-input"]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[5876, 173, 216, 4, 28, "Input",ExpressionUUID->"412504eb-cdeb-c14c-a02b-256677f59c52",
+Cell[5976, 175, 216, 4, 28, "Input",ExpressionUUID->"412504eb-cdeb-c14c-a02b-256677f59c52",
  Evaluatable->True,
  CellTags->"research-input"],
-Cell[6095, 179, 41523, 781, 554, "Output",ExpressionUUID->"2857e376-f139-0b44-95e9-36d0f33df6ea"]
+Cell[6195, 181, 41523, 781, 554, "Output",ExpressionUUID->"f265e7dc-f8d1-6b4d-9d28-8542be474cf6"]
 }, Open  ]]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[47667, 966, 122, 1, 66, "Section",ExpressionUUID->"3daa7f5e-b846-c14e-b110-45b47a8b5efe",
+Cell[47767, 968, 122, 1, 66, "Section",ExpressionUUID->"3daa7f5e-b846-c14e-b110-45b47a8b5efe",
  Evaluatable->False],
-Cell[47792, 969, 241, 4, 77, "Text",ExpressionUUID->"da1d9212-8168-ea4c-add5-229309e16f3f",
+Cell[47892, 971, 241, 4, 77, "Text",ExpressionUUID->"da1d9212-8168-ea4c-add5-229309e16f3f",
  Evaluatable->False],
-Cell[48036, 975, 169, 3, 33, "Text",ExpressionUUID->"f2de5bcb-2e9f-254c-8dfc-39e348fbdc3e",
+Cell[48136, 977, 169, 3, 33, "Text",ExpressionUUID->"f2de5bcb-2e9f-254c-8dfc-39e348fbdc3e",
  Evaluatable->False]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[48242, 983, 114, 1, 66, "Section",ExpressionUUID->"336f47a7-aec7-4946-bd4c-b26cb7f8a4ec",
+Cell[48342, 985, 114, 1, 66, "Section",ExpressionUUID->"336f47a7-aec7-4946-bd4c-b26cb7f8a4ec",
  Evaluatable->False],
-Cell[48359, 986, 168, 3, 33, "Text",ExpressionUUID->"410c92a3-940f-0a40-9c1e-52ac66961c5f",
+Cell[48459, 988, 168, 3, 33, "Text",ExpressionUUID->"410c92a3-940f-0a40-9c1e-52ac66961c5f",
  Evaluatable->False]
 }, Open  ]]
 }, Open  ]]

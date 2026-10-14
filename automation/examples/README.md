@@ -38,3 +38,7 @@ Use `litz-research run analytic --case frequency-sweep --run-id frequency_study_
 The [diagnosis record](diagnosis/execution.json) preserves the real `1000mm` conversion failure returned as text by the upstream tool, the [repair diff](diagnosis/code.patch) and a successful new run. The [A–phi record](aphi-diagnostics/execution.json) reproduces field derivatives and retains the failed potential/gauge gates.
 
 Use a new identity on every invocation. After a timeout, query the saved task or session before starting another solve. The task templates document the visible research request; records contain tool events and artifacts, without model-internal reasoning.
+
+## Shared native task lifecycle
+
+Use `jobs submit ansys --case maxwell-seven --run-id maxwell_job_01`, then status/cancel/resume. The [actual lifecycle receipt](../../provenance/rc2/native_task_lifecycle.json) records a live Student cancellation, owned-session closure and verified-input restart that completed the native solve. This interface also supplies Rac/Rdc, actual polygonal copper area/volume, axial arc lengths and complex-current deviation.

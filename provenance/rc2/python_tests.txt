@@ -1,5 +1,5 @@
 test_configuration_does_not_allow_touching_strands (test_ansys_native3d.Native3DChecks.test_configuration_does_not_allow_touching_strands) ... ok
-test_current_density_calculator_stacks_are_scalar_first (test_ansys_native3d.Native3DChecks.test_current_density_calculator_stacks_are_scalar_first) ... ${PROJECT_ROOT}\.venv\Lib\site-packages\defusedxml\__init__.py:30: DeprecationWarning: defusedxml.cElementTree is deprecated, import from defusedxml.ElementTree instead.
+test_current_density_calculator_stacks_are_scalar_first (test_ansys_native3d.Native3DChecks.test_current_density_calculator_stacks_are_scalar_first) ... ${PROJECT_ROOT}\outputs\automation_20261013_rc2\recovery checkout with spaces\.venv\Lib\site-packages\defusedxml\__init__.py:30: DeprecationWarning: defusedxml.cElementTree is deprecated, import from defusedxml.ElementTree instead.
   from . import cElementTree
 ok
 test_explicit_peak_voltage_and_phase (test_ansys_native3d.Native3DChecks.test_explicit_peak_voltage_and_phase) ... ok
@@ -16,6 +16,7 @@ test_corrupted_mounted_evidence_is_rejected (test_automation_tasks.AutomationTes
 test_dataset_version_controls_mount_and_automatic_readback (test_automation_tasks.AutomationTests.test_dataset_version_controls_mount_and_automatic_readback) ... ok
 test_frequency_extension_preserves_dc_limit_and_integrals (test_automation_tasks.AutomationTests.test_frequency_extension_preserves_dc_limit_and_integrals) ... ok
 test_parameters_must_be_actual_supported_inputs (test_automation_tasks.AutomationTests.test_parameters_must_be_actual_supported_inputs) ... ok
+test_restore_supports_long_windows_snapshot_paths (test_automation_tasks.AutomationTests.test_restore_supports_long_windows_snapshot_paths) ... ok
 test_tutorial_rejects_accidental_large_campaign (test_automation_tasks.AutomationTests.test_tutorial_rejects_accidental_large_campaign) ... ok
 test_2d_freeze_excludes_only_semaphore_locks_and_hashes_actual_entities (test_closure_ansys.ClosureAnsysContracts.test_2d_freeze_excludes_only_semaphore_locks_and_hashes_actual_entities) ... ok
 test_2d_preflight_mesh_limit_is_not_relaxed (test_closure_ansys.ClosureAnsysContracts.test_2d_preflight_mesh_limit_is_not_relaxed) ... ok
@@ -93,10 +94,6 @@ test_selected_failed_check_fails (test_frozen_physics_collect.FrozenPhysicsColle
 test_validation_source_snapshot_mismatch_fails (test_frozen_physics_collect.FrozenPhysicsCollection.test_validation_source_snapshot_mismatch_fails) ... ok
 test_widened_direct_tolerance_fails (test_frozen_physics_collect.FrozenPhysicsCollection.test_widened_direct_tolerance_fails) ... ok
 test_block_identities_and_cross_references (test_paper_reading.ChinesePaperReading.test_block_identities_and_cross_references) ... ok
-{"run_id": "scalar_three", "task": "2d_mesh", "execution_status": "passed_scalar_validation_fields_unavailable", "process_exit_code": 0}
-{"run_id": "gated", "task": "native_coarse", "execution_status": "not_run", "process_exit_code": 1}
-terminal field {'representation': 'complex_re_im', 'real': 0.41185624504164947, 'imag': 4.064969102953991, 'unit': 'm'}
-terminal field {'representation': 'complex_re_im', 'real': 0.41185624504164947, 'imag': 4.064969102953991, 'unit': 'm'}
 test_scientific_values_and_sources_are_preserved (test_paper_reading.ChinesePaperReading.test_scientific_values_and_sources_are_preserved) ... ok
 test_table_display_conversions (test_paper_reading.ChinesePaperReading.test_table_display_conversions) ... ok
 test_ansys_requires_existing_explicit_environment (test_prewrite_closure.ClosureControllerTests.test_ansys_requires_existing_explicit_environment) ... ok
@@ -111,7 +108,6 @@ test_m80_cpu_model_prediction_fits_low (test_prewrite_closure.ClosureControllerT
 test_prediction_adds_thirty_percent_to_comparable_peak (test_prewrite_closure.ClosureControllerTests.test_prediction_adds_thirty_percent_to_comparable_peak) ... ok
 test_run_id_prerequisite_resolves_to_frozen_results (test_prewrite_closure.ClosureControllerTests.test_run_id_prerequisite_resolves_to_frozen_results) ... ok
 test_unknown_task_fails_before_dispatch (test_prewrite_closure.ClosureControllerTests.test_unknown_task_fails_before_dispatch) ... ok
-terminal field {'representation': 'complex_re_im', 'real': 0.41185624504164947, 'imag': 4.064969102953991, 'unit': 'm'}
 test_640_common_terminal_field_unit (test_publication_manuscripts.PublicationAcceptance.test_640_common_terminal_field_unit) ... ok
 test_bundle_power_and_resistance (test_publication_manuscripts.PublicationAcceptance.test_bundle_power_and_resistance) ... ok
 test_caption_components (test_publication_manuscripts.PublicationAcceptance.test_caption_components) ... ok
@@ -134,7 +130,9 @@ test_complete_contract_and_exact_integer_anchors (test_retained_topology.Retaine
 test_failed_actual_exit_and_missing_alias_are_rejected (test_retained_topology.RetainedTopologyContract.test_failed_actual_exit_and_missing_alias_are_rejected) ... ok
 test_numeric_tampering_even_with_new_file_hash_rejects_original_anchor (test_retained_topology.RetainedTopologyContract.test_numeric_tampering_even_with_new_file_hash_rejects_original_anchor) ... ok
 test_async_restart_preserves_inputs_and_rejects_duplicate_identity (test_task_lifecycle.LifecycleTests.test_async_restart_preserves_inputs_and_rejects_duplicate_identity) ... ok
+test_queued_cancel_can_restart_without_a_solver_checkpoint (test_task_lifecycle.LifecycleTests.test_queued_cancel_can_restart_without_a_solver_checkpoint) ... ok
 test_restart_rejects_a_corrupted_saved_source (test_task_lifecycle.LifecycleTests.test_restart_rejects_a_corrupted_saved_source) ... ok
+test_reused_parent_pid_does_not_adopt_an_older_process (test_task_lifecycle.LifecycleTests.test_reused_parent_pid_does_not_adopt_an_older_process) ... ok
 test_timeout_releases_only_owned_processes (test_task_lifecycle.LifecycleTests.test_timeout_releases_only_owned_processes) ... ok
 test_analytical_cli_in_checkout_with_spaces (test_tool_experience.ToolExperienceTests.test_analytical_cli_in_checkout_with_spaces) ... ok
 test_ansys_student_executable_is_discovered_from_environment_root (test_tool_experience.ToolExperienceTests.test_ansys_student_executable_is_discovered_from_environment_root) ... ok
@@ -153,6 +151,6 @@ test_hamilton_full_period_each_id_visits_all_slots (test_topology_candidates.Geo
 test_nominal_area_and_straight_dc_reference (test_topology_candidates.GeometryChecks.test_nominal_area_and_straight_dc_reference) ... ok
 
 ----------------------------------------------------------------------
-Ran 146 tests in 11.089s
+Ran 149 tests in 11.194s
 
 OK

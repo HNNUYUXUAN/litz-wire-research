@@ -10,10 +10,10 @@
 NotebookFileLineBreakTest
 NotebookFileLineBreakTest
 NotebookDataPosition[       154,          7]
-NotebookDataLength[     73650,       1429]
-NotebookOptionsPosition[     69040,       1315]
-NotebookOutlinePosition[     70687,       1362]
-CellTagsIndexPosition[     70609,       1357]
+NotebookDataLength[     73752,       1431]
+NotebookOptionsPosition[     69140,       1317]
+NotebookOutlinePosition[     70788,       1364]
+CellTagsIndexPosition[     70710,       1359]
 WindowFrame->Normal*)
 
 (* Beginning of Notebook Content *)
@@ -112,9 +112,10 @@ Cell[BoxData[
 Cell[OutputFormData["\<\
 <|matrix_size -> 128, fft_size -> 4096|>\
 \>"], "Output",
- CellChangeTimes->{4.0009000453029175`*^9},
+ CellChangeTimes->{4.0009000453029175`*^9, 4.000923358692087*^9, 
+  4.0009246581929207`*^9},
  CellTags->"research-input",
- CellLabel->" Out[3]=",ExpressionUUID->"2fb7e8a3-dd7b-8045-b82d-61c5f177ed61"]
+ CellLabel->" Out[3]=",ExpressionUUID->"e528d2e3-374a-5d4f-81fe-6988b234ef88"]
 }, Open  ]]
 }, Open  ]],
 
@@ -136,15 +137,16 @@ Cell[BoxData[
  CellLabel->" In[4]:=",ExpressionUUID->"6df199de-4b69-144e-b138-23b2aab135f1"],
 
 Cell[OutputFormData["\<\
-<|run_id -> notebook_gpu_20261014010725_a7e9c088, source_model -> gpu, 
+<|run_id -> notebook_gpu_20261014075734_d9e93455, source_model -> gpu, 
  
 >   execution_status -> completed, 
  
 >   physical_acceptance_status -> passed_test_scope_only|>\
 \>"], "Output",
- CellChangeTimes->{4.0009001004843006`*^9},
+ CellChangeTimes->{4.0009001004843006`*^9, 4.0009234060153294`*^9, 
+  4.0009247047351723`*^9},
  CellTags->"research-input",
- CellLabel->" Out[4]=",ExpressionUUID->"b051b678-bf69-1a4c-b6f7-e70fecea284b"]
+ CellLabel->" Out[4]=",ExpressionUUID->"8afa6576-7803-464f-ab95-2174dd1e861a"]
 }, Open  ]],
 
 Cell[CellGroupData[{
@@ -162,7 +164,7 @@ Cell[BoxData[
       TagBox[
        DynamicModuleBox[{TypeSystem`NestedGrid`PackagePrivate`$state$$ = <|
         "InitialData" -> <|
-          "run_id" -> "notebook_gpu_20261014010725_a7e9c088", "scope" -> 
+          "run_id" -> "notebook_gpu_20261014075734_d9e93455", "scope" -> 
            "Small Real64/ComplexReal64 GPU/CPU multiplication, known complex \
 solution, residual and cuFFT comparison. Synthetic numerical validation \
 only.", "checks" -> {<|
@@ -254,7 +256,7 @@ only.", "checks" -> {<|
                   Alignment -> {Left, Baseline}], 
                 Item[
                  Pane[
-                  Annotation["notebook_gpu_20261014010725_a7e9c088", 
+                  Annotation["notebook_gpu_20261014075734_d9e93455", 
                    TypeSystem`NestedGrid`PackagePrivate`$SliceMarker[
                     TypeSystem`NestedGrid`PackagePrivate`localHold[
                     TypeSystem`NestedGrid`PackagePrivate`$outputID$$]][{
@@ -1281,7 +1283,7 @@ MV7aGv+zY4sO/gcUPgKE
    GridBoxAlignment->{"Columns" -> {{Left}}},
    GridBoxItemSize->{"Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}},
    GridBoxSpacings->{"Columns" -> {{Automatic}}, "Rows" -> {{1.2}}}],
-  "Column"]], "Output",ExpressionUUID->"970326cc-47e3-4d40-a50f-68eba7d56e72"]
+  "Column"]], "Output",ExpressionUUID->"778fa394-4dda-b94b-aa23-b194b94b5dd6"]
 }, Open  ]]
 }, Open  ]],
 
@@ -1342,21 +1344,21 @@ CellTagsIndex->{
   Cell[3622, 99, 409, 10, 28, "Input",ExpressionUUID->"1e469b84-df98-114c-95b5-c872b3df55b5",
    Evaluatable->True,
    CellTags->"research-input"],
-  Cell[4034, 111, 234, 5, 37, "Output",ExpressionUUID->"2fb7e8a3-dd7b-8045-b82d-61c5f177ed61",
+  Cell[4034, 111, 283, 6, 37, "Output",ExpressionUUID->"e528d2e3-374a-5d4f-81fe-6988b234ef88",
    CellTags->"research-input"],
-  Cell[4491, 127, 385, 8, 66, "Input",ExpressionUUID->"6df199de-4b69-144e-b138-23b2aab135f1",
+  Cell[4540, 128, 385, 8, 66, "Input",ExpressionUUID->"6df199de-4b69-144e-b138-23b2aab135f1",
    Evaluatable->True,
    CellTags->"research-input"],
-  Cell[4879, 137, 364, 9, 77, "Output",ExpressionUUID->"b051b678-bf69-1a4c-b6f7-e70fecea284b",
+  Cell[4928, 138, 415, 10, 77, "Output",ExpressionUUID->"8afa6576-7803-464f-ab95-2174dd1e861a",
    CellTags->"research-input"],
-  Cell[5280, 151, 216, 4, 28, "Input",ExpressionUUID->"08f2a661-5629-604c-b32c-c73c72cc15e7",
+  Cell[5380, 153, 216, 4, 28, "Input",ExpressionUUID->"08f2a661-5629-604c-b32c-c73c72cc15e7",
    Evaluatable->True,
    CellTags->"research-input"]}
  }
 *)
 (*CellTagsIndex
 CellTagsIndex->{
- {"research-input", 69709, 1336}
+ {"research-input", 69809, 1338}
  }
 *)
 (*NotebookFileOutline
@@ -1395,39 +1397,39 @@ Cell[CellGroupData[{
 Cell[3622, 99, 409, 10, 28, "Input",ExpressionUUID->"1e469b84-df98-114c-95b5-c872b3df55b5",
  Evaluatable->True,
  CellTags->"research-input"],
-Cell[4034, 111, 234, 5, 37, "Output",ExpressionUUID->"2fb7e8a3-dd7b-8045-b82d-61c5f177ed61",
+Cell[4034, 111, 283, 6, 37, "Output",ExpressionUUID->"e528d2e3-374a-5d4f-81fe-6988b234ef88",
  CellTags->"research-input"]
 }, Open  ]]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[4317, 122, 149, 1, 66, "Section",ExpressionUUID->"66f19d42-53ab-7d44-a879-b20c948e2400",
+Cell[4366, 123, 149, 1, 70, "Section",ExpressionUUID->"66f19d42-53ab-7d44-a879-b20c948e2400",
  Evaluatable->False],
 Cell[CellGroupData[{
-Cell[4491, 127, 385, 8, 66, "Input",ExpressionUUID->"6df199de-4b69-144e-b138-23b2aab135f1",
+Cell[4540, 128, 385, 8, 66, "Input",ExpressionUUID->"6df199de-4b69-144e-b138-23b2aab135f1",
  Evaluatable->True,
  CellTags->"research-input"],
-Cell[4879, 137, 364, 9, 77, "Output",ExpressionUUID->"b051b678-bf69-1a4c-b6f7-e70fecea284b",
+Cell[4928, 138, 415, 10, 77, "Output",ExpressionUUID->"8afa6576-7803-464f-ab95-2174dd1e861a",
  CellTags->"research-input"]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[5280, 151, 216, 4, 28, "Input",ExpressionUUID->"08f2a661-5629-604c-b32c-c73c72cc15e7",
+Cell[5380, 153, 216, 4, 28, "Input",ExpressionUUID->"08f2a661-5629-604c-b32c-c73c72cc15e7",
  Evaluatable->True,
  CellTags->"research-input"],
-Cell[5499, 157, 62554, 1126, 548, "Output",ExpressionUUID->"970326cc-47e3-4d40-a50f-68eba7d56e72"]
+Cell[5599, 159, 62554, 1126, 548, "Output",ExpressionUUID->"778fa394-4dda-b94b-aa23-b194b94b5dd6"]
 }, Open  ]]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[68102, 1289, 125, 1, 66, "Section",ExpressionUUID->"7889296e-e79e-2a4e-9206-db5e6ee271aa",
+Cell[68202, 1291, 125, 1, 66, "Section",ExpressionUUID->"7889296e-e79e-2a4e-9206-db5e6ee271aa",
  Evaluatable->False],
-Cell[68230, 1292, 307, 5, 55, "Text",ExpressionUUID->"69c1f002-d897-f849-9a37-b9386b625509",
+Cell[68330, 1294, 307, 5, 55, "Text",ExpressionUUID->"69c1f002-d897-f849-9a37-b9386b625509",
  Evaluatable->False],
-Cell[68540, 1299, 165, 3, 33, "Text",ExpressionUUID->"7b11f13c-e310-d84a-ad90-b7a1f7b9298a",
+Cell[68640, 1301, 165, 3, 33, "Text",ExpressionUUID->"7b11f13c-e310-d84a-ad90-b7a1f7b9298a",
  Evaluatable->False]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[68742, 1307, 119, 1, 66, "Section",ExpressionUUID->"ce8f10fe-7518-4246-bf17-7b7a8d3041e5",
+Cell[68842, 1309, 119, 1, 66, "Section",ExpressionUUID->"ce8f10fe-7518-4246-bf17-7b7a8d3041e5",
  Evaluatable->False],
-Cell[68864, 1310, 148, 1, 33, "Text",ExpressionUUID->"d0ba584a-e38a-9f44-9299-704f217b0986",
+Cell[68964, 1312, 148, 1, 33, "Text",ExpressionUUID->"d0ba584a-e38a-9f44-9299-704f217b0986",
  Evaluatable->False]
 }, Open  ]]
 }, Open  ]]

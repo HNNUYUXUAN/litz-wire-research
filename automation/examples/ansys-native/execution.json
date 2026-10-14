@@ -34,7 +34,48 @@
       "execution_status": "completed",
       "physical_acceptance_status": "passed_port_and_power_scope_only",
       "attachment_path": "outputs/rc2_maxwell_mcp_verified_01"
+    },
+    {
+      "run_id": "native_cancel_20261014_074719",
+      "result_sha256": "f6eaf803c912a233b9944edf113aa0ad787b0f0e9404423f290ef7a25d83f8a1",
+      "execution_status": "cancelled",
+      "physical_acceptance_status": "not_verified",
+      "attachment_path": "outputs/native_cancel_20261014_074719"
+    },
+    {
+      "run_id": "native_restart_20261014_074719",
+      "result_sha256": "44e65ef4db4cbc40ea9f4b4d855f35647867daa9631e3c3abd398ed1ac59a564",
+      "execution_status": "completed",
+      "physical_acceptance_status": "passed_port_and_power_scope_only",
+      "attachment_path": "outputs/native_restart_20261014_074719"
+    },
+    {
+      "run_id": "native_cancel_20261014_074719_mcp",
+      "result_sha256": "0ef185f6103545d44ea2a6dab1a3b6d5b89fd7e58660279da76b6562df9b2a92",
+      "execution_status": "cancelled",
+      "physical_acceptance_status": "not_verified",
+      "attachment_path": "outputs/native_cancel_20261014_074719_mcp"
+    },
+    {
+      "run_id": "native_restart_20261014_074719_mcp",
+      "result_sha256": "4b23f995c70309c4367b3c8fd6a22361743dda4b73104b883dca65169aa2d424",
+      "execution_status": "completed",
+      "physical_acceptance_status": "not_evaluated_by_protocol_probe",
+      "attachment_path": "outputs/native_restart_20261014_074719_mcp",
+      "mcp_events.jsonl": {
+        "path": "automation/examples/ansys-native/native_restart_20261014_074719_mcp_mcp_events.jsonl",
+        "raw_sha256": "50dc5912850b67bf2f9da12bf56d53ce978f71be8d3c004fc910cab6343046f6",
+        "public_sha256": "7d7ea23e1a6ffc0de384005786648beea6cf53c235a6165c2e21b02d74fd05ed",
+        "processing": "portable paths; all event numeric values retained"
+      },
+      "protocol_report.json": {
+        "path": "automation/examples/ansys-native/native_restart_20261014_074719_mcp_protocol_report.json",
+        "raw_sha256": "22e628953967119c863e7a08d987b850da0cb5772249a8d89ca02413abcbde6c",
+        "public_sha256": "22e628953967119c863e7a08d987b850da0cb5772249a8d89ca02413abcbde6c",
+        "processing": "portable paths; all event numeric values retained"
+      }
     }
   ],
-  "conclusion": "completed / passed_port_and_power_scope_only"
+  "conclusion": "completed / passed_port_and_power_scope_only",
+  "task_lifecycle": "provenance/rc2/native_task_lifecycle.json"
 }
