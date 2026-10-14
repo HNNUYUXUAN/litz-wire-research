@@ -1,0 +1,9 @@
+{
+  "tracked_files_scanned": 870,
+  "scope": "Tracked UTF-8 source, documentation, JSON and Notebook text; known GitHub/OpenAI credential token patterns and recorded machine-root patterns. This is a bounded check, not a claim of exhaustive secret detection.",
+  "machine_root_files": [],
+  "credential_pattern_files": [],
+  "notebook_runtime_identity_records": 20,
+  "all_recorded_runtime_hashes_match_current_files": true,
+  "regression_runtime_commit": "669dce5afee833d8eeff4bee89a06b88d8614ea5"
+}

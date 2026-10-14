@@ -21,3 +21,7 @@ Historical rc.1 evidence preserves 31,950 verified files and original relative p
 Core source and independently verified runtime: commit 669dce5afee833d8eeff4bee89a06b88d8614ea5. Later candidate commits add reading, evidence and delivery metadata. Repository remains Private; Release remains Draft. Public conversion and full scholarly-style propagation are later stages.
 
 Final automation attachment: 10569 file mappings, 1145 content objects, 15412406 compressed bytes; SHA256 0869f1d7e634659c6f512601d26358b32e68533f7a4a5eeafe030847157ed4e2.
+
+The final replacement attachment was independently downloaded into a fresh cache and restored from remote clone fe58105 in a path containing spaces. All 10569 mappings pass remote-download and offline verification: [receipt](final_attachment_recovery.json).
+
+The current tracked source byte inventory is [source_files.json](source_files.json), excluding that inventory itself. Source ZIP and attachment checksums accompany the private draft Release.

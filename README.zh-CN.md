@@ -44,7 +44,7 @@ flowchart LR
 
 ```powershell
 python -m venv .venv
-.venv/Scripts/python.exe -m pip install -e ".[automation]"
+.venv/Scripts/python.exe -m pip install -e ".[automation]" -c automation/mcp/project-environment.lock
 .venv/Scripts/litz-research.exe run analytic --case tutorial --run-id analytic_example_01
 .venv/Scripts/litz-research.exe automation doctor
 ```
