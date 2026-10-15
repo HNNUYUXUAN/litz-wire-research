@@ -4,7 +4,7 @@
 
 完整 Markdown 可直接在线阅读。PDF、Notebook 和源码包位于下列私有草稿 Release 的 Assets 中；请登录有仓库访问权限的 GitHub 账号。
 
-[rc.2 · 审阅附件](https://github.com/HNNUYUXUAN/litz-wire-research/releases/tag/untagged-d28f6ae752cc3e063a51)
+[rc.2 · 审阅附件](https://github.com/HNNUYUXUAN/litz-wire-research/releases)
 
 | 作品 / 语言 | 在线正文 | 附件前缀 |
 | --- | --- | --- |

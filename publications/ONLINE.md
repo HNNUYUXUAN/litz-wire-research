@@ -4,7 +4,7 @@
 
 Read complete Markdown manuscripts online. PDFs, Notebooks and source packages are in the private draft release Assets below; sign in with repository access.
 
-[rc.2 · Review assets](https://github.com/HNNUYUXUAN/litz-wire-research/releases/tag/untagged-d28f6ae752cc3e063a51)
+[rc.2 · Review assets](https://github.com/HNNUYUXUAN/litz-wire-research/releases)
 
 | Work / language | Online text | Asset prefix |
 | --- | --- | --- |
