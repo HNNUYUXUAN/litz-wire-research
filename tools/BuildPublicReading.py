@@ -33,6 +33,7 @@ def build(run_id):
         zh = lang == 'zh-CN'
         lines = ['# '+('完整学术稿件' if zh else 'Complete research publications'),'',
                  '[English](README.md) · [简体中文](README.zh-CN.md)','',
+                 ('[在线审阅与附件下载](ONLINE.zh-CN.md)' if zh else '[Online review and attachments](ONLINE.md)'),'',
                  ('三部作品各含中英文完整 Markdown、原生 Wolfram Notebook，以及通用单栏、IEEE 期刊和 IEEE 会议三种 LaTeX/PDF。下列文件为本地构建产物，随交付包提供。' if zh else 'Each work has complete Chinese and English Markdown, a native Wolfram Notebook, and LaTeX/PDF in general single-column, IEEE journal and IEEE conference layouts. Local build artifacts below are supplied in the delivery package.'),'',
                  '| '+('作品 / 语言 | Markdown | Notebook | PDF：单栏 / 期刊 / 会议 |' if zh else 'Work / language | Markdown | Notebook | PDF: single / journal / conference |'),
                  '| --- | --- | --- | --- |']

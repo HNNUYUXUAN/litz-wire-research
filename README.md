@@ -1,5 +1,7 @@
 # Litz Wire Research
 
+[Online review and attachments](publications/ONLINE.md)
+
 ![Litz](publications/assets/overview/en/project.png)
 
 **Miao Yuxuan · Huainan Normal University**

@@ -1,5 +1,7 @@
 # 本地交付总索引
 
+[在线审阅与附件下载](ONLINE.zh-CN.md)
+
 [English](DELIVERY.md) · [简体中文](DELIVERY.zh-CN.md)
 
 三部作品共 6 份完整 Markdown、6 份原生 Wolfram Notebook、18 份 LaTeX/PDF；另附 6 份可编辑模板。

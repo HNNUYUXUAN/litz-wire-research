@@ -1,5 +1,7 @@
 # Litz Wire Research：智能体驱动建模与仿真
 
+[在线审阅与附件下载](publications/ONLINE.zh-CN.md)
+
 ![Litz](publications/assets/overview/zh-CN/project.png)
 
 **缪雨轩 · 淮南师范学院**

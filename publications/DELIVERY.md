@@ -1,5 +1,7 @@
 # Local delivery index
 
+[Online review and attachments](ONLINE.md)
+
 [English](DELIVERY.md) · [简体中文](DELIVERY.zh-CN.md)
 
 Three works provide six complete Markdown manuscripts, six native Wolfram Notebooks, eighteen LaTeX/PDF editions and six editable templates.
