@@ -4769,21 +4769,21 @@
           "bytes": 134217728,
           "sha256": "bc226f885bf2336e5ba56c97d1ab2641c9163092054110697323f14948e14da5",
           "url": "https://api.github.com/repos/HNNUYUXUAN/litz-wire-research/releases/assets/619267215",
-          "public_url": "https://github.com/HNNUYUXUAN/litz-wire-research/releases/download/untagged-f71ee4e060c0e39537cb/academic-editions.r1.tar.gz.part001"
+          "public_url": "https://github.com/HNNUYUXUAN/litz-wire-research/releases/download/v1.0.0-rc.1/academic-editions.r1.tar.gz.part001"
         },
         {
           "name": "academic-editions.r1.tar.gz.part002",
           "bytes": 134217728,
           "sha256": "a5e5b8ac1ce6ecb767ecd4662289ce58b1d2136369aae9ccdd8c5e0c8fe26d25",
           "url": "https://api.github.com/repos/HNNUYUXUAN/litz-wire-research/releases/assets/619269853",
-          "public_url": "https://github.com/HNNUYUXUAN/litz-wire-research/releases/download/untagged-f71ee4e060c0e39537cb/academic-editions.r1.tar.gz.part002"
+          "public_url": "https://github.com/HNNUYUXUAN/litz-wire-research/releases/download/v1.0.0-rc.1/academic-editions.r1.tar.gz.part002"
         },
         {
           "name": "academic-editions.r1.tar.gz.part003",
           "bytes": 85439495,
           "sha256": "986ec35a954c1db3c0c01e20a147f7727f0a416c01a99a5e1948aea9f6af5ed3",
           "url": "https://api.github.com/repos/HNNUYUXUAN/litz-wire-research/releases/assets/619269944",
-          "public_url": "https://github.com/HNNUYUXUAN/litz-wire-research/releases/download/untagged-f71ee4e060c0e39537cb/academic-editions.r1.tar.gz.part003"
+          "public_url": "https://github.com/HNNUYUXUAN/litz-wire-research/releases/download/v1.0.0-rc.1/academic-editions.r1.tar.gz.part003"
         }
       ]
     },
@@ -9880,7 +9880,7 @@
           "bytes": 1443395,
           "sha256": "37d16ca416e3e635d59c424195776316c9ec04b5c3635bb4adf1297da06d240d",
           "url": "https://api.github.com/repos/HNNUYUXUAN/litz-wire-research/releases/assets/619245756",
-          "public_url": "https://github.com/HNNUYUXUAN/litz-wire-research/releases/download/untagged-f71ee4e060c0e39537cb/analytic.tar.gz.part001"
+          "public_url": "https://github.com/HNNUYUXUAN/litz-wire-research/releases/download/v1.0.0-rc.1/analytic.tar.gz.part001"
         }
       ]
     },
@@ -22187,7 +22187,7 @@
           "bytes": 4486086,
           "sha256": "1aae3edd56882725a9424c96014dee7852d744a7356a870f458225d729b7a060",
           "url": "https://api.github.com/repos/HNNUYUXUAN/litz-wire-research/releases/assets/619246088",
-          "public_url": "https://github.com/HNNUYUXUAN/litz-wire-research/releases/download/untagged-f71ee4e060c0e39537cb/ansys.tar.gz.part001"
+          "public_url": "https://github.com/HNNUYUXUAN/litz-wire-research/releases/download/v1.0.0-rc.1/ansys.tar.gz.part001"
         }
       ]
     },
@@ -34079,182 +34079,182 @@
           "bytes": 134217728,
           "sha256": "1712d3fdf6afa5ee9f19582659a51395454d07588062b80c13b8c63dc68056a9",
           "url": "https://api.github.com/repos/HNNUYUXUAN/litz-wire-research/releases/assets/619325093",
-          "public_url": "https://github.com/HNNUYUXUAN/litz-wire-research/releases/download/untagged-f71ee4e060c0e39537cb/aphi.r1.tar.gz.part001"
+          "public_url": "https://github.com/HNNUYUXUAN/litz-wire-research/releases/download/v1.0.0-rc.1/aphi.r1.tar.gz.part001"
         },
         {
           "name": "aphi.r1.tar.gz.part002",
           "bytes": 134217728,
           "sha256": "8ee10a451029036076cc33acc25e01d574f4cee9ed840b46b2cc607de0c6dd17",
           "url": "https://api.github.com/repos/HNNUYUXUAN/litz-wire-research/releases/assets/619327359",
-          "public_url": "https://github.com/HNNUYUXUAN/litz-wire-research/releases/download/untagged-f71ee4e060c0e39537cb/aphi.r1.tar.gz.part002"
+          "public_url": "https://github.com/HNNUYUXUAN/litz-wire-research/releases/download/v1.0.0-rc.1/aphi.r1.tar.gz.part002"
         },
         {
           "name": "aphi.r1.tar.gz.part003",
           "bytes": 134217728,
           "sha256": "bfb7953ebdab9f4b563d8f122bb0ae9cca8bb80ae310617ec792502a17f545e9",
           "url": "https://api.github.com/repos/HNNUYUXUAN/litz-wire-research/releases/assets/619328396",
-          "public_url": "https://github.com/HNNUYUXUAN/litz-wire-research/releases/download/untagged-f71ee4e060c0e39537cb/aphi.r1.tar.gz.part003"
+          "public_url": "https://github.com/HNNUYUXUAN/litz-wire-research/releases/download/v1.0.0-rc.1/aphi.r1.tar.gz.part003"
         },
         {
           "name": "aphi.r1.tar.gz.part004",
           "bytes": 134217728,
           "sha256": "4b49b605e48ab4442353a7ae50924349d405cf2165fd8d8ee5d870f5267e3ea7",
           "url": "https://api.github.com/repos/HNNUYUXUAN/litz-wire-research/releases/assets/619332356",
-          "public_url": "https://github.com/HNNUYUXUAN/litz-wire-research/releases/download/untagged-f71ee4e060c0e39537cb/aphi.r1.tar.gz.part004"
+          "public_url": "https://github.com/HNNUYUXUAN/litz-wire-research/releases/download/v1.0.0-rc.1/aphi.r1.tar.gz.part004"
         },
         {
           "name": "aphi.r1.tar.gz.part005",
           "bytes": 134217728,
           "sha256": "0abdad052304113eac37933ddcbc5d339d40d3219aefe3c23da1b606c3e7fa08",
           "url": "https://api.github.com/repos/HNNUYUXUAN/litz-wire-research/releases/assets/619333198",
-          "public_url": "https://github.com/HNNUYUXUAN/litz-wire-research/releases/download/untagged-f71ee4e060c0e39537cb/aphi.r1.tar.gz.part005"
+          "public_url": "https://github.com/HNNUYUXUAN/litz-wire-research/releases/download/v1.0.0-rc.1/aphi.r1.tar.gz.part005"
         },
         {
           "name": "aphi.r1.tar.gz.part006",
           "bytes": 134217728,
           "sha256": "e11f0511230571e408c62c7b8ded9bc6a817e48415a209d95953494fbe20c166",
           "url": "https://api.github.com/repos/HNNUYUXUAN/litz-wire-research/releases/assets/619337624",
-          "public_url": "https://github.com/HNNUYUXUAN/litz-wire-research/releases/download/untagged-f71ee4e060c0e39537cb/aphi.r1.tar.gz.part006"
+          "public_url": "https://github.com/HNNUYUXUAN/litz-wire-research/releases/download/v1.0.0-rc.1/aphi.r1.tar.gz.part006"
         },
         {
           "name": "aphi.r1.tar.gz.part007",
           "bytes": 134217728,
           "sha256": "eb3f54baf6c0cfffc076b6240c25317d258300922e91095e7a09f65cdf032fcb",
           "url": "https://api.github.com/repos/HNNUYUXUAN/litz-wire-research/releases/assets/619339381",
-          "public_url": "https://github.com/HNNUYUXUAN/litz-wire-research/releases/download/untagged-f71ee4e060c0e39537cb/aphi.r1.tar.gz.part007"
+          "public_url": "https://github.com/HNNUYUXUAN/litz-wire-research/releases/download/v1.0.0-rc.1/aphi.r1.tar.gz.part007"
         },
         {
           "name": "aphi.r1.tar.gz.part008",
           "bytes": 134217728,
           "sha256": "4d104f6a9703849a32519b0848e18ba5fbb6d751d74f5af7748a8cea71ca440c",
           "url": "https://api.github.com/repos/HNNUYUXUAN/litz-wire-research/releases/assets/619340643",
-          "public_url": "https://github.com/HNNUYUXUAN/litz-wire-research/releases/download/untagged-f71ee4e060c0e39537cb/aphi.r1.tar.gz.part008"
+          "public_url": "https://github.com/HNNUYUXUAN/litz-wire-research/releases/download/v1.0.0-rc.1/aphi.r1.tar.gz.part008"
         },
         {
           "name": "aphi.r1.tar.gz.part009",
           "bytes": 134217728,
           "sha256": "b4f565dcdaa51aa9d308d4b77ea651d02f703baa5f016b435e1f967b9ae3b555",
           "url": "https://api.github.com/repos/HNNUYUXUAN/litz-wire-research/releases/assets/619342612",
-          "public_url": "https://github.com/HNNUYUXUAN/litz-wire-research/releases/download/untagged-f71ee4e060c0e39537cb/aphi.r1.tar.gz.part009"
+          "public_url": "https://github.com/HNNUYUXUAN/litz-wire-research/releases/download/v1.0.0-rc.1/aphi.r1.tar.gz.part009"
         },
         {
           "name": "aphi.r1.tar.gz.part010",
           "bytes": 134217728,
           "sha256": "eff358e6ac52aacdf00802440f043ef594f93dd1868111c3cf26d86086a2d5c7",
           "url": "https://api.github.com/repos/HNNUYUXUAN/litz-wire-research/releases/assets/619345592",
-          "public_url": "https://github.com/HNNUYUXUAN/litz-wire-research/releases/download/untagged-f71ee4e060c0e39537cb/aphi.r1.tar.gz.part010"
+          "public_url": "https://github.com/HNNUYUXUAN/litz-wire-research/releases/download/v1.0.0-rc.1/aphi.r1.tar.gz.part010"
         },
         {
           "name": "aphi.r1.tar.gz.part011",
           "bytes": 134217728,
           "sha256": "80c585e62567486d5ffd30b499e77b969f1b282775ec816730db34b7a3bc0b7b",
           "url": "https://api.github.com/repos/HNNUYUXUAN/litz-wire-research/releases/assets/619346141",
-          "public_url": "https://github.com/HNNUYUXUAN/litz-wire-research/releases/download/untagged-f71ee4e060c0e39537cb/aphi.r1.tar.gz.part011"
+          "public_url": "https://github.com/HNNUYUXUAN/litz-wire-research/releases/download/v1.0.0-rc.1/aphi.r1.tar.gz.part011"
         },
         {
           "name": "aphi.r1.tar.gz.part012",
           "bytes": 134217728,
           "sha256": "852165da3a0c9c9b8f544db3e750007b0cbb97c677305480303bb349ebba7a26",
           "url": "https://api.github.com/repos/HNNUYUXUAN/litz-wire-research/releases/assets/619348102",
-          "public_url": "https://github.com/HNNUYUXUAN/litz-wire-research/releases/download/untagged-f71ee4e060c0e39537cb/aphi.r1.tar.gz.part012"
+          "public_url": "https://github.com/HNNUYUXUAN/litz-wire-research/releases/download/v1.0.0-rc.1/aphi.r1.tar.gz.part012"
         },
         {
           "name": "aphi.r1.tar.gz.part013",
           "bytes": 134217728,
           "sha256": "b68aa74cca0aefb81c244d611bd0e24b9dcc9189db6d3d8896ec4b615c782628",
           "url": "https://api.github.com/repos/HNNUYUXUAN/litz-wire-research/releases/assets/619350643",
-          "public_url": "https://github.com/HNNUYUXUAN/litz-wire-research/releases/download/untagged-f71ee4e060c0e39537cb/aphi.r1.tar.gz.part013"
+          "public_url": "https://github.com/HNNUYUXUAN/litz-wire-research/releases/download/v1.0.0-rc.1/aphi.r1.tar.gz.part013"
         },
         {
           "name": "aphi.r1.tar.gz.part014",
           "bytes": 134217728,
           "sha256": "001b62042777d4de0dcc89341900fe9e44e461452a8c5ece5442053728dfea15",
           "url": "https://api.github.com/repos/HNNUYUXUAN/litz-wire-research/releases/assets/619350825",
-          "public_url": "https://github.com/HNNUYUXUAN/litz-wire-research/releases/download/untagged-f71ee4e060c0e39537cb/aphi.r1.tar.gz.part014"
+          "public_url": "https://github.com/HNNUYUXUAN/litz-wire-research/releases/download/v1.0.0-rc.1/aphi.r1.tar.gz.part014"
         },
         {
           "name": "aphi.r1.tar.gz.part015",
           "bytes": 134217728,
           "sha256": "110b75298a4e402ff645771146f4a1014a5a5432e7d6739a127a4bc85150e26a",
           "url": "https://api.github.com/repos/HNNUYUXUAN/litz-wire-research/releases/assets/619352961",
-          "public_url": "https://github.com/HNNUYUXUAN/litz-wire-research/releases/download/untagged-f71ee4e060c0e39537cb/aphi.r1.tar.gz.part015"
+          "public_url": "https://github.com/HNNUYUXUAN/litz-wire-research/releases/download/v1.0.0-rc.1/aphi.r1.tar.gz.part015"
         },
         {
           "name": "aphi.r1.tar.gz.part016",
           "bytes": 134217728,
           "sha256": "2808e89d03cd925f2d1b7bec6b487e0b12c780bec7d1f02e148d383a58bd11e7",
           "url": "https://api.github.com/repos/HNNUYUXUAN/litz-wire-research/releases/assets/619354566",
-          "public_url": "https://github.com/HNNUYUXUAN/litz-wire-research/releases/download/untagged-f71ee4e060c0e39537cb/aphi.r1.tar.gz.part016"
+          "public_url": "https://github.com/HNNUYUXUAN/litz-wire-research/releases/download/v1.0.0-rc.1/aphi.r1.tar.gz.part016"
         },
         {
           "name": "aphi.r1.tar.gz.part017",
           "bytes": 134217728,
           "sha256": "9b666f52832ca8d68a79c1e1079c3cf607dc8b568bc9e7a6b10bc2043f8746de",
           "url": "https://api.github.com/repos/HNNUYUXUAN/litz-wire-research/releases/assets/619356318",
-          "public_url": "https://github.com/HNNUYUXUAN/litz-wire-research/releases/download/untagged-f71ee4e060c0e39537cb/aphi.r1.tar.gz.part017"
+          "public_url": "https://github.com/HNNUYUXUAN/litz-wire-research/releases/download/v1.0.0-rc.1/aphi.r1.tar.gz.part017"
         },
         {
           "name": "aphi.r1.tar.gz.part018",
           "bytes": 134217728,
           "sha256": "94a1f3e264f71b5add665e353484b8d28e523576a019279aa8c928d532906969",
           "url": "https://api.github.com/repos/HNNUYUXUAN/litz-wire-research/releases/assets/619357298",
-          "public_url": "https://github.com/HNNUYUXUAN/litz-wire-research/releases/download/untagged-f71ee4e060c0e39537cb/aphi.r1.tar.gz.part018"
+          "public_url": "https://github.com/HNNUYUXUAN/litz-wire-research/releases/download/v1.0.0-rc.1/aphi.r1.tar.gz.part018"
         },
         {
           "name": "aphi.r1.tar.gz.part019",
           "bytes": 134217728,
           "sha256": "4857b7cdc50612463a461cf24ac7401923f4b2baeeb7f19130517a94fc8566fc",
           "url": "https://api.github.com/repos/HNNUYUXUAN/litz-wire-research/releases/assets/619359072",
-          "public_url": "https://github.com/HNNUYUXUAN/litz-wire-research/releases/download/untagged-f71ee4e060c0e39537cb/aphi.r1.tar.gz.part019"
+          "public_url": "https://github.com/HNNUYUXUAN/litz-wire-research/releases/download/v1.0.0-rc.1/aphi.r1.tar.gz.part019"
         },
         {
           "name": "aphi.r1.tar.gz.part020",
           "bytes": 134217728,
           "sha256": "9d64089dc95df86c2c0ae30ced82d26cbdb752aee9c5b2fc057c6c3ef0883390",
           "url": "https://api.github.com/repos/HNNUYUXUAN/litz-wire-research/releases/assets/619361621",
-          "public_url": "https://github.com/HNNUYUXUAN/litz-wire-research/releases/download/untagged-f71ee4e060c0e39537cb/aphi.r1.tar.gz.part020"
+          "public_url": "https://github.com/HNNUYUXUAN/litz-wire-research/releases/download/v1.0.0-rc.1/aphi.r1.tar.gz.part020"
         },
         {
           "name": "aphi.r1.tar.gz.part021",
           "bytes": 134217728,
           "sha256": "45e5c60ac9020105a0677de954742ecccfdbd2475078c0cf1c85a25104e36afb",
           "url": "https://api.github.com/repos/HNNUYUXUAN/litz-wire-research/releases/assets/619363207",
-          "public_url": "https://github.com/HNNUYUXUAN/litz-wire-research/releases/download/untagged-f71ee4e060c0e39537cb/aphi.r1.tar.gz.part021"
+          "public_url": "https://github.com/HNNUYUXUAN/litz-wire-research/releases/download/v1.0.0-rc.1/aphi.r1.tar.gz.part021"
         },
         {
           "name": "aphi.r1.tar.gz.part022",
           "bytes": 134217728,
           "sha256": "79252b697ec8c9a18e4704722867dde913fb18281c68ff6bfbf7019be0c970bf",
           "url": "https://api.github.com/repos/HNNUYUXUAN/litz-wire-research/releases/assets/619363828",
-          "public_url": "https://github.com/HNNUYUXUAN/litz-wire-research/releases/download/untagged-f71ee4e060c0e39537cb/aphi.r1.tar.gz.part022"
+          "public_url": "https://github.com/HNNUYUXUAN/litz-wire-research/releases/download/v1.0.0-rc.1/aphi.r1.tar.gz.part022"
         },
         {
           "name": "aphi.r1.tar.gz.part023",
           "bytes": 134217728,
           "sha256": "7aecd235abe447605291235e5742aeb0286433b4c6917c6f260fac5c1711b01e",
           "url": "https://api.github.com/repos/HNNUYUXUAN/litz-wire-research/releases/assets/619366012",
-          "public_url": "https://github.com/HNNUYUXUAN/litz-wire-research/releases/download/untagged-f71ee4e060c0e39537cb/aphi.r1.tar.gz.part023"
+          "public_url": "https://github.com/HNNUYUXUAN/litz-wire-research/releases/download/v1.0.0-rc.1/aphi.r1.tar.gz.part023"
         },
         {
           "name": "aphi.r1.tar.gz.part024",
           "bytes": 134217728,
           "sha256": "fb0692a657ec43cdbb59bf519c142ccb7fa810bba179528ff8431e9b791dc3b5",
           "url": "https://api.github.com/repos/HNNUYUXUAN/litz-wire-research/releases/assets/619368567",
-          "public_url": "https://github.com/HNNUYUXUAN/litz-wire-research/releases/download/untagged-f71ee4e060c0e39537cb/aphi.r1.tar.gz.part024"
+          "public_url": "https://github.com/HNNUYUXUAN/litz-wire-research/releases/download/v1.0.0-rc.1/aphi.r1.tar.gz.part024"
         },
         {
           "name": "aphi.r1.tar.gz.part025",
           "bytes": 134217728,
           "sha256": "292322ec011ba5b1b082ef98e068294439d3e486e04b3ec72ffe6903043027ae",
           "url": "https://api.github.com/repos/HNNUYUXUAN/litz-wire-research/releases/assets/619368826",
-          "public_url": "https://github.com/HNNUYUXUAN/litz-wire-research/releases/download/untagged-f71ee4e060c0e39537cb/aphi.r1.tar.gz.part025"
+          "public_url": "https://github.com/HNNUYUXUAN/litz-wire-research/releases/download/v1.0.0-rc.1/aphi.r1.tar.gz.part025"
         },
         {
           "name": "aphi.r1.tar.gz.part026",
           "bytes": 511256,
           "sha256": "7d1c558a508e73cba17a1d07b6e15c05eb1245b54b672dd275899e7a121b225c",
           "url": "https://api.github.com/repos/HNNUYUXUAN/litz-wire-research/releases/assets/619371979",
-          "public_url": "https://github.com/HNNUYUXUAN/litz-wire-research/releases/download/untagged-f71ee4e060c0e39537cb/aphi.r1.tar.gz.part026"
+          "public_url": "https://github.com/HNNUYUXUAN/litz-wire-research/releases/download/v1.0.0-rc.1/aphi.r1.tar.gz.part026"
         }
       ]
     },
@@ -42214,42 +42214,42 @@
           "bytes": 134217728,
           "sha256": "2d0993dd916dc0234db38e734ca18ccecb7762aa5387b0fee486eae2464f709d",
           "url": "https://api.github.com/repos/HNNUYUXUAN/litz-wire-research/releases/assets/619281330",
-          "public_url": "https://github.com/HNNUYUXUAN/litz-wire-research/releases/download/untagged-f71ee4e060c0e39537cb/common-terminal.r1.tar.gz.part001"
+          "public_url": "https://github.com/HNNUYUXUAN/litz-wire-research/releases/download/v1.0.0-rc.1/common-terminal.r1.tar.gz.part001"
         },
         {
           "name": "common-terminal.r1.tar.gz.part002",
           "bytes": 134217728,
           "sha256": "7969d03b45ed790ea7174c261dacb71d9a3d1afa9a7b554bb2142609e391aca4",
           "url": "https://api.github.com/repos/HNNUYUXUAN/litz-wire-research/releases/assets/619281918",
-          "public_url": "https://github.com/HNNUYUXUAN/litz-wire-research/releases/download/untagged-f71ee4e060c0e39537cb/common-terminal.r1.tar.gz.part002"
+          "public_url": "https://github.com/HNNUYUXUAN/litz-wire-research/releases/download/v1.0.0-rc.1/common-terminal.r1.tar.gz.part002"
         },
         {
           "name": "common-terminal.r1.tar.gz.part003",
           "bytes": 134217728,
           "sha256": "4f61669977b8faa790fa56b6c998d0d88d12db4c2824c712f74d5133a3577408",
           "url": "https://api.github.com/repos/HNNUYUXUAN/litz-wire-research/releases/assets/619282899",
-          "public_url": "https://github.com/HNNUYUXUAN/litz-wire-research/releases/download/untagged-f71ee4e060c0e39537cb/common-terminal.r1.tar.gz.part003"
+          "public_url": "https://github.com/HNNUYUXUAN/litz-wire-research/releases/download/v1.0.0-rc.1/common-terminal.r1.tar.gz.part003"
         },
         {
           "name": "common-terminal.r1.tar.gz.part004",
           "bytes": 134217728,
           "sha256": "8a3e9594fff5723a0917964cca320bc2b1d35f7d7c3654ee6e0822a2bca8e833",
           "url": "https://api.github.com/repos/HNNUYUXUAN/litz-wire-research/releases/assets/619288984",
-          "public_url": "https://github.com/HNNUYUXUAN/litz-wire-research/releases/download/untagged-f71ee4e060c0e39537cb/common-terminal.r1.tar.gz.part004"
+          "public_url": "https://github.com/HNNUYUXUAN/litz-wire-research/releases/download/v1.0.0-rc.1/common-terminal.r1.tar.gz.part004"
         },
         {
           "name": "common-terminal.r1.tar.gz.part005",
           "bytes": 134217728,
           "sha256": "393a385711be75e2a1a3c55747eccf4eca0eaae1cb7a880004210230e9dedeb4",
           "url": "https://api.github.com/repos/HNNUYUXUAN/litz-wire-research/releases/assets/619291879",
-          "public_url": "https://github.com/HNNUYUXUAN/litz-wire-research/releases/download/untagged-f71ee4e060c0e39537cb/common-terminal.r1.tar.gz.part005"
+          "public_url": "https://github.com/HNNUYUXUAN/litz-wire-research/releases/download/v1.0.0-rc.1/common-terminal.r1.tar.gz.part005"
         },
         {
           "name": "common-terminal.r1.tar.gz.part006",
           "bytes": 56226086,
           "sha256": "9dc2c7aeb0e6d94bd5dfb6e387024a9bc1ead6543ff17e1a6c2e65d97a9e782c",
           "url": "https://api.github.com/repos/HNNUYUXUAN/litz-wire-research/releases/assets/619290628",
-          "public_url": "https://github.com/HNNUYUXUAN/litz-wire-research/releases/download/untagged-f71ee4e060c0e39537cb/common-terminal.r1.tar.gz.part006"
+          "public_url": "https://github.com/HNNUYUXUAN/litz-wire-research/releases/download/v1.0.0-rc.1/common-terminal.r1.tar.gz.part006"
         }
       ]
     },
@@ -45082,7 +45082,7 @@
           "bytes": 6588427,
           "sha256": "f45c412ffd8758cee9ab7ad531906c6bdb9c88900d0e0f8783aff54359b752d7",
           "url": "https://api.github.com/repos/HNNUYUXUAN/litz-wire-research/releases/assets/619255381",
-          "public_url": "https://github.com/HNNUYUXUAN/litz-wire-research/releases/download/untagged-f71ee4e060c0e39537cb/fem2.tar.gz.part001"
+          "public_url": "https://github.com/HNNUYUXUAN/litz-wire-research/releases/download/v1.0.0-rc.1/fem2.tar.gz.part001"
         }
       ]
     },
@@ -52300,7 +52300,7 @@
           "bytes": 98820313,
           "sha256": "c4901f5ffd904769a3b45e3eb3c7e6ee618550ef4c84c393c2b786c50f4dcace",
           "url": "https://api.github.com/repos/HNNUYUXUAN/litz-wire-research/releases/assets/619256030",
-          "public_url": "https://github.com/HNNUYUXUAN/litz-wire-research/releases/download/untagged-f71ee4e060c0e39537cb/geometry.tar.gz.part001"
+          "public_url": "https://github.com/HNNUYUXUAN/litz-wire-research/releases/download/v1.0.0-rc.1/geometry.tar.gz.part001"
         }
       ]
     },
@@ -77745,21 +77745,21 @@
           "bytes": 134217728,
           "sha256": "0d58b08f3391bd1311804e7e8a9c3f759581c81e6c4356f1383c15db23681327",
           "url": "https://api.github.com/repos/HNNUYUXUAN/litz-wire-research/releases/assets/619265018",
-          "public_url": "https://github.com/HNNUYUXUAN/litz-wire-research/releases/download/untagged-f71ee4e060c0e39537cb/gpu.r1.tar.gz.part001"
+          "public_url": "https://github.com/HNNUYUXUAN/litz-wire-research/releases/download/v1.0.0-rc.1/gpu.r1.tar.gz.part001"
         },
         {
           "name": "gpu.r1.tar.gz.part002",
           "bytes": 134217728,
           "sha256": "f71efb06a82856c407f53f45b5cdf7758c61b3b2b2628242308265636ecb493e",
           "url": "https://api.github.com/repos/HNNUYUXUAN/litz-wire-research/releases/assets/619265020",
-          "public_url": "https://github.com/HNNUYUXUAN/litz-wire-research/releases/download/untagged-f71ee4e060c0e39537cb/gpu.r1.tar.gz.part002"
+          "public_url": "https://github.com/HNNUYUXUAN/litz-wire-research/releases/download/v1.0.0-rc.1/gpu.r1.tar.gz.part002"
         },
         {
           "name": "gpu.r1.tar.gz.part003",
           "bytes": 47565143,
           "sha256": "2b1be87a3b6c099c96ca40e76a4ad4c21a1b73a5c5457e3d18363a8f5079a62d",
           "url": "https://api.github.com/repos/HNNUYUXUAN/litz-wire-research/releases/assets/619265035",
-          "public_url": "https://github.com/HNNUYUXUAN/litz-wire-research/releases/download/untagged-f71ee4e060c0e39537cb/gpu.r1.tar.gz.part003"
+          "public_url": "https://github.com/HNNUYUXUAN/litz-wire-research/releases/download/v1.0.0-rc.1/gpu.r1.tar.gz.part003"
         }
       ]
     },
@@ -96375,56 +96375,56 @@
           "bytes": 134217728,
           "sha256": "5aa3634c0f2fc8908f7c6f74021604bba321aee0899e8dac4e6b45bcd3c366e6",
           "url": "https://api.github.com/repos/HNNUYUXUAN/litz-wire-research/releases/assets/619311909",
-          "public_url": "https://github.com/HNNUYUXUAN/litz-wire-research/releases/download/untagged-f71ee4e060c0e39537cb/peec.r1.tar.gz.part001"
+          "public_url": "https://github.com/HNNUYUXUAN/litz-wire-research/releases/download/v1.0.0-rc.1/peec.r1.tar.gz.part001"
         },
         {
           "name": "peec.r1.tar.gz.part002",
           "bytes": 134217728,
           "sha256": "07cfa0834af14d36518e85d65e11d4b117da3b972197daf246f5a28e27052db6",
           "url": "https://api.github.com/repos/HNNUYUXUAN/litz-wire-research/releases/assets/619311910",
-          "public_url": "https://github.com/HNNUYUXUAN/litz-wire-research/releases/download/untagged-f71ee4e060c0e39537cb/peec.r1.tar.gz.part002"
+          "public_url": "https://github.com/HNNUYUXUAN/litz-wire-research/releases/download/v1.0.0-rc.1/peec.r1.tar.gz.part002"
         },
         {
           "name": "peec.r1.tar.gz.part003",
           "bytes": 134217728,
           "sha256": "fc621601afdff91c17e7b2aaf46057f95ab0401e8e24d954f2d98eefad716486",
           "url": "https://api.github.com/repos/HNNUYUXUAN/litz-wire-research/releases/assets/619312833",
-          "public_url": "https://github.com/HNNUYUXUAN/litz-wire-research/releases/download/untagged-f71ee4e060c0e39537cb/peec.r1.tar.gz.part003"
+          "public_url": "https://github.com/HNNUYUXUAN/litz-wire-research/releases/download/v1.0.0-rc.1/peec.r1.tar.gz.part003"
         },
         {
           "name": "peec.r1.tar.gz.part004",
           "bytes": 134217728,
           "sha256": "f6fd05b27d3a12e3aa05d92182d88eb8a753a493294d3013ee5c312b57694196",
           "url": "https://api.github.com/repos/HNNUYUXUAN/litz-wire-research/releases/assets/619316917",
-          "public_url": "https://github.com/HNNUYUXUAN/litz-wire-research/releases/download/untagged-f71ee4e060c0e39537cb/peec.r1.tar.gz.part004"
+          "public_url": "https://github.com/HNNUYUXUAN/litz-wire-research/releases/download/v1.0.0-rc.1/peec.r1.tar.gz.part004"
         },
         {
           "name": "peec.r1.tar.gz.part005",
           "bytes": 134217728,
           "sha256": "a1eabb4fdebe85982160b5861fe9fdd5716c9c02405992bac1b1f843b225be4c",
           "url": "https://api.github.com/repos/HNNUYUXUAN/litz-wire-research/releases/assets/619317183",
-          "public_url": "https://github.com/HNNUYUXUAN/litz-wire-research/releases/download/untagged-f71ee4e060c0e39537cb/peec.r1.tar.gz.part005"
+          "public_url": "https://github.com/HNNUYUXUAN/litz-wire-research/releases/download/v1.0.0-rc.1/peec.r1.tar.gz.part005"
         },
         {
           "name": "peec.r1.tar.gz.part006",
           "bytes": 134217728,
           "sha256": "bf343c4b493e2907f5b236c15d6aef0c4a579792f29f880295b6abdccf7d1c6b",
           "url": "https://api.github.com/repos/HNNUYUXUAN/litz-wire-research/releases/assets/619321047",
-          "public_url": "https://github.com/HNNUYUXUAN/litz-wire-research/releases/download/untagged-f71ee4e060c0e39537cb/peec.r1.tar.gz.part006"
+          "public_url": "https://github.com/HNNUYUXUAN/litz-wire-research/releases/download/v1.0.0-rc.1/peec.r1.tar.gz.part006"
         },
         {
           "name": "peec.r1.tar.gz.part007",
           "bytes": 134217728,
           "sha256": "ea8642df805f5eb7a7543ac9d7ea84b6066c9087acfae8d5ef80081c9cbc7c7a",
           "url": "https://api.github.com/repos/HNNUYUXUAN/litz-wire-research/releases/assets/619322076",
-          "public_url": "https://github.com/HNNUYUXUAN/litz-wire-research/releases/download/untagged-f71ee4e060c0e39537cb/peec.r1.tar.gz.part007"
+          "public_url": "https://github.com/HNNUYUXUAN/litz-wire-research/releases/download/v1.0.0-rc.1/peec.r1.tar.gz.part007"
         },
         {
           "name": "peec.r1.tar.gz.part008",
           "bytes": 98085611,
           "sha256": "d5e8f0c7ae4e2950eb18a395ecfcea9bdecf57de7134747dd29ff9549769f168",
           "url": "https://api.github.com/repos/HNNUYUXUAN/litz-wire-research/releases/assets/619324969",
-          "public_url": "https://github.com/HNNUYUXUAN/litz-wire-research/releases/download/untagged-f71ee4e060c0e39537cb/peec.r1.tar.gz.part008"
+          "public_url": "https://github.com/HNNUYUXUAN/litz-wire-research/releases/download/v1.0.0-rc.1/peec.r1.tar.gz.part008"
         }
       ]
     },
@@ -98018,7 +98018,7 @@
           "bytes": 48837373,
           "sha256": "83e2a4ce7c3fb5c25741f4084b2b4a204f3c575eaf519819e676dc60afc6ad3c",
           "url": "https://api.github.com/repos/HNNUYUXUAN/litz-wire-research/releases/assets/619253203",
-          "public_url": "https://github.com/HNNUYUXUAN/litz-wire-research/releases/download/untagged-f71ee4e060c0e39537cb/publication-inputs.tar.gz.part001"
+          "public_url": "https://github.com/HNNUYUXUAN/litz-wire-research/releases/download/v1.0.0-rc.1/publication-inputs.tar.gz.part001"
         }
       ]
     },
@@ -173458,56 +173458,56 @@
           "bytes": 134217728,
           "sha256": "bef39fb58f2d998bdc67b046fc0b15f65d0fcb72f1529df71792cca78bf8c33c",
           "url": "https://api.github.com/repos/HNNUYUXUAN/litz-wire-research/releases/assets/619293570",
-          "public_url": "https://github.com/HNNUYUXUAN/litz-wire-research/releases/download/untagged-f71ee4e060c0e39537cb/research-records.r1.tar.gz.part001"
+          "public_url": "https://github.com/HNNUYUXUAN/litz-wire-research/releases/download/v1.0.0-rc.1/research-records.r1.tar.gz.part001"
         },
         {
           "name": "research-records.r1.tar.gz.part002",
           "bytes": 134217728,
           "sha256": "1415e15308ff2b2c5acf65355e1736073d5382306057551f5e79e9cd11391331",
           "url": "https://api.github.com/repos/HNNUYUXUAN/litz-wire-research/releases/assets/619296744",
-          "public_url": "https://github.com/HNNUYUXUAN/litz-wire-research/releases/download/untagged-f71ee4e060c0e39537cb/research-records.r1.tar.gz.part002"
+          "public_url": "https://github.com/HNNUYUXUAN/litz-wire-research/releases/download/v1.0.0-rc.1/research-records.r1.tar.gz.part002"
         },
         {
           "name": "research-records.r1.tar.gz.part003",
           "bytes": 134217728,
           "sha256": "c1c87aaafe705d526b62b8613e04e7925f70d4179fbe7a7c0a6afe1808fa14f1",
           "url": "https://api.github.com/repos/HNNUYUXUAN/litz-wire-research/releases/assets/619299468",
-          "public_url": "https://github.com/HNNUYUXUAN/litz-wire-research/releases/download/untagged-f71ee4e060c0e39537cb/research-records.r1.tar.gz.part003"
+          "public_url": "https://github.com/HNNUYUXUAN/litz-wire-research/releases/download/v1.0.0-rc.1/research-records.r1.tar.gz.part003"
         },
         {
           "name": "research-records.r1.tar.gz.part004",
           "bytes": 134217728,
           "sha256": "e1d5b2bbfbec48238a80c554417daeb27c10f1c9dc94c0c21b993da18b41fbc6",
           "url": "https://api.github.com/repos/HNNUYUXUAN/litz-wire-research/releases/assets/619299470",
-          "public_url": "https://github.com/HNNUYUXUAN/litz-wire-research/releases/download/untagged-f71ee4e060c0e39537cb/research-records.r1.tar.gz.part004"
+          "public_url": "https://github.com/HNNUYUXUAN/litz-wire-research/releases/download/v1.0.0-rc.1/research-records.r1.tar.gz.part004"
         },
         {
           "name": "research-records.r1.tar.gz.part005",
           "bytes": 134217728,
           "sha256": "32ec0c9e89550065f54015524be783f09e706e1d143b0f55ecbd348f2d9f2da7",
           "url": "https://api.github.com/repos/HNNUYUXUAN/litz-wire-research/releases/assets/619304400",
-          "public_url": "https://github.com/HNNUYUXUAN/litz-wire-research/releases/download/untagged-f71ee4e060c0e39537cb/research-records.r1.tar.gz.part005"
+          "public_url": "https://github.com/HNNUYUXUAN/litz-wire-research/releases/download/v1.0.0-rc.1/research-records.r1.tar.gz.part005"
         },
         {
           "name": "research-records.r1.tar.gz.part006",
           "bytes": 134217728,
           "sha256": "bd8eaab56a6ac69252254c147fcc13471516d92f92f856acefc819a7c0a8b1e6",
           "url": "https://api.github.com/repos/HNNUYUXUAN/litz-wire-research/releases/assets/619306589",
-          "public_url": "https://github.com/HNNUYUXUAN/litz-wire-research/releases/download/untagged-f71ee4e060c0e39537cb/research-records.r1.tar.gz.part006"
+          "public_url": "https://github.com/HNNUYUXUAN/litz-wire-research/releases/download/v1.0.0-rc.1/research-records.r1.tar.gz.part006"
         },
         {
           "name": "research-records.r1.tar.gz.part007",
           "bytes": 134217728,
           "sha256": "29743f50ccfc9dad64e6992c81f6cb0f72e158c5d0fd48b056cbc5da78491acc",
           "url": "https://api.github.com/repos/HNNUYUXUAN/litz-wire-research/releases/assets/619306777",
-          "public_url": "https://github.com/HNNUYUXUAN/litz-wire-research/releases/download/untagged-f71ee4e060c0e39537cb/research-records.r1.tar.gz.part007"
+          "public_url": "https://github.com/HNNUYUXUAN/litz-wire-research/releases/download/v1.0.0-rc.1/research-records.r1.tar.gz.part007"
         },
         {
           "name": "research-records.r1.tar.gz.part008",
           "bytes": 35196902,
           "sha256": "e1d5d7af2aaa82a0218dfb35e6fbceba8adc6c6b4bac683f8b743c553a785c45",
           "url": "https://api.github.com/repos/HNNUYUXUAN/litz-wire-research/releases/assets/619311069",
-          "public_url": "https://github.com/HNNUYUXUAN/litz-wire-research/releases/download/untagged-f71ee4e060c0e39537cb/research-records.r1.tar.gz.part008"
+          "public_url": "https://github.com/HNNUYUXUAN/litz-wire-research/releases/download/v1.0.0-rc.1/research-records.r1.tar.gz.part008"
         }
       ]
     },
@@ -175531,7 +175531,7 @@
           "bytes": 131987680,
           "sha256": "ea122415080f8a3b65c1b27b71b8fd17ac95ecdc77498edcc6cbe5a3eb8ca4ba",
           "url": "https://api.github.com/repos/HNNUYUXUAN/litz-wire-research/releases/assets/619248908",
-          "public_url": "https://github.com/HNNUYUXUAN/litz-wire-research/releases/download/untagged-f71ee4e060c0e39537cb/research-shared.tar.gz.part001"
+          "public_url": "https://github.com/HNNUYUXUAN/litz-wire-research/releases/download/v1.0.0-rc.1/research-shared.tar.gz.part001"
         }
       ]
     },
@@ -196143,35 +196143,35 @@
           "bytes": 134217728,
           "sha256": "748cc3fa48fcfbe2a5625eb62b532b87da2a53cd205e14a82d5cb329539f21b4",
           "url": "https://api.github.com/repos/HNNUYUXUAN/litz-wire-research/releases/assets/619273842",
-          "public_url": "https://github.com/HNNUYUXUAN/litz-wire-research/releases/download/untagged-f71ee4e060c0e39537cb/rt0.r1.tar.gz.part001"
+          "public_url": "https://github.com/HNNUYUXUAN/litz-wire-research/releases/download/v1.0.0-rc.1/rt0.r1.tar.gz.part001"
         },
         {
           "name": "rt0.r1.tar.gz.part002",
           "bytes": 134217728,
           "sha256": "a747dc2d33fdbff8413381e89c632b5c6c33db9c55792bf316bbef889e7bf848",
           "url": "https://api.github.com/repos/HNNUYUXUAN/litz-wire-research/releases/assets/619274060",
-          "public_url": "https://github.com/HNNUYUXUAN/litz-wire-research/releases/download/untagged-f71ee4e060c0e39537cb/rt0.r1.tar.gz.part002"
+          "public_url": "https://github.com/HNNUYUXUAN/litz-wire-research/releases/download/v1.0.0-rc.1/rt0.r1.tar.gz.part002"
         },
         {
           "name": "rt0.r1.tar.gz.part003",
           "bytes": 134217728,
           "sha256": "1378385ffba4503e582bc63210df88e395bfb8ef5b81ba21a0f33fecfc06600f",
           "url": "https://api.github.com/repos/HNNUYUXUAN/litz-wire-research/releases/assets/619274069",
-          "public_url": "https://github.com/HNNUYUXUAN/litz-wire-research/releases/download/untagged-f71ee4e060c0e39537cb/rt0.r1.tar.gz.part003"
+          "public_url": "https://github.com/HNNUYUXUAN/litz-wire-research/releases/download/v1.0.0-rc.1/rt0.r1.tar.gz.part003"
         },
         {
           "name": "rt0.r1.tar.gz.part004",
           "bytes": 134217728,
           "sha256": "721e39c464efa8efb5bc3281d3c94f2215954fbc9e502774ad143e9b67d7bcd2",
           "url": "https://api.github.com/repos/HNNUYUXUAN/litz-wire-research/releases/assets/619279208",
-          "public_url": "https://github.com/HNNUYUXUAN/litz-wire-research/releases/download/untagged-f71ee4e060c0e39537cb/rt0.r1.tar.gz.part004"
+          "public_url": "https://github.com/HNNUYUXUAN/litz-wire-research/releases/download/v1.0.0-rc.1/rt0.r1.tar.gz.part004"
         },
         {
           "name": "rt0.r1.tar.gz.part005",
           "bytes": 11085393,
           "sha256": "6052ff3d776faef6582f5b6b31f6dfad4decfaad19185e90264f03f2d4fa2588",
           "url": "https://api.github.com/repos/HNNUYUXUAN/litz-wire-research/releases/assets/619281332",
-          "public_url": "https://github.com/HNNUYUXUAN/litz-wire-research/releases/download/untagged-f71ee4e060c0e39537cb/rt0.r1.tar.gz.part005"
+          "public_url": "https://github.com/HNNUYUXUAN/litz-wire-research/releases/download/v1.0.0-rc.1/rt0.r1.tar.gz.part005"
         }
       ]
     },
@@ -253614,7 +253614,7 @@
           "sha256": "0869f1d7e634659c6f512601d26358b32e68533f7a4a5eeafe030847157ed4e2",
           "bytes": 15412406,
           "url": "https://api.github.com/repos/HNNUYUXUAN/litz-wire-research/releases/assets/638648444",
-          "public_url": "https://github.com/HNNUYUXUAN/litz-wire-research/releases/download/untagged-88667c6cc6b178e1ad6e/litz_automation_rc2.part01"
+          "public_url": "https://github.com/HNNUYUXUAN/litz-wire-research/releases/download/v1.0.0-rc.2/litz_automation_rc2.part01"
         }
       ]
     }

@@ -19,6 +19,18 @@ class PublicDataTests(unittest.TestCase):
     part_name = "example data.tar.gz.part000"
     version = "v1.0.0-rc.2"
 
+    def test_registered_public_parts_have_canonical_release_urls(self):
+        catalogue = json.loads((Path(__file__).resolve().parents[1] / "data/catalog.json").read_text(encoding="utf-8-sig"))
+        self.assertFalse(catalogue["private"])
+        count = 0
+        for dataset in catalogue["datasets"].values():
+            for part in dataset["parts"]:
+                with self.subTest(part=part["name"]):
+                    self.assertEqual(data.part_download_url(catalogue, dataset, part), part["public_url"])
+                    self.assertNotIn("/untagged-", part["public_url"])
+                    count += 1
+        self.assertGreater(count, 0)
+
     def fixture(self, root, private=False, with_public=True, with_source_version=True):
         content = b"source_model,execution_status\nfixture,completed\n"
         digest = hashlib.sha256(content).hexdigest()
