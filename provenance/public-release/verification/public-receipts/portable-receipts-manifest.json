@@ -1,0 +1,52 @@
+{
+  "schema_version": 1,
+  "source_commit": "01aa0bc3dc12a548301a148f8fc99e12a241e075",
+  "source_tag": "v1.0.0-rc.3",
+  "receipt_status": "passed",
+  "hash_basis": "exact raw file bytes",
+  "transformation": {
+    "kind": "recursive JSON string prefix substitution only",
+    "rules": [
+      {
+        "token": "${ACCEPTANCE_ROOT}",
+        "source": "absolute --acceptance-root path"
+      },
+      {
+        "token": "${PYTHON_BASE}",
+        "source": "raw CLI receipt python.base_prefix"
+      }
+    ],
+    "path_matching": "case-insensitive path prefixes; either slash convention; paths below prefix only",
+    "file_uris": "decode the path for matching, substitute prefix, percent-encode the remaining URI path",
+    "serialization": "UTF-8, JSON ensure_ascii=false, indent=2, final LF",
+    "preserved": "all source/download/file hashes, counts, statuses, header names and public HTTPS URLs",
+    "hash_references": "embedded receipt SHA-256 fields continue to identify the original raw receipts"
+  },
+  "artifacts": [
+    {
+      "raw_relative_path": "source-verification.json",
+      "raw_sha256": "92a0840a6135a3ac11a34ef37d42a52db1e6a55004b9913fb40457c3aff3351a",
+      "raw_bytes": 297566,
+      "public_path": "source-verification.json",
+      "public_sha256": "3b9d9a324e0d2919b84a211b870dc1099fab69be257f141ca8ef439fa4147ceb",
+      "public_bytes": 289650
+    },
+    {
+      "raw_relative_path": "cli restoration acceptance/cli-restoration-verification.json",
+      "raw_sha256": "16ec608bc2afd5a7249d70487c23d245d7cb14788fedb98da5646457b3974f52",
+      "raw_bytes": 8321,
+      "public_path": "cli-restoration-verification.json",
+      "public_sha256": "c0796cb2ac40b7575923802f209311854a9551be221427ea5af95ca119f45d4e",
+      "public_bytes": 7594
+    },
+    {
+      "raw_relative_path": "pip-install-report.json",
+      "raw_sha256": "fed239996fd877fa3264cc03e659661ec375cbc5b3187d36fcc1fbcda2e31951",
+      "raw_bytes": 43438,
+      "public_path": "pip-install-report.json",
+      "public_sha256": "f0674e52343f452b3820f323163cbf88ca6fe208c678bd0ca73332d529f0a3fd",
+      "public_bytes": 43051
+    }
+  ],
+  "scope": "Post-publication acceptance materials; verification helpers and these receipts are not asserted to be in the rc.3 source tag."
+}

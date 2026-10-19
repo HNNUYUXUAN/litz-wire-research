@@ -7,6 +7,8 @@ import argparse
 import hashlib
 import json
 from pathlib import Path
+import re
+from urllib.parse import quote
 
 ROOT = Path(__file__).resolve().parents[1]
 LAYOUTS = ('single', 'ieee-journal', 'ieee-conference')
@@ -20,6 +22,16 @@ def generate(root):
     delivery = load(root, 'provenance/editorial/delivery-manifest.json')
     online = load(root, 'provenance/editorial/online-assets.json')
     reading = load(root, 'publications/manifest.json')
+    repository = load(root, 'data/catalog.json')['repository']
+    if (not isinstance(repository, str)
+            or not re.fullmatch(r'[A-Za-z0-9_.-]+/[A-Za-z0-9_.-]+', repository)
+            or any(part in {'.', '..'} for part in repository.split('/'))):
+        raise ValueError('Expected a GitHub owner/repository identity')
+    repository_url = 'https://github.com/' + '/'.join(quote(part, safe='') for part in repository.split('/'))
+    def release_url(tag):
+        return repository_url + '/releases/tag/' + quote(tag, safe='')
+    def asset_url(name, tag=online['release_tag']):
+        return repository_url + '/releases/download/' + quote(tag, safe='') + '/' + quote(name, safe='')
     if delivery['run_id'] != reading['source_edition']:
         raise ValueError('Reading and delivery run identities differ')
     artifacts = delivery['artifacts']
@@ -52,7 +64,7 @@ def generate(root):
                                   notebook=artifact(identity + '.nb'),
                                   pdfs={layout: artifact(identity + '_' + layout + '.pdf') for layout in LAYOUTS}))
     index = dict(schema_version=2, run_id=delivery['run_id'], source_edition=delivery['run_id'],
-                 release=dict(tag=online['release_tag'], url=online['release_url']), documents=documents)
+                 release=dict(tag=online['release_tag'], url=release_url(online['release_tag'])), documents=documents)
     result = {'docs/current-edition.json': json.dumps(index, ensure_ascii=False, indent=2) + '\n'}
     for language in ('en', 'zh-CN'):
         zh = language == 'zh-CN'
@@ -82,19 +94,27 @@ def generate(root):
         result[f'publications/DELIVERY{suffix}.md'] = '\n'.join(lines)
         lines = ['# ' + ('在线稿件与附件' if zh else 'Online manuscripts and attachments'), '',
                  '[English](ONLINE.md) · [简体中文](ONLINE.zh-CN.md)', '',
-                 ('完整 Markdown 可在线阅读。PDF、Notebook 和源码包见下方 Release 的 Assets；访问私有仓库或草稿附件需使用有权限的账号登录。' if zh else 'Read complete Markdown manuscripts online. PDFs, Notebooks and source packages are in the release Assets below. Access to a private repository or draft assets requires signing in with repository access.'), '',
-                 f"[{online['release_tag']} · Assets]({online['release_url']})", '',
-                 ('| 作品 / 语言 | 在线正文 | 附件文件名前缀 |' if zh else '| Work / language | Online text | Asset filename prefix |'),
-                 '| --- | --- | --- |']
+                 ('完整 Markdown 可在线阅读。已公开发布的 PDF、Notebook 和源码包可通过下方链接直接下载，无需登录。' if zh else 'Read complete Markdown manuscripts online. Published PDFs, Notebooks and source packages are available through the direct links below without signing in.'), '',
+                 f"[{online['release_tag']} · Assets]({release_url(online['release_tag'])})", '',
+                 ('| 作品 / 语言 | 在线正文 | Notebook | PDF |' if zh else '| Work / language | Online text | Notebook | PDF |'),
+                 '| --- | --- | --- | --- |']
         for doc in documents:
             stem = doc['notebook']['asset_name'][:-3]
             if any(doc['pdfs'][layout]['asset_name'] != stem + '_' + layout + '.pdf' for layout in LAYOUTS):
                 raise ValueError('Asset naming does not share a manuscript prefix: ' + doc['id'])
-            lines.append(f"| {doc['title']} / {doc['language']} | [Markdown]({doc['edition']}/{doc['language']}/README.md) | `{stem}` |")
-        lines += ['', ('每个前缀分别加 `.nb`、`_single.pdf`、`_ieee-journal.pdf` 或 `_ieee-conference.pdf`，对应六份 Notebook 和十八份 PDF。' if zh else 'Append `.nb`, `_single.pdf`, `_ieee-journal.pdf` or `_ieee-conference.pdf` to each prefix to identify six Notebooks and eighteen PDFs.'), '']
+            pdf_labels = ('通用单栏', 'IEEE 期刊', 'IEEE 会议') if zh else ('Single column', 'IEEE journal', 'IEEE conference')
+            pdf_links = ' · '.join(f"[{label}]({asset_url(doc['pdfs'][layout]['asset_name'])})" for label, layout in zip(pdf_labels, LAYOUTS))
+            lines.append(f"| {doc['title']} / {doc['language']} | [Markdown]({doc['edition']}/{doc['language']}/README.md) | [Notebook]({asset_url(doc['notebook']['asset_name'])}) | {pdf_links} |")
+        lines += ['', ('六份 Notebook 和十八份 PDF 保留各自的附件名称与哈希。' if zh else 'The six Notebooks and eighteen PDFs retain their recorded asset names and hashes.'), '']
         for item in remote:
             if item['name'].endswith('.zip'):
-                lines.append(f"- `{item['name']}`")
+                lines.append(f"- [{item['name']}]({asset_url(item['name'])})")
+        supplemental_path = root / 'provenance/maintenance/supplemental-assets.json'
+        if supplemental_path.is_file():
+            supplemental = load(root, 'provenance/maintenance/supplemental-assets.json')
+            for item in supplemental['artifacts']:
+                if item['name'].endswith('.zip'):
+                    lines.append(f"- [{item['name']}]({asset_url(item['name'], supplemental['release_tag'])})")
         if (root/'LICENSES/publication-companion/README.md').is_file():
             lines += ['', ('下载 ZIP 时请一并保存[许可与成员清单](../LICENSES/publication-companion/README.zh-CN.md)。' if zh else 'Keep the [license and member-index companion](../LICENSES/publication-companion/README.md) with the ZIP you download.')]
         lines += ['', '[SHA256 / bytes](../provenance/editorial/online-assets.json) · [JSON index](../docs/current-edition.json)', '']

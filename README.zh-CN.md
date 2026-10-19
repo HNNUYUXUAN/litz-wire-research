@@ -1,6 +1,6 @@
 # Litz Wire Research：智能体驱动建模与仿真
 
-[在线审阅与附件下载](publications/ONLINE.zh-CN.md)
+[稿件与下载](publications/ONLINE.zh-CN.md) · [v1.0.0-rc.3 源码发布](https://github.com/HNNUYUXUAN/litz-wire-research/releases/tag/v1.0.0-rc.3) · [公开分发记录](docs/open-source-readiness.zh-CN.md)
 
 ![Litz](publications/assets/overview/zh-CN/project.png)
 

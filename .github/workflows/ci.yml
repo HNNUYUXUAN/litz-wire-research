@@ -63,3 +63,5 @@ jobs:
         run: python -m unittest discover -s tests -p test_public_data.py
       - name: Test anonymous download verifier
         run: python -m unittest discover -s tests -p test_anonymous_release_assets.py
+      - name: Test public source acceptance helpers
+        run: python -m unittest discover -s provenance/public-release/verification -p 'test_*.py'

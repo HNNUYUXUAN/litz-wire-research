@@ -8,6 +8,7 @@ from pathlib import Path
 import shutil
 import tempfile
 import unittest
+from urllib.parse import quote
 
 HERE = Path(__file__).resolve().parents[1]
 ROOT = Path(os.environ.get("LITZ_PUBLICATION_TEST_ROOT", str(HERE)))
@@ -27,6 +28,9 @@ class PublicationIndexTests(unittest.TestCase):
             destination = root / relative
             destination.parent.mkdir(parents=True, exist_ok=True)
             shutil.copyfile(ROOT / relative, destination)
+        (root / 'data').mkdir()
+        repository = self.load(ROOT, 'data/catalog.json')['repository']
+        self.write(root, 'data/catalog.json', {'repository': repository})
         self.assertFalse((root / "outputs").exists())
         self.assertFalse((root / "data/evidence").exists())
 
@@ -102,6 +106,47 @@ class PublicationIndexTests(unittest.TestCase):
                 with redirect_stdout(io.StringIO()), self.assertRaisesRegex(ValueError, "Stale publication indexes: .*ONLINE"):
                     INDEX.build(root, check=True)
                 self.assertEqual(target.read_bytes(), stale)
+
+    def test_public_links_use_catalog_identity_tag_and_encoded_asset_names(self):
+        with tempfile.TemporaryDirectory(prefix='Litz public links ') as folder:
+            root = Path(folder)
+            self.fixture(root)
+            self.write(root, 'data/catalog.json', {'repository': 'FixtureOrg/research-data'})
+            online_path = 'provenance/editorial/online-assets.json'
+            online = self.load(root, online_path)
+            online['release_tag'] = 'future release/1'
+            online['release_url'] = 'https://example.invalid/obsolete-release-list'
+            for item in online['artifacts']:
+                item['name'] = 'public copy #1_' + item['name']
+            self.write(root, online_path, online)
+            supplemental = {'release_tag': 'license release/2',
+                            'artifacts': [{'name': 'license companion #1.zip'}]}
+            (root / 'provenance/maintenance').mkdir(parents=True)
+            self.write(root, 'provenance/maintenance/supplemental-assets.json', supplemental)
+            frozen_paths = ('provenance/editorial/delivery-manifest.json', online_path,
+                            'publications/manifest.json')
+            before = {name: (root / name).read_bytes() for name in frozen_paths}
+
+            generated = INDEX.generate(root)
+            base = 'https://github.com/FixtureOrg/research-data/releases/'
+            tag = quote(online['release_tag'], safe='')
+            current = json.loads(generated['docs/current-edition.json'])
+            self.assertEqual(current['release']['url'], base + 'tag/' + tag)
+            for suffix in ('', '.zh-CN'):
+                text = generated[f'publications/ONLINE{suffix}.md']
+                self.assertIn(base + 'tag/' + tag, text)
+                self.assertNotIn('example.invalid', text)
+                self.assertNotIn('private repository', text)
+                self.assertNotIn('私有仓库', text)
+                for item in online['artifacts']:
+                    url = base + 'download/' + tag + '/' + quote(item['name'], safe='')
+                    self.assertIn('](' + url + ')', text)
+                license_url = (base + 'download/' + quote(supplemental['release_tag'], safe='')
+                               + '/' + quote(supplemental['artifacts'][0]['name'], safe=''))
+                self.assertIn('](' + license_url + ')', text)
+            for name in frozen_paths:
+                self.assertEqual((root / name).read_bytes(), before[name])
+            self.assertFalse((root / 'outputs').exists())
 
 
 if __name__ == "__main__":

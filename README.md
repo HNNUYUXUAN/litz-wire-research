@@ -1,6 +1,6 @@
 # Litz Wire Research
 
-[Online review and attachments](publications/ONLINE.md)
+[Manuscripts and downloads](publications/ONLINE.md) · [v1.0.0-rc.3 source release](https://github.com/HNNUYUXUAN/litz-wire-research/releases/tag/v1.0.0-rc.3) · [Public distribution record](docs/open-source-readiness.md)
 
 ![Litz](publications/assets/overview/en/project.png)
 

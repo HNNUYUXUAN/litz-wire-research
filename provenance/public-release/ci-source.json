@@ -1,0 +1,599 @@
+{
+  "schema_version": 1,
+  "captured_at": "2026-10-19T16:57:06.3638520Z",
+  "source_commit": "01aa0bc3dc12a548301a148f8fc99e12a241e075",
+  "run_id": 39289553044,
+  "url": "https://github.com/HNNUYUXUAN/litz-wire-research/actions/runs/39289553044",
+  "status": "completed",
+  "conclusion": "success",
+  "jobs": [
+    {
+      "id": 118186319832,
+      "name": "ubuntu-latest / Python 3.11",
+      "status": "completed",
+      "conclusion": "success",
+      "started_at": "2026-10-19T16:54:40Z",
+      "completed_at": "2026-10-19T16:55:01Z",
+      "html_url": "https://github.com/HNNUYUXUAN/litz-wire-research/actions/runs/39289553044/job/118186319832",
+      "steps": [
+        {
+          "name": "Set up job",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 1,
+          "started_at": "2026-10-19T16:54:41Z",
+          "completed_at": "2026-10-19T16:54:42Z"
+        },
+        {
+          "name": "Check out source",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 2,
+          "started_at": "2026-10-19T16:54:42Z",
+          "completed_at": "2026-10-19T16:54:44Z"
+        },
+        {
+          "name": "Set up Python",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 3,
+          "started_at": "2026-10-19T16:54:44Z",
+          "completed_at": "2026-10-19T16:54:47Z"
+        },
+        {
+          "name": "Install source interfaces",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 4,
+          "started_at": "2026-10-19T16:54:47Z",
+          "completed_at": "2026-10-19T16:54:52Z"
+        },
+        {
+          "name": "Check source contracts and portable tests",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 5,
+          "started_at": "2026-10-19T16:54:52Z",
+          "completed_at": "2026-10-19T16:54:53Z"
+        },
+        {
+          "name": "Check publication indexes",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 6,
+          "started_at": "2026-10-19T16:54:53Z",
+          "completed_at": "2026-10-19T16:54:53Z"
+        },
+        {
+          "name": "Check discovery catalog",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 7,
+          "started_at": "2026-10-19T16:54:53Z",
+          "completed_at": "2026-10-19T16:54:54Z"
+        },
+        {
+          "name": "Check tracked reader links",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 8,
+          "started_at": "2026-10-19T16:54:54Z",
+          "completed_at": "2026-10-19T16:54:54Z"
+        },
+        {
+          "name": "Test discovery catalog",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 9,
+          "started_at": "2026-10-19T16:54:54Z",
+          "completed_at": "2026-10-19T16:54:54Z"
+        },
+        {
+          "name": "Test reader link checks",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 10,
+          "started_at": "2026-10-19T16:54:54Z",
+          "completed_at": "2026-10-19T16:54:54Z"
+        },
+        {
+          "name": "Test release metadata checks",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 11,
+          "started_at": "2026-10-19T16:54:54Z",
+          "completed_at": "2026-10-19T16:54:54Z"
+        },
+        {
+          "name": "Test future publication builds",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 12,
+          "started_at": "2026-10-19T16:54:54Z",
+          "completed_at": "2026-10-19T16:54:54Z"
+        },
+        {
+          "name": "Test public dataset restoration",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 13,
+          "started_at": "2026-10-19T16:54:54Z",
+          "completed_at": "2026-10-19T16:54:55Z"
+        },
+        {
+          "name": "Test anonymous download verifier",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 14,
+          "started_at": "2026-10-19T16:54:55Z",
+          "completed_at": "2026-10-19T16:54:55Z"
+        },
+        {
+          "name": "Post Set up Python",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 27,
+          "started_at": "2026-10-19T16:54:55Z",
+          "completed_at": "2026-10-19T16:54:55Z"
+        },
+        {
+          "name": "Post Check out source",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 28,
+          "started_at": "2026-10-19T16:54:55Z",
+          "completed_at": "2026-10-19T16:54:55Z"
+        },
+        {
+          "name": "Complete job",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 29,
+          "started_at": "2026-10-19T16:54:55Z",
+          "completed_at": "2026-10-19T16:54:55Z"
+        }
+      ]
+    },
+    {
+      "id": 118186320192,
+      "name": "ubuntu-latest / Python 3.12",
+      "status": "completed",
+      "conclusion": "success",
+      "started_at": "2026-10-19T16:54:40Z",
+      "completed_at": "2026-10-19T16:55:03Z",
+      "html_url": "https://github.com/HNNUYUXUAN/litz-wire-research/actions/runs/39289553044/job/118186320192",
+      "steps": [
+        {
+          "name": "Set up job",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 1,
+          "started_at": "2026-10-19T16:54:41Z",
+          "completed_at": "2026-10-19T16:54:42Z"
+        },
+        {
+          "name": "Check out source",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 2,
+          "started_at": "2026-10-19T16:54:42Z",
+          "completed_at": "2026-10-19T16:54:45Z"
+        },
+        {
+          "name": "Set up Python",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 3,
+          "started_at": "2026-10-19T16:54:45Z",
+          "completed_at": "2026-10-19T16:54:47Z"
+        },
+        {
+          "name": "Install source interfaces",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 4,
+          "started_at": "2026-10-19T16:54:47Z",
+          "completed_at": "2026-10-19T16:54:54Z"
+        },
+        {
+          "name": "Check source contracts and portable tests",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 5,
+          "started_at": "2026-10-19T16:54:54Z",
+          "completed_at": "2026-10-19T16:54:55Z"
+        },
+        {
+          "name": "Check publication indexes",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 6,
+          "started_at": "2026-10-19T16:54:55Z",
+          "completed_at": "2026-10-19T16:54:55Z"
+        },
+        {
+          "name": "Check discovery catalog",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 7,
+          "started_at": "2026-10-19T16:54:55Z",
+          "completed_at": "2026-10-19T16:54:55Z"
+        },
+        {
+          "name": "Check tracked reader links",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 8,
+          "started_at": "2026-10-19T16:54:55Z",
+          "completed_at": "2026-10-19T16:54:55Z"
+        },
+        {
+          "name": "Test discovery catalog",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 9,
+          "started_at": "2026-10-19T16:54:55Z",
+          "completed_at": "2026-10-19T16:54:56Z"
+        },
+        {
+          "name": "Test reader link checks",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 10,
+          "started_at": "2026-10-19T16:54:56Z",
+          "completed_at": "2026-10-19T16:54:56Z"
+        },
+        {
+          "name": "Test release metadata checks",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 11,
+          "started_at": "2026-10-19T16:54:56Z",
+          "completed_at": "2026-10-19T16:54:56Z"
+        },
+        {
+          "name": "Test future publication builds",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 12,
+          "started_at": "2026-10-19T16:54:56Z",
+          "completed_at": "2026-10-19T16:54:56Z"
+        },
+        {
+          "name": "Test public dataset restoration",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 13,
+          "started_at": "2026-10-19T16:54:56Z",
+          "completed_at": "2026-10-19T16:54:56Z"
+        },
+        {
+          "name": "Test anonymous download verifier",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 14,
+          "started_at": "2026-10-19T16:54:56Z",
+          "completed_at": "2026-10-19T16:54:57Z"
+        },
+        {
+          "name": "Post Set up Python",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 27,
+          "started_at": "2026-10-19T16:54:57Z",
+          "completed_at": "2026-10-19T16:54:57Z"
+        },
+        {
+          "name": "Post Check out source",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 28,
+          "started_at": "2026-10-19T16:54:57Z",
+          "completed_at": "2026-10-19T16:54:57Z"
+        },
+        {
+          "name": "Complete job",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 29,
+          "started_at": "2026-10-19T16:54:57Z",
+          "completed_at": "2026-10-19T16:54:57Z"
+        }
+      ]
+    },
+    {
+      "id": 118186320266,
+      "name": "windows-latest / Python 3.12",
+      "status": "completed",
+      "conclusion": "success",
+      "started_at": "2026-10-19T16:55:06Z",
+      "completed_at": "2026-10-19T16:55:56Z",
+      "html_url": "https://github.com/HNNUYUXUAN/litz-wire-research/actions/runs/39289553044/job/118186320266",
+      "steps": [
+        {
+          "name": "Set up job",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 1,
+          "started_at": "2026-10-19T16:55:07Z",
+          "completed_at": "2026-10-19T16:55:08Z"
+        },
+        {
+          "name": "Check out source",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 2,
+          "started_at": "2026-10-19T16:55:08Z",
+          "completed_at": "2026-10-19T16:55:18Z"
+        },
+        {
+          "name": "Set up Python",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 3,
+          "started_at": "2026-10-19T16:55:18Z",
+          "completed_at": "2026-10-19T16:55:22Z"
+        },
+        {
+          "name": "Install source interfaces",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 4,
+          "started_at": "2026-10-19T16:55:22Z",
+          "completed_at": "2026-10-19T16:55:40Z"
+        },
+        {
+          "name": "Check source contracts and portable tests",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 5,
+          "started_at": "2026-10-19T16:55:40Z",
+          "completed_at": "2026-10-19T16:55:42Z"
+        },
+        {
+          "name": "Check publication indexes",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 6,
+          "started_at": "2026-10-19T16:55:43Z",
+          "completed_at": "2026-10-19T16:55:43Z"
+        },
+        {
+          "name": "Check discovery catalog",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 7,
+          "started_at": "2026-10-19T16:55:43Z",
+          "completed_at": "2026-10-19T16:55:44Z"
+        },
+        {
+          "name": "Check tracked reader links",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 8,
+          "started_at": "2026-10-19T16:55:44Z",
+          "completed_at": "2026-10-19T16:55:44Z"
+        },
+        {
+          "name": "Test discovery catalog",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 9,
+          "started_at": "2026-10-19T16:55:44Z",
+          "completed_at": "2026-10-19T16:55:46Z"
+        },
+        {
+          "name": "Test reader link checks",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 10,
+          "started_at": "2026-10-19T16:55:46Z",
+          "completed_at": "2026-10-19T16:55:47Z"
+        },
+        {
+          "name": "Test release metadata checks",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 11,
+          "started_at": "2026-10-19T16:55:47Z",
+          "completed_at": "2026-10-19T16:55:47Z"
+        },
+        {
+          "name": "Test future publication builds",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 12,
+          "started_at": "2026-10-19T16:55:47Z",
+          "completed_at": "2026-10-19T16:55:48Z"
+        },
+        {
+          "name": "Test public dataset restoration",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 13,
+          "started_at": "2026-10-19T16:55:48Z",
+          "completed_at": "2026-10-19T16:55:49Z"
+        },
+        {
+          "name": "Test anonymous download verifier",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 14,
+          "started_at": "2026-10-19T16:55:49Z",
+          "completed_at": "2026-10-19T16:55:50Z"
+        },
+        {
+          "name": "Post Set up Python",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 27,
+          "started_at": "2026-10-19T16:55:50Z",
+          "completed_at": "2026-10-19T16:55:50Z"
+        },
+        {
+          "name": "Post Check out source",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 28,
+          "started_at": "2026-10-19T16:55:50Z",
+          "completed_at": "2026-10-19T16:55:53Z"
+        },
+        {
+          "name": "Complete job",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 29,
+          "started_at": "2026-10-19T16:55:53Z",
+          "completed_at": "2026-10-19T16:55:53Z"
+        }
+      ]
+    },
+    {
+      "id": 118186320272,
+      "name": "windows-latest / Python 3.11",
+      "status": "completed",
+      "conclusion": "success",
+      "started_at": "2026-10-19T16:55:03Z",
+      "completed_at": "2026-10-19T16:55:50Z",
+      "html_url": "https://github.com/HNNUYUXUAN/litz-wire-research/actions/runs/39289553044/job/118186320272",
+      "steps": [
+        {
+          "name": "Set up job",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 1,
+          "started_at": "2026-10-19T16:55:04Z",
+          "completed_at": "2026-10-19T16:55:05Z"
+        },
+        {
+          "name": "Check out source",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 2,
+          "started_at": "2026-10-19T16:55:05Z",
+          "completed_at": "2026-10-19T16:55:15Z"
+        },
+        {
+          "name": "Set up Python",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 3,
+          "started_at": "2026-10-19T16:55:15Z",
+          "completed_at": "2026-10-19T16:55:19Z"
+        },
+        {
+          "name": "Install source interfaces",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 4,
+          "started_at": "2026-10-19T16:55:19Z",
+          "completed_at": "2026-10-19T16:55:36Z"
+        },
+        {
+          "name": "Check source contracts and portable tests",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 5,
+          "started_at": "2026-10-19T16:55:36Z",
+          "completed_at": "2026-10-19T16:55:39Z"
+        },
+        {
+          "name": "Check publication indexes",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 6,
+          "started_at": "2026-10-19T16:55:39Z",
+          "completed_at": "2026-10-19T16:55:40Z"
+        },
+        {
+          "name": "Check discovery catalog",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 7,
+          "started_at": "2026-10-19T16:55:40Z",
+          "completed_at": "2026-10-19T16:55:40Z"
+        },
+        {
+          "name": "Check tracked reader links",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 8,
+          "started_at": "2026-10-19T16:55:40Z",
+          "completed_at": "2026-10-19T16:55:41Z"
+        },
+        {
+          "name": "Test discovery catalog",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 9,
+          "started_at": "2026-10-19T16:55:41Z",
+          "completed_at": "2026-10-19T16:55:43Z"
+        },
+        {
+          "name": "Test reader link checks",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 10,
+          "started_at": "2026-10-19T16:55:43Z",
+          "completed_at": "2026-10-19T16:55:43Z"
+        },
+        {
+          "name": "Test release metadata checks",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 11,
+          "started_at": "2026-10-19T16:55:43Z",
+          "completed_at": "2026-10-19T16:55:44Z"
+        },
+        {
+          "name": "Test future publication builds",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 12,
+          "started_at": "2026-10-19T16:55:44Z",
+          "completed_at": "2026-10-19T16:55:45Z"
+        },
+        {
+          "name": "Test public dataset restoration",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 13,
+          "started_at": "2026-10-19T16:55:45Z",
+          "completed_at": "2026-10-19T16:55:46Z"
+        },
+        {
+          "name": "Test anonymous download verifier",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 14,
+          "started_at": "2026-10-19T16:55:46Z",
+          "completed_at": "2026-10-19T16:55:47Z"
+        },
+        {
+          "name": "Post Set up Python",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 27,
+          "started_at": "2026-10-19T16:55:47Z",
+          "completed_at": "2026-10-19T16:55:47Z"
+        },
+        {
+          "name": "Post Check out source",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 28,
+          "started_at": "2026-10-19T16:55:47Z",
+          "completed_at": "2026-10-19T16:55:49Z"
+        },
+        {
+          "name": "Complete job",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 29,
+          "started_at": "2026-10-19T16:55:49Z",
+          "completed_at": "2026-10-19T16:55:49Z"
+        }
+      ]
+    }
+  ]
+}
