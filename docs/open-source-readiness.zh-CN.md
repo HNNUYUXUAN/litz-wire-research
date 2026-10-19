@@ -32,7 +32,7 @@ README 按读者任务提供入口。自动生成的目录覆盖七条建模路�
 
 ## 发布版本与公开访问
 
-维护源码版本为 `v1.0.0-rc.3`；冻结证据与稿件继续附于 rc.1 和 rc.2。发布检查对应的源码提交：[`01aa0bc3dc12a548301a148f8fc99e12a241e075`](https://github.com/HNNUYUXUAN/litz-wire-research/commit/01aa0bc3dc12a548301a148f8fc99e12a241e075)。观测时间：`2026-10-19T17:20:14.443577+00:00`。
+维护源码版本为 `v1.0.0-rc.3`；冻结证据与稿件继续附于 rc.1 和 rc.2。发布检查对应的源码提交：[`01aa0bc3dc12a548301a148f8fc99e12a241e075`](https://github.com/HNNUYUXUAN/litz-wire-research/commit/01aa0bc3dc12a548301a148f8fc99e12a241e075)。观测时间：`2026-10-19T17:41:25.820878+00:00`。
 
 | 检查 | 观测结果 |
 | --- | --- |
@@ -42,11 +42,13 @@ README 按读者任务提供入口。自动生成的目录覆盖七条建模路�
 | `v1.0.0-rc.2` 自动化与出版 Release | 已发布 |
 | `v1.0.0-rc.3` 维护源码 Release | 已发布 |
 | 发布版本的源码与维护测试 | 四个矩阵组合各通过 59 项测试 |
-| 公开数据目录与免凭据 CLI 恢复 | 已通过：全新环境无凭据恢复 874 个解析文件，679 个对象哈希一致 |
-| 匿名附件回读与哈希核验 | 全量 127 个附件下载验收进行中；源码 ZIP 的 972 个文件已通过核验 |
+| 公开数据目录与免凭据 CLI 恢复 | 全新 Python 3.12 环境恢复全部 874 个解析文件；679 个依赖及数据对象（660,867,640 字节）哈希全部通过；未使用凭据或认证子进程 |
+| 匿名附件回读与哈希核验 | 127/127 个 Release 附件完成无凭据全量下载，8,578,518,566 字节及全部 SHA256 一致；rc.3 源码 ZIP 的 972 个文件全部匹配提交 |
 
 证据：[托管 CI 运行](https://github.com/HNNUYUXUAN/litz-wire-research/actions/runs/39289553044)、[发布状态与元数据](../provenance/public-release/repository-releases.json)、[匿名下载与恢复](../provenance/public-release/README.zh-CN.md)。每份记录注明源码版本、时间和检查范围。
 
 公开数据目录保留含附件 ID 的 API 地址，并提供已核验的浏览器下载地址。CLI 使用公开下载模式，不读取 GitHub 凭据。[数据指南](datasets.zh-CN.md)介绍按需恢复和离线复用；[发布流程](release-preparation.zh-CN.md)说明后续版本如何重复执行源码、附件和匿名访问检查。历史快照保留各自采集时观测到的可见性与 Release 状态。
 
 本轮维护未执行物理求解或重建稿件。既有数值验收与待研究问题继续绑定各自的原始证据。
+
+公开入口和验收工具提交 `76323f60fa3812e8e817a7b756d490dfa37ffb15` 的后续 CI 同样四组全过，每组 74 项测试；见[记录](../provenance/public-release/ci-maintenance.json)。

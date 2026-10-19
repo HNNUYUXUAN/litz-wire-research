@@ -32,7 +32,7 @@ The targeted [disclosure check](../provenance/maintenance/source-disclosure-2026
 
 ## Released revision and public access
 
-The maintained source release is `v1.0.0-rc.3`; frozen evidence and manuscripts remain attached to rc.1 and rc.2. Source revision checked for release: [`01aa0bc3dc12a548301a148f8fc99e12a241e075`](https://github.com/HNNUYUXUAN/litz-wire-research/commit/01aa0bc3dc12a548301a148f8fc99e12a241e075). Observation time: `2026-10-19T17:20:14.443577+00:00`.
+The maintained source release is `v1.0.0-rc.3`; frozen evidence and manuscripts remain attached to rc.1 and rc.2. Source revision checked for release: [`01aa0bc3dc12a548301a148f8fc99e12a241e075`](https://github.com/HNNUYUXUAN/litz-wire-research/commit/01aa0bc3dc12a548301a148f8fc99e12a241e075). Observation time: `2026-10-19T17:41:25.820878+00:00`.
 
 | Check | Observed result |
 | --- | --- |
@@ -42,11 +42,13 @@ The maintained source release is `v1.0.0-rc.3`; frozen evidence and manuscripts 
 | `v1.0.0-rc.2` automation and publication release | Published |
 | `v1.0.0-rc.3` maintained source release | Published |
 | Source and maintenance tests for the released revision | 59 tests passed in each of the four matrix jobs |
-| Public catalog and credential-free CLI restoration | Passed: a fresh environment restored 874 analytic files without credentials; 679 object hashes matched |
-| Anonymous attachment readback and hash verification | Full download acceptance of all 127 assets is in progress; all 972 files in the source ZIP passed verification |
+| Public catalog and credential-free CLI restoration | Fresh Python 3.12 installation restored all 874 analytic files; 679 unique dependency/data objects (660,867,640 bytes) passed hash verification; no credentials or authentication subprocesses |
+| Anonymous attachment readback and hash verification | 127/127 Release assets downloaded in full without credentials; 8,578,518,566 bytes and all SHA256 values matched; the rc.3 source ZIP matched all 972 committed files |
 
 Evidence: [hosted CI run](https://github.com/HNNUYUXUAN/litz-wire-research/actions/runs/39289553044), [release state and metadata](../provenance/public-release/repository-releases.json), [anonymous downloads and restoration](../provenance/public-release/README.md). Each receipt states its source revision, timestamp and inspection scope.
 
 The public catalog retains asset-ID API URLs and supplies verified browser download URLs. The CLI uses public download mode without reading GitHub credentials. The [dataset guide](datasets.md) explains selective restoration and offline reuse; the [release procedure](release-preparation.md) describes how to repeat source, attachment and anonymous-access checks for later releases. Historical snapshots retain the visibility and Release states observed at their own capture times.
 
 This maintenance run performed no physical solves or publication rebuilds. Existing numerical acceptance and unresolved research questions remain attached to their original evidence.
+
+The later public-navigation and verification-tools commit `76323f60fa3812e8e817a7b756d490dfa37ffb15` passed all four CI jobs with 74 tests per job; see its [record](../provenance/public-release/ci-maintenance.json).

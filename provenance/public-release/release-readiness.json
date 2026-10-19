@@ -1,0 +1,2884 @@
+{
+  "anonymous_readback": {
+    "basis": "supplied receipts only",
+    "records": [
+      {
+        "asset_id": 619267215,
+        "errors": [],
+        "name": "academic-editions.r1.tar.gz.part001",
+        "status": "satisfied_by_supplied_receipt",
+        "tag": "v1.0.0-rc.1"
+      },
+      {
+        "asset_id": 619269853,
+        "errors": [],
+        "name": "academic-editions.r1.tar.gz.part002",
+        "status": "satisfied_by_supplied_receipt",
+        "tag": "v1.0.0-rc.1"
+      },
+      {
+        "asset_id": 619269944,
+        "errors": [],
+        "name": "academic-editions.r1.tar.gz.part003",
+        "status": "satisfied_by_supplied_receipt",
+        "tag": "v1.0.0-rc.1"
+      },
+      {
+        "asset_id": 619245756,
+        "errors": [],
+        "name": "analytic.tar.gz.part001",
+        "status": "satisfied_by_supplied_receipt",
+        "tag": "v1.0.0-rc.1"
+      },
+      {
+        "asset_id": 619246088,
+        "errors": [],
+        "name": "ansys.tar.gz.part001",
+        "status": "satisfied_by_supplied_receipt",
+        "tag": "v1.0.0-rc.1"
+      },
+      {
+        "asset_id": 619325093,
+        "errors": [],
+        "name": "aphi.r1.tar.gz.part001",
+        "status": "satisfied_by_supplied_receipt",
+        "tag": "v1.0.0-rc.1"
+      },
+      {
+        "asset_id": 619327359,
+        "errors": [],
+        "name": "aphi.r1.tar.gz.part002",
+        "status": "satisfied_by_supplied_receipt",
+        "tag": "v1.0.0-rc.1"
+      },
+      {
+        "asset_id": 619328396,
+        "errors": [],
+        "name": "aphi.r1.tar.gz.part003",
+        "status": "satisfied_by_supplied_receipt",
+        "tag": "v1.0.0-rc.1"
+      },
+      {
+        "asset_id": 619332356,
+        "errors": [],
+        "name": "aphi.r1.tar.gz.part004",
+        "status": "satisfied_by_supplied_receipt",
+        "tag": "v1.0.0-rc.1"
+      },
+      {
+        "asset_id": 619333198,
+        "errors": [],
+        "name": "aphi.r1.tar.gz.part005",
+        "status": "satisfied_by_supplied_receipt",
+        "tag": "v1.0.0-rc.1"
+      },
+      {
+        "asset_id": 619337624,
+        "errors": [],
+        "name": "aphi.r1.tar.gz.part006",
+        "status": "satisfied_by_supplied_receipt",
+        "tag": "v1.0.0-rc.1"
+      },
+      {
+        "asset_id": 619339381,
+        "errors": [],
+        "name": "aphi.r1.tar.gz.part007",
+        "status": "satisfied_by_supplied_receipt",
+        "tag": "v1.0.0-rc.1"
+      },
+      {
+        "asset_id": 619340643,
+        "errors": [],
+        "name": "aphi.r1.tar.gz.part008",
+        "status": "satisfied_by_supplied_receipt",
+        "tag": "v1.0.0-rc.1"
+      },
+      {
+        "asset_id": 619342612,
+        "errors": [],
+        "name": "aphi.r1.tar.gz.part009",
+        "status": "satisfied_by_supplied_receipt",
+        "tag": "v1.0.0-rc.1"
+      },
+      {
+        "asset_id": 619345592,
+        "errors": [],
+        "name": "aphi.r1.tar.gz.part010",
+        "status": "satisfied_by_supplied_receipt",
+        "tag": "v1.0.0-rc.1"
+      },
+      {
+        "asset_id": 619346141,
+        "errors": [],
+        "name": "aphi.r1.tar.gz.part011",
+        "status": "satisfied_by_supplied_receipt",
+        "tag": "v1.0.0-rc.1"
+      },
+      {
+        "asset_id": 619348102,
+        "errors": [],
+        "name": "aphi.r1.tar.gz.part012",
+        "status": "satisfied_by_supplied_receipt",
+        "tag": "v1.0.0-rc.1"
+      },
+      {
+        "asset_id": 619350643,
+        "errors": [],
+        "name": "aphi.r1.tar.gz.part013",
+        "status": "satisfied_by_supplied_receipt",
+        "tag": "v1.0.0-rc.1"
+      },
+      {
+        "asset_id": 619350825,
+        "errors": [],
+        "name": "aphi.r1.tar.gz.part014",
+        "status": "satisfied_by_supplied_receipt",
+        "tag": "v1.0.0-rc.1"
+      },
+      {
+        "asset_id": 619352961,
+        "errors": [],
+        "name": "aphi.r1.tar.gz.part015",
+        "status": "satisfied_by_supplied_receipt",
+        "tag": "v1.0.0-rc.1"
+      },
+      {
+        "asset_id": 619354566,
+        "errors": [],
+        "name": "aphi.r1.tar.gz.part016",
+        "status": "satisfied_by_supplied_receipt",
+        "tag": "v1.0.0-rc.1"
+      },
+      {
+        "asset_id": 619356318,
+        "errors": [],
+        "name": "aphi.r1.tar.gz.part017",
+        "status": "satisfied_by_supplied_receipt",
+        "tag": "v1.0.0-rc.1"
+      },
+      {
+        "asset_id": 619357298,
+        "errors": [],
+        "name": "aphi.r1.tar.gz.part018",
+        "status": "satisfied_by_supplied_receipt",
+        "tag": "v1.0.0-rc.1"
+      },
+      {
+        "asset_id": 619359072,
+        "errors": [],
+        "name": "aphi.r1.tar.gz.part019",
+        "status": "satisfied_by_supplied_receipt",
+        "tag": "v1.0.0-rc.1"
+      },
+      {
+        "asset_id": 619361621,
+        "errors": [],
+        "name": "aphi.r1.tar.gz.part020",
+        "status": "satisfied_by_supplied_receipt",
+        "tag": "v1.0.0-rc.1"
+      },
+      {
+        "asset_id": 619363207,
+        "errors": [],
+        "name": "aphi.r1.tar.gz.part021",
+        "status": "satisfied_by_supplied_receipt",
+        "tag": "v1.0.0-rc.1"
+      },
+      {
+        "asset_id": 619363828,
+        "errors": [],
+        "name": "aphi.r1.tar.gz.part022",
+        "status": "satisfied_by_supplied_receipt",
+        "tag": "v1.0.0-rc.1"
+      },
+      {
+        "asset_id": 619366012,
+        "errors": [],
+        "name": "aphi.r1.tar.gz.part023",
+        "status": "satisfied_by_supplied_receipt",
+        "tag": "v1.0.0-rc.1"
+      },
+      {
+        "asset_id": 619368567,
+        "errors": [],
+        "name": "aphi.r1.tar.gz.part024",
+        "status": "satisfied_by_supplied_receipt",
+        "tag": "v1.0.0-rc.1"
+      },
+      {
+        "asset_id": 619368826,
+        "errors": [],
+        "name": "aphi.r1.tar.gz.part025",
+        "status": "satisfied_by_supplied_receipt",
+        "tag": "v1.0.0-rc.1"
+      },
+      {
+        "asset_id": 619371979,
+        "errors": [],
+        "name": "aphi.r1.tar.gz.part026",
+        "status": "satisfied_by_supplied_receipt",
+        "tag": "v1.0.0-rc.1"
+      },
+      {
+        "asset_id": 619281330,
+        "errors": [],
+        "name": "common-terminal.r1.tar.gz.part001",
+        "status": "satisfied_by_supplied_receipt",
+        "tag": "v1.0.0-rc.1"
+      },
+      {
+        "asset_id": 619281918,
+        "errors": [],
+        "name": "common-terminal.r1.tar.gz.part002",
+        "status": "satisfied_by_supplied_receipt",
+        "tag": "v1.0.0-rc.1"
+      },
+      {
+        "asset_id": 619282899,
+        "errors": [],
+        "name": "common-terminal.r1.tar.gz.part003",
+        "status": "satisfied_by_supplied_receipt",
+        "tag": "v1.0.0-rc.1"
+      },
+      {
+        "asset_id": 619288984,
+        "errors": [],
+        "name": "common-terminal.r1.tar.gz.part004",
+        "status": "satisfied_by_supplied_receipt",
+        "tag": "v1.0.0-rc.1"
+      },
+      {
+        "asset_id": 619291879,
+        "errors": [],
+        "name": "common-terminal.r1.tar.gz.part005",
+        "status": "satisfied_by_supplied_receipt",
+        "tag": "v1.0.0-rc.1"
+      },
+      {
+        "asset_id": 619290628,
+        "errors": [],
+        "name": "common-terminal.r1.tar.gz.part006",
+        "status": "satisfied_by_supplied_receipt",
+        "tag": "v1.0.0-rc.1"
+      },
+      {
+        "asset_id": 619255381,
+        "errors": [],
+        "name": "fem2.tar.gz.part001",
+        "status": "satisfied_by_supplied_receipt",
+        "tag": "v1.0.0-rc.1"
+      },
+      {
+        "asset_id": 619256030,
+        "errors": [],
+        "name": "geometry.tar.gz.part001",
+        "status": "satisfied_by_supplied_receipt",
+        "tag": "v1.0.0-rc.1"
+      },
+      {
+        "asset_id": 619265018,
+        "errors": [],
+        "name": "gpu.r1.tar.gz.part001",
+        "status": "satisfied_by_supplied_receipt",
+        "tag": "v1.0.0-rc.1"
+      },
+      {
+        "asset_id": 619265020,
+        "errors": [],
+        "name": "gpu.r1.tar.gz.part002",
+        "status": "satisfied_by_supplied_receipt",
+        "tag": "v1.0.0-rc.1"
+      },
+      {
+        "asset_id": 619265035,
+        "errors": [],
+        "name": "gpu.r1.tar.gz.part003",
+        "status": "satisfied_by_supplied_receipt",
+        "tag": "v1.0.0-rc.1"
+      },
+      {
+        "asset_id": 619311909,
+        "errors": [],
+        "name": "peec.r1.tar.gz.part001",
+        "status": "satisfied_by_supplied_receipt",
+        "tag": "v1.0.0-rc.1"
+      },
+      {
+        "asset_id": 619311910,
+        "errors": [],
+        "name": "peec.r1.tar.gz.part002",
+        "status": "satisfied_by_supplied_receipt",
+        "tag": "v1.0.0-rc.1"
+      },
+      {
+        "asset_id": 619312833,
+        "errors": [],
+        "name": "peec.r1.tar.gz.part003",
+        "status": "satisfied_by_supplied_receipt",
+        "tag": "v1.0.0-rc.1"
+      },
+      {
+        "asset_id": 619316917,
+        "errors": [],
+        "name": "peec.r1.tar.gz.part004",
+        "status": "satisfied_by_supplied_receipt",
+        "tag": "v1.0.0-rc.1"
+      },
+      {
+        "asset_id": 619317183,
+        "errors": [],
+        "name": "peec.r1.tar.gz.part005",
+        "status": "satisfied_by_supplied_receipt",
+        "tag": "v1.0.0-rc.1"
+      },
+      {
+        "asset_id": 619321047,
+        "errors": [],
+        "name": "peec.r1.tar.gz.part006",
+        "status": "satisfied_by_supplied_receipt",
+        "tag": "v1.0.0-rc.1"
+      },
+      {
+        "asset_id": 619322076,
+        "errors": [],
+        "name": "peec.r1.tar.gz.part007",
+        "status": "satisfied_by_supplied_receipt",
+        "tag": "v1.0.0-rc.1"
+      },
+      {
+        "asset_id": 619324969,
+        "errors": [],
+        "name": "peec.r1.tar.gz.part008",
+        "status": "satisfied_by_supplied_receipt",
+        "tag": "v1.0.0-rc.1"
+      },
+      {
+        "asset_id": 619253203,
+        "errors": [],
+        "name": "publication-inputs.tar.gz.part001",
+        "status": "satisfied_by_supplied_receipt",
+        "tag": "v1.0.0-rc.1"
+      },
+      {
+        "asset_id": 619293570,
+        "errors": [],
+        "name": "research-records.r1.tar.gz.part001",
+        "status": "satisfied_by_supplied_receipt",
+        "tag": "v1.0.0-rc.1"
+      },
+      {
+        "asset_id": 619296744,
+        "errors": [],
+        "name": "research-records.r1.tar.gz.part002",
+        "status": "satisfied_by_supplied_receipt",
+        "tag": "v1.0.0-rc.1"
+      },
+      {
+        "asset_id": 619299468,
+        "errors": [],
+        "name": "research-records.r1.tar.gz.part003",
+        "status": "satisfied_by_supplied_receipt",
+        "tag": "v1.0.0-rc.1"
+      },
+      {
+        "asset_id": 619299470,
+        "errors": [],
+        "name": "research-records.r1.tar.gz.part004",
+        "status": "satisfied_by_supplied_receipt",
+        "tag": "v1.0.0-rc.1"
+      },
+      {
+        "asset_id": 619304400,
+        "errors": [],
+        "name": "research-records.r1.tar.gz.part005",
+        "status": "satisfied_by_supplied_receipt",
+        "tag": "v1.0.0-rc.1"
+      },
+      {
+        "asset_id": 619306589,
+        "errors": [],
+        "name": "research-records.r1.tar.gz.part006",
+        "status": "satisfied_by_supplied_receipt",
+        "tag": "v1.0.0-rc.1"
+      },
+      {
+        "asset_id": 619306777,
+        "errors": [],
+        "name": "research-records.r1.tar.gz.part007",
+        "status": "satisfied_by_supplied_receipt",
+        "tag": "v1.0.0-rc.1"
+      },
+      {
+        "asset_id": 619311069,
+        "errors": [],
+        "name": "research-records.r1.tar.gz.part008",
+        "status": "satisfied_by_supplied_receipt",
+        "tag": "v1.0.0-rc.1"
+      },
+      {
+        "asset_id": 619248908,
+        "errors": [],
+        "name": "research-shared.tar.gz.part001",
+        "status": "satisfied_by_supplied_receipt",
+        "tag": "v1.0.0-rc.1"
+      },
+      {
+        "asset_id": 619273842,
+        "errors": [],
+        "name": "rt0.r1.tar.gz.part001",
+        "status": "satisfied_by_supplied_receipt",
+        "tag": "v1.0.0-rc.1"
+      },
+      {
+        "asset_id": 619274060,
+        "errors": [],
+        "name": "rt0.r1.tar.gz.part002",
+        "status": "satisfied_by_supplied_receipt",
+        "tag": "v1.0.0-rc.1"
+      },
+      {
+        "asset_id": 619274069,
+        "errors": [],
+        "name": "rt0.r1.tar.gz.part003",
+        "status": "satisfied_by_supplied_receipt",
+        "tag": "v1.0.0-rc.1"
+      },
+      {
+        "asset_id": 619279208,
+        "errors": [],
+        "name": "rt0.r1.tar.gz.part004",
+        "status": "satisfied_by_supplied_receipt",
+        "tag": "v1.0.0-rc.1"
+      },
+      {
+        "asset_id": 619281332,
+        "errors": [],
+        "name": "rt0.r1.tar.gz.part005",
+        "status": "satisfied_by_supplied_receipt",
+        "tag": "v1.0.0-rc.1"
+      },
+      {
+        "asset_id": 638648444,
+        "errors": [],
+        "name": "litz_automation_rc2.part01",
+        "status": "satisfied_by_supplied_receipt",
+        "tag": "v1.0.0-rc.2"
+      },
+      {
+        "asset_id": 644362228,
+        "errors": [],
+        "name": "review_20261015_report_zh-CN_single.pdf",
+        "status": "satisfied_by_supplied_receipt",
+        "tag": "v1.0.0-rc.2"
+      },
+      {
+        "asset_id": 644361680,
+        "errors": [],
+        "name": "review_20261015_report_zh-CN_ieee-journal.pdf",
+        "status": "satisfied_by_supplied_receipt",
+        "tag": "v1.0.0-rc.2"
+      },
+      {
+        "asset_id": 644360240,
+        "errors": [],
+        "name": "review_20261015_report_zh-CN_ieee-conference.pdf",
+        "status": "satisfied_by_supplied_receipt",
+        "tag": "v1.0.0-rc.2"
+      },
+      {
+        "asset_id": 644357454,
+        "errors": [],
+        "name": "review_20261015_report_en_single.pdf",
+        "status": "satisfied_by_supplied_receipt",
+        "tag": "v1.0.0-rc.2"
+      },
+      {
+        "asset_id": 644356173,
+        "errors": [],
+        "name": "review_20261015_report_en_ieee-journal.pdf",
+        "status": "satisfied_by_supplied_receipt",
+        "tag": "v1.0.0-rc.2"
+      },
+      {
+        "asset_id": 644353321,
+        "errors": [],
+        "name": "review_20261015_report_en_ieee-conference.pdf",
+        "status": "satisfied_by_supplied_receipt",
+        "tag": "v1.0.0-rc.2"
+      },
+      {
+        "asset_id": 644351933,
+        "errors": [],
+        "name": "review_20261015_paper_zh-CN_single.pdf",
+        "status": "satisfied_by_supplied_receipt",
+        "tag": "v1.0.0-rc.2"
+      },
+      {
+        "asset_id": 644349415,
+        "errors": [],
+        "name": "review_20261015_paper_zh-CN_ieee-journal.pdf",
+        "status": "satisfied_by_supplied_receipt",
+        "tag": "v1.0.0-rc.2"
+      },
+      {
+        "asset_id": 644349153,
+        "errors": [],
+        "name": "review_20261015_paper_zh-CN_ieee-conference.pdf",
+        "status": "satisfied_by_supplied_receipt",
+        "tag": "v1.0.0-rc.2"
+      },
+      {
+        "asset_id": 644345590,
+        "errors": [],
+        "name": "review_20261015_paper_en_single.pdf",
+        "status": "satisfied_by_supplied_receipt",
+        "tag": "v1.0.0-rc.2"
+      },
+      {
+        "asset_id": 644345140,
+        "errors": [],
+        "name": "review_20261015_paper_en_ieee-journal.pdf",
+        "status": "satisfied_by_supplied_receipt",
+        "tag": "v1.0.0-rc.2"
+      },
+      {
+        "asset_id": 644341174,
+        "errors": [],
+        "name": "review_20261015_paper_en_ieee-conference.pdf",
+        "status": "satisfied_by_supplied_receipt",
+        "tag": "v1.0.0-rc.2"
+      },
+      {
+        "asset_id": 644340992,
+        "errors": [],
+        "name": "review_20261015_automation_zh-CN_single.pdf",
+        "status": "satisfied_by_supplied_receipt",
+        "tag": "v1.0.0-rc.2"
+      },
+      {
+        "asset_id": 644340986,
+        "errors": [],
+        "name": "review_20261015_automation_zh-CN_ieee-journal.pdf",
+        "status": "satisfied_by_supplied_receipt",
+        "tag": "v1.0.0-rc.2"
+      },
+      {
+        "asset_id": 644340973,
+        "errors": [],
+        "name": "review_20261015_automation_zh-CN_ieee-conference.pdf",
+        "status": "satisfied_by_supplied_receipt",
+        "tag": "v1.0.0-rc.2"
+      },
+      {
+        "asset_id": 644340865,
+        "errors": [],
+        "name": "review_20261015_automation_en_single.pdf",
+        "status": "satisfied_by_supplied_receipt",
+        "tag": "v1.0.0-rc.2"
+      },
+      {
+        "asset_id": 644340874,
+        "errors": [],
+        "name": "review_20261015_automation_en_ieee-journal.pdf",
+        "status": "satisfied_by_supplied_receipt",
+        "tag": "v1.0.0-rc.2"
+      },
+      {
+        "asset_id": 644340853,
+        "errors": [],
+        "name": "review_20261015_automation_en_ieee-conference.pdf",
+        "status": "satisfied_by_supplied_receipt",
+        "tag": "v1.0.0-rc.2"
+      },
+      {
+        "asset_id": 644357951,
+        "errors": [],
+        "name": "review_20261015_report_zh-CN.nb",
+        "status": "satisfied_by_supplied_receipt",
+        "tag": "v1.0.0-rc.2"
+      },
+      {
+        "asset_id": 644352858,
+        "errors": [],
+        "name": "review_20261015_report_en.nb",
+        "status": "satisfied_by_supplied_receipt",
+        "tag": "v1.0.0-rc.2"
+      },
+      {
+        "asset_id": 644347196,
+        "errors": [],
+        "name": "review_20261015_paper_zh-CN.nb",
+        "status": "satisfied_by_supplied_receipt",
+        "tag": "v1.0.0-rc.2"
+      },
+      {
+        "asset_id": 644341115,
+        "errors": [],
+        "name": "review_20261015_paper_en.nb",
+        "status": "satisfied_by_supplied_receipt",
+        "tag": "v1.0.0-rc.2"
+      },
+      {
+        "asset_id": 644340854,
+        "errors": [],
+        "name": "review_20261015_automation_zh-CN.nb",
+        "status": "satisfied_by_supplied_receipt",
+        "tag": "v1.0.0-rc.2"
+      },
+      {
+        "asset_id": 644340845,
+        "errors": [],
+        "name": "review_20261015_automation_en.nb",
+        "status": "satisfied_by_supplied_receipt",
+        "tag": "v1.0.0-rc.2"
+      },
+      {
+        "asset_id": 644341045,
+        "errors": [],
+        "name": "review_20261015_Litz_publication_package.zip",
+        "status": "satisfied_by_supplied_receipt",
+        "tag": "v1.0.0-rc.2"
+      },
+      {
+        "asset_id": 644341029,
+        "errors": [],
+        "name": "review_20261015_Litz_LaTeX_sources.zip",
+        "status": "satisfied_by_supplied_receipt",
+        "tag": "v1.0.0-rc.2"
+      },
+      {
+        "asset_id": 644341112,
+        "errors": [],
+        "name": "review_20261015_Litz_visual_candidates.zip",
+        "status": "satisfied_by_supplied_receipt",
+        "tag": "v1.0.0-rc.2"
+      },
+      {
+        "asset_id": 656800433,
+        "errors": [],
+        "name": "litz_publication_licenses_20261020.zip",
+        "status": "satisfied_by_supplied_receipt",
+        "tag": "v1.0.0-rc.2"
+      }
+    ]
+  },
+  "asset_validation_scope": "Manifest identity versus supplied GitHub API metadata; artifact bytes were not downloaded by this audit.",
+  "assets": [
+    {
+      "errors": [],
+      "expected": {
+        "asset_id": 619267215,
+        "bytes": 134217728,
+        "dataset": "academic-editions",
+        "kind": "evidence_part",
+        "name": "academic-editions.r1.tar.gz.part001",
+        "sha256": "bc226f885bf2336e5ba56c97d1ab2641c9163092054110697323f14948e14da5",
+        "tag": "v1.0.0-rc.1"
+      },
+      "observed": {
+        "digest": "sha256:bc226f885bf2336e5ba56c97d1ab2641c9163092054110697323f14948e14da5",
+        "id": 619267215,
+        "name": "academic-editions.r1.tar.gz.part001",
+        "size": 134217728,
+        "state": "uploaded"
+      },
+      "status": "passed"
+    },
+    {
+      "errors": [],
+      "expected": {
+        "asset_id": 619269853,
+        "bytes": 134217728,
+        "dataset": "academic-editions",
+        "kind": "evidence_part",
+        "name": "academic-editions.r1.tar.gz.part002",
+        "sha256": "a5e5b8ac1ce6ecb767ecd4662289ce58b1d2136369aae9ccdd8c5e0c8fe26d25",
+        "tag": "v1.0.0-rc.1"
+      },
+      "observed": {
+        "digest": "sha256:a5e5b8ac1ce6ecb767ecd4662289ce58b1d2136369aae9ccdd8c5e0c8fe26d25",
+        "id": 619269853,
+        "name": "academic-editions.r1.tar.gz.part002",
+        "size": 134217728,
+        "state": "uploaded"
+      },
+      "status": "passed"
+    },
+    {
+      "errors": [],
+      "expected": {
+        "asset_id": 619269944,
+        "bytes": 85439495,
+        "dataset": "academic-editions",
+        "kind": "evidence_part",
+        "name": "academic-editions.r1.tar.gz.part003",
+        "sha256": "986ec35a954c1db3c0c01e20a147f7727f0a416c01a99a5e1948aea9f6af5ed3",
+        "tag": "v1.0.0-rc.1"
+      },
+      "observed": {
+        "digest": "sha256:986ec35a954c1db3c0c01e20a147f7727f0a416c01a99a5e1948aea9f6af5ed3",
+        "id": 619269944,
+        "name": "academic-editions.r1.tar.gz.part003",
+        "size": 85439495,
+        "state": "uploaded"
+      },
+      "status": "passed"
+    },
+    {
+      "errors": [],
+      "expected": {
+        "asset_id": 619245756,
+        "bytes": 1443395,
+        "dataset": "analytic",
+        "kind": "evidence_part",
+        "name": "analytic.tar.gz.part001",
+        "sha256": "37d16ca416e3e635d59c424195776316c9ec04b5c3635bb4adf1297da06d240d",
+        "tag": "v1.0.0-rc.1"
+      },
+      "observed": {
+        "digest": "sha256:37d16ca416e3e635d59c424195776316c9ec04b5c3635bb4adf1297da06d240d",
+        "id": 619245756,
+        "name": "analytic.tar.gz.part001",
+        "size": 1443395,
+        "state": "uploaded"
+      },
+      "status": "passed"
+    },
+    {
+      "errors": [],
+      "expected": {
+        "asset_id": 619246088,
+        "bytes": 4486086,
+        "dataset": "ansys",
+        "kind": "evidence_part",
+        "name": "ansys.tar.gz.part001",
+        "sha256": "1aae3edd56882725a9424c96014dee7852d744a7356a870f458225d729b7a060",
+        "tag": "v1.0.0-rc.1"
+      },
+      "observed": {
+        "digest": "sha256:1aae3edd56882725a9424c96014dee7852d744a7356a870f458225d729b7a060",
+        "id": 619246088,
+        "name": "ansys.tar.gz.part001",
+        "size": 4486086,
+        "state": "uploaded"
+      },
+      "status": "passed"
+    },
+    {
+      "errors": [],
+      "expected": {
+        "asset_id": 619325093,
+        "bytes": 134217728,
+        "dataset": "aphi",
+        "kind": "evidence_part",
+        "name": "aphi.r1.tar.gz.part001",
+        "sha256": "1712d3fdf6afa5ee9f19582659a51395454d07588062b80c13b8c63dc68056a9",
+        "tag": "v1.0.0-rc.1"
+      },
+      "observed": {
+        "digest": "sha256:1712d3fdf6afa5ee9f19582659a51395454d07588062b80c13b8c63dc68056a9",
+        "id": 619325093,
+        "name": "aphi.r1.tar.gz.part001",
+        "size": 134217728,
+        "state": "uploaded"
+      },
+      "status": "passed"
+    },
+    {
+      "errors": [],
+      "expected": {
+        "asset_id": 619327359,
+        "bytes": 134217728,
+        "dataset": "aphi",
+        "kind": "evidence_part",
+        "name": "aphi.r1.tar.gz.part002",
+        "sha256": "8ee10a451029036076cc33acc25e01d574f4cee9ed840b46b2cc607de0c6dd17",
+        "tag": "v1.0.0-rc.1"
+      },
+      "observed": {
+        "digest": "sha256:8ee10a451029036076cc33acc25e01d574f4cee9ed840b46b2cc607de0c6dd17",
+        "id": 619327359,
+        "name": "aphi.r1.tar.gz.part002",
+        "size": 134217728,
+        "state": "uploaded"
+      },
+      "status": "passed"
+    },
+    {
+      "errors": [],
+      "expected": {
+        "asset_id": 619328396,
+        "bytes": 134217728,
+        "dataset": "aphi",
+        "kind": "evidence_part",
+        "name": "aphi.r1.tar.gz.part003",
+        "sha256": "bfb7953ebdab9f4b563d8f122bb0ae9cca8bb80ae310617ec792502a17f545e9",
+        "tag": "v1.0.0-rc.1"
+      },
+      "observed": {
+        "digest": "sha256:bfb7953ebdab9f4b563d8f122bb0ae9cca8bb80ae310617ec792502a17f545e9",
+        "id": 619328396,
+        "name": "aphi.r1.tar.gz.part003",
+        "size": 134217728,
+        "state": "uploaded"
+      },
+      "status": "passed"
+    },
+    {
+      "errors": [],
+      "expected": {
+        "asset_id": 619332356,
+        "bytes": 134217728,
+        "dataset": "aphi",
+        "kind": "evidence_part",
+        "name": "aphi.r1.tar.gz.part004",
+        "sha256": "4b49b605e48ab4442353a7ae50924349d405cf2165fd8d8ee5d870f5267e3ea7",
+        "tag": "v1.0.0-rc.1"
+      },
+      "observed": {
+        "digest": "sha256:4b49b605e48ab4442353a7ae50924349d405cf2165fd8d8ee5d870f5267e3ea7",
+        "id": 619332356,
+        "name": "aphi.r1.tar.gz.part004",
+        "size": 134217728,
+        "state": "uploaded"
+      },
+      "status": "passed"
+    },
+    {
+      "errors": [],
+      "expected": {
+        "asset_id": 619333198,
+        "bytes": 134217728,
+        "dataset": "aphi",
+        "kind": "evidence_part",
+        "name": "aphi.r1.tar.gz.part005",
+        "sha256": "0abdad052304113eac37933ddcbc5d339d40d3219aefe3c23da1b606c3e7fa08",
+        "tag": "v1.0.0-rc.1"
+      },
+      "observed": {
+        "digest": "sha256:0abdad052304113eac37933ddcbc5d339d40d3219aefe3c23da1b606c3e7fa08",
+        "id": 619333198,
+        "name": "aphi.r1.tar.gz.part005",
+        "size": 134217728,
+        "state": "uploaded"
+      },
+      "status": "passed"
+    },
+    {
+      "errors": [],
+      "expected": {
+        "asset_id": 619337624,
+        "bytes": 134217728,
+        "dataset": "aphi",
+        "kind": "evidence_part",
+        "name": "aphi.r1.tar.gz.part006",
+        "sha256": "e11f0511230571e408c62c7b8ded9bc6a817e48415a209d95953494fbe20c166",
+        "tag": "v1.0.0-rc.1"
+      },
+      "observed": {
+        "digest": "sha256:e11f0511230571e408c62c7b8ded9bc6a817e48415a209d95953494fbe20c166",
+        "id": 619337624,
+        "name": "aphi.r1.tar.gz.part006",
+        "size": 134217728,
+        "state": "uploaded"
+      },
+      "status": "passed"
+    },
+    {
+      "errors": [],
+      "expected": {
+        "asset_id": 619339381,
+        "bytes": 134217728,
+        "dataset": "aphi",
+        "kind": "evidence_part",
+        "name": "aphi.r1.tar.gz.part007",
+        "sha256": "eb3f54baf6c0cfffc076b6240c25317d258300922e91095e7a09f65cdf032fcb",
+        "tag": "v1.0.0-rc.1"
+      },
+      "observed": {
+        "digest": "sha256:eb3f54baf6c0cfffc076b6240c25317d258300922e91095e7a09f65cdf032fcb",
+        "id": 619339381,
+        "name": "aphi.r1.tar.gz.part007",
+        "size": 134217728,
+        "state": "uploaded"
+      },
+      "status": "passed"
+    },
+    {
+      "errors": [],
+      "expected": {
+        "asset_id": 619340643,
+        "bytes": 134217728,
+        "dataset": "aphi",
+        "kind": "evidence_part",
+        "name": "aphi.r1.tar.gz.part008",
+        "sha256": "4d104f6a9703849a32519b0848e18ba5fbb6d751d74f5af7748a8cea71ca440c",
+        "tag": "v1.0.0-rc.1"
+      },
+      "observed": {
+        "digest": "sha256:4d104f6a9703849a32519b0848e18ba5fbb6d751d74f5af7748a8cea71ca440c",
+        "id": 619340643,
+        "name": "aphi.r1.tar.gz.part008",
+        "size": 134217728,
+        "state": "uploaded"
+      },
+      "status": "passed"
+    },
+    {
+      "errors": [],
+      "expected": {
+        "asset_id": 619342612,
+        "bytes": 134217728,
+        "dataset": "aphi",
+        "kind": "evidence_part",
+        "name": "aphi.r1.tar.gz.part009",
+        "sha256": "b4f565dcdaa51aa9d308d4b77ea651d02f703baa5f016b435e1f967b9ae3b555",
+        "tag": "v1.0.0-rc.1"
+      },
+      "observed": {
+        "digest": "sha256:b4f565dcdaa51aa9d308d4b77ea651d02f703baa5f016b435e1f967b9ae3b555",
+        "id": 619342612,
+        "name": "aphi.r1.tar.gz.part009",
+        "size": 134217728,
+        "state": "uploaded"
+      },
+      "status": "passed"
+    },
+    {
+      "errors": [],
+      "expected": {
+        "asset_id": 619345592,
+        "bytes": 134217728,
+        "dataset": "aphi",
+        "kind": "evidence_part",
+        "name": "aphi.r1.tar.gz.part010",
+        "sha256": "eff358e6ac52aacdf00802440f043ef594f93dd1868111c3cf26d86086a2d5c7",
+        "tag": "v1.0.0-rc.1"
+      },
+      "observed": {
+        "digest": "sha256:eff358e6ac52aacdf00802440f043ef594f93dd1868111c3cf26d86086a2d5c7",
+        "id": 619345592,
+        "name": "aphi.r1.tar.gz.part010",
+        "size": 134217728,
+        "state": "uploaded"
+      },
+      "status": "passed"
+    },
+    {
+      "errors": [],
+      "expected": {
+        "asset_id": 619346141,
+        "bytes": 134217728,
+        "dataset": "aphi",
+        "kind": "evidence_part",
+        "name": "aphi.r1.tar.gz.part011",
+        "sha256": "80c585e62567486d5ffd30b499e77b969f1b282775ec816730db34b7a3bc0b7b",
+        "tag": "v1.0.0-rc.1"
+      },
+      "observed": {
+        "digest": "sha256:80c585e62567486d5ffd30b499e77b969f1b282775ec816730db34b7a3bc0b7b",
+        "id": 619346141,
+        "name": "aphi.r1.tar.gz.part011",
+        "size": 134217728,
+        "state": "uploaded"
+      },
+      "status": "passed"
+    },
+    {
+      "errors": [],
+      "expected": {
+        "asset_id": 619348102,
+        "bytes": 134217728,
+        "dataset": "aphi",
+        "kind": "evidence_part",
+        "name": "aphi.r1.tar.gz.part012",
+        "sha256": "852165da3a0c9c9b8f544db3e750007b0cbb97c677305480303bb349ebba7a26",
+        "tag": "v1.0.0-rc.1"
+      },
+      "observed": {
+        "digest": "sha256:852165da3a0c9c9b8f544db3e750007b0cbb97c677305480303bb349ebba7a26",
+        "id": 619348102,
+        "name": "aphi.r1.tar.gz.part012",
+        "size": 134217728,
+        "state": "uploaded"
+      },
+      "status": "passed"
+    },
+    {
+      "errors": [],
+      "expected": {
+        "asset_id": 619350643,
+        "bytes": 134217728,
+        "dataset": "aphi",
+        "kind": "evidence_part",
+        "name": "aphi.r1.tar.gz.part013",
+        "sha256": "b68aa74cca0aefb81c244d611bd0e24b9dcc9189db6d3d8896ec4b615c782628",
+        "tag": "v1.0.0-rc.1"
+      },
+      "observed": {
+        "digest": "sha256:b68aa74cca0aefb81c244d611bd0e24b9dcc9189db6d3d8896ec4b615c782628",
+        "id": 619350643,
+        "name": "aphi.r1.tar.gz.part013",
+        "size": 134217728,
+        "state": "uploaded"
+      },
+      "status": "passed"
+    },
+    {
+      "errors": [],
+      "expected": {
+        "asset_id": 619350825,
+        "bytes": 134217728,
+        "dataset": "aphi",
+        "kind": "evidence_part",
+        "name": "aphi.r1.tar.gz.part014",
+        "sha256": "001b62042777d4de0dcc89341900fe9e44e461452a8c5ece5442053728dfea15",
+        "tag": "v1.0.0-rc.1"
+      },
+      "observed": {
+        "digest": "sha256:001b62042777d4de0dcc89341900fe9e44e461452a8c5ece5442053728dfea15",
+        "id": 619350825,
+        "name": "aphi.r1.tar.gz.part014",
+        "size": 134217728,
+        "state": "uploaded"
+      },
+      "status": "passed"
+    },
+    {
+      "errors": [],
+      "expected": {
+        "asset_id": 619352961,
+        "bytes": 134217728,
+        "dataset": "aphi",
+        "kind": "evidence_part",
+        "name": "aphi.r1.tar.gz.part015",
+        "sha256": "110b75298a4e402ff645771146f4a1014a5a5432e7d6739a127a4bc85150e26a",
+        "tag": "v1.0.0-rc.1"
+      },
+      "observed": {
+        "digest": "sha256:110b75298a4e402ff645771146f4a1014a5a5432e7d6739a127a4bc85150e26a",
+        "id": 619352961,
+        "name": "aphi.r1.tar.gz.part015",
+        "size": 134217728,
+        "state": "uploaded"
+      },
+      "status": "passed"
+    },
+    {
+      "errors": [],
+      "expected": {
+        "asset_id": 619354566,
+        "bytes": 134217728,
+        "dataset": "aphi",
+        "kind": "evidence_part",
+        "name": "aphi.r1.tar.gz.part016",
+        "sha256": "2808e89d03cd925f2d1b7bec6b487e0b12c780bec7d1f02e148d383a58bd11e7",
+        "tag": "v1.0.0-rc.1"
+      },
+      "observed": {
+        "digest": "sha256:2808e89d03cd925f2d1b7bec6b487e0b12c780bec7d1f02e148d383a58bd11e7",
+        "id": 619354566,
+        "name": "aphi.r1.tar.gz.part016",
+        "size": 134217728,
+        "state": "uploaded"
+      },
+      "status": "passed"
+    },
+    {
+      "errors": [],
+      "expected": {
+        "asset_id": 619356318,
+        "bytes": 134217728,
+        "dataset": "aphi",
+        "kind": "evidence_part",
+        "name": "aphi.r1.tar.gz.part017",
+        "sha256": "9b666f52832ca8d68a79c1e1079c3cf607dc8b568bc9e7a6b10bc2043f8746de",
+        "tag": "v1.0.0-rc.1"
+      },
+      "observed": {
+        "digest": "sha256:9b666f52832ca8d68a79c1e1079c3cf607dc8b568bc9e7a6b10bc2043f8746de",
+        "id": 619356318,
+        "name": "aphi.r1.tar.gz.part017",
+        "size": 134217728,
+        "state": "uploaded"
+      },
+      "status": "passed"
+    },
+    {
+      "errors": [],
+      "expected": {
+        "asset_id": 619357298,
+        "bytes": 134217728,
+        "dataset": "aphi",
+        "kind": "evidence_part",
+        "name": "aphi.r1.tar.gz.part018",
+        "sha256": "94a1f3e264f71b5add665e353484b8d28e523576a019279aa8c928d532906969",
+        "tag": "v1.0.0-rc.1"
+      },
+      "observed": {
+        "digest": "sha256:94a1f3e264f71b5add665e353484b8d28e523576a019279aa8c928d532906969",
+        "id": 619357298,
+        "name": "aphi.r1.tar.gz.part018",
+        "size": 134217728,
+        "state": "uploaded"
+      },
+      "status": "passed"
+    },
+    {
+      "errors": [],
+      "expected": {
+        "asset_id": 619359072,
+        "bytes": 134217728,
+        "dataset": "aphi",
+        "kind": "evidence_part",
+        "name": "aphi.r1.tar.gz.part019",
+        "sha256": "4857b7cdc50612463a461cf24ac7401923f4b2baeeb7f19130517a94fc8566fc",
+        "tag": "v1.0.0-rc.1"
+      },
+      "observed": {
+        "digest": "sha256:4857b7cdc50612463a461cf24ac7401923f4b2baeeb7f19130517a94fc8566fc",
+        "id": 619359072,
+        "name": "aphi.r1.tar.gz.part019",
+        "size": 134217728,
+        "state": "uploaded"
+      },
+      "status": "passed"
+    },
+    {
+      "errors": [],
+      "expected": {
+        "asset_id": 619361621,
+        "bytes": 134217728,
+        "dataset": "aphi",
+        "kind": "evidence_part",
+        "name": "aphi.r1.tar.gz.part020",
+        "sha256": "9d64089dc95df86c2c0ae30ced82d26cbdb752aee9c5b2fc057c6c3ef0883390",
+        "tag": "v1.0.0-rc.1"
+      },
+      "observed": {
+        "digest": "sha256:9d64089dc95df86c2c0ae30ced82d26cbdb752aee9c5b2fc057c6c3ef0883390",
+        "id": 619361621,
+        "name": "aphi.r1.tar.gz.part020",
+        "size": 134217728,
+        "state": "uploaded"
+      },
+      "status": "passed"
+    },
+    {
+      "errors": [],
+      "expected": {
+        "asset_id": 619363207,
+        "bytes": 134217728,
+        "dataset": "aphi",
+        "kind": "evidence_part",
+        "name": "aphi.r1.tar.gz.part021",
+        "sha256": "45e5c60ac9020105a0677de954742ecccfdbd2475078c0cf1c85a25104e36afb",
+        "tag": "v1.0.0-rc.1"
+      },
+      "observed": {
+        "digest": "sha256:45e5c60ac9020105a0677de954742ecccfdbd2475078c0cf1c85a25104e36afb",
+        "id": 619363207,
+        "name": "aphi.r1.tar.gz.part021",
+        "size": 134217728,
+        "state": "uploaded"
+      },
+      "status": "passed"
+    },
+    {
+      "errors": [],
+      "expected": {
+        "asset_id": 619363828,
+        "bytes": 134217728,
+        "dataset": "aphi",
+        "kind": "evidence_part",
+        "name": "aphi.r1.tar.gz.part022",
+        "sha256": "79252b697ec8c9a18e4704722867dde913fb18281c68ff6bfbf7019be0c970bf",
+        "tag": "v1.0.0-rc.1"
+      },
+      "observed": {
+        "digest": "sha256:79252b697ec8c9a18e4704722867dde913fb18281c68ff6bfbf7019be0c970bf",
+        "id": 619363828,
+        "name": "aphi.r1.tar.gz.part022",
+        "size": 134217728,
+        "state": "uploaded"
+      },
+      "status": "passed"
+    },
+    {
+      "errors": [],
+      "expected": {
+        "asset_id": 619366012,
+        "bytes": 134217728,
+        "dataset": "aphi",
+        "kind": "evidence_part",
+        "name": "aphi.r1.tar.gz.part023",
+        "sha256": "7aecd235abe447605291235e5742aeb0286433b4c6917c6f260fac5c1711b01e",
+        "tag": "v1.0.0-rc.1"
+      },
+      "observed": {
+        "digest": "sha256:7aecd235abe447605291235e5742aeb0286433b4c6917c6f260fac5c1711b01e",
+        "id": 619366012,
+        "name": "aphi.r1.tar.gz.part023",
+        "size": 134217728,
+        "state": "uploaded"
+      },
+      "status": "passed"
+    },
+    {
+      "errors": [],
+      "expected": {
+        "asset_id": 619368567,
+        "bytes": 134217728,
+        "dataset": "aphi",
+        "kind": "evidence_part",
+        "name": "aphi.r1.tar.gz.part024",
+        "sha256": "fb0692a657ec43cdbb59bf519c142ccb7fa810bba179528ff8431e9b791dc3b5",
+        "tag": "v1.0.0-rc.1"
+      },
+      "observed": {
+        "digest": "sha256:fb0692a657ec43cdbb59bf519c142ccb7fa810bba179528ff8431e9b791dc3b5",
+        "id": 619368567,
+        "name": "aphi.r1.tar.gz.part024",
+        "size": 134217728,
+        "state": "uploaded"
+      },
+      "status": "passed"
+    },
+    {
+      "errors": [],
+      "expected": {
+        "asset_id": 619368826,
+        "bytes": 134217728,
+        "dataset": "aphi",
+        "kind": "evidence_part",
+        "name": "aphi.r1.tar.gz.part025",
+        "sha256": "292322ec011ba5b1b082ef98e068294439d3e486e04b3ec72ffe6903043027ae",
+        "tag": "v1.0.0-rc.1"
+      },
+      "observed": {
+        "digest": "sha256:292322ec011ba5b1b082ef98e068294439d3e486e04b3ec72ffe6903043027ae",
+        "id": 619368826,
+        "name": "aphi.r1.tar.gz.part025",
+        "size": 134217728,
+        "state": "uploaded"
+      },
+      "status": "passed"
+    },
+    {
+      "errors": [],
+      "expected": {
+        "asset_id": 619371979,
+        "bytes": 511256,
+        "dataset": "aphi",
+        "kind": "evidence_part",
+        "name": "aphi.r1.tar.gz.part026",
+        "sha256": "7d1c558a508e73cba17a1d07b6e15c05eb1245b54b672dd275899e7a121b225c",
+        "tag": "v1.0.0-rc.1"
+      },
+      "observed": {
+        "digest": "sha256:7d1c558a508e73cba17a1d07b6e15c05eb1245b54b672dd275899e7a121b225c",
+        "id": 619371979,
+        "name": "aphi.r1.tar.gz.part026",
+        "size": 511256,
+        "state": "uploaded"
+      },
+      "status": "passed"
+    },
+    {
+      "errors": [],
+      "expected": {
+        "asset_id": 619281330,
+        "bytes": 134217728,
+        "dataset": "common-terminal",
+        "kind": "evidence_part",
+        "name": "common-terminal.r1.tar.gz.part001",
+        "sha256": "2d0993dd916dc0234db38e734ca18ccecb7762aa5387b0fee486eae2464f709d",
+        "tag": "v1.0.0-rc.1"
+      },
+      "observed": {
+        "digest": "sha256:2d0993dd916dc0234db38e734ca18ccecb7762aa5387b0fee486eae2464f709d",
+        "id": 619281330,
+        "name": "common-terminal.r1.tar.gz.part001",
+        "size": 134217728,
+        "state": "uploaded"
+      },
+      "status": "passed"
+    },
+    {
+      "errors": [],
+      "expected": {
+        "asset_id": 619281918,
+        "bytes": 134217728,
+        "dataset": "common-terminal",
+        "kind": "evidence_part",
+        "name": "common-terminal.r1.tar.gz.part002",
+        "sha256": "7969d03b45ed790ea7174c261dacb71d9a3d1afa9a7b554bb2142609e391aca4",
+        "tag": "v1.0.0-rc.1"
+      },
+      "observed": {
+        "digest": "sha256:7969d03b45ed790ea7174c261dacb71d9a3d1afa9a7b554bb2142609e391aca4",
+        "id": 619281918,
+        "name": "common-terminal.r1.tar.gz.part002",
+        "size": 134217728,
+        "state": "uploaded"
+      },
+      "status": "passed"
+    },
+    {
+      "errors": [],
+      "expected": {
+        "asset_id": 619282899,
+        "bytes": 134217728,
+        "dataset": "common-terminal",
+        "kind": "evidence_part",
+        "name": "common-terminal.r1.tar.gz.part003",
+        "sha256": "4f61669977b8faa790fa56b6c998d0d88d12db4c2824c712f74d5133a3577408",
+        "tag": "v1.0.0-rc.1"
+      },
+      "observed": {
+        "digest": "sha256:4f61669977b8faa790fa56b6c998d0d88d12db4c2824c712f74d5133a3577408",
+        "id": 619282899,
+        "name": "common-terminal.r1.tar.gz.part003",
+        "size": 134217728,
+        "state": "uploaded"
+      },
+      "status": "passed"
+    },
+    {
+      "errors": [],
+      "expected": {
+        "asset_id": 619288984,
+        "bytes": 134217728,
+        "dataset": "common-terminal",
+        "kind": "evidence_part",
+        "name": "common-terminal.r1.tar.gz.part004",
+        "sha256": "8a3e9594fff5723a0917964cca320bc2b1d35f7d7c3654ee6e0822a2bca8e833",
+        "tag": "v1.0.0-rc.1"
+      },
+      "observed": {
+        "digest": "sha256:8a3e9594fff5723a0917964cca320bc2b1d35f7d7c3654ee6e0822a2bca8e833",
+        "id": 619288984,
+        "name": "common-terminal.r1.tar.gz.part004",
+        "size": 134217728,
+        "state": "uploaded"
+      },
+      "status": "passed"
+    },
+    {
+      "errors": [],
+      "expected": {
+        "asset_id": 619291879,
+        "bytes": 134217728,
+        "dataset": "common-terminal",
+        "kind": "evidence_part",
+        "name": "common-terminal.r1.tar.gz.part005",
+        "sha256": "393a385711be75e2a1a3c55747eccf4eca0eaae1cb7a880004210230e9dedeb4",
+        "tag": "v1.0.0-rc.1"
+      },
+      "observed": {
+        "digest": "sha256:393a385711be75e2a1a3c55747eccf4eca0eaae1cb7a880004210230e9dedeb4",
+        "id": 619291879,
+        "name": "common-terminal.r1.tar.gz.part005",
+        "size": 134217728,
+        "state": "uploaded"
+      },
+      "status": "passed"
+    },
+    {
+      "errors": [],
+      "expected": {
+        "asset_id": 619290628,
+        "bytes": 56226086,
+        "dataset": "common-terminal",
+        "kind": "evidence_part",
+        "name": "common-terminal.r1.tar.gz.part006",
+        "sha256": "9dc2c7aeb0e6d94bd5dfb6e387024a9bc1ead6543ff17e1a6c2e65d97a9e782c",
+        "tag": "v1.0.0-rc.1"
+      },
+      "observed": {
+        "digest": "sha256:9dc2c7aeb0e6d94bd5dfb6e387024a9bc1ead6543ff17e1a6c2e65d97a9e782c",
+        "id": 619290628,
+        "name": "common-terminal.r1.tar.gz.part006",
+        "size": 56226086,
+        "state": "uploaded"
+      },
+      "status": "passed"
+    },
+    {
+      "errors": [],
+      "expected": {
+        "asset_id": 619255381,
+        "bytes": 6588427,
+        "dataset": "fem2",
+        "kind": "evidence_part",
+        "name": "fem2.tar.gz.part001",
+        "sha256": "f45c412ffd8758cee9ab7ad531906c6bdb9c88900d0e0f8783aff54359b752d7",
+        "tag": "v1.0.0-rc.1"
+      },
+      "observed": {
+        "digest": "sha256:f45c412ffd8758cee9ab7ad531906c6bdb9c88900d0e0f8783aff54359b752d7",
+        "id": 619255381,
+        "name": "fem2.tar.gz.part001",
+        "size": 6588427,
+        "state": "uploaded"
+      },
+      "status": "passed"
+    },
+    {
+      "errors": [],
+      "expected": {
+        "asset_id": 619256030,
+        "bytes": 98820313,
+        "dataset": "geometry",
+        "kind": "evidence_part",
+        "name": "geometry.tar.gz.part001",
+        "sha256": "c4901f5ffd904769a3b45e3eb3c7e6ee618550ef4c84c393c2b786c50f4dcace",
+        "tag": "v1.0.0-rc.1"
+      },
+      "observed": {
+        "digest": "sha256:c4901f5ffd904769a3b45e3eb3c7e6ee618550ef4c84c393c2b786c50f4dcace",
+        "id": 619256030,
+        "name": "geometry.tar.gz.part001",
+        "size": 98820313,
+        "state": "uploaded"
+      },
+      "status": "passed"
+    },
+    {
+      "errors": [],
+      "expected": {
+        "asset_id": 619265018,
+        "bytes": 134217728,
+        "dataset": "gpu",
+        "kind": "evidence_part",
+        "name": "gpu.r1.tar.gz.part001",
+        "sha256": "0d58b08f3391bd1311804e7e8a9c3f759581c81e6c4356f1383c15db23681327",
+        "tag": "v1.0.0-rc.1"
+      },
+      "observed": {
+        "digest": "sha256:0d58b08f3391bd1311804e7e8a9c3f759581c81e6c4356f1383c15db23681327",
+        "id": 619265018,
+        "name": "gpu.r1.tar.gz.part001",
+        "size": 134217728,
+        "state": "uploaded"
+      },
+      "status": "passed"
+    },
+    {
+      "errors": [],
+      "expected": {
+        "asset_id": 619265020,
+        "bytes": 134217728,
+        "dataset": "gpu",
+        "kind": "evidence_part",
+        "name": "gpu.r1.tar.gz.part002",
+        "sha256": "f71efb06a82856c407f53f45b5cdf7758c61b3b2b2628242308265636ecb493e",
+        "tag": "v1.0.0-rc.1"
+      },
+      "observed": {
+        "digest": "sha256:f71efb06a82856c407f53f45b5cdf7758c61b3b2b2628242308265636ecb493e",
+        "id": 619265020,
+        "name": "gpu.r1.tar.gz.part002",
+        "size": 134217728,
+        "state": "uploaded"
+      },
+      "status": "passed"
+    },
+    {
+      "errors": [],
+      "expected": {
+        "asset_id": 619265035,
+        "bytes": 47565143,
+        "dataset": "gpu",
+        "kind": "evidence_part",
+        "name": "gpu.r1.tar.gz.part003",
+        "sha256": "2b1be87a3b6c099c96ca40e76a4ad4c21a1b73a5c5457e3d18363a8f5079a62d",
+        "tag": "v1.0.0-rc.1"
+      },
+      "observed": {
+        "digest": "sha256:2b1be87a3b6c099c96ca40e76a4ad4c21a1b73a5c5457e3d18363a8f5079a62d",
+        "id": 619265035,
+        "name": "gpu.r1.tar.gz.part003",
+        "size": 47565143,
+        "state": "uploaded"
+      },
+      "status": "passed"
+    },
+    {
+      "errors": [],
+      "expected": {
+        "asset_id": 619311909,
+        "bytes": 134217728,
+        "dataset": "peec",
+        "kind": "evidence_part",
+        "name": "peec.r1.tar.gz.part001",
+        "sha256": "5aa3634c0f2fc8908f7c6f74021604bba321aee0899e8dac4e6b45bcd3c366e6",
+        "tag": "v1.0.0-rc.1"
+      },
+      "observed": {
+        "digest": "sha256:5aa3634c0f2fc8908f7c6f74021604bba321aee0899e8dac4e6b45bcd3c366e6",
+        "id": 619311909,
+        "name": "peec.r1.tar.gz.part001",
+        "size": 134217728,
+        "state": "uploaded"
+      },
+      "status": "passed"
+    },
+    {
+      "errors": [],
+      "expected": {
+        "asset_id": 619311910,
+        "bytes": 134217728,
+        "dataset": "peec",
+        "kind": "evidence_part",
+        "name": "peec.r1.tar.gz.part002",
+        "sha256": "07cfa0834af14d36518e85d65e11d4b117da3b972197daf246f5a28e27052db6",
+        "tag": "v1.0.0-rc.1"
+      },
+      "observed": {
+        "digest": "sha256:07cfa0834af14d36518e85d65e11d4b117da3b972197daf246f5a28e27052db6",
+        "id": 619311910,
+        "name": "peec.r1.tar.gz.part002",
+        "size": 134217728,
+        "state": "uploaded"
+      },
+      "status": "passed"
+    },
+    {
+      "errors": [],
+      "expected": {
+        "asset_id": 619312833,
+        "bytes": 134217728,
+        "dataset": "peec",
+        "kind": "evidence_part",
+        "name": "peec.r1.tar.gz.part003",
+        "sha256": "fc621601afdff91c17e7b2aaf46057f95ab0401e8e24d954f2d98eefad716486",
+        "tag": "v1.0.0-rc.1"
+      },
+      "observed": {
+        "digest": "sha256:fc621601afdff91c17e7b2aaf46057f95ab0401e8e24d954f2d98eefad716486",
+        "id": 619312833,
+        "name": "peec.r1.tar.gz.part003",
+        "size": 134217728,
+        "state": "uploaded"
+      },
+      "status": "passed"
+    },
+    {
+      "errors": [],
+      "expected": {
+        "asset_id": 619316917,
+        "bytes": 134217728,
+        "dataset": "peec",
+        "kind": "evidence_part",
+        "name": "peec.r1.tar.gz.part004",
+        "sha256": "f6fd05b27d3a12e3aa05d92182d88eb8a753a493294d3013ee5c312b57694196",
+        "tag": "v1.0.0-rc.1"
+      },
+      "observed": {
+        "digest": "sha256:f6fd05b27d3a12e3aa05d92182d88eb8a753a493294d3013ee5c312b57694196",
+        "id": 619316917,
+        "name": "peec.r1.tar.gz.part004",
+        "size": 134217728,
+        "state": "uploaded"
+      },
+      "status": "passed"
+    },
+    {
+      "errors": [],
+      "expected": {
+        "asset_id": 619317183,
+        "bytes": 134217728,
+        "dataset": "peec",
+        "kind": "evidence_part",
+        "name": "peec.r1.tar.gz.part005",
+        "sha256": "a1eabb4fdebe85982160b5861fe9fdd5716c9c02405992bac1b1f843b225be4c",
+        "tag": "v1.0.0-rc.1"
+      },
+      "observed": {
+        "digest": "sha256:a1eabb4fdebe85982160b5861fe9fdd5716c9c02405992bac1b1f843b225be4c",
+        "id": 619317183,
+        "name": "peec.r1.tar.gz.part005",
+        "size": 134217728,
+        "state": "uploaded"
+      },
+      "status": "passed"
+    },
+    {
+      "errors": [],
+      "expected": {
+        "asset_id": 619321047,
+        "bytes": 134217728,
+        "dataset": "peec",
+        "kind": "evidence_part",
+        "name": "peec.r1.tar.gz.part006",
+        "sha256": "bf343c4b493e2907f5b236c15d6aef0c4a579792f29f880295b6abdccf7d1c6b",
+        "tag": "v1.0.0-rc.1"
+      },
+      "observed": {
+        "digest": "sha256:bf343c4b493e2907f5b236c15d6aef0c4a579792f29f880295b6abdccf7d1c6b",
+        "id": 619321047,
+        "name": "peec.r1.tar.gz.part006",
+        "size": 134217728,
+        "state": "uploaded"
+      },
+      "status": "passed"
+    },
+    {
+      "errors": [],
+      "expected": {
+        "asset_id": 619322076,
+        "bytes": 134217728,
+        "dataset": "peec",
+        "kind": "evidence_part",
+        "name": "peec.r1.tar.gz.part007",
+        "sha256": "ea8642df805f5eb7a7543ac9d7ea84b6066c9087acfae8d5ef80081c9cbc7c7a",
+        "tag": "v1.0.0-rc.1"
+      },
+      "observed": {
+        "digest": "sha256:ea8642df805f5eb7a7543ac9d7ea84b6066c9087acfae8d5ef80081c9cbc7c7a",
+        "id": 619322076,
+        "name": "peec.r1.tar.gz.part007",
+        "size": 134217728,
+        "state": "uploaded"
+      },
+      "status": "passed"
+    },
+    {
+      "errors": [],
+      "expected": {
+        "asset_id": 619324969,
+        "bytes": 98085611,
+        "dataset": "peec",
+        "kind": "evidence_part",
+        "name": "peec.r1.tar.gz.part008",
+        "sha256": "d5e8f0c7ae4e2950eb18a395ecfcea9bdecf57de7134747dd29ff9549769f168",
+        "tag": "v1.0.0-rc.1"
+      },
+      "observed": {
+        "digest": "sha256:d5e8f0c7ae4e2950eb18a395ecfcea9bdecf57de7134747dd29ff9549769f168",
+        "id": 619324969,
+        "name": "peec.r1.tar.gz.part008",
+        "size": 98085611,
+        "state": "uploaded"
+      },
+      "status": "passed"
+    },
+    {
+      "errors": [],
+      "expected": {
+        "asset_id": 619253203,
+        "bytes": 48837373,
+        "dataset": "publication-inputs",
+        "kind": "evidence_part",
+        "name": "publication-inputs.tar.gz.part001",
+        "sha256": "83e2a4ce7c3fb5c25741f4084b2b4a204f3c575eaf519819e676dc60afc6ad3c",
+        "tag": "v1.0.0-rc.1"
+      },
+      "observed": {
+        "digest": "sha256:83e2a4ce7c3fb5c25741f4084b2b4a204f3c575eaf519819e676dc60afc6ad3c",
+        "id": 619253203,
+        "name": "publication-inputs.tar.gz.part001",
+        "size": 48837373,
+        "state": "uploaded"
+      },
+      "status": "passed"
+    },
+    {
+      "errors": [],
+      "expected": {
+        "asset_id": 619293570,
+        "bytes": 134217728,
+        "dataset": "research-records",
+        "kind": "evidence_part",
+        "name": "research-records.r1.tar.gz.part001",
+        "sha256": "bef39fb58f2d998bdc67b046fc0b15f65d0fcb72f1529df71792cca78bf8c33c",
+        "tag": "v1.0.0-rc.1"
+      },
+      "observed": {
+        "digest": "sha256:bef39fb58f2d998bdc67b046fc0b15f65d0fcb72f1529df71792cca78bf8c33c",
+        "id": 619293570,
+        "name": "research-records.r1.tar.gz.part001",
+        "size": 134217728,
+        "state": "uploaded"
+      },
+      "status": "passed"
+    },
+    {
+      "errors": [],
+      "expected": {
+        "asset_id": 619296744,
+        "bytes": 134217728,
+        "dataset": "research-records",
+        "kind": "evidence_part",
+        "name": "research-records.r1.tar.gz.part002",
+        "sha256": "1415e15308ff2b2c5acf65355e1736073d5382306057551f5e79e9cd11391331",
+        "tag": "v1.0.0-rc.1"
+      },
+      "observed": {
+        "digest": "sha256:1415e15308ff2b2c5acf65355e1736073d5382306057551f5e79e9cd11391331",
+        "id": 619296744,
+        "name": "research-records.r1.tar.gz.part002",
+        "size": 134217728,
+        "state": "uploaded"
+      },
+      "status": "passed"
+    },
+    {
+      "errors": [],
+      "expected": {
+        "asset_id": 619299468,
+        "bytes": 134217728,
+        "dataset": "research-records",
+        "kind": "evidence_part",
+        "name": "research-records.r1.tar.gz.part003",
+        "sha256": "c1c87aaafe705d526b62b8613e04e7925f70d4179fbe7a7c0a6afe1808fa14f1",
+        "tag": "v1.0.0-rc.1"
+      },
+      "observed": {
+        "digest": "sha256:c1c87aaafe705d526b62b8613e04e7925f70d4179fbe7a7c0a6afe1808fa14f1",
+        "id": 619299468,
+        "name": "research-records.r1.tar.gz.part003",
+        "size": 134217728,
+        "state": "uploaded"
+      },
+      "status": "passed"
+    },
+    {
+      "errors": [],
+      "expected": {
+        "asset_id": 619299470,
+        "bytes": 134217728,
+        "dataset": "research-records",
+        "kind": "evidence_part",
+        "name": "research-records.r1.tar.gz.part004",
+        "sha256": "e1d5b2bbfbec48238a80c554417daeb27c10f1c9dc94c0c21b993da18b41fbc6",
+        "tag": "v1.0.0-rc.1"
+      },
+      "observed": {
+        "digest": "sha256:e1d5b2bbfbec48238a80c554417daeb27c10f1c9dc94c0c21b993da18b41fbc6",
+        "id": 619299470,
+        "name": "research-records.r1.tar.gz.part004",
+        "size": 134217728,
+        "state": "uploaded"
+      },
+      "status": "passed"
+    },
+    {
+      "errors": [],
+      "expected": {
+        "asset_id": 619304400,
+        "bytes": 134217728,
+        "dataset": "research-records",
+        "kind": "evidence_part",
+        "name": "research-records.r1.tar.gz.part005",
+        "sha256": "32ec0c9e89550065f54015524be783f09e706e1d143b0f55ecbd348f2d9f2da7",
+        "tag": "v1.0.0-rc.1"
+      },
+      "observed": {
+        "digest": "sha256:32ec0c9e89550065f54015524be783f09e706e1d143b0f55ecbd348f2d9f2da7",
+        "id": 619304400,
+        "name": "research-records.r1.tar.gz.part005",
+        "size": 134217728,
+        "state": "uploaded"
+      },
+      "status": "passed"
+    },
+    {
+      "errors": [],
+      "expected": {
+        "asset_id": 619306589,
+        "bytes": 134217728,
+        "dataset": "research-records",
+        "kind": "evidence_part",
+        "name": "research-records.r1.tar.gz.part006",
+        "sha256": "bd8eaab56a6ac69252254c147fcc13471516d92f92f856acefc819a7c0a8b1e6",
+        "tag": "v1.0.0-rc.1"
+      },
+      "observed": {
+        "digest": "sha256:bd8eaab56a6ac69252254c147fcc13471516d92f92f856acefc819a7c0a8b1e6",
+        "id": 619306589,
+        "name": "research-records.r1.tar.gz.part006",
+        "size": 134217728,
+        "state": "uploaded"
+      },
+      "status": "passed"
+    },
+    {
+      "errors": [],
+      "expected": {
+        "asset_id": 619306777,
+        "bytes": 134217728,
+        "dataset": "research-records",
+        "kind": "evidence_part",
+        "name": "research-records.r1.tar.gz.part007",
+        "sha256": "29743f50ccfc9dad64e6992c81f6cb0f72e158c5d0fd48b056cbc5da78491acc",
+        "tag": "v1.0.0-rc.1"
+      },
+      "observed": {
+        "digest": "sha256:29743f50ccfc9dad64e6992c81f6cb0f72e158c5d0fd48b056cbc5da78491acc",
+        "id": 619306777,
+        "name": "research-records.r1.tar.gz.part007",
+        "size": 134217728,
+        "state": "uploaded"
+      },
+      "status": "passed"
+    },
+    {
+      "errors": [],
+      "expected": {
+        "asset_id": 619311069,
+        "bytes": 35196902,
+        "dataset": "research-records",
+        "kind": "evidence_part",
+        "name": "research-records.r1.tar.gz.part008",
+        "sha256": "e1d5d7af2aaa82a0218dfb35e6fbceba8adc6c6b4bac683f8b743c553a785c45",
+        "tag": "v1.0.0-rc.1"
+      },
+      "observed": {
+        "digest": "sha256:e1d5d7af2aaa82a0218dfb35e6fbceba8adc6c6b4bac683f8b743c553a785c45",
+        "id": 619311069,
+        "name": "research-records.r1.tar.gz.part008",
+        "size": 35196902,
+        "state": "uploaded"
+      },
+      "status": "passed"
+    },
+    {
+      "errors": [],
+      "expected": {
+        "asset_id": 619248908,
+        "bytes": 131987680,
+        "dataset": "research-shared",
+        "kind": "evidence_part",
+        "name": "research-shared.tar.gz.part001",
+        "sha256": "ea122415080f8a3b65c1b27b71b8fd17ac95ecdc77498edcc6cbe5a3eb8ca4ba",
+        "tag": "v1.0.0-rc.1"
+      },
+      "observed": {
+        "digest": "sha256:ea122415080f8a3b65c1b27b71b8fd17ac95ecdc77498edcc6cbe5a3eb8ca4ba",
+        "id": 619248908,
+        "name": "research-shared.tar.gz.part001",
+        "size": 131987680,
+        "state": "uploaded"
+      },
+      "status": "passed"
+    },
+    {
+      "errors": [],
+      "expected": {
+        "asset_id": 619273842,
+        "bytes": 134217728,
+        "dataset": "rt0",
+        "kind": "evidence_part",
+        "name": "rt0.r1.tar.gz.part001",
+        "sha256": "748cc3fa48fcfbe2a5625eb62b532b87da2a53cd205e14a82d5cb329539f21b4",
+        "tag": "v1.0.0-rc.1"
+      },
+      "observed": {
+        "digest": "sha256:748cc3fa48fcfbe2a5625eb62b532b87da2a53cd205e14a82d5cb329539f21b4",
+        "id": 619273842,
+        "name": "rt0.r1.tar.gz.part001",
+        "size": 134217728,
+        "state": "uploaded"
+      },
+      "status": "passed"
+    },
+    {
+      "errors": [],
+      "expected": {
+        "asset_id": 619274060,
+        "bytes": 134217728,
+        "dataset": "rt0",
+        "kind": "evidence_part",
+        "name": "rt0.r1.tar.gz.part002",
+        "sha256": "a747dc2d33fdbff8413381e89c632b5c6c33db9c55792bf316bbef889e7bf848",
+        "tag": "v1.0.0-rc.1"
+      },
+      "observed": {
+        "digest": "sha256:a747dc2d33fdbff8413381e89c632b5c6c33db9c55792bf316bbef889e7bf848",
+        "id": 619274060,
+        "name": "rt0.r1.tar.gz.part002",
+        "size": 134217728,
+        "state": "uploaded"
+      },
+      "status": "passed"
+    },
+    {
+      "errors": [],
+      "expected": {
+        "asset_id": 619274069,
+        "bytes": 134217728,
+        "dataset": "rt0",
+        "kind": "evidence_part",
+        "name": "rt0.r1.tar.gz.part003",
+        "sha256": "1378385ffba4503e582bc63210df88e395bfb8ef5b81ba21a0f33fecfc06600f",
+        "tag": "v1.0.0-rc.1"
+      },
+      "observed": {
+        "digest": "sha256:1378385ffba4503e582bc63210df88e395bfb8ef5b81ba21a0f33fecfc06600f",
+        "id": 619274069,
+        "name": "rt0.r1.tar.gz.part003",
+        "size": 134217728,
+        "state": "uploaded"
+      },
+      "status": "passed"
+    },
+    {
+      "errors": [],
+      "expected": {
+        "asset_id": 619279208,
+        "bytes": 134217728,
+        "dataset": "rt0",
+        "kind": "evidence_part",
+        "name": "rt0.r1.tar.gz.part004",
+        "sha256": "721e39c464efa8efb5bc3281d3c94f2215954fbc9e502774ad143e9b67d7bcd2",
+        "tag": "v1.0.0-rc.1"
+      },
+      "observed": {
+        "digest": "sha256:721e39c464efa8efb5bc3281d3c94f2215954fbc9e502774ad143e9b67d7bcd2",
+        "id": 619279208,
+        "name": "rt0.r1.tar.gz.part004",
+        "size": 134217728,
+        "state": "uploaded"
+      },
+      "status": "passed"
+    },
+    {
+      "errors": [],
+      "expected": {
+        "asset_id": 619281332,
+        "bytes": 11085393,
+        "dataset": "rt0",
+        "kind": "evidence_part",
+        "name": "rt0.r1.tar.gz.part005",
+        "sha256": "6052ff3d776faef6582f5b6b31f6dfad4decfaad19185e90264f03f2d4fa2588",
+        "tag": "v1.0.0-rc.1"
+      },
+      "observed": {
+        "digest": "sha256:6052ff3d776faef6582f5b6b31f6dfad4decfaad19185e90264f03f2d4fa2588",
+        "id": 619281332,
+        "name": "rt0.r1.tar.gz.part005",
+        "size": 11085393,
+        "state": "uploaded"
+      },
+      "status": "passed"
+    },
+    {
+      "errors": [],
+      "expected": {
+        "asset_id": 638648444,
+        "bytes": 15412406,
+        "dataset": "automation-rc2",
+        "kind": "evidence_part",
+        "name": "litz_automation_rc2.part01",
+        "sha256": "0869f1d7e634659c6f512601d26358b32e68533f7a4a5eeafe030847157ed4e2",
+        "tag": "v1.0.0-rc.2"
+      },
+      "observed": {
+        "digest": "sha256:0869f1d7e634659c6f512601d26358b32e68533f7a4a5eeafe030847157ed4e2",
+        "id": 638648444,
+        "name": "litz_automation_rc2.part01",
+        "size": 15412406,
+        "state": "uploaded"
+      },
+      "status": "passed"
+    },
+    {
+      "errors": [],
+      "expected": {
+        "asset_id": null,
+        "bytes": 13447059,
+        "kind": "publication",
+        "name": "review_20261015_report_zh-CN_single.pdf",
+        "sha256": "41a2acf852203392dce2a08d7bf14603325e77818f23a4b10ca29bafe2e65599",
+        "tag": "v1.0.0-rc.2"
+      },
+      "observed": {
+        "digest": "sha256:41a2acf852203392dce2a08d7bf14603325e77818f23a4b10ca29bafe2e65599",
+        "id": 644362228,
+        "name": "review_20261015_report_zh-CN_single.pdf",
+        "size": 13447059,
+        "state": "uploaded"
+      },
+      "status": "passed"
+    },
+    {
+      "errors": [],
+      "expected": {
+        "asset_id": null,
+        "bytes": 13448260,
+        "kind": "publication",
+        "name": "review_20261015_report_zh-CN_ieee-journal.pdf",
+        "sha256": "2756cc7492651786d28019b376ba66b3d48564ec61e218c9d8bb61f7ece8249c",
+        "tag": "v1.0.0-rc.2"
+      },
+      "observed": {
+        "digest": "sha256:2756cc7492651786d28019b376ba66b3d48564ec61e218c9d8bb61f7ece8249c",
+        "id": 644361680,
+        "name": "review_20261015_report_zh-CN_ieee-journal.pdf",
+        "size": 13448260,
+        "state": "uploaded"
+      },
+      "status": "passed"
+    },
+    {
+      "errors": [],
+      "expected": {
+        "asset_id": null,
+        "bytes": 13448149,
+        "kind": "publication",
+        "name": "review_20261015_report_zh-CN_ieee-conference.pdf",
+        "sha256": "a5d4428a817ad6d24c0a27e721288e56828d83e75a1d23363933e925c3c63012",
+        "tag": "v1.0.0-rc.2"
+      },
+      "observed": {
+        "digest": "sha256:a5d4428a817ad6d24c0a27e721288e56828d83e75a1d23363933e925c3c63012",
+        "id": 644360240,
+        "name": "review_20261015_report_zh-CN_ieee-conference.pdf",
+        "size": 13448149,
+        "state": "uploaded"
+      },
+      "status": "passed"
+    },
+    {
+      "errors": [],
+      "expected": {
+        "asset_id": null,
+        "bytes": 13322416,
+        "kind": "publication",
+        "name": "review_20261015_report_en_single.pdf",
+        "sha256": "be57cd2416b208b244394fa5422919036a384fbd1101eb6763842a91712713e0",
+        "tag": "v1.0.0-rc.2"
+      },
+      "observed": {
+        "digest": "sha256:be57cd2416b208b244394fa5422919036a384fbd1101eb6763842a91712713e0",
+        "id": 644357454,
+        "name": "review_20261015_report_en_single.pdf",
+        "size": 13322416,
+        "state": "uploaded"
+      },
+      "status": "passed"
+    },
+    {
+      "errors": [],
+      "expected": {
+        "asset_id": null,
+        "bytes": 13357787,
+        "kind": "publication",
+        "name": "review_20261015_report_en_ieee-journal.pdf",
+        "sha256": "1afd6c0d80fb77cff56a3f9ebac5d23fccd17f57cc8bf97c7117649c1d1a7b30",
+        "tag": "v1.0.0-rc.2"
+      },
+      "observed": {
+        "digest": "sha256:1afd6c0d80fb77cff56a3f9ebac5d23fccd17f57cc8bf97c7117649c1d1a7b30",
+        "id": 644356173,
+        "name": "review_20261015_report_en_ieee-journal.pdf",
+        "size": 13357787,
+        "state": "uploaded"
+      },
+      "status": "passed"
+    },
+    {
+      "errors": [],
+      "expected": {
+        "asset_id": null,
+        "bytes": 13357347,
+        "kind": "publication",
+        "name": "review_20261015_report_en_ieee-conference.pdf",
+        "sha256": "d1de56c1ae5e6e68b9641dc8bf3d4a3a2635a2d37f8d944d0d2c3bb9ebf9f7f1",
+        "tag": "v1.0.0-rc.2"
+      },
+      "observed": {
+        "digest": "sha256:d1de56c1ae5e6e68b9641dc8bf3d4a3a2635a2d37f8d944d0d2c3bb9ebf9f7f1",
+        "id": 644353321,
+        "name": "review_20261015_report_en_ieee-conference.pdf",
+        "size": 13357347,
+        "state": "uploaded"
+      },
+      "status": "passed"
+    },
+    {
+      "errors": [],
+      "expected": {
+        "asset_id": null,
+        "bytes": 13410989,
+        "kind": "publication",
+        "name": "review_20261015_paper_zh-CN_single.pdf",
+        "sha256": "71f33834f7b520e83263f7b09fffadce5bf4b72aea77934b4643397cfbe7355e",
+        "tag": "v1.0.0-rc.2"
+      },
+      "observed": {
+        "digest": "sha256:71f33834f7b520e83263f7b09fffadce5bf4b72aea77934b4643397cfbe7355e",
+        "id": 644351933,
+        "name": "review_20261015_paper_zh-CN_single.pdf",
+        "size": 13410989,
+        "state": "uploaded"
+      },
+      "status": "passed"
+    },
+    {
+      "errors": [],
+      "expected": {
+        "asset_id": null,
+        "bytes": 13427358,
+        "kind": "publication",
+        "name": "review_20261015_paper_zh-CN_ieee-journal.pdf",
+        "sha256": "f24e2e4f054d2c72afe2ee3b20ebeb88c334924fb686924ad0762f04e9e9f86c",
+        "tag": "v1.0.0-rc.2"
+      },
+      "observed": {
+        "digest": "sha256:f24e2e4f054d2c72afe2ee3b20ebeb88c334924fb686924ad0762f04e9e9f86c",
+        "id": 644349415,
+        "name": "review_20261015_paper_zh-CN_ieee-journal.pdf",
+        "size": 13427358,
+        "state": "uploaded"
+      },
+      "status": "passed"
+    },
+    {
+      "errors": [],
+      "expected": {
+        "asset_id": null,
+        "bytes": 13427397,
+        "kind": "publication",
+        "name": "review_20261015_paper_zh-CN_ieee-conference.pdf",
+        "sha256": "9626f2f600a2389b354b4687c72c89b3c8dd8cb5d53d010ef60adec963ab2349",
+        "tag": "v1.0.0-rc.2"
+      },
+      "observed": {
+        "digest": "sha256:9626f2f600a2389b354b4687c72c89b3c8dd8cb5d53d010ef60adec963ab2349",
+        "id": 644349153,
+        "name": "review_20261015_paper_zh-CN_ieee-conference.pdf",
+        "size": 13427397,
+        "state": "uploaded"
+      },
+      "status": "passed"
+    },
+    {
+      "errors": [],
+      "expected": {
+        "asset_id": null,
+        "bytes": 13307547,
+        "kind": "publication",
+        "name": "review_20261015_paper_en_single.pdf",
+        "sha256": "48401192da340e76d791a9427b905f773a0fcd4c73e825d4ae9c0da8e1e91102",
+        "tag": "v1.0.0-rc.2"
+      },
+      "observed": {
+        "digest": "sha256:48401192da340e76d791a9427b905f773a0fcd4c73e825d4ae9c0da8e1e91102",
+        "id": 644345590,
+        "name": "review_20261015_paper_en_single.pdf",
+        "size": 13307547,
+        "state": "uploaded"
+      },
+      "status": "passed"
+    },
+    {
+      "errors": [],
+      "expected": {
+        "asset_id": null,
+        "bytes": 13344118,
+        "kind": "publication",
+        "name": "review_20261015_paper_en_ieee-journal.pdf",
+        "sha256": "fd2cd435f668d1cd9ffcb1f6859dd9b59f57f6e049e2b6c367a5ca408620dc94",
+        "tag": "v1.0.0-rc.2"
+      },
+      "observed": {
+        "digest": "sha256:fd2cd435f668d1cd9ffcb1f6859dd9b59f57f6e049e2b6c367a5ca408620dc94",
+        "id": 644345140,
+        "name": "review_20261015_paper_en_ieee-journal.pdf",
+        "size": 13344118,
+        "state": "uploaded"
+      },
+      "status": "passed"
+    },
+    {
+      "errors": [],
+      "expected": {
+        "asset_id": null,
+        "bytes": 13343838,
+        "kind": "publication",
+        "name": "review_20261015_paper_en_ieee-conference.pdf",
+        "sha256": "a3a49ae90235700402fda500fa537d1db33f661a70e746393d92181d5a47b8c1",
+        "tag": "v1.0.0-rc.2"
+      },
+      "observed": {
+        "digest": "sha256:a3a49ae90235700402fda500fa537d1db33f661a70e746393d92181d5a47b8c1",
+        "id": 644341174,
+        "name": "review_20261015_paper_en_ieee-conference.pdf",
+        "size": 13343838,
+        "state": "uploaded"
+      },
+      "status": "passed"
+    },
+    {
+      "errors": [],
+      "expected": {
+        "asset_id": null,
+        "bytes": 1735786,
+        "kind": "publication",
+        "name": "review_20261015_automation_zh-CN_single.pdf",
+        "sha256": "aaf5a8551f370bc49389d01c1f9092bc188b9b99e9914483026328b662e67e2b",
+        "tag": "v1.0.0-rc.2"
+      },
+      "observed": {
+        "digest": "sha256:aaf5a8551f370bc49389d01c1f9092bc188b9b99e9914483026328b662e67e2b",
+        "id": 644340992,
+        "name": "review_20261015_automation_zh-CN_single.pdf",
+        "size": 1735786,
+        "state": "uploaded"
+      },
+      "status": "passed"
+    },
+    {
+      "errors": [],
+      "expected": {
+        "asset_id": null,
+        "bytes": 1768037,
+        "kind": "publication",
+        "name": "review_20261015_automation_zh-CN_ieee-journal.pdf",
+        "sha256": "52400b986c22c5b9166fd844a7fc15088079cd8654d7d3a3af71df0ff8db4d44",
+        "tag": "v1.0.0-rc.2"
+      },
+      "observed": {
+        "digest": "sha256:52400b986c22c5b9166fd844a7fc15088079cd8654d7d3a3af71df0ff8db4d44",
+        "id": 644340986,
+        "name": "review_20261015_automation_zh-CN_ieee-journal.pdf",
+        "size": 1768037,
+        "state": "uploaded"
+      },
+      "status": "passed"
+    },
+    {
+      "errors": [],
+      "expected": {
+        "asset_id": null,
+        "bytes": 1768012,
+        "kind": "publication",
+        "name": "review_20261015_automation_zh-CN_ieee-conference.pdf",
+        "sha256": "4be00257146a95236fc203fdc7ea2c4514e0aa5a844a7797d585f1888a1a08c8",
+        "tag": "v1.0.0-rc.2"
+      },
+      "observed": {
+        "digest": "sha256:4be00257146a95236fc203fdc7ea2c4514e0aa5a844a7797d585f1888a1a08c8",
+        "id": 644340973,
+        "name": "review_20261015_automation_zh-CN_ieee-conference.pdf",
+        "size": 1768012,
+        "state": "uploaded"
+      },
+      "status": "passed"
+    },
+    {
+      "errors": [],
+      "expected": {
+        "asset_id": null,
+        "bytes": 1625242,
+        "kind": "publication",
+        "name": "review_20261015_automation_en_single.pdf",
+        "sha256": "028ac00eae78c523dd2a3eecd51c06c02f0a17fa16dea224ea0f69402310ec57",
+        "tag": "v1.0.0-rc.2"
+      },
+      "observed": {
+        "digest": "sha256:028ac00eae78c523dd2a3eecd51c06c02f0a17fa16dea224ea0f69402310ec57",
+        "id": 644340865,
+        "name": "review_20261015_automation_en_single.pdf",
+        "size": 1625242,
+        "state": "uploaded"
+      },
+      "status": "passed"
+    },
+    {
+      "errors": [],
+      "expected": {
+        "asset_id": null,
+        "bytes": 1664115,
+        "kind": "publication",
+        "name": "review_20261015_automation_en_ieee-journal.pdf",
+        "sha256": "cc9e0a9ff838bf978440096c49abf281574149581bf6892da7f6585d91c86da9",
+        "tag": "v1.0.0-rc.2"
+      },
+      "observed": {
+        "digest": "sha256:cc9e0a9ff838bf978440096c49abf281574149581bf6892da7f6585d91c86da9",
+        "id": 644340874,
+        "name": "review_20261015_automation_en_ieee-journal.pdf",
+        "size": 1664115,
+        "state": "uploaded"
+      },
+      "status": "passed"
+    },
+    {
+      "errors": [],
+      "expected": {
+        "asset_id": null,
+        "bytes": 1663871,
+        "kind": "publication",
+        "name": "review_20261015_automation_en_ieee-conference.pdf",
+        "sha256": "756a821bcea6be5cde084b7e65094b05cdc10df8c7802b049eb110bed0f3690b",
+        "tag": "v1.0.0-rc.2"
+      },
+      "observed": {
+        "digest": "sha256:756a821bcea6be5cde084b7e65094b05cdc10df8c7802b049eb110bed0f3690b",
+        "id": 644340853,
+        "name": "review_20261015_automation_en_ieee-conference.pdf",
+        "size": 1663871,
+        "state": "uploaded"
+      },
+      "status": "passed"
+    },
+    {
+      "errors": [],
+      "expected": {
+        "asset_id": null,
+        "bytes": 15452251,
+        "kind": "publication",
+        "name": "review_20261015_report_zh-CN.nb",
+        "sha256": "cfd2772562201ed20a3d20a369c3d5539a399bf5d4651d2af27226bc3950ab08",
+        "tag": "v1.0.0-rc.2"
+      },
+      "observed": {
+        "digest": "sha256:cfd2772562201ed20a3d20a369c3d5539a399bf5d4651d2af27226bc3950ab08",
+        "id": 644357951,
+        "name": "review_20261015_report_zh-CN.nb",
+        "size": 15452251,
+        "state": "uploaded"
+      },
+      "status": "passed"
+    },
+    {
+      "errors": [],
+      "expected": {
+        "asset_id": null,
+        "bytes": 15342119,
+        "kind": "publication",
+        "name": "review_20261015_report_en.nb",
+        "sha256": "338e0238769b935917eb5fbc5282e90c0dacc69ab2f7f294cf600907d93173fe",
+        "tag": "v1.0.0-rc.2"
+      },
+      "observed": {
+        "digest": "sha256:338e0238769b935917eb5fbc5282e90c0dacc69ab2f7f294cf600907d93173fe",
+        "id": 644352858,
+        "name": "review_20261015_report_en.nb",
+        "size": 15342119,
+        "state": "uploaded"
+      },
+      "status": "passed"
+    },
+    {
+      "errors": [],
+      "expected": {
+        "asset_id": null,
+        "bytes": 15404695,
+        "kind": "publication",
+        "name": "review_20261015_paper_zh-CN.nb",
+        "sha256": "3d89e6d6655e478179be19e3a1756245fff33054a297ad94a82936d3697b7e06",
+        "tag": "v1.0.0-rc.2"
+      },
+      "observed": {
+        "digest": "sha256:3d89e6d6655e478179be19e3a1756245fff33054a297ad94a82936d3697b7e06",
+        "id": 644347196,
+        "name": "review_20261015_paper_zh-CN.nb",
+        "size": 15404695,
+        "state": "uploaded"
+      },
+      "status": "passed"
+    },
+    {
+      "errors": [],
+      "expected": {
+        "asset_id": null,
+        "bytes": 15316697,
+        "kind": "publication",
+        "name": "review_20261015_paper_en.nb",
+        "sha256": "c007340bd3d0467b1b6adc5c61e8ec22d12e2382de2efb317bf28693d28ae39b",
+        "tag": "v1.0.0-rc.2"
+      },
+      "observed": {
+        "digest": "sha256:c007340bd3d0467b1b6adc5c61e8ec22d12e2382de2efb317bf28693d28ae39b",
+        "id": 644341115,
+        "name": "review_20261015_paper_en.nb",
+        "size": 15316697,
+        "state": "uploaded"
+      },
+      "status": "passed"
+    },
+    {
+      "errors": [],
+      "expected": {
+        "asset_id": null,
+        "bytes": 208177,
+        "kind": "publication",
+        "name": "review_20261015_automation_zh-CN.nb",
+        "sha256": "1df224b0c1f173f2f4bce252cc7a9bff0cd5312135bd0808bcdc5e27ff4b82be",
+        "tag": "v1.0.0-rc.2"
+      },
+      "observed": {
+        "digest": "sha256:1df224b0c1f173f2f4bce252cc7a9bff0cd5312135bd0808bcdc5e27ff4b82be",
+        "id": 644340854,
+        "name": "review_20261015_automation_zh-CN.nb",
+        "size": 208177,
+        "state": "uploaded"
+      },
+      "status": "passed"
+    },
+    {
+      "errors": [],
+      "expected": {
+        "asset_id": null,
+        "bytes": 176549,
+        "kind": "publication",
+        "name": "review_20261015_automation_en.nb",
+        "sha256": "f964b266d7779ad6a2db5c7260a8e5b1b2edd73391b1a809a19b76159b36b94d",
+        "tag": "v1.0.0-rc.2"
+      },
+      "observed": {
+        "digest": "sha256:f964b266d7779ad6a2db5c7260a8e5b1b2edd73391b1a809a19b76159b36b94d",
+        "id": 644340845,
+        "name": "review_20261015_automation_en.nb",
+        "size": 176549,
+        "state": "uploaded"
+      },
+      "status": "passed"
+    },
+    {
+      "errors": [],
+      "expected": {
+        "asset_id": null,
+        "bytes": 487570964,
+        "kind": "publication",
+        "name": "review_20261015_Litz_publication_package.zip",
+        "sha256": "9efcc884be3500cf7d5d9b53680e833af02f1a7c6c8cb65871e73809a2aee274",
+        "tag": "v1.0.0-rc.2"
+      },
+      "observed": {
+        "digest": "sha256:9efcc884be3500cf7d5d9b53680e833af02f1a7c6c8cb65871e73809a2aee274",
+        "id": 644341045,
+        "name": "review_20261015_Litz_publication_package.zip",
+        "size": 487570964,
+        "state": "uploaded"
+      },
+      "status": "passed"
+    },
+    {
+      "errors": [],
+      "expected": {
+        "asset_id": null,
+        "bytes": 74357489,
+        "kind": "publication",
+        "name": "review_20261015_Litz_LaTeX_sources.zip",
+        "sha256": "0013626a6511d4eb960626cf7b99136e20298df832aba6534070fbaa74a56a9e",
+        "tag": "v1.0.0-rc.2"
+      },
+      "observed": {
+        "digest": "sha256:0013626a6511d4eb960626cf7b99136e20298df832aba6534070fbaa74a56a9e",
+        "id": 644341029,
+        "name": "review_20261015_Litz_LaTeX_sources.zip",
+        "size": 74357489,
+        "state": "uploaded"
+      },
+      "status": "passed"
+    },
+    {
+      "errors": [],
+      "expected": {
+        "asset_id": null,
+        "bytes": 21987850,
+        "kind": "publication",
+        "name": "review_20261015_Litz_visual_candidates.zip",
+        "sha256": "e4ca59cd99eed0a1c76c44dbb158390d6100f94505980f3cbbc7ec2a78aa73e4",
+        "tag": "v1.0.0-rc.2"
+      },
+      "observed": {
+        "digest": "sha256:e4ca59cd99eed0a1c76c44dbb158390d6100f94505980f3cbbc7ec2a78aa73e4",
+        "id": 644341112,
+        "name": "review_20261015_Litz_visual_candidates.zip",
+        "size": 21987850,
+        "state": "uploaded"
+      },
+      "status": "passed"
+    },
+    {
+      "errors": [],
+      "expected": {
+        "asset_id": null,
+        "bytes": 103265,
+        "kind": "supplemental",
+        "name": "litz_publication_licenses_20261020.zip",
+        "sha256": "5aa6311ca16e5623e610a08dc4122764dcdeb25fd8a2d28c46585065e56bfda2",
+        "tag": "v1.0.0-rc.2"
+      },
+      "observed": {
+        "digest": "sha256:5aa6311ca16e5623e610a08dc4122764dcdeb25fd8a2d28c46585065e56bfda2",
+        "id": 656800433,
+        "name": "litz_publication_licenses_20261020.zip",
+        "size": 103265,
+        "state": "uploaded"
+      },
+      "status": "passed"
+    }
+  ],
+  "counts": {
+    "evidence_parts": 66,
+    "publication_assets": 27,
+    "required_releases": 2,
+    "supplemental_assets": 1
+  },
+  "inputs": [
+    {
+      "bytes": 11848174,
+      "hash_basis": "raw-bytes",
+      "path": "data/catalog.json",
+      "sha256": "be8505e990068710b143f6e411d903938117c1de06c265a9270afeadd109db44"
+    },
+    {
+      "bytes": 5109,
+      "hash_basis": "raw-bytes",
+      "path": "provenance/editorial/online-assets.json",
+      "sha256": "c6303cde6370dd96cc1291daf24e1fcc1e77fa4412af032bb1ed554fb57aeedc"
+    },
+    {
+      "bytes": 129250,
+      "hash_basis": "raw-bytes",
+      "name": "anonymous-assets.json",
+      "role": "github_api_snapshot",
+      "sha256": "8c539c015f7bbd88eb284358727a21210de6be2986c5994e895659d152e2d5c1"
+    },
+    {
+      "bytes": 2615,
+      "hash_basis": "raw-bytes",
+      "path": "provenance/maintenance/supplemental-assets.json",
+      "sha256": "bb888351e328e213adde2724d1f6bf9d6453e22b35bcf25a4b63e65c9339326e"
+    }
+  ],
+  "local_preparation_checks": {
+    "checks": [
+      {
+        "expected": "HNNUYUXUAN/litz-wire-research",
+        "id": "repository_identity",
+        "observed": "HNNUYUXUAN/litz-wire-research",
+        "status": "passed"
+      },
+      {
+        "id": "part_api_url/academic-editions/academic-editions.r1.tar.gz.part001",
+        "status": "passed"
+      },
+      {
+        "id": "part_api_url/academic-editions/academic-editions.r1.tar.gz.part002",
+        "status": "passed"
+      },
+      {
+        "id": "part_api_url/academic-editions/academic-editions.r1.tar.gz.part003",
+        "status": "passed"
+      },
+      {
+        "id": "part_api_url/analytic/analytic.tar.gz.part001",
+        "status": "passed"
+      },
+      {
+        "id": "part_api_url/ansys/ansys.tar.gz.part001",
+        "status": "passed"
+      },
+      {
+        "id": "part_api_url/aphi/aphi.r1.tar.gz.part001",
+        "status": "passed"
+      },
+      {
+        "id": "part_api_url/aphi/aphi.r1.tar.gz.part002",
+        "status": "passed"
+      },
+      {
+        "id": "part_api_url/aphi/aphi.r1.tar.gz.part003",
+        "status": "passed"
+      },
+      {
+        "id": "part_api_url/aphi/aphi.r1.tar.gz.part004",
+        "status": "passed"
+      },
+      {
+        "id": "part_api_url/aphi/aphi.r1.tar.gz.part005",
+        "status": "passed"
+      },
+      {
+        "id": "part_api_url/aphi/aphi.r1.tar.gz.part006",
+        "status": "passed"
+      },
+      {
+        "id": "part_api_url/aphi/aphi.r1.tar.gz.part007",
+        "status": "passed"
+      },
+      {
+        "id": "part_api_url/aphi/aphi.r1.tar.gz.part008",
+        "status": "passed"
+      },
+      {
+        "id": "part_api_url/aphi/aphi.r1.tar.gz.part009",
+        "status": "passed"
+      },
+      {
+        "id": "part_api_url/aphi/aphi.r1.tar.gz.part010",
+        "status": "passed"
+      },
+      {
+        "id": "part_api_url/aphi/aphi.r1.tar.gz.part011",
+        "status": "passed"
+      },
+      {
+        "id": "part_api_url/aphi/aphi.r1.tar.gz.part012",
+        "status": "passed"
+      },
+      {
+        "id": "part_api_url/aphi/aphi.r1.tar.gz.part013",
+        "status": "passed"
+      },
+      {
+        "id": "part_api_url/aphi/aphi.r1.tar.gz.part014",
+        "status": "passed"
+      },
+      {
+        "id": "part_api_url/aphi/aphi.r1.tar.gz.part015",
+        "status": "passed"
+      },
+      {
+        "id": "part_api_url/aphi/aphi.r1.tar.gz.part016",
+        "status": "passed"
+      },
+      {
+        "id": "part_api_url/aphi/aphi.r1.tar.gz.part017",
+        "status": "passed"
+      },
+      {
+        "id": "part_api_url/aphi/aphi.r1.tar.gz.part018",
+        "status": "passed"
+      },
+      {
+        "id": "part_api_url/aphi/aphi.r1.tar.gz.part019",
+        "status": "passed"
+      },
+      {
+        "id": "part_api_url/aphi/aphi.r1.tar.gz.part020",
+        "status": "passed"
+      },
+      {
+        "id": "part_api_url/aphi/aphi.r1.tar.gz.part021",
+        "status": "passed"
+      },
+      {
+        "id": "part_api_url/aphi/aphi.r1.tar.gz.part022",
+        "status": "passed"
+      },
+      {
+        "id": "part_api_url/aphi/aphi.r1.tar.gz.part023",
+        "status": "passed"
+      },
+      {
+        "id": "part_api_url/aphi/aphi.r1.tar.gz.part024",
+        "status": "passed"
+      },
+      {
+        "id": "part_api_url/aphi/aphi.r1.tar.gz.part025",
+        "status": "passed"
+      },
+      {
+        "id": "part_api_url/aphi/aphi.r1.tar.gz.part026",
+        "status": "passed"
+      },
+      {
+        "id": "part_api_url/automation-rc2/litz_automation_rc2.part01",
+        "status": "passed"
+      },
+      {
+        "id": "part_api_url/common-terminal/common-terminal.r1.tar.gz.part001",
+        "status": "passed"
+      },
+      {
+        "id": "part_api_url/common-terminal/common-terminal.r1.tar.gz.part002",
+        "status": "passed"
+      },
+      {
+        "id": "part_api_url/common-terminal/common-terminal.r1.tar.gz.part003",
+        "status": "passed"
+      },
+      {
+        "id": "part_api_url/common-terminal/common-terminal.r1.tar.gz.part004",
+        "status": "passed"
+      },
+      {
+        "id": "part_api_url/common-terminal/common-terminal.r1.tar.gz.part005",
+        "status": "passed"
+      },
+      {
+        "id": "part_api_url/common-terminal/common-terminal.r1.tar.gz.part006",
+        "status": "passed"
+      },
+      {
+        "id": "part_api_url/fem2/fem2.tar.gz.part001",
+        "status": "passed"
+      },
+      {
+        "id": "part_api_url/geometry/geometry.tar.gz.part001",
+        "status": "passed"
+      },
+      {
+        "id": "part_api_url/gpu/gpu.r1.tar.gz.part001",
+        "status": "passed"
+      },
+      {
+        "id": "part_api_url/gpu/gpu.r1.tar.gz.part002",
+        "status": "passed"
+      },
+      {
+        "id": "part_api_url/gpu/gpu.r1.tar.gz.part003",
+        "status": "passed"
+      },
+      {
+        "id": "part_api_url/peec/peec.r1.tar.gz.part001",
+        "status": "passed"
+      },
+      {
+        "id": "part_api_url/peec/peec.r1.tar.gz.part002",
+        "status": "passed"
+      },
+      {
+        "id": "part_api_url/peec/peec.r1.tar.gz.part003",
+        "status": "passed"
+      },
+      {
+        "id": "part_api_url/peec/peec.r1.tar.gz.part004",
+        "status": "passed"
+      },
+      {
+        "id": "part_api_url/peec/peec.r1.tar.gz.part005",
+        "status": "passed"
+      },
+      {
+        "id": "part_api_url/peec/peec.r1.tar.gz.part006",
+        "status": "passed"
+      },
+      {
+        "id": "part_api_url/peec/peec.r1.tar.gz.part007",
+        "status": "passed"
+      },
+      {
+        "id": "part_api_url/peec/peec.r1.tar.gz.part008",
+        "status": "passed"
+      },
+      {
+        "id": "part_api_url/publication-inputs/publication-inputs.tar.gz.part001",
+        "status": "passed"
+      },
+      {
+        "id": "part_api_url/research-records/research-records.r1.tar.gz.part001",
+        "status": "passed"
+      },
+      {
+        "id": "part_api_url/research-records/research-records.r1.tar.gz.part002",
+        "status": "passed"
+      },
+      {
+        "id": "part_api_url/research-records/research-records.r1.tar.gz.part003",
+        "status": "passed"
+      },
+      {
+        "id": "part_api_url/research-records/research-records.r1.tar.gz.part004",
+        "status": "passed"
+      },
+      {
+        "id": "part_api_url/research-records/research-records.r1.tar.gz.part005",
+        "status": "passed"
+      },
+      {
+        "id": "part_api_url/research-records/research-records.r1.tar.gz.part006",
+        "status": "passed"
+      },
+      {
+        "id": "part_api_url/research-records/research-records.r1.tar.gz.part007",
+        "status": "passed"
+      },
+      {
+        "id": "part_api_url/research-records/research-records.r1.tar.gz.part008",
+        "status": "passed"
+      },
+      {
+        "id": "part_api_url/research-shared/research-shared.tar.gz.part001",
+        "status": "passed"
+      },
+      {
+        "id": "part_api_url/rt0/rt0.r1.tar.gz.part001",
+        "status": "passed"
+      },
+      {
+        "id": "part_api_url/rt0/rt0.r1.tar.gz.part002",
+        "status": "passed"
+      },
+      {
+        "id": "part_api_url/rt0/rt0.r1.tar.gz.part003",
+        "status": "passed"
+      },
+      {
+        "id": "part_api_url/rt0/rt0.r1.tar.gz.part004",
+        "status": "passed"
+      },
+      {
+        "id": "part_api_url/rt0/rt0.r1.tar.gz.part005",
+        "status": "passed"
+      },
+      {
+        "id": "unique_manifest_asset_names",
+        "status": "passed"
+      },
+      {
+        "id": "release_identity/v1.0.0-rc.1",
+        "matches": 1,
+        "status": "passed"
+      },
+      {
+        "id": "release_identity/v1.0.0-rc.2",
+        "matches": 1,
+        "status": "passed"
+      },
+      {
+        "expected_count": 94,
+        "id": "all_registered_assets_match_api_metadata",
+        "matched_count": 94,
+        "status": "passed"
+      }
+    ],
+    "status": "passed"
+  },
+  "network_requests_performed": 0,
+  "pending_publication_conditions": [],
+  "publication_conditions": [
+    {
+      "id": "repository_public",
+      "observed_private": false,
+      "status": "satisfied"
+    },
+    {
+      "id": "catalog_anonymous_download_mode",
+      "observed_private": false,
+      "status": "satisfied"
+    },
+    {
+      "id": "release_published/v1.0.0-rc.1",
+      "observed_draft": false,
+      "observed_published_at": "2026-10-19T16:58:27Z",
+      "status": "satisfied"
+    },
+    {
+      "id": "release_published/v1.0.0-rc.2",
+      "observed_draft": false,
+      "observed_published_at": "2026-10-19T16:58:28Z",
+      "status": "satisfied"
+    },
+    {
+      "expected_assets": 94,
+      "id": "anonymous_asset_readback",
+      "matched_supplied_receipts": 94,
+      "receipt_failures": 0,
+      "status": "satisfied"
+    }
+  ],
+  "repository": "HNNUYUXUAN/litz-wire-research",
+  "schema_version": 1,
+  "snapshot_captured_at": "2026-10-19T17:40:58.204795+00:00"
+}

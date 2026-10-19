@@ -1,0 +1,95 @@
+{
+  "schema_version": 1,
+  "checked_at": "2026-10-19T17:41:25.820878+00:00",
+  "status": "passed",
+  "source_release": {
+    "tag": "v1.0.0-rc.3",
+    "commit": "01aa0bc3dc12a548301a148f8fc99e12a241e075",
+    "files": 972,
+    "raw_file_bytes": 80001469,
+    "ci_matrix_jobs_passed": 4,
+    "tests_per_job": 59,
+    "ci_run": 39289553044
+  },
+  "repository_visibility": "public",
+  "published_prereleases": [
+    "v1.0.0-rc.1",
+    "v1.0.0-rc.2",
+    "v1.0.0-rc.3"
+  ],
+  "anonymous_release_assets": {
+    "count": 127,
+    "bytes": 8578518566,
+    "cache_hits": 0,
+    "authentication": "none"
+  },
+  "anonymous_cli": {
+    "restored_files": 874,
+    "unique_objects": 679,
+    "object_bytes": 660867640,
+    "authentication": "none",
+    "authentication_subprocess_attempts": 0
+  },
+  "post_release_verification_tools": {
+    "offline_tests_passed": 14,
+    "commit": "76323f60fa3812e8e817a7b756d490dfa37ffb15",
+    "ci_matrix_jobs_passed": 4,
+    "tests_per_job": 74,
+    "ci_run": 39293290975,
+    "scope": "Maintained after the rc.3 source tag; see verification/INTEGRATION.md"
+  },
+  "metadata_scope": "Repository-authorized GitHub API metadata identifies assets. All acceptance downloads use separate credential-free HTTPS requests. Anonymous API metadata was rate limited.",
+  "scientific_scope": "No new physical solves or manuscript builds; scientific acceptance remains bound to the frozen evidence runs.",
+  "receipts": [
+    {
+      "path": "ci-source.json",
+      "bytes": 19722,
+      "sha256": "034ef07dc723a514b9c088be0a02b16ed1578d42bf7a39c8fdd37660b8fb2572"
+    },
+    {
+      "path": "ci-maintenance.json",
+      "bytes": 20203,
+      "sha256": "9ff20f0f930f783282f4a5957703fc4d01a22df43060ab3ef0cb4dd15e18968e"
+    },
+    {
+      "path": "repository-releases.json",
+      "bytes": 65753,
+      "sha256": "4c950331cc90cd495c2f2baa825d482bb4a83a766db4a86e24f84b96fee34c5f"
+    },
+    {
+      "path": "tag-identities.json",
+      "bytes": 794,
+      "sha256": "1372a69e718a5e8d8fe4ba1a415a637168b04ed352ad194b558253b1287b285d"
+    },
+    {
+      "path": "anonymous-assets.json",
+      "bytes": 129250,
+      "sha256": "8c539c015f7bbd88eb284358727a21210de6be2986c5994e895659d152e2d5c1"
+    },
+    {
+      "path": "release-readiness.json",
+      "bytes": 86609,
+      "sha256": "6ecf8b8b0a0aece0221690c5f915f6eff428223f1d90762ca905a172a44ddfed"
+    },
+    {
+      "path": "verification/public-receipts/source-verification.json",
+      "bytes": 289650,
+      "sha256": "3b9d9a324e0d2919b84a211b870dc1099fab69be257f141ca8ef439fa4147ceb"
+    },
+    {
+      "path": "verification/public-receipts/cli-restoration-verification.json",
+      "bytes": 7594,
+      "sha256": "c0796cb2ac40b7575923802f209311854a9551be221427ea5af95ca119f45d4e"
+    },
+    {
+      "path": "verification/public-receipts/portable-receipts-manifest.json",
+      "bytes": 2318,
+      "sha256": "aa5eee8b2b25d2b13d595fbdadc698a2105f6dabc7e8b1231c70c1d5fde0a948"
+    },
+    {
+      "path": "verification/public-receipts/installed-package-binding.json",
+      "bytes": 3024,
+      "sha256": "b3eae74706bb0cff61f85cababb795e2d536ff0a3fe3195611dbba6856559e67"
+    }
+  ]
+}

@@ -1,0 +1,27 @@
+{
+  "repository": "HNNUYUXUAN/litz-wire-research",
+  "schema_version": 1,
+  "tags": [
+    {
+      "status": "passed",
+      "tag": "v1.0.0-rc.1",
+      "ref_object": "71e15d5e342b52ad112e684e5b66985056ade9c5",
+      "commit": "29bfaef3cb4e4f0016b4567edc501f34c50542d7"
+    },
+    {
+      "status": "passed",
+      "tag": "v1.0.0-rc.2",
+      "ref_object": "cd5c7413139e5d35ad2b0f9cd11049a75a0069a4",
+      "commit": "15df5069e4f370c130ac0306bc65f441a64b7ad5"
+    },
+    {
+      "status": "passed",
+      "tag": "v1.0.0-rc.3",
+      "ref_object": "01aa0bc3dc12a548301a148f8fc99e12a241e075",
+      "commit": "01aa0bc3dc12a548301a148f8fc99e12a241e075"
+    }
+  ],
+  "method": "git ls-remote --tags",
+  "checked_at": "2026-10-19T17:31:04.5889452Z",
+  "status": "passed"
+}
