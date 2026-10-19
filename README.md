@@ -14,6 +14,16 @@ A reproducible scientific modeling workflow driven by Codex or another MCP-compa
 
 Read the [complete report, automation methods paper and physics paper](publications/README.md): six bilingual manuscripts, native Notebooks and eighteen PDFs.
 
+## Start with your task
+
+| I want to | Start here |
+| --- | --- |
+| Read the research and manuscripts | [Bilingual text, PDFs and Notebooks](publications/README.md) |
+| Run a modeling task with an agent | [Connections and workflows](automation/README.md) |
+| Let an agent find models, cases and evidence | [Catalog guide](docs/agent-catalog.md) · [llms.txt](llms.txt) |
+| Restore a route's research data | [Selective download and verification](docs/datasets.md) |
+| Change the source and contribute | [Contributing](CONTRIBUTING.md) · [Development and tests](docs/development.md) |
+
 ## From a question to evidence
 
 Ask the agent to construct a model, run it, inspect conservation and diagnose a failed check. The project supplies research workflows, fixed MCP connections, deterministic runners and complete tool/solver records. Start with the Wolfram calibration or the native seven-strand Maxwell example.
@@ -67,7 +77,7 @@ Each route includes bilingual interactive Notebooks, editable tutorial inputs, s
 
 [Publications](publications/README.md) · [Datasets](docs/datasets.md) · [Citation guide](docs/citation-guide.md) · [Acknowledgments](ACKNOWLEDGMENTS.md) · [Licenses](LICENSES/README.md)
 
-Original software uses MIT; original text, figures and data use CC BY 4.0. Upstream software retains its own license. Wolfram and Ansys are external licensed applications. This candidate repository remains private with a draft release while its handoff is reviewed.
+Original software uses MIT; original text, figures and data use CC BY 4.0. Upstream software retains its own license. Wolfram and Ansys are external licensed applications.
 
 ## From models to research conclusions
 
@@ -81,4 +91,4 @@ Each of the seven routes retains its degrees of freedom, excitation, boundaries 
 
 ![Research sketch](publications/assets/overview/en/research-sketch.png)
 
-[Complete local delivery and verification](publications/DELIVERY.md)
+[Publication delivery and verification](publications/DELIVERY.md)

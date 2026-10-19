@@ -1,0 +1,15 @@
+{
+  "schema_version": 1,
+  "status": "passed",
+  "scope": "tracked_reader_markdown_relative_paths",
+  "markdown_files": 183,
+  "relative_links": 536,
+  "failed_links": [],
+  "excluded_archives": [
+    "outputs/",
+    "provenance/",
+    "originals/",
+    "problem/"
+  ],
+  "external_urls_and_heading_anchors": "not_checked"
+}

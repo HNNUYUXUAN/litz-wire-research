@@ -12,7 +12,17 @@
 
 ![系统连接](publications/assets/overview/zh-CN/connections.svg)
 
-本地阅读：[完整报告、自动化方法论文与物理研究论文](publications/README.zh-CN.md)，含六份完整双语稿件、原生 Notebook 和十八份 PDF。
+阅读：[完整报告、自动化方法论文与物理研究论文](publications/README.zh-CN.md)，含六份完整双语稿件、原生 Notebook 和十八份 PDF。
+
+## 按用途开始
+
+| 我的目的 | 入口 |
+| --- | --- |
+| 阅读研究结论与稿件 | [双语稿件与 PDF / Notebook](publications/README.zh-CN.md) |
+| 用智能体完成建模任务 | [接入与工作流](automation/README.zh-CN.md) |
+| 让智能体检索模型、案例和证据 | [目录指南](docs/agent-catalog.zh-CN.md) · [llms.txt](llms.txt) |
+| 恢复某条路线的研究数据 | [按需下载和校验](docs/datasets.zh-CN.md) |
+| 修改源码并提交改进 | [贡献指南](CONTRIBUTING.zh-CN.md) · [开发与测试](docs/development.zh-CN.md) |
 
 ## 从研究问题到计算证据
 
@@ -67,7 +77,7 @@ python -m venv .venv
 
 [完整稿件](publications/README.zh-CN.md) · [数据集](docs/datasets.zh-CN.md) · [引用指南](docs/citation-guide.zh-CN.md) · [致谢](ACKNOWLEDGMENTS.zh-CN.md) · [许可](LICENSES/README.zh-CN.md)
 
-原创软件采用 MIT，原创文稿、图件与数据采用 CC BY 4.0；上游软件保留各自许可。Wolfram 与 Ansys 作为外部授权运行条件。候选仓库保持 Private，Release 保持 Draft。
+原创软件采用 MIT，原创文稿、图件与数据采用 CC BY 4.0；上游软件保留各自许可。Wolfram 与 Ansys 作为外部授权运行条件。
 
 ## 从模型到研究结论
 
@@ -81,4 +91,4 @@ python -m venv .venv
 
 ![研究手稿](publications/assets/overview/zh-CN/research-sketch.png)
 
-[本地完整交付与校验](publications/DELIVERY.zh-CN.md)
+[稿件交付与校验](publications/DELIVERY.zh-CN.md)

@@ -4,14 +4,14 @@ from pathlib import Path
 import unittest
 ROOT=Path(__file__).resolve().parents[1]
 class ReleaseManifestTests(unittest.TestCase):
-    def test_all_edition_links_have_release_files(self):
-        catalogue=json.loads((ROOT/'data/catalog.json').read_text(encoding='utf-8'))
+    def test_current_publication_documents_and_download_identities(self):
+        import sys
+        sys.path.insert(0, str(ROOT / "tools"))
+        from CheckSourceCheckout import validate_current_edition
         index=json.loads((ROOT/'docs/current-edition.json').read_text(encoding='utf-8'))
-        paths={f['path'] for d in catalogue['datasets'].values() for f in d['files']}
-        self.assertEqual(len(index['documents']),52)
-        for document in index['documents']:
-            for key in ['markdown','notebook','latex_single','latex_ieee','pdf_single','pdf_ieee']:
-                self.assertIn(document[key],paths)
+        self.assertEqual(validate_current_edition(ROOT, index), [])
+        self.assertEqual(len(index['documents']), 6)
+        self.assertEqual(sum(len(row['pdfs']) for row in index['documents']), 18)
 
     def test_catalogue_provenance_and_dependency_coverage(self):
         catalogue=json.loads((ROOT/'data/catalog.json').read_text(encoding='utf-8'))

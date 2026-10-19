@@ -1,20 +1,20 @@
 # Complete research publications
 
-[Online review and attachments](ONLINE.md)
-
 [English](README.md) · [简体中文](README.zh-CN.md)
 
-Each work has complete Chinese and English Markdown, a native Wolfram Notebook, and LaTeX/PDF in general single-column, IEEE journal and IEEE conference layouts. Local build artifacts below are supplied in the delivery package.
+Each of the three works has complete English and Chinese text and a native Wolfram Notebook, plus general single-column, IEEE journal and IEEE conference LaTeX/PDF editions.
 
-| Work / language | Markdown | Notebook | PDF: single / journal / conference |
-| --- | --- | --- | --- |
-| Litz 线分层建模与数值验证：完整研究报告 / zh-CN | [Markdown](report/zh-CN/README.md) | [Wolfram](../notebooks/publication/publication_review_20261015_03/report/zh-CN/report_zh-CN.nb) | [single](../outputs/publication_review_20261015_03/documents/report/zh-CN/report_zh-CN_single.pdf) · [ieee-journal](../outputs/publication_review_20261015_03/documents/report/zh-CN/report_zh-CN_ieee-journal.pdf) · [ieee-conference](../outputs/publication_review_20261015_03/documents/report/zh-CN/report_zh-CN_ieee-conference.pdf) |
-| Litz-Wire Modeling and Numerical Verification: Comprehensive Research Report / en | [Markdown](report/en/README.md) | [Wolfram](../notebooks/publication/publication_review_20261015_03/report/en/report_en.nb) | [single](../outputs/publication_review_20261015_03/documents/report/en/report_en_single.pdf) · [ieee-journal](../outputs/publication_review_20261015_03/documents/report/en/report_en_ieee-journal.pdf) · [ieee-conference](../outputs/publication_review_20261015_03/documents/report/en/report_en_ieee-conference.pdf) |
-| Litz 线的分层验证、共端复电流分配与有限长度纵向 PEEC / zh-CN | [Markdown](paper/zh-CN/README.md) | [Wolfram](../notebooks/publication/publication_review_20261015_03/paper/zh-CN/paper_zh-CN.nb) | [single](../outputs/publication_review_20261015_03/documents/paper/zh-CN/paper_zh-CN_single.pdf) · [ieee-journal](../outputs/publication_review_20261015_03/documents/paper/zh-CN/paper_zh-CN_ieee-journal.pdf) · [ieee-conference](../outputs/publication_review_20261015_03/documents/paper/zh-CN/paper_zh-CN_ieee-conference.pdf) |
-| Hierarchical Verification, Common-Terminal Current Sharing, and Finite-Length Longitudinal PEEC for Litz-Wire Modeling / en | [Markdown](paper/en/README.md) | [Wolfram](../notebooks/publication/publication_review_20261015_03/paper/en/paper_en.nb) | [single](../outputs/publication_review_20261015_03/documents/paper/en/paper_en_single.pdf) · [ieee-journal](../outputs/publication_review_20261015_03/documents/paper/en/paper_en_ieee-journal.pdf) · [ieee-conference](../outputs/publication_review_20261015_03/documents/paper/en/paper_en_ieee-conference.pdf) |
-| 智能体驱动的可复核建模与仿真：Wolfram–Ansys MCP 工作流及 Litz 案例 / zh-CN | [Markdown](automation/zh-CN/README.md) | [Wolfram](../notebooks/publication/publication_review_20261015_03/automation/zh-CN/automation_zh-CN.nb) | [single](../outputs/publication_review_20261015_03/documents/automation/zh-CN/automation_zh-CN_single.pdf) · [ieee-journal](../outputs/publication_review_20261015_03/documents/automation/zh-CN/automation_zh-CN_ieee-journal.pdf) · [ieee-conference](../outputs/publication_review_20261015_03/documents/automation/zh-CN/automation_zh-CN_ieee-conference.pdf) |
-| Agent-Driven Reviewable Modeling and Simulation: A Wolfram–Ansys MCP Workflow with Litz-Wire Cases / en | [Markdown](automation/en/README.md) | [Wolfram](../notebooks/publication/publication_review_20261015_03/automation/en/automation_en.nb) | [single](../outputs/publication_review_20261015_03/documents/automation/en/automation_en_single.pdf) · [ieee-journal](../outputs/publication_review_20261015_03/documents/automation/en/automation_en_ieee-journal.pdf) · [ieee-conference](../outputs/publication_review_20261015_03/documents/automation/en/automation_en_ieee-conference.pdf) |
+| Work / language | Online text | PDFs, Notebook and sources |
+| --- | --- | --- |
+| Litz-Wire Modeling and Numerical Verification: Comprehensive Research Report / en | [Markdown](report/en/README.md) | [Asset index](ONLINE.md) |
+| Litz 线分层建模与数值验证：完整研究报告 / zh-CN | [Markdown](report/zh-CN/README.md) | [Asset index](ONLINE.md) |
+| Agent-Driven Reviewable Modeling and Simulation: A Wolfram–Ansys MCP Workflow with Litz-Wire Cases / en | [Markdown](automation/en/README.md) | [Asset index](ONLINE.md) |
+| 智能体驱动的可复核建模与仿真：Wolfram–Ansys MCP 工作流及 Litz 案例 / zh-CN | [Markdown](automation/zh-CN/README.md) | [Asset index](ONLINE.md) |
+| Hierarchical Verification, Common-Terminal Current Sharing, and Finite-Length Longitudinal PEEC for Litz-Wire Modeling / en | [Markdown](paper/en/README.md) | [Asset index](ONLINE.md) |
+| Litz 线的分层验证、共端复电流分配与有限长度纵向 PEEC / zh-CN | [Markdown](paper/zh-CN/README.md) | [Asset index](ONLINE.md) |
 
-Figures, quantities and physical acceptance retain their frozen sources. The two-dimensional Maxwell MCP comparison, three-dimensional Ansys diagnostics and A–φ acceptance are treated separately.
+Choose an asset by manuscript ID and layout in the attachment index; file sizes and SHA256 identities are recorded in the machine index.
 
-[LaTeX / templates](../latex/README.md) · [Editorial style](../docs/editorial-style.md)
+[JSON](../docs/current-edition.json) · [LaTeX / templates](../latex/README.md) · [Delivery](DELIVERY.md)
+
+Figures, quantities and physical acceptance use frozen sources. The 2D Maxwell MCP comparison, 3D Ansys diagnostics and A–φ acceptance each retain their conditions and conclusions.

@@ -1,473 +1,215 @@
 {
-  "run_id": "publication_rc1_20261007_01",
+  "schema_version": 2,
+  "run_id": "publication_review_20261015_03",
+  "source_edition": "publication_review_20261015_03",
+  "release": {
+    "tag": "v1.0.0-rc.2",
+    "url": "https://github.com/HNNUYUXUAN/litz-wire-research/releases"
+  },
   "documents": [
     {
-      "id": "report_zh-CN",
-      "markdown": "outputs/publication_rc1_20261007_01/documents/report/zh-CN/report_zh-CN.md",
-      "notebook": "notebooks/publication/publication_rc1_20261007_01/report/zh-CN/report_zh-CN.nb",
-      "pdf_single": "outputs/publication_rc1_20261007_01/documents/report/zh-CN/report_zh-CN_single.pdf",
-      "pdf_ieee": "outputs/publication_rc1_20261007_01/documents/report/zh-CN/report_zh-CN_ieee.pdf",
-      "latex_single": "outputs/publication_rc1_20261007_01/documents/report/zh-CN/report_zh-CN_single.tex",
-      "latex_ieee": "outputs/publication_rc1_20261007_01/documents/report/zh-CN/report_zh-CN_ieee.tex"
-    },
-    {
-      "id": "report_zh-CN_01",
-      "markdown": "outputs/publication_rc1_20261007_01/documents/report/zh-CN/report_zh-CN_01.md",
-      "notebook": "notebooks/publication/publication_rc1_20261007_01/report/zh-CN/report_zh-CN_01.nb",
-      "pdf_single": "outputs/publication_rc1_20261007_01/documents/report/zh-CN/report_zh-CN_01_single.pdf",
-      "pdf_ieee": "outputs/publication_rc1_20261007_01/documents/report/zh-CN/report_zh-CN_01_ieee.pdf",
-      "latex_single": "outputs/publication_rc1_20261007_01/documents/report/zh-CN/report_zh-CN_01_single.tex",
-      "latex_ieee": "outputs/publication_rc1_20261007_01/documents/report/zh-CN/report_zh-CN_01_ieee.tex"
-    },
-    {
-      "id": "report_zh-CN_02",
-      "markdown": "outputs/publication_rc1_20261007_01/documents/report/zh-CN/report_zh-CN_02.md",
-      "notebook": "notebooks/publication/publication_rc1_20261007_01/report/zh-CN/report_zh-CN_02.nb",
-      "pdf_single": "outputs/publication_rc1_20261007_01/documents/report/zh-CN/report_zh-CN_02_single.pdf",
-      "pdf_ieee": "outputs/publication_rc1_20261007_01/documents/report/zh-CN/report_zh-CN_02_ieee.pdf",
-      "latex_single": "outputs/publication_rc1_20261007_01/documents/report/zh-CN/report_zh-CN_02_single.tex",
-      "latex_ieee": "outputs/publication_rc1_20261007_01/documents/report/zh-CN/report_zh-CN_02_ieee.tex"
-    },
-    {
-      "id": "report_zh-CN_03",
-      "markdown": "outputs/publication_rc1_20261007_01/documents/report/zh-CN/report_zh-CN_03.md",
-      "notebook": "notebooks/publication/publication_rc1_20261007_01/report/zh-CN/report_zh-CN_03.nb",
-      "pdf_single": "outputs/publication_rc1_20261007_01/documents/report/zh-CN/report_zh-CN_03_single.pdf",
-      "pdf_ieee": "outputs/publication_rc1_20261007_01/documents/report/zh-CN/report_zh-CN_03_ieee.pdf",
-      "latex_single": "outputs/publication_rc1_20261007_01/documents/report/zh-CN/report_zh-CN_03_single.tex",
-      "latex_ieee": "outputs/publication_rc1_20261007_01/documents/report/zh-CN/report_zh-CN_03_ieee.tex"
-    },
-    {
-      "id": "report_zh-CN_04",
-      "markdown": "outputs/publication_rc1_20261007_01/documents/report/zh-CN/report_zh-CN_04.md",
-      "notebook": "notebooks/publication/publication_rc1_20261007_01/report/zh-CN/report_zh-CN_04.nb",
-      "pdf_single": "outputs/publication_rc1_20261007_01/documents/report/zh-CN/report_zh-CN_04_single.pdf",
-      "pdf_ieee": "outputs/publication_rc1_20261007_01/documents/report/zh-CN/report_zh-CN_04_ieee.pdf",
-      "latex_single": "outputs/publication_rc1_20261007_01/documents/report/zh-CN/report_zh-CN_04_single.tex",
-      "latex_ieee": "outputs/publication_rc1_20261007_01/documents/report/zh-CN/report_zh-CN_04_ieee.tex"
-    },
-    {
-      "id": "report_zh-CN_05",
-      "markdown": "outputs/publication_rc1_20261007_01/documents/report/zh-CN/report_zh-CN_05.md",
-      "notebook": "notebooks/publication/publication_rc1_20261007_01/report/zh-CN/report_zh-CN_05.nb",
-      "pdf_single": "outputs/publication_rc1_20261007_01/documents/report/zh-CN/report_zh-CN_05_single.pdf",
-      "pdf_ieee": "outputs/publication_rc1_20261007_01/documents/report/zh-CN/report_zh-CN_05_ieee.pdf",
-      "latex_single": "outputs/publication_rc1_20261007_01/documents/report/zh-CN/report_zh-CN_05_single.tex",
-      "latex_ieee": "outputs/publication_rc1_20261007_01/documents/report/zh-CN/report_zh-CN_05_ieee.tex"
-    },
-    {
-      "id": "report_zh-CN_06",
-      "markdown": "outputs/publication_rc1_20261007_01/documents/report/zh-CN/report_zh-CN_06.md",
-      "notebook": "notebooks/publication/publication_rc1_20261007_01/report/zh-CN/report_zh-CN_06.nb",
-      "pdf_single": "outputs/publication_rc1_20261007_01/documents/report/zh-CN/report_zh-CN_06_single.pdf",
-      "pdf_ieee": "outputs/publication_rc1_20261007_01/documents/report/zh-CN/report_zh-CN_06_ieee.pdf",
-      "latex_single": "outputs/publication_rc1_20261007_01/documents/report/zh-CN/report_zh-CN_06_single.tex",
-      "latex_ieee": "outputs/publication_rc1_20261007_01/documents/report/zh-CN/report_zh-CN_06_ieee.tex"
-    },
-    {
-      "id": "report_zh-CN_07",
-      "markdown": "outputs/publication_rc1_20261007_01/documents/report/zh-CN/report_zh-CN_07.md",
-      "notebook": "notebooks/publication/publication_rc1_20261007_01/report/zh-CN/report_zh-CN_07.nb",
-      "pdf_single": "outputs/publication_rc1_20261007_01/documents/report/zh-CN/report_zh-CN_07_single.pdf",
-      "pdf_ieee": "outputs/publication_rc1_20261007_01/documents/report/zh-CN/report_zh-CN_07_ieee.pdf",
-      "latex_single": "outputs/publication_rc1_20261007_01/documents/report/zh-CN/report_zh-CN_07_single.tex",
-      "latex_ieee": "outputs/publication_rc1_20261007_01/documents/report/zh-CN/report_zh-CN_07_ieee.tex"
-    },
-    {
-      "id": "report_zh-CN_08",
-      "markdown": "outputs/publication_rc1_20261007_01/documents/report/zh-CN/report_zh-CN_08.md",
-      "notebook": "notebooks/publication/publication_rc1_20261007_01/report/zh-CN/report_zh-CN_08.nb",
-      "pdf_single": "outputs/publication_rc1_20261007_01/documents/report/zh-CN/report_zh-CN_08_single.pdf",
-      "pdf_ieee": "outputs/publication_rc1_20261007_01/documents/report/zh-CN/report_zh-CN_08_ieee.pdf",
-      "latex_single": "outputs/publication_rc1_20261007_01/documents/report/zh-CN/report_zh-CN_08_single.tex",
-      "latex_ieee": "outputs/publication_rc1_20261007_01/documents/report/zh-CN/report_zh-CN_08_ieee.tex"
-    },
-    {
-      "id": "report_zh-CN_09",
-      "markdown": "outputs/publication_rc1_20261007_01/documents/report/zh-CN/report_zh-CN_09.md",
-      "notebook": "notebooks/publication/publication_rc1_20261007_01/report/zh-CN/report_zh-CN_09.nb",
-      "pdf_single": "outputs/publication_rc1_20261007_01/documents/report/zh-CN/report_zh-CN_09_single.pdf",
-      "pdf_ieee": "outputs/publication_rc1_20261007_01/documents/report/zh-CN/report_zh-CN_09_ieee.pdf",
-      "latex_single": "outputs/publication_rc1_20261007_01/documents/report/zh-CN/report_zh-CN_09_single.tex",
-      "latex_ieee": "outputs/publication_rc1_20261007_01/documents/report/zh-CN/report_zh-CN_09_ieee.tex"
-    },
-    {
-      "id": "report_zh-CN_10",
-      "markdown": "outputs/publication_rc1_20261007_01/documents/report/zh-CN/report_zh-CN_10.md",
-      "notebook": "notebooks/publication/publication_rc1_20261007_01/report/zh-CN/report_zh-CN_10.nb",
-      "pdf_single": "outputs/publication_rc1_20261007_01/documents/report/zh-CN/report_zh-CN_10_single.pdf",
-      "pdf_ieee": "outputs/publication_rc1_20261007_01/documents/report/zh-CN/report_zh-CN_10_ieee.pdf",
-      "latex_single": "outputs/publication_rc1_20261007_01/documents/report/zh-CN/report_zh-CN_10_single.tex",
-      "latex_ieee": "outputs/publication_rc1_20261007_01/documents/report/zh-CN/report_zh-CN_10_ieee.tex"
-    },
-    {
-      "id": "report_zh-CN_11",
-      "markdown": "outputs/publication_rc1_20261007_01/documents/report/zh-CN/report_zh-CN_11.md",
-      "notebook": "notebooks/publication/publication_rc1_20261007_01/report/zh-CN/report_zh-CN_11.nb",
-      "pdf_single": "outputs/publication_rc1_20261007_01/documents/report/zh-CN/report_zh-CN_11_single.pdf",
-      "pdf_ieee": "outputs/publication_rc1_20261007_01/documents/report/zh-CN/report_zh-CN_11_ieee.pdf",
-      "latex_single": "outputs/publication_rc1_20261007_01/documents/report/zh-CN/report_zh-CN_11_single.tex",
-      "latex_ieee": "outputs/publication_rc1_20261007_01/documents/report/zh-CN/report_zh-CN_11_ieee.tex"
-    },
-    {
-      "id": "report_zh-CN_12",
-      "markdown": "outputs/publication_rc1_20261007_01/documents/report/zh-CN/report_zh-CN_12.md",
-      "notebook": "notebooks/publication/publication_rc1_20261007_01/report/zh-CN/report_zh-CN_12.nb",
-      "pdf_single": "outputs/publication_rc1_20261007_01/documents/report/zh-CN/report_zh-CN_12_single.pdf",
-      "pdf_ieee": "outputs/publication_rc1_20261007_01/documents/report/zh-CN/report_zh-CN_12_ieee.pdf",
-      "latex_single": "outputs/publication_rc1_20261007_01/documents/report/zh-CN/report_zh-CN_12_single.tex",
-      "latex_ieee": "outputs/publication_rc1_20261007_01/documents/report/zh-CN/report_zh-CN_12_ieee.tex"
-    },
-    {
-      "id": "report_zh-CN_A",
-      "markdown": "outputs/publication_rc1_20261007_01/documents/report/zh-CN/report_zh-CN_A.md",
-      "notebook": "notebooks/publication/publication_rc1_20261007_01/report/zh-CN/report_zh-CN_A.nb",
-      "pdf_single": "outputs/publication_rc1_20261007_01/documents/report/zh-CN/report_zh-CN_A_single.pdf",
-      "pdf_ieee": "outputs/publication_rc1_20261007_01/documents/report/zh-CN/report_zh-CN_A_ieee.pdf",
-      "latex_single": "outputs/publication_rc1_20261007_01/documents/report/zh-CN/report_zh-CN_A_single.tex",
-      "latex_ieee": "outputs/publication_rc1_20261007_01/documents/report/zh-CN/report_zh-CN_A_ieee.tex"
-    },
-    {
-      "id": "report_zh-CN_B",
-      "markdown": "outputs/publication_rc1_20261007_01/documents/report/zh-CN/report_zh-CN_B.md",
-      "notebook": "notebooks/publication/publication_rc1_20261007_01/report/zh-CN/report_zh-CN_B.nb",
-      "pdf_single": "outputs/publication_rc1_20261007_01/documents/report/zh-CN/report_zh-CN_B_single.pdf",
-      "pdf_ieee": "outputs/publication_rc1_20261007_01/documents/report/zh-CN/report_zh-CN_B_ieee.pdf",
-      "latex_single": "outputs/publication_rc1_20261007_01/documents/report/zh-CN/report_zh-CN_B_single.tex",
-      "latex_ieee": "outputs/publication_rc1_20261007_01/documents/report/zh-CN/report_zh-CN_B_ieee.tex"
-    },
-    {
-      "id": "report_zh-CN_C",
-      "markdown": "outputs/publication_rc1_20261007_01/documents/report/zh-CN/report_zh-CN_C.md",
-      "notebook": "notebooks/publication/publication_rc1_20261007_01/report/zh-CN/report_zh-CN_C.nb",
-      "pdf_single": "outputs/publication_rc1_20261007_01/documents/report/zh-CN/report_zh-CN_C_single.pdf",
-      "pdf_ieee": "outputs/publication_rc1_20261007_01/documents/report/zh-CN/report_zh-CN_C_ieee.pdf",
-      "latex_single": "outputs/publication_rc1_20261007_01/documents/report/zh-CN/report_zh-CN_C_single.tex",
-      "latex_ieee": "outputs/publication_rc1_20261007_01/documents/report/zh-CN/report_zh-CN_C_ieee.tex"
-    },
-    {
-      "id": "report_zh-CN_D",
-      "markdown": "outputs/publication_rc1_20261007_01/documents/report/zh-CN/report_zh-CN_D.md",
-      "notebook": "notebooks/publication/publication_rc1_20261007_01/report/zh-CN/report_zh-CN_D.nb",
-      "pdf_single": "outputs/publication_rc1_20261007_01/documents/report/zh-CN/report_zh-CN_D_single.pdf",
-      "pdf_ieee": "outputs/publication_rc1_20261007_01/documents/report/zh-CN/report_zh-CN_D_ieee.pdf",
-      "latex_single": "outputs/publication_rc1_20261007_01/documents/report/zh-CN/report_zh-CN_D_single.tex",
-      "latex_ieee": "outputs/publication_rc1_20261007_01/documents/report/zh-CN/report_zh-CN_D_ieee.tex"
-    },
-    {
       "id": "report_en",
-      "markdown": "outputs/publication_rc1_20261007_01/documents/report/en/report_en.md",
-      "notebook": "notebooks/publication/publication_rc1_20261007_01/report/en/report_en.nb",
-      "pdf_single": "outputs/publication_rc1_20261007_01/documents/report/en/report_en_single.pdf",
-      "pdf_ieee": "outputs/publication_rc1_20261007_01/documents/report/en/report_en_ieee.pdf",
-      "latex_single": "outputs/publication_rc1_20261007_01/documents/report/en/report_en_single.tex",
-      "latex_ieee": "outputs/publication_rc1_20261007_01/documents/report/en/report_en_ieee.tex"
+      "edition": "report",
+      "language": "en",
+      "title": "Litz-Wire Modeling and Numerical Verification: Comprehensive Research Report",
+      "markdown": "publications/report/en/README.md",
+      "markdown_sha256": "f992445b67da7b5fc79cd325af9e6da9ef40707b029314495980747b91de716e",
+      "notebook": {
+        "local_path": "notebooks/publication/publication_review_20261015_03/report/en/report_en.nb",
+        "asset_name": "review_20261015_report_en.nb",
+        "sha256": "338e0238769b935917eb5fbc5282e90c0dacc69ab2f7f294cf600907d93173fe",
+        "bytes": 15342119
+      },
+      "pdfs": {
+        "single": {
+          "local_path": "outputs/publication_review_20261015_03/documents/report/en/report_en_single.pdf",
+          "asset_name": "review_20261015_report_en_single.pdf",
+          "sha256": "be57cd2416b208b244394fa5422919036a384fbd1101eb6763842a91712713e0",
+          "bytes": 13322416
+        },
+        "ieee-journal": {
+          "local_path": "outputs/publication_review_20261015_03/documents/report/en/report_en_ieee-journal.pdf",
+          "asset_name": "review_20261015_report_en_ieee-journal.pdf",
+          "sha256": "1afd6c0d80fb77cff56a3f9ebac5d23fccd17f57cc8bf97c7117649c1d1a7b30",
+          "bytes": 13357787
+        },
+        "ieee-conference": {
+          "local_path": "outputs/publication_review_20261015_03/documents/report/en/report_en_ieee-conference.pdf",
+          "asset_name": "review_20261015_report_en_ieee-conference.pdf",
+          "sha256": "d1de56c1ae5e6e68b9641dc8bf3d4a3a2635a2d37f8d944d0d2c3bb9ebf9f7f1",
+          "bytes": 13357347
+        }
+      }
     },
     {
-      "id": "report_en_01",
-      "markdown": "outputs/publication_rc1_20261007_01/documents/report/en/report_en_01.md",
-      "notebook": "notebooks/publication/publication_rc1_20261007_01/report/en/report_en_01.nb",
-      "pdf_single": "outputs/publication_rc1_20261007_01/documents/report/en/report_en_01_single.pdf",
-      "pdf_ieee": "outputs/publication_rc1_20261007_01/documents/report/en/report_en_01_ieee.pdf",
-      "latex_single": "outputs/publication_rc1_20261007_01/documents/report/en/report_en_01_single.tex",
-      "latex_ieee": "outputs/publication_rc1_20261007_01/documents/report/en/report_en_01_ieee.tex"
+      "id": "report_zh-CN",
+      "edition": "report",
+      "language": "zh-CN",
+      "title": "Litz 线分层建模与数值验证：完整研究报告",
+      "markdown": "publications/report/zh-CN/README.md",
+      "markdown_sha256": "c16e5a99830f6e3bde67f28c819dd636fc8d8a89ef113626424f0aa33b4233bc",
+      "notebook": {
+        "local_path": "notebooks/publication/publication_review_20261015_03/report/zh-CN/report_zh-CN.nb",
+        "asset_name": "review_20261015_report_zh-CN.nb",
+        "sha256": "cfd2772562201ed20a3d20a369c3d5539a399bf5d4651d2af27226bc3950ab08",
+        "bytes": 15452251
+      },
+      "pdfs": {
+        "single": {
+          "local_path": "outputs/publication_review_20261015_03/documents/report/zh-CN/report_zh-CN_single.pdf",
+          "asset_name": "review_20261015_report_zh-CN_single.pdf",
+          "sha256": "41a2acf852203392dce2a08d7bf14603325e77818f23a4b10ca29bafe2e65599",
+          "bytes": 13447059
+        },
+        "ieee-journal": {
+          "local_path": "outputs/publication_review_20261015_03/documents/report/zh-CN/report_zh-CN_ieee-journal.pdf",
+          "asset_name": "review_20261015_report_zh-CN_ieee-journal.pdf",
+          "sha256": "2756cc7492651786d28019b376ba66b3d48564ec61e218c9d8bb61f7ece8249c",
+          "bytes": 13448260
+        },
+        "ieee-conference": {
+          "local_path": "outputs/publication_review_20261015_03/documents/report/zh-CN/report_zh-CN_ieee-conference.pdf",
+          "asset_name": "review_20261015_report_zh-CN_ieee-conference.pdf",
+          "sha256": "a5d4428a817ad6d24c0a27e721288e56828d83e75a1d23363933e925c3c63012",
+          "bytes": 13448149
+        }
+      }
     },
     {
-      "id": "report_en_02",
-      "markdown": "outputs/publication_rc1_20261007_01/documents/report/en/report_en_02.md",
-      "notebook": "notebooks/publication/publication_rc1_20261007_01/report/en/report_en_02.nb",
-      "pdf_single": "outputs/publication_rc1_20261007_01/documents/report/en/report_en_02_single.pdf",
-      "pdf_ieee": "outputs/publication_rc1_20261007_01/documents/report/en/report_en_02_ieee.pdf",
-      "latex_single": "outputs/publication_rc1_20261007_01/documents/report/en/report_en_02_single.tex",
-      "latex_ieee": "outputs/publication_rc1_20261007_01/documents/report/en/report_en_02_ieee.tex"
+      "id": "automation_en",
+      "edition": "automation",
+      "language": "en",
+      "title": "Agent-Driven Reviewable Modeling and Simulation: A Wolfram–Ansys MCP Workflow with Litz-Wire Cases",
+      "markdown": "publications/automation/en/README.md",
+      "markdown_sha256": "8a361dfbd710fafc28988a98c582340818a9228eb659ab0724ed6cc489d044b3",
+      "notebook": {
+        "local_path": "notebooks/publication/publication_review_20261015_03/automation/en/automation_en.nb",
+        "asset_name": "review_20261015_automation_en.nb",
+        "sha256": "f964b266d7779ad6a2db5c7260a8e5b1b2edd73391b1a809a19b76159b36b94d",
+        "bytes": 176549
+      },
+      "pdfs": {
+        "single": {
+          "local_path": "outputs/publication_review_20261015_03/documents/automation/en/automation_en_single.pdf",
+          "asset_name": "review_20261015_automation_en_single.pdf",
+          "sha256": "028ac00eae78c523dd2a3eecd51c06c02f0a17fa16dea224ea0f69402310ec57",
+          "bytes": 1625242
+        },
+        "ieee-journal": {
+          "local_path": "outputs/publication_review_20261015_03/documents/automation/en/automation_en_ieee-journal.pdf",
+          "asset_name": "review_20261015_automation_en_ieee-journal.pdf",
+          "sha256": "cc9e0a9ff838bf978440096c49abf281574149581bf6892da7f6585d91c86da9",
+          "bytes": 1664115
+        },
+        "ieee-conference": {
+          "local_path": "outputs/publication_review_20261015_03/documents/automation/en/automation_en_ieee-conference.pdf",
+          "asset_name": "review_20261015_automation_en_ieee-conference.pdf",
+          "sha256": "756a821bcea6be5cde084b7e65094b05cdc10df8c7802b049eb110bed0f3690b",
+          "bytes": 1663871
+        }
+      }
     },
     {
-      "id": "report_en_03",
-      "markdown": "outputs/publication_rc1_20261007_01/documents/report/en/report_en_03.md",
-      "notebook": "notebooks/publication/publication_rc1_20261007_01/report/en/report_en_03.nb",
-      "pdf_single": "outputs/publication_rc1_20261007_01/documents/report/en/report_en_03_single.pdf",
-      "pdf_ieee": "outputs/publication_rc1_20261007_01/documents/report/en/report_en_03_ieee.pdf",
-      "latex_single": "outputs/publication_rc1_20261007_01/documents/report/en/report_en_03_single.tex",
-      "latex_ieee": "outputs/publication_rc1_20261007_01/documents/report/en/report_en_03_ieee.tex"
-    },
-    {
-      "id": "report_en_04",
-      "markdown": "outputs/publication_rc1_20261007_01/documents/report/en/report_en_04.md",
-      "notebook": "notebooks/publication/publication_rc1_20261007_01/report/en/report_en_04.nb",
-      "pdf_single": "outputs/publication_rc1_20261007_01/documents/report/en/report_en_04_single.pdf",
-      "pdf_ieee": "outputs/publication_rc1_20261007_01/documents/report/en/report_en_04_ieee.pdf",
-      "latex_single": "outputs/publication_rc1_20261007_01/documents/report/en/report_en_04_single.tex",
-      "latex_ieee": "outputs/publication_rc1_20261007_01/documents/report/en/report_en_04_ieee.tex"
-    },
-    {
-      "id": "report_en_05",
-      "markdown": "outputs/publication_rc1_20261007_01/documents/report/en/report_en_05.md",
-      "notebook": "notebooks/publication/publication_rc1_20261007_01/report/en/report_en_05.nb",
-      "pdf_single": "outputs/publication_rc1_20261007_01/documents/report/en/report_en_05_single.pdf",
-      "pdf_ieee": "outputs/publication_rc1_20261007_01/documents/report/en/report_en_05_ieee.pdf",
-      "latex_single": "outputs/publication_rc1_20261007_01/documents/report/en/report_en_05_single.tex",
-      "latex_ieee": "outputs/publication_rc1_20261007_01/documents/report/en/report_en_05_ieee.tex"
-    },
-    {
-      "id": "report_en_06",
-      "markdown": "outputs/publication_rc1_20261007_01/documents/report/en/report_en_06.md",
-      "notebook": "notebooks/publication/publication_rc1_20261007_01/report/en/report_en_06.nb",
-      "pdf_single": "outputs/publication_rc1_20261007_01/documents/report/en/report_en_06_single.pdf",
-      "pdf_ieee": "outputs/publication_rc1_20261007_01/documents/report/en/report_en_06_ieee.pdf",
-      "latex_single": "outputs/publication_rc1_20261007_01/documents/report/en/report_en_06_single.tex",
-      "latex_ieee": "outputs/publication_rc1_20261007_01/documents/report/en/report_en_06_ieee.tex"
-    },
-    {
-      "id": "report_en_07",
-      "markdown": "outputs/publication_rc1_20261007_01/documents/report/en/report_en_07.md",
-      "notebook": "notebooks/publication/publication_rc1_20261007_01/report/en/report_en_07.nb",
-      "pdf_single": "outputs/publication_rc1_20261007_01/documents/report/en/report_en_07_single.pdf",
-      "pdf_ieee": "outputs/publication_rc1_20261007_01/documents/report/en/report_en_07_ieee.pdf",
-      "latex_single": "outputs/publication_rc1_20261007_01/documents/report/en/report_en_07_single.tex",
-      "latex_ieee": "outputs/publication_rc1_20261007_01/documents/report/en/report_en_07_ieee.tex"
-    },
-    {
-      "id": "report_en_08",
-      "markdown": "outputs/publication_rc1_20261007_01/documents/report/en/report_en_08.md",
-      "notebook": "notebooks/publication/publication_rc1_20261007_01/report/en/report_en_08.nb",
-      "pdf_single": "outputs/publication_rc1_20261007_01/documents/report/en/report_en_08_single.pdf",
-      "pdf_ieee": "outputs/publication_rc1_20261007_01/documents/report/en/report_en_08_ieee.pdf",
-      "latex_single": "outputs/publication_rc1_20261007_01/documents/report/en/report_en_08_single.tex",
-      "latex_ieee": "outputs/publication_rc1_20261007_01/documents/report/en/report_en_08_ieee.tex"
-    },
-    {
-      "id": "report_en_09",
-      "markdown": "outputs/publication_rc1_20261007_01/documents/report/en/report_en_09.md",
-      "notebook": "notebooks/publication/publication_rc1_20261007_01/report/en/report_en_09.nb",
-      "pdf_single": "outputs/publication_rc1_20261007_01/documents/report/en/report_en_09_single.pdf",
-      "pdf_ieee": "outputs/publication_rc1_20261007_01/documents/report/en/report_en_09_ieee.pdf",
-      "latex_single": "outputs/publication_rc1_20261007_01/documents/report/en/report_en_09_single.tex",
-      "latex_ieee": "outputs/publication_rc1_20261007_01/documents/report/en/report_en_09_ieee.tex"
-    },
-    {
-      "id": "report_en_10",
-      "markdown": "outputs/publication_rc1_20261007_01/documents/report/en/report_en_10.md",
-      "notebook": "notebooks/publication/publication_rc1_20261007_01/report/en/report_en_10.nb",
-      "pdf_single": "outputs/publication_rc1_20261007_01/documents/report/en/report_en_10_single.pdf",
-      "pdf_ieee": "outputs/publication_rc1_20261007_01/documents/report/en/report_en_10_ieee.pdf",
-      "latex_single": "outputs/publication_rc1_20261007_01/documents/report/en/report_en_10_single.tex",
-      "latex_ieee": "outputs/publication_rc1_20261007_01/documents/report/en/report_en_10_ieee.tex"
-    },
-    {
-      "id": "report_en_11",
-      "markdown": "outputs/publication_rc1_20261007_01/documents/report/en/report_en_11.md",
-      "notebook": "notebooks/publication/publication_rc1_20261007_01/report/en/report_en_11.nb",
-      "pdf_single": "outputs/publication_rc1_20261007_01/documents/report/en/report_en_11_single.pdf",
-      "pdf_ieee": "outputs/publication_rc1_20261007_01/documents/report/en/report_en_11_ieee.pdf",
-      "latex_single": "outputs/publication_rc1_20261007_01/documents/report/en/report_en_11_single.tex",
-      "latex_ieee": "outputs/publication_rc1_20261007_01/documents/report/en/report_en_11_ieee.tex"
-    },
-    {
-      "id": "report_en_12",
-      "markdown": "outputs/publication_rc1_20261007_01/documents/report/en/report_en_12.md",
-      "notebook": "notebooks/publication/publication_rc1_20261007_01/report/en/report_en_12.nb",
-      "pdf_single": "outputs/publication_rc1_20261007_01/documents/report/en/report_en_12_single.pdf",
-      "pdf_ieee": "outputs/publication_rc1_20261007_01/documents/report/en/report_en_12_ieee.pdf",
-      "latex_single": "outputs/publication_rc1_20261007_01/documents/report/en/report_en_12_single.tex",
-      "latex_ieee": "outputs/publication_rc1_20261007_01/documents/report/en/report_en_12_ieee.tex"
-    },
-    {
-      "id": "report_en_A",
-      "markdown": "outputs/publication_rc1_20261007_01/documents/report/en/report_en_A.md",
-      "notebook": "notebooks/publication/publication_rc1_20261007_01/report/en/report_en_A.nb",
-      "pdf_single": "outputs/publication_rc1_20261007_01/documents/report/en/report_en_A_single.pdf",
-      "pdf_ieee": "outputs/publication_rc1_20261007_01/documents/report/en/report_en_A_ieee.pdf",
-      "latex_single": "outputs/publication_rc1_20261007_01/documents/report/en/report_en_A_single.tex",
-      "latex_ieee": "outputs/publication_rc1_20261007_01/documents/report/en/report_en_A_ieee.tex"
-    },
-    {
-      "id": "report_en_B",
-      "markdown": "outputs/publication_rc1_20261007_01/documents/report/en/report_en_B.md",
-      "notebook": "notebooks/publication/publication_rc1_20261007_01/report/en/report_en_B.nb",
-      "pdf_single": "outputs/publication_rc1_20261007_01/documents/report/en/report_en_B_single.pdf",
-      "pdf_ieee": "outputs/publication_rc1_20261007_01/documents/report/en/report_en_B_ieee.pdf",
-      "latex_single": "outputs/publication_rc1_20261007_01/documents/report/en/report_en_B_single.tex",
-      "latex_ieee": "outputs/publication_rc1_20261007_01/documents/report/en/report_en_B_ieee.tex"
-    },
-    {
-      "id": "report_en_C",
-      "markdown": "outputs/publication_rc1_20261007_01/documents/report/en/report_en_C.md",
-      "notebook": "notebooks/publication/publication_rc1_20261007_01/report/en/report_en_C.nb",
-      "pdf_single": "outputs/publication_rc1_20261007_01/documents/report/en/report_en_C_single.pdf",
-      "pdf_ieee": "outputs/publication_rc1_20261007_01/documents/report/en/report_en_C_ieee.pdf",
-      "latex_single": "outputs/publication_rc1_20261007_01/documents/report/en/report_en_C_single.tex",
-      "latex_ieee": "outputs/publication_rc1_20261007_01/documents/report/en/report_en_C_ieee.tex"
-    },
-    {
-      "id": "report_en_D",
-      "markdown": "outputs/publication_rc1_20261007_01/documents/report/en/report_en_D.md",
-      "notebook": "notebooks/publication/publication_rc1_20261007_01/report/en/report_en_D.nb",
-      "pdf_single": "outputs/publication_rc1_20261007_01/documents/report/en/report_en_D_single.pdf",
-      "pdf_ieee": "outputs/publication_rc1_20261007_01/documents/report/en/report_en_D_ieee.pdf",
-      "latex_single": "outputs/publication_rc1_20261007_01/documents/report/en/report_en_D_single.tex",
-      "latex_ieee": "outputs/publication_rc1_20261007_01/documents/report/en/report_en_D_ieee.tex"
-    },
-    {
-      "id": "paper_zh-CN",
-      "markdown": "outputs/publication_rc1_20261007_01/documents/paper/zh-CN/paper_zh-CN.md",
-      "notebook": "notebooks/publication/publication_rc1_20261007_01/paper/zh-CN/paper_zh-CN.nb",
-      "pdf_single": "outputs/publication_rc1_20261007_01/documents/paper/zh-CN/paper_zh-CN_single.pdf",
-      "pdf_ieee": "outputs/publication_rc1_20261007_01/documents/paper/zh-CN/paper_zh-CN_ieee.pdf",
-      "latex_single": "outputs/publication_rc1_20261007_01/documents/paper/zh-CN/paper_zh-CN_single.tex",
-      "latex_ieee": "outputs/publication_rc1_20261007_01/documents/paper/zh-CN/paper_zh-CN_ieee.tex"
-    },
-    {
-      "id": "paper_zh-CN_01",
-      "markdown": "outputs/publication_rc1_20261007_01/documents/paper/zh-CN/paper_zh-CN_01.md",
-      "notebook": "notebooks/publication/publication_rc1_20261007_01/paper/zh-CN/paper_zh-CN_01.nb",
-      "pdf_single": "outputs/publication_rc1_20261007_01/documents/paper/zh-CN/paper_zh-CN_01_single.pdf",
-      "pdf_ieee": "outputs/publication_rc1_20261007_01/documents/paper/zh-CN/paper_zh-CN_01_ieee.pdf",
-      "latex_single": "outputs/publication_rc1_20261007_01/documents/paper/zh-CN/paper_zh-CN_01_single.tex",
-      "latex_ieee": "outputs/publication_rc1_20261007_01/documents/paper/zh-CN/paper_zh-CN_01_ieee.tex"
-    },
-    {
-      "id": "paper_zh-CN_02",
-      "markdown": "outputs/publication_rc1_20261007_01/documents/paper/zh-CN/paper_zh-CN_02.md",
-      "notebook": "notebooks/publication/publication_rc1_20261007_01/paper/zh-CN/paper_zh-CN_02.nb",
-      "pdf_single": "outputs/publication_rc1_20261007_01/documents/paper/zh-CN/paper_zh-CN_02_single.pdf",
-      "pdf_ieee": "outputs/publication_rc1_20261007_01/documents/paper/zh-CN/paper_zh-CN_02_ieee.pdf",
-      "latex_single": "outputs/publication_rc1_20261007_01/documents/paper/zh-CN/paper_zh-CN_02_single.tex",
-      "latex_ieee": "outputs/publication_rc1_20261007_01/documents/paper/zh-CN/paper_zh-CN_02_ieee.tex"
-    },
-    {
-      "id": "paper_zh-CN_03",
-      "markdown": "outputs/publication_rc1_20261007_01/documents/paper/zh-CN/paper_zh-CN_03.md",
-      "notebook": "notebooks/publication/publication_rc1_20261007_01/paper/zh-CN/paper_zh-CN_03.nb",
-      "pdf_single": "outputs/publication_rc1_20261007_01/documents/paper/zh-CN/paper_zh-CN_03_single.pdf",
-      "pdf_ieee": "outputs/publication_rc1_20261007_01/documents/paper/zh-CN/paper_zh-CN_03_ieee.pdf",
-      "latex_single": "outputs/publication_rc1_20261007_01/documents/paper/zh-CN/paper_zh-CN_03_single.tex",
-      "latex_ieee": "outputs/publication_rc1_20261007_01/documents/paper/zh-CN/paper_zh-CN_03_ieee.tex"
-    },
-    {
-      "id": "paper_zh-CN_04",
-      "markdown": "outputs/publication_rc1_20261007_01/documents/paper/zh-CN/paper_zh-CN_04.md",
-      "notebook": "notebooks/publication/publication_rc1_20261007_01/paper/zh-CN/paper_zh-CN_04.nb",
-      "pdf_single": "outputs/publication_rc1_20261007_01/documents/paper/zh-CN/paper_zh-CN_04_single.pdf",
-      "pdf_ieee": "outputs/publication_rc1_20261007_01/documents/paper/zh-CN/paper_zh-CN_04_ieee.pdf",
-      "latex_single": "outputs/publication_rc1_20261007_01/documents/paper/zh-CN/paper_zh-CN_04_single.tex",
-      "latex_ieee": "outputs/publication_rc1_20261007_01/documents/paper/zh-CN/paper_zh-CN_04_ieee.tex"
-    },
-    {
-      "id": "paper_zh-CN_05",
-      "markdown": "outputs/publication_rc1_20261007_01/documents/paper/zh-CN/paper_zh-CN_05.md",
-      "notebook": "notebooks/publication/publication_rc1_20261007_01/paper/zh-CN/paper_zh-CN_05.nb",
-      "pdf_single": "outputs/publication_rc1_20261007_01/documents/paper/zh-CN/paper_zh-CN_05_single.pdf",
-      "pdf_ieee": "outputs/publication_rc1_20261007_01/documents/paper/zh-CN/paper_zh-CN_05_ieee.pdf",
-      "latex_single": "outputs/publication_rc1_20261007_01/documents/paper/zh-CN/paper_zh-CN_05_single.tex",
-      "latex_ieee": "outputs/publication_rc1_20261007_01/documents/paper/zh-CN/paper_zh-CN_05_ieee.tex"
-    },
-    {
-      "id": "paper_zh-CN_S1",
-      "markdown": "outputs/publication_rc1_20261007_01/documents/paper/zh-CN/paper_zh-CN_S1.md",
-      "notebook": "notebooks/publication/publication_rc1_20261007_01/paper/zh-CN/paper_zh-CN_S1.nb",
-      "pdf_single": "outputs/publication_rc1_20261007_01/documents/paper/zh-CN/paper_zh-CN_S1_single.pdf",
-      "pdf_ieee": "outputs/publication_rc1_20261007_01/documents/paper/zh-CN/paper_zh-CN_S1_ieee.pdf",
-      "latex_single": "outputs/publication_rc1_20261007_01/documents/paper/zh-CN/paper_zh-CN_S1_single.tex",
-      "latex_ieee": "outputs/publication_rc1_20261007_01/documents/paper/zh-CN/paper_zh-CN_S1_ieee.tex"
-    },
-    {
-      "id": "paper_zh-CN_S2",
-      "markdown": "outputs/publication_rc1_20261007_01/documents/paper/zh-CN/paper_zh-CN_S2.md",
-      "notebook": "notebooks/publication/publication_rc1_20261007_01/paper/zh-CN/paper_zh-CN_S2.nb",
-      "pdf_single": "outputs/publication_rc1_20261007_01/documents/paper/zh-CN/paper_zh-CN_S2_single.pdf",
-      "pdf_ieee": "outputs/publication_rc1_20261007_01/documents/paper/zh-CN/paper_zh-CN_S2_ieee.pdf",
-      "latex_single": "outputs/publication_rc1_20261007_01/documents/paper/zh-CN/paper_zh-CN_S2_single.tex",
-      "latex_ieee": "outputs/publication_rc1_20261007_01/documents/paper/zh-CN/paper_zh-CN_S2_ieee.tex"
-    },
-    {
-      "id": "paper_zh-CN_S3",
-      "markdown": "outputs/publication_rc1_20261007_01/documents/paper/zh-CN/paper_zh-CN_S3.md",
-      "notebook": "notebooks/publication/publication_rc1_20261007_01/paper/zh-CN/paper_zh-CN_S3.nb",
-      "pdf_single": "outputs/publication_rc1_20261007_01/documents/paper/zh-CN/paper_zh-CN_S3_single.pdf",
-      "pdf_ieee": "outputs/publication_rc1_20261007_01/documents/paper/zh-CN/paper_zh-CN_S3_ieee.pdf",
-      "latex_single": "outputs/publication_rc1_20261007_01/documents/paper/zh-CN/paper_zh-CN_S3_single.tex",
-      "latex_ieee": "outputs/publication_rc1_20261007_01/documents/paper/zh-CN/paper_zh-CN_S3_ieee.tex"
+      "id": "automation_zh-CN",
+      "edition": "automation",
+      "language": "zh-CN",
+      "title": "智能体驱动的可复核建模与仿真：Wolfram–Ansys MCP 工作流及 Litz 案例",
+      "markdown": "publications/automation/zh-CN/README.md",
+      "markdown_sha256": "596afefeb9fa427e101e16a8d4c2cc82920aaa7e88a7df1efa2db7f4ece71146",
+      "notebook": {
+        "local_path": "notebooks/publication/publication_review_20261015_03/automation/zh-CN/automation_zh-CN.nb",
+        "asset_name": "review_20261015_automation_zh-CN.nb",
+        "sha256": "1df224b0c1f173f2f4bce252cc7a9bff0cd5312135bd0808bcdc5e27ff4b82be",
+        "bytes": 208177
+      },
+      "pdfs": {
+        "single": {
+          "local_path": "outputs/publication_review_20261015_03/documents/automation/zh-CN/automation_zh-CN_single.pdf",
+          "asset_name": "review_20261015_automation_zh-CN_single.pdf",
+          "sha256": "aaf5a8551f370bc49389d01c1f9092bc188b9b99e9914483026328b662e67e2b",
+          "bytes": 1735786
+        },
+        "ieee-journal": {
+          "local_path": "outputs/publication_review_20261015_03/documents/automation/zh-CN/automation_zh-CN_ieee-journal.pdf",
+          "asset_name": "review_20261015_automation_zh-CN_ieee-journal.pdf",
+          "sha256": "52400b986c22c5b9166fd844a7fc15088079cd8654d7d3a3af71df0ff8db4d44",
+          "bytes": 1768037
+        },
+        "ieee-conference": {
+          "local_path": "outputs/publication_review_20261015_03/documents/automation/zh-CN/automation_zh-CN_ieee-conference.pdf",
+          "asset_name": "review_20261015_automation_zh-CN_ieee-conference.pdf",
+          "sha256": "4be00257146a95236fc203fdc7ea2c4514e0aa5a844a7797d585f1888a1a08c8",
+          "bytes": 1768012
+        }
+      }
     },
     {
       "id": "paper_en",
-      "markdown": "outputs/publication_rc1_20261007_01/documents/paper/en/paper_en.md",
-      "notebook": "notebooks/publication/publication_rc1_20261007_01/paper/en/paper_en.nb",
-      "pdf_single": "outputs/publication_rc1_20261007_01/documents/paper/en/paper_en_single.pdf",
-      "pdf_ieee": "outputs/publication_rc1_20261007_01/documents/paper/en/paper_en_ieee.pdf",
-      "latex_single": "outputs/publication_rc1_20261007_01/documents/paper/en/paper_en_single.tex",
-      "latex_ieee": "outputs/publication_rc1_20261007_01/documents/paper/en/paper_en_ieee.tex"
+      "edition": "paper",
+      "language": "en",
+      "title": "Hierarchical Verification, Common-Terminal Current Sharing, and Finite-Length Longitudinal PEEC for Litz-Wire Modeling",
+      "markdown": "publications/paper/en/README.md",
+      "markdown_sha256": "fb66a6f6bc216b6cb2803d6924cd7a1c19eeaa1db76f53a8152a9319ecd917f8",
+      "notebook": {
+        "local_path": "notebooks/publication/publication_review_20261015_03/paper/en/paper_en.nb",
+        "asset_name": "review_20261015_paper_en.nb",
+        "sha256": "c007340bd3d0467b1b6adc5c61e8ec22d12e2382de2efb317bf28693d28ae39b",
+        "bytes": 15316697
+      },
+      "pdfs": {
+        "single": {
+          "local_path": "outputs/publication_review_20261015_03/documents/paper/en/paper_en_single.pdf",
+          "asset_name": "review_20261015_paper_en_single.pdf",
+          "sha256": "48401192da340e76d791a9427b905f773a0fcd4c73e825d4ae9c0da8e1e91102",
+          "bytes": 13307547
+        },
+        "ieee-journal": {
+          "local_path": "outputs/publication_review_20261015_03/documents/paper/en/paper_en_ieee-journal.pdf",
+          "asset_name": "review_20261015_paper_en_ieee-journal.pdf",
+          "sha256": "fd2cd435f668d1cd9ffcb1f6859dd9b59f57f6e049e2b6c367a5ca408620dc94",
+          "bytes": 13344118
+        },
+        "ieee-conference": {
+          "local_path": "outputs/publication_review_20261015_03/documents/paper/en/paper_en_ieee-conference.pdf",
+          "asset_name": "review_20261015_paper_en_ieee-conference.pdf",
+          "sha256": "a3a49ae90235700402fda500fa537d1db33f661a70e746393d92181d5a47b8c1",
+          "bytes": 13343838
+        }
+      }
     },
     {
-      "id": "paper_en_01",
-      "markdown": "outputs/publication_rc1_20261007_01/documents/paper/en/paper_en_01.md",
-      "notebook": "notebooks/publication/publication_rc1_20261007_01/paper/en/paper_en_01.nb",
-      "pdf_single": "outputs/publication_rc1_20261007_01/documents/paper/en/paper_en_01_single.pdf",
-      "pdf_ieee": "outputs/publication_rc1_20261007_01/documents/paper/en/paper_en_01_ieee.pdf",
-      "latex_single": "outputs/publication_rc1_20261007_01/documents/paper/en/paper_en_01_single.tex",
-      "latex_ieee": "outputs/publication_rc1_20261007_01/documents/paper/en/paper_en_01_ieee.tex"
-    },
-    {
-      "id": "paper_en_02",
-      "markdown": "outputs/publication_rc1_20261007_01/documents/paper/en/paper_en_02.md",
-      "notebook": "notebooks/publication/publication_rc1_20261007_01/paper/en/paper_en_02.nb",
-      "pdf_single": "outputs/publication_rc1_20261007_01/documents/paper/en/paper_en_02_single.pdf",
-      "pdf_ieee": "outputs/publication_rc1_20261007_01/documents/paper/en/paper_en_02_ieee.pdf",
-      "latex_single": "outputs/publication_rc1_20261007_01/documents/paper/en/paper_en_02_single.tex",
-      "latex_ieee": "outputs/publication_rc1_20261007_01/documents/paper/en/paper_en_02_ieee.tex"
-    },
-    {
-      "id": "paper_en_03",
-      "markdown": "outputs/publication_rc1_20261007_01/documents/paper/en/paper_en_03.md",
-      "notebook": "notebooks/publication/publication_rc1_20261007_01/paper/en/paper_en_03.nb",
-      "pdf_single": "outputs/publication_rc1_20261007_01/documents/paper/en/paper_en_03_single.pdf",
-      "pdf_ieee": "outputs/publication_rc1_20261007_01/documents/paper/en/paper_en_03_ieee.pdf",
-      "latex_single": "outputs/publication_rc1_20261007_01/documents/paper/en/paper_en_03_single.tex",
-      "latex_ieee": "outputs/publication_rc1_20261007_01/documents/paper/en/paper_en_03_ieee.tex"
-    },
-    {
-      "id": "paper_en_04",
-      "markdown": "outputs/publication_rc1_20261007_01/documents/paper/en/paper_en_04.md",
-      "notebook": "notebooks/publication/publication_rc1_20261007_01/paper/en/paper_en_04.nb",
-      "pdf_single": "outputs/publication_rc1_20261007_01/documents/paper/en/paper_en_04_single.pdf",
-      "pdf_ieee": "outputs/publication_rc1_20261007_01/documents/paper/en/paper_en_04_ieee.pdf",
-      "latex_single": "outputs/publication_rc1_20261007_01/documents/paper/en/paper_en_04_single.tex",
-      "latex_ieee": "outputs/publication_rc1_20261007_01/documents/paper/en/paper_en_04_ieee.tex"
-    },
-    {
-      "id": "paper_en_05",
-      "markdown": "outputs/publication_rc1_20261007_01/documents/paper/en/paper_en_05.md",
-      "notebook": "notebooks/publication/publication_rc1_20261007_01/paper/en/paper_en_05.nb",
-      "pdf_single": "outputs/publication_rc1_20261007_01/documents/paper/en/paper_en_05_single.pdf",
-      "pdf_ieee": "outputs/publication_rc1_20261007_01/documents/paper/en/paper_en_05_ieee.pdf",
-      "latex_single": "outputs/publication_rc1_20261007_01/documents/paper/en/paper_en_05_single.tex",
-      "latex_ieee": "outputs/publication_rc1_20261007_01/documents/paper/en/paper_en_05_ieee.tex"
-    },
-    {
-      "id": "paper_en_S1",
-      "markdown": "outputs/publication_rc1_20261007_01/documents/paper/en/paper_en_S1.md",
-      "notebook": "notebooks/publication/publication_rc1_20261007_01/paper/en/paper_en_S1.nb",
-      "pdf_single": "outputs/publication_rc1_20261007_01/documents/paper/en/paper_en_S1_single.pdf",
-      "pdf_ieee": "outputs/publication_rc1_20261007_01/documents/paper/en/paper_en_S1_ieee.pdf",
-      "latex_single": "outputs/publication_rc1_20261007_01/documents/paper/en/paper_en_S1_single.tex",
-      "latex_ieee": "outputs/publication_rc1_20261007_01/documents/paper/en/paper_en_S1_ieee.tex"
-    },
-    {
-      "id": "paper_en_S2",
-      "markdown": "outputs/publication_rc1_20261007_01/documents/paper/en/paper_en_S2.md",
-      "notebook": "notebooks/publication/publication_rc1_20261007_01/paper/en/paper_en_S2.nb",
-      "pdf_single": "outputs/publication_rc1_20261007_01/documents/paper/en/paper_en_S2_single.pdf",
-      "pdf_ieee": "outputs/publication_rc1_20261007_01/documents/paper/en/paper_en_S2_ieee.pdf",
-      "latex_single": "outputs/publication_rc1_20261007_01/documents/paper/en/paper_en_S2_single.tex",
-      "latex_ieee": "outputs/publication_rc1_20261007_01/documents/paper/en/paper_en_S2_ieee.tex"
-    },
-    {
-      "id": "paper_en_S3",
-      "markdown": "outputs/publication_rc1_20261007_01/documents/paper/en/paper_en_S3.md",
-      "notebook": "notebooks/publication/publication_rc1_20261007_01/paper/en/paper_en_S3.nb",
-      "pdf_single": "outputs/publication_rc1_20261007_01/documents/paper/en/paper_en_S3_single.pdf",
-      "pdf_ieee": "outputs/publication_rc1_20261007_01/documents/paper/en/paper_en_S3_ieee.pdf",
-      "latex_single": "outputs/publication_rc1_20261007_01/documents/paper/en/paper_en_S3_single.tex",
-      "latex_ieee": "outputs/publication_rc1_20261007_01/documents/paper/en/paper_en_S3_ieee.tex"
+      "id": "paper_zh-CN",
+      "edition": "paper",
+      "language": "zh-CN",
+      "title": "Litz 线的分层验证、共端复电流分配与有限长度纵向 PEEC",
+      "markdown": "publications/paper/zh-CN/README.md",
+      "markdown_sha256": "0e8c7314dcd51b02d483fb5d4fed60ed06292bc798e5bb3bb3ef07b805f9c107",
+      "notebook": {
+        "local_path": "notebooks/publication/publication_review_20261015_03/paper/zh-CN/paper_zh-CN.nb",
+        "asset_name": "review_20261015_paper_zh-CN.nb",
+        "sha256": "3d89e6d6655e478179be19e3a1756245fff33054a297ad94a82936d3697b7e06",
+        "bytes": 15404695
+      },
+      "pdfs": {
+        "single": {
+          "local_path": "outputs/publication_review_20261015_03/documents/paper/zh-CN/paper_zh-CN_single.pdf",
+          "asset_name": "review_20261015_paper_zh-CN_single.pdf",
+          "sha256": "71f33834f7b520e83263f7b09fffadce5bf4b72aea77934b4643397cfbe7355e",
+          "bytes": 13410989
+        },
+        "ieee-journal": {
+          "local_path": "outputs/publication_review_20261015_03/documents/paper/zh-CN/paper_zh-CN_ieee-journal.pdf",
+          "asset_name": "review_20261015_paper_zh-CN_ieee-journal.pdf",
+          "sha256": "f24e2e4f054d2c72afe2ee3b20ebeb88c334924fb686924ad0762f04e9e9f86c",
+          "bytes": 13427358
+        },
+        "ieee-conference": {
+          "local_path": "outputs/publication_review_20261015_03/documents/paper/zh-CN/paper_zh-CN_ieee-conference.pdf",
+          "asset_name": "review_20261015_paper_zh-CN_ieee-conference.pdf",
+          "sha256": "9626f2f600a2389b354b4687c72c89b3c8dd8cb5d53d010ef60adec963ab2349",
+          "bytes": 13427397
+        }
+      }
     }
   ]
 }

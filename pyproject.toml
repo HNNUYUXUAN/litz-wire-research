@@ -20,6 +20,12 @@ audit = ["wolframclient==1.4.0", "pypdf==6.1.1"]
 ansys = ["pyaedt==1.8.0", "numpy==2.3.3"]
 automation = ["mcp==1.17.0", "bibtexparser==1.4.3"]
 
+[project.urls]
+Repository = "https://github.com/HNNUYUXUAN/litz-wire-research"
+Documentation = "https://github.com/HNNUYUXUAN/litz-wire-research/blob/main/README.md"
+Issues = "https://github.com/HNNUYUXUAN/litz-wire-research/issues"
+Publications = "https://github.com/HNNUYUXUAN/litz-wire-research/tree/main/publications"
+
 [project.scripts]
 litz-research = "litz_research.cli:main"
 
