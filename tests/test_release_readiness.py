@@ -82,6 +82,33 @@ class ReleaseReadinessTest(unittest.TestCase):
         self.assertIn("anonymous_asset_readback", invalid["pending_publication_conditions"])
         self.assertEqual(invalid["anonymous_readback"]["records"][0]["status"], "failed")
 
+    def test_registered_supplemental_asset_missing_fails(self):
+        catalog, publications, snapshot = fixture()
+        supplemental = {"release_tag": "rc2", "release_url": "https://github.com/" + REPO + "/releases",
+                        "artifacts": [{"name": "licenses.zip", "bytes": 56, "sha256": "c" * 64}]}
+        report = AUDIT.audit(catalog, publications, snapshot, supplemental)
+        self.assertEqual(report["local_preparation_checks"]["status"], "failed")
+        row = next(row for row in report["assets"] if row["expected"]["kind"] == "supplemental")
+        self.assertEqual(row["errors"], ["asset_missing"])
+        self.assertEqual(report["counts"]["publication_assets"], 1)
+        self.assertEqual(report["counts"]["supplemental_assets"], 1)
+
+    def test_matching_supplemental_asset_passes_and_requires_readback(self):
+        catalog, publications, snapshot = fixture()
+        supplemental = {"release_tag": "rc2", "release_url": "https://github.com/" + REPO + "/releases",
+                        "artifacts": [{"name": "licenses.zip", "bytes": 56, "sha256": "c" * 64}]}
+        snapshot["releases"][1]["assets"].append({"id": 3, "name": "licenses.zip", "size": 56,
+            "digest": "sha256:" + "c" * 64, "state": "uploaded", "url": URL + "3",
+            "browser_download_url": "https://github.com/" + REPO + "/releases/download/rc2/licenses.zip"})
+        report = AUDIT.audit(catalog, publications, snapshot, supplemental)
+        self.assertEqual(report["local_preparation_checks"]["status"], "passed")
+        self.assertEqual(report["counts"]["publication_assets"], 1)
+        self.assertEqual(report["counts"]["supplemental_assets"], 1)
+        receipt = next(row for row in report["anonymous_readback"]["records"] if row["asset_id"] == 3)
+        self.assertEqual(receipt["status"], "pending")
+        condition = next(row for row in report["publication_conditions"] if row["id"] == "anonymous_asset_readback")
+        self.assertEqual(condition["expected_assets"], 3)
+
 
 if __name__ == "__main__":
     unittest.main()

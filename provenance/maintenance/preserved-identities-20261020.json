@@ -1,0 +1,10 @@
+{
+  "schema_version": 1,
+  "old_index_source_commit": "7b2d30c9ecc8ba7b6e47e4187a80be315b6de7be",
+  "archived_index_path": "provenance/editorial/archive/current-edition-rc1.json",
+  "archived_index_sha256": "f76d5d2ec87d29313a139bd29a3579175951c963f0beb7642027ecafee52c0b2",
+  "byte_identity": "passed",
+  "publication_run_preserved": "publication_review_20261015_03",
+  "physical_solver_calls": 0,
+  "publication_rebuilds": 0
+}

@@ -2,8 +2,8 @@
   "schema_version": 1,
   "status": "passed",
   "scope": "tracked_reader_markdown_relative_paths",
-  "markdown_files": 183,
-  "relative_links": 536,
+  "markdown_files": 191,
+  "relative_links": 587,
   "failed_links": [],
   "excluded_archives": [
     "outputs/",

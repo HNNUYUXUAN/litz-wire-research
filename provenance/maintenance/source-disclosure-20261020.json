@@ -1,0 +1,180 @@
+{
+  "schema_version": 1,
+  "checked_at_utc": "2026-10-19T16:26:56.163281+00:00",
+  "source_commit": "7b2d30c9ecc8ba7b6e47e4187a80be315b6de7be",
+  "scope": "Targeted high-confidence signatures in UTF-8 text; filename checks for binaries, fonts, local credentials and license keys.",
+  "scan_rules": [
+    "private_key_header",
+    "github_token",
+    "github_fine_grained_token",
+    "openai_scoped_key",
+    "openai_legacy_key",
+    "aws_access_key_id",
+    "slack_token"
+  ],
+  "maximum_text_blob_bytes": 67108864,
+  "working_tree_tracked_files": {
+    "tracked_files": 943,
+    "text_files_scanned": 896,
+    "text_bytes_scanned": 63088299,
+    "binary_files_skipped": 47,
+    "over_limit_skipped": [],
+    "missing_files": [],
+    "findings": [],
+    "name_flags": []
+  },
+  "reachable_git_history": {
+    "reachable_commits": 18,
+    "unique_blob_count": 1444,
+    "text_blobs_scanned": 1363,
+    "text_bytes_scanned": 230735661,
+    "binary_blobs_skipped": 81,
+    "over_limit_skipped": [],
+    "findings": [],
+    "name_flags": []
+  },
+  "publication_zip_member_inventory": [
+    {
+      "path": "outputs/publication_review_20261015_03/Litz_publication_package.zip",
+      "sha256_from_delivery_manifest": "9efcc884be3500cf7d5d9b53680e833af02f1a7c6c8cb65871e73809a2aee274",
+      "bytes": 487570964,
+      "file_members": 1104,
+      "uncompressed_bytes": 1474933310,
+      "name_flags": [],
+      "license_notice_members": [
+        "documents/automation/en/IEEEtran.cls",
+        "documents/automation/zh-CN/IEEEtran.cls",
+        "documents/paper/en/IEEEtran.cls",
+        "documents/paper/zh-CN/IEEEtran.cls",
+        "documents/report/en/IEEEtran.cls",
+        "documents/report/zh-CN/IEEEtran.cls",
+        "LICENSE",
+        "LICENSES/CC-BY-4.0.txt",
+        "LICENSES/LPPL-1.3c.txt",
+        "LICENSES/MIT.txt",
+        "LICENSES/README.md",
+        "LICENSES/README.zh-CN.md",
+        "latex/IEEEtran.cls",
+        "latex/templates/en/IEEEtran.cls",
+        "latex/templates/zh-CN/IEEEtran.cls"
+      ]
+    },
+    {
+      "path": "outputs/publication_review_20261015_03/Litz_LaTeX_sources.zip",
+      "sha256_from_delivery_manifest": "0013626a6511d4eb960626cf7b99136e20298df832aba6534070fbaa74a56a9e",
+      "bytes": 74357489,
+      "file_members": 165,
+      "uncompressed_bytes": 80023911,
+      "name_flags": [],
+      "license_notice_members": [
+        "documents/automation/en/IEEEtran.cls",
+        "documents/automation/zh-CN/IEEEtran.cls",
+        "documents/paper/en/IEEEtran.cls",
+        "documents/paper/zh-CN/IEEEtran.cls",
+        "documents/report/en/IEEEtran.cls",
+        "documents/report/zh-CN/IEEEtran.cls",
+        "templates/en/IEEEtran.cls",
+        "templates/zh-CN/IEEEtran.cls",
+        "IEEEtran-license.txt"
+      ]
+    },
+    {
+      "path": "outputs/publication_review_20261015_03/Litz_visual_candidates.zip",
+      "sha256_from_delivery_manifest": "e4ca59cd99eed0a1c76c44dbb158390d6100f94505980f3cbbc7ec2a78aa73e4",
+      "bytes": 21987850,
+      "file_members": 46,
+      "uncompressed_bytes": 23798699,
+      "name_flags": [],
+      "license_notice_members": []
+    }
+  ],
+  "licensing_review": {
+    "reviewed_files": [
+      {
+        "path": "LICENSE",
+        "sha256": "339fa4bb2c8448f65a6ff2bccc1f0b67b984744d1497ea2c90c1c76498bc1bab"
+      },
+      {
+        "path": "LICENSES/README.md",
+        "sha256": "062e48eb7e8d0d6cee64a71b0f4a4cecabafa751597981e5d9f1692653b9da47"
+      },
+      {
+        "path": "LICENSES/CC-BY-4.0.txt",
+        "sha256": "9ba9550ad48438d0836ddab3da480b3b69ffa0aac7b7878b5a0039e7ab429411"
+      },
+      {
+        "path": "LICENSES/LPPL-1.3c.txt",
+        "sha256": "3d262cdf34dafa6955f703c634a8c238ec44109bc8dd6ef34fb7aa54809f7e66"
+      },
+      {
+        "path": "LICENSES/third-party/AgentTools-MIT.txt",
+        "sha256": "f20a78d582dd0f663e6bdc3009eac12f45f353b5d69c63f7cf636c4755f11993"
+      },
+      {
+        "path": "LICENSES/third-party/PyAEDT-MCP-Apache-2.0.txt",
+        "sha256": "336617ae2e1efc0cdff79161ca7a1007c12e02940c0d819b13d4ff5d11d53e26"
+      },
+      {
+        "path": "THIRD_PARTY_NOTICES.md",
+        "sha256": "8fbd82f6ecaf4b8477b47171375b3d784282c13c4055276cb896a58807b984a3"
+      },
+      {
+        "path": "references/sources.json",
+        "sha256": "3f48ffcc6c60b0207390b6e70affe89eafc78fef5e5fd7964085b236342e2ab9"
+      },
+      {
+        "path": "CITATION.cff",
+        "sha256": "980ede71cdf809c71035e512c0d286df728838f9838455d073bbda7d65832f9e"
+      },
+      {
+        "path": "latex/IEEEtran.cls",
+        "sha256": "c972aca108fda004c3514d63658e02816da2e54d9a1451e870b9bd970e003f55"
+      }
+    ],
+    "summary": [
+      "Original software uses MIT; prose, figures and data use CC BY 4.0; Notebook cells are classified by content.",
+      "IEEEtran source retains copyright and LPPL notice; its license text is supplied.",
+      "AgentTools MIT and PyAEDT-MCP Apache-2.0 notices are supplied; proprietary Wolfram/AEDT runtimes and font files are described as separately installed.",
+      "CITATION.cff and license retain Miao Yuxuan / Huainan Normal University attribution, consistent with the supplied publication plan."
+    ],
+    "package_notice_observations": [
+      {
+        "path": "outputs/publication_review_20261015_03/Litz_publication_package.zip",
+        "status": "license_suite_present"
+      },
+      {
+        "path": "outputs/publication_review_20261015_03/Litz_LaTeX_sources.zip",
+        "status": "resolved_by_uploaded_license_companion",
+        "observed": "IEEEtran notice is present; original-work MIT/CC-BY license files and a reuse explanation are absent from this standalone package.",
+        "companion_manifest": "package-licenses.json"
+      },
+      {
+        "path": "outputs/publication_review_20261015_03/Litz_visual_candidates.zip",
+        "status": "resolved_by_uploaded_license_companion",
+        "observed": "No license/readme file is included; provide a companion notice with the original figure attribution and license.",
+        "companion_manifest": "package-licenses.json"
+      }
+    ],
+    "suggested_follow_up": "Supply a package/license manifest and companion notices with the release while retaining the existing approved ZIP identities.",
+    "companion": {
+      "status": "built_pending_integration",
+      "archive_hashes_recomputed": true,
+      "files": 14,
+      "member_inventory_count": 1315
+    }
+  },
+  "limitations": [
+    "This is not an exhaustive security or license clearance audit.",
+    "Only history reachable from the recorded HEAD was scanned; other branches, reflogs, unreachable objects and Git hosting configuration were not scanned.",
+    "Content scanning was limited to UTF-8 text without NUL bytes at or below the recorded size limit; binary/image/PDF payloads and encoded Notebook data were not decoded.",
+    "Publication ZIP entries were checked by name and license-presence inventory; their contents were not scanned for secrets. All three ZIP SHA-256 identities were subsequently recomputed while building the license companion.",
+    "Untracked files, current concurrent edits after the scan, ignored evidence/cache directories, external dataset archives and proprietary runtime installations were outside this scan.",
+    "No legal determination of font embedding or software license compliance was made; installed-runtime and font licenses remain external conditions."
+  ],
+  "companion_integration": {
+    "status": "uploaded_to_existing_draft",
+    "path": "LICENSES/publication-companion",
+    "release_asset": "litz_publication_licenses_20261020.zip",
+    "publication_receipt": "provenance/maintenance/release-assets-20261020.json"
+  }
+}

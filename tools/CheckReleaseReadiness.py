@@ -16,6 +16,7 @@ from urllib.parse import urlparse
 
 CATALOG = "data/catalog.json"
 PUBLICATIONS = "provenance/editorial/online-assets.json"
+SUPPLEMENTAL = "provenance/maintenance/supplemental-assets.json"
 HEX = re.compile(r"[0-9a-f]{64}")
 
 
@@ -43,7 +44,7 @@ def digest(value):
     return None
 
 
-def audit(catalog, publications, snapshot):
+def audit(catalog, publications, snapshot, supplemental=None):
     require(snapshot.get("schema_version") == 1, "snapshot.schema_version must be 1")
     require(isinstance(snapshot.get("captured_at"), str), "snapshot.captured_at is required")
     captured = datetime.fromisoformat(snapshot["captured_at"].replace("Z", "+00:00"))
@@ -82,6 +83,15 @@ def audit(catalog, publications, snapshot):
         expected.append({"kind": "publication", "tag": publications["release_tag"],
                          "name": item["name"], "bytes": item["bytes"],
                          "sha256": item["sha256"], "asset_id": None})
+    if supplemental is not None:
+        require(isinstance(supplemental, dict) and isinstance(supplemental.get("artifacts"), list),
+                "Supplemental manifest must contain an artifacts list")
+        require(isinstance(supplemental.get("release_tag"), str) and supplemental["release_tag"],
+                "Supplemental manifest release_tag is required")
+        for item in supplemental["artifacts"]:
+            expected.append({"kind": "supplemental", "tag": supplemental["release_tag"],
+                             "name": item["name"], "bytes": item["bytes"],
+                             "sha256": item["sha256"], "asset_id": None})
     for item in expected:
         require(isinstance(item["name"], str) and item["name"] and "/" not in item["name"]
                 and "\\" not in item["name"], "Invalid asset name")
@@ -186,7 +196,9 @@ def audit(catalog, publications, snapshot):
             "local_preparation_checks": {"status": "passed" if all(check["status"] == "passed" for check in checks) else "failed",
                                          "checks": checks},
             "counts": {"evidence_parts": sum(item["kind"] == "evidence_part" for item in expected),
-                       "publication_assets": len(publications["artifacts"]), "required_releases": len(required_tags)},
+                       "publication_assets": len(publications["artifacts"]),
+                       "supplemental_assets": sum(item["kind"] == "supplemental" for item in expected),
+                       "required_releases": len(required_tags)},
             "assets": assets_checked, "publication_conditions": conditions,
             "pending_publication_conditions": [condition["id"] for condition in conditions if condition["status"] != "satisfied"],
             "anonymous_readback": {"basis": "supplied receipts only", "records": anonymous}}
@@ -201,9 +213,13 @@ def main(argv=None):
     catalog, catalog_hash = read(args.root / CATALOG)
     publications, publications_hash = read(args.root / PUBLICATIONS)
     snapshot, snapshot_hash = read(args.snapshot)
-    report = audit(catalog, publications, snapshot)
+    supplemental, supplemental_hash = (read(args.root / SUPPLEMENTAL)
+                                       if (args.root / SUPPLEMENTAL).is_file() else (None, None))
+    report = audit(catalog, publications, snapshot, supplemental)
     report["inputs"] = [{"path": CATALOG, **catalog_hash}, {"path": PUBLICATIONS, **publications_hash},
                         {"role": "github_api_snapshot", "name": args.snapshot.name, **snapshot_hash}]
+    if supplemental_hash is not None:
+        report["inputs"].append({"path": SUPPLEMENTAL, **supplemental_hash})
     content = json.dumps(report, ensure_ascii=False, indent=2, sort_keys=True) + "\n"
     if args.output:
         args.output.parent.mkdir(parents=True, exist_ok=True)

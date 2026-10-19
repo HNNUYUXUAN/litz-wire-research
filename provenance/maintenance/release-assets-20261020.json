@@ -838,6 +838,15 @@
         "name": "review_20261015_Litz_visual_candidates.zip",
         "status": "pending",
         "tag": "v1.0.0-rc.2"
+      },
+      {
+        "asset_id": 656800433,
+        "errors": [
+          "missing_receipt"
+        ],
+        "name": "litz_publication_licenses_20261020.zip",
+        "status": "pending",
+        "tag": "v1.0.0-rc.2"
       }
     ]
   },
@@ -2675,12 +2684,32 @@
         "state": "uploaded"
       },
       "status": "passed"
+    },
+    {
+      "errors": [],
+      "expected": {
+        "asset_id": null,
+        "bytes": 103265,
+        "kind": "supplemental",
+        "name": "litz_publication_licenses_20261020.zip",
+        "sha256": "5aa6311ca16e5623e610a08dc4122764dcdeb25fd8a2d28c46585065e56bfda2",
+        "tag": "v1.0.0-rc.2"
+      },
+      "observed": {
+        "digest": "sha256:5aa6311ca16e5623e610a08dc4122764dcdeb25fd8a2d28c46585065e56bfda2",
+        "id": 656800433,
+        "name": "litz_publication_licenses_20261020.zip",
+        "size": 103265,
+        "state": "uploaded"
+      },
+      "status": "passed"
     }
   ],
   "counts": {
     "evidence_parts": 66,
     "publication_assets": 27,
-    "required_releases": 2
+    "required_releases": 2,
+    "supplemental_assets": 1
   },
   "inputs": [
     {
@@ -2696,11 +2725,17 @@
       "sha256": "c6303cde6370dd96cc1291daf24e1fcc1e77fa4412af032bb1ed554fb57aeedc"
     },
     {
-      "bytes": 66365,
+      "bytes": 66902,
       "hash_basis": "raw-bytes",
       "name": "release-snapshot-20261020.json",
       "role": "github_api_snapshot",
-      "sha256": "374b61c6669b243712748516f5c6f73d283aba4f68b47542d9f91357b65a9cc2"
+      "sha256": "c8f210177a5f774595d1ec4266f567e554493845c48050b30c8b19671096b367"
+    },
+    {
+      "bytes": 2615,
+      "hash_basis": "raw-bytes",
+      "path": "provenance/maintenance/supplemental-assets.json",
+      "sha256": "bb888351e328e213adde2724d1f6bf9d6453e22b35bcf25a4b63e65c9339326e"
     }
   ],
   "local_preparation_checks": {
@@ -2990,9 +3025,9 @@
         "status": "passed"
       },
       {
-        "expected_count": 93,
+        "expected_count": 94,
         "id": "all_registered_assets_match_api_metadata",
-        "matched_count": 93,
+        "matched_count": 94,
         "status": "passed"
       }
     ],
@@ -3030,7 +3065,7 @@
       "status": "pending"
     },
     {
-      "expected_assets": 93,
+      "expected_assets": 94,
       "id": "anonymous_asset_readback",
       "matched_supplied_receipts": 0,
       "receipt_failures": 0,
@@ -3039,5 +3074,5 @@
   ],
   "repository": "HNNUYUXUAN/litz-wire-research",
   "schema_version": 1,
-  "snapshot_captured_at": "2026-10-19T16:22:09.1617557Z"
+  "snapshot_captured_at": "2026-10-19T16:34:12.7744787Z"
 }

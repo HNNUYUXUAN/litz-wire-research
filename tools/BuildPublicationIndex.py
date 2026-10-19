@@ -24,6 +24,8 @@ def generate(root):
         raise ValueError('Reading and delivery run identities differ')
     artifacts = delivery['artifacts']
     remote = online['artifacts']
+    counts = delivery['counts']
+    compilations = counts['latex_manuscripts'] + counts['templates']
     def artifact(filename):
         matches = [a for a in artifacts if Path(a['path']).name == filename]
         if len(matches) != 1:
@@ -68,13 +70,13 @@ def generate(root):
         result[f'publications/README{suffix}.md'] = '\n'.join(lines)
         lines = ['# ' + ('稿件交付与校验' if zh else 'Publication delivery and verification'), '',
                  '[English](DELIVERY.md) · [简体中文](DELIVERY.zh-CN.md)', '',
-                 ('三部作品含六份完整 Markdown、六份原生 Wolfram Notebook、十八份 LaTeX/PDF 和六份可编辑模板。' if zh else 'Three works provide six complete Markdown manuscripts, six native Wolfram Notebooks, eighteen LaTeX/PDF editions and six editable templates.'), '',
+                 (f"三部作品含六份完整 Markdown、六份原生 Wolfram Notebook、十八份 LaTeX/PDF 和 {counts['templates']} 份可编辑模板。" if zh else f"Three works provide six complete Markdown manuscripts, six native Wolfram Notebooks, eighteen LaTeX/PDF editions and {counts['templates']} editable templates."), '',
                  f'- [Markdown](README{suffix}.md)',
                  f'- [' + ('附件下载及文件名' if zh else 'Downloads and asset names') + f'](ONLINE{suffix}.md)',
                  '- [SHA256 / bytes](../provenance/editorial/online-assets.json)',
                  '- [Build manifest](../provenance/editorial/delivery-manifest.json)', '',
                  ('完整交付、独立 LaTeX 源码和视觉候选分别打包；所有下载入口见附件索引。本地复现后的路径由 `docs/current-edition.json` 的 `local_path` 给出。' if zh else 'The complete delivery, standalone LaTeX sources and visual candidates are separate packages listed in the attachment index. After local restoration, `local_path` in `docs/current-edition.json` identifies each file.'), '',
-                 ('构建验收记录涵盖 240 页 PDF、84 个 Notebook 渲染片段及独立目录中的 24 份稿件与模板编译。21 类科学图从保存证据重新制图。' if zh else 'Build acceptance records cover 240 PDF pages, 84 Notebook render chunks, and independent compilation of 24 manuscripts and templates. The 21 scientific figure families were redrawn from saved evidence.'), '',
+                 (f"所选构建的交付清单记录 {counts['pdf_pages']} 页 PDF、{compilations} 份 LaTeX 稿件与模板，以及 {counts['scientific_figure_families']} 类科学图。具体验收结果见以下构建记录。" if zh else f"The selected build's delivery manifest records {counts['pdf_pages']} PDF pages, {compilations} LaTeX manuscripts and templates, and {counts['scientific_figure_families']} scientific figure families. See the build records below for acceptance results."), '',
                  '- [Visual review](../provenance/editorial/visual-review.json)',
                  '- [Standalone compilation](../provenance/editorial/standalone-compile-receipt.json)', '']
         result[f'publications/DELIVERY{suffix}.md'] = '\n'.join(lines)
@@ -93,6 +95,8 @@ def generate(root):
         for item in remote:
             if item['name'].endswith('.zip'):
                 lines.append(f"- `{item['name']}`")
+        if (root/'LICENSES/publication-companion/README.md').is_file():
+            lines += ['', ('下载 ZIP 时请一并保存[许可与成员清单](../LICENSES/publication-companion/README.zh-CN.md)。' if zh else 'Keep the [license and member-index companion](../LICENSES/publication-companion/README.md) with the ZIP you download.')]
         lines += ['', '[SHA256 / bytes](../provenance/editorial/online-assets.json) · [JSON index](../docs/current-edition.json)', '']
         result[f'publications/ONLINE{suffix}.md'] = '\n'.join(lines)
     return result

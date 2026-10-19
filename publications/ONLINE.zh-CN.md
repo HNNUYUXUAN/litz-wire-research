@@ -21,4 +21,6 @@
 - `review_20261015_Litz_LaTeX_sources.zip`
 - `review_20261015_Litz_visual_candidates.zip`
 
+下载 ZIP 时请一并保存[许可与成员清单](../LICENSES/publication-companion/README.zh-CN.md)。
+
 [SHA256 / bytes](../provenance/editorial/online-assets.json) · [JSON index](../docs/current-edition.json)

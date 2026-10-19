@@ -21,4 +21,6 @@ Append `.nb`, `_single.pdf`, `_ieee-journal.pdf` or `_ieee-conference.pdf` to ea
 - `review_20261015_Litz_LaTeX_sources.zip`
 - `review_20261015_Litz_visual_candidates.zip`
 
+Keep the [license and member-index companion](../LICENSES/publication-companion/README.md) with the ZIP you download.
+
 [SHA256 / bytes](../provenance/editorial/online-assets.json) · [JSON index](../docs/current-edition.json)

@@ -57,3 +57,5 @@ python tools/CheckReleaseReadiness.py --snapshot provenance/maintenance/release-
 ```
 
 工具只比较已登记文件的身份与快照中的服务端 SHA256，不发起下载。检查通过表示附件元数据匹配；仓库可见性、Release 发布、下载目录和匿名回读各自报告状态。历史快照用于重放该次核验，实际发布时须重新获取。
+
+许可补充包随出版 ZIP 一同分发，见[许可与成员清单](../LICENSES/publication-companion/README.zh-CN.md)和[补充附件哈希](../provenance/maintenance/supplemental-assets.json)。准备情况见[本轮检查记录](open-source-readiness.zh-CN.md)。

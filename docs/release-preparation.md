@@ -57,3 +57,5 @@ python tools/CheckReleaseReadiness.py --snapshot provenance/maintenance/release-
 ```
 
 The tool compares registered file identities with server SHA256 values in the snapshot and performs no download. A passing result means the attachment metadata matches; repository visibility, release publication, catalog access mode and anonymous readback have separate statuses. The saved snapshot replays this audit; obtain a fresh one for publication.
+
+Distribute the license companion with publication ZIPs; see the [license and member index](../LICENSES/publication-companion/README.md) and [supplemental asset hashes](../provenance/maintenance/supplemental-assets.json). See the [current preparation record](open-source-readiness.md).

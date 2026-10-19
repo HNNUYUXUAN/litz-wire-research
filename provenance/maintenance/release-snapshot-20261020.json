@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "captured_at": "2026-10-19T16:22:09.1617557Z",
+  "captured_at": "2026-10-19T16:34:12.7744787Z",
   "repository": {
     "full_name": "HNNUYUXUAN/litz-wire-research",
     "private": true,
@@ -42,6 +42,15 @@
           "state": "uploaded",
           "url": "https://api.github.com/repos/HNNUYUXUAN/litz-wire-research/releases/assets/638648444",
           "browser_download_url": "https://github.com/HNNUYUXUAN/litz-wire-research/releases/download/untagged-88667c6cc6b178e1ad6e/litz_automation_rc2.part01"
+        },
+        {
+          "id": 656800433,
+          "name": "litz_publication_licenses_20261020.zip",
+          "size": 103265,
+          "digest": "sha256:5aa6311ca16e5623e610a08dc4122764dcdeb25fd8a2d28c46585065e56bfda2",
+          "state": "uploaded",
+          "url": "https://api.github.com/repos/HNNUYUXUAN/litz-wire-research/releases/assets/656800433",
+          "browser_download_url": "https://github.com/HNNUYUXUAN/litz-wire-research/releases/download/untagged-88667c6cc6b178e1ad6e/litz_publication_licenses_20261020.zip"
         },
         {
           "id": 638686902,

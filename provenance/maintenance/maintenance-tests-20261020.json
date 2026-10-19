@@ -1,0 +1,40 @@
+{
+  "schema_version": 1,
+  "created_utc": "2026-10-19T16:37:07.470413+00:00",
+  "python": "3.12.10",
+  "scope": "Maintenance helpers in an isolated environment and source checkout containing spaces",
+  "status": "passed",
+  "tests": {
+    "run": 18,
+    "failures": 0,
+    "errors": 0,
+    "skipped": 0,
+    "selected": [
+      "test_agent_catalog.CatalogTest.test_check_detects_modified_output_without_repairing_it",
+      "test_agent_catalog.CatalogTest.test_deterministic_generation",
+      "test_agent_catalog.CatalogTest.test_inputs_exclude_ignored_evidence_and_bind_raw_bytes",
+      "test_agent_catalog.CatalogTest.test_registered_coverage_and_failed_physics_retained",
+      "test_agent_catalog.CatalogTest.test_release_assets_identify_recorded_downloads",
+      "test_agent_catalog.CatalogTest.test_untracked_and_escape_paths_are_rejected",
+      "test_reader_links.ReaderLinkTests.test_ignored_local_artifact_does_not_mask_broken_github_link",
+      "test_reader_links.ReaderLinkTests.test_tracked_paths_with_spaces_and_code_examples",
+      "test_release_readiness.ReleaseReadinessTest.test_matching_supplemental_asset_passes_and_requires_readback",
+      "test_release_readiness.ReleaseReadinessTest.test_private_draft_is_valid_preparation_but_not_publication",
+      "test_release_readiness.ReleaseReadinessTest.test_public_metadata_still_requires_anonymous_readbacks",
+      "test_release_readiness.ReleaseReadinessTest.test_receipts_require_anonymous_full_body_identity",
+      "test_release_readiness.ReleaseReadinessTest.test_registered_supplemental_asset_missing_fails",
+      "test_release_readiness.ReleaseReadinessTest.test_slurped_pages_have_the_same_result",
+      "test_release_readiness.ReleaseReadinessTest.test_wrong_sha_missing_asset_and_wrong_api_id_fail",
+      "test_release_readiness.ReleaseReadinessTest.test_wrong_size_and_missing_api_digest_fail",
+      "test_publication_index.PublicationIndexTests.test_check_rejects_stale_online_without_rewriting_it",
+      "test_publication_index.PublicationIndexTests.test_future_manifest_updates_online_assets_and_delivery_counts"
+    ]
+  },
+  "source_sha256": {
+    "tools/BuildAgentCatalog.py": "56bb53a83561dea4174ac50f82bb4cbca346a33df45ba37f503a0cd1b91b3353",
+    "tools/BuildPublicationIndex.py": "dc0ab822d60d60fd9408f66a41227830575294f0b78b632a3628fcee86d26cb8",
+    "tools/CheckReaderLinks.py": "e3329d3e89bd0c8533e5ad4e240c1f310816e8db932d1230606772e33752b70d",
+    "tools/CheckReleaseReadiness.py": "d633b47fe18bb025a06cd2e618744954e3b761e4caa4cd598a5abb5a0dbd5dfe"
+  },
+  "physical_solver_calls": 0
+}
