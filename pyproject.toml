@@ -4,7 +4,7 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "litz-research"
-version = "1.0.0rc2"
+version = "1.0.0rc3"
 description = "Agent-driven reproducible modeling and simulation, with Litz-wire research cases"
 readme = "README.md"
 requires-python = ">=3.11"

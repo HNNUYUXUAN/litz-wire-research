@@ -2,6 +2,7 @@
 import hashlib
 import os
 from pathlib import Path
+import re
 import shutil
 import subprocess
 import tarfile
@@ -14,7 +15,8 @@ from .common import read, safe_path, sha, evidence_root,native_path
 class CredentialRedirect(urllib.request.HTTPRedirectHandler):
     def redirect_request(self, req, fp, code, msg, headers, newurl):
         follow = super().redirect_request(req, fp, code, msg, headers, newurl)
-        if follow and urllib.parse.urlparse(req.full_url).netloc != urllib.parse.urlparse(newurl).netloc:
+        if follow and (urllib.parse.urlparse(req.full_url).netloc != urllib.parse.urlparse(newurl).netloc
+                       or urllib.parse.urlparse(newurl).scheme != "https"):
             follow.remove_header("Authorization")
         return follow
 
@@ -32,11 +34,12 @@ def download(url, destination, expected_hash, expected_bytes, private=False):
         if sha(partial) != expected_hash:
             raise ValueError("Partial download checksum mismatch: " + destination.name)
         partial.replace(destination); return destination
-    headers = {"User-Agent":"litz-research/1.0.0rc2", "Accept":"application/octet-stream"}
+    headers = {"User-Agent":"litz-research/1.0.0rc3", "Accept":"application/octet-stream"}
     if offset: headers["Range"] = f"bytes={offset}-"
     if private:
-        if urllib.parse.urlparse(url).hostname != "api.github.com":
-            raise ValueError("Private release authentication requires api.github.com.")
+        parsed = urllib.parse.urlsplit(url)
+        if parsed.scheme != "https" or parsed.netloc != "api.github.com":
+            raise ValueError("Private release authentication requires HTTPS on api.github.com.")
         token = subprocess.run(["gh","auth","token"], check=True, capture_output=True, text=True).stdout.strip()
         headers["Authorization"] = "Bearer " + token
     response = urllib.request.build_opener(CredentialRedirect()).open(urllib.request.Request(url, headers=headers), timeout=90)
@@ -64,6 +67,36 @@ def download(url, destination, expected_hash, expected_bytes, private=False):
 def catalog(root):
     path = root / "data/catalog.json"
     return read(path) if path.exists() else {"datasets": {}}
+
+def part_download_url(catalogue, dataset, part):
+    """Select authenticated API or validated public release attachment URLs."""
+    if not catalogue.get("private", True) and "public_url" in part:
+        repository = catalogue.get("repository", "")
+        version = dataset.get("source_version") or catalogue.get("tag")
+        name = part.get("name")
+        if (not isinstance(repository, str)
+                or not re.fullmatch(r"[A-Za-z0-9_.-]+/[A-Za-z0-9_.-]+", repository)
+                or any(piece in {".", ".."} for piece in repository.split("/"))
+                or not isinstance(version, str) or not version
+                or not isinstance(name, str) or not name or "/" in name or "\\" in name):
+            raise ValueError("Public release attachment needs repository, version and filename identities.")
+        expected = ("https://github.com/" + repository + "/releases/download/"
+                    + urllib.parse.quote(version, safe="") + "/"
+                    + urllib.parse.quote(name, safe=""))
+        url = part["public_url"]
+        if not isinstance(url, str) or url != expected:
+            raise ValueError("Public release attachment URL differs from its catalog identity.")
+        parsed = urllib.parse.urlsplit(url)
+        if (parsed.scheme != "https" or parsed.netloc != "github.com"
+                or parsed.query or parsed.fragment):
+            raise ValueError("Public release attachment URL must use HTTPS without credentials, query or fragment.")
+        return url
+    # Existing private catalogs always use their authenticated API URL. Public
+    # catalogs without public_url retain their original unauthenticated URL.
+    url = part.get("url")
+    if not url:
+        raise ValueError("Release attachment URL pending for " + part["name"])
+    return url
 
 def cached_object(cache, digest):
     if len(digest) != 64 or any(c not in "0123456789abcdef" for c in digest):
@@ -106,8 +139,7 @@ def fetch(root, dataset_id, cache, offline=False):
             if offline:
                 if not dest.is_file() or sha(dest) != part["sha256"]: raise ValueError("Offline cache needs " + part["name"])
             else:
-                url = part.get("url")
-                if not url: raise ValueError("Release attachment URL pending for " + part["name"])
+                url = part_download_url(c, dataset, part)
                 download(url,dest,part["sha256"],part["bytes"],private=c.get("private",True))
             parts.append(dest)
         unpack_parts(parts,cache,records)

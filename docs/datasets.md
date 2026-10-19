@@ -2,6 +2,12 @@
 
 [简体中文](datasets.zh-CN.md)
 
+Install the CLI from the repository root in a virtual environment with Python 3.11 or later:
+
+```powershell
+python -m pip install -e .
+```
+
 Select the required route through the CLI. Dependencies are restored with it; verify file identities after restoration:
 
 ```powershell
@@ -9,6 +15,14 @@ litz-research data list
 litz-research data fetch publication-inputs
 litz-research data verify publication-inputs
 ```
+
+## Downloads and authentication
+
+This catalog sets `private: false`; published public attachments download directly without GitHub CLI or sign-in.
+
+Public mode prefers each part’s `public_url`. The restorer checks it against `repository`, the dataset’s `source_version` (or catalog `tag`) and the attachment filename. Its form is `https://github.com/<repository>/releases/download/<version>/<name>`, with the filename URL-encoded. Older catalogs without `public_url` continue to use `url` without authentication.
+
+Historical private catalogs retain `private: true`, always use the part’s API `url` and ignore `public_url`. Credentials are attached only to HTTPS requests to `api.github.com` and removed on cross-host redirects. Public downloads require the attachment’s release to be published; public repository visibility alone does not expose draft attachments.
 
 | Dataset | File mappings | Compressed MiB | Contents |
 | --- | ---: | ---: | --- |

@@ -2,7 +2,8 @@ cff-version: 1.2.0
 message: "Cite this software version, the source run and dataset manifest used, and the relevant modeling references."
 type: software
 title: "Litz Wire Research: agent-driven reproducible modeling and simulation"
-version: 1.0.0-rc.2
+version: 1.0.0-rc.3
+date-released: 2026-10-20
 authors:
   - family-names: Miao
     given-names: Yuxuan

@@ -2,6 +2,12 @@
 
 [English](datasets.md)
 
+在 Python 3.11 或后续版本的虚拟环境中，从仓库根目录安装 CLI：
+
+```powershell
+python -m pip install -e .
+```
+
 通过 CLI 选择所需路线，依赖会一并恢复。还原后核对文件身份：
 
 ```powershell
@@ -9,6 +15,14 @@ litz-research data list
 litz-research data fetch publication-inputs
 litz-research data verify publication-inputs
 ```
+
+## 下载与身份验证
+
+本目录设置为 `private: false`，已发布的公开附件可直接下载，无需 GitHub CLI 或登录。
+
+公开模式优先使用分片的 `public_url`。恢复器核对其与 `repository`、数据集的 `source_version`（缺省时使用目录的 `tag`）及附件文件名完全对应，URL 使用 `https://github.com/<repository>/releases/download/<version>/<name>`，文件名按 URL 编码。未提供 `public_url` 的旧目录继续使用 `url`，不附带身份凭据。
+
+私有历史目录保留 `private: true`，始终使用分片的 API `url` 并忽略 `public_url`。凭据仅用于 HTTPS 的 `api.github.com` 请求，跨主机跳转时移除。公开发布要求附件所属的 Release 已发布；仅将仓库设为公开不会使 Draft 附件可下载。
 
 | 数据集 | 文件映射 | 压缩 MiB | 内容 |
 | --- | ---: | ---: | --- |

@@ -30,7 +30,8 @@ class AutomationTests(unittest.TestCase):
             root=Path(tmp);content=b'20 A RMS';digest=hashlib.sha256(content).hexdigest()
             write(root/'data/catalog.json',{'tag':'fixture','datasets':{'analytic':{'files':[{'path':'outputs/run/results.json','sha256':digest,'bytes':len(content)}]}}})
             path=evidence_root(root)/'outputs/run/results.json';path.parent.mkdir(parents=True);path.write_bytes(content)
-            self.assertEqual(evidence_path(root,'outputs/run/results.json'),path)
+            # Windows temporary roots can have equivalent 8.3 and long names.
+            self.assertTrue(evidence_path(root,'outputs/run/results.json').samefile(path))
             path.write_bytes(b'corrupted')
             with self.assertRaises(ValueError):evidence_path(root,'outputs/run/results.json')
 
@@ -48,7 +49,7 @@ class AutomationTests(unittest.TestCase):
             write(root/'data/catalog.json',{'tag':'v1','datasets':{'new':{'source_version':'v2','dependencies':[],'objects':[{'sha256':identity,'bytes':len(data)}],'files':[{'path':'outputs/new/results.txt','sha256':identity,'bytes':len(data)}],'parts':[]}}})
             obj=cached_object(cache,identity);obj.parent.mkdir(parents=True);obj.write_bytes(data)
             self.assertEqual(fetch(root,'new',cache,offline=True)[0]['status'],'passed')
-            self.assertEqual(evidence_path(root,'outputs/new/results.txt'),evidence_root(root,'v2')/'outputs/new/results.txt')
+            self.assertTrue(evidence_path(root,'outputs/new/results.txt').samefile(evidence_root(root,'v2')/'outputs/new/results.txt'))
             self.assertFalse((evidence_root(root,'v1')/'outputs/new/results.txt').exists())
 
     def test_tutorial_rejects_accidental_large_campaign(self):

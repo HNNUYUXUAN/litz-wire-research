@@ -34,28 +34,26 @@ litz-research references verify
 
 检查仓库、源码包和分发归档中的凭据、商业授权文件、个人机器路径及第三方声明。原创软件、学术材料和上游组件分别遵循项目的[许可边界](../LICENSES/README.zh-CN.md)。科学软件及字体按各自条款单独安装。
 
-## 转为公开分发
+## 发布版本并核验公开访问
 
-准备基线为 **Private** 仓库，`v1.0.0-rc.1` 和 `v1.0.0-rc.2` 均为 **Draft**。`data/catalog.json` 中 `private: true`，附件 URL 使用受保护的 GitHub 发布附件 API，当前私有数据恢复需要认证访问。最终转换时需再次核对这些状态。
+发布每个版本时：
 
-维护者明确授权公开发布后：
+1. 确认源码提交、发布目标提交、附件清单、许可补充包和校验值，保持既有冻结产物的身份不变。
+2. 将仓库设为 Public，并发布数据目录所需的每个 Release。当前目录使用 `v1.0.0-rc.1` 提供历史证据，使用 `v1.0.0-rc.2` 提供自动化及出版附件。仅公开仓库不会使 Draft 附件可被匿名下载。
+3. 将公开目录设置为 `private: false`。每个分片保留用于附件 ID 核验的 API `url`，并在 `public_url` 中提供已核验的浏览器下载地址。确认 CLI 使用公开 URL 时不读取凭据；旧目录可以回退到匿名 API 读取。
+4. 核对精确源码提交对应的托管 CI 矩阵。使用退出登录的会话和全新缓存，走通 README 到稿件附件的路径，并通过 CLI 恢复一个小数据集。匿名回读已列出的附件，核验下载字节数和 SHA256，保留每份记录的范围及时间。
+5. 记录公开 URL、仓库可见性、Release 状态、源码提交、CI 结果和匿名下载记录，使发布说明与维护中的源码及冻结稿件身份一致。
 
-1. 确认已审阅的源码提交、发布目标提交、附件清单及校验值。
-2. 将仓库改为 Public，并发布两个必要的 Release。仅公开仓库不会使 Draft 附件可被匿名下载。
-3. 更新数据目录和下载元数据以支持公开访问。匿名读取应无需 GitHub 凭据；如提供私有访问回退，应限制凭据适用范围，并在跨主机重定向时移除认证头。
-4. 使用退出登录的会话和全新缓存，走通 README 到稿件附件的下载路径，下载有代表性的 PDF、Notebook 和源码包，并通过 CLI 恢复一个小数据集。下载后核验哈希，同时检查其他已列出附件及必要归档分片的访问状态。
-5. 记录公开 URL、仓库可见性、Release 状态、源码提交和匿名验证结果，使发布说明与实际源码及冻结稿件身份保持一致。
-
-完成这些转换检查前，准备记录描述的是待公开分发的候选版本。源码 CI、科学验收和匿名下载验证分别保留其实际状态。
+[公开分发记录](open-source-readiness.zh-CN.md)连接已发布版本的实际观察结果。历史快照保留采集时的仓库与 Release 状态。源码 CI、科学验收和公开下载验证各有对应证据。
 
 ## 附件元数据检查工具
 
 按[快照格式](release-snapshot.schema.json)保存 GitHub 仓库与 Release API 响应后执行：
 
 ```text
-python tools/CheckReleaseReadiness.py --snapshot provenance/maintenance/release-snapshot-20261020.json --output outputs/release-check.json
+python tools/CheckReleaseReadiness.py --snapshot outputs/public-release-snapshot.json --output outputs/release-check.json
 ```
 
 工具只比较已登记文件的身份与快照中的服务端 SHA256，不发起下载。检查通过表示附件元数据匹配；仓库可见性、Release 发布、下载目录和匿名回读各自报告状态。历史快照用于重放该次核验，实际发布时须重新获取。
 
-许可补充包随出版 ZIP 一同分发，见[许可与成员清单](../LICENSES/publication-companion/README.zh-CN.md)和[补充附件哈希](../provenance/maintenance/supplemental-assets.json)。准备情况见[本轮检查记录](open-source-readiness.zh-CN.md)。
+许可补充包随出版 ZIP 一同分发，见[许可与成员清单](../LICENSES/publication-companion/README.zh-CN.md)和[补充附件哈希](../provenance/maintenance/supplemental-assets.json)。公开情况见[分发记录](open-source-readiness.zh-CN.md)。

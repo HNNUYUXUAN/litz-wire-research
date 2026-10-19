@@ -34,28 +34,26 @@ For every asset advertised by the publication index or dataset catalog, check it
 
 Inspect the repository, source packages and distributed archives for credentials, commercial-license credentials, personal machine paths and third-party notices. Apply the project's [license boundaries](../LICENSES/README.md) to original software, scholarly material and upstream components. Scientific applications and fonts are installed separately under their own terms.
 
-## Transition to public distribution
+## Publish a release and verify public access
 
-The preparation baseline is a **Private** repository with **Draft** releases for `v1.0.0-rc.1` and `v1.0.0-rc.2`. `data/catalog.json` has `private: true`, and its attachment URLs use the protected GitHub release-asset API. Private restoration currently uses authenticated access. These states must be checked again at the final transition.
+For each release:
 
-After the maintainer explicitly authorizes public release:
+1. Confirm the source commit, release target commits, artifact inventories, license companion and checksums. Keep existing frozen artifact identities unchanged.
+2. Make the repository Public, publish the maintained source release, and publish every Release required by the data catalog. The maintained source is `v1.0.0-rc.3`; the current catalog uses `v1.0.0-rc.1` for historical evidence and `v1.0.0-rc.2` for automation and publication assets. Preserve the existing rc.1 and rc.2 tag targets. A public repository alone does not make Draft release attachments anonymously downloadable.
+3. Set the public catalog to `private: false`. Keep each part's API `url` for asset-ID verification and provide its verified browser download URL as `public_url`. Confirm that the CLI uses public URLs without reading credentials; older catalogs may fall back to anonymous API retrieval.
+4. Verify the hosted CI matrix for the exact source commit. From a signed-out session and a fresh cache, walk the README-to-publication path and restore a small dataset through the CLI. Read back the advertised assets anonymously and verify the downloaded byte counts and SHA256 values; retain the scope and timestamp of each receipt.
+5. Record the public URLs, repository visibility, Release states, source commit, CI results and anonymous download receipts. Keep release notes consistent with the maintained source and frozen manuscript identities.
 
-1. Confirm the reviewed source commit, release target commits, asset inventories and checksums.
-2. Change the repository to Public and publish both required release records. A public repository alone does not make Draft release attachments anonymously downloadable.
-3. Update catalog/download metadata for public access. Anonymous retrieval must work without GitHub credentials; any private-access fallback must retain bounded credential scope and strip authorization on cross-host redirects.
-4. From a signed-out session and a fresh cache, test the README-to-publication download path, download representative PDF/Notebook/package assets, and restore a small dataset through the CLI. Verify their hashes after download. Check access to the remaining advertised assets and required archive parts.
-5. Record the public URLs, visibility and release states, source commit and anonymous verification results. Keep the release notes consistent with the verified source and frozen manuscript identities.
-
-Until those transition checks finish, the preparation records describe a candidate for public distribution. Source CI, scientific acceptance and anonymous download verification each retain their actual status.
+The [distribution record](open-source-readiness.md) links the observations for the released revision. Historical snapshots retain the repository and Release states observed when they were captured. Source CI, scientific acceptance and public-download verification each have their own evidence.
 
 ## Attachment metadata audit tool
 
 Save the GitHub repository and release API responses using the [snapshot format](release-snapshot.schema.json), then run:
 
 ```text
-python tools/CheckReleaseReadiness.py --snapshot provenance/maintenance/release-snapshot-20261020.json --output outputs/release-check.json
+python tools/CheckReleaseReadiness.py --snapshot outputs/public-release-snapshot.json --output outputs/release-check.json
 ```
 
 The tool compares registered file identities with server SHA256 values in the snapshot and performs no download. A passing result means the attachment metadata matches; repository visibility, release publication, catalog access mode and anonymous readback have separate statuses. The saved snapshot replays this audit; obtain a fresh one for publication.
 
-Distribute the license companion with publication ZIPs; see the [license and member index](../LICENSES/publication-companion/README.md) and [supplemental asset hashes](../provenance/maintenance/supplemental-assets.json). See the [current preparation record](open-source-readiness.md).
+Distribute the license companion with publication ZIPs; see the [license and member index](../LICENSES/publication-companion/README.md) and [supplemental asset hashes](../provenance/maintenance/supplemental-assets.json). See the [distribution record](open-source-readiness.md).
