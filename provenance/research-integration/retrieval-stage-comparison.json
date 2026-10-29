@@ -1,0 +1,163 @@
+{
+  "scope": "Paired deterministic DOI retrieval stage; live re-fetch versus verified same-day cache",
+  "task": {
+    "doi": "10.1109/tte.2025.3610369",
+    "expected_title": "AC Loss Calculation for Litz Wire Windings in Electrical Machines"
+  },
+  "orders": [
+    "live/reuse",
+    "reuse/live",
+    "live/reuse"
+  ],
+  "model": {
+    "invoked": false,
+    "settings": "Identical deterministic script in both conditions"
+  },
+  "permissions": "Same interpreter, filesystem and network permission in both conditions",
+  "tokens": null,
+  "token_note": "No model generation in measured stages; host turn tokens are unavailable",
+  "cache_sha256": "723cbe0f216a1eaafa79acf6fed5a0423635b1c6dc9c505b5fb757a41598e759",
+  "measurements": [
+    {
+      "pair": 1,
+      "condition": "live",
+      "started_at": "2026-10-28T14:19:08.514959+00:00",
+      "network_calls": 1,
+      "model_calls": 0,
+      "tokens": null,
+      "human_interventions": 0,
+      "status": "passed",
+      "quality_checks": {
+        "doi": true,
+        "title": true,
+        "authors": true,
+        "publication_date": true
+      },
+      "doi": "10.1109/tte.2025.3610369",
+      "title": "AC Loss Calculation for Litz Wire Windings in Electrical Machines",
+      "source_url": "https://api.crossref.org/works/10.1109%2Ftte.2025.3610369",
+      "retrieved_at": "2026-10-28T14:19:08.514959+00:00",
+      "payload_sha256": "ee5b06c144d69d16171c1ceb26cfb0a860be34a0d0e3cfa015f422d5f3c30829",
+      "elapsed_seconds": 1.10268730000098
+    },
+    {
+      "pair": 1,
+      "condition": "reuse",
+      "started_at": "2026-10-28T14:19:09.619341+00:00",
+      "network_calls": 0,
+      "model_calls": 0,
+      "tokens": null,
+      "human_interventions": 0,
+      "status": "passed",
+      "quality_checks": {
+        "doi": true,
+        "title": true,
+        "authors": true,
+        "publication_date": true
+      },
+      "doi": "10.1109/tte.2025.3610369",
+      "title": "AC Loss Calculation for Litz Wire Windings in Electrical Machines",
+      "source_url": "https://api.crossref.org/works/10.1109%2Ftte.2025.3610369",
+      "retrieved_at": "2026-10-28T13:07:55.848743+00:00",
+      "payload_sha256": "723cbe0f216a1eaafa79acf6fed5a0423635b1c6dc9c505b5fb757a41598e759",
+      "elapsed_seconds": 0.00041449999844189733
+    },
+    {
+      "pair": 2,
+      "condition": "reuse",
+      "started_at": "2026-10-28T14:19:09.619968+00:00",
+      "network_calls": 0,
+      "model_calls": 0,
+      "tokens": null,
+      "human_interventions": 0,
+      "status": "passed",
+      "quality_checks": {
+        "doi": true,
+        "title": true,
+        "authors": true,
+        "publication_date": true
+      },
+      "doi": "10.1109/tte.2025.3610369",
+      "title": "AC Loss Calculation for Litz Wire Windings in Electrical Machines",
+      "source_url": "https://api.crossref.org/works/10.1109%2Ftte.2025.3610369",
+      "retrieved_at": "2026-10-28T13:07:55.848743+00:00",
+      "payload_sha256": "723cbe0f216a1eaafa79acf6fed5a0423635b1c6dc9c505b5fb757a41598e759",
+      "elapsed_seconds": 0.00030640000113635324
+    },
+    {
+      "pair": 2,
+      "condition": "live",
+      "started_at": "2026-10-28T14:19:09.621171+00:00",
+      "network_calls": 1,
+      "model_calls": 0,
+      "tokens": null,
+      "human_interventions": 0,
+      "status": "passed",
+      "quality_checks": {
+        "doi": true,
+        "title": true,
+        "authors": true,
+        "publication_date": true
+      },
+      "doi": "10.1109/tte.2025.3610369",
+      "title": "AC Loss Calculation for Litz Wire Windings in Electrical Machines",
+      "source_url": "https://api.crossref.org/works/10.1109%2Ftte.2025.3610369",
+      "retrieved_at": "2026-10-28T14:19:09.621171+00:00",
+      "payload_sha256": "ee5b06c144d69d16171c1ceb26cfb0a860be34a0d0e3cfa015f422d5f3c30829",
+      "elapsed_seconds": 1.1019115000017337
+    },
+    {
+      "pair": 3,
+      "condition": "live",
+      "started_at": "2026-10-28T14:19:10.723987+00:00",
+      "network_calls": 1,
+      "model_calls": 0,
+      "tokens": null,
+      "human_interventions": 0,
+      "status": "passed",
+      "quality_checks": {
+        "doi": true,
+        "title": true,
+        "authors": true,
+        "publication_date": true
+      },
+      "doi": "10.1109/tte.2025.3610369",
+      "title": "AC Loss Calculation for Litz Wire Windings in Electrical Machines",
+      "source_url": "https://api.crossref.org/works/10.1109%2Ftte.2025.3610369",
+      "retrieved_at": "2026-10-28T14:19:10.723987+00:00",
+      "payload_sha256": "ee5b06c144d69d16171c1ceb26cfb0a860be34a0d0e3cfa015f422d5f3c30829",
+      "elapsed_seconds": 1.0839530999983253
+    },
+    {
+      "pair": 3,
+      "condition": "reuse",
+      "started_at": "2026-10-28T14:19:11.808823+00:00",
+      "network_calls": 0,
+      "model_calls": 0,
+      "tokens": null,
+      "human_interventions": 0,
+      "status": "passed",
+      "quality_checks": {
+        "doi": true,
+        "title": true,
+        "authors": true,
+        "publication_date": true
+      },
+      "doi": "10.1109/tte.2025.3610369",
+      "title": "AC Loss Calculation for Litz Wire Windings in Electrical Machines",
+      "source_url": "https://api.crossref.org/works/10.1109%2Ftte.2025.3610369",
+      "retrieved_at": "2026-10-28T13:07:55.848743+00:00",
+      "payload_sha256": "723cbe0f216a1eaafa79acf6fed5a0423635b1c6dc9c505b5fb757a41598e759",
+      "elapsed_seconds": 0.00034439999944879673
+    }
+  ],
+  "status": "passed",
+  "limitations": [
+    "One DOI, three pairs, same-day metadata; not an end-to-end agent or cross-domain benchmark",
+    "Elapsed measurements exclude human review and initial cache creation; cache freshness requires review"
+  ],
+  "median_seconds": {
+    "live": 1.1019115000017337,
+    "reuse": 0.00034439999944879673
+  }
+}

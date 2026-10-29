@@ -1,0 +1,45 @@
+\section{Sources and Reproduction}
+\label{chapter:S3}
+
+% block-id: S3.report_repro.heading
+\hypertarget{S3.report_repro.heading}{}
+\subsection{Data identity and scientific status}
+
+% block-id: S3.report_repro.p1
+\hypertarget{S3.report_repro.p1}{}
+Route inventories connect original WXF files, checkpoints, Ansys projects, logs, and postprocessing outputs through model, parameter, source, and run identities. JSON/CSV retain real and imaginary components, units, and strand identities. Where a source field's unit label is ambiguous, canonical quantities follow the source model definition and document the conversion. Figure mappings further connect data, plotting expressions, independent PDF/SVG/PNG exports, and composite layouts. Inventories identify the coverage of scalar integrals, spatial fields, and partially recovered results separately.
+
+% block-id: S3.report_repro.p2
+\hypertarget{S3.report_repro.p2}{}
+Failure cases retain triggering inputs, actual errors, targeted revisions, stopping conditions, and requirements for continued research. Missing wrapper/kernel exit information in geometry validation, missing metrics and failure status in the original RT0 q=18 summary, and abnormal exits at larger PEEC scales remain as recorded. The longitudinal PEEC 1.28 m case is unexecuted. Postprocessing acceptance has an independent identity, allowing data recovery, numerical execution, and physical validation to be distinguished.
+
+% block-id: S3.report_repro.p3
+\hypertarget{S3.report_repro.p3}{}
+The canonical LaTeX sources contain the prose, equations and figure captions. Generated Markdown provides the reading edition. Dataset inventories locate preserved numerical and geometry evidence; text tutorials and the CLI execute research calculations. Migration checks cover relative links, attachment reads, file SHA256 identities, and lightweight execution in paths containing spaces. Document build records include thread, memory, and environment information for reproduction on systems with the required dependencies.
+
+% block-id: S3.workflow.heading
+\hypertarget{S3.workflow.heading}{}
+\subsection{Computation and document construction}
+
+% block-id: S3.workflow.p1
+\hypertarget{S3.workflow.p1}{}
+Research entry points read model inputs and solver settings and produce run records and corresponding checks. Publication entry points read saved quantities, figures and canonical LaTeX prose to generate Markdown reading editions and compile preview PDFs. Input, source, and output hashes identify each build. Individual figures retain vector curves and font information, while composites record panel identities and layout parameters. The following source table links observables in the text to specific files and acceptance records.
+
+% block-id: S3.sources
+\hypertarget{S3.sources}{}
+Source records: metrics.json; migration-receipt.json; reading-receipt.json.
+\begin{table*}[!htbp]
+\centering
+\caption{Frozen sources and integrity}
+\label{tab:S3.sources-1}
+\begingroup\footnotesize
+\begin{tabularx}{\textwidth}{>{\raggedright\arraybackslash}X>{\raggedright\arraybackslash}X}
+\toprule
+Source & SHA256\\
+\midrule
+docs/总控/当前运行索引.json & \seqsplit{3324976d4af8f58e60820a88ae978246443f78fbdd0cfa1050e86809110ae60d}\\
+outputs/prewrite\_\allowbreak closure\_\allowbreak state.json & \seqsplit{80a66afa79c321a89f730b102af0e70125f6e1655372717d6b59f470c6520e71}\\
+\bottomrule
+\end{tabularx}
+\endgroup
+\end{table*}

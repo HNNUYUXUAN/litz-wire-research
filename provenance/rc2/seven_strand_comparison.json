@@ -1,0 +1,101 @@
+{
+  "execution_status": "completed",
+  "physical_acceptance_status": "comparison_observed_convergence_not_run",
+  "aligned_conditions": {
+    "strand_count": true,
+    "strand_polygon": true,
+    "strand_diameter": true,
+    "return_inner_radius": true,
+    "return_outer_radius": true,
+    "domain_radius": true,
+    "axial_depth": true,
+    "frequency": true,
+    "total_current": true
+  },
+  "all_alignment_checks_passed": true,
+  "complex_current_relative_L2_difference": 0.00010681391422767902,
+  "bundle_Rac_relative_difference": 1.3282327279817707e-05,
+  "wolfram_Rac_ohm_per_axial_m": 0.31829031619057335,
+  "maxwell_Rac_ohm_per_axial_m": 0.318294543826723,
+  "wolfram_power_residual": 4.680023704685279e-16,
+  "maxwell_power_residual": 4.729896166215854e-15,
+  "complex_currents_RMS_A": {
+    "wolfram": [
+      {
+        "real": 2.791843854996747,
+        "imag": -0.4924744515392352
+      },
+      {
+        "real": 2.868001576227117,
+        "imag": 0.08200750020610421
+      },
+      {
+        "real": 2.868098193768905,
+        "imag": 0.08257680833381693
+      },
+      {
+        "real": 2.8680965156029177,
+        "imag": 0.08217150842572175
+      },
+      {
+        "real": 2.868029525099532,
+        "imag": 0.08201296402421408
+      },
+      {
+        "real": 2.8679702123907362,
+        "imag": 0.08192996955035128
+      },
+      {
+        "real": 2.867960121914046,
+        "imag": 0.08177570099902472
+      }
+    ],
+    "maxwell": [
+      {
+        "real": 2.79136390918998,
+        "imag": -0.4924471211523803
+      },
+      {
+        "real": 2.8681029837573604,
+        "imag": 0.08207004294470983
+      },
+      {
+        "real": 2.8681064852868405,
+        "imag": 0.08207648446024142
+      },
+      {
+        "real": 2.868115019220011,
+        "imag": 0.0820865331352111
+      },
+      {
+        "real": 2.8681065012637346,
+        "imag": 0.08207901143014758
+      },
+      {
+        "real": 2.8681029753345446,
+        "imag": 0.08206806788107425
+      },
+      {
+        "real": 2.8681021259475203,
+        "imag": 0.08206698130098417
+      }
+    ]
+  },
+  "scope": "Straight insulated seven-strand pure transport with common terminal voltage and controlled copper return. Insufficient copper area for Q2.",
+  "numerical_limits": [
+    "Independent meshes and interpolation orders differ.",
+    "Source polygons have 42 sides; return polygon segmentation may differ.",
+    "Maxwell uses one adaptive pass. Spatial and boundary convergence are not established.",
+    "Observed agreement is not an uncertainty bound or a ranking of actual Litz geometries."
+  ],
+  "inputs": [
+    {
+      "run_id": "rc2_coax42_compare_01",
+      "sha256": "57ef86e3eac865555afc62720951fd78b7ff97d667533f95a6632b32e0a00bf5"
+    },
+    {
+      "run_id": "native_restart_20261014_074719",
+      "sha256": "44e65ef4db4cbc40ea9f4b4d855f35647867daa9631e3c3abd398ed1ac59a564"
+    }
+  ]
+}

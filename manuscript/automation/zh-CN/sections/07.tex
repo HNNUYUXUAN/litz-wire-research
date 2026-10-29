@@ -1,0 +1,34 @@
+\section{当前设备集成与科研检索}
+\label{chapter:07}
+
+% block-id: auto.07.conda
+\hypertarget{auto.07.conda}{}
+2026 年 10 月 28 日的集成将项目、ANSYS 和检索依赖分置于三个 Conda 前缀。三者使用 Python 3.12.16；检索环境包含 Node.js 24.22.1，出版转换固定 Pandoc 3.13。Conda 包身份、pip 清单、项目 editable 安装和官方 MCP 提交分别记录。三个环境均已在新前缀中重建，并通过依赖及版本检查。固定提交的非 editable VCS 安装依据安装元数据确认身份；editable 安装还需检查工作树及已跟踪修改。
+
+% block-id: auto.07.platform
+\hypertarget{auto.07.platform}{}
+观测到的桌面与执行宿主为 Windows Server 2022 Datacenter，版本 21H2，构建 20348.4405。Codex、Chrome 和 Explorer 位于会话 1。Windows 10 是用户要求的部署目标；宿主观测没有确定可能存在的远程客户端操作系统。本次验证范围因此是所观测的 Server 2022 安装。Windows 10 和 Windows 11 的平台支持声明仍需各自设备证据。
+
+% block-id: auto.07.switch
+\hypertarget{auto.07.switch}{}
+候选 MCP 配置在替换现行配置前接受探测。完成备份后，项目与 Codex 配置已切换，MCP 服务已重启。原生工具返回确认了新 Conda 可执行路径、Wolfram 内核 15.0.0 和十二项解析测试通过。ANSYS 原生客户端通过 PyAEDT 1.8.0 连接到任务所属的 Student 2025.2.4 会话；断开连接与进程清理依据所记录的进程创建身份分别检查。这些检查支持当前设备上的连接与执行行为。
+
+% block-id: auto.07.student
+\hypertarget{auto.07.student}{}
+独立 Python 3.13.18 环境复现了当前 PyAEDT-MCP 上游的 Student 版本参数传递缺口。补丁将该选项传递到启动、连接与服务自动启动，同时保持默认行为。新增九项回归在基线上失败，修订后的测试集通过 141 项测试。本机 Student 的实际启动、连接和自动启动调用也已通过，并记录任务所属进程的清理。修复已作为 PR 155 提交至官方仓库，目标分支与差异已回读。当前贡献结果是实际提交；上游审查与合并分别记录。\cite{PYAEDTMCP}
+
+% block-id: auto.07.research
+\hypertarget{auto.07.research}{}
+四个技能分别负责科研检索、论文获取、开放能力复用与研究交接。广域发现优先使用腾讯元宝，来源核实使用出版社页面、学术元数据、仓库 API 与授权浏览器。固定提交、采用 MIT 许可的 academic-search 模块负责记录归一化、保留元数据冲突与获取开放全文。上游身份、版权及测试继续保留。访问能力、身份核验、软件许可与全文再分发权分别记录。\cite{ACADEMICSEARCH}
+
+% block-id: auto.07.acquisition
+\hypertarget{auto.07.acquisition}{}
+已观测的获取案例包括中文半解析利兹线电阻论文与英文绕组损耗论文。PDF 解析、题名和 DOI 匹配及 SHA256 共同确认下载文件身份。中文出版社与机构索引给出的出版日期不同，去重后仍保留各自来源。英文录用稿由 White Rose 以 CC BY 4.0 提供；中文全文保存在本地，再分发权尚未确认。授权机构 Chrome/WebVPN 会话随后通过 HTML 阅读页下载了六页 PDF，题名和 DOI 通过身份核验；机构与出版社副本分别保留哈希。获取历史同时保留受阻的下载、另一会话需要重新登录及人工验证事件。\cite{C01,ZHU2026}
+
+% block-id: auto.07.handoff
+\hypertarget{auto.07.handoff}{}
+研究交接示例先保存任务说明与参数，再运行现有单圆线 CLI 校准。十二项检查通过，包含独立复电流与焦耳功率积分。这验证了文献到现有模型任务的交接；复现所引论文的绕组模型还需要几何、局部场与收敛工作。小型 Maxwell 重跑通过端口电流和功率检查，仍保留单网格限制。工具调用成功及这些局部物理检查尚不能支持收敛后的 Litz 性能排名。
+
+% block-id: auto.07.evaluation
+\hypertarget{auto.07.evaluation}{}
+三组配对试验针对同一 DOI，使用相同的确定性校验器与权限，对照实时 Crossref 查询和经哈希核验的当日记录复用。耗时中位数分别为 1.102 s 和 0.344 ms，每次网络调用量分别为一次和零次；六次试验均通过 DOI、题名、作者及出版日期检查。测量不含缓存建立与人工核验，被测阶段没有模型调用，宿主 tokens 不可观测。更广泛的效率结论仍需匹配完整任务、模型设置与工具权限，并在独立设备验证。LaTeX 维护正文，严格的 Pandoc 转换检查段落身份、正文与公式。

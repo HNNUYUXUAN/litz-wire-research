@@ -1,0 +1,47 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Litz Research Manifest",
+  "type": "object",
+  "required": ["schema_version", "generated_at", "project_commit", "physics", "routes", "assets"],
+  "properties": {
+    "schema_version": {"type": "integer", "const": 1},
+    "generated_at": {"type": "string"},
+    "project_commit": {"type": "string"},
+    "selection_policy": {"type": "string"},
+    "physics": {"type": "object"},
+    "routes": {"type": "array", "items": {"$ref": "#/$defs/route"}},
+    "notebooks": {"type": "array"},
+    "assets": {"type": "array", "items": {"$ref": "#/$defs/asset"}},
+    "glossary_version": {"type": "string"}
+  },
+  "$defs": {
+    "route": {
+      "type": "object",
+      "required": ["route", "run_id", "execution_status", "physical_acceptance_status", "metrics", "checks", "figures", "files"],
+      "properties": {
+        "route": {"type": "string"},
+        "run_id": {"type": ["string", "null"]},
+        "source_model": {"type": ["string", "null"]},
+        "execution_status": {"type": "string"},
+        "physical_acceptance_status": {"type": "string"},
+        "process_exit": {"type": ["integer", "null"]},
+        "failure_reason": {"type": ["string", "null"]},
+        "metrics": {"type": "object"},
+        "checks": {"type": "array"},
+        "figures": {"type": "array"},
+        "files": {"type": "array"}
+      }
+    },
+    "asset": {
+      "type": "object",
+      "required": ["path", "sha256", "media_type"],
+      "properties": {
+        "path": {"type": "string"},
+        "sha256": {"type": "string", "pattern": "^[a-f0-9]{64}$"},
+        "media_type": {"type": "string"},
+        "caption_id": {"type": ["string", "null"]},
+        "source_run_id": {"type": ["string", "null"]}
+      }
+    }
+  }
+}

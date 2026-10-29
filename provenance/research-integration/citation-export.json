@@ -1,0 +1,203 @@
+{
+  "schema_version": 1,
+  "canonical_bibliography": "references/library.bib",
+  "canonical_sha256": "74067ae3682bd1eee9d9d5c43bb996b212fb5ef2c02ed30862c77169ac956c62",
+  "export_sha256": "f208ffaf314a22b30ea6216f115e6a9de005e34a3a219e0a22ee395cee610f82",
+  "keys": [
+    "C01",
+    "ZHU2026"
+  ],
+  "records": [
+    {
+      "key": "C01",
+      "doi": "10.12263/dzxb.20230001",
+      "field_sources": {
+        "title": [
+          {
+            "platform": "publisher",
+            "source_url": "https://www.ejournal.org.cn/zh/article/doi/10.12263/DZXB.20230001/",
+            "checked_at": "2026-10-28T13:11:56.415639+00:00",
+            "evidence_type": "page_text",
+            "note": "PDF and article metadata inspected"
+          },
+          {
+            "platform": "CNKI",
+            "source_url": "https://kns.cnki.net/",
+            "checked_at": "2026-10-28T13:11:56.415639+00:00",
+            "evidence_type": "page_text",
+            "note": "PDF and article metadata inspected"
+          }
+        ],
+        "authors": [
+          {
+            "platform": "publisher",
+            "source_url": "https://www.ejournal.org.cn/zh/article/doi/10.12263/DZXB.20230001/",
+            "checked_at": "2026-10-28T13:11:56.415639+00:00",
+            "evidence_type": "page_text",
+            "note": "PDF and article metadata inspected"
+          },
+          {
+            "platform": "CNKI",
+            "source_url": "https://kns.cnki.net/",
+            "checked_at": "2026-10-28T13:11:56.415639+00:00",
+            "evidence_type": "page_text",
+            "note": "PDF and article metadata inspected"
+          }
+        ],
+        "year": [
+          {
+            "platform": "publisher",
+            "source_url": "https://www.ejournal.org.cn/zh/article/doi/10.12263/DZXB.20230001/",
+            "checked_at": "2026-10-28T13:11:56.415639+00:00",
+            "evidence_type": "page_text",
+            "note": "PDF and article metadata inspected"
+          },
+          {
+            "platform": "CNKI",
+            "source_url": "https://kns.cnki.net/",
+            "checked_at": "2026-10-28T13:11:56.415639+00:00",
+            "evidence_type": "page_text",
+            "note": "PDF and article metadata inspected"
+          }
+        ],
+        "doi": [
+          {
+            "platform": "publisher",
+            "source_url": "https://www.ejournal.org.cn/zh/article/doi/10.12263/DZXB.20230001/",
+            "checked_at": "2026-10-28T13:11:56.415639+00:00",
+            "evidence_type": "page_text",
+            "note": "PDF and article metadata inspected"
+          },
+          {
+            "platform": "CNKI",
+            "source_url": "https://kns.cnki.net/",
+            "checked_at": "2026-10-28T13:11:56.415639+00:00",
+            "evidence_type": "page_text",
+            "note": "PDF and article metadata inspected"
+          }
+        ],
+        "publication_date": [
+          {
+            "platform": "publisher",
+            "source_url": "https://www.ejournal.org.cn/zh/article/doi/10.12263/DZXB.20230001/",
+            "checked_at": "2026-10-28T13:11:56.415639+00:00",
+            "evidence_type": "page_text",
+            "note": "PDF and article metadata inspected"
+          },
+          {
+            "platform": "CNKI",
+            "source_url": "https://kns.cnki.net/",
+            "checked_at": "2026-10-28T13:11:56.415639+00:00",
+            "evidence_type": "page_text",
+            "note": "PDF and article metadata inspected"
+          }
+        ]
+      },
+      "conflicts": {},
+      "source_platforms": [
+        "publisher",
+        "CNKI"
+      ]
+    },
+    {
+      "key": "ZHU2026",
+      "doi": "10.1109/tte.2025.3610369",
+      "field_sources": {
+        "title": [
+          {
+            "platform": "Crossref",
+            "source_url": "https://api.crossref.org/works/10.1109%2Ftte.2025.3610369",
+            "checked_at": "2026-10-28T13:11:56.415639+00:00",
+            "evidence_type": "page_text",
+            "note": "PDF and article metadata inspected"
+          },
+          {
+            "platform": "White Rose",
+            "source_url": "https://eprints.whiterose.ac.uk/id/eprint/234524/",
+            "checked_at": "2026-10-28T13:11:56.415639+00:00",
+            "evidence_type": "page_text",
+            "note": "PDF and article metadata inspected"
+          }
+        ],
+        "authors": [
+          {
+            "platform": "Crossref",
+            "source_url": "https://api.crossref.org/works/10.1109%2Ftte.2025.3610369",
+            "checked_at": "2026-10-28T13:11:56.415639+00:00",
+            "evidence_type": "page_text",
+            "note": "PDF and article metadata inspected"
+          },
+          {
+            "platform": "White Rose",
+            "source_url": "https://eprints.whiterose.ac.uk/id/eprint/234524/",
+            "checked_at": "2026-10-28T13:11:56.415639+00:00",
+            "evidence_type": "page_text",
+            "note": "PDF and article metadata inspected"
+          }
+        ],
+        "year": [
+          {
+            "platform": "Crossref",
+            "source_url": "https://api.crossref.org/works/10.1109%2Ftte.2025.3610369",
+            "checked_at": "2026-10-28T13:11:56.415639+00:00",
+            "evidence_type": "page_text",
+            "note": "PDF and article metadata inspected"
+          },
+          {
+            "platform": "White Rose",
+            "source_url": "https://eprints.whiterose.ac.uk/id/eprint/234524/",
+            "checked_at": "2026-10-28T13:11:56.415639+00:00",
+            "evidence_type": "page_text",
+            "note": "PDF and article metadata inspected"
+          }
+        ],
+        "doi": [
+          {
+            "platform": "Crossref",
+            "source_url": "https://api.crossref.org/works/10.1109%2Ftte.2025.3610369",
+            "checked_at": "2026-10-28T13:11:56.415639+00:00",
+            "evidence_type": "page_text",
+            "note": "PDF and article metadata inspected"
+          },
+          {
+            "platform": "White Rose",
+            "source_url": "https://eprints.whiterose.ac.uk/id/eprint/234524/",
+            "checked_at": "2026-10-28T13:11:56.415639+00:00",
+            "evidence_type": "page_text",
+            "note": "PDF and article metadata inspected"
+          }
+        ]
+      },
+      "conflicts": {},
+      "source_platforms": [
+        "Crossref",
+        "White Rose"
+      ]
+    }
+  ],
+  "normalization_conflicts": [
+    {
+      "result_index": 0,
+      "field": "publication_date",
+      "kept_value": "2023-12-25",
+      "values": [
+        {
+          "value": "2023-12-25",
+          "source_indices": [
+            0
+          ]
+        },
+        {
+          "value": "2023-12-15",
+          "source_indices": [
+            1
+          ]
+        }
+      ],
+      "source_indices": [
+        0,
+        1
+      ]
+    }
+  ]
+}

@@ -1,0 +1,34 @@
+[
+  {
+    "id": "overview-en-final",
+    "prompt": "Edit this image to create the final English scientific research overview. Keep the white, copper and blue-gray illustration style and the main title 'Litz Wire Research' and subtitle 'Agent-driven modeling and simulation'. Remove ALL other text throughout the image, including all notebook writing, window labels, server labels, captions and the bottom performance slogan. Replace the entire server-network cluster with a single small desktop computer and a simple gear icon. Only four small labels may be present beneath the four main groups, exactly: 'Question', 'Agent + MCP', 'Models', 'Evidence'. The paper and notebook pages should contain thin abstract ruled lines without words or graphs implying results. Preserve the strand illustration and sketch mesh. No claims about performance, no other text. Make the composition calm and clean.",
+    "tool": "image_gen",
+    "review": "Text and illustration inspected in generated output; selected for conceptual repository overview.",
+    "artifact": "publications/assets/overview/en/project.png",
+    "sha256": "8d46dfd222036df47dcbe0c59e93c11d752e113c4474d39cf7d50e6b64ab0f26"
+  },
+  {
+    "id": "overview-zh-final",
+    "prompt": "Localize this exact illustration to Simplified Chinese, preserving composition, artwork, spacing, palette, and every non-text element. Replace only these text strings: 'Litz Wire Research' -> 'Litz 线研究'; 'Agent-driven modeling and simulation' -> '智能体驱动的建模与仿真'; 'Question' -> '研究问题'; 'Agent + MCP' -> '智能体 + MCP'; 'Models' -> '物理模型'; 'Evidence' -> '研究证据'. All Chinese text must be correct and legible in an elegant academic serif style. Add no other text or marks.",
+    "tool": "image_gen",
+    "review": "Text and illustration inspected in generated output; selected for conceptual repository overview.",
+    "artifact": "publications/assets/overview/zh-CN/project.png",
+    "sha256": "fd7e5d2805b1f51322b341c91a0ac17d6c1b29932f364b893d91f6b80106f781"
+  },
+  {
+    "id": "sketch-en-final",
+    "prompt": "Edit this scientific sketch to create an English research-notebook illustration. Preserve the copper bundle, strand cross section, notebook and blue-gray mesh sketch, white paper background and refined pencil-watercolor style. Add only the heading 'From geometry to a research model' in a modest dark blue serif typeface along the upper right margin. Add only these three small labels near the relevant sketches: 'Strand geometry', 'Discretization', 'Notebook'. Keep all other areas free of text. Do not add numerical results, color scales, equations, performance claims, or logos. One cohesive wide landscape illustration.",
+    "tool": "image_gen",
+    "review": "Text and illustration inspected in generated output; selected for conceptual repository overview.",
+    "artifact": "publications/assets/overview/en/research-sketch.png",
+    "sha256": "fb7ce2ee788b664331eb68e21143a9fb704e8e1d1aaf4ee87f42e1a0fd2167b1"
+  },
+  {
+    "id": "sketch-zh-final",
+    "prompt": "Translate only the visible text in this illustration to Simplified Chinese, preserving all artwork and composition exactly. 'From geometry to a research model' becomes '从几何构造到研究模型'; 'Strand geometry' becomes '股线几何'; 'Discretization' becomes '数值离散'; 'Notebook' becomes '研究笔记'. Use clear elegant Chinese serif text at the same visual scale. No additional words, numbers, diagrams or logos.",
+    "tool": "image_gen",
+    "review": "Text and illustration inspected in generated output; selected for conceptual repository overview.",
+    "artifact": "publications/assets/overview/zh-CN/research-sketch.png",
+    "sha256": "b8bf0fa9e867881d76b56608475149001c4482828a419efd0e9a3b3b682408d6"
+  }
+]

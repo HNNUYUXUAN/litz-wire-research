@@ -1,0 +1,39 @@
+{
+  "Wolfram": "15.0.0, Windows-x86-64",
+  "AgentTools": {
+    "repository": "https://github.com/WolframResearch/AgentTools",
+    "version": "2.2.0",
+    "commit": "9c99e2da5286c2ff7ac2298956107cd9334c6e90",
+    "license": "MIT",
+    "wolfram_minimum": "14.3",
+    "validated_kernel": "15.0.0"
+  },
+  "Ansys": {
+    "python": "3.12.10",
+    "pyaedt": "1.8.0",
+    "aedt": "2025.2.4",
+    "model_units": "mm",
+    "model_depth": "1000mm",
+    "frequency_setting": "200000.0Hz",
+    "solver_cores": 4
+  },
+  "Ansys_MCP": {
+    "repository": "https://github.com/ansys/pyaedt-mcp",
+    "version": "0.2.dev0",
+    "commit": "80ae7c3cb47e5de7b744a2898061510299d3bcef",
+    "license": "Apache-2.0",
+    "python_minimum": "3.12",
+    "pyaedt": "1.8.0",
+    "ansys_common_mcp": "0.3.5",
+    "fastmcp": "4.0.10",
+    "mcp_server_sdk": "2.3.0"
+  },
+  "project_runtime": "automation/mcp/project-environment.lock",
+  "Ansys_runtime": "automation/mcp/ansys-environment.lock",
+  "hardware_budget": {
+    "logical_processors": 8,
+    "task_memory_GiB": 24,
+    "system_free_GiB": 8,
+    "Student_solve_cores": 4
+  }
+}

@@ -1,0 +1,76 @@
+{
+  "pairs": [
+    {
+      "en": "automation/workflows/compare-solvers/README.md",
+      "zh-CN": "automation/workflows/compare-solvers/README.zh-CN.md",
+      "sha256": {
+        "README.md": "2a4f864ea4428a233b3cc357698f4f150298810fb0bbc3d3cac6554ebb6e9129",
+        "README.zh-CN.md": "6b37df0ab4cc0cdfa12132416ef721ea0e82e6736e2d1a6b4a57b46d43950b66"
+      }
+    },
+    {
+      "en": "automation/workflows/diagnose/README.md",
+      "zh-CN": "automation/workflows/diagnose/README.zh-CN.md",
+      "sha256": {
+        "README.md": "529b34fdc30abccfd88ee4be139a609dff006c32333fc12572673c9657ef736b",
+        "README.zh-CN.md": "489481225c8c9dc39e375d10c7fcc38334c4b1118c4ddf7f250a1f7df2314ae0"
+      }
+    },
+    {
+      "en": "automation/workflows/extend-model/README.md",
+      "zh-CN": "automation/workflows/extend-model/README.zh-CN.md",
+      "sha256": {
+        "README.md": "8bf87d4b1b0961f3045e1012561587b8e98b8a555d66912f949e4e0da1ed9748",
+        "README.zh-CN.md": "e7d9fa8e095968c061b6e866d052081cf57aa72b930a8b56bcf0e078c1462397"
+      }
+    },
+    {
+      "en": "automation/workflows/report/README.md",
+      "zh-CN": "automation/workflows/report/README.zh-CN.md",
+      "sha256": {
+        "README.md": "7fc04e12080811eb6d2135262bba9dd9c0bf78914d29e57e6d295aed687371b5",
+        "README.zh-CN.md": "d274bc980bbaa8a77f36a9c2b86fedf309002fd93624eaa9962fa45d4525933a"
+      }
+    },
+    {
+      "en": "automation/workflows/reproduce/README.md",
+      "zh-CN": "automation/workflows/reproduce/README.zh-CN.md",
+      "sha256": {
+        "README.md": "466d1ae169b04152dba7c0859a87c4a7c62810ae4e374439e386e86fcd02f1b2",
+        "README.zh-CN.md": "cb08421a280db69e26eab8ed0e8dc929bd66ec276bec12d6dcaa14a931dc1180"
+      }
+    },
+    {
+      "en": "automation/harnesses/codex/README.md",
+      "zh-CN": "automation/harnesses/codex/README.zh-CN.md",
+      "sha256": {
+        "README.md": "98436f65c1065359ef246242acdcb042f34a3eca1ff3af77f4698fadf4e062c3",
+        "README.zh-CN.md": "56de229c355295880de0a5b10761a3f7ae3b29c7e27f7b4fff22a798eade0b5f"
+      }
+    },
+    {
+      "en": "automation/harnesses/generic/README.md",
+      "zh-CN": "automation/harnesses/generic/README.zh-CN.md",
+      "sha256": {
+        "README.md": "5b245956a193e72ec4443c1338632600fedc2c6a0cbab1e8846ffac55a0a1162",
+        "README.zh-CN.md": "5a3b4dff0886e6ee90c871727c1934a9ecd88981ce457890847bf3dea2df6de4"
+      }
+    },
+    {
+      "en": "automation/mcp/ansys/README.md",
+      "zh-CN": "automation/mcp/ansys/README.zh-CN.md",
+      "sha256": {
+        "README.md": "37890b0f3dac98dede85e31068b886494de21b27d37761e2ba294ebce7d318bb",
+        "README.zh-CN.md": "b5e2b92d3423ed4bcd31b56c7e6e46cb2595378f22aef4b2fa98213cd5e37219"
+      }
+    },
+    {
+      "en": "automation/mcp/wolfram/README.md",
+      "zh-CN": "automation/mcp/wolfram/README.zh-CN.md",
+      "sha256": {
+        "README.md": "4b3125dbed0064fe8b4854137b73d49fdfaf0e996b63ec62980a6083649eeda8",
+        "README.zh-CN.md": "ba9a70440cc84a736872abc033e8a83cd2912881ff0fb3e3b177e6cea47b345b"
+      }
+    }
+  ]
+}

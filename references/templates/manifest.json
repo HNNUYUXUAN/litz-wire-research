@@ -1,0 +1,23 @@
+[
+  {
+    "name": "ieee-transactions",
+    "url": "https://github.com/bardsoftware/template-ieee-transactions",
+    "commit": "f90a1b28035a7e7530cf313267ea3487ee68d5df",
+    "files": [
+      {
+        "path": "changelog.txt",
+        "sha256": "1bc3aa96aae7c5a8d6f00d11467088296bab549f5b2e48229d3b32905f1f098f"
+      },
+      {
+        "path": "IEEEtran.cls",
+        "sha256": "c972aca108fda004c3514d63658e02816da2e54d9a1451e870b9bd970e003f55"
+      },
+      {
+        "path": "README",
+        "sha256": "99de53a65e058cc1351e6afe6e3fada2b7c51ef5ddc2267d9b91ca6808d7f3e6"
+      }
+    ],
+    "modifications": "Class and accompanying copyright records retain upstream bytes.",
+    "license": "LPPL-1.3-or-later"
+  }
+]

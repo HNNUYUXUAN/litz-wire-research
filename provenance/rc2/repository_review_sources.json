@@ -1,0 +1,12 @@
+{
+  "source": "research/GitHub工具核查与48小时路线_历史参考.md",
+  "scope": "read-only historical upstream review; metadata excerpt; no third-party code adopted from these repositories",
+  "fixed_commits": {
+    "https://github.com/otvam/litz_wire_losses_twisting": "3a7ed32f2e6c669c819b9b292077ac21c3945ede",
+    "https://github.com/ethz-pes/litz_wire_losses_fem_matlab": "952503bee97c400de667acb7c7c850c6fe9a62a1",
+    "https://github.com/upb-lea/FEM_Magnetics_Toolbox": "05425e56fe9f6077e565b0950e877b035d906f15",
+    "https://github.com/ansys/pyaedt": "51eee6b8b2b4b29c3f46b4159e20bac006bc275e",
+    "https://github.com/louisepb/TexGen": "99eb6db4ea72679ccbdfea01a3ce2f72fee07b8a"
+  },
+  "pypeec_reviewed_tag": "v5.8.0"
+}

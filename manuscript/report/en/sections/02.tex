@@ -1,0 +1,65 @@
+\section{Physical Conventions and Model Hierarchy}
+\label{chapter:02}
+
+% block-id: 02.conventions.heading
+\hypertarget{02.conventions.heading}{}
+\subsection{Operating conditions and comparison quantities}
+
+% block-id: 02.conventions.p1
+\hypertarget{02.conventions.p1}{}
+Calculations use SI units, the exp(jωt) time convention, and RMS phasors. Copper at 20 °C has conductivity σ=5.8×10⁷ S/m and relative permeability μr=1. The principal transport condition is 200 kHz and 20 A RMS, with zero independent imposed field. Strands are insulated along their lengths and connected in parallel at their ends. Resistance and loss are normalized by axial length; actual strand arc lengths enter copper volume and DC resistance separately. Finite-segment terminal voltage is measured in V, while the two-dimensional axial terminal field is measured in V/m, with the chosen axial length connecting the two.
+
+% block-id: 02.conventions.p2
+\hypertarget{02.conventions.p2}{}
+The original Q1 round wire, 2 mm in diameter, provides an analytical calibration. Its copper area is 3.141593 mm² and its mean DC current density at 20 A is 6.366198 A/mm², exceeding the specified limit of 4 A/mm². Q2 therefore requires at least 5 mm² copper cross-section. For 640 strands of copper diameter 0.100 mm, the ideal circular area is 5.026548 mm². Each strand in the two-dimensional model is represented by a 64-sided polygon, giving an actual copper area of \metric{coax_area} mm². Equal-copper comparisons use this discrete area so that the electromagnetic reference incorporates the same geometric approximation.
+
+% block-id: 02.conventions.p3
+\hypertarget{02.conventions.p3}{}
+For unequal strand arc lengths, parallel conductances determine DC resistance and the sum of strand area–length products determines copper volume, as in \eqref{eq:E01}. We examine absolute AC resistance, Rac/Rdc, copper loss, and complex current sharing. Equation \eqref{eq:E02} gives RMS Joule loss and defines resistance from copper dissipation under pure transport excitation. The supplementary RT0 case uses an independent imposed field and zero net transport, so its absorbed power is reported separately as imposed-field loss.
+
+% block-id: 02.maxwell.heading
+\hypertarget{02.maxwell.heading}{}
+\subsection{Maxwell}
+
+% block-id: 02.maxwell.p1
+\hypertarget{02.maxwell.p1}{}
+In the magnetoquasistatic approximation, conduction dominates displacement current and charge continuity gives \(\nabla\)·J=0. With exp(jωt), Faraday’s law is \(\nabla\)×E=−jωB and Ohm’s law is J=σE. Materials, excitation, return, and boundary conditions define a boundary-value problem. Mapping its comparable observables to the next discretization establishes the verification sequence used here.
+
+% block-id: 02.hierarchy.heading
+\hypertarget{02.hierarchy.heading}{}
+\subsection{Model hierarchy and verification relationships}
+
+% block-id: 02.hierarchy.p1
+\hypertarget{02.hierarchy.p1}{}
+The models are related as shown in Fig.~\ref{fig:model_hierarchy}. Analytical round-wire and two-dimensional diffusion models share the long, straight internal-field problem, allowing radial current and internal resistance to be compared. The two-dimensional common-terminal model additionally retains intrastand distributions, interstrand currents, and a controlled return, supporting field–circuit analysis of a specified cross-section. Longitudinal PEEC uses a finite-length partial-inductance kernel to examine the effect of length on axial currents. The three-component RT0 model uses imposed-field absorption in a cuboid to test three-dimensional continuity and discrete operators. Transposition paths and actual end regions require corresponding longitudinal or transverse degrees of freedom in subsequent structural research.
+
+% block-id: 02.hierarchy.p2
+\hypertarget{02.hierarchy.p2}{}
+Verification comprises equation solution, physical constraints, power consistency, and parameter sensitivity. Targets are 10⁻⁸ for true linear residuals, common-terminal conditions, and total complex current; 0.1\% for independent power balance; and 1\% for changes in mesh, segmentation, boundary, and length. Analytical reference values and current/power integrals use thresholds of 10⁻⁶ and 10⁻⁸, respectively. The RT0 GMRES true-residual target is 10⁻¹¹, its quadrature-sensitivity target is 0.1\%, and same-model CPU/GPU matrix and complex-current comparisons use 10⁻¹⁰.
+
+% block-id: 02.hierarchy.p3
+\hypertarget{02.hierarchy.p3}{}
+These checks answer different questions. Residuals measure the accuracy of the discrete-system solution, power balance tests field–circuit and postprocessing consistency, and parameter sensitivity describes changes over specified perturbations. Model omissions, boundary approximations, and experimental deviations require their own evidence. We therefore distinguish numerical checks from physical applicability and interpret finite sensitivity studies as local validation rather than a common upper bound on total model error.
+
+% block-id: 02.equation.E01
+\hypertarget{02.equation.E01}{}
+\hypertarget{E01}{}
+\begin{equation}
+\begin{gathered}
+R_{\mathrm{dc}}=\left(\sum_{k=1}^{N}\frac{\sigma A_k}{\ell_k}\right)^{-1} \\
+V_{\mathrm{Cu}}=\sum_{k=1}^{N}A_k\ell_k
+\end{gathered}
+\tag{1}\label{eq:E01}
+\end{equation}
+
+% block-id: 02.equation.E02
+\hypertarget{02.equation.E02}{}
+\hypertarget{E02}{}
+\begin{equation}
+\begin{gathered}
+P_{\mathrm{Cu}}=\int_{\Omega_{\mathrm{Cu}}}|\mathbf J|^2/\sigma\,\mathrm d\Omega \\
+R_{\mathrm{ac}}=P_{\mathrm{Cu}}/|I_t|^2 \\
+r_{\mathrm{ac}}=R_{\mathrm{ac}}/L_z
+\end{gathered}
+\tag{2}\label{eq:E02}
+\end{equation}

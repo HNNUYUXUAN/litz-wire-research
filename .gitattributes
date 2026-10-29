@@ -1,0 +1,5 @@
+# Checkout preserves byte identities used by scientific provenance and build hashes.
+* -text
+*.pdf binary
+*.wxf binary
+*.png binary

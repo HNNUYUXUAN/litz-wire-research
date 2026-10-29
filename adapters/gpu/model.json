@@ -1,0 +1,33 @@
+{
+  "route": "gpu",
+  "model_id": "gpu",
+  "titles": {
+    "en": "GPU execution and CPU comparison",
+    "zh-CN": "GPU 执行与 CPU 对照"
+  },
+  "equation": "Same-input double-precision numerical comparison",
+  "references": [
+    "CUDA"
+  ],
+  "parameters": {
+    "matrix_size": 128,
+    "fft_size": 4096
+  },
+  "tutorial_instructions": {
+    "en": "Run a small GPU/CPU comparison; retain toolchain and numerical error.",
+    "zh-CN": "运行小型 GPU/CPU 对照，保存工具链和数值误差。"
+  },
+  "fixed_conventions": "SI; exp(+j omega t); RMS; sigma=58 MS/m; mu_r=1; 20 C",
+  "evidence_dataset": "gpu",
+  "derivation": {
+    "en": [
+      "Execute the same small double-precision operations on CPU and GPU: matrix multiplication, a complex linear system with known solution and true residual, FFT and inverse roundtrip.",
+      "The comparison verifies arithmetic and runtime equivalence for the stated inputs. It does not establish a new physical solution, large-scale convergence or a performance advantage for a different workload."
+    ],
+    "zh-CN": [
+      "在 CPU 与 GPU 上执行相同的小型双精度运算：矩阵乘法、已知解复线性系统及真实残差、FFT 与逆变换回读。",
+      "对照验收当前输入的算术和运行时一致性；新物理场解、大规模收敛和其他负载性能须分别验证。"
+    ]
+  },
+  "history": "data/evidence/v1.0.0-rc.1/; litz-research data fetch gpu"
+}

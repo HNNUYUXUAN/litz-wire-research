@@ -1,0 +1,5 @@
+interface:
+  display_name: "paper-acquire"
+  short_description: "Scientific research workflow with verifiable evidence"
+  default_prompt: "Use paper-acquire to complete this research task with saved inputs and source evidence."
+

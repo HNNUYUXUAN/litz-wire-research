@@ -1,0 +1,1389 @@
+{
+  "source_manifest": "manuscript\\publication.json",
+  "source_sha256": "e735ecaa20bd29fd2bb157a5eb9272031998ca8c21ee1b379b05a549b33bb93f",
+  "reviewed_structure_sha256": "1cf46df378aefa17fff3a2ebfe4f15dac9588638b316b69b2e20d7e3150b9ae6",
+  "chapters": [
+    {
+      "source": "manuscript/report/zh-CN/01.md",
+      "sha256": "5d993d38f7801002ab79c54bd7382366f136ee871b28f8e82ab685e91c6e1642",
+      "target": "manuscript/report/zh-CN/sections/01.tex",
+      "block_ids": [
+        "01.introduction.heading",
+        "01.introduction.p1",
+        "01.introduction.p2",
+        "01.introduction.p3",
+        "01.scope.heading",
+        "01.scope.p1",
+        "01.figure.model_hierarchy",
+        "01.automation.p1"
+      ]
+    },
+    {
+      "source": "manuscript/report/zh-CN/02.md",
+      "sha256": "e056c60aedb92e7703530aea474711da0131c3e67e083d00f7bee57f01563a1e",
+      "target": "manuscript/report/zh-CN/sections/02.tex",
+      "block_ids": [
+        "02.conventions.heading",
+        "02.conventions.p1",
+        "02.conventions.p2",
+        "02.conventions.p3",
+        "02.maxwell.heading",
+        "02.maxwell.p1",
+        "02.hierarchy.heading",
+        "02.hierarchy.p1",
+        "02.hierarchy.p2",
+        "02.hierarchy.p3",
+        "02.equation.E01",
+        "02.equation.E02"
+      ]
+    },
+    {
+      "source": "manuscript/report/zh-CN/03.md",
+      "sha256": "0863de1aa9343b4be16f745505add712bbc3ebb96b7dcbc1285fe655fc6320f0",
+      "target": "manuscript/report/zh-CN/sections/03.tex",
+      "block_ids": [
+        "03.round_derivation.heading",
+        "03.round_derivation.p1",
+        "03.analytic.heading",
+        "03.analytic.p1",
+        "03.analytic.p2",
+        "03.equation.E03",
+        "03.figure.q1_profile",
+        "03.figure.q1_cross_section",
+        "03.figure.q1_fem_error"
+      ]
+    },
+    {
+      "source": "manuscript/report/zh-CN/04.md",
+      "sha256": "18c2e3cdcad261cd2dd92ba066f7fa4008fd5747f35a3c9009bebce7ce8fdd54",
+      "target": "manuscript/report/zh-CN/sections/04.tex",
+      "block_ids": [
+        "04.common.heading",
+        "04.common.p1",
+        "04.common.p2",
+        "04.common.p3",
+        "04.sharing_derivation.heading",
+        "04.sharing_derivation.p1",
+        "04.coax_results.heading",
+        "04.coax_results.p1",
+        "04.coax_results.p2",
+        "04.interpretation.heading",
+        "04.interpretation.p1",
+        "04.quantitative.p1",
+        "04.equation.E04",
+        "04.equation.E05",
+        "04.figure.common_terminal",
+        "04.figure.coax640_currents",
+        "04.figure.coax640_fields",
+        "04.figure.coax640_mesh"
+      ]
+    },
+    {
+      "source": "manuscript/report/zh-CN/05.md",
+      "sha256": "28073acd6d7f06be00655b0fc96bb9e40f60503d865d1856603cd809f4563857",
+      "target": "manuscript/report/zh-CN/sections/05.tex",
+      "block_ids": [
+        "05.geometry.heading",
+        "05.geometry.p1",
+        "05.geometry.p2",
+        "05.dtm_derivation.heading",
+        "05.dtm_derivation.p1",
+        "05.report_geometry.heading",
+        "05.report_geometry.p1",
+        "05.report_geometry.p2",
+        "05.equation.E06",
+        "05.figure.geometry_comparison"
+      ]
+    },
+    {
+      "source": "manuscript/report/zh-CN/06.md",
+      "sha256": "efec925b78f5c8260d9585f233c3240ecde8853a47f36d68161b1e277f96849c",
+      "target": "manuscript/report/zh-CN/sections/06.tex",
+      "block_ids": [
+        "06.peec_method.heading",
+        "06.peec_method.p1",
+        "06.peec_method.p2",
+        "06.peec_method.p3",
+        "06.peec_derivation.heading",
+        "06.peec_derivation.p1",
+        "06.peec_results.heading",
+        "06.peec_results.p1",
+        "06.peec_results.p2",
+        "06.peec_results.p3",
+        "06.equation.E08",
+        "06.figure.peec_cross_section",
+        "06.figure.peec_length",
+        "06.figure.peec_sensitivity"
+      ]
+    },
+    {
+      "source": "manuscript/report/zh-CN/07.md",
+      "sha256": "e375eee2627a397a71b93d0e6add2bebe99209fa95faec37019779ac7c070b1f",
+      "target": "manuscript/report/zh-CN/sections/07.tex",
+      "block_ids": [
+        "07.rt0.p1",
+        "07.rt0.p2",
+        "07.rt0.p3",
+        "07.figure.rt0_sections",
+        "07.figure.rt0_vectors",
+        "07.figure.rt0_spatial"
+      ]
+    },
+    {
+      "source": "manuscript/report/zh-CN/08.md",
+      "sha256": "149da0a70dfb4a5de5212ff1caaaa51e826c6e356706f24297e1fbb9f1132761",
+      "target": "manuscript/report/zh-CN/sections/08.tex",
+      "block_ids": [
+        "08.aphi.p1",
+        "08.aphi.p2",
+        "08.equation.E07",
+        "08.figure.aphi_preserved",
+        "08.figure.aphi_gates"
+      ]
+    },
+    {
+      "source": "manuscript/report/zh-CN/09.md",
+      "sha256": "edd9636d82b214da376d997e6b463ecc27d6cbd8aa3cf3708127e7aa28fb71b4",
+      "target": "manuscript/report/zh-CN/sections/09.tex",
+      "block_ids": [
+        "09.ansys.p1",
+        "09.ansys.p2",
+        "09.figure.ansys_seven_current",
+        "09.figure.ansys_limits",
+        "09.ansys.rc2"
+      ]
+    },
+    {
+      "source": "manuscript/report/zh-CN/10.md",
+      "sha256": "4052ab9168bff53b17ef28aec67a09d430a58e7d505cf16113ec428a3a272ad7",
+      "target": "manuscript/report/zh-CN/sections/10.tex",
+      "block_ids": [
+        "10.compute.heading",
+        "10.compute.p1",
+        "10.compute.p2",
+        "10.workflow.heading",
+        "10.workflow.p1",
+        "10.figure.gpu_equivalence",
+        "10.figure.resource_memory"
+      ]
+    },
+    {
+      "source": "manuscript/report/zh-CN/11.md",
+      "sha256": "44f1e427e3e0b3453d218df325c886c7c3d516fab50045411972049cb4de3c92",
+      "target": "manuscript/report/zh-CN/sections/11.tex",
+      "block_ids": [
+        "11.discussion.heading",
+        "11.discussion.p1",
+        "11.discussion.p2",
+        "11.discussion.p3",
+        "11.recommendations.heading",
+        "11.recommendations.p1"
+      ]
+    },
+    {
+      "source": "manuscript/report/zh-CN/12.md",
+      "sha256": "1d2cafcb29c405076615c6944ab807df4d0e934f95fd35282443449c7f70915d",
+      "target": "manuscript/report/zh-CN/sections/12.tex",
+      "block_ids": [
+        "12.conclusions.p1",
+        "12.conclusions.p2",
+        "12.automation.conclusion"
+      ]
+    },
+    {
+      "source": "manuscript/report/zh-CN/A.md",
+      "sha256": "ec845bf83dacf079b0079634f2d3babdd3a0c0246eb3d8ae7a202babe822b8a7",
+      "target": "manuscript/report/zh-CN/sections/A.tex",
+      "block_ids": [
+        "A.report_derivation.heading",
+        "A.report_derivation.p1",
+        "A.report_derivation.p2",
+        "A.report_derivation.p3",
+        "A.sharing_derivation.heading",
+        "A.sharing_derivation.p1",
+        "A.method.sources"
+      ]
+    },
+    {
+      "source": "manuscript/report/zh-CN/B.md",
+      "sha256": "6bbc79f2c2240f4ef0af7f2d1fde88f65a0690848ec01ac3328a7e2e0e37070d",
+      "target": "manuscript/report/zh-CN/sections/B.tex",
+      "block_ids": [
+        "B.triangle_derivation.heading",
+        "B.triangle_derivation.p1",
+        "B.report_rt0.heading",
+        "B.report_rt0.p1",
+        "B.report_rt0.p2",
+        "B.equation.E09"
+      ]
+    },
+    {
+      "source": "manuscript/report/zh-CN/C.md",
+      "sha256": "2d61cd8ceb7f840dbb8e8b0cb8338a6ff158a62006d1d2f59933ed35fa955cf6",
+      "target": "manuscript/report/zh-CN/sections/C.tex",
+      "block_ids": [
+        "C.report_repro.p1",
+        "C.report_repro.p2",
+        "C.report_repro.p3",
+        "C.tables"
+      ]
+    },
+    {
+      "source": "manuscript/report/zh-CN/D.md",
+      "sha256": "a2f14720492219f255ca9b2d415ee82b30e760f75407bd53dcf171cda55951fd",
+      "target": "manuscript/report/zh-CN/sections/D.tex",
+      "block_ids": [
+        "D.workflow.p1",
+        "D.sources",
+        "D.automation.heading",
+        "D.automation.p1",
+        "D.automation.p2"
+      ]
+    },
+    {
+      "source": "manuscript/report/en/01.md",
+      "sha256": "5ab788ca318aafcdd1b3e8f412c146e8dd1e8d00f6fe2e4e55bb0003f22e89e7",
+      "target": "manuscript/report/en/sections/01.tex",
+      "block_ids": [
+        "01.introduction.heading",
+        "01.introduction.p1",
+        "01.introduction.p2",
+        "01.introduction.p3",
+        "01.scope.heading",
+        "01.scope.p1",
+        "01.figure.model_hierarchy",
+        "01.automation.p1"
+      ]
+    },
+    {
+      "source": "manuscript/report/en/02.md",
+      "sha256": "a804c50139ee72ce8970fb112d12386c56edb09620d2de54e39be70baf23e462",
+      "target": "manuscript/report/en/sections/02.tex",
+      "block_ids": [
+        "02.conventions.heading",
+        "02.conventions.p1",
+        "02.conventions.p2",
+        "02.conventions.p3",
+        "02.maxwell.heading",
+        "02.maxwell.p1",
+        "02.hierarchy.heading",
+        "02.hierarchy.p1",
+        "02.hierarchy.p2",
+        "02.hierarchy.p3",
+        "02.equation.E01",
+        "02.equation.E02"
+      ]
+    },
+    {
+      "source": "manuscript/report/en/03.md",
+      "sha256": "0ed3bc52445106c48fec90b4fc65d3359076067c218c1021616a680d55f499fa",
+      "target": "manuscript/report/en/sections/03.tex",
+      "block_ids": [
+        "03.round_derivation.heading",
+        "03.round_derivation.p1",
+        "03.analytic.heading",
+        "03.analytic.p1",
+        "03.analytic.p2",
+        "03.equation.E03",
+        "03.figure.q1_profile",
+        "03.figure.q1_cross_section",
+        "03.figure.q1_fem_error"
+      ]
+    },
+    {
+      "source": "manuscript/report/en/04.md",
+      "sha256": "eaf7844c9a96610347fb1cccfbb8c442fa3de36008b4b3a3445fb20b20ba0f29",
+      "target": "manuscript/report/en/sections/04.tex",
+      "block_ids": [
+        "04.common.heading",
+        "04.common.p1",
+        "04.common.p2",
+        "04.common.p3",
+        "04.sharing_derivation.heading",
+        "04.sharing_derivation.p1",
+        "04.coax_results.heading",
+        "04.coax_results.p1",
+        "04.coax_results.p2",
+        "04.interpretation.heading",
+        "04.interpretation.p1",
+        "04.quantitative.p1",
+        "04.equation.E04",
+        "04.equation.E05",
+        "04.figure.common_terminal",
+        "04.figure.coax640_currents",
+        "04.figure.coax640_fields",
+        "04.figure.coax640_mesh"
+      ]
+    },
+    {
+      "source": "manuscript/report/en/05.md",
+      "sha256": "d5460ea20fadd6782e89b81cb6411f5dfce5a2ec234f3adfe8d8c4d50078d71a",
+      "target": "manuscript/report/en/sections/05.tex",
+      "block_ids": [
+        "05.geometry.heading",
+        "05.geometry.p1",
+        "05.geometry.p2",
+        "05.dtm_derivation.heading",
+        "05.dtm_derivation.p1",
+        "05.report_geometry.heading",
+        "05.report_geometry.p1",
+        "05.report_geometry.p2",
+        "05.equation.E06",
+        "05.figure.geometry_comparison"
+      ]
+    },
+    {
+      "source": "manuscript/report/en/06.md",
+      "sha256": "844ba9b59cf12a759b8eeee6659b999412c435c6ab325577d4ec1c9096e7f245",
+      "target": "manuscript/report/en/sections/06.tex",
+      "block_ids": [
+        "06.peec_method.heading",
+        "06.peec_method.p1",
+        "06.peec_method.p2",
+        "06.peec_method.p3",
+        "06.peec_derivation.heading",
+        "06.peec_derivation.p1",
+        "06.peec_results.heading",
+        "06.peec_results.p1",
+        "06.peec_results.p2",
+        "06.peec_results.p3",
+        "06.equation.E08",
+        "06.figure.peec_cross_section",
+        "06.figure.peec_length",
+        "06.figure.peec_sensitivity"
+      ]
+    },
+    {
+      "source": "manuscript/report/en/07.md",
+      "sha256": "b70e47c30430b9816a60f3307db0781d4fc6aee8d442d7e87944dfa2fb107219",
+      "target": "manuscript/report/en/sections/07.tex",
+      "block_ids": [
+        "07.rt0.p1",
+        "07.rt0.p2",
+        "07.rt0.p3",
+        "07.figure.rt0_sections",
+        "07.figure.rt0_vectors",
+        "07.figure.rt0_spatial"
+      ]
+    },
+    {
+      "source": "manuscript/report/en/08.md",
+      "sha256": "e4616917468a4aceed913357ac56e188800a9fad984ea226de172921e4fb0c1e",
+      "target": "manuscript/report/en/sections/08.tex",
+      "block_ids": [
+        "08.aphi.p1",
+        "08.aphi.p2",
+        "08.equation.E07",
+        "08.figure.aphi_preserved",
+        "08.figure.aphi_gates"
+      ]
+    },
+    {
+      "source": "manuscript/report/en/09.md",
+      "sha256": "c81e9fd6f0d2a77376b46d9914d884c38cb369cded26c11e3381cc38e4be150b",
+      "target": "manuscript/report/en/sections/09.tex",
+      "block_ids": [
+        "09.ansys.p1",
+        "09.ansys.p2",
+        "09.figure.ansys_seven_current",
+        "09.figure.ansys_limits",
+        "09.ansys.rc2"
+      ]
+    },
+    {
+      "source": "manuscript/report/en/10.md",
+      "sha256": "6cc1f03e38107c1872af6bc4e33d6b42a01aab11cb4b2727febac1d3a280c93c",
+      "target": "manuscript/report/en/sections/10.tex",
+      "block_ids": [
+        "10.compute.heading",
+        "10.compute.p1",
+        "10.compute.p2",
+        "10.workflow.heading",
+        "10.workflow.p1",
+        "10.figure.gpu_equivalence",
+        "10.figure.resource_memory"
+      ]
+    },
+    {
+      "source": "manuscript/report/en/11.md",
+      "sha256": "d23f1f6c769b2b07aed31cebbb73a9e961f7bdbe68ac119631942c7a96d4a8fc",
+      "target": "manuscript/report/en/sections/11.tex",
+      "block_ids": [
+        "11.discussion.heading",
+        "11.discussion.p1",
+        "11.discussion.p2",
+        "11.discussion.p3",
+        "11.recommendations.heading",
+        "11.recommendations.p1"
+      ]
+    },
+    {
+      "source": "manuscript/report/en/12.md",
+      "sha256": "98a9e2aab4c0fc280d3c508fa8048f65a5a06f29e8942e717b34f357423d3a1d",
+      "target": "manuscript/report/en/sections/12.tex",
+      "block_ids": [
+        "12.conclusions.p1",
+        "12.conclusions.p2",
+        "12.automation.conclusion"
+      ]
+    },
+    {
+      "source": "manuscript/report/en/A.md",
+      "sha256": "c6d5b332471101614271b1bcd6438018500bfaeca1c7b06a1a4051226e4884f0",
+      "target": "manuscript/report/en/sections/A.tex",
+      "block_ids": [
+        "A.report_derivation.heading",
+        "A.report_derivation.p1",
+        "A.report_derivation.p2",
+        "A.report_derivation.p3",
+        "A.sharing_derivation.heading",
+        "A.sharing_derivation.p1",
+        "A.method.sources"
+      ]
+    },
+    {
+      "source": "manuscript/report/en/B.md",
+      "sha256": "7b9f0b0f9f29b48e4b86af9b1129f510e72438115822cea412259d6bc1183af4",
+      "target": "manuscript/report/en/sections/B.tex",
+      "block_ids": [
+        "B.triangle_derivation.heading",
+        "B.triangle_derivation.p1",
+        "B.report_rt0.heading",
+        "B.report_rt0.p1",
+        "B.report_rt0.p2",
+        "B.equation.E09"
+      ]
+    },
+    {
+      "source": "manuscript/report/en/C.md",
+      "sha256": "9348a3fe68e3d293f07d5eb5cbb737e3c194a76a3d9402f565b04a02c68ca351",
+      "target": "manuscript/report/en/sections/C.tex",
+      "block_ids": [
+        "C.report_repro.p1",
+        "C.report_repro.p2",
+        "C.report_repro.p3",
+        "C.tables"
+      ]
+    },
+    {
+      "source": "manuscript/report/en/D.md",
+      "sha256": "ae78198e92b9e69e8425807999ceb3ecddb0eafcafcf8482d471ea5972b1a17c",
+      "target": "manuscript/report/en/sections/D.tex",
+      "block_ids": [
+        "D.workflow.p1",
+        "D.sources",
+        "D.automation.heading",
+        "D.automation.p1",
+        "D.automation.p2"
+      ]
+    },
+    {
+      "source": "manuscript/paper/zh-CN/01.md",
+      "sha256": "75b617d2ed9061624c96c6c93ac89d23bb147e6b77ae85ac37119e9d1d31e11a",
+      "target": "manuscript/paper/zh-CN/sections/01.tex",
+      "block_ids": [
+        "01.introduction.heading",
+        "01.introduction.p1",
+        "01.introduction.p2",
+        "01.introduction.p3",
+        "01.scope.heading",
+        "01.scope.p1"
+      ]
+    },
+    {
+      "source": "manuscript/paper/zh-CN/02.md",
+      "sha256": "ebad2f3aa06b8e596bc6330a8603bb6936c0e93e6f22806e8c7e076d230750ee",
+      "target": "manuscript/paper/zh-CN/sections/02.tex",
+      "block_ids": [
+        "02.conventions.heading",
+        "02.conventions.p1",
+        "02.conventions.p2",
+        "02.conventions.p3",
+        "02.equation.E01",
+        "02.equation.E02",
+        "02.hierarchy.heading",
+        "02.hierarchy.p1",
+        "02.figure.model_hierarchy",
+        "02.hierarchy.p2",
+        "02.hierarchy.p3",
+        "02.common.heading",
+        "02.common.p1",
+        "02.equation.E04",
+        "02.figure.common_terminal",
+        "02.common.p2",
+        "02.equation.E05",
+        "02.common.p3",
+        "02.peec_method.heading",
+        "02.peec_method.p1",
+        "02.equation.E08",
+        "02.peec_method.p2",
+        "02.peec_method.p3"
+      ]
+    },
+    {
+      "source": "manuscript/paper/zh-CN/03.md",
+      "sha256": "5e72e1108573123b03ce4a48061cc09ba4a3c8632dbfd971877c52ab20cf8a0a",
+      "target": "manuscript/paper/zh-CN/sections/03.tex",
+      "block_ids": [
+        "03.analytic.heading",
+        "03.analytic.p1",
+        "03.equation.E03",
+        "03.figure.q1_profile",
+        "03.analytic.p2",
+        "03.figure.q1_cross_section",
+        "03.figure.q1_fem_error",
+        "03.coax_results.heading",
+        "03.quantitative.p1",
+        "03.coax_results.p2",
+        "03.figure.coax640_currents",
+        "03.figure.coax640_fields",
+        "03.coax_results.p1",
+        "03.figure.coax640_mesh",
+        "03.peec_results.heading",
+        "03.peec_results.p1",
+        "03.peec_results.p2",
+        "03.figure.peec_length",
+        "03.figure.peec_cross_section",
+        "03.peec_results.p3",
+        "03.figure.peec_sensitivity",
+        "03.compute.heading",
+        "03.compute.p1",
+        "03.compute.p2",
+        "03.figure.gpu_equivalence",
+        "03.figure.resource_memory"
+      ]
+    },
+    {
+      "source": "manuscript/paper/zh-CN/04.md",
+      "sha256": "da45de0e5f48d9f9cdf1fd8190494c191e686da297dfb71ddf0bf8ba44395c3b",
+      "target": "manuscript/paper/zh-CN/sections/04.tex",
+      "block_ids": [
+        "04.discussion.heading",
+        "04.discussion.p1",
+        "04.discussion.p2",
+        "04.discussion.p3",
+        "04.recommendations.heading",
+        "04.recommendations.p1"
+      ]
+    },
+    {
+      "source": "manuscript/paper/zh-CN/05.md",
+      "sha256": "75dff76c64839e033a22279024717dd46e14225347259d5caa88e57940b8ce63",
+      "target": "manuscript/paper/zh-CN/sections/05.tex",
+      "block_ids": [
+        "05.conclusions.p1",
+        "05.conclusions.p2"
+      ]
+    },
+    {
+      "source": "manuscript/paper/zh-CN/S1.md",
+      "sha256": "8272f382138f58d5f16159212caa41f572a89c39679fefa5cb887bec634c1608",
+      "target": "manuscript/paper/zh-CN/sections/S1.tex",
+      "block_ids": [
+        "S1.round_derivation.heading",
+        "S1.round_derivation.p1",
+        "S1.sharing_derivation.heading",
+        "S1.sharing_derivation.p1",
+        "S1.dtm_derivation.heading",
+        "S1.dtm_derivation.p1",
+        "S1.equation.E06",
+        "S1.peec_derivation.heading",
+        "S1.peec_derivation.p1",
+        "S1.triangle_derivation.heading",
+        "S1.triangle_derivation.p1",
+        "S1.equation.E09",
+        "S1.method.sources"
+      ]
+    },
+    {
+      "source": "manuscript/paper/zh-CN/S2.md",
+      "sha256": "d4a1d96d2ca3ad45150d8056ab5dc9786248771fefc69d88ba5922bd4c231889",
+      "target": "manuscript/paper/zh-CN/sections/S2.tex",
+      "block_ids": [
+        "S2.geometry.heading",
+        "S2.geometry.p1",
+        "S2.figure.geometry_comparison",
+        "S2.geometry.p2",
+        "S2.rt0.heading",
+        "S2.rt0.p1",
+        "S2.figure.rt0_spatial",
+        "S2.rt0.p2",
+        "S2.figure.rt0_sections",
+        "S2.figure.rt0_vectors",
+        "S2.rt0.p3",
+        "S2.aphi.heading",
+        "S2.aphi.p1",
+        "S2.equation.E07",
+        "S2.figure.aphi_gates",
+        "S2.aphi.p2",
+        "S2.figure.aphi_preserved",
+        "S2.ansys.heading",
+        "S2.ansys.p1",
+        "S2.figure.ansys_seven_current",
+        "S2.ansys.p2",
+        "S2.figure.ansys_limits",
+        "S2.tables",
+        "S2.ansys.rc2",
+        "S2.method.sources"
+      ]
+    },
+    {
+      "source": "manuscript/paper/zh-CN/S3.md",
+      "sha256": "cfbbd0f90d472aca7960838d716a93cb319806a05b1aa2d66d26a95b1abed0a1",
+      "target": "manuscript/paper/zh-CN/sections/S3.tex",
+      "block_ids": [
+        "S3.report_repro.heading",
+        "S3.report_repro.p1",
+        "S3.report_repro.p2",
+        "S3.report_repro.p3",
+        "S3.workflow.heading",
+        "S3.workflow.p1",
+        "S3.sources"
+      ]
+    },
+    {
+      "source": "manuscript/paper/en/01.md",
+      "sha256": "2fa12fcdd2e9f5529279e27dd2f9134f2363bd988d0829a0b9923c9d04e0c704",
+      "target": "manuscript/paper/en/sections/01.tex",
+      "block_ids": [
+        "01.introduction.heading",
+        "01.introduction.p1",
+        "01.introduction.p2",
+        "01.introduction.p3",
+        "01.scope.heading",
+        "01.scope.p1"
+      ]
+    },
+    {
+      "source": "manuscript/paper/en/02.md",
+      "sha256": "1c54a32976d1a3b1fa1203476ca357fcb654f2b72eb800ce8d9efcf510df5063",
+      "target": "manuscript/paper/en/sections/02.tex",
+      "block_ids": [
+        "02.conventions.heading",
+        "02.conventions.p1",
+        "02.conventions.p2",
+        "02.conventions.p3",
+        "02.equation.E01",
+        "02.equation.E02",
+        "02.hierarchy.heading",
+        "02.hierarchy.p1",
+        "02.figure.model_hierarchy",
+        "02.hierarchy.p2",
+        "02.hierarchy.p3",
+        "02.common.heading",
+        "02.common.p1",
+        "02.equation.E04",
+        "02.figure.common_terminal",
+        "02.common.p2",
+        "02.equation.E05",
+        "02.common.p3",
+        "02.peec_method.heading",
+        "02.peec_method.p1",
+        "02.equation.E08",
+        "02.peec_method.p2",
+        "02.peec_method.p3"
+      ]
+    },
+    {
+      "source": "manuscript/paper/en/03.md",
+      "sha256": "3120834d7edd3ceea8df593fa1acbe7e1e63e1d4e1e4253f1f9499ee3b859088",
+      "target": "manuscript/paper/en/sections/03.tex",
+      "block_ids": [
+        "03.analytic.heading",
+        "03.analytic.p1",
+        "03.equation.E03",
+        "03.figure.q1_profile",
+        "03.analytic.p2",
+        "03.figure.q1_cross_section",
+        "03.figure.q1_fem_error",
+        "03.coax_results.heading",
+        "03.quantitative.p1",
+        "03.coax_results.p2",
+        "03.figure.coax640_currents",
+        "03.figure.coax640_fields",
+        "03.coax_results.p1",
+        "03.figure.coax640_mesh",
+        "03.peec_results.heading",
+        "03.peec_results.p1",
+        "03.peec_results.p2",
+        "03.figure.peec_length",
+        "03.figure.peec_cross_section",
+        "03.peec_results.p3",
+        "03.figure.peec_sensitivity",
+        "03.compute.heading",
+        "03.compute.p1",
+        "03.compute.p2",
+        "03.figure.gpu_equivalence",
+        "03.figure.resource_memory"
+      ]
+    },
+    {
+      "source": "manuscript/paper/en/04.md",
+      "sha256": "d9911f45365644b1736ea3d32ffb7076963997e822ac6fe078df4e08c9786915",
+      "target": "manuscript/paper/en/sections/04.tex",
+      "block_ids": [
+        "04.discussion.heading",
+        "04.discussion.p1",
+        "04.discussion.p2",
+        "04.discussion.p3",
+        "04.recommendations.heading",
+        "04.recommendations.p1"
+      ]
+    },
+    {
+      "source": "manuscript/paper/en/05.md",
+      "sha256": "d1b9885be2903830ba7e1714be597cce8f435fe5d886f3233c0e156585fe9d38",
+      "target": "manuscript/paper/en/sections/05.tex",
+      "block_ids": [
+        "05.conclusions.p1",
+        "05.conclusions.p2"
+      ]
+    },
+    {
+      "source": "manuscript/paper/en/S1.md",
+      "sha256": "14fff3c20c6d34b75fd8a5fd5d46da67b7312dac93de24be57815745e7019809",
+      "target": "manuscript/paper/en/sections/S1.tex",
+      "block_ids": [
+        "S1.round_derivation.heading",
+        "S1.round_derivation.p1",
+        "S1.sharing_derivation.heading",
+        "S1.sharing_derivation.p1",
+        "S1.dtm_derivation.heading",
+        "S1.dtm_derivation.p1",
+        "S1.equation.E06",
+        "S1.peec_derivation.heading",
+        "S1.peec_derivation.p1",
+        "S1.triangle_derivation.heading",
+        "S1.triangle_derivation.p1",
+        "S1.equation.E09",
+        "S1.method.sources"
+      ]
+    },
+    {
+      "source": "manuscript/paper/en/S2.md",
+      "sha256": "0717a3c43bc9bc97bef99a75d45ff82491a10400ab63c66b196471ddd6ef6c66",
+      "target": "manuscript/paper/en/sections/S2.tex",
+      "block_ids": [
+        "S2.geometry.heading",
+        "S2.geometry.p1",
+        "S2.figure.geometry_comparison",
+        "S2.geometry.p2",
+        "S2.rt0.heading",
+        "S2.rt0.p1",
+        "S2.figure.rt0_spatial",
+        "S2.rt0.p2",
+        "S2.figure.rt0_sections",
+        "S2.figure.rt0_vectors",
+        "S2.rt0.p3",
+        "S2.aphi.heading",
+        "S2.aphi.p1",
+        "S2.equation.E07",
+        "S2.figure.aphi_gates",
+        "S2.aphi.p2",
+        "S2.figure.aphi_preserved",
+        "S2.ansys.heading",
+        "S2.ansys.p1",
+        "S2.figure.ansys_seven_current",
+        "S2.ansys.p2",
+        "S2.figure.ansys_limits",
+        "S2.tables",
+        "S2.ansys.rc2",
+        "S2.method.sources"
+      ]
+    },
+    {
+      "source": "manuscript/paper/en/S3.md",
+      "sha256": "f858d469dc29c60d0dfc72d53ac8c43fce870c96548aad02c62ea7dcd5baf1a2",
+      "target": "manuscript/paper/en/sections/S3.tex",
+      "block_ids": [
+        "S3.report_repro.heading",
+        "S3.report_repro.p1",
+        "S3.report_repro.p2",
+        "S3.report_repro.p3",
+        "S3.workflow.heading",
+        "S3.workflow.p1",
+        "S3.sources"
+      ]
+    },
+    {
+      "source": "manuscript/automation/zh-CN/01.md",
+      "sha256": "a4fec7435a28848f1a22fd6d8f963f1b4c85fca2e93bc135af87fb0e1831ad60",
+      "target": "manuscript/automation/zh-CN/sections/01.tex",
+      "block_ids": [
+        "auto.01.p1",
+        "auto.01.p2",
+        "auto.01.p3",
+        "auto.01.p4",
+        "auto.01.figure"
+      ]
+    },
+    {
+      "source": "manuscript/automation/zh-CN/02.md",
+      "sha256": "fd05e79d61abe9fa9f301ba81136cdfa129f43b8b2d038f6e916b5f90e167c14",
+      "target": "manuscript/automation/zh-CN/sections/02.tex",
+      "block_ids": [
+        "auto.02.p1",
+        "auto.02.p2",
+        "auto.02.p3",
+        "auto.02.p4",
+        "auto.02.p5"
+      ]
+    },
+    {
+      "source": "manuscript/automation/zh-CN/03.md",
+      "sha256": "a5c8428c6088ffc83d6255cce7bd07672836b732b8366c0b09f7aacee3f7c901",
+      "target": "manuscript/automation/zh-CN/sections/03.tex",
+      "block_ids": [
+        "auto.03.p1",
+        "auto.03.p2",
+        "auto.03.p3",
+        "auto.03.p4",
+        "auto.03.equation",
+        "auto.03.p5",
+        "auto.03.figure"
+      ]
+    },
+    {
+      "source": "manuscript/automation/zh-CN/04.md",
+      "sha256": "7d328ab803e9f6445fb5af53302fe387246b5c2ae02acb19f0a5deb663135fd6",
+      "target": "manuscript/automation/zh-CN/sections/04.tex",
+      "block_ids": [
+        "auto.04.heading1",
+        "auto.04.p1",
+        "auto.04.figure",
+        "auto.04.p2",
+        "auto.04.heading2",
+        "auto.04.p3",
+        "auto.04.p4",
+        "auto.04.p5"
+      ]
+    },
+    {
+      "source": "manuscript/automation/zh-CN/05.md",
+      "sha256": "97a5ab9fec7cadac873ce3137613cb34cb85a07968f0a6a1accb2b4e32c03472",
+      "target": "manuscript/automation/zh-CN/sections/05.tex",
+      "block_ids": [
+        "auto.05.p1",
+        "auto.05.p2",
+        "auto.05.p3",
+        "auto.05.figure",
+        "auto.05.p4",
+        "auto.05.p5"
+      ]
+    },
+    {
+      "source": "manuscript/automation/zh-CN/06.md",
+      "sha256": "6db8406587f0e8a89388d47b65446eecdaaff203ca9c0d97254d45ca2581a9ec",
+      "target": "manuscript/automation/zh-CN/sections/06.tex",
+      "block_ids": [
+        "auto.06.p1",
+        "auto.06.p2",
+        "auto.06.p3",
+        "auto.06.figure",
+        "auto.06.p4",
+        "auto.06.p5"
+      ]
+    },
+    {
+      "source": "manuscript/automation/en/01.md",
+      "sha256": "7e8b2987e3785d965725f83248d83971d8f9b6df297f3974e3432e8619df9ab4",
+      "target": "manuscript/automation/en/sections/01.tex",
+      "block_ids": [
+        "auto.01.p1",
+        "auto.01.p2",
+        "auto.01.p3",
+        "auto.01.p4",
+        "auto.01.figure"
+      ]
+    },
+    {
+      "source": "manuscript/automation/en/02.md",
+      "sha256": "da6cb036d43f56500378605b2237e3db6f73d0e2a59e8ebfad8ca94e09910b66",
+      "target": "manuscript/automation/en/sections/02.tex",
+      "block_ids": [
+        "auto.02.p1",
+        "auto.02.p2",
+        "auto.02.p3",
+        "auto.02.p4",
+        "auto.02.p5"
+      ]
+    },
+    {
+      "source": "manuscript/automation/en/03.md",
+      "sha256": "32e8a8a24cd5f1f29f9ad781f71b33e9b204c476fc8e85c1903615026067bd84",
+      "target": "manuscript/automation/en/sections/03.tex",
+      "block_ids": [
+        "auto.03.p1",
+        "auto.03.p2",
+        "auto.03.p3",
+        "auto.03.p4",
+        "auto.03.equation",
+        "auto.03.p5",
+        "auto.03.figure"
+      ]
+    },
+    {
+      "source": "manuscript/automation/en/04.md",
+      "sha256": "88ef58e787aaf854d80f40f259edaf4f6874b9957c838a93b6ab27fe3b24e62f",
+      "target": "manuscript/automation/en/sections/04.tex",
+      "block_ids": [
+        "auto.04.heading1",
+        "auto.04.p1",
+        "auto.04.figure",
+        "auto.04.p2",
+        "auto.04.heading2",
+        "auto.04.p3",
+        "auto.04.p4",
+        "auto.04.p5"
+      ]
+    },
+    {
+      "source": "manuscript/automation/en/05.md",
+      "sha256": "6b8ea814ae92489c7e5ae9c181c7451d708268cfdeda26201db8ab17b032641c",
+      "target": "manuscript/automation/en/sections/05.tex",
+      "block_ids": [
+        "auto.05.p1",
+        "auto.05.p2",
+        "auto.05.p3",
+        "auto.05.figure",
+        "auto.05.p4",
+        "auto.05.p5"
+      ]
+    },
+    {
+      "source": "manuscript/automation/en/06.md",
+      "sha256": "538e51600b36c9b6e3e0dbb0b1a486582a93207f3f44f85f5ec97f5790479247",
+      "target": "manuscript/automation/en/sections/06.tex",
+      "block_ids": [
+        "auto.06.p1",
+        "auto.06.p2",
+        "auto.06.p3",
+        "auto.06.figure",
+        "auto.06.p4",
+        "auto.06.p5"
+      ]
+    }
+  ],
+  "assets": [
+    {
+      "path": "manuscript/assets/zh-CN/model_hierarchy.pdf",
+      "source": "outputs/publication_review_20261015_03/panels/zh-CN/model_hierarchy.pdf",
+      "sha256": "d368e531942d73e5922ba2b49b7ae5fd3d07978c4a2c0171b0fb11e33deb4eef"
+    },
+    {
+      "path": "manuscript/assets/zh-CN/model_hierarchy.png",
+      "source": "outputs/publication_review_20261015_03/panels/zh-CN/model_hierarchy.png",
+      "sha256": "a9cec85d2829e55eb31536d449f0d58e5b5ef47ba62540dd0d4e46655c8c43c3"
+    },
+    {
+      "path": "manuscript/assets/zh-CN/q1_profile.pdf",
+      "source": "outputs/publication_review_20261015_03/composites/zh-CN/q1_profile.pdf",
+      "sha256": "e99951c420ab25fe467f22c92b3c99470dcd28b85d32ebdc156a183c8b92f336"
+    },
+    {
+      "path": "manuscript/assets/zh-CN/q1_profile.png",
+      "source": "outputs/publication_review_20261015_03/composites/zh-CN/q1_profile.png",
+      "sha256": "eea46fe9fa03f0a1f2b008f4addda85d29f16d113727a7baae1c4218dc2c85e9"
+    },
+    {
+      "path": "manuscript/assets/zh-CN/q1_cross_section.pdf",
+      "source": "outputs/publication_review_20261015_03/panels/zh-CN/q1_cross_section.pdf",
+      "sha256": "c3b936deb6ecabed4a3e2b5efb73079012368f6a3f14af6d7b0a3e791ee97029"
+    },
+    {
+      "path": "manuscript/assets/zh-CN/q1_cross_section.png",
+      "source": "outputs/publication_review_20261015_03/panels/zh-CN/q1_cross_section.png",
+      "sha256": "321148a4252badeb3c3fa55670eb0264b75bb4c155816e75cdfe1e9b8bee25a2"
+    },
+    {
+      "path": "manuscript/assets/zh-CN/q1_fem_error.pdf",
+      "source": "outputs/publication_review_20261015_03/panels/zh-CN/q1_fem_error.pdf",
+      "sha256": "715892aa0c4103c4cc91130b906fcbe4992b73db19fc0bd39621f87f0367c6b4"
+    },
+    {
+      "path": "manuscript/assets/zh-CN/q1_fem_error.png",
+      "source": "outputs/publication_review_20261015_03/panels/zh-CN/q1_fem_error.png",
+      "sha256": "b699a4047bf6c806c15f256cf5c1c969604a5c56f93a253ec4c0b3707d6dfde7"
+    },
+    {
+      "path": "manuscript/assets/zh-CN/common_terminal.pdf",
+      "source": "outputs/publication_review_20261015_03/panels/zh-CN/common_terminal.pdf",
+      "sha256": "eaf7b602384dc5cc364b4d99af7a14621870c8a362ca6abfa90468893bacdd21"
+    },
+    {
+      "path": "manuscript/assets/zh-CN/common_terminal.png",
+      "source": "outputs/publication_review_20261015_03/panels/zh-CN/common_terminal.png",
+      "sha256": "483135b8c67c14a92db198585d19361c4c60c7dafbe32613f12b010e02eb6d3e"
+    },
+    {
+      "path": "manuscript/assets/zh-CN/coax640_currents.pdf",
+      "source": "outputs/publication_review_20261015_03/composites/zh-CN/coax640_currents.pdf",
+      "sha256": "f29c626d343d6b0c949f99dd064c5ee1e7fd3c6fa74f8a4d7fc839548ca094b8"
+    },
+    {
+      "path": "manuscript/assets/zh-CN/coax640_currents.png",
+      "source": "outputs/publication_review_20261015_03/composites/zh-CN/coax640_currents.png",
+      "sha256": "6fbf707bcdba08c475a82940744c8356496fe3a9d17daab2bda4f4ac5ed74180"
+    },
+    {
+      "path": "manuscript/assets/zh-CN/coax640_fields.pdf",
+      "source": "outputs/publication_review_20261015_03/composites/zh-CN/coax640_fields.pdf",
+      "sha256": "3bcfc965aa27ae5f16bd220e3d2101f472a41ef733467a99d2530932650dbd32"
+    },
+    {
+      "path": "manuscript/assets/zh-CN/coax640_fields.png",
+      "source": "outputs/publication_review_20261015_03/composites/zh-CN/coax640_fields.png",
+      "sha256": "59c41822246d3249d2c2f3debaa31f5b6680a64df5a3344d33033c4c5924636a"
+    },
+    {
+      "path": "manuscript/assets/zh-CN/coax640_mesh.pdf",
+      "source": "outputs/publication_review_20261015_03/panels/zh-CN/coax640_mesh.pdf",
+      "sha256": "fe7c4817689f8bb0315004eddf6b1170bdaf0f219ea61191ed0ab12ab38ce7a0"
+    },
+    {
+      "path": "manuscript/assets/zh-CN/coax640_mesh.png",
+      "source": "outputs/publication_review_20261015_03/panels/zh-CN/coax640_mesh.png",
+      "sha256": "7e1ed30b9aa6129c102b12154a450793cdd053079787141d0f4e61ce937fdb4a"
+    },
+    {
+      "path": "manuscript/assets/zh-CN/geometry_comparison.pdf",
+      "source": "outputs/publication_review_20261015_03/composites/zh-CN/geometry_comparison.pdf",
+      "sha256": "e0035ac6f7e537559db824948e96dfe2e9bdcafb8cca138b9ce6b74e3a7c8b9c"
+    },
+    {
+      "path": "manuscript/assets/zh-CN/geometry_comparison.png",
+      "source": "outputs/publication_review_20261015_03/composites/zh-CN/geometry_comparison.png",
+      "sha256": "82f95947edfda3ba7e0012f508129c0a355882828e2609813207a5f0fd1460a2"
+    },
+    {
+      "path": "manuscript/assets/zh-CN/peec_cross_section.pdf",
+      "source": "outputs/publication_review_20261015_03/panels/zh-CN/peec_cross_section.pdf",
+      "sha256": "ef32cb8ba30385ac46f97e4c55538ce96c6a0cea67cdf44bd09fc33f7a0352de"
+    },
+    {
+      "path": "manuscript/assets/zh-CN/peec_cross_section.png",
+      "source": "outputs/publication_review_20261015_03/panels/zh-CN/peec_cross_section.png",
+      "sha256": "bda77c032323998778600aab814b31de2d40571b1d4a888240c24e8e35ba68bd"
+    },
+    {
+      "path": "manuscript/assets/zh-CN/peec_length.pdf",
+      "source": "outputs/publication_review_20261015_03/panels/zh-CN/peec_length.pdf",
+      "sha256": "31b7dc4a50c754ce178103b0dec4d4af446cab5d764140ba91b747450429b530"
+    },
+    {
+      "path": "manuscript/assets/zh-CN/peec_length.png",
+      "source": "outputs/publication_review_20261015_03/panels/zh-CN/peec_length.png",
+      "sha256": "dddf5550be77e6b27f1d1dfc44f815b363e178bd460660d00d6d43c3a5e1c5f7"
+    },
+    {
+      "path": "manuscript/assets/zh-CN/peec_sensitivity.pdf",
+      "source": "outputs/publication_review_20261015_03/panels/zh-CN/peec_sensitivity.pdf",
+      "sha256": "02c67135fdfb6006ffedd6890cb34d472adfb49f8793444e76150ecf68235e4f"
+    },
+    {
+      "path": "manuscript/assets/zh-CN/peec_sensitivity.png",
+      "source": "outputs/publication_review_20261015_03/panels/zh-CN/peec_sensitivity.png",
+      "sha256": "d0be16e0d00a8f7c65644eadb4445386f166cf6b97d30eb964eb52205427e808"
+    },
+    {
+      "path": "manuscript/assets/zh-CN/rt0_sections.pdf",
+      "source": "outputs/publication_review_20261015_03/composites/zh-CN/rt0_sections.pdf",
+      "sha256": "720ce72baebed779a0c020a338535e5e41ee485955504f3d3c55c2bcf34340eb"
+    },
+    {
+      "path": "manuscript/assets/zh-CN/rt0_sections.png",
+      "source": "outputs/publication_review_20261015_03/composites/zh-CN/rt0_sections.png",
+      "sha256": "c6909bb060f9e1599e9b785f863ae2ff1b86ab3120d313e4f976d355f76997b2"
+    },
+    {
+      "path": "manuscript/assets/zh-CN/rt0_vectors.pdf",
+      "source": "outputs/publication_review_20261015_03/panels/zh-CN/rt0_vectors.pdf",
+      "sha256": "411382ecf2594cc5a8e097ddd22238a88342ba13dba9e888d846ebb36032ac38"
+    },
+    {
+      "path": "manuscript/assets/zh-CN/rt0_vectors.png",
+      "source": "outputs/publication_review_20261015_03/panels/zh-CN/rt0_vectors.png",
+      "sha256": "3a9fc149ddebc1c609734113de21332946c98125a75d4e645486093791020229"
+    },
+    {
+      "path": "manuscript/assets/zh-CN/rt0_spatial.pdf",
+      "source": "outputs/publication_review_20261015_03/panels/zh-CN/rt0_spatial.pdf",
+      "sha256": "51b17bb32b0cee41df3a6ec018ba6d5aae30a7c882c7ae0ff479dbc9ecbdc52d"
+    },
+    {
+      "path": "manuscript/assets/zh-CN/rt0_spatial.png",
+      "source": "outputs/publication_review_20261015_03/panels/zh-CN/rt0_spatial.png",
+      "sha256": "71ebd3da2e70ffc37fbb85cb7e9ed3887fdd9df465cc4e3a1c6b88aaf4bc2f0c"
+    },
+    {
+      "path": "manuscript/assets/zh-CN/aphi_preserved.pdf",
+      "source": "outputs/publication_review_20261015_03/composites/zh-CN/aphi_preserved.pdf",
+      "sha256": "577db799cdea42aba387bbe3c1488aea080d7c0481dfbcb4aebdb6ef73c65e6f"
+    },
+    {
+      "path": "manuscript/assets/zh-CN/aphi_preserved.png",
+      "source": "outputs/publication_review_20261015_03/composites/zh-CN/aphi_preserved.png",
+      "sha256": "1b8e3859e522429ef9b0a48fe7b36cdb6d4a2cabc97d2b126a3de305bb9d7075"
+    },
+    {
+      "path": "manuscript/assets/zh-CN/aphi_gates.pdf",
+      "source": "outputs/publication_review_20261015_03/panels/zh-CN/aphi_gates.pdf",
+      "sha256": "d9fe08eadb833f0dd5ea9846891934c1707fb8273337011c87eedaa8f36b3140"
+    },
+    {
+      "path": "manuscript/assets/zh-CN/aphi_gates.png",
+      "source": "outputs/publication_review_20261015_03/panels/zh-CN/aphi_gates.png",
+      "sha256": "46fa359ab6eaef117e47e592af02c72a74bb30bc42a6d9875bd28d0a82849ecd"
+    },
+    {
+      "path": "manuscript/assets/zh-CN/ansys_seven_current.pdf",
+      "source": "outputs/publication_review_20261015_03/panels/zh-CN/ansys_seven_current.pdf",
+      "sha256": "c25765038e7853a1f04c079de00e7caa7cc8491cdac873613f9345873d2d2289"
+    },
+    {
+      "path": "manuscript/assets/zh-CN/ansys_seven_current.png",
+      "source": "outputs/publication_review_20261015_03/panels/zh-CN/ansys_seven_current.png",
+      "sha256": "3a712afd6fd55ec91c3f1b07c0ad49158d8a0d03e20879a5a562cb0cc1c0bde8"
+    },
+    {
+      "path": "manuscript/assets/zh-CN/ansys_limits.pdf",
+      "source": "outputs/publication_review_20261015_03/panels/zh-CN/ansys_limits.pdf",
+      "sha256": "e2542003d73bc3eeeddd8282a68eb5752a3eb714fc725623d65560f5b42a27c5"
+    },
+    {
+      "path": "manuscript/assets/zh-CN/ansys_limits.png",
+      "source": "outputs/publication_review_20261015_03/panels/zh-CN/ansys_limits.png",
+      "sha256": "e520ad99072ad8a323b13af932e07b80a4ad50ce6a356f4d8de398230d5a19fb"
+    },
+    {
+      "path": "manuscript/assets/zh-CN/gpu_equivalence.pdf",
+      "source": "outputs/publication_review_20261015_03/panels/zh-CN/gpu_equivalence.pdf",
+      "sha256": "e9c639b983dc82a1ec1c2ddeb5115535071aa7bfee4cc716fff1f26be7f4f016"
+    },
+    {
+      "path": "manuscript/assets/zh-CN/gpu_equivalence.png",
+      "source": "outputs/publication_review_20261015_03/panels/zh-CN/gpu_equivalence.png",
+      "sha256": "710c05867fe0c6d90e04e35bb69aec5b8c390eac7319e9435b21f7a98c372ab2"
+    },
+    {
+      "path": "manuscript/assets/zh-CN/resource_memory.pdf",
+      "source": "outputs/publication_review_20261015_03/panels/zh-CN/resource_memory.pdf",
+      "sha256": "0e8f2753d6289c8c5a90edd91443a7bedb4267d7014a94f46618c020a29c630e"
+    },
+    {
+      "path": "manuscript/assets/zh-CN/resource_memory.png",
+      "source": "outputs/publication_review_20261015_03/panels/zh-CN/resource_memory.png",
+      "sha256": "47e88aa5c5f96f6f0e7ec1f2ae79d7a80c82b45d77908aa5f010b0cd27bf9119"
+    },
+    {
+      "path": "manuscript/assets/en/model_hierarchy.pdf",
+      "source": "outputs/publication_review_20261015_03/panels/en/model_hierarchy.pdf",
+      "sha256": "c10d929d3a6b975774eb73cfa7001d0c3051b15f834e83635497ed18ba985120"
+    },
+    {
+      "path": "manuscript/assets/en/model_hierarchy.png",
+      "source": "outputs/publication_review_20261015_03/panels/en/model_hierarchy.png",
+      "sha256": "b686f3ae66317135a7d89e32229ed96fe864f2f3fd43bf5a9b719f82927fefb7"
+    },
+    {
+      "path": "manuscript/assets/en/q1_profile.pdf",
+      "source": "outputs/publication_review_20261015_03/composites/en/q1_profile.pdf",
+      "sha256": "74fb2d750e1bc1c660fa2ee7c044759b22ff7884afb980228f162126b32e5100"
+    },
+    {
+      "path": "manuscript/assets/en/q1_profile.png",
+      "source": "outputs/publication_review_20261015_03/composites/en/q1_profile.png",
+      "sha256": "1b246bbdeeca0582f6ddf98b312f5455e4fb1544db12f268bfa42a73e33657fc"
+    },
+    {
+      "path": "manuscript/assets/en/q1_cross_section.pdf",
+      "source": "outputs/publication_review_20261015_03/panels/en/q1_cross_section.pdf",
+      "sha256": "62298a53c6f5a163153eff0e7f23ff7d4dbcb49ce2d41ba160f31926b1032261"
+    },
+    {
+      "path": "manuscript/assets/en/q1_cross_section.png",
+      "source": "outputs/publication_review_20261015_03/panels/en/q1_cross_section.png",
+      "sha256": "cf937b48000e3c64e2dc71d2e5f134350cc3441f157ec31037d3a401e7bca1be"
+    },
+    {
+      "path": "manuscript/assets/en/q1_fem_error.pdf",
+      "source": "outputs/publication_review_20261015_03/panels/en/q1_fem_error.pdf",
+      "sha256": "96209635db4d2270cb87683a2db83268bf3b3c46df68548089f77204761f2e69"
+    },
+    {
+      "path": "manuscript/assets/en/q1_fem_error.png",
+      "source": "outputs/publication_review_20261015_03/panels/en/q1_fem_error.png",
+      "sha256": "e4df310bc5fffe137da48e3e3d8b5d9ec9b30deee94f78201489f7aa0b147456"
+    },
+    {
+      "path": "manuscript/assets/en/common_terminal.pdf",
+      "source": "outputs/publication_review_20261015_03/panels/en/common_terminal.pdf",
+      "sha256": "073cd6d61734bd0081cfe34034cce90354922da5e9dc132fe0512b069c161e67"
+    },
+    {
+      "path": "manuscript/assets/en/common_terminal.png",
+      "source": "outputs/publication_review_20261015_03/panels/en/common_terminal.png",
+      "sha256": "a01e29805e62aa8ffcf5499b698ec937ba41631eb027875ad83d18ba69d7af7c"
+    },
+    {
+      "path": "manuscript/assets/en/coax640_currents.pdf",
+      "source": "outputs/publication_review_20261015_03/composites/en/coax640_currents.pdf",
+      "sha256": "104e0378f201c71506b085a22e07f1b2bc1a25904e0cf76babbf736e4e1d39b1"
+    },
+    {
+      "path": "manuscript/assets/en/coax640_currents.png",
+      "source": "outputs/publication_review_20261015_03/composites/en/coax640_currents.png",
+      "sha256": "f8ddcba9472341b2f38b86246af75932903fde79af46906918ed085fb244180e"
+    },
+    {
+      "path": "manuscript/assets/en/coax640_fields.pdf",
+      "source": "outputs/publication_review_20261015_03/composites/en/coax640_fields.pdf",
+      "sha256": "09aa1ed19762e35794c0d3ac044b7fc2e96ccb0bc58deab8bdfa6d9d14ba3d97"
+    },
+    {
+      "path": "manuscript/assets/en/coax640_fields.png",
+      "source": "outputs/publication_review_20261015_03/composites/en/coax640_fields.png",
+      "sha256": "bac65f2ddbd35087635b018fc18aecc5caa6a2a13de7f470e82e0ed804ae852d"
+    },
+    {
+      "path": "manuscript/assets/en/coax640_mesh.pdf",
+      "source": "outputs/publication_review_20261015_03/panels/en/coax640_mesh.pdf",
+      "sha256": "132c21a8fd5ab8e03cee2c876107919163990f434db0d9284fce89e789250629"
+    },
+    {
+      "path": "manuscript/assets/en/coax640_mesh.png",
+      "source": "outputs/publication_review_20261015_03/panels/en/coax640_mesh.png",
+      "sha256": "a87916b2f6650de12d997e7bf547e3c445775ac8a778d2876e7cb0182fdc5699"
+    },
+    {
+      "path": "manuscript/assets/en/geometry_comparison.pdf",
+      "source": "outputs/publication_review_20261015_03/composites/en/geometry_comparison.pdf",
+      "sha256": "1b9559981f5a4f2b9fea5e391e68cbc90f4e40974d8a1d3dc4eadbbce4bffdca"
+    },
+    {
+      "path": "manuscript/assets/en/geometry_comparison.png",
+      "source": "outputs/publication_review_20261015_03/composites/en/geometry_comparison.png",
+      "sha256": "987fad194984b42f400a7d53fa124cf61d1bd3b81b5196feeaf9e9bc14f781d9"
+    },
+    {
+      "path": "manuscript/assets/en/peec_cross_section.pdf",
+      "source": "outputs/publication_review_20261015_03/panels/en/peec_cross_section.pdf",
+      "sha256": "ef32cb8ba30385ac46f97e4c55538ce96c6a0cea67cdf44bd09fc33f7a0352de"
+    },
+    {
+      "path": "manuscript/assets/en/peec_cross_section.png",
+      "source": "outputs/publication_review_20261015_03/panels/en/peec_cross_section.png",
+      "sha256": "9ca61d4c793f10ef06e24d437d35b7f5eaf961ca51fa17d4e660a4be069e2d24"
+    },
+    {
+      "path": "manuscript/assets/en/peec_length.pdf",
+      "source": "outputs/publication_review_20261015_03/panels/en/peec_length.pdf",
+      "sha256": "9da3ac7871ffd5380bc7de16a439c2f0c85fda4ed370c0a0c7f8740a14b97a3e"
+    },
+    {
+      "path": "manuscript/assets/en/peec_length.png",
+      "source": "outputs/publication_review_20261015_03/panels/en/peec_length.png",
+      "sha256": "53c182168a31b3625e11aaaa996aa561d8a314e37f274c8a2675394abc11e678"
+    },
+    {
+      "path": "manuscript/assets/en/peec_sensitivity.pdf",
+      "source": "outputs/publication_review_20261015_03/panels/en/peec_sensitivity.pdf",
+      "sha256": "3c298e089d3d1cff1f5b256a2f79f96ccff77adb113be3eb2f8068e78a21b50c"
+    },
+    {
+      "path": "manuscript/assets/en/peec_sensitivity.png",
+      "source": "outputs/publication_review_20261015_03/panels/en/peec_sensitivity.png",
+      "sha256": "fd69a435f2ba57eab28b5c2721b11034e80d071c37ad0d814cd400823fb13da9"
+    },
+    {
+      "path": "manuscript/assets/en/rt0_sections.pdf",
+      "source": "outputs/publication_review_20261015_03/composites/en/rt0_sections.pdf",
+      "sha256": "720ce72baebed779a0c020a338535e5e41ee485955504f3d3c55c2bcf34340eb"
+    },
+    {
+      "path": "manuscript/assets/en/rt0_sections.png",
+      "source": "outputs/publication_review_20261015_03/composites/en/rt0_sections.png",
+      "sha256": "c6909bb060f9e1599e9b785f863ae2ff1b86ab3120d313e4f976d355f76997b2"
+    },
+    {
+      "path": "manuscript/assets/en/rt0_vectors.pdf",
+      "source": "outputs/publication_review_20261015_03/panels/en/rt0_vectors.pdf",
+      "sha256": "411382ecf2594cc5a8e097ddd22238a88342ba13dba9e888d846ebb36032ac38"
+    },
+    {
+      "path": "manuscript/assets/en/rt0_vectors.png",
+      "source": "outputs/publication_review_20261015_03/panels/en/rt0_vectors.png",
+      "sha256": "a35cb66cf415c49854cf9d1ad2032cea2c5be74f61c18c95c3198bc8d2461632"
+    },
+    {
+      "path": "manuscript/assets/en/rt0_spatial.pdf",
+      "source": "outputs/publication_review_20261015_03/panels/en/rt0_spatial.pdf",
+      "sha256": "8f8d8cf2907da4e68c9b7c78c1d80f79fa292a062155291b44dc33b1ce592e86"
+    },
+    {
+      "path": "manuscript/assets/en/rt0_spatial.png",
+      "source": "outputs/publication_review_20261015_03/panels/en/rt0_spatial.png",
+      "sha256": "bd2623ae45fe444e1b738702b78aa702a2ddbdbb8c0d1bd0c0822c8330171c95"
+    },
+    {
+      "path": "manuscript/assets/en/aphi_preserved.pdf",
+      "source": "outputs/publication_review_20261015_03/composites/en/aphi_preserved.pdf",
+      "sha256": "85c2d7fed0ba26ccfcd12f9d5be69881e2bdcba975762a70176854efc425f7cc"
+    },
+    {
+      "path": "manuscript/assets/en/aphi_preserved.png",
+      "source": "outputs/publication_review_20261015_03/composites/en/aphi_preserved.png",
+      "sha256": "08aa7de18b95d937c600d60e85dab63c2ca97d9ee56b66c31f1c5597ab31eeba"
+    },
+    {
+      "path": "manuscript/assets/en/aphi_gates.pdf",
+      "source": "outputs/publication_review_20261015_03/panels/en/aphi_gates.pdf",
+      "sha256": "471ab8437deb7df3ade3fd214adf0bf5116b7e0ddfecbfb874597bddcb55b34c"
+    },
+    {
+      "path": "manuscript/assets/en/aphi_gates.png",
+      "source": "outputs/publication_review_20261015_03/panels/en/aphi_gates.png",
+      "sha256": "666593f068082b1d8b12d79157da8f513e0afa4fec4e64d92df029401770fb0e"
+    },
+    {
+      "path": "manuscript/assets/en/ansys_seven_current.pdf",
+      "source": "outputs/publication_review_20261015_03/panels/en/ansys_seven_current.pdf",
+      "sha256": "f2ec399e6b2f77195aeba367234cfe054253c867ce002b4d15d7eaee1ef65505"
+    },
+    {
+      "path": "manuscript/assets/en/ansys_seven_current.png",
+      "source": "outputs/publication_review_20261015_03/panels/en/ansys_seven_current.png",
+      "sha256": "ebe370bb78c32f1f2823629b6318706f67bd9fc40c16ceac69be98f9ef33e697"
+    },
+    {
+      "path": "manuscript/assets/en/ansys_limits.pdf",
+      "source": "outputs/publication_review_20261015_03/panels/en/ansys_limits.pdf",
+      "sha256": "0a9b4c8892cc9d6b9af32c51062de15e15bf5daddbe1e5bcd052e5f8e9d4c4e0"
+    },
+    {
+      "path": "manuscript/assets/en/ansys_limits.png",
+      "source": "outputs/publication_review_20261015_03/panels/en/ansys_limits.png",
+      "sha256": "730bcbe4f0389758abbeb7cd64bd3cc1ca6419a10daa4dfd1c251ccc04072abb"
+    },
+    {
+      "path": "manuscript/assets/en/gpu_equivalence.pdf",
+      "source": "outputs/publication_review_20261015_03/panels/en/gpu_equivalence.pdf",
+      "sha256": "50c832bd58ab387602978bc04e55ddcc87aa1b129c50106cf077b75862c55f4f"
+    },
+    {
+      "path": "manuscript/assets/en/gpu_equivalence.png",
+      "source": "outputs/publication_review_20261015_03/panels/en/gpu_equivalence.png",
+      "sha256": "d73aefdabfaea401c6de392932f62590e12ab87a83a931e75c8e3af5a10c0efc"
+    },
+    {
+      "path": "manuscript/assets/en/resource_memory.pdf",
+      "source": "outputs/publication_review_20261015_03/panels/en/resource_memory.pdf",
+      "sha256": "7b0c2f316cc0f3b7549041c57fc820b09a378ed611e6299bbf067afbf70ae30b"
+    },
+    {
+      "path": "manuscript/assets/en/resource_memory.png",
+      "source": "outputs/publication_review_20261015_03/panels/en/resource_memory.png",
+      "sha256": "88a85afea81b039ac90336cccf46354c1e222c41e68c3e00f471b2750c8da973"
+    }
+  ]
+}

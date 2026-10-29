@@ -1,0 +1,31 @@
+\appendix
+\section{数学推导}
+\label{chapter:A}
+
+% block-id: A.report_derivation.heading
+\hypertarget{A.report_derivation.heading}{}
+\subsection{解析归一化、场路与单元积分推导}
+
+% block-id: A.report_derivation.p1
+\hypertarget{A.report_derivation.p1}{}
+圆线解析归一化先要求 2π\(\int\)\(_0\)\(^a\) r Jz(r) dr=It，再用 d[r I\(_1\)(κr)]/dr=κr I\(_0\)(κr) 得到分母。边界轴向电场 Jz(a)/σ 除以 It 给出内部单位长度阻抗。独立焦耳积分与 |It|² Re(zint) 对照采用 RMS 约定；高精度积分误差仅检验所写解析公式。有限端部、回流外部电感、热变化和绝缘结构并不包含在该解析精度中。
+
+% block-id: A.report_derivation.p2
+\hypertarget{A.report_derivation.p2}{}
+线性三角形场恢复使用实际物理面积 aT。令节点 eₖ=v−uₖ，则单元复电流为 σaT\(\sum\)eₖ/3，焦耳功率为 σaT[\(\sum\)|eₖ|²+|\(\sum\)eₖ|²]/12。后者来自对角系数 2、非对角系数 1 的一致质量矩阵。原坐标以 0.001 m 缩放，因此面积乘缩放平方；显示到 mm 不影响积分。材料标记区分每股、回流和空气，回流使用自身 v。
+
+% block-id: A.report_derivation.p3
+\hypertarget{A.report_derivation.p3}{}
+共端判据的必要性和充分性依赖同一个线性系统及解唯一性。必要性来自均流代入端压方程；充分性来自被 Q 消去的向量可以表示为 V1，并与总电流约束共同满足增广系统。导体接触、额外端接阻抗、非线性材料或遗漏的感应项会改变系统。因此在新模型里复用判据时，先重建 Z、e 与约束，而不是只复用结果。
+
+% block-id: A.sharing_derivation.heading
+\hypertarget{A.sharing_derivation.heading}{}
+\subsection{复电流均流条件的推导}
+
+% block-id: A.sharing_derivation.p1
+\hypertarget{A.sharing_derivation.p1}{}
+若等流解存在，将 i=(It/N)1 代入端口方程，即得向量 (It/N)Z1+e 的全部分量相同，投影条件因而必要。反之，若投影条件成立，该向量可写为某一标量 V 与 1 的乘积，等流向量同时满足端口方程和总电流约束；在增广系统解唯一时，它即为实际解，条件因而充分。数值结果以 sqrt(mean(|ik−It/N|²))/|It/N| 表示归一化复电流 RMS 偏差，并同时展示逐股幅值与相位。
+
+% block-id: A.method.sources
+\hypertarget{A.method.sources}{}
+圆线基准使用的修正 Bessel 函数遵循文献 \cite{BESSEL} 的定义。部分电感构造采用 PEEC 框架 \cite{RUEHLI1974}，面通量近似与 Raviart–Thomas 单元族相关 \cite{RT1977}。迭代线性求解采用 GMRES 方法 \cite{GMRES1986}；有限元实现及边界处理参见 \cite{FEMDOC}。

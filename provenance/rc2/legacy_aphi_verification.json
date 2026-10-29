@@ -1,0 +1,16 @@
+{
+  "run_id": "rc2_legacy_aphi_mount_02",
+  "stage": "closure_fem3_diagnostics",
+  "source_model": "read_only_preserved_3D_A_phi_diagnostics",
+  "execution_status": "executed",
+  "physical_acceptance_status": "failed_numerical",
+  "failure_reason": "preserved_cylinder_phi_and_gauge_thresholds_failed",
+  "elapsed_seconds": 54.2169865,
+  "check_count": 24,
+  "failed_checks": 0,
+  "messages": [],
+  "data_files": [
+    "results.wxf",
+    "checkpoint.wxf"
+  ]
+}

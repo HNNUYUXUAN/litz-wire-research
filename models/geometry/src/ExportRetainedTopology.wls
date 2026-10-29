@@ -1,0 +1,50 @@
+(* Read preserved mesh topology only. No model source or solver is evaluated. *)
+$HistoryLength=0;$CharacterEncoding="UTF8";
+SetSystemOptions["ParallelOptions"->"ParallelThreadNumber"->Min[8,$ProcessorCount]];
+rtRoot=NestWhile[DirectoryName,DirectoryName[$InputFileName],!FileExistsQ[FileNameJoin[{#,"pyproject.toml"}]]&];
+rtRequest=Environment["LITZ_TOPOLOGY_REQUEST"];
+If[!StringQ[rtRequest]||!FileExistsQ[rtRequest],Print["Explicit topology request required"];Exit[2]];
+rt=Import[rtRequest,"RawJSON"];rtOut=DirectoryName[rtRequest];
+rtPath[p_String]:=FileNameJoin[{rtRoot,Sequence@@StringSplit[p,"/"]}];
+rtHash[p_]:=FileHash[p,"SHA256","HexString"];
+rtWrite[p_,v_]:=If[Quiet[Check[Export[p,v,"RawJSON"],$Failed]]===$Failed,Throw["JSON_export_failed"]];
+rtChecks={};rtArrays={};rtStart=AbsoluteTime[];
+rtAssert[id_,q_]:=(AppendTo[rtChecks,<|"id"->id,"passed"->TrueQ[q]|>];If[!TrueQ[q],Throw[id]]);
+rtResult=Catch[
+ rtAssert["frozen_index_SHA256",rtHash[rtPath[rt["source_index_path"]]]===rt["source_index_sha256"]];
+ rtAssert["original_omission_SHA256",rtHash[rtPath[rt["original_data_path"]]]===rt["original_data_sha256"]];
+ rtWXF=rtPath[rt["source_payload_path"]];
+ rtAssert["original_WXF_SHA256_before_read",rtHash[rtWXF]===rt["source_payload_sha256"]];
+ Needs["NDSolve`FEM`"];
+ rtPayload=Import[rtWXF,"WXF"];rtData=Lookup[rtPayload,"data",rtPayload];
+ rtCases=rtData["cases"];
+ Scan[Function[spec,Module[{case,mesh,elements,connectivity,alias,coords,dims,file,headers,rows,back,indices,restored,anchors,record},
+  case=rtCases[[spec["case_index_1based"]]];mesh=case["mesh"];
+  elements=mesh["MeshElements"];connectivity=elements[[spec["element_index_1based"],1]];
+  coords=mesh["Coordinates"];dims=Dimensions[connectivity];
+  rtAssert[spec["source_key"]<>"_dimensions",dims===spec["dimensions"]&&Length[dims]===2];
+  rtAssert[spec["source_key"]<>"_integer_node_IDs",MatrixQ[connectivity,IntegerQ]&&Min[connectivity]>=1&&Max[connectivity]<=Length[coords]];
+  alias=case["triangles_node_ids"];
+  rtAssert[spec["alias_source_key"]<>"_identity",alias===connectivity];
+  file=FileNameJoin[{rtOut,"arrays","case_"<>ToString[spec["case_index_1based"]]<>"_mesh_connectivity.csv"}];
+  headers=Prepend[Table["node_"<>ToString[i]<>"_ID_1based",{i,dims[[2]]}],"element_index_1based"];
+  rows=MapIndexed[Prepend[#1,First[#2]]&,connectivity];
+  rtAssert[spec["source_key"]<>"_CSV_write",Quiet[Check[Export[file,Prepend[rows,headers],"CSV"],$Failed]]=!=$Failed];
+  Clear[rows];back=Import[file,"CSV"];
+  rtAssert[spec["source_key"]<>"_CSV_header_rows",Length[back]===dims[[1]]+1&&First[back]===headers];
+  back=Rest[back];indices=back[[All,1]];restored=back[[All,2;;]];
+  rtAssert[spec["source_key"]<>"_CSV_indices",indices===Range[dims[[1]]]];
+  rtAssert[spec["source_key"]<>"_original_WXF_integer_readback",restored===connectivity];
+  anchors=DeleteDuplicates[{1,Ceiling[dims[[1]]/2],dims[[1]]}];
+  record=<|"representation"->"integer_mesh_connectivity_CSV","path"->"arrays/"<>FileNameTake[file],"sha256"->rtHash[file],"bytes"->FileByteCount[file],"source_key"->spec["source_key"],"alias_source_keys"->{spec["alias_source_key"]},"dimensions"->dims,"element_count"->Times@@dims,"node_count"->Length[coords],"element_type"->ToString[Head[elements[[spec["element_index_1based"]]]]],"unit"->"dimensionless node identifiers","index_base"->1,"CSV_header"->headers,"coordinate_reference"->spec["coordinate_reference"],"marker_reference"->spec["marker_reference"],"roundtrip"-><|"passed"->True,"comparison"->"exact original WXF integer array against independent CSV Import; every element and index","components_compared"->Times@@dims,"absolute_tolerance"->0,"relative_tolerance"->0,"maximum_absolute_error"->0,"original_WXF_anchors"->Map[<|"element_index_1based"->#,"node_IDs"->connectivity[[#]]|>&,anchors]|>|>;
+  AppendTo[rtArrays,record];Clear[case,mesh,elements,connectivity,alias,coords,back,indices,restored];
+ ]],rt["targets"]];
+ Clear[rtPayload,rtData,rtCases];
+ rtAssert["original_WXF_SHA256_after_read",rtHash[rtWXF]===rt["source_payload_sha256"]];
+ rtAssert["frozen_index_SHA256_after_read",rtHash[rtPath[rt["source_index_path"]]]===rt["source_index_sha256"]];
+ "passed"
+];
+rtManifest=<|"schema_version"->1,"route"->rt["route"],"run_id"->rt["run_id"],"source_run_id"->rt["source_run_id"],"source_index_sha256"->rt["source_index_sha256"],"source_payload_path"->rt["source_payload_path"],"source_payload_sha256"->rt["source_payload_sha256"],"original_data_path"->rt["original_data_path"],"original_data_sha256"->rt["original_data_sha256"],"execution_status"->If[rtResult==="passed","passed_original_integer_topology_readback","failed"],"physical_acceptance_status"->"not_applicable_archive_topology_integrity_only","solver_executed"->False,"GPU_compute_enabled"->False,"CPU_thread_limit"->8,"elapsed_seconds"->(AbsoluteTime[]-rtStart),"arrays"->rtArrays,"checks"->rtChecks,"failure_reason"->If[rtResult==="passed",Null,ToString[rtResult]],"original_omissions_policy"->"Original bundle data and roundtrip remain unchanged. These explicit source keys have supplemental numeric topology; dense operators remain in the original WXF."|>;
+rtWrite[FileNameJoin[{rtOut,"topology_manifest.json"}],rtManifest];
+Print[If[rtResult==="passed","Topology CSVs exported with exact original-WXF integer readback",rtResult]];
+Exit[If[rtResult==="passed",0,2]];

@@ -1,0 +1,24 @@
+# Litz wire research / Litz 线研究
+
+> Agent-driven reviewable modeling and simulation, with bilingual research manuscripts and seven physical routes.
+> 智能体驱动的可复核建模与仿真，包含双语研究稿件与七条物理路线。
+
+- [English overview](README.md)
+- [中文首页](README.zh-CN.md)
+- [Research conventions](AGENTS.md)
+- [研究约定](AGENTS.zh-CN.md)
+- [Complete publications](publications/ONLINE.md)
+- [完整稿件](publications/ONLINE.zh-CN.md)
+- [Catalog interface](docs/agent-catalog.md)
+- [目录接口](docs/agent-catalog.zh-CN.md)
+- [Machine catalog](docs/agent-catalog.json)
+- [MCP and workflows](automation/README.md)
+- [MCP 与工作流](automation/README.zh-CN.md)
+- [Bibliography](references/library.bib)
+- [Citation guide](docs/citation-guide.md)
+
+Search: `python tools/BuildAgentCatalog.py --search common_terminal`.
+查询：`python tools/BuildAgentCatalog.py --search 解析`。
+
+Read the selected model conditions, saved execution status and physical acceptance separately. Cite the source path and actual commit used.
+分别核对模型条件、保存的执行状态与物理验收；引用时附来源路径和实际使用的提交。

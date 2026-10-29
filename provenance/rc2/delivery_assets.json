@@ -1,0 +1,49 @@
+{
+  "tag": "v1.0.0-rc.2",
+  "draft": true,
+  "source_edition": "publication_rc1_20261007_01",
+  "approved_specimen": "publication_20261013_paper_sample_09",
+  "automation_part": {
+    "name": "litz_automation_rc2.part01",
+    "sha256": "0869f1d7e634659c6f512601d26358b32e68533f7a4a5eeafe030847157ed4e2",
+    "bytes": 15412406,
+    "url": "https://api.github.com/repos/HNNUYUXUAN/litz-wire-research/releases/assets/638648444"
+  },
+  "single_files": [
+    {
+      "name": "ansys_80ae7c3cb47e.zip",
+      "bytes": 8030255,
+      "api_url": "https://api.github.com/repos/HNNUYUXUAN/litz-wire-research/releases/assets/637806901"
+    },
+    {
+      "name": "approved_paper_zh-CN.pdf",
+      "bytes": 13396911,
+      "api_url": "https://api.github.com/repos/HNNUYUXUAN/litz-wire-research/releases/assets/637805628"
+    },
+    {
+      "name": "paper_en_single.pdf",
+      "bytes": 13399876,
+      "api_url": "https://api.github.com/repos/HNNUYUXUAN/litz-wire-research/releases/assets/637805622"
+    },
+    {
+      "name": "paper_zh-CN_rc2_reference.pdf",
+      "bytes": 13396846,
+      "api_url": "https://api.github.com/repos/HNNUYUXUAN/litz-wire-research/releases/assets/637805616"
+    },
+    {
+      "name": "paper_zh-CN_single.pdf",
+      "bytes": 13486796,
+      "api_url": "https://api.github.com/repos/HNNUYUXUAN/litz-wire-research/releases/assets/637805618"
+    },
+    {
+      "name": "report_en_single.pdf",
+      "bytes": 13416034,
+      "api_url": "https://api.github.com/repos/HNNUYUXUAN/litz-wire-research/releases/assets/637805625"
+    },
+    {
+      "name": "report_zh-CN_single.pdf",
+      "bytes": 13515738,
+      "api_url": "https://api.github.com/repos/HNNUYUXUAN/litz-wire-research/releases/assets/637806784"
+    }
+  ]
+}

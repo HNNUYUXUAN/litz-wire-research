@@ -1,0 +1,22 @@
+{
+  "review_date": "2026-10-30",
+  "sources": [
+    {
+      "key": "REPO1",
+      "commit": "3a7ed32f2e6c669c819b9b292077ac21c3945ede"
+    },
+    {
+      "key": "REPO2",
+      "commit": "952503bee97c400de667acb7c7c850c6fe9a62a1"
+    },
+    {
+      "key": "REPO3",
+      "commit": "05425e56fe9f6077e565b0950e877b035d906f15"
+    },
+    {
+      "key": "REPO4",
+      "commit": "754a7342ebdcec3fd52c5df08701b2707f4dcf6b"
+    }
+  ],
+  "scope": "Read-only primary upstream review; no third-party implementation incorporated in this campaign."
+}

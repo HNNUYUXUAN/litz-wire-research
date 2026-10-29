@@ -1,0 +1,136 @@
+{
+  "schema_version": 3,
+  "documents": [
+    {
+      "id": "report_zh-CN",
+      "edition": "report",
+      "language": "zh-CN",
+      "main": "manuscript/report/zh-CN/main.tex",
+      "layout": "single",
+      "sections": [
+        "manuscript/report/zh-CN/sections/01.tex",
+        "manuscript/report/zh-CN/sections/02.tex",
+        "manuscript/report/zh-CN/sections/03.tex",
+        "manuscript/report/zh-CN/sections/04.tex",
+        "manuscript/report/zh-CN/sections/05.tex",
+        "manuscript/report/zh-CN/sections/06.tex",
+        "manuscript/report/zh-CN/sections/07.tex",
+        "manuscript/report/zh-CN/sections/08.tex",
+        "manuscript/report/zh-CN/sections/09.tex",
+        "manuscript/report/zh-CN/sections/10.tex",
+        "manuscript/report/zh-CN/sections/11.tex",
+        "manuscript/report/zh-CN/sections/13.tex",
+        "manuscript/report/zh-CN/sections/12.tex",
+        "manuscript/report/zh-CN/sections/A.tex",
+        "manuscript/report/zh-CN/sections/B.tex",
+        "manuscript/report/zh-CN/sections/C.tex",
+        "manuscript/report/zh-CN/sections/D.tex",
+        "manuscript/report/zh-CN/sections/convergence.tex"
+      ]
+    },
+    {
+      "id": "report_en",
+      "edition": "report",
+      "language": "en",
+      "main": "manuscript/report/en/main.tex",
+      "layout": "single",
+      "sections": [
+        "manuscript/report/en/sections/01.tex",
+        "manuscript/report/en/sections/02.tex",
+        "manuscript/report/en/sections/03.tex",
+        "manuscript/report/en/sections/04.tex",
+        "manuscript/report/en/sections/05.tex",
+        "manuscript/report/en/sections/06.tex",
+        "manuscript/report/en/sections/07.tex",
+        "manuscript/report/en/sections/08.tex",
+        "manuscript/report/en/sections/09.tex",
+        "manuscript/report/en/sections/10.tex",
+        "manuscript/report/en/sections/11.tex",
+        "manuscript/report/en/sections/13.tex",
+        "manuscript/report/en/sections/12.tex",
+        "manuscript/report/en/sections/A.tex",
+        "manuscript/report/en/sections/B.tex",
+        "manuscript/report/en/sections/C.tex",
+        "manuscript/report/en/sections/D.tex",
+        "manuscript/report/en/sections/convergence.tex"
+      ]
+    },
+    {
+      "id": "paper_zh-CN",
+      "edition": "paper",
+      "language": "zh-CN",
+      "main": "manuscript/paper/zh-CN/main.tex",
+      "layout": "ieee-journal",
+      "sections": [
+        "manuscript/paper/zh-CN/sections/01.tex",
+        "manuscript/paper/zh-CN/sections/02.tex",
+        "manuscript/paper/zh-CN/sections/03.tex",
+        "manuscript/paper/zh-CN/sections/04.tex",
+        "manuscript/paper/zh-CN/sections/05.tex",
+        "manuscript/paper/zh-CN/sections/S1.tex",
+        "manuscript/paper/zh-CN/sections/S2.tex",
+        "manuscript/paper/zh-CN/sections/S3.tex",
+        "manuscript/paper/zh-CN/sections/convergence.tex"
+      ]
+    },
+    {
+      "id": "paper_en",
+      "edition": "paper",
+      "language": "en",
+      "main": "manuscript/paper/en/main.tex",
+      "layout": "ieee-journal",
+      "sections": [
+        "manuscript/paper/en/sections/01.tex",
+        "manuscript/paper/en/sections/02.tex",
+        "manuscript/paper/en/sections/03.tex",
+        "manuscript/paper/en/sections/04.tex",
+        "manuscript/paper/en/sections/05.tex",
+        "manuscript/paper/en/sections/S1.tex",
+        "manuscript/paper/en/sections/S2.tex",
+        "manuscript/paper/en/sections/S3.tex",
+        "manuscript/paper/en/sections/convergence.tex"
+      ]
+    },
+    {
+      "id": "automation_zh-CN",
+      "edition": "automation",
+      "language": "zh-CN",
+      "main": "manuscript/automation/zh-CN/main.tex",
+      "layout": "ieee-journal",
+      "sections": [
+        "manuscript/automation/zh-CN/sections/01.tex",
+        "manuscript/automation/zh-CN/sections/02.tex",
+        "manuscript/automation/zh-CN/sections/03.tex",
+        "manuscript/automation/zh-CN/sections/04.tex",
+        "manuscript/automation/zh-CN/sections/05.tex",
+        "manuscript/automation/zh-CN/sections/07.tex",
+        "manuscript/automation/zh-CN/sections/06.tex",
+        "manuscript/automation/zh-CN/sections/convergence.tex"
+      ]
+    },
+    {
+      "id": "automation_en",
+      "edition": "automation",
+      "language": "en",
+      "main": "manuscript/automation/en/main.tex",
+      "layout": "ieee-journal",
+      "sections": [
+        "manuscript/automation/en/sections/01.tex",
+        "manuscript/automation/en/sections/02.tex",
+        "manuscript/automation/en/sections/03.tex",
+        "manuscript/automation/en/sections/04.tex",
+        "manuscript/automation/en/sections/05.tex",
+        "manuscript/automation/en/sections/07.tex",
+        "manuscript/automation/en/sections/06.tex",
+        "manuscript/automation/en/sections/convergence.tex"
+      ]
+    }
+  ],
+  "metrics": "manuscript/metrics.json",
+  "bibliography": "references/library.bib",
+  "scientific_hashes": {
+    "docs/总控/当前运行索引.json": "3324976d4af8f58e60820a88ae978246443f78fbdd0cfa1050e86809110ae60d",
+    "outputs/prewrite_closure_state.json": "80a66afa79c321a89f730b102af0e70125f6e1655372717d6b59f470c6520e71"
+  },
+  "migration_evidence": "manuscript/migration-receipt.json"
+}

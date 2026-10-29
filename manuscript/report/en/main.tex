@@ -1,0 +1,38 @@
+\documentclass[11pt,a4paper]{article}
+\usepackage[textwidth=182mm,top=20mm,bottom=22mm]{geometry}
+\linespread{1.16}
+\setlength{\parindent}{2em}
+\setlength{\parskip}{3pt plus 1pt}
+\input{../../preamble.tex}
+\title{Litz-Wire Modeling and Numerical Verification: Comprehensive Research Report}
+\author{Miao Yuxuan\\Huainan Normal University}
+\date{}
+\begin{document}
+\maketitle
+\begin{abstract}
+High-frequency loss in Litz wire depends on strand skin effect, local proximity fields, complex current sharing, transposition paths, and terminal constraints. This study establishes a reproducible hierarchy of numerical verification in which the physical content retained by each model is stated explicitly. Individually insulated strands connected in parallel are described by a common terminal voltage and a total complex-current constraint, yielding a current-sharing criterion within a specified linear field–circuit model. Finite-length longitudinal PEEC is then examined through independent changes in axial length, mutual and self integration, and cross-sectional discretization.
+
+For copper at 200 kHz, 20 A RMS, and 20 °C, the round-wire analytical solution and independent two-dimensional calibration establish an internal-field reference. The 640-strand common-terminal model has controlled mesh, return, and exterior-boundary checks. The final 5024-degree-of-freedom longitudinal model gives an axial resistance of 20.012738 mΩ/m, differing by 0.044582\% from its equal-area Bessel reference. The final two loss changes in the fixed-cuboid imposed-field RT0 example are 0.655090\% and 0.362916\%; this example tests an imposed-field operator and does not measure Litz transport resistance. Unsuccessful three-dimensional A–φ validation, native three-dimensional Ansys interfaces, and unresolved realistic-geometry ranking remain explicit boundaries. These results support numerical conclusions within stated models, without establishing the superiority of actual multilevel or cross-layer Litz structures.
+\end{abstract}
+\noindent\textbf{Keywords: }Litz wire; hierarchical verification; skin and proximity effects; common-terminal circuits; finite-length PEEC; reproducible numerical research\par
+\input{sections/01.tex}
+\input{sections/02.tex}
+\input{sections/03.tex}
+\input{sections/04.tex}
+\input{sections/05.tex}
+\input{sections/06.tex}
+\input{sections/07.tex}
+\input{sections/08.tex}
+\input{sections/09.tex}
+\input{sections/10.tex}
+\input{sections/11.tex}
+\input{sections/13.tex}
+\input{sections/12.tex}
+\input{sections/A.tex}
+\input{sections/B.tex}
+\input{sections/C.tex}
+\input{sections/D.tex}
+\input{sections/convergence.tex}
+\renewcommand{\refname}{References}
+\input{../../generated/report-references.tex}
+\end{document}

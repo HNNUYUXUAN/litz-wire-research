@@ -1,0 +1,32 @@
+{
+  "status": "passed",
+  "path_contains_spaces": true,
+  "analytic_checks": 12,
+  "unit_tests": 122,
+  "paper_compile": {
+    "paper_en_single": {
+      "actual_exit_code": 0,
+      "elapsed_seconds": 5.546999999991385,
+      "source_sha256": "5709ab243f587880fe8f118ed5e4288c2dbef43f0c0557529e4d1b44387db692",
+      "pdf_sha256": "a96e5b23854dd0c77daf3e844ae01a05228f0091668811bfcbf12c969db560da"
+    }
+  },
+  "redraw": {
+    "passed": true,
+    "source_sha256": "cda0fd8704b239c219786788b1e037a54cafaffe0a6d690d2fc1d8d8bb175dac",
+    "pdf_sha256": "fcec32cea6f306caf7b7162b40c687102ca094228ebf4683b2309615761e8283",
+    "physical_solver_calls": 0
+  },
+  "rendered": [
+    {
+      "file": "outputs/restored_paper_01/documents/paper/en/paper_en_single.pdf",
+      "sha256": "a96e5b23854dd0c77daf3e844ae01a05228f0091668811bfcbf12c969db560da",
+      "pages": 23
+    },
+    {
+      "file": "outputs/migration_redraw_01/q1_magnitude.pdf",
+      "sha256": "fcec32cea6f306caf7b7162b40c687102ca094228ebf4683b2309615761e8283",
+      "pages": 1
+    }
+  ]
+}

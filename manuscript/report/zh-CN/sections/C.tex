@@ -1,0 +1,107 @@
+\section{验收、诊断与复现}
+\label{chapter:C}
+
+% block-id: C.report_repro.p1
+\hypertarget{C.report_repro.p1}{}
+各路线的数据清单以模型、参数、源码与运行身份连接原始 WXF、检查点、Ansys 工程、日志和后处理结果。JSON/CSV 保存复数实部与虚部、单位及股线身份；源字段存在单位歧义时，规范量值依据源模型定义解释，并记录转换依据。逐图映射进一步关联数据、绘图表达式、独立 PDF/SVG/PNG 及组图布局。清单分别说明标量积分、空间场和部分恢复结果的覆盖范围。
+
+% block-id: C.report_repro.p2
+\hypertarget{C.report_repro.p2}{}
+失败案例保存触发输入、实际错误、针对性修订、停止条件和继续研究所需条件。几何验证的包装器退出码及内核退出信息缺失，RT0 q=18 原摘要的缺失指标和失败状态，以及较大 PEEC 规模的异常退出，均按原运行记录保留；纵向 PEEC 的 1.28 m 档状态为未运行。后处理验收使用独立身份，读者可据此区分数据恢复、数值求解和物理验证的状态。
+
+% block-id: C.report_repro.p3
+\hypertarget{C.report_repro.p3}{}
+LaTeX 主稿维护正文、公式和图注，生成的 Markdown 提供阅读稿。数据集清单定位保留的数值及几何证据，科研计算通过文本教程与 CLI 执行。迁移核验包括相对链接、附件读取、文件 SHA256 和含空格目录中的轻量运行；文档构建记录给出线程、内存与环境信息，便于在具备相应依赖的设备上复现。
+
+% block-id: C.tables
+\hypertarget{C.tables}{}
+\begin{table}[!htbp]
+\centering
+\caption{单圆线二维校准}
+\label{tab:C.tables-0}
+\begingroup\footnotesize
+\begin{tabularx}{\textwidth}{>{\raggedright\arraybackslash}X>{\raggedright\arraybackslash}X>{\raggedright\arraybackslash}X>{\raggedright\arraybackslash}X}
+\toprule
+节点数 & h/a & Rac (mΩ/m) & 电阻相对误差\\
+\midrule
+353 & 0.24 & 20.1572 & 0.00704525\\
+1389 & 0.12 & 20.0208 & 0.000230269\\
+5573 & 0.06 & 20.0162 & 1.79233e-06\\
+\bottomrule
+\end{tabularx}
+\endgroup
+\end{table}
+\begin{table}[!htbp]
+\centering
+\caption{纵向 PEEC 长度敏感性}
+\label{tab:C.tables-1}
+\begingroup\footnotesize
+\begin{tabularx}{\textwidth}{>{\raggedright\arraybackslash}X>{\raggedright\arraybackslash}X>{\raggedright\arraybackslash}X>{\raggedright\arraybackslash}X}
+\toprule
+自由度 & 长度 (m) & Rac (mΩ/轴向m) & Rac/Rdc\\
+\midrule
+1264 & 0.16 & 19.8992 & 3.64713\\
+1264 & 0.32 & 19.9586 & 3.65802\\
+1264 & 0.64 & 19.9885 & 3.66349\\
+5024 & 0.32 & 19.983 & 3.63931\\
+5024 & 0.64 & 20.0127 & 3.64472\\
+\bottomrule
+\end{tabularx}
+\endgroup
+\end{table}
+\begin{table}[!htbp]
+\centering
+\caption{RT0 外场损耗与积分阶数}
+\label{tab:C.tables-2}
+\begingroup\footnotesize
+\begin{tabularx}{\textwidth}{>{\raggedright\arraybackslash}X>{\raggedright\arraybackslash}X>{\raggedright\arraybackslash}X}
+\toprule
+单元数 & 积分阶数 & 损耗 (mW)\\
+\midrule
+8192 & 14 & 0.927463\\
+16000 & 14 & 0.933539\\
+27648 & 14 & 0.936927\\
+27648 & 18 & 0.936927\\
+\bottomrule
+\end{tabularx}
+\endgroup
+\end{table}
+\begin{table}[!htbp]
+\centering
+\caption{CPU/GPU 同模型对照}
+\label{tab:C.tables-3}
+\begingroup\footnotesize
+\begin{tabularx}{\textwidth}{>{\raggedright\arraybackslash}X>{\raggedright\arraybackslash}X>{\raggedright\arraybackslash}X}
+\toprule
+自由度 & 电感矩阵相对差 & 复电流相对差\\
+\midrule
+1264 & 7.07572e-16 & 3.28174e-14\\
+5024 & 7.48149e-16 & 7.78082e-14\\
+\bottomrule
+\end{tabularx}
+\endgroup
+\end{table}
+\begin{table}[!htbp]
+\centering
+\caption{PEEC 敏感性图的编号与量值}
+\label{tab:C.tables-4}
+\begingroup\footnotesize
+\begin{tabularx}{\textwidth}{>{\raggedright\arraybackslash}X>{\raggedright\arraybackslash}X>{\raggedright\arraybackslash}X}
+\toprule
+图中编号 & 单因素比较 & 图示相对变化 (\%)\\
+\midrule
+1 & 1264 自由度 长度 0.16\(\to\)0.32 m & 0.29864\\
+2 & 1264 自由度 长度 0.32\(\to\)0.64 m & 0.149482\\
+3 & 5024 自由度 长度 0.32\(\to\)0.64 m & 0.14873\\
+4 & 1264 自由度 互项积分 q4\(\to\)q6 & 0.001597\\
+5 & 1264 自由度 互项积分 q6\(\to\)q8 & 0.000588978\\
+6 & 5024 自由度 互项积分 q4\(\to\)q6 & 0.000462112\\
+7 & 5024 自由度 互项积分 q6\(\to\)q8 & 0.000169935\\
+8 & 1264 自由度 自项积分 10/8\(\to\)12/10 & 7.09596e-09\\
+9 & 5024 自由度 自项积分 10/8\(\to\)12/10 & 1.84501e-09\\
+10 & 长度0.32 m：1264 自由度\(\to\)5024 自由度 & 0.122127\\
+11 & 长度0.64 m：1264 自由度\(\to\)5024 自由度 & 0.121376\\
+\bottomrule
+\end{tabularx}
+\endgroup
+\end{table}

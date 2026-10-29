@@ -1,0 +1,29 @@
+{
+  "schema_version": "1.0",
+  "source_model": "isolated_long_round_conductor_internal_impedance_Bessel_solution",
+  "classification": "analytical_reference_not_FEM_not_experiment",
+  "recomputed_at_UTC": "2026-10-04",
+  "computation_environment": "Python mpmath 1.3.0",
+  "decimal_working_precision": 50,
+  "Wolfram_execution_status": "not_run",
+  "values": {
+    "delta_mm": 0.14777165489999475,
+    "rho_ohm_m": 1.724137931034483e-08,
+    "Q1_Rdc_mohm_per_m": 5.488101485927426,
+    "Q1_Rac_mohm_per_m": 20.016203627649382,
+    "Q1_Xint_mohm_per_m": 18.481316530002147,
+    "Q1_Rac_Rdc": 3.647199979624079,
+    "Q1_P_W_per_m": 8.006481451059752,
+    "Q1_area_mm2": 3.141592653589793,
+    "Q1_Jdc_A_per_mm2": 6.366197723675813,
+    "minimum_copper_area_mm2": 5.0,
+    "equal_5mm2_solid_diameter_mm": 2.52313252202016,
+    "candidate_640x0_1mm_area_mm2": 5.026548245743669,
+    "candidate_640x0_1mm_equal_solid_diameter_mm": 2.5298221281347035
+  },
+  "checks": {
+    "complex_current_integral_relative_error_below_1e_40": true,
+    "joule_integral_vs_I2ReZ_relative_error_below_1e_40": true
+  },
+  "precision_note": "Only a check of the stated analytical formula; very small quadrature residual does not establish physical model accuracy. Values rounded to ordinary JSON floating-point precision."
+}

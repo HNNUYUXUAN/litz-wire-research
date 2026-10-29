@@ -1,0 +1,174 @@
+{
+  "source_package_sha256": "0013626a6511d4eb960626cf7b99136e20298df832aba6534070fbaa74a56a9e",
+  "directory": "outputs/review/Final LaTeX recovery with spaces",
+  "results": [
+    {
+      "source": "documents/automation/en/automation_en_ieee-conference.tex",
+      "exit_code": 0,
+      "passed": true,
+      "elapsed_seconds": 5.32799999999952,
+      "pdf_sha256": "207bfbbb9017ed3f6b22c13bf2fabeb3427f5b410c56436ea05641f250e4d4ab"
+    },
+    {
+      "source": "documents/automation/en/automation_en_ieee-journal.tex",
+      "exit_code": 0,
+      "passed": true,
+      "elapsed_seconds": 5.515999999999622,
+      "pdf_sha256": "81d8e088ae54d86f25803c7f0b6f861f8754ff4f17f9e928347846f73195ead7"
+    },
+    {
+      "source": "documents/automation/en/automation_en_single.tex",
+      "exit_code": 0,
+      "passed": true,
+      "elapsed_seconds": 5.265999999999622,
+      "pdf_sha256": "99fd131c7ca90c420563d57ef7183529d20819028555452bb3301700ac4d729b"
+    },
+    {
+      "source": "documents/automation/zh-CN/automation_zh-CN_ieee-conference.tex",
+      "exit_code": 0,
+      "passed": true,
+      "elapsed_seconds": 5.5,
+      "pdf_sha256": "a40ef671bc9e38c7ae4573152614412c45ab4a66c949b61088f8114ec9df119f"
+    },
+    {
+      "source": "documents/automation/zh-CN/automation_zh-CN_ieee-journal.tex",
+      "exit_code": 0,
+      "passed": true,
+      "elapsed_seconds": 5.328000000001339,
+      "pdf_sha256": "1b54974fcf74e989494cfee552863b52cb9182918d8ad2b4855dc3e5bbd2586e"
+    },
+    {
+      "source": "documents/automation/zh-CN/automation_zh-CN_single.tex",
+      "exit_code": 0,
+      "passed": true,
+      "elapsed_seconds": 5.32799999999952,
+      "pdf_sha256": "c34a08efcb763f3ec1513003761ffc4b93e04f4c040ded6d2817d631c5283d1a"
+    },
+    {
+      "source": "documents/paper/en/paper_en_ieee-conference.tex",
+      "exit_code": 0,
+      "passed": true,
+      "elapsed_seconds": 6.17200000000048,
+      "pdf_sha256": "2bb274c3ec3fe5cebfbbd9235f14c8dcab0d4334b45261aa2017407913ede9a4"
+    },
+    {
+      "source": "documents/paper/en/paper_en_ieee-journal.tex",
+      "exit_code": 0,
+      "passed": true,
+      "elapsed_seconds": 6.218999999999141,
+      "pdf_sha256": "864caf4cd8ea8c1dde5020b8ffa906950e8a53bec5e7b1027f6404bc4ad0b11c"
+    },
+    {
+      "source": "documents/paper/en/paper_en_single.tex",
+      "exit_code": 0,
+      "passed": true,
+      "elapsed_seconds": 6.281000000000859,
+      "pdf_sha256": "6ade312bf6b64d3f4ce6f72b1e8eafc2b3b61faa88a39218d6a4c568a5d6d646"
+    },
+    {
+      "source": "documents/paper/zh-CN/paper_zh-CN_ieee-conference.tex",
+      "exit_code": 0,
+      "passed": true,
+      "elapsed_seconds": 6.406000000000859,
+      "pdf_sha256": "fb9d2ab257a63f7616ca678cfd961d3198e18887b434996da5109f1547f2ca8f"
+    },
+    {
+      "source": "documents/paper/zh-CN/paper_zh-CN_ieee-journal.tex",
+      "exit_code": 0,
+      "passed": true,
+      "elapsed_seconds": 6.53099999999904,
+      "pdf_sha256": "bf8f4977500fac7f0bbfdc5380cdee0b1cea3c2d655085cc1cd7eafb4a6c9135"
+    },
+    {
+      "source": "documents/paper/zh-CN/paper_zh-CN_single.tex",
+      "exit_code": 0,
+      "passed": true,
+      "elapsed_seconds": 6.218999999999141,
+      "pdf_sha256": "5f312daf3df1d423ae6c42b2f1dad5880b0cde18719f2969305c25f3f2f2d625"
+    },
+    {
+      "source": "documents/report/en/report_en_ieee-conference.tex",
+      "exit_code": 0,
+      "passed": true,
+      "elapsed_seconds": 6.21900000000096,
+      "pdf_sha256": "eefe6229381151bd5d7c0d4eb4ee6a6971d8ddc3170661304a5355f4cfb19e69"
+    },
+    {
+      "source": "documents/report/en/report_en_ieee-journal.tex",
+      "exit_code": 0,
+      "passed": true,
+      "elapsed_seconds": 6.218000000000757,
+      "pdf_sha256": "4be8fbc7f78358202d878ef61e90336fdb1c039e90eb24eb2c5ef876f9a59d1d"
+    },
+    {
+      "source": "documents/report/en/report_en_single.tex",
+      "exit_code": 0,
+      "passed": true,
+      "elapsed_seconds": 6.20299999999952,
+      "pdf_sha256": "5f9e7538a812105939e7a27905f7ab84acdd99b90cb12d1cbfc7414a8297d3d7"
+    },
+    {
+      "source": "documents/report/zh-CN/report_zh-CN_ieee-conference.tex",
+      "exit_code": 0,
+      "passed": true,
+      "elapsed_seconds": 6.311999999999898,
+      "pdf_sha256": "2b7800d8609a4ac8a961006beb5c56b1d6d6e4d37d70118d16cf4871cdb84a3d"
+    },
+    {
+      "source": "documents/report/zh-CN/report_zh-CN_ieee-journal.tex",
+      "exit_code": 0,
+      "passed": true,
+      "elapsed_seconds": 6.218999999999141,
+      "pdf_sha256": "bc0f7adea4081675c6fb0966a58281db521771fccf4bb5b2ad252a771ba63b45"
+    },
+    {
+      "source": "documents/report/zh-CN/report_zh-CN_single.tex",
+      "exit_code": 0,
+      "passed": true,
+      "elapsed_seconds": 6.438000000000102,
+      "pdf_sha256": "8a59029d2dd598982930c61bdd042a931dcedf5fc461c2c94a0697f3a4b9c9a3"
+    },
+    {
+      "source": "templates/en/ieee-conference.tex",
+      "exit_code": 0,
+      "passed": true,
+      "elapsed_seconds": 4.531000000000859,
+      "pdf_sha256": "6475878f540400ab698287c95e70fbbec438cf42db90104b820a4a5f629f1a0f"
+    },
+    {
+      "source": "templates/en/ieee-journal.tex",
+      "exit_code": 0,
+      "passed": true,
+      "elapsed_seconds": 4.436999999999898,
+      "pdf_sha256": "fadec25d50ae09ccd293611da21515ac69dcd7fa81d751875821408fe0a96b41"
+    },
+    {
+      "source": "templates/en/single.tex",
+      "exit_code": 0,
+      "passed": true,
+      "elapsed_seconds": 4.4539999999997235,
+      "pdf_sha256": "2e40543bc09f836f694a4fd9841a5a579186758a88509836df1588bc1eba106e"
+    },
+    {
+      "source": "templates/zh-CN/ieee-conference.tex",
+      "exit_code": 0,
+      "passed": true,
+      "elapsed_seconds": 4.718000000000757,
+      "pdf_sha256": "d40389526ebbee474c2a7263ad44673901958582285ca39bf8554fab68bb0861"
+    },
+    {
+      "source": "templates/zh-CN/ieee-journal.tex",
+      "exit_code": 0,
+      "passed": true,
+      "elapsed_seconds": 4.859999999998763,
+      "pdf_sha256": "63c8f1e4eea5b3e1ec0125705c65fb12a396448cae7aa0f7650b938082e1464c"
+    },
+    {
+      "source": "templates/zh-CN/single.tex",
+      "exit_code": 0,
+      "passed": true,
+      "elapsed_seconds": 5.17200000000048,
+      "pdf_sha256": "7e0f912e3d9abeb4edd12ef627f8fe201d7504677b45941dfca421186a4536b7"
+    }
+  ]
+}

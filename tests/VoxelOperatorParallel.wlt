@@ -1,0 +1,22 @@
+vpTestRoot=SelectFirst[{If[ValueQ[stageRoot],stageRoot,""],Environment["LITZ_PROJECT"],DirectoryName[DirectoryName[$InputFileName]],Directory[]},StringQ[#]&&FileExistsQ[FileNameJoin[{#,"configs","reference_parameters.json"}]]&];
+If[MissingQ[vpTestRoot],Print["Set LITZ_PROJECT to the research checkout."];Abort[]];
+Get[FileNameJoin[{vpTestRoot,"src","VoxelPEEC.wl"}]];
+Get[FileNameJoin[{vpTestRoot,"src","VoxelOperator.wl"}]];
+VerificationTest[SyntaxQ[Import[FileNameJoin[{vpTestRoot,"src","VoxelOperatorParallel.wl"}],"Text"]],True,TestID->"Parallel-RT0-helper-syntax"]
+vpSerial=LitzVoxelOperator`CreateOperator[{2,2,3},.0005,200000.,6,"field"];
+vpParallel=LitzVoxelOperator`CreateOperator[{2,2,3},.0005,200000.,6,"field","KernelAssemblyWorkers"->4];
+vpReferenceSerial=LitzVoxelOperator`DenseReference[vpSerial];
+vpReferenceParallel=LitzVoxelOperator`DenseReference[vpParallel];
+vpSolSerial=LitzVoxelOperator`SolveOperator[vpSerial,"Tolerance"->10.^-11,"TimeBudgetSeconds"->120.];
+vpSolParallel=LitzVoxelOperator`SolveOperator[vpParallel,"Tolerance"->10.^-11,"TimeBudgetSeconds"->120.];
+VerificationTest[vpParallel["faces"],vpSerial["faces"],TestID->"Parallel-RT0-face-order-identical"]
+VerificationTest[Max[Abs[Flatten[vpReferenceParallel["L_H"]-vpReferenceSerial["L_H"]]]]/Max[Abs[Flatten[vpReferenceSerial["L_H"]]]]<10.^-13,True,TestID->"Parallel-RT0-full-small-L-matrix-equivalence"]
+VerificationTest[Max[Abs[vpParallel["L_diagonal_H"]-vpSerial["L_diagonal_H"]]]/Max[Abs[vpSerial["L_diagonal_H"]]]<10.^-13,True,TestID->"Parallel-RT0-diagonal-equivalence"]
+VerificationTest[Norm[vpSolParallel["currents_RMS_A"]-vpSolSerial["currents_RMS_A"]]/Norm[vpSolSerial["currents_RMS_A"]]<10.^-11,True,TestID->"Parallel-RT0-complex-current-equivalence"]
+VerificationTest[Abs[vpSolParallel["loss_W"]/vpSolSerial["loss_W"]-1]<10.^-11,True,TestID->"Parallel-RT0-Joule-loss-equivalence"]
+VerificationTest[TrueQ[vpSolParallel["converged"]]&&vpSolParallel["linear_residual"]<10.^-11&&vpSolParallel["power_residual"]<10.^-8,True,TestID->"Parallel-RT0-measured-residual-and-power"]
+VerificationTest[{vpParallel["kernel_assembly_workers_requested"],vpParallel["kernel_assembly_workers_effective"]},{4,3},TestID->"Parallel-RT0-requested-effective-workers-recorded"]
+VerificationTest[vpParallel["estimated_worker_bytes"]>0&&vpParallel["estimated_working_bytes"]>vpSerial["estimated_working_bytes"],True,TestID->"Parallel-RT0-worker-memory-in-preflight"]
+VerificationTest[Kernels[],{},TestID->"Parallel-RT0-owned-workers-closed"]
+VerificationTest[MatchQ[LitzVoxelOperator`CreateOperator[{2,2,3},.0005,200000.,4,"field","KernelAssemblyWorkers"->0],Failure["InvalidParameters",_Association]],True,TestID->"Parallel-RT0-invalid-workers-rejected"]
+VerificationTest[MatchQ[LitzVoxelOperator`CreateOperator[{2,2,3},.0005,200000.,4,"field","KernelAssemblyWorkers"->4,"MemoryBudgetBytes"->1.],Failure["ResourceBudget",_Association]],True,TestID->"Parallel-RT0-worker-budget-rejected-before-launch"]

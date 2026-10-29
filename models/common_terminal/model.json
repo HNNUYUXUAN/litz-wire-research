@@ -1,0 +1,40 @@
+{
+  "route": "common_terminal",
+  "model_id": "coax",
+  "titles": {
+    "en": "Common-terminal current sharing",
+    "zh-CN": "共端复电流分配"
+  },
+  "equation": "Zi+e=V1; 1ᵀi=It",
+  "references": [
+    "P01",
+    "P02"
+  ],
+  "parameters": {
+    "strands": 7,
+    "diameter_m": 0.0001,
+    "mesh_factor": 0.7,
+    "return_factor": 2.0,
+    "outer_factor": 1.5,
+    "minimum_segments": 24
+  },
+  "tutorial_instructions": {
+    "en": "Change strand count or return geometry; inspect complex strand currents and input/loss balance.",
+    "zh-CN": "修改股数或回流几何；检查复电流及输入功率与损耗。"
+  },
+  "fixed_conventions": "SI; exp(+j omega t); RMS; sigma=58 MS/m; mu_r=1; 20 C",
+  "evidence_dataset": "common-terminal",
+  "derivation": {
+    "en": [
+      "Insulated strands are connected in parallel only at the ends. The 2D Az weak form couples each conductive region to its unknown axial electric potential gradient. A controlled conducting coaxial return closes the transport problem.",
+      "Linearity yields a coupled block system for Az and the source/return voltage gradients. Impose ΣIi=20 A RMS and Ireturn=−20 A; every strand shares the source voltage gradient, while each complex Ii follows from integrating its solved current density.",
+      "Compute bundle and return Joule losses separately and compare their sum with input real power. Rac,bundle=Pbundle/|It|² is valid for this pure transport case. Seven strands demonstrate the method and do not meet Q2 copper area."
+    ],
+    "zh-CN": [
+      "股线沿途绝缘，仅端部并联。二维 Az 弱形式把各导体区域与未知轴向电势梯度耦合，并用受控同轴铜回流闭合输运问题。",
+      "线性模型形成 Az 与源束/回流电势梯度的块系统。施加 ΣIi=20 A RMS、Ireturn=−20 A；各股共享源束电势梯度，复电流 Ii 由求得的电流密度积分得到。",
+      "分别积分束线及回流焦耳损耗，与输入有功功率比较。纯输运工况可定义 Rac,bundle=Pbundle/|It|²。七股为方法演示，铜面积不满足 Q2。"
+    ]
+  },
+  "history": "data/evidence/v1.0.0-rc.1/; litz-research data fetch common-terminal"
+}

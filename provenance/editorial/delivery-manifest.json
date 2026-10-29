@@ -1,0 +1,405 @@
+{
+  "run_id": "publication_review_20261015_03",
+  "counts": {
+    "markdown": 6,
+    "notebook": 6,
+    "pdf": 18,
+    "pdf_pages": 240,
+    "latex_manuscripts": 18,
+    "templates": 6,
+    "scientific_figure_families": 21,
+    "candidate_visual_files": 31,
+    "selected_bilingual_pairs": 6
+  },
+  "physical_solver_calls": 0,
+  "package_member_hashes_verified": true,
+  "approved_sample_unchanged": true,
+  "checks": {
+    "unittest": 11,
+    "bibliography_entries": 60,
+    "paired_blocks": 270,
+    "broken_reader_links": 0
+  },
+  "artifacts": [
+    {
+      "path": "outputs/publication_review_20261015_03/documents/automation/en/automation_en.md",
+      "sha256": "dcf3ca3e9a66df860dffe0fd94505fb701449b9144a2ca6b2cd94907c63ab3ff",
+      "bytes": 22131
+    },
+    {
+      "path": "outputs/publication_review_20261015_03/documents/automation/zh-CN/automation_zh-CN.md",
+      "sha256": "5eab2be3802dc4c3197735ca7efcaceda1bd8f9d492f12564ab562d6ec156618",
+      "bytes": 17832
+    },
+    {
+      "path": "outputs/publication_review_20261015_03/documents/paper/en/paper_en.md",
+      "sha256": "e0fd568998ce631863185e043dece7978e143d1ef5191c7ba63adb4214eeeace",
+      "bytes": 49367
+    },
+    {
+      "path": "outputs/publication_review_20261015_03/documents/paper/zh-CN/paper_zh-CN.md",
+      "sha256": "f5b43dbe04d1872525885b6f13753b5664a2269f950fcd5c54aadc839d89e1f9",
+      "bytes": 40578
+    },
+    {
+      "path": "outputs/publication_review_20261015_03/documents/report/en/report_en.md",
+      "sha256": "3024213f6664c451df6bc17a35d8444e6c5108a5ba3daf88611ea0dd1dbcee59",
+      "bytes": 61361
+    },
+    {
+      "path": "outputs/publication_review_20261015_03/documents/report/zh-CN/report_zh-CN.md",
+      "sha256": "4bb2e298069cb2b07bbf351cfe995b9667caa38391de151f669d48f5757abf0d",
+      "bytes": 49868
+    },
+    {
+      "path": "outputs/publication_review_20261015_03/documents/automation/en/automation_en_ieee-conference.pdf",
+      "sha256": "756a821bcea6be5cde084b7e65094b05cdc10df8c7802b049eb110bed0f3690b",
+      "bytes": 1663871
+    },
+    {
+      "path": "outputs/publication_review_20261015_03/documents/automation/en/automation_en_ieee-journal.pdf",
+      "sha256": "cc9e0a9ff838bf978440096c49abf281574149581bf6892da7f6585d91c86da9",
+      "bytes": 1664115
+    },
+    {
+      "path": "outputs/publication_review_20261015_03/documents/automation/en/automation_en_single.pdf",
+      "sha256": "028ac00eae78c523dd2a3eecd51c06c02f0a17fa16dea224ea0f69402310ec57",
+      "bytes": 1625242
+    },
+    {
+      "path": "outputs/publication_review_20261015_03/documents/automation/zh-CN/automation_zh-CN_ieee-conference.pdf",
+      "sha256": "4be00257146a95236fc203fdc7ea2c4514e0aa5a844a7797d585f1888a1a08c8",
+      "bytes": 1768012
+    },
+    {
+      "path": "outputs/publication_review_20261015_03/documents/automation/zh-CN/automation_zh-CN_ieee-journal.pdf",
+      "sha256": "52400b986c22c5b9166fd844a7fc15088079cd8654d7d3a3af71df0ff8db4d44",
+      "bytes": 1768037
+    },
+    {
+      "path": "outputs/publication_review_20261015_03/documents/automation/zh-CN/automation_zh-CN_single.pdf",
+      "sha256": "aaf5a8551f370bc49389d01c1f9092bc188b9b99e9914483026328b662e67e2b",
+      "bytes": 1735786
+    },
+    {
+      "path": "outputs/publication_review_20261015_03/documents/paper/en/paper_en_ieee-conference.pdf",
+      "sha256": "a3a49ae90235700402fda500fa537d1db33f661a70e746393d92181d5a47b8c1",
+      "bytes": 13343838
+    },
+    {
+      "path": "outputs/publication_review_20261015_03/documents/paper/en/paper_en_ieee-journal.pdf",
+      "sha256": "fd2cd435f668d1cd9ffcb1f6859dd9b59f57f6e049e2b6c367a5ca408620dc94",
+      "bytes": 13344118
+    },
+    {
+      "path": "outputs/publication_review_20261015_03/documents/paper/en/paper_en_single.pdf",
+      "sha256": "48401192da340e76d791a9427b905f773a0fcd4c73e825d4ae9c0da8e1e91102",
+      "bytes": 13307547
+    },
+    {
+      "path": "outputs/publication_review_20261015_03/documents/paper/zh-CN/paper_zh-CN_ieee-conference.pdf",
+      "sha256": "9626f2f600a2389b354b4687c72c89b3c8dd8cb5d53d010ef60adec963ab2349",
+      "bytes": 13427397
+    },
+    {
+      "path": "outputs/publication_review_20261015_03/documents/paper/zh-CN/paper_zh-CN_ieee-journal.pdf",
+      "sha256": "f24e2e4f054d2c72afe2ee3b20ebeb88c334924fb686924ad0762f04e9e9f86c",
+      "bytes": 13427358
+    },
+    {
+      "path": "outputs/publication_review_20261015_03/documents/paper/zh-CN/paper_zh-CN_single.pdf",
+      "sha256": "71f33834f7b520e83263f7b09fffadce5bf4b72aea77934b4643397cfbe7355e",
+      "bytes": 13410989
+    },
+    {
+      "path": "outputs/publication_review_20261015_03/documents/report/en/report_en_ieee-conference.pdf",
+      "sha256": "d1de56c1ae5e6e68b9641dc8bf3d4a3a2635a2d37f8d944d0d2c3bb9ebf9f7f1",
+      "bytes": 13357347
+    },
+    {
+      "path": "outputs/publication_review_20261015_03/documents/report/en/report_en_ieee-journal.pdf",
+      "sha256": "1afd6c0d80fb77cff56a3f9ebac5d23fccd17f57cc8bf97c7117649c1d1a7b30",
+      "bytes": 13357787
+    },
+    {
+      "path": "outputs/publication_review_20261015_03/documents/report/en/report_en_single.pdf",
+      "sha256": "be57cd2416b208b244394fa5422919036a384fbd1101eb6763842a91712713e0",
+      "bytes": 13322416
+    },
+    {
+      "path": "outputs/publication_review_20261015_03/documents/report/zh-CN/report_zh-CN_ieee-conference.pdf",
+      "sha256": "a5d4428a817ad6d24c0a27e721288e56828d83e75a1d23363933e925c3c63012",
+      "bytes": 13448149
+    },
+    {
+      "path": "outputs/publication_review_20261015_03/documents/report/zh-CN/report_zh-CN_ieee-journal.pdf",
+      "sha256": "2756cc7492651786d28019b376ba66b3d48564ec61e218c9d8bb61f7ece8249c",
+      "bytes": 13448260
+    },
+    {
+      "path": "outputs/publication_review_20261015_03/documents/report/zh-CN/report_zh-CN_single.pdf",
+      "sha256": "41a2acf852203392dce2a08d7bf14603325e77818f23a4b10ca29bafe2e65599",
+      "bytes": 13447059
+    },
+    {
+      "path": "outputs/publication_review_20261015_03/documents/automation/en/automation_en_ieee-conference.tex",
+      "sha256": "97115cf6fa1211909ef9d1da9535e0e47e36415f26bc2b1360ed25db5bcc5a1a",
+      "bytes": 23609
+    },
+    {
+      "path": "outputs/publication_review_20261015_03/documents/automation/en/automation_en_ieee-journal.tex",
+      "sha256": "60cc6d2f1dd5f46170d732f6660ba59b6154cc28a6caa39a6af8cb4d9f77ef39",
+      "bytes": 23582
+    },
+    {
+      "path": "outputs/publication_review_20261015_03/documents/automation/en/automation_en_single.tex",
+      "sha256": "e8291505c1d9ca546c5ae0f76138d794ffa5ea49f5ba6596028b364231d1d869",
+      "bytes": 24042
+    },
+    {
+      "path": "outputs/publication_review_20261015_03/documents/automation/zh-CN/automation_zh-CN_ieee-conference.tex",
+      "sha256": "ed662419b1012919c15e22b9cb9d0a98ad43855a1c0c78a55c3ba0830d32616e",
+      "bytes": 19467
+    },
+    {
+      "path": "outputs/publication_review_20261015_03/documents/automation/zh-CN/automation_zh-CN_ieee-journal.tex",
+      "sha256": "5150d2c5968990711e1b69d2fd1f691bbf55b98c116102aa063b94f0e9dbacdd",
+      "bytes": 19440
+    },
+    {
+      "path": "outputs/publication_review_20261015_03/documents/automation/zh-CN/automation_zh-CN_single.tex",
+      "sha256": "8083cf7cc261e48ca26584727eda1a06e28c402d9f432553eaa1451f4450e836",
+      "bytes": 19902
+    },
+    {
+      "path": "outputs/publication_review_20261015_03/documents/paper/en/paper_en_ieee-conference.tex",
+      "sha256": "a08b1076db8734d8ead78e2fb26b7ab49b8b7348a43adadb8c004e0652d59fe3",
+      "bytes": 55583
+    },
+    {
+      "path": "outputs/publication_review_20261015_03/documents/paper/en/paper_en_ieee-journal.tex",
+      "sha256": "f30c29499af46b63f11ffa852bad930d0da5357c3e19b77fa55ab87db4156798",
+      "bytes": 55556
+    },
+    {
+      "path": "outputs/publication_review_20261015_03/documents/paper/en/paper_en_single.tex",
+      "sha256": "0be987a11f88f1ce671affec54ff3f1c228cee5cb2fadaa5f7c12e3501fcd806",
+      "bytes": 56346
+    },
+    {
+      "path": "outputs/publication_review_20261015_03/documents/paper/zh-CN/paper_zh-CN_ieee-conference.tex",
+      "sha256": "d26e09976e2157ed272d88db3874a71ead1efd55ed52bdf561827718744ed995",
+      "bytes": 46614
+    },
+    {
+      "path": "outputs/publication_review_20261015_03/documents/paper/zh-CN/paper_zh-CN_ieee-journal.tex",
+      "sha256": "c02ea019e4791d5f308ef3b49a0f4d7829f980c3bd48705c58c10bf2ba6f24ea",
+      "bytes": 46587
+    },
+    {
+      "path": "outputs/publication_review_20261015_03/documents/paper/zh-CN/paper_zh-CN_single.tex",
+      "sha256": "7d215eb2941694eb44e74a8ba84a3e835fec3d370c16d73cc4f1934064d8cf33",
+      "bytes": 47379
+    },
+    {
+      "path": "outputs/publication_review_20261015_03/documents/report/en/report_en_ieee-conference.tex",
+      "sha256": "38e8855cb684083b41ddc5e89a74f3a742f37ae9183c8afd1e03ba37ef97c831",
+      "bytes": 67023
+    },
+    {
+      "path": "outputs/publication_review_20261015_03/documents/report/en/report_en_ieee-journal.tex",
+      "sha256": "174d03b3885ece1bf04eb0648ca5eda119a3687efcb1b39c7c7f01f420e1b436",
+      "bytes": 66996
+    },
+    {
+      "path": "outputs/publication_review_20261015_03/documents/report/en/report_en_single.tex",
+      "sha256": "5d843e0762e3c24f85768291e218b137b6c56557801521b9f654f2b457a75f7f",
+      "bytes": 67786
+    },
+    {
+      "path": "outputs/publication_review_20261015_03/documents/report/zh-CN/report_zh-CN_ieee-conference.tex",
+      "sha256": "ce94c1d45aa4bdc02df42b8f128092f0406c1b85376cdbfc08530195b452fbf1",
+      "bytes": 55555
+    },
+    {
+      "path": "outputs/publication_review_20261015_03/documents/report/zh-CN/report_zh-CN_ieee-journal.tex",
+      "sha256": "e7637d2f0c20a3427e34eaa1a2848770443c76b1e78c2c179ba74a6824056678",
+      "bytes": 55528
+    },
+    {
+      "path": "outputs/publication_review_20261015_03/documents/report/zh-CN/report_zh-CN_single.tex",
+      "sha256": "b4d46b3769566e65bd2415b7ec3756cb360bb79684e9aaf85c9dc4c84ba21ec9",
+      "bytes": 56320
+    },
+    {
+      "path": "notebooks/publication/publication_review_20261015_03/report/zh-CN/report_zh-CN.nb",
+      "sha256": "cfd2772562201ed20a3d20a369c3d5539a399bf5d4651d2af27226bc3950ab08",
+      "bytes": 15452251
+    },
+    {
+      "path": "notebooks/publication/publication_review_20261015_03/report/en/report_en.nb",
+      "sha256": "338e0238769b935917eb5fbc5282e90c0dacc69ab2f7f294cf600907d93173fe",
+      "bytes": 15342119
+    },
+    {
+      "path": "notebooks/publication/publication_review_20261015_03/paper/zh-CN/paper_zh-CN.nb",
+      "sha256": "3d89e6d6655e478179be19e3a1756245fff33054a297ad94a82936d3697b7e06",
+      "bytes": 15404695
+    },
+    {
+      "path": "notebooks/publication/publication_review_20261015_03/paper/en/paper_en.nb",
+      "sha256": "c007340bd3d0467b1b6adc5c61e8ec22d12e2382de2efb317bf28693d28ae39b",
+      "bytes": 15316697
+    },
+    {
+      "path": "notebooks/publication/publication_review_20261015_03/automation/zh-CN/automation_zh-CN.nb",
+      "sha256": "1df224b0c1f173f2f4bce252cc7a9bff0cd5312135bd0808bcdc5e27ff4b82be",
+      "bytes": 208177
+    },
+    {
+      "path": "notebooks/publication/publication_review_20261015_03/automation/en/automation_en.nb",
+      "sha256": "f964b266d7779ad6a2db5c7260a8e5b1b2edd73391b1a809a19b76159b36b94d",
+      "bytes": 176549
+    },
+    {
+      "path": "latex/templates/en/ieee-conference.tex",
+      "sha256": "2fc92e872aec5a43adb63b2d51c203b09aa9a3e56f8f62ef29b69372765f25c1",
+      "bytes": 1891
+    },
+    {
+      "path": "latex/templates/en/ieee-journal.tex",
+      "sha256": "d2d9b6f6c407b716e7076b906ed4731dffa393541132b96aa3b14ca74b29c3ef",
+      "bytes": 1864
+    },
+    {
+      "path": "latex/templates/en/single.tex",
+      "sha256": "485f8ff0c33a5919cb2f0fcdf0b11793ea5936199eaab55d0601e7c29a4b375c",
+      "bytes": 2213
+    },
+    {
+      "path": "latex/templates/zh-CN/ieee-conference.tex",
+      "sha256": "680adbf466ead03a607a4822c11c28f8843f08bd215958a8c79de163764ee19e",
+      "bytes": 1908
+    },
+    {
+      "path": "latex/templates/zh-CN/ieee-journal.tex",
+      "sha256": "4abd34d680d7a11fe4b180b20ca1d9089ca297773a61e7decc388e48e9111c25",
+      "bytes": 1881
+    },
+    {
+      "path": "latex/templates/zh-CN/single.tex",
+      "sha256": "0e0a89f5a0cb1faa8d9a0bd05c5e49159778502c01e465ee6185528f6de3d255",
+      "bytes": 2232
+    },
+    {
+      "path": "publications/assets/overview/en/project.png",
+      "sha256": "8d46dfd222036df47dcbe0c59e93c11d752e113c4474d39cf7d50e6b64ab0f26",
+      "bytes": 1978320
+    },
+    {
+      "path": "publications/assets/overview/en/research-sketch.png",
+      "sha256": "fb7ce2ee788b664331eb68e21143a9fb704e8e1d1aaf4ee87f42e1a0fd2167b1",
+      "bytes": 2400723
+    },
+    {
+      "path": "publications/assets/overview/zh-CN/project.png",
+      "sha256": "fd7e5d2805b1f51322b341c91a0ac17d6c1b29932f364b893d91f6b80106f781",
+      "bytes": 1958259
+    },
+    {
+      "path": "publications/assets/overview/zh-CN/research-sketch.png",
+      "sha256": "b8bf0fa9e867881d76b56608475149001c4482828a419efd0e9a3b3b682408d6",
+      "bytes": 2304142
+    },
+    {
+      "path": "publications/assets/overview/en/connections.svg",
+      "sha256": "83a4bdec5c90c612a21ae59c086e945cf6a036c1d955084bf0a1a3071dbc9198",
+      "bytes": 4704
+    },
+    {
+      "path": "publications/assets/overview/en/cross-solver.svg",
+      "sha256": "3906994cacf18f107d93f111f1696714460c0c7db39b8021e19db9228100e20c",
+      "bytes": 3572
+    },
+    {
+      "path": "publications/assets/overview/en/model-hierarchy.svg",
+      "sha256": "2222cce86900a46705a7f3a620e4b862b28fe773194374a574ef13a1b86d88f6",
+      "bytes": 4656
+    },
+    {
+      "path": "publications/assets/overview/en/research-loop.svg",
+      "sha256": "d262b4a970631cfdf9be9ac62fd72447ab703acd578dc6cf17cf382061150557",
+      "bytes": 4717
+    },
+    {
+      "path": "publications/assets/overview/zh-CN/connections.svg",
+      "sha256": "e3dfdbe3e5456c609d58f056d5b10c53083be1fc064a39046fd818aac7358764",
+      "bytes": 4672
+    },
+    {
+      "path": "publications/assets/overview/zh-CN/cross-solver.svg",
+      "sha256": "d5e2bb0d48762822249998eee536f39745274e97a589a0216b5ae6cf27c7a582",
+      "bytes": 3471
+    },
+    {
+      "path": "publications/assets/overview/zh-CN/model-hierarchy.svg",
+      "sha256": "17ac5b4941f4fc075dc0fc9cdcb3f98dca6b9b8b037cb40da51307e0258367b2",
+      "bytes": 4520
+    },
+    {
+      "path": "publications/assets/overview/zh-CN/research-loop.svg",
+      "sha256": "8d7e8b8316f822d123b94491c5ffbd86c97ce11fba31593b33f7aea3185be99b",
+      "bytes": 4656
+    },
+    {
+      "path": "outputs/publication_review_20261015_03/Litz_publication_package.zip",
+      "sha256": "9efcc884be3500cf7d5d9b53680e833af02f1a7c6c8cb65871e73809a2aee274",
+      "bytes": 487570964
+    },
+    {
+      "path": "outputs/publication_review_20261015_03/Litz_LaTeX_sources.zip",
+      "sha256": "0013626a6511d4eb960626cf7b99136e20298df832aba6534070fbaa74a56a9e",
+      "bytes": 74357489
+    },
+    {
+      "path": "outputs/publication_review_20261015_03/Litz_visual_candidates.zip",
+      "sha256": "e4ca59cd99eed0a1c76c44dbb158390d6100f94505980f3cbbc7ec2a78aa73e4",
+      "bytes": 21987850
+    },
+    {
+      "path": "outputs/publication_review_20261015_03/visual_review.json",
+      "sha256": "3d43190f0b41a87c254aa30f6d9df5a590ca2a94a3cdfceca5006a95a33a4a5c",
+      "bytes": 4790
+    },
+    {
+      "path": "outputs/publication_review_20261015_03/edition_verification.json",
+      "sha256": "b754fa815db695ce0ae369c844f26ae2d65b74a589f711c3d3aa7ab3afa02b87",
+      "bytes": 25240
+    },
+    {
+      "path": "outputs/publication_review_20261015_03/notebook_verification.json",
+      "sha256": "8e585dcbf7c9794725a5559ca43093fcd36369d26675b6dd4c4d977a3f1ccd2a",
+      "bytes": 5420
+    },
+    {
+      "path": "outputs/publication_review_20261015_03/pdf_verification_details.json",
+      "sha256": "7382c8f7f98fc1547286d6d10b80ed7b0789d2938a8fd4399842ef14bac38011",
+      "bytes": 244509
+    },
+    {
+      "path": "outputs/publication_review_20261015_03/caption_verification.json",
+      "sha256": "de3354ca5a6ad977e3e2959a2287e943fdf2aea0404aee5ddc64485c8ea50c9e",
+      "bytes": 48000
+    },
+    {
+      "path": "outputs/publication_review_20261015_03/standalone-compile-receipt.json",
+      "sha256": "d2786f536104e42ee304a1ca9b23cf38df84ad7f6af2adbe864b452fa9adc4aa",
+      "bytes": 5886
+    },
+    {
+      "path": "outputs/publication_review_20261015_03/package_manifest.json",
+      "sha256": "dec55d4862e36ed54e7656da04ab3d03f8b9e467e1491445ee7c7de2fb4b802e",
+      "bytes": 168100
+    }
+  ]
+}

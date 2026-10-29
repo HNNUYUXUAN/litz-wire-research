@@ -1,0 +1,41 @@
+\documentclass[11pt,a4paper]{article}
+\usepackage[textwidth=182mm,top=20mm,bottom=22mm]{geometry}
+\linespread{1.16}
+\setlength{\parindent}{2em}
+\setlength{\parskip}{3pt plus 1pt}
+\input{../../preamble.tex}
+\renewcommand{\figurename}{图}
+\renewcommand{\tablename}{表}
+\renewcommand{\abstractname}{摘要}
+\title{Litz 线分层建模与数值验证：完整研究报告}
+\author{缪雨轩\\淮南师范学院}
+\date{}
+\begin{document}
+\maketitle
+\begin{abstract}
+Litz 线的高频损耗取决于单股趋肤、局部邻近场、股间复电流分配、换位路径及端部约束。本文建立可复现的分层数值验证框架，区分各层实际保留的物理内容。沿途绝缘、端部并联的股线采用共同端电压和总复电流约束，并在指定线性场路模型内给出均流判据。有限长度纵向 PEEC 则独立检查轴向长度、互项与自项积分及横向离散的影响。
+
+在 200 kHz、20 A RMS、20 ℃ 铜导体工况下，单圆线解析与独立二维校准建立了内场参考，640 股二维共端模型具有受控网格、回流和外域检查。5024 自由度纵向模型末档 Rac 为 20.012738 mΩ/轴向m，与本档等面积 Bessel 参照相差 0.044582\%。固定长方体外场 RT0 算例的末两次损耗变化为 0.655090\% 和 0.362916\%；它检验外场算子，不能作为 Litz 输运电阻。三维 A–φ、Ansys 原生三维接口及真实性能排名的未通过边界继续保留。结果支持限定模型内的数值结论，不证明实际多级或跨层 Litz 的性能优劣。
+\end{abstract}
+\noindent\textbf{关键词：}Litz 线；分层验证；趋肤与邻近效应；共端场路；有限长度 PEEC；可复现数值研究\par
+\input{sections/01.tex}
+\input{sections/02.tex}
+\input{sections/03.tex}
+\input{sections/04.tex}
+\input{sections/05.tex}
+\input{sections/06.tex}
+\input{sections/07.tex}
+\input{sections/08.tex}
+\input{sections/09.tex}
+\input{sections/10.tex}
+\input{sections/11.tex}
+\input{sections/13.tex}
+\input{sections/12.tex}
+\input{sections/A.tex}
+\input{sections/B.tex}
+\input{sections/C.tex}
+\input{sections/D.tex}
+\input{sections/convergence.tex}
+\renewcommand{\refname}{参考文献}
+\input{../../generated/report-references.tex}
+\end{document}

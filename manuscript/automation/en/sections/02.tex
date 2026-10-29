@@ -1,0 +1,22 @@
+\section{Software connections and layered architecture}
+\label{chapter:02}
+
+% block-id: auto.02.p1
+\hypertarget{auto.02.p1}{}
+The system has three layers: research workflows, execution adapters, and physical models. Workflows define inputs, operation order, checking criteria, and completion conditions; adapters manage connections and execution for Wolfram, AEDT, and numerical backends; models retain equations, discretizations, and route tests. Parameters and artifacts pass through a common task interface, allowing text tutorials, the command line and MCP entry points to refer to the same saved inputs.
+
+% block-id: auto.02.p2
+\hypertarget{auto.02.p2}{}
+The Wolfram connection pins AgentTools 2.2.0 at commit 9c99e2da5286c2ff7ac2298956107cd9334c6e90; the existing validation records use Wolfram kernel 15.0.0. Tools expose code evaluation, testing, and Notebook reading and writing. Returned numerical expressions and TestReport results support current computational checks. The archived rc.2 frontend case separately checked opening, saving, reopening and reading back Notebook graphics. \cite{AGENTTOOLS}
+
+% block-id: auto.02.p3
+\hypertarget{auto.02.p3}{}
+The Ansys connection pins PyAEDT-MCP 0.2.dev0 at commit 80ae7c3cb47e5de7b744a2898061510299d3bcef, with PyAEDT 1.8.0 for model construction. The server runs in a separate CPython environment. The project runner starts and records its own AEDT Student gRPC session before MCP connects to that session. AEDT's embedded scripting environment and external CPython expose different modules and object interfaces, so call records retain the actual execution location, tool name, and returned value. \cite{PYAEDTMCP,PYAEDT,ANSYSCOMMONMCP}
+
+% block-id: auto.02.p4
+\hypertarget{auto.02.p4}{}
+The default configuration uses local standard input/output transport; the configuration generator also supports local HTTP. Installation materials pin upstream sources, dependencies, and licenses, while connection diagnostics inspect actual paths and available tools. Wolfram, AEDT, and fonts form part of the runtime environment, with versions and license conditions recorded per run. Other MCP clients can use the same task descriptions and protocol interface; the end-to-end records in this paper concern Codex with a standard MCP client bridge.
+
+% block-id: auto.02.p5
+\hypertarget{auto.02.p5}{}
+Research source and software connections have distinct responsibilities, allowing models to run independently through the command line and helping locate the layer in which a failure occurs. Temporary code produced during a client session is saved before formal acceptance; the run manifest binds file hashes and parameters. Later revisions can therefore be traced through a code difference and a new run identity to the original attempt.

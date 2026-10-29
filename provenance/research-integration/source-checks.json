@@ -1,0 +1,121 @@
+{
+  "status": "passed",
+  "source_checkout": {
+    "schema_version": 1,
+    "scope": "source_checkout_only",
+    "created_utc": "2026-10-28T14:49:52.075089+00:00",
+    "status": "passed",
+    "python": "3.12.16",
+    "platform": "Windows",
+    "package_version": "1.0.0rc3",
+    "tests": {
+      "selected": [
+        "test_readiness.ReadinessTests.test_clean_probe_does_not_inherit_accidental_terminal_dependencies",
+        "test_readiness.ReadinessTests.test_missing_installation_is_not_successful_tool_execution",
+        "test_readiness.ReadinessTests.test_protocol_error_flag_and_text_errors_are_preserved",
+        "test_readiness.ReadinessTests.test_wolfram_test_failure_cannot_pass_as_tool_success",
+        "test_readiness.ReadinessTests.test_dependency_drift_and_missing_runtime_are_rejected",
+        "test_readiness.ReadinessTests.test_explicit_environment_survives_empty_parent_environment",
+        "test_readiness.ReadinessTests.test_generated_configuration_keeps_verified_root_and_no_unrelated_secret",
+        "test_readiness.ReadinessTests.test_executable_presence_does_not_hide_missing_desktop_environment",
+        "test_readiness.ReadinessTests.test_dependency_lock_is_part_of_source_identity",
+        "test_research_cli.ResearchTests.test_metadata_derivative_keeps_numeric_paths",
+        "test_research_cli.ResearchTests.test_pack_respects_part_limit_and_restores",
+        "test_research_cli.ResearchTests.test_paths_stay_in_dataset",
+        "test_research_cli.ResearchTests.test_archive_parts_restore_and_member_integrity",
+        "test_automation_tasks.AutomationTests.test_corrupted_mounted_evidence_is_rejected",
+        "test_automation_tasks.AutomationTests.test_cancel_before_worker_prevents_solver_start",
+        "test_automation_tasks.AutomationTests.test_dataset_version_controls_mount_and_automatic_readback",
+        "test_automation_tasks.AutomationTests.test_tutorial_rejects_accidental_large_campaign",
+        "test_automation_tasks.AutomationTests.test_restore_supports_long_windows_snapshot_paths",
+        "test_automation_tasks.AutomationTests.test_parameters_must_be_actual_supported_inputs",
+        "test_task_lifecycle.LifecycleTests.test_reused_parent_pid_does_not_adopt_an_older_process",
+        "test_task_lifecycle.LifecycleTests.test_saved_solver_result_does_not_publish_completion_before_cleanup",
+        "test_tool_experience.ToolExperienceTests.test_catalogue_entry_points_and_evidence_datasets_exist",
+        "test_tool_experience.ToolExperienceTests.test_models_are_discoverable_without_solver_probes",
+        "test_tool_experience.ToolExperienceTests.test_dry_run_reports_missing_sources_without_creating_outputs",
+        "test_tool_experience.ToolExperienceTests.test_run_identity_is_checked_before_execution",
+        "test_tool_experience.ToolExperienceTests.test_probe_reports_nonzero_exit_and_timeout",
+        "test_tool_experience.ToolExperienceTests.test_ansys_student_executable_is_discovered_from_environment_root",
+        "test_tool_experience.ToolExperienceTests.test_doctor_preserves_existing_fields_and_observation_scope",
+        "test_tool_experience.ToolExperienceTests.test_json_output_uses_utf8_in_a_legacy_encoded_console",
+        "test_research_manifest.ReleaseManifestTests.test_current_publication_documents_and_download_identities",
+        "test_research_manifest.ReleaseManifestTests.test_catalogue_provenance_and_dependency_coverage",
+        "test_source_checkout.CurrentEditionContractTests.test_complete_bilingual_set_is_accepted",
+        "test_source_checkout.CurrentEditionContractTests.test_missing_or_duplicate_language_is_rejected",
+        "test_source_checkout.CurrentEditionContractTests.test_invalid_layout_or_hash_is_rejected",
+        "test_source_checkout.CurrentEditionContractTests.test_markdown_cannot_leave_checkout"
+      ],
+      "run": 35,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0
+    },
+    "references": {
+      "entries": 62,
+      "sources": 62,
+      "failed_checks": 0,
+      "errors": []
+    },
+    "discovered_models": [
+      "analytic",
+      "wolfram-analytic",
+      "fem2",
+      "coax",
+      "coax640",
+      "circuits",
+      "geometry",
+      "copper",
+      "peec",
+      "voxel",
+      "gpu",
+      "rt0",
+      "aphi",
+      "ansys",
+      "wolfram"
+    ],
+    "physical_solver_calls": 0,
+    "blocked_solver_attempts": [],
+    "blocked_external_operations": [],
+    "input_sha256": {
+      "pyproject.toml": "604b1506cbef249dc6165f98bf5770750d8ced8884fa53ef787b58ba01c7ae4d",
+      "docs/current-edition.json": "17ab10095487e8bac12ad789e5abfb81fe2769b8e2bf40b73eba4b327f6f9c5c",
+      "data/catalog.json": "be8505e990068710b143f6e411d903938117c1de06c265a9270afeadd109db44",
+      "references/library.bib": "74067ae3682bd1eee9d9d5c43bb996b212fb5ef2c02ed30862c77169ac956c62",
+      "references/sources.json": "87427ccb76345a76ad80c12f51b03e76ac0e744aca49bdb05cc715f71161d49c"
+    },
+    "failed_checks": []
+  },
+  "reader_links": {
+    "schema_version": 1,
+    "status": "passed",
+    "scope": "tracked_reader_markdown_relative_paths",
+    "markdown_files": 146,
+    "relative_links": 590,
+    "failed_links": [],
+    "excluded_archives": [
+      "outputs/",
+      "provenance/",
+      "originals/",
+      "problem/"
+    ],
+    "external_urls_and_heading_anchors": "not_checked"
+  },
+  "python_regression": {
+    "run": 228,
+    "passed": 227,
+    "skipped": 1,
+    "skip": "ANSYS dependency isolated from project environment"
+  },
+  "ansys_isolated_regression": {
+    "run": 10,
+    "passed": 10
+  },
+  "academic_search": {
+    "run": 73,
+    "passed": 71,
+    "skipped": 2,
+    "failed": 0
+  },
+  "git_remote_ci": "not_run_for_uncommitted_worktree"
+}

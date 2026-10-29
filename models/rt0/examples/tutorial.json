@@ -1,0 +1,10 @@
+{
+  "dimensions": [
+    2,
+    2,
+    3
+  ],
+  "cell_width_m": 0.0005,
+  "quadrature_order": 6,
+  "excitation": "field"
+}

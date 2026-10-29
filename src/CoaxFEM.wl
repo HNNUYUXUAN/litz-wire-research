@@ -1,0 +1,2 @@
+(* Compatibility entry; maintained implementation: models/common_terminal/src/CoaxFEM.wl *)
+Get[FileNameJoin[{NestWhile[DirectoryName,DirectoryName[$InputFileName],!FileExistsQ[FileNameJoin[{#,"pyproject.toml"}]]&],"models","common_terminal","src","CoaxFEM.wl"}]];

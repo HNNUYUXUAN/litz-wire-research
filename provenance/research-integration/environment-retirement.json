@@ -1,0 +1,19 @@
+{
+  "status": "passed",
+  "completed_at": "2026-10-28T14:25:06.4607352+00:00",
+  "environments": [
+    {
+      "identity": "previous project venv",
+      "files": 9180,
+      "bytes": 212030527.0,
+      "status": "retired_archive_verified"
+    },
+    {
+      "identity": "previous project ANSYS venv",
+      "files": 24622,
+      "bytes": 717926095.0,
+      "status": "retired_archive_verified"
+    }
+  ],
+  "method": "Configuration and process reference audit; package inventories and before/after per-file hashes; local frozen retention"
+}

@@ -1,0 +1,59 @@
+{
+  "schema_version": 1,
+  "status": "passed",
+  "checked_at": "2026-10-28T14:51:53.527829+00:00",
+  "scope": "Current-device single-repository delivery; observed Windows Server 2022",
+  "all_current_scope_tasks_passed": true,
+  "remaining_current_scope_tasks": [],
+  "publication_run": "latex_delivery_20261028_07",
+  "source_git_head": "05ab2565710e9ca6ee9f29a794920b16dbdda66c",
+  "worktree_state": "Implementation and documentation changes remain in the working tree; no project commit or push",
+  "evidence": {
+    "automation/integration-plan.json": "b8f31e3f14c8bcd00af5565af4de9df82352d90742b8a1467f5beb04cf02d714",
+    "docs/integration-acceptance.zh-CN.md": "c71765a4b4c84d47c802058d0fe73f7118bca505fa46c32a2495cce62b98e4c3",
+    "docs/current-edition.json": "17ab10095487e8bac12ad789e5abfb81fe2769b8e2bf40b73eba4b327f6f9c5c",
+    "docs/agent-catalog.json": "b919d0e2508b332d288772df5480bf0b889c5221e170d0297bab36101abea62d",
+    "docs/navigation-migration-receipt.json": "bd9c0f8fb02658f922d6559ef660759b706120383361173dd4e6531a676a89a2",
+    "provenance/research-integration/runtime-validation.json": "491a017f1cf39cac5c71c5a70bae5dab964aa4bc49b806f08aad03a6d68444bd",
+    "provenance/research-integration/environment-retirement.json": "ebc8e1d1fa27309f7b02003897d322db6bd01c7afdf46f6606188fb29c90a21f",
+    "provenance/research-integration/online-validation.json": "aab6723116c0a1b06232cbb95557f9be02f30e9d607d6c15f66872eefe9a8635",
+    "provenance/research-integration/retrieval-stage-comparison.json": "d34a18ad0bb4556f9cbd06b20a9102db40635726a9bc33bd4c85d293069d7f97",
+    "provenance/research-integration/citation-export.json": "23dca362f3b8fc733206af1a061ba9deeb1c4be39847f792fb42ce05440facd0",
+    "provenance/research-integration/retention-validation.json": "383dba91712cd7799bd3ddf0c5bb28ddf9e37e238e93b9be9b85ae2fca3d174f",
+    "provenance/research-integration/public-review.json": "54fe64a7c1d44d4e97343408fd78873322462df11e1a56bb00b00fab02deca68",
+    "provenance/research-integration/source-checks.json": "e1fe9ca3c6d301b7c0e57e9e4e0d0373f9307716e11b1f495311df94214e3771",
+    "provenance/research-integration/upstream-pr.json": "ab8bdcc7883640b5553188be8b7d65914a02707026d5ba07d127aed19db30caa",
+    "provenance/current-publication/reading-receipt.json": "a0bfccdd43bb232905e2e30777fd8a5c78459313240bc3100f2a46d4c2bf938c",
+    "provenance/current-publication/compilation.json": "829004357b47651cf7a7d18d9b96081d5237fa61e7caef1b39f03b8e6466f052",
+    "provenance/current-publication/visual-review.json": "4a66a0ab3ffb97eb27e5bd293234c3a45bd5e6618c7f508baa85a7b489f1c841",
+    "provenance/current-publication/migration-text-audit.json": "7d65bd8b776dbdd098269bccda8c5bf688e92f22609f3fba208e07351201c040",
+    "provenance/current-publication/frontmatter-migration.json": "8415790f7345910e762a621f46ef0a35df27c01aeacc229e819ad5378abc3d2b",
+    "provenance/current-publication/package-portability.json": "bb8287d5f50364cbbb248818aff947f2618a30639e7a3cf4ef96d6df94cba66c"
+  },
+  "local_evidence_identities": {
+    "outputs/integration_20261028_01/final-python-regression.log": "600f75d4d861ee5e974207d70c9277a28f33754cd0255014e56c1a44b7a9fba8",
+    "outputs/integration_20261028_01/ansys-isolated-regression.log": "dcf21eee8cde91b923ccd688760e2b8bfabd3927367fd8132cce2026daf1b689",
+    "outputs/integration_20261028_01/final-academic-tests.log": "818d9940efc5ab2a96c075273061f0fb0bc0f6620a74a1a796b8635db64a1a7e",
+    "outputs/integration_20261028_01/final-project-dependencies.log": "578658d234514dce62d2ac4d64e77eb0d7d03407f9e5df601a66199a3c92e115",
+    "outputs/integration_20261028_01/final-ansys-dependencies.log": "425f16749ff41a8035cfa6ec07f6cec0bbe0f4d5c64574baba691be328ea0771",
+    "outputs/integration_20261028_01/final-research-dependencies.log": "7cf6121e19ec4015db91c5a3648c4ec73a9bce4ffbc7f97ab83cc4cc6479ca3b",
+    "outputs/integration_20261028_01/current-maintenance-inventory.json": "d09544a7e638953cae8bfec6dc1bb1e9bf507ff2aca73e0648290097362bb256",
+    "outputs/integration_20261028_01/baseline.patch": "79ea69960dc2643f5015250e8e82145edc07efa1d68f309bf57febe1e2b92758",
+    "outputs/integration_20261028_01/baseline-status.txt": "f2a3a729c8f910205ab5538878298aa4fa1eb5307c8df0975730f43866a0432c",
+    "outputs/integration_20261028_01/student-tests-final.log": "68c2bcc8c2dde1619fc4e4fc09958d5bbe9a49d1a09caba82543994c84611167"
+  },
+  "scope_limits": {
+    "platform": "Observed Windows Server 2022 only; Windows 10 and 11 actual-device checks remain release gates",
+    "research_benchmark": "Three paired deterministic DOI retrieval-stage trials; no end-to-end agent or token-saving claim",
+    "science": "A-phi failures and Maxwell single-mesh convergence limits retained",
+    "upstream_PR": "Submitted and open; upstream review and merge are external",
+    "remote_CI": "Workflow configured; current uncommitted changes tested locally"
+  },
+  "future_release_gates": [
+    "Windows 10 actual-device validation",
+    "Windows 11 actual-device validation",
+    "Cross-domain validation",
+    "End-to-end agent research paired evaluation",
+    "Independent repositories"
+  ]
+}

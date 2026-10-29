@@ -1,0 +1,19 @@
+{
+  "status": "passed",
+  "files": [
+    {
+      "purpose": "Preserve pre-existing local navigation bytes before updating current entry links",
+      "retained": ".local-archive/navigation-20261028/REVIEW.zh-CN.md",
+      "original_sha256": "ce692f60e37271badf806a44d27e96b224e1b8fffd17090ee0b39684886a6a5a",
+      "original": "REVIEW.zh-CN.md",
+      "current_sha256": "877f69d1036f6ea0409c6e084000038488b74b40f08c7b6334520ddc17579e8d"
+    },
+    {
+      "purpose": "Preserve pre-existing local navigation bytes before updating current entry links",
+      "retained": ".local-archive/navigation-20261028/publications/NOTEBOOKS.zh-CN.md",
+      "original_sha256": "069e89ca015b58042a980776d3985c963ac2ac2c8987baa825bf223bfe1d70a4",
+      "original": "publications/NOTEBOOKS.zh-CN.md",
+      "current_sha256": "ecb0ac367002bbcda420da1d1b63e10ce85d8fb7e36ccd13da42cb1584f99055"
+    }
+  ]
+}

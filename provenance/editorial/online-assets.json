@@ -1,0 +1,141 @@
+{
+  "release_url": "https://github.com/HNNUYUXUAN/litz-wire-research/releases",
+  "release_tag": "v1.0.0-rc.2",
+  "artifacts": [
+    {
+      "name": "review_20261015_report_zh-CN_single.pdf",
+      "sha256": "41a2acf852203392dce2a08d7bf14603325e77818f23a4b10ca29bafe2e65599",
+      "bytes": 13447059
+    },
+    {
+      "name": "review_20261015_report_zh-CN_ieee-journal.pdf",
+      "sha256": "2756cc7492651786d28019b376ba66b3d48564ec61e218c9d8bb61f7ece8249c",
+      "bytes": 13448260
+    },
+    {
+      "name": "review_20261015_report_zh-CN_ieee-conference.pdf",
+      "sha256": "a5d4428a817ad6d24c0a27e721288e56828d83e75a1d23363933e925c3c63012",
+      "bytes": 13448149
+    },
+    {
+      "name": "review_20261015_report_en_single.pdf",
+      "sha256": "be57cd2416b208b244394fa5422919036a384fbd1101eb6763842a91712713e0",
+      "bytes": 13322416
+    },
+    {
+      "name": "review_20261015_report_en_ieee-journal.pdf",
+      "sha256": "1afd6c0d80fb77cff56a3f9ebac5d23fccd17f57cc8bf97c7117649c1d1a7b30",
+      "bytes": 13357787
+    },
+    {
+      "name": "review_20261015_report_en_ieee-conference.pdf",
+      "sha256": "d1de56c1ae5e6e68b9641dc8bf3d4a3a2635a2d37f8d944d0d2c3bb9ebf9f7f1",
+      "bytes": 13357347
+    },
+    {
+      "name": "review_20261015_paper_zh-CN_single.pdf",
+      "sha256": "71f33834f7b520e83263f7b09fffadce5bf4b72aea77934b4643397cfbe7355e",
+      "bytes": 13410989
+    },
+    {
+      "name": "review_20261015_paper_zh-CN_ieee-journal.pdf",
+      "sha256": "f24e2e4f054d2c72afe2ee3b20ebeb88c334924fb686924ad0762f04e9e9f86c",
+      "bytes": 13427358
+    },
+    {
+      "name": "review_20261015_paper_zh-CN_ieee-conference.pdf",
+      "sha256": "9626f2f600a2389b354b4687c72c89b3c8dd8cb5d53d010ef60adec963ab2349",
+      "bytes": 13427397
+    },
+    {
+      "name": "review_20261015_paper_en_single.pdf",
+      "sha256": "48401192da340e76d791a9427b905f773a0fcd4c73e825d4ae9c0da8e1e91102",
+      "bytes": 13307547
+    },
+    {
+      "name": "review_20261015_paper_en_ieee-journal.pdf",
+      "sha256": "fd2cd435f668d1cd9ffcb1f6859dd9b59f57f6e049e2b6c367a5ca408620dc94",
+      "bytes": 13344118
+    },
+    {
+      "name": "review_20261015_paper_en_ieee-conference.pdf",
+      "sha256": "a3a49ae90235700402fda500fa537d1db33f661a70e746393d92181d5a47b8c1",
+      "bytes": 13343838
+    },
+    {
+      "name": "review_20261015_automation_zh-CN_single.pdf",
+      "sha256": "aaf5a8551f370bc49389d01c1f9092bc188b9b99e9914483026328b662e67e2b",
+      "bytes": 1735786
+    },
+    {
+      "name": "review_20261015_automation_zh-CN_ieee-journal.pdf",
+      "sha256": "52400b986c22c5b9166fd844a7fc15088079cd8654d7d3a3af71df0ff8db4d44",
+      "bytes": 1768037
+    },
+    {
+      "name": "review_20261015_automation_zh-CN_ieee-conference.pdf",
+      "sha256": "4be00257146a95236fc203fdc7ea2c4514e0aa5a844a7797d585f1888a1a08c8",
+      "bytes": 1768012
+    },
+    {
+      "name": "review_20261015_automation_en_single.pdf",
+      "sha256": "028ac00eae78c523dd2a3eecd51c06c02f0a17fa16dea224ea0f69402310ec57",
+      "bytes": 1625242
+    },
+    {
+      "name": "review_20261015_automation_en_ieee-journal.pdf",
+      "sha256": "cc9e0a9ff838bf978440096c49abf281574149581bf6892da7f6585d91c86da9",
+      "bytes": 1664115
+    },
+    {
+      "name": "review_20261015_automation_en_ieee-conference.pdf",
+      "sha256": "756a821bcea6be5cde084b7e65094b05cdc10df8c7802b049eb110bed0f3690b",
+      "bytes": 1663871
+    },
+    {
+      "name": "review_20261015_report_zh-CN.nb",
+      "sha256": "cfd2772562201ed20a3d20a369c3d5539a399bf5d4651d2af27226bc3950ab08",
+      "bytes": 15452251
+    },
+    {
+      "name": "review_20261015_report_en.nb",
+      "sha256": "338e0238769b935917eb5fbc5282e90c0dacc69ab2f7f294cf600907d93173fe",
+      "bytes": 15342119
+    },
+    {
+      "name": "review_20261015_paper_zh-CN.nb",
+      "sha256": "3d89e6d6655e478179be19e3a1756245fff33054a297ad94a82936d3697b7e06",
+      "bytes": 15404695
+    },
+    {
+      "name": "review_20261015_paper_en.nb",
+      "sha256": "c007340bd3d0467b1b6adc5c61e8ec22d12e2382de2efb317bf28693d28ae39b",
+      "bytes": 15316697
+    },
+    {
+      "name": "review_20261015_automation_zh-CN.nb",
+      "sha256": "1df224b0c1f173f2f4bce252cc7a9bff0cd5312135bd0808bcdc5e27ff4b82be",
+      "bytes": 208177
+    },
+    {
+      "name": "review_20261015_automation_en.nb",
+      "sha256": "f964b266d7779ad6a2db5c7260a8e5b1b2edd73391b1a809a19b76159b36b94d",
+      "bytes": 176549
+    },
+    {
+      "name": "review_20261015_Litz_publication_package.zip",
+      "sha256": "9efcc884be3500cf7d5d9b53680e833af02f1a7c6c8cb65871e73809a2aee274",
+      "bytes": 487570964
+    },
+    {
+      "name": "review_20261015_Litz_LaTeX_sources.zip",
+      "sha256": "0013626a6511d4eb960626cf7b99136e20298df832aba6534070fbaa74a56a9e",
+      "bytes": 74357489
+    },
+    {
+      "name": "review_20261015_Litz_visual_candidates.zip",
+      "sha256": "e4ca59cd99eed0a1c76c44dbb158390d6100f94505980f3cbbc7ec2a78aa73e4",
+      "bytes": 21987850
+    }
+  ]
+}

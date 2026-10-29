@@ -1,0 +1,37 @@
+# Historical release assets
+
+These assets retain their original release identities and licenses. See [publications](README.md) for current sources.
+
+[v1.0.0-rc.2](https://github.com/HNNUYUXUAN/litz-wire-research-archive-20261030-003257/releases/tag/v1.0.0-rc.2)
+
+- [review_20261015_report_zh-CN_single.pdf](https://github.com/HNNUYUXUAN/litz-wire-research-archive-20261030-003257/releases/download/v1.0.0-rc.2/review_20261015_report_zh-CN_single.pdf)
+- [review_20261015_report_zh-CN_ieee-journal.pdf](https://github.com/HNNUYUXUAN/litz-wire-research-archive-20261030-003257/releases/download/v1.0.0-rc.2/review_20261015_report_zh-CN_ieee-journal.pdf)
+- [review_20261015_report_zh-CN_ieee-conference.pdf](https://github.com/HNNUYUXUAN/litz-wire-research-archive-20261030-003257/releases/download/v1.0.0-rc.2/review_20261015_report_zh-CN_ieee-conference.pdf)
+- [review_20261015_report_en_single.pdf](https://github.com/HNNUYUXUAN/litz-wire-research-archive-20261030-003257/releases/download/v1.0.0-rc.2/review_20261015_report_en_single.pdf)
+- [review_20261015_report_en_ieee-journal.pdf](https://github.com/HNNUYUXUAN/litz-wire-research-archive-20261030-003257/releases/download/v1.0.0-rc.2/review_20261015_report_en_ieee-journal.pdf)
+- [review_20261015_report_en_ieee-conference.pdf](https://github.com/HNNUYUXUAN/litz-wire-research-archive-20261030-003257/releases/download/v1.0.0-rc.2/review_20261015_report_en_ieee-conference.pdf)
+- [review_20261015_paper_zh-CN_single.pdf](https://github.com/HNNUYUXUAN/litz-wire-research-archive-20261030-003257/releases/download/v1.0.0-rc.2/review_20261015_paper_zh-CN_single.pdf)
+- [review_20261015_paper_zh-CN_ieee-journal.pdf](https://github.com/HNNUYUXUAN/litz-wire-research-archive-20261030-003257/releases/download/v1.0.0-rc.2/review_20261015_paper_zh-CN_ieee-journal.pdf)
+- [review_20261015_paper_zh-CN_ieee-conference.pdf](https://github.com/HNNUYUXUAN/litz-wire-research-archive-20261030-003257/releases/download/v1.0.0-rc.2/review_20261015_paper_zh-CN_ieee-conference.pdf)
+- [review_20261015_paper_en_single.pdf](https://github.com/HNNUYUXUAN/litz-wire-research-archive-20261030-003257/releases/download/v1.0.0-rc.2/review_20261015_paper_en_single.pdf)
+- [review_20261015_paper_en_ieee-journal.pdf](https://github.com/HNNUYUXUAN/litz-wire-research-archive-20261030-003257/releases/download/v1.0.0-rc.2/review_20261015_paper_en_ieee-journal.pdf)
+- [review_20261015_paper_en_ieee-conference.pdf](https://github.com/HNNUYUXUAN/litz-wire-research-archive-20261030-003257/releases/download/v1.0.0-rc.2/review_20261015_paper_en_ieee-conference.pdf)
+- [review_20261015_automation_zh-CN_single.pdf](https://github.com/HNNUYUXUAN/litz-wire-research-archive-20261030-003257/releases/download/v1.0.0-rc.2/review_20261015_automation_zh-CN_single.pdf)
+- [review_20261015_automation_zh-CN_ieee-journal.pdf](https://github.com/HNNUYUXUAN/litz-wire-research-archive-20261030-003257/releases/download/v1.0.0-rc.2/review_20261015_automation_zh-CN_ieee-journal.pdf)
+- [review_20261015_automation_zh-CN_ieee-conference.pdf](https://github.com/HNNUYUXUAN/litz-wire-research-archive-20261030-003257/releases/download/v1.0.0-rc.2/review_20261015_automation_zh-CN_ieee-conference.pdf)
+- [review_20261015_automation_en_single.pdf](https://github.com/HNNUYUXUAN/litz-wire-research-archive-20261030-003257/releases/download/v1.0.0-rc.2/review_20261015_automation_en_single.pdf)
+- [review_20261015_automation_en_ieee-journal.pdf](https://github.com/HNNUYUXUAN/litz-wire-research-archive-20261030-003257/releases/download/v1.0.0-rc.2/review_20261015_automation_en_ieee-journal.pdf)
+- [review_20261015_automation_en_ieee-conference.pdf](https://github.com/HNNUYUXUAN/litz-wire-research-archive-20261030-003257/releases/download/v1.0.0-rc.2/review_20261015_automation_en_ieee-conference.pdf)
+- [review_20261015_report_zh-CN.nb](https://github.com/HNNUYUXUAN/litz-wire-research-archive-20261030-003257/releases/download/v1.0.0-rc.2/review_20261015_report_zh-CN.nb)
+- [review_20261015_report_en.nb](https://github.com/HNNUYUXUAN/litz-wire-research-archive-20261030-003257/releases/download/v1.0.0-rc.2/review_20261015_report_en.nb)
+- [review_20261015_paper_zh-CN.nb](https://github.com/HNNUYUXUAN/litz-wire-research-archive-20261030-003257/releases/download/v1.0.0-rc.2/review_20261015_paper_zh-CN.nb)
+- [review_20261015_paper_en.nb](https://github.com/HNNUYUXUAN/litz-wire-research-archive-20261030-003257/releases/download/v1.0.0-rc.2/review_20261015_paper_en.nb)
+- [review_20261015_automation_zh-CN.nb](https://github.com/HNNUYUXUAN/litz-wire-research-archive-20261030-003257/releases/download/v1.0.0-rc.2/review_20261015_automation_zh-CN.nb)
+- [review_20261015_automation_en.nb](https://github.com/HNNUYUXUAN/litz-wire-research-archive-20261030-003257/releases/download/v1.0.0-rc.2/review_20261015_automation_en.nb)
+- [review_20261015_Litz_publication_package.zip](https://github.com/HNNUYUXUAN/litz-wire-research-archive-20261030-003257/releases/download/v1.0.0-rc.2/review_20261015_Litz_publication_package.zip)
+- [review_20261015_Litz_LaTeX_sources.zip](https://github.com/HNNUYUXUAN/litz-wire-research-archive-20261030-003257/releases/download/v1.0.0-rc.2/review_20261015_Litz_LaTeX_sources.zip)
+- [review_20261015_Litz_visual_candidates.zip](https://github.com/HNNUYUXUAN/litz-wire-research-archive-20261030-003257/releases/download/v1.0.0-rc.2/review_20261015_Litz_visual_candidates.zip)
+- [litz_publication_licenses_20261020.zip](https://github.com/HNNUYUXUAN/litz-wire-research-archive-20261030-003257/releases/download/v1.0.0-rc.2/litz_publication_licenses_20261020.zip)
+
+[SHA256 / bytes](../provenance/editorial/online-assets.json)
+[License companion](../LICENSES/publication-companion/README.md)

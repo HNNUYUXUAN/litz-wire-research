@@ -1,0 +1,27 @@
+\section{Research questions and method}
+\label{chapter:01}
+
+% block-id: auto.01.p1
+\hypertarget{auto.01.p1}{}
+A scientific result typically passes through model selection, parameter interpretation, software calls, solution, postprocessing, and written interpretation. These stages use different representations and success criteria: a working tool connection does not establish a correct model, and a normal solver exit does not establish acceptable current, power, or discretization error. When an agent participates in modeling, natural-language requests must become executable objects, and each decision must connect to evidence that can be saved and examined.
+
+% block-id: auto.01.p2
+\hypertarget{auto.01.p2}{}
+Using Litz wire as a case study, this work combines the Codex client, the Model Context Protocol (MCP), Wolfram Language, and Ansys Electronics Desktop into an automated research workflow. Codex decomposes tasks, edits source, invokes tools, and interprets results; MCP supplies tool discovery and invocation; project runners validate inputs, bind source identities, control process resources, and retain outputs. Independent calculations and explicit tolerances determine physical acceptance. This division turns interactive exploration into research objects that another investigator can execute and extend. \cite{CODEX,MCP,WOLFRAM,AEDT}
+
+% block-id: auto.01.p3
+\hypertarget{auto.01.p3}{}
+Litz modeling imposes concrete requirements on this workflow. Analytical round-wire, two-dimensional common-terminal, finite-length PEEC, imposed-field RT0, and three-dimensional A–φ models retain different degrees of freedom and excitations, so their results must be interpreted through their respective observables. Literature on transposition and multiscale modeling informs model selection; complex strand currents, actual copper area, and return conditions determine whether implementations can be compared directly. \cite{P01,N01,RUEHLI1974,RT1977}
+
+% block-id: auto.01.p4
+\hypertarget{auto.01.p4}{}
+This paper addresses three engineering questions: how to share a traceable task identity across client, tool, and solver; how to connect protocol checks with physical acceptance; and how to retain sufficient recovery information during code extension, interface errors, and numerical failure. Evaluation uses six classes of recorded rc.2 cases, and conclusions concern the capabilities exercised by those cases. Client comparisons, manual-effort baselines, and large-sample success rates require separately designed experiments.
+
+% block-id: auto.01.figure
+\hypertarget{auto.01.figure}{}
+\begin{figure}[!htbp]
+\centering
+\includegraphics[width=\linewidth,height=.72\textheight,keepaspectratio]{../../assets/en/model_hierarchy.pdf}
+\caption{Model hierarchy and comparable observables. Transport models are grouped by physical object and observable: round-wire internal fields support analytical and two-dimensional calibration, multistrand field–circuit models resolve common-terminal phasor currents, and longitudinal PEEC examines finite-length effects. Links identify internal-field calibration or equal-area resistance references. RT0 imposed-field loss and three-dimensional A–φ diagnostics occupy separate research scopes.}
+\label{fig:model_hierarchy}
+\end{figure}

@@ -1,0 +1,46 @@
+[
+  {
+    "path": "models/aphi/src/stages/closure_fem3_diagnostics.wl",
+    "historical_read_resolvers_added": 4
+  },
+  {
+    "path": "models/peec/src/stages/closure_peec.wl",
+    "historical_read_resolvers_added": 1
+  },
+  {
+    "path": "models/rt0/src/stages/closure_rt0.wl",
+    "historical_read_resolvers_added": 3
+  },
+  {
+    "path": "models/rt0/src/stages/closure_rt0_collect.wl",
+    "historical_read_resolvers_added": 2
+  },
+  {
+    "path": "adapters/gpu/stages/closure_gpu_recovery.wl",
+    "historical_read_resolvers_added": 1
+  },
+  {
+    "path": "adapters/wolfram/stages/boundary.wl",
+    "historical_read_resolvers_added": 2
+  },
+  {
+    "path": "adapters/wolfram/stages/build.wl",
+    "historical_read_resolvers_added": 3
+  },
+  {
+    "path": "adapters/wolfram/stages/delivery_data.wl",
+    "historical_read_resolvers_added": 2
+  },
+  {
+    "path": "adapters/wolfram/stages/frontend.wl",
+    "historical_read_resolvers_added": 1
+  },
+  {
+    "path": "adapters/wolfram/stages/progress_notebook.wl",
+    "historical_read_resolvers_added": 1
+  },
+  {
+    "path": "adapters/wolfram/stages/replay.wl",
+    "historical_read_resolvers_added": 2
+  }
+]

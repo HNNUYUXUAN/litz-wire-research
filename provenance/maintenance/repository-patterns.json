@@ -1,0 +1,35 @@
+{
+  "schema_version": 1,
+  "reviewed_on": "2026-10-20",
+  "scope": "Read-only comparison of the owner's public repository organization; no source code copied and no scientific method attribution inferred.",
+  "sources": [
+    {
+      "repository": "https://github.com/HNNUYUXUAN/thermal-pde-audit",
+      "commit": "42fc895d66ddb1a44c23509e8e9c6c8491295161",
+      "patterns": ["Bilingual overview navigation", "Ordinary CPU CI with Skill metadata, task preflight and saved-evidence checks"],
+      "files": ["README.md", "README.en.md", ".github/workflows/cpu-validation.yml", "scripts/validate_skill.py"],
+      "reference_url": "https://github.com/HNNUYUXUAN/thermal-pde-audit/blob/42fc895d66ddb1a44c23509e8e9c6c8491295161/.github/workflows/cpu-validation.yml"
+    },
+    {
+      "repository": "https://github.com/HNNUYUXUAN/general-physics-lab",
+      "commit": "ef5ea82c843eb2a6c59924cab215b75edb0af3dd",
+      "patterns": ["Task-oriented reader navigation", "Stable resource identifiers, machine catalog and deterministic freshness checks", "Versioned release packages bound to source and verification records", "Explicit runtime coverage in CI"],
+      "files": ["README.md", "llms.txt", "docs/agent-catalog.md", "docs/agent-guide.md", "scripts/package_release.py", ".github/workflows/python.yml"],
+      "reference_url": "https://github.com/HNNUYUXUAN/general-physics-lab/blob/ef5ea82c843eb2a6c59924cab215b75edb0af3dd/docs/agent-catalog.md"
+    },
+    {
+      "repository": "https://github.com/HNNUYUXUAN/phy-sim-llm",
+      "commit": "03909825cafd45b6a2a53c617076d97f1e55e0ea",
+      "patterns": ["Separate reading, reproduction and maintenance entry points", "Paper claims linked to implementation and recorded checks", "Citation metadata consistency checks"],
+      "files": ["README.md", "llms.txt", "MAINTENANCE.md", "docs/PAPER_TRACEABILITY.md"],
+      "reference_url": "https://github.com/HNNUYUXUAN/phy-sim-llm/blob/03909825cafd45b6a2a53c617076d97f1e55e0ea/docs/PAPER_TRACEABILITY.md"
+    },
+    {
+      "repository": "https://github.com/HNNUYUXUAN/cluetide-review",
+      "commit": "62bd80dec4297efd4ad0600acb1d57deaf7a6371",
+      "patterns": ["Bilingual product journey", "Separate conceptual illustrations, editable diagrams and actual screenshots", "Validation bound to exact source baselines"],
+      "files": ["README.md", "README.en.md", "docs/readme-assets.md", "docs/release.md"],
+      "reference_url": "https://github.com/HNNUYUXUAN/cluetide-review/blob/62bd80dec4297efd4ad0600acb1d57deaf7a6371/docs/readme-assets.md"
+    }
+  ]
+}

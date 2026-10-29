@@ -1,0 +1,312 @@
+# Litz wire research / Litz 线研究
+
+> Agent-driven reviewable modeling and simulation, with bilingual research manuscripts and seven physical routes.
+> 智能体驱动的可复核建模与仿真，包含双语研究稿件与七条物理路线。
+
+- [English overview](README.md)
+- [中文首页](README.zh-CN.md)
+- [Research conventions](AGENTS.md)
+- [研究约定](AGENTS.zh-CN.md)
+- [Complete publications](publications/ONLINE.md)
+- [完整稿件](publications/ONLINE.zh-CN.md)
+- [Catalog interface](docs/agent-catalog.md)
+- [目录接口](docs/agent-catalog.zh-CN.md)
+- [Machine catalog](docs/agent-catalog.json)
+- [MCP and workflows](automation/README.md)
+- [MCP 与工作流](automation/README.zh-CN.md)
+- [Bibliography](references/library.bib)
+- [Citation guide](docs/citation-guide.md)
+
+Search: `python tools/BuildAgentCatalog.py --search common_terminal`.
+查询：`python tools/BuildAgentCatalog.py --search 解析`。
+
+Read the selected model conditions, saved execution status and physical acceptance separately. Cite the source path and actual commit used.
+分别核对模型条件、保存的执行状态与物理验收；引用时附来源路径和实际使用的提交。
+
+## Indexed resources / 资源目录
+
+### adapter/ansys — Ansys MCP and Maxwell workflow / Ansys MCP 与 Maxwell 工作流
+
+en: Run resource preflight; execute the native seven-strand MCP example when Maxwell is available.
+
+zh-CN: 执行资源预检；Maxwell 可用时运行原生七股 MCP 案例。
+
+- [adapters/ansys/README.md](adapters/ansys/README.md)
+- [adapters/ansys/README.zh-CN.md](adapters/ansys/README.zh-CN.md)
+
+### adapter/gpu — GPU execution and CPU comparison / GPU 执行与 CPU 对照
+
+en: Run a small GPU/CPU comparison; retain toolchain and numerical error.
+
+zh-CN: 运行小型 GPU/CPU 对照，保存工具链和数值误差。
+
+- [adapters/gpu/README.md](adapters/gpu/README.md)
+- [adapters/gpu/README.zh-CN.md](adapters/gpu/README.zh-CN.md)
+
+### adapter/wolfram — Wolfram environment and execution / Wolfram 环境与执行
+
+en: Probe the local kernel, then follow the MCP workflow for actual tool and Notebook operations.
+
+zh-CN: 检查本机内核，再按 MCP 工作流验收真实工具调用和 Notebook 操作。
+
+- [adapters/wolfram/README.md](adapters/wolfram/README.md)
+- [adapters/wolfram/README.zh-CN.md](adapters/wolfram/README.zh-CN.md)
+
+### case/ansys-native — Build and solve seven common-terminal strands through Ansys MCP
+
+en: completed / passed_port_and_power_scope_only
+
+- [automation/examples/ansys-native/execution.json](automation/examples/ansys-native/execution.json)
+- [automation/examples/ansys-native/task.json](automation/examples/ansys-native/task.json)
+- `rc2_ansys_mcp_verified_01`: `completed` / `not_evaluated_by_protocol_probe`
+- `rc2_maxwell_mcp_verified_01`: `completed` / `passed_port_and_power_scope_only`
+- `native_cancel_20261014_074719`: `cancelled` / `not_verified`
+- `native_restart_20261014_074719`: `completed` / `passed_port_and_power_scope_only`
+- `native_cancel_20261014_074719_mcp`: `cancelled` / `not_verified`
+- `native_restart_20261014_074719_mcp`: `completed` / `not_evaluated_by_protocol_probe`
+
+### case/aphi-diagnostics — Recompute preserved A-phi field diagnostics and report failed gates
+
+en: completed / failed_retained_phi_gauge
+
+- [automation/examples/aphi-diagnostics/execution.json](automation/examples/aphi-diagnostics/execution.json)
+- [automation/examples/aphi-diagnostics/task.json](automation/examples/aphi-diagnostics/task.json)
+- `rc2_aphi_bound_fields_01`: `completed` / `failed_retained_phi_gauge`
+
+### case/cross-solver — Compare matching Wolfram and Maxwell seven-strand cases
+
+en: comparison_observed_convergence_not_run
+
+- [automation/examples/cross-solver/execution.json](automation/examples/cross-solver/execution.json)
+- [automation/examples/cross-solver/task.json](automation/examples/cross-solver/task.json)
+- `rc2_coax42_compare_01`: `completed` / `passed_test_scope_only`
+- `rc2_seven_comparison_verified_01`: `completed` / `comparison_observed_convergence_not_run`
+- `rc2_final_seven_comparison_01`: `completed` / `comparison_observed_convergence_not_run`
+
+### case/diagnosis — Diagnose the explicit Student connector and native material-setting failures
+
+en: actual unit conversion API failure repaired; unchanged physical constraints
+
+- [automation/examples/diagnosis/execution.json](automation/examples/diagnosis/execution.json)
+- [automation/examples/diagnosis/task.json](automation/examples/diagnosis/task.json)
+- `rc2_ansys_mcp_maxwell_final_01`: `failed` / `not_verified`
+- `rc2_ansys_mcp_maxwell_final_02`: `completed` / `not_evaluated_by_protocol_probe`
+
+### case/frequency-extension — Extend the analytical case to a frequency study with integral regression
+
+en: completed / passed
+
+- [automation/examples/frequency-extension/execution.json](automation/examples/frequency-extension/execution.json)
+- [automation/examples/frequency-extension/task.json](automation/examples/frequency-extension/task.json)
+- `rc2_frequency_extension_01`: `completed` / `passed`
+- `rc2_analytic_01`: `completed` / `passed`
+
+### case/wolfram-calibration — Build and verify a Bessel Notebook through Wolfram MCP
+
+en: completed / passed_test_scope_only
+
+- [automation/examples/wolfram-calibration/execution.json](automation/examples/wolfram-calibration/execution.json)
+- [automation/examples/wolfram-calibration/task.json](automation/examples/wolfram-calibration/task.json)
+- `rc2_wolfram_final_mcp_01`: `completed` / `not_evaluated_by_protocol_probe`
+- `rc2_wolfram_final_study_01`: `completed` / `passed_test_scope_only`
+
+### manuscript/automation/en — Agent-Driven Reviewable Modeling and Simulation: A Wolfram--Ansys MCP Workflow with Litz-Wire Cases
+
+- [manuscript/automation/en/main.tex](manuscript/automation/en/main.tex)
+- [publications/reading/automation_en.md](publications/reading/automation_en.md)
+
+### manuscript/automation/zh-CN — 智能体驱动的可复核建模与仿真：Wolfram--Ansys MCP 工作流及 Litz 案例
+
+- [manuscript/automation/zh-CN/main.tex](manuscript/automation/zh-CN/main.tex)
+- [publications/reading/automation_zh-CN.md](publications/reading/automation_zh-CN.md)
+
+### manuscript/paper/en — Hierarchical Verification, Common-Terminal Current Sharing, and Finite-Length Longitudinal PEEC for Litz-Wire Modeling
+
+- [manuscript/paper/en/main.tex](manuscript/paper/en/main.tex)
+- [publications/reading/paper_en.md](publications/reading/paper_en.md)
+
+### manuscript/paper/zh-CN — Litz 线的分层验证、共端复电流分配与有限长度纵向 PEEC
+
+- [manuscript/paper/zh-CN/main.tex](manuscript/paper/zh-CN/main.tex)
+- [publications/reading/paper_zh-CN.md](publications/reading/paper_zh-CN.md)
+
+### manuscript/report/en — Litz-Wire Modeling and Numerical Verification: Comprehensive Research Report
+
+- [manuscript/report/en/main.tex](manuscript/report/en/main.tex)
+- [publications/reading/report_en.md](publications/reading/report_en.md)
+
+### manuscript/report/zh-CN — Litz 线分层建模与数值验证：完整研究报告
+
+- [manuscript/report/zh-CN/main.tex](manuscript/report/zh-CN/main.tex)
+- [publications/reading/report_zh-CN.md](publications/reading/report_zh-CN.md)
+
+### route/analytic — Round-wire analytical calibration / 单圆线解析校准
+
+en: Change frequency/current; compare independent current and Joule integrals.
+
+zh-CN: 修改频率与总电流，核对独立电流积分与焦耳积分。
+
+- [models/analytic/README.md](models/analytic/README.md)
+- [models/analytic/README.zh-CN.md](models/analytic/README.zh-CN.md)
+
+### route/aphi — Preserved A–φ field diagnostics / 保存 A–φ 场诊断
+
+en: Read actual saved fields and reproduce J, phi and gauge residuals. Original field parameters remain visible.
+
+zh-CN: 读取实际保存场，复算 J、电势与规范残差，保留原场参数。
+
+- [models/aphi/README.md](models/aphi/README.md)
+- [models/aphi/README.zh-CN.md](models/aphi/README.zh-CN.md)
+
+### route/common_terminal — Common-terminal current sharing / 共端复电流分配
+
+en: Change strand count or return geometry; inspect complex strand currents and input/loss balance.
+
+zh-CN: 修改股数或回流几何；检查复电流及输入功率与损耗。
+
+- [models/common_terminal/README.md](models/common_terminal/README.md)
+- [models/common_terminal/README.zh-CN.md](models/common_terminal/README.zh-CN.md)
+
+### route/fem2 — Two-dimensional diffusion FEM / 二维扩散有限元
+
+en: Change mesh_h; run at least three meshes before making a convergence claim.
+
+zh-CN: 修改 mesh_h；收敛判断至少运行三档网格。
+
+- [models/fem2/README.md](models/fem2/README.md)
+- [models/fem2/README.zh-CN.md](models/fem2/README.zh-CN.md)
+
+### route/geometry — Geometry and transposition / 几何与换位
+
+en: Change topology, pitch or length; inspect gaps, arc lengths and copper volume. Geometry is a model input.
+
+zh-CN: 修改结构、节距或长度；检查间隙、弧长与铜体积。几何是场模型的输入。
+
+- [models/geometry/README.md](models/geometry/README.md)
+- [models/geometry/README.zh-CN.md](models/geometry/README.zh-CN.md)
+
+### route/peec — Finite-length longitudinal PEEC / 有限长度纵向 PEEC
+
+en: Change length or cross divisions; compare complex port constraints and power. The basis is longitudinal.
+
+zh-CN: 修改长度或横向离散，核对复端口约束与功率。基函数沿纵向。
+
+- [models/peec/README.md](models/peec/README.md)
+- [models/peec/README.zh-CN.md](models/peec/README.zh-CN.md)
+
+### route/rt0 — Vector RT0 volume PEEC / 向量 RT0 体积 PEEC
+
+en: Choose field or transport excitation. The field case has 1 mT RMS imposed Bz and zero net transport.
+
+zh-CN: 选择外场或输运激励。外场算例为 1 mT RMS Bz、零净输运。
+
+- [models/rt0/README.md](models/rt0/README.md)
+- [models/rt0/README.zh-CN.md](models/rt0/README.zh-CN.md)
+
+### skill/litz-compare-solvers — litz-compare-solvers
+
+en: Compare matching field models in the Litz research checkout using its scientific conventions, shared run interface and traceable evidence.
+
+- [automation/skills/litz-compare-solvers/SKILL.md](automation/skills/litz-compare-solvers/SKILL.md)
+- [automation/skills/litz-compare-solvers/SKILL.zh-CN.md](automation/skills/litz-compare-solvers/SKILL.zh-CN.md)
+
+### skill/litz-diagnose — litz-diagnose
+
+en: Diagnose and recover a failed run in the Litz research checkout using its scientific conventions, shared run interface and traceable evidence.
+
+- [automation/skills/litz-diagnose/SKILL.md](automation/skills/litz-diagnose/SKILL.md)
+- [automation/skills/litz-diagnose/SKILL.zh-CN.md](automation/skills/litz-diagnose/SKILL.zh-CN.md)
+
+### skill/litz-extend-model — litz-extend-model
+
+en: Extend a model with verification in the Litz research checkout using its scientific conventions, shared run interface and traceable evidence.
+
+- [automation/skills/litz-extend-model/SKILL.md](automation/skills/litz-extend-model/SKILL.md)
+- [automation/skills/litz-extend-model/SKILL.zh-CN.md](automation/skills/litz-extend-model/SKILL.zh-CN.md)
+
+### skill/litz-report — litz-report
+
+en: Build evidence-backed research output in the Litz research checkout using its scientific conventions, shared run interface and traceable evidence.
+
+- [automation/skills/litz-report/SKILL.md](automation/skills/litz-report/SKILL.md)
+- [automation/skills/litz-report/SKILL.zh-CN.md](automation/skills/litz-report/SKILL.zh-CN.md)
+
+### skill/litz-reproduce — litz-reproduce
+
+en: Reproduce a recorded model in the Litz research checkout using its scientific conventions, shared run interface and traceable evidence.
+
+- [automation/skills/litz-reproduce/SKILL.md](automation/skills/litz-reproduce/SKILL.md)
+- [automation/skills/litz-reproduce/SKILL.zh-CN.md](automation/skills/litz-reproduce/SKILL.zh-CN.md)
+
+### skill/paper-acquire — paper-acquire
+
+en: Obtain and verify a requested academic paper through open sources or an authorized institutional browser session, retaining acquisition provenance.
+
+- [automation/skills/paper-acquire/SKILL.md](automation/skills/paper-acquire/SKILL.md)
+- [automation/skills/paper-acquire/references/workflow.md](automation/skills/paper-acquire/references/workflow.md)
+
+### skill/research-handoff — research-handoff
+
+en: Turn verified research findings and reusable implementations into an executable modeling or engineering task with explicit acceptance evidence.
+
+- [automation/skills/research-handoff/SKILL.md](automation/skills/research-handoff/SKILL.md)
+- [automation/skills/research-handoff/references/workflow.md](automation/skills/research-handoff/references/workflow.md)
+
+### skill/research-reuse — research-reuse
+
+en: Evaluate and adapt existing scientific software or agent skills, preserving licenses, upstream identity and reproducible tests.
+
+- [automation/skills/research-reuse/SKILL.md](automation/skills/research-reuse/SKILL.md)
+- [automation/skills/research-reuse/references/workflow.md](automation/skills/research-reuse/references/workflow.md)
+
+### skill/research-scout — research-scout
+
+en: Investigate a scientific question across literature, software, forums and reusable agent skills, with source-backed evidence and implementation options.
+
+- [automation/skills/research-scout/SKILL.md](automation/skills/research-scout/SKILL.md)
+- [automation/skills/research-scout/references/workflow.md](automation/skills/research-scout/references/workflow.md)
+
+### workflow/compare-solvers — Compare matching field models / 比较一致的场模型
+
+en: Align geometry, copper area, material, frequency, RMS/peak convention, axial length, terminal constraints, return and boundaries. Solve independently. Compare complex currents, power and Rac with discretization and geometry differences visible.
+
+zh-CN: 对齐几何、铜面积、材料、频率、RMS/峰值、轴向长度、端口、回流和边界；独立求解后比较复电流、功率与 Rac，同时报告离散和几何差异。
+
+- [automation/workflows/compare-solvers/README.md](automation/workflows/compare-solvers/README.md)
+- [automation/workflows/compare-solvers/README.zh-CN.md](automation/workflows/compare-solvers/README.zh-CN.md)
+
+### workflow/diagnose — Diagnose and recover a failed run / 诊断失败并恢复
+
+en: Preserve the original failure and actual tool response. Separate transport, API, solver, resource and physical failures. Test the smallest relevant correction, record its rationale and code diff, rerun with a new identity, compare acceptance without weakening tolerances.
+
+zh-CN: 保留原失败和工具响应，定位协议、API、求解、资源或物理问题；验证最小相关修正，记录依据与差异，使用新身份重跑并核对原验收条件。
+
+- [automation/workflows/diagnose/README.md](automation/workflows/diagnose/README.md)
+- [automation/workflows/diagnose/README.zh-CN.md](automation/workflows/diagnose/README.zh-CN.md)
+
+### workflow/extend-model — Extend a model with verification / 扩展模型并验证
+
+en: State the new capability and unchanged scientific conventions. Read the equations and implementation. Save a focused code change, add independent physical/regression checks, run original and new cases, explain scope and unresolved uncertainty.
+
+zh-CN: 说明新增能力与物理条件，阅读方程和实现；保存代码差异，增加独立物理及回归检查，运行原案例与新案例，解释适用范围与不确定性。
+
+- [automation/workflows/extend-model/README.md](automation/workflows/extend-model/README.md)
+- [automation/workflows/extend-model/README.zh-CN.md](automation/workflows/extend-model/README.zh-CN.md)
+
+### workflow/report — Build evidence-backed research output / 构建有证据支持的研究成果
+
+en: Use explicit accepted or diagnostic run identities. Read results and assumptions, preserve units and complex quantities, generate traceable figures, cite the canonical library, build and visually inspect the requested documents.
+
+zh-CN: 选用明确的验收或诊断运行身份，核对结果、假设、单位和复数；生成可追溯图件，引用统一题录，构建并实际阅读所需文档。
+
+- [automation/workflows/report/README.md](automation/workflows/report/README.md)
+- [automation/workflows/report/README.zh-CN.md](automation/workflows/report/README.zh-CN.md)
+
+### workflow/reproduce — Reproduce a recorded model / 复现已有模型
+
+en: Select a model, explicit case and evidence dataset. Verify source identity and physical assumptions. Run doctor and dry-run, execute into a new run, inspect checks and compare only matching observables.
+
+zh-CN: 选择模型、案例和证据数据集，核对来源与假设；完成环境检查和预检后使用新运行号执行，解释验收并比较一致的观测量。
+
+- [automation/workflows/reproduce/README.md](automation/workflows/reproduce/README.md)
+- [automation/workflows/reproduce/README.zh-CN.md](automation/workflows/reproduce/README.zh-CN.md)

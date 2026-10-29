@@ -1,0 +1,17 @@
+{
+  "url": "https://github.com/ansys/pyaedt-mcp/pull/155",
+  "state": "open",
+  "merged": false,
+  "draft": false,
+  "base": "main",
+  "base_sha": "feb7862a8b60fa20cc112638b6fe2b615b0132ab",
+  "head": "workshop-codex/student-edition",
+  "head_sha": "1be069a960da7a8ea2d567ef39728edc59664138",
+  "changed_files": 5,
+  "additions": 126,
+  "deletions": 2,
+  "checked_at": "2026-10-28 14:40:31 UTC",
+  "checks": [],
+  "statuses": [],
+  "review_status": "awaiting_upstream_review"
+}

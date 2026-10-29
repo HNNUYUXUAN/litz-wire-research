@@ -1,0 +1,332 @@
+{
+  "schema_version": 1,
+  "campaign": "convergence_20261030_01",
+  "runs": [
+    {
+      "run_id": "convergence_20261030_aphi_c014_01",
+      "case": "cylinder-calibration",
+      "execution_status": "completed",
+      "physical_acceptance_status": "failed_numerical",
+      "elapsed_seconds": 20.717999999999847,
+      "parameters": {
+        "mesh_h": 0.14,
+        "solve_timeout_seconds": 600,
+        "J_tolerance": 0.01,
+        "phi_tolerance": 1e-08,
+        "gauge_tolerance": 0.001
+      },
+      "result_sha256": "eb6275c2972847dfb233a9d2e144bc1b6ac6eef7a114b78130d461e9a3850c5c",
+      "manifest_sha256": "2e0975b52345bfad33d17026553b1cde8dad8b8ea7485d00d01b30a3997f1a19",
+      "cases": [
+        {
+          "nodes": 9108,
+          "cross_section_target_h": 0.14,
+          "mesh_order": 2,
+          "solve_seconds": 5.0811425,
+          "radial_relative_error": 0.00877247946576468,
+          "phi_error": 0.00017093862524757164,
+          "gauge_sample_residual": 0.02776857832930794
+        }
+      ]
+    },
+    {
+      "run_id": "convergence_20261030_aphi_c022_01",
+      "case": "cylinder-calibration",
+      "execution_status": "completed",
+      "physical_acceptance_status": "failed_numerical",
+      "elapsed_seconds": 17.46900000000005,
+      "parameters": {
+        "mesh_h": 0.22,
+        "solve_timeout_seconds": 600,
+        "J_tolerance": 0.01,
+        "phi_tolerance": 1e-08,
+        "gauge_tolerance": 0.001
+      },
+      "result_sha256": "7e56b9b21cddf905e3b3cf9af5f17a7e91963ec9f709124b6fdb42f9bc9011dd",
+      "manifest_sha256": "9cf78b03f8592df87a051d0813d77715ff954a34228ca374925154e4d71da3c4",
+      "cases": [
+        {
+          "nodes": 3672,
+          "cross_section_target_h": 0.22,
+          "mesh_order": 2,
+          "solve_seconds": 2.1733323,
+          "radial_relative_error": 0.015482690025367871,
+          "phi_error": 0.0005270497761369356,
+          "gauge_sample_residual": 0.10027585677704216
+        }
+      ]
+    },
+    {
+      "run_id": "convergence_20261030_aphi_c035_01",
+      "case": "cylinder-calibration",
+      "execution_status": "completed",
+      "physical_acceptance_status": "failed_numerical",
+      "elapsed_seconds": 13.905999999999949,
+      "parameters": {
+        "mesh_h": 0.35,
+        "solve_timeout_seconds": 600,
+        "J_tolerance": 0.01,
+        "phi_tolerance": 1e-08,
+        "gauge_tolerance": 0.001
+      },
+      "result_sha256": "91e514cbeec72957491f82222162e4c5e53b6b76830feb90afd24b756738a0db",
+      "manifest_sha256": "8db143b91b5cb5cb47af28fb2984be0a555cabe59bd1d87fd81aaeb57f1bd8bc",
+      "cases": [
+        {
+          "nodes": 1683,
+          "cross_section_target_h": 0.35,
+          "mesh_order": 2,
+          "solve_seconds": 1.2216077,
+          "radial_relative_error": 0.04537047885278644,
+          "phi_error": 0.0011801033945809838,
+          "gauge_sample_residual": 0.22145724322789
+        }
+      ]
+    },
+    {
+      "run_id": "convergence_20261030_aphi_d014_01",
+      "case": "extrusion-control",
+      "execution_status": "completed",
+      "physical_acceptance_status": "failed_numerical",
+      "elapsed_seconds": 23.92200000000048,
+      "parameters": {
+        "mesh_h": 0.14,
+        "solve_timeout_seconds": 600,
+        "J_tolerance": 0.01,
+        "phi_tolerance": 1e-08,
+        "gauge_tolerance": 0.001
+      },
+      "result_sha256": "367545180d3c653beaa92d81c04d4c20bc04ab00b514205f1c6cca32472314f8",
+      "manifest_sha256": "305ccd2e8db4a2995d924496deaaa2a549ab7e33a70d8401f3d7ad067c0cbda9",
+      "cases": [
+        {
+          "nodes": 9108,
+          "cross_section_target_h": 0.14,
+          "mesh_order": 2,
+          "solve_seconds": 5.0329893,
+          "radial_relative_error": 0.008771315190185135,
+          "phi_error": 0.0001475961263083886,
+          "gauge_sample_residual": 0.027785017325973212
+        }
+      ]
+    },
+    {
+      "run_id": "convergence_20261030_aphi_d022_01",
+      "case": "extrusion-control",
+      "execution_status": "completed",
+      "physical_acceptance_status": "failed_numerical",
+      "elapsed_seconds": 15.04699999999957,
+      "parameters": {
+        "mesh_h": 0.22,
+        "solve_timeout_seconds": 600,
+        "J_tolerance": 0.01,
+        "phi_tolerance": 1e-08,
+        "gauge_tolerance": 0.001
+      },
+      "result_sha256": "d4804c44f2dc05497a4b7b0686e50e4bd9c8411c2c1b989b3e03ecbca869f5b8",
+      "manifest_sha256": "db9edd94d74603161feb3898d1fb45cf53567f90e30b8a55de2883594bf4900b",
+      "cases": [
+        {
+          "nodes": 3672,
+          "cross_section_target_h": 0.22,
+          "mesh_order": 2,
+          "solve_seconds": 1.7357624,
+          "radial_relative_error": 0.015455671280843568,
+          "phi_error": 0.0003814091111087323,
+          "gauge_sample_residual": 0.10024702968348567
+        }
+      ]
+    },
+    {
+      "run_id": "convergence_20261030_aphi_d035_01",
+      "case": "extrusion-control",
+      "execution_status": "completed",
+      "physical_acceptance_status": "failed_numerical",
+      "elapsed_seconds": 14.469000000000506,
+      "parameters": {
+        "mesh_h": 0.35,
+        "solve_timeout_seconds": 600,
+        "J_tolerance": 0.01,
+        "phi_tolerance": 1e-08,
+        "gauge_tolerance": 0.001
+      },
+      "result_sha256": "f3f37fc90ea43c414cf36d1664f46d2a47f87a61ca5009c3295455d84ffbf696",
+      "manifest_sha256": "9ebc3c977265fbc6a9be49a6dbf899d536957a7c43bd088ec0f9f5f7d553dcaa",
+      "cases": [
+        {
+          "nodes": 1683,
+          "cross_section_target_h": 0.35,
+          "mesh_order": 2,
+          "solve_seconds": 0.7766794,
+          "radial_relative_error": 0.045319772202128385,
+          "phi_error": 0.0007307895040789035,
+          "gauge_sample_residual": 0.22199869221854115
+        }
+      ]
+    },
+    {
+      "run_id": "convergence_20261030_aphi_mms_01",
+      "case": "manufactured",
+      "execution_status": "completed",
+      "physical_acceptance_status": "passed",
+      "elapsed_seconds": 26.235000000000127,
+      "parameters": {
+        "mesh_h": 0.35,
+        "solve_timeout_seconds": 600,
+        "J_tolerance": 0.01,
+        "phi_tolerance": 1e-08,
+        "gauge_tolerance": 0.001
+      },
+      "result_sha256": "1b159973f3876dfaef89c26145f0f2b27375e745c0f5fb4c7675550f42a15bbb",
+      "manifest_sha256": "c394cdf10bb5803d6c7604152ff02d1efc905c4ce0aff5e57dbb8ae79d6b7554",
+      "cases": [
+        {
+          "nodes": 208,
+          "cell_volume": 0.04,
+          "mesh_seconds": 0.0598191,
+          "solve_seconds": 0.5689419,
+          "field_error": 1.2665958412233216e-14,
+          "gradient_error": 9.352855555576876e-14,
+          "phi_error": 1.2665958412233216e-14,
+          "gauge_sample_residual": 6.113751024098223e-14,
+          "independent_strong_PDE_residual": 9.290190603020702e-14
+        },
+        {
+          "nodes": 756,
+          "cell_volume": 0.015,
+          "mesh_seconds": 0.0182954,
+          "solve_seconds": 0.8465783,
+          "field_error": 6.998153718109511e-15,
+          "gradient_error": 7.950726906650602e-14,
+          "phi_error": 6.998153718109511e-15,
+          "gauge_sample_residual": 9.363810898191307e-14,
+          "independent_strong_PDE_residual": 7.522385899385905e-14
+        },
+        {
+          "nodes": 1856,
+          "cell_volume": 0.0035,
+          "mesh_seconds": 0.0275798,
+          "solve_seconds": 2.2439397,
+          "field_error": 1.6997295799689758e-14,
+          "gradient_error": 2.2517147323529623e-13,
+          "phi_error": 1.2551085617369123e-14,
+          "gauge_sample_residual": 2.244473211531105e-13,
+          "independent_strong_PDE_residual": 1.934609107497603e-13
+        }
+      ]
+    },
+    {
+      "run_id": "convergence_20261030_aphi_mms_02",
+      "case": "manufactured",
+      "execution_status": "completed",
+      "physical_acceptance_status": "passed",
+      "elapsed_seconds": 27.09400000000005,
+      "parameters": {
+        "solve_timeout_seconds": 600,
+        "phi_tolerance": 1e-08,
+        "gauge_tolerance": 0.001,
+        "cell_volumes": [
+          0.04,
+          0.015,
+          0.0035
+        ]
+      },
+      "result_sha256": "ad3de1a32c49e6494d502b8e25b6a1db1765443a152da47867ed3d8fd2144584",
+      "manifest_sha256": "7351932dc222665053823af57bc1295e614839c2a624c62a9e67594f83da66fb",
+      "cases": [
+        {
+          "nodes": 208,
+          "cell_volume": 0.04,
+          "mesh_seconds": 0.085149,
+          "solve_seconds": 0.6062816,
+          "field_error": 1.3611737994531535e-14,
+          "gradient_error": 9.779320550636395e-14,
+          "phi_error": 1.3611737994531535e-14,
+          "gauge_sample_residual": 9.597144371028684e-14,
+          "independent_strong_PDE_residual": 9.328965497214158e-14
+        },
+        {
+          "nodes": 756,
+          "cell_volume": 0.015,
+          "mesh_seconds": 0.0154461,
+          "solve_seconds": 0.721805,
+          "field_error": 7.745276053767677e-15,
+          "gradient_error": 8.905522312428205e-14,
+          "phi_error": 5.889894793748675e-15,
+          "gauge_sample_residual": 1.047043409886365e-13,
+          "independent_strong_PDE_residual": 6.788526812650959e-14
+        },
+        {
+          "nodes": 1856,
+          "cell_volume": 0.0035,
+          "mesh_seconds": 0.0309203,
+          "solve_seconds": 1.8792292,
+          "field_error": 1.9534995440475866e-14,
+          "gradient_error": 1.9394432753307283e-13,
+          "phi_error": 1.1993493783552332e-14,
+          "gauge_sample_residual": 1.8971285351217014e-13,
+          "independent_strong_PDE_residual": 1.7309498835534486e-13
+        }
+      ]
+    },
+    {
+      "run_id": "convergence_20261030_maxwell_h50_01",
+      "case": null,
+      "execution_status": "failed",
+      "physical_acceptance_status": "not_verified",
+      "elapsed_seconds": 69.42200000000003,
+      "parameters": {
+        "frequency_Hz": 200000.0,
+        "current_RMS_A": 20.0,
+        "diameter_m": 0.0001,
+        "return_factor": 2.0,
+        "outer_factor": 1.5,
+        "mesh_length_m": 5e-05,
+        "return_mesh_length_m": 0.00015,
+        "air_mesh_length_m": 0.0002
+      },
+      "result_sha256": "7a77b1638628ee5d1d02603e7e518e9cdc55ed9c0f28be86d5290ace837a7735",
+      "manifest_sha256": "9ec7a6dcb52627d15330972106f5951f92dc26d3ad4152fc10029eec9d965c2b",
+      "fixed_mesh_gate": "failed_exact_coordinates",
+      "changed_nodes": 12,
+      "maximum_coordinate_change_m": "1E-18",
+      "coordinate_source_sha256": "703df13668f9f51438a45360b2eb35423fec2487a43619993f9b090fea00735d",
+      "coordinate_target_sha256": "1d71a1ce78cbd79ec431ddcfac4c427a2b8655c33c1757aabee0d7d43e265529",
+      "conclusion": "Exact decimal coordinate identity failed; no coordinate tolerance was introduced. Mesh convergence and boundary/cross-solver descendants remain gated."
+    },
+    {
+      "run_id": "convergence_20261030_maxwell_h50_r1",
+      "case": null,
+      "execution_status": "failed",
+      "physical_acceptance_status": "not_verified",
+      "elapsed_seconds": 58.26500000000033,
+      "parameters": {
+        "frequency_Hz": 200000.0,
+        "current_RMS_A": 20.0,
+        "diameter_m": 0.0001,
+        "return_factor": 2.0,
+        "outer_factor": 1.5,
+        "mesh_length_m": 5e-05,
+        "return_mesh_length_m": 0.00015,
+        "air_mesh_length_m": 0.0002
+      },
+      "result_sha256": "26bb7ca99c220366355c5bfbb5a690e9dc32137207c0c37332708bb68986296d",
+      "manifest_sha256": "0018f4befe74bbb4f5610e18f8bf64289d4ca85ec9494af825d2abebdae2e8b3",
+      "fixed_mesh_gate": "failed_exact_coordinates",
+      "changed_nodes": 12,
+      "maximum_coordinate_change_m": "1E-18",
+      "coordinate_source_sha256": "703df13668f9f51438a45360b2eb35423fec2487a43619993f9b090fea00735d",
+      "coordinate_target_sha256": "7bc24be8cbe9476f4be07ca3dff5faa7cf27eca0836f0bf3eb77df5cb05b1f0f",
+      "conclusion": "Exact decimal coordinate identity failed; no coordinate tolerance was introduced. Mesh convergence and boundary/cross-solver descendants remain gated."
+    }
+  ],
+  "simulation_elapsed_seconds": 286.54700000000093,
+  "simulation_budget_seconds": 172800,
+  "maxwell_terminal": "fixed_mesh_gate_failed_after_one_reasoned_revision",
+  "aphi_terminal": "manufactured_passed_cylinder_and_discrete_trace_controls_failed_phi_gauge",
+  "next_minimum_experiments": [
+    "Capture and compare native mesh coordinates before and after importing without another solver execution; establish the solver mesh serialization contract before changing the exact-identity gate.",
+    "Assemble the extruded P2 discrete operator and test the lifted 2D solution residual by equation block; separate gauge coupling, quadrature and end constraints."
+  ],
+  "scope": "Finite diagnostic conclusions; no Maxwell spatial-convergence claim and no realistic-transposition ranking."
+}

@@ -1,0 +1,4 @@
+param([ValidateSet('analytic','fem2','coax','coax640','scale','circuits','geometry','copper','peec','voxel','voxel_scale','voxel_boundary','voxel_operator','voxel_operator_tests','voxel_operator_quadrature','fem3','fem3_mms','fem3_cylinder','fem3_audit','fem3_ooc','fem3_iter','frontend','gpu','gpu_physics','gpu_scale','peec_equivalence','cpu_workers','boundary','build','replay','handoff','delivery_data','progress_notebook','closure_peec','closure_rt0','closure_geometry','closure_fem3_diagnostics','closure_gpu','closure_gpu_recovery','closure_peec_tests','closure_rt0_parallel_tests','closure_frozen_verify','closure_rt0_collect')][string]$Stage='analytic',[string]$RunId,[string]$Notebook)
+$ErrorActionPreference="Stop"
+& (Join-Path (Split-Path -Parent $PSScriptRoot) 'adapters/wolfram/RunNotebookStage.ps1') @PSBoundParameters
+exit $LASTEXITCODE

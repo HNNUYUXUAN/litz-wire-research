@@ -1,0 +1,62 @@
+\appendices
+\section{Theory and Discretization}
+\label{chapter:S1}
+
+% block-id: S1.round_derivation.heading
+\hypertarget{S1.round_derivation.heading}{}
+\subsection{Round-wire radial equation and normalization}
+
+% block-id: S1.round_derivation.p1
+\hypertarget{S1.round_derivation.p1}{}
+Axial current inside a long straight round wire satisfies (1/r)d(r dJz/dr)/dr=κ²Jz. Finiteness at the axis selects I\(_0\)(κr), and the total complex-current constraint together with \(\int\)\(_0\)\(^a\)rI\(_0\)(κr)dr=aI\(_1\)(κa)/κ fixes its coefficient. Surface axial electric field divided by total current gives internal impedance per unit length. An independent Joule integral of current density checks the relationship between its real part and loss. The derivation uses the same RMS phasors as the main text.
+
+% block-id: S1.sharing_derivation.heading
+\hypertarget{S1.sharing_derivation.heading}{}
+\subsection{Derivation of the uniform complex-current condition}
+
+% block-id: S1.sharing_derivation.p1
+\hypertarget{S1.sharing_derivation.p1}{}
+If a uniform-current solution exists, substituting i=(It/N)1 into the port equation makes all components of (It/N)Z1+e equal, establishing necessity of the projection condition. Conversely, when the projection condition holds, this vector equals a scalar V times 1. The uniform-current vector then satisfies both the port equation and the total-current constraint; uniqueness of the augmented solution makes it the actual solution, establishing sufficiency. Numerical results use sqrt(mean(|ik−It/N|²))/|It/N| for normalized RMS complex-current deviation and show individual magnitudes and phases.
+
+% block-id: S1.dtm_derivation.heading
+\hypertarget{S1.dtm_derivation.heading}{}
+\subsection{Mapping strand identity to cross-sectional position}
+
+% block-id: S1.dtm_derivation.p1
+\hypertarget{S1.dtm_derivation.p1}{}
+Let Ps map fixed physical strand identities to spatial positions in cross-section s. Local currents are Ps i, and local voltages transformed back to identity coordinates are Ps\(^{\mathrm T}\)ZsPs i. Summing in series with segment lengths Δzs gives \eqref{eq:E06}. Position and identity are retained separately; K, 2K, and 4K segmentation comparisons use the same trajectory and strands. Periodicity, clearance, and curvature check the paths, while actual arc lengths and copper volume quantify material use.
+
+% block-id: S1.equation.E06
+\hypertarget{S1.equation.E06}{}
+\hypertarget{E06}{}\begin{equation}Z_{\mathrm{tot}}=\sum_{s=1}^{K}\Delta z_s P_s^T Z_s P_s\tag{7}\label{eq:E06}\end{equation}
+
+% block-id: S1.peec_derivation.heading
+\hypertarget{S1.peec_derivation.heading}{}
+\subsection{Longitudinal filament basis and kernel integration}
+
+% block-id: S1.peec_derivation.p1
+\hypertarget{S1.peec_derivation.p1}{}
+Within volume filament α, current density is constant at iα/Aα and directed axially. Volume integration of vector potential gives the induced electric field in a testing filament; integration along its length yields a symmetric partial-inductance matrix. Coincident points produce an integrable self-term singularity treated with dedicated precision settings, while mutual terms use a separate quadrature order. Ohmic resistance and jωL form the coupled matrix, solved jointly with common terminal voltage and total current. The basis determines the current directions represented by this model.
+
+% block-id: S1.triangle_derivation.heading
+\hypertarget{S1.triangle_derivation.heading}{}
+\subsection{Current and power integration on linear triangles}
+
+% block-id: S1.triangle_derivation.p1
+\hypertarget{S1.triangle_derivation.p1}{}
+Complex current density in a linear triangle is interpolated as J=\(\sum\)\(_a\)NaJa. The area integral of each shape function is AT/3, giving the element's complex current directly. Joule loss uses the consistent mass matrix in \eqref{eq:E09}. Material tags associate each element with a strand, return, or air, and areas are calculated after converting coordinates to metres. Material-wise current and loss sums are independently checked against the original field–circuit scalars.
+
+% block-id: S1.equation.E09
+\hypertarget{S1.equation.E09}{}
+\hypertarget{E09}{}
+\begin{equation}
+\begin{gathered}
+M_T=\frac{A_T}{12}\begin{bmatrix}2&1&1\\1&2&1\\1&1&2\end{bmatrix} \\
+P_T=\mathbf J_T^H M_T\mathbf J_T/\sigma
+\end{gathered}
+\tag{8}\label{eq:E09}
+\end{equation}
+
+% block-id: S1.method.sources
+\hypertarget{S1.method.sources}{}
+The round-wire derivation uses the definitions and integral relations of modified Bessel functions. Longitudinal coupling uses the resistance and partial-inductance description of partial-element equivalent circuits. \cite{BESSEL,RUEHLI1974}

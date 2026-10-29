@@ -1,0 +1,145 @@
+"""Generate the current reading index from frozen delivery and online identities.
+
+No generated PDF, Notebook, solver, or restored evidence is needed. --check is
+suitable for a clean source checkout and never changes files.
+"""
+import argparse
+import hashlib
+import json
+from pathlib import Path
+import re
+from urllib.parse import quote
+
+ROOT = Path(__file__).resolve().parents[1]
+LAYOUTS = ('single', 'ieee-journal', 'ieee-conference')
+
+
+def load(root, path):
+    return json.loads((root / path).read_text(encoding='utf-8-sig'))
+
+
+def generate(root):
+    delivery = load(root, 'provenance/editorial/delivery-manifest.json')
+    online = load(root, 'provenance/editorial/online-assets.json')
+    reading = load(root, 'publications/manifest.json')
+    repository = load(root, 'data/catalog.json')['repository']
+    if (not isinstance(repository, str)
+            or not re.fullmatch(r'[A-Za-z0-9_.-]+/[A-Za-z0-9_.-]+', repository)
+            or any(part in {'.', '..'} for part in repository.split('/'))):
+        raise ValueError('Expected a GitHub owner/repository identity')
+    repository_url = 'https://github.com/' + '/'.join(quote(part, safe='') for part in repository.split('/'))
+    def release_url(tag):
+        return repository_url + '/releases/tag/' + quote(tag, safe='')
+    def asset_url(name, tag=online['release_tag']):
+        return repository_url + '/releases/download/' + quote(tag, safe='') + '/' + quote(name, safe='')
+    if delivery['run_id'] != reading['source_edition']:
+        raise ValueError('Reading and delivery run identities differ')
+    artifacts = delivery['artifacts']
+    remote = online['artifacts']
+    counts = delivery['counts']
+    compilations = counts['latex_manuscripts'] + counts['templates']
+    def artifact(filename):
+        matches = [a for a in artifacts if Path(a['path']).name == filename]
+        if len(matches) != 1:
+            raise ValueError('Expected one delivery artifact: ' + filename)
+        source = matches[0]
+        assets = [a for a in remote if a['name'].endswith('_' + filename)]
+        if len(assets) != 1 or any(assets[0][k] != source[k] for k in ('sha256', 'bytes')):
+            raise ValueError('Online identity differs from delivery: ' + filename)
+        return dict(local_path=source['path'], asset_name=assets[0]['name'],
+                    sha256=source['sha256'], bytes=source['bytes'])
+    documents = []
+    for edition in ('report', 'automation', 'paper'):
+        for language in ('en', 'zh-CN'):
+            identity = edition + '_' + language
+            markdown = f'publications/{edition}/{language}/README.md'
+            content = (root / markdown).read_bytes()
+            digest = hashlib.sha256(content).hexdigest()
+            records = [r for r in reading['files'] if r['path'] == markdown]
+            if len(records) != 1 or records[0]['sha256'] != digest:
+                raise ValueError('Reading manuscript changed without a build: ' + markdown)
+            title = next(s[2:] for s in content.decode('utf-8-sig').splitlines() if s.startswith('# '))
+            documents.append(dict(id=identity, edition=edition, language=language,
+                                  title=title, markdown=markdown, markdown_sha256=digest,
+                                  notebook=artifact(identity + '.nb'),
+                                  pdfs={layout: artifact(identity + '_' + layout + '.pdf') for layout in LAYOUTS}))
+    index = dict(schema_version=2, run_id=delivery['run_id'], source_edition=delivery['run_id'],
+                 release=dict(tag=online['release_tag'], url=release_url(online['release_tag'])), documents=documents)
+    result = {'docs/current-edition.json': json.dumps(index, ensure_ascii=False, indent=2) + '\n'}
+    for language in ('en', 'zh-CN'):
+        zh = language == 'zh-CN'
+        suffix = '.zh-CN' if zh else ''
+        lines = ['# ' + ('完整学术稿件' if zh else 'Complete research publications'), '',
+                 '[English](README.md) · [简体中文](README.zh-CN.md)', '',
+                 ('三部作品各有中英文完整正文和原生 Wolfram Notebook。每份稿件另有通用单栏、IEEE 期刊及 IEEE 会议三种 LaTeX/PDF。' if zh else 'Each of the three works has complete English and Chinese text and a native Wolfram Notebook, plus general single-column, IEEE journal and IEEE conference LaTeX/PDF editions.'), '',
+                 ('| 作品 / 语言 | 在线正文 | PDF、Notebook 与源码 |' if zh else '| Work / language | Online text | PDFs, Notebook and sources |'),
+                 '| --- | --- | --- |']
+        for doc in documents:
+            lines.append(f"| {doc['title']} / {doc['language']} | [Markdown]({doc['edition']}/{doc['language']}/README.md) | [" + ('附件索引' if zh else 'Asset index') + f"](ONLINE{suffix}.md) |")
+        lines += ['', ('在附件索引中按稿件 ID 和版式选择下载；各文件的大小与 SHA256 记录于机器索引。' if zh else 'Choose an asset by manuscript ID and layout in the attachment index; file sizes and SHA256 identities are recorded in the machine index.'), '',
+                  f'[JSON](../docs/current-edition.json) · [LaTeX / templates](../latex/README{suffix}.md) · [Delivery](DELIVERY{suffix}.md)', '',
+                  ('图件、数字和物理验收采用冻结来源。二维 Maxwell MCP 比较、三维 Ansys 诊断和 A–φ 验收分别说明其条件与结论。' if zh else 'Figures, quantities and physical acceptance use frozen sources. The 2D Maxwell MCP comparison, 3D Ansys diagnostics and A–φ acceptance each retain their conditions and conclusions.'), '']
+        result[f'publications/README{suffix}.md'] = '\n'.join(lines)
+        lines = ['# ' + ('稿件交付与校验' if zh else 'Publication delivery and verification'), '',
+                 '[English](DELIVERY.md) · [简体中文](DELIVERY.zh-CN.md)', '',
+                 (f"三部作品含六份完整 Markdown、六份原生 Wolfram Notebook、十八份 LaTeX/PDF 和 {counts['templates']} 份可编辑模板。" if zh else f"Three works provide six complete Markdown manuscripts, six native Wolfram Notebooks, eighteen LaTeX/PDF editions and {counts['templates']} editable templates."), '',
+                 f'- [Markdown](README{suffix}.md)',
+                 f'- [' + ('附件下载及文件名' if zh else 'Downloads and asset names') + f'](ONLINE{suffix}.md)',
+                 '- [SHA256 / bytes](../provenance/editorial/online-assets.json)',
+                 '- [Build manifest](../provenance/editorial/delivery-manifest.json)', '',
+                 ('完整交付、独立 LaTeX 源码和视觉候选分别打包；所有下载入口见附件索引。本地复现后的路径由 `docs/current-edition.json` 的 `local_path` 给出。' if zh else 'The complete delivery, standalone LaTeX sources and visual candidates are separate packages listed in the attachment index. After local restoration, `local_path` in `docs/current-edition.json` identifies each file.'), '',
+                 (f"所选构建的交付清单记录 {counts['pdf_pages']} 页 PDF、{compilations} 份 LaTeX 稿件与模板，以及 {counts['scientific_figure_families']} 类科学图。具体验收结果见以下构建记录。" if zh else f"The selected build's delivery manifest records {counts['pdf_pages']} PDF pages, {compilations} LaTeX manuscripts and templates, and {counts['scientific_figure_families']} scientific figure families. See the build records below for acceptance results."), '',
+                 '- [Visual review](../provenance/editorial/visual-review.json)',
+                 '- [Standalone compilation](../provenance/editorial/standalone-compile-receipt.json)', '']
+        result[f'publications/DELIVERY{suffix}.md'] = '\n'.join(lines)
+        lines = ['# ' + ('在线稿件与附件' if zh else 'Online manuscripts and attachments'), '',
+                 '[English](ONLINE.md) · [简体中文](ONLINE.zh-CN.md)', '',
+                 ('完整 Markdown 可在线阅读。已公开发布的 PDF、Notebook 和源码包可通过下方链接直接下载，无需登录。' if zh else 'Read complete Markdown manuscripts online. Published PDFs, Notebooks and source packages are available through the direct links below without signing in.'), '',
+                 f"[{online['release_tag']} · Assets]({release_url(online['release_tag'])})", '',
+                 ('| 作品 / 语言 | 在线正文 | Notebook | PDF |' if zh else '| Work / language | Online text | Notebook | PDF |'),
+                 '| --- | --- | --- | --- |']
+        for doc in documents:
+            stem = doc['notebook']['asset_name'][:-3]
+            if any(doc['pdfs'][layout]['asset_name'] != stem + '_' + layout + '.pdf' for layout in LAYOUTS):
+                raise ValueError('Asset naming does not share a manuscript prefix: ' + doc['id'])
+            pdf_labels = ('通用单栏', 'IEEE 期刊', 'IEEE 会议') if zh else ('Single column', 'IEEE journal', 'IEEE conference')
+            pdf_links = ' · '.join(f"[{label}]({asset_url(doc['pdfs'][layout]['asset_name'])})" for label, layout in zip(pdf_labels, LAYOUTS))
+            lines.append(f"| {doc['title']} / {doc['language']} | [Markdown]({doc['edition']}/{doc['language']}/README.md) | [Notebook]({asset_url(doc['notebook']['asset_name'])}) | {pdf_links} |")
+        lines += ['', ('六份 Notebook 和十八份 PDF 保留各自的附件名称与哈希。' if zh else 'The six Notebooks and eighteen PDFs retain their recorded asset names and hashes.'), '']
+        for item in remote:
+            if item['name'].endswith('.zip'):
+                lines.append(f"- [{item['name']}]({asset_url(item['name'])})")
+        supplemental_path = root / 'provenance/maintenance/supplemental-assets.json'
+        if supplemental_path.is_file():
+            supplemental = load(root, 'provenance/maintenance/supplemental-assets.json')
+            for item in supplemental['artifacts']:
+                if item['name'].endswith('.zip'):
+                    lines.append(f"- [{item['name']}]({asset_url(item['name'], supplemental['release_tag'])})")
+        if (root/'LICENSES/publication-companion/README.md').is_file():
+            lines += ['', ('下载 ZIP 时请一并保存[许可与成员清单](../LICENSES/publication-companion/README.zh-CN.md)。' if zh else 'Keep the [license and member-index companion](../LICENSES/publication-companion/README.md) with the ZIP you download.')]
+        lines += ['', '[SHA256 / bytes](../provenance/editorial/online-assets.json) · [JSON index](../docs/current-edition.json)', '']
+        result[f'publications/ONLINE{suffix}.md'] = '\n'.join(lines)
+    return result
+
+
+def build(root=ROOT, check=False):
+    stale = []
+    for path, text in generate(root).items():
+        target = root / path
+        if check:
+            if not target.is_file() or target.read_bytes() != text.encode('utf-8'):
+                stale.append(path)
+        else:
+            target.parent.mkdir(parents=True, exist_ok=True)
+            target.write_bytes(text.encode('utf-8'))
+    if stale:
+        raise ValueError('Stale publication indexes: ' + ', '.join(stale))
+    print('Publication indexes current: 6 manuscripts, 6 Notebooks, 18 PDFs')
+
+
+if __name__ == '__main__':
+    parser = argparse.ArgumentParser(description=__doc__)
+    parser.add_argument('--root', type=Path, default=ROOT)
+    parser.add_argument('--check', action='store_true')
+    args = parser.parse_args()
+    build(args.root.resolve(), args.check)

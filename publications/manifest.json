@@ -1,0 +1,38 @@
+{
+  "schema_version": 3,
+  "source_edition": "latex_convergence_20261030_01",
+  "source_manifest": "manuscript/latex-publication.json",
+  "reading_receipt": "provenance/current-publication/reading-receipt.json",
+  "files": [
+    {
+      "path": "publications/reading/report_zh-CN.md",
+      "sha256": "19d770c7e05a5e5fb0e6b65429f995143deeb12783395fd295d3a95189cdbc4d",
+      "source": "manuscript/report/zh-CN/main.tex"
+    },
+    {
+      "path": "publications/reading/report_en.md",
+      "sha256": "0ea6c06d574fcf8380764bbca58e4f339fce576a822b4a2f2e49938be8ffd864",
+      "source": "manuscript/report/en/main.tex"
+    },
+    {
+      "path": "publications/reading/paper_zh-CN.md",
+      "sha256": "2477feded8ccbb49a4118dba49816348ad4e86895fe208ee9fd1a5610c891de6",
+      "source": "manuscript/paper/zh-CN/main.tex"
+    },
+    {
+      "path": "publications/reading/paper_en.md",
+      "sha256": "536992709b31d7c58a544c8862ea5650d9474913f86c83713c66947c21d60c7c",
+      "source": "manuscript/paper/en/main.tex"
+    },
+    {
+      "path": "publications/reading/automation_zh-CN.md",
+      "sha256": "66f59a479327cf40ba33cd3d89f72ed2c2b00e955f854bc2e5b6d662e98ac13f",
+      "source": "manuscript/automation/zh-CN/main.tex"
+    },
+    {
+      "path": "publications/reading/automation_en.md",
+      "sha256": "8fed65b38050c8eda37dc3f5fc5c17580fa3a8a005621e56625d9026276f43db",
+      "source": "manuscript/automation/en/main.tex"
+    }
+  ]
+}

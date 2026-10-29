@@ -1,0 +1,22 @@
+{
+  "schema_version": 1,
+  "wolfram": {
+    "repository": "https://github.com/WolframResearch/AgentTools",
+    "version": "2.2.0",
+    "commit": "9c99e2da5286c2ff7ac2298956107cd9334c6e90",
+    "license": "MIT",
+    "wolfram_minimum": "14.3",
+    "validated_kernel": "15.0.0"
+  },
+  "ansys": {
+    "repository": "https://github.com/ansys/pyaedt-mcp",
+    "version": "0.2.dev0",
+    "commit": "80ae7c3cb47e5de7b744a2898061510299d3bcef",
+    "license": "Apache-2.0",
+    "python_minimum": "3.12",
+    "pyaedt": "1.8.0",
+    "ansys_common_mcp": "0.3.5",
+    "fastmcp": "4.0.10",
+    "mcp_server_sdk": "2.3.0"
+  }
+}

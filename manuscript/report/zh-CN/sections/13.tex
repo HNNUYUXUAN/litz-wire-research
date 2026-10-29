@@ -1,0 +1,18 @@
+\section{当前研究入口与集成证据}
+\label{chapter:13}
+
+% block-id: 13.runtime
+\hypertarget{13.runtime}{}
+2026 年 10 月 28 日的集成采用独立 Conda 项目、ANSYS 与检索环境，三者均已按所记录的包身份重建。候选配置在备份和切换前完成检查。MCP 服务重启后，原生工具确认了新 Python 路径、十二项 Wolfram 解析测试，以及任务所属 AEDT Student 2025.2.4 会话的连接。观测宿主为 Windows Server 2022 Datacenter 21H2，构建 20348.4405；Codex、Chrome 与 Explorer 位于会话 1。Windows 10 是要求的部署目标，其独立设备验证仍待完成；可能存在的远程客户端操作系统不由宿主观测推断。
+
+% block-id: 13.contribution
+\hypertarget{13.contribution}{}
+当前上游的 Student 参数问题已在 Python 3.13.18 中复现，并针对启动、连接与服务自动启动修复。新增九项回归在补丁前失败；修订后测试集通过 141 项，本机 Student 调用和进程清理也已通过。贡献已作为官方 PyAEDT-MCP 的 PR 155 提交。项目集成继续固定独立验收过的上游版本，替换版本须通过自身回归与原生客户端检查。\cite{PYAEDTMCP}
+
+% block-id: 13.discovery
+\hypertarget{13.discovery}{}
+科研检索、论文获取、复用评估和任务交接分别具有技能入口。流程优先用元宝进行广域发现，再核实出版社与原作者仓库。固定的 academic-search 模块支持归一化、冲突保留及开放全文获取。已观测的中英文论文下载通过 PDF 结构、题名、DOI 与哈希检查。授权 Chrome/WebVPN 工作流经人工验证后，也从 HTML 阅读页下载了六页中文全文。题名和 DOI 均匹配，机构副本具有单独记录的 SHA256。此前受阻的下载和另一机构会话失效记录继续保留。\cite{ACADEMICSEARCH,C01,ZHU2026}
+
+% block-id: 13.evidence
+\hypertarget{13.evidence}{}
+交接校准在 200 kHz、20 A RMS 下通过十二项解析检查。迁移后的 Maxwell 案例在保留的一档网格上通过端口与功率检查，没有新增收敛结论。原有 A–φ 失败及各物理模型限制继续保留。集成任务账本连接环境重建日志、原生客户端返回、上游贡献、来源记录与稿件检查。LaTeX 是可编辑正文源；Markdown 阅读稿通过检查后的转换保留相同段落、引文、公式和图件身份。

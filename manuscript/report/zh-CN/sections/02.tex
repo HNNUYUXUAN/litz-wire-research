@@ -1,0 +1,65 @@
+\section{物理约定与分层建模框架}
+\label{chapter:02}
+
+% block-id: 02.conventions.heading
+\hypertarget{02.conventions.heading}{}
+\subsection{工况与比较量}
+
+% block-id: 02.conventions.p1
+\hypertarget{02.conventions.p1}{}
+计算采用 SI 单位、exp(jωt) 时间约定和 RMS 相量。材料为 20 ℃ 铜，电导率 σ=5.8×10⁷ S/m，相对磁导率 μr=1；主输运工况为 200 kHz、20 A RMS，独立外加场为零。股线沿途绝缘、端部并联。电阻和损耗按轴向长度归一化，股线的实际弧长另行计入铜体积与直流电阻。有限段端电压的单位为 V，二维轴向端场的单位为 V/m，二者通过所采用的轴向长度建立联系。
+
+% block-id: 02.conventions.p2
+\hypertarget{02.conventions.p2}{}
+原题 Q1 的直径 2 mm 圆线用于解析校准。其铜面积为 3.141593 mm²，在 20 A 下的平均直流电流密度为 6.366198 A/mm²，超过题设 4 A/mm² 限值。满足该限值的 Q2 需至少 5 mm² 铜截面。640 股、单股铜径 0.100 mm 的理想圆面积为 5.026548 mm²，二维模型以 64 边形表示每股，实际铜面积为 \metric{coax_area} mm²。等铜比较使用实际离散面积，使几何近似的影响与电磁结果具有一致的参照。
+
+% block-id: 02.conventions.p3
+\hypertarget{02.conventions.p3}{}
+各股具有不同弧长时，直流电阻由并联电导求得，铜体积由各股面积与弧长乘积相加，见 \eqref{eq:E01}。本文同时考察绝对交流电阻、Rac/Rdc、铜损耗与复电流分配。RMS 相量下的焦耳损耗见 \eqref{eq:E02}；该式中电阻由纯输运工况的铜损耗定义。补充材料的 RT0 算例采用独立外场和零净输运，其吸收功率以外场损耗单独报告。
+
+% block-id: 02.maxwell.heading
+\hypertarget{02.maxwell.heading}{}
+\subsection{磁准静态物理约定}
+
+% block-id: 02.maxwell.p1
+\hypertarget{02.maxwell.p1}{}
+在磁准静态近似下，位移电流相对于导电电流忽略，电荷连续性给出 \(\nabla\)·J=0。采用 exp(jωt) 后，法拉第定律为 \(\nabla\)×E=−jωB，欧姆关系为 J=σE。通过材料、激励、回流和边界共同定义一个边值问题，再将可比较的观测量映射到下一层离散问题，构成本文的验证顺序。
+
+% block-id: 02.hierarchy.heading
+\hypertarget{02.hierarchy.heading}{}
+\subsection{模型层级与验证关系}
+
+% block-id: 02.hierarchy.p1
+\hypertarget{02.hierarchy.p1}{}
+各模型的关系如 图~\ref{fig:model_hierarchy} 所示。解析圆线与二维扩散模型具有共同的长直内场问题，可比较径向电流和内部电阻。二维共端模型进一步保留股内分布、股间电流与受控回流，适合研究指定截面的场路耦合。纵向 PEEC 采用有限长度部分电感核，可检查长度对轴向电流解的影响。三分量 RT0 模型则以长方体外场吸收为算例，检验三维电流连续性与离散算子。换位路径和实际端区需要相应的沿程或横向自由度，属于后续三维结构研究的范围。
+
+% block-id: 02.hierarchy.p2
+\hypertarget{02.hierarchy.p2}{}
+验证分为方程求解、物理约束、功率一致性和参数敏感性四部分。真实线性残差、共同端条件与总复电流误差的目标为 10⁻⁸，独立功率平衡为 0.1\%，网格、分段、边界及长度变化的比较目标为 1\%。解析参考与电流、功率积分分别使用 10⁻⁶ 和 10⁻⁸ 门槛。RT0 的 GMRES 真残差目标为 10⁻¹¹，积分敏感性为 0.1\%；同模型 CPU/GPU 矩阵与复电流的对照门槛为 10⁻¹⁰。
+
+% block-id: 02.hierarchy.p3
+\hypertarget{02.hierarchy.p3}{}
+这些检查回答不同的问题。残差衡量离散系统的求解精度，功率平衡检查场路与后处理的一致性，参数敏感性表征指定扰动范围内的变化。模型遗漏、边界近似及实验偏差需要相应的独立证据。因此，下文分别说明数值检查结果及其物理适用范围，并把有限敏感性结果作为局部验证，而非全模型误差的统一上界。
+
+% block-id: 02.equation.E01
+\hypertarget{02.equation.E01}{}
+\hypertarget{E01}{}
+\begin{equation}
+\begin{gathered}
+R_{\mathrm{dc}}=\left(\sum_{k=1}^{N}\frac{\sigma A_k}{\ell_k}\right)^{-1} \\
+V_{\mathrm{Cu}}=\sum_{k=1}^{N}A_k\ell_k
+\end{gathered}
+\tag{1}\label{eq:E01}
+\end{equation}
+
+% block-id: 02.equation.E02
+\hypertarget{02.equation.E02}{}
+\hypertarget{E02}{}
+\begin{equation}
+\begin{gathered}
+P_{\mathrm{Cu}}=\int_{\Omega_{\mathrm{Cu}}}|\mathbf J|^2/\sigma\,\mathrm d\Omega \\
+R_{\mathrm{ac}}=P_{\mathrm{Cu}}/|I_t|^2 \\
+r_{\mathrm{ac}}=R_{\mathrm{ac}}/L_z
+\end{gathered}
+\tag{2}\label{eq:E02}
+\end{equation}

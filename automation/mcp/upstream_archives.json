@@ -1,0 +1,20 @@
+{
+  "archives": [
+    {
+      "repository": "https://github.com/ansys/pyaedt-mcp",
+      "version": "0.2.dev0",
+      "commit": "80ae7c3cb47e5de7b744a2898061510299d3bcef",
+      "license": "Apache-2.0",
+      "python_minimum": "3.12",
+      "pyaedt": "1.8.0",
+      "ansys_common_mcp": "0.3.5",
+      "fastmcp": "4.0.10",
+      "mcp_server_sdk": "2.3.0",
+      "asset": "ansys_80ae7c3cb47e.zip",
+      "sha256": "450fbaea7b86cd1fa5e8d7640bb13fdcc11980990b23a87ad0f7775422294df8",
+      "creation": "git archive of verified fixed upstream object; no local changes"
+    }
+  ],
+  "wolfram_source": "https://github.com/WolframResearch/AgentTools/tree/9c99e2da5286c2ff7ac2298956107cd9334c6e90",
+  "wolfram_archive_status": "not_bundled_network_download_incomplete"
+}

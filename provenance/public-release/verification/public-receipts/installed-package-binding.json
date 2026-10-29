@@ -1,0 +1,91 @@
+{
+  "schema_version": 1,
+  "checked_at": "2026-10-19T17:15:26.263367+00:00",
+  "status": "passed",
+  "source_commit": "01aa0bc3dc12a548301a148f8fc99e12a241e075",
+  "scope": "Independent comparison of installed package Python file records with the original verified Git-tree projection; no new downloads or solver calls.",
+  "source_receipt": {
+    "path": "provenance/public-release/verification/public-receipts/source-verification.json",
+    "sha256": "3b9d9a324e0d2919b84a211b870dc1099fab69be257f141ca8ef439fa4147ceb"
+  },
+  "cli_receipt": {
+    "path": "provenance/public-release/verification/public-receipts/cli-restoration-verification.json",
+    "sha256": "c0796cb2ac40b7575923802f209311854a9551be221427ea5af95ca119f45d4e"
+  },
+  "projection_prefix": "python/litz_research/",
+  "projection_suffix": ".py",
+  "expected_count": 13,
+  "installed_count": 13,
+  "missing": [],
+  "extra": [],
+  "hash_or_size_mismatches": [],
+  "original_source_receipt_reference_matches": true,
+  "source_commit_matches": true,
+  "verified_files": [
+    {
+      "path": "__init__.py",
+      "sha256": "122da5e71074e92e89c9c0a45d1e02292a5d88feb83286438ffb79c11e95bebd",
+      "bytes": 59
+    },
+    {
+      "path": "__main__.py",
+      "sha256": "935a1c1166b0c1ea35a82256345000bf2c73ded718d77773bc27a71ecce28f7d",
+      "bytes": 48
+    },
+    {
+      "path": "analytical.py",
+      "sha256": "f24ea834b577b0355600618db7aa3c234101c65286b1beeb18635b92a342f549",
+      "bytes": 5051
+    },
+    {
+      "path": "ansys_task.py",
+      "sha256": "f9c309529ad1e8a14f196f29e778dd82dae80815d02b21ca32438e702a5800a5",
+      "bytes": 3505
+    },
+    {
+      "path": "automation.py",
+      "sha256": "8be74163c76a58c53465db88faac4a5f274a5a426c154dfc0372e4950a1e039e",
+      "bytes": 6328
+    },
+    {
+      "path": "cli.py",
+      "sha256": "53f150cbc2434a338f8b054d051b2e3ad58ed3d5c9d72037eb07f480be25967b",
+      "bytes": 26310
+    },
+    {
+      "path": "common.py",
+      "sha256": "f23c8327a0c24506ee5becec331b31f177ffe0e972c882c2d13e3ad1fa2f3803",
+      "bytes": 4989
+    },
+    {
+      "path": "data.py",
+      "sha256": "3ec084d658d764c6c8a2471ca027e108ad1f109269b9acdc80f566b76a14d24d",
+      "bytes": 9453
+    },
+    {
+      "path": "packaging.py",
+      "sha256": "3c8280e8e0520997744fc1f941f8371a2b43d89dcc7432af84678db12f59fe18",
+      "bytes": 2294
+    },
+    {
+      "path": "processes.py",
+      "sha256": "f182ada361cd27a07b84b21c4419b6c4865533d3ffa6ecb2e3e079017c8cc9d0",
+      "bytes": 1854
+    },
+    {
+      "path": "provenance.py",
+      "sha256": "1e5d79e15f8f0484b23feb662b2b0062936e9970e98230292a93c54cc912f3a3",
+      "bytes": 4720
+    },
+    {
+      "path": "references.py",
+      "sha256": "077374324181e2724fc6bd70f831d6997259c34433dd11932632ce9b35db9545",
+      "bytes": 8705
+    },
+    {
+      "path": "tasks.py",
+      "sha256": "31ab8668131959e69baf322609d3a165be2ac3c59e3c909e9cae82f2e62f6403",
+      "bytes": 18064
+    }
+  ]
+}

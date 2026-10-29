@@ -1,0 +1,38 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="600" viewBox="0 0 1200 600" role="img" aria-labelledby="title desc">
+<title id="title">可接续的自动化研究循环</title>
+<desc id="desc">每次修订对应保存输入、源码差异和新的运行身份</desc>
+<defs><marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0,0 L10,5 L0,10 Z" fill="#31556a"/></marker></defs>
+<rect width="1200" height="600" fill="white"/>
+<text x="600" y="57" text-anchor="middle" font-family="Arial,Microsoft YaHei,sans-serif" font-size="32" font-weight="bold" fill="#31556a">可接续的自动化研究循环</text>
+<text x="600" y="95" text-anchor="middle" font-family="Arial,Microsoft YaHei,sans-serif" font-size="17" font-weight="normal" fill="#31556a">每次修订对应保存输入、源码差异和新的运行身份</text>
+<path d="M370,207.5 L455,207.5" stroke="#31556a" stroke-width="2" fill="none" marker-end="url(#arrow)"/>
+<path d="M745,207.5 L830,207.5" stroke="#31556a" stroke-width="2" fill="none" marker-end="url(#arrow)"/>
+<path d="M975.0,255 L975.0,365" stroke="#31556a" stroke-width="2" fill="none" marker-end="url(#arrow)"/>
+<path d="M830,412.5 L745,412.5" stroke="#31556a" stroke-width="2" fill="none" marker-end="url(#arrow)"/>
+<path d="M455,412.5 L370,412.5" stroke="#31556a" stroke-width="2" fill="none" marker-end="url(#arrow)"/>
+<path d="M600.0,365 L600.0,255" stroke="#31556a" stroke-width="2" fill="none" marker-end="url(#arrow)"/>
+<rect x="80" y="160" width="290" height="95" rx="10" fill="#f2f6f8" stroke="#31556a" stroke-width="1.5"/>
+<path d="M100,177 H140" stroke="#b57043" stroke-width="4"/>
+<text x="225.0" y="203" text-anchor="middle" font-family="Arial,Microsoft YaHei,sans-serif" font-size="21" font-weight="bold" fill="#31556a">定义问题</text>
+<text x="225.0" y="230" text-anchor="middle" font-family="Arial,Microsoft YaHei,sans-serif" font-size="15" font-weight="normal" fill="#31556a">工况 · 比较量 · 容差</text>
+<rect x="455" y="160" width="290" height="95" rx="10" fill="#f2f6f8" stroke="#31556a" stroke-width="1.5"/>
+<path d="M475,177 H515" stroke="#b57043" stroke-width="4"/>
+<text x="600.0" y="203" text-anchor="middle" font-family="Arial,Microsoft YaHei,sans-serif" font-size="21" font-weight="bold" fill="#31556a">建立或扩展模型</text>
+<text x="600.0" y="230" text-anchor="middle" font-family="Arial,Microsoft YaHei,sans-serif" font-size="15" font-weight="normal" fill="#31556a">推导 · 源码 · 针对性测试</text>
+<rect x="830" y="160" width="290" height="95" rx="10" fill="#f2f6f8" stroke="#31556a" stroke-width="1.5"/>
+<path d="M850,177 H890" stroke="#b57043" stroke-width="4"/>
+<text x="975.0" y="203" text-anchor="middle" font-family="Arial,Microsoft YaHei,sans-serif" font-size="21" font-weight="bold" fill="#31556a">执行任务</text>
+<text x="975.0" y="230" text-anchor="middle" font-family="Arial,Microsoft YaHei,sans-serif" font-size="15" font-weight="normal" fill="#31556a">MCP · CLI · Notebook</text>
+<rect x="80" y="365" width="290" height="95" rx="10" fill="#f2f6f8" stroke="#31556a" stroke-width="1.5"/>
+<path d="M100,382 H140" stroke="#b57043" stroke-width="4"/>
+<text x="225.0" y="408" text-anchor="middle" font-family="Arial,Microsoft YaHei,sans-serif" font-size="21" font-weight="bold" fill="#31556a">整理结果与后续问题</text>
+<text x="225.0" y="435" text-anchor="middle" font-family="Arial,Microsoft YaHei,sans-serif" font-size="15" font-weight="normal" fill="#31556a">引用 · 适用范围 · 研究入口</text>
+<rect x="455" y="365" width="290" height="95" rx="10" fill="#f2f6f8" stroke="#31556a" stroke-width="1.5"/>
+<path d="M475,382 H515" stroke="#b57043" stroke-width="4"/>
+<text x="600.0" y="408" text-anchor="middle" font-family="Arial,Microsoft YaHei,sans-serif" font-size="21" font-weight="bold" fill="#31556a">解释与修订</text>
+<text x="600.0" y="435" text-anchor="middle" font-family="Arial,Microsoft YaHei,sans-serif" font-size="15" font-weight="normal" fill="#31556a">错误依据 · 修订记录</text>
+<rect x="830" y="365" width="290" height="95" rx="10" fill="#f2f6f8" stroke="#31556a" stroke-width="1.5"/>
+<path d="M850,382 H890" stroke="#b57043" stroke-width="4"/>
+<text x="975.0" y="408" text-anchor="middle" font-family="Arial,Microsoft YaHei,sans-serif" font-size="21" font-weight="bold" fill="#31556a">读取结果并验收</text>
+<text x="975.0" y="435" text-anchor="middle" font-family="Arial,Microsoft YaHei,sans-serif" font-size="15" font-weight="normal" fill="#31556a">电流 · 功率 · 敏感性</text>
+</svg>

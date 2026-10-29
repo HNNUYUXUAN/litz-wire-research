@@ -1,0 +1,257 @@
+{
+  "version": "v1.0.0-rc.2",
+  "cases": [
+    {
+      "id": "wolfram-calibration",
+      "harness": "Codex desktop orchestrating the standard MCP client bridge",
+      "model_identifier": "not exposed as a stable session identifier; no model version inferred",
+      "task_origin": "approved implementation plan and the visible task template",
+      "runs": [
+        {
+          "run_id": "rc2_wolfram_final_mcp_01",
+          "result_sha256": "6b2a062c3bd72dd2eaf582d4a270cce2c42c737193f8295dd63717df3503782c",
+          "execution_status": "completed",
+          "physical_acceptance_status": "not_evaluated_by_protocol_probe",
+          "attachment_path": "outputs/rc2_wolfram_final_mcp_01",
+          "mcp_events.jsonl": {
+            "path": "automation/examples/wolfram-calibration/rc2_wolfram_final_mcp_01_mcp_events.jsonl",
+            "raw_sha256": "8427f0b4dc1bb60cbbddff5ffc8ace98ebf0c5f19f3253c9ee6aa4de93467754",
+            "public_sha256": "7fd20b65eaf2910dfac98740f6621912e10aad6f885461d24f9be64b1df9cf8c",
+            "processing": "machine paths normalized; JSON numeric structural values retained"
+          },
+          "protocol_report.json": {
+            "path": "automation/examples/wolfram-calibration/rc2_wolfram_final_mcp_01_protocol_report.json",
+            "raw_sha256": "133e92ee2101f6e2546615953618a6887949de0d0cf04971ed1d33811f44a8e5",
+            "public_sha256": "133e92ee2101f6e2546615953618a6887949de0d0cf04971ed1d33811f44a8e5",
+            "processing": "machine paths normalized; JSON numeric structural values retained"
+          },
+          "process_completion": {
+            "actual_exit_code": 137,
+            "cleanup_reason": "mcp_calls_receipt_saved",
+            "completion_receipt_observed": true
+          }
+        },
+        {
+          "run_id": "rc2_wolfram_final_study_01",
+          "result_sha256": "3cb6ad33b42b64a8177b4b2d8e72c0e8d712203ecc484f545ae1b0b294efd0fa",
+          "execution_status": "completed",
+          "physical_acceptance_status": "passed_test_scope_only",
+          "attachment_path": "outputs/rc2_wolfram_final_study_01"
+        }
+      ],
+      "conclusion": "completed / passed_test_scope_only"
+    },
+    {
+      "id": "ansys-native",
+      "harness": "Codex desktop orchestrating the standard MCP client bridge",
+      "model_identifier": "not exposed as a stable session identifier; no model version inferred",
+      "task_origin": "approved implementation plan and the visible task template",
+      "runs": [
+        {
+          "run_id": "rc2_ansys_mcp_verified_01",
+          "result_sha256": "167b6cb7015dfc14881e8236e1ede576aaa7e7ef8b7ed1f042ad5926b5864076",
+          "execution_status": "completed",
+          "physical_acceptance_status": "not_evaluated_by_protocol_probe",
+          "attachment_path": "outputs/rc2_ansys_mcp_verified_01",
+          "mcp_events.jsonl": {
+            "path": "automation/examples/ansys-native/rc2_ansys_mcp_verified_01_mcp_events.jsonl",
+            "raw_sha256": "1cbc767c999625cad2c707024bf9705bcd6a9379fa55027add9477e4e011e545",
+            "public_sha256": "2415775b35226d765dc8b6a60966085334031258ae1f041b8a4065474778df81",
+            "processing": "machine paths normalized; JSON numeric structural values retained"
+          },
+          "protocol_report.json": {
+            "path": "automation/examples/ansys-native/rc2_ansys_mcp_verified_01_protocol_report.json",
+            "raw_sha256": "8adaeba946fab679b1095d72bab6b36e88d2ba7698dec789229a5e3018575d7f",
+            "public_sha256": "8adaeba946fab679b1095d72bab6b36e88d2ba7698dec789229a5e3018575d7f",
+            "processing": "machine paths normalized; JSON numeric structural values retained"
+          },
+          "process_completion": {
+            "actual_exit_code": 0,
+            "cleanup_reason": null,
+            "completion_receipt_observed": false
+          }
+        },
+        {
+          "run_id": "rc2_maxwell_mcp_verified_01",
+          "result_sha256": "1e826da6af695abcff977a02a4c3d68ac57ff77c3e5bec51f56d1a10d83f6bac",
+          "execution_status": "completed",
+          "physical_acceptance_status": "passed_port_and_power_scope_only",
+          "attachment_path": "outputs/rc2_maxwell_mcp_verified_01"
+        },
+        {
+          "run_id": "native_cancel_20261014_074719",
+          "result_sha256": "f6eaf803c912a233b9944edf113aa0ad787b0f0e9404423f290ef7a25d83f8a1",
+          "execution_status": "cancelled",
+          "physical_acceptance_status": "not_verified",
+          "attachment_path": "outputs/native_cancel_20261014_074719"
+        },
+        {
+          "run_id": "native_restart_20261014_074719",
+          "result_sha256": "44e65ef4db4cbc40ea9f4b4d855f35647867daa9631e3c3abd398ed1ac59a564",
+          "execution_status": "completed",
+          "physical_acceptance_status": "passed_port_and_power_scope_only",
+          "attachment_path": "outputs/native_restart_20261014_074719"
+        },
+        {
+          "run_id": "native_cancel_20261014_074719_mcp",
+          "result_sha256": "0ef185f6103545d44ea2a6dab1a3b6d5b89fd7e58660279da76b6562df9b2a92",
+          "execution_status": "cancelled",
+          "physical_acceptance_status": "not_verified",
+          "attachment_path": "outputs/native_cancel_20261014_074719_mcp"
+        },
+        {
+          "run_id": "native_restart_20261014_074719_mcp",
+          "result_sha256": "4b23f995c70309c4367b3c8fd6a22361743dda4b73104b883dca65169aa2d424",
+          "execution_status": "completed",
+          "physical_acceptance_status": "not_evaluated_by_protocol_probe",
+          "attachment_path": "outputs/native_restart_20261014_074719_mcp",
+          "mcp_events.jsonl": {
+            "path": "automation/examples/ansys-native/native_restart_20261014_074719_mcp_mcp_events.jsonl",
+            "raw_sha256": "50dc5912850b67bf2f9da12bf56d53ce978f71be8d3c004fc910cab6343046f6",
+            "public_sha256": "7d7ea23e1a6ffc0de384005786648beea6cf53c235a6165c2e21b02d74fd05ed",
+            "processing": "portable paths; all event numeric values retained"
+          },
+          "protocol_report.json": {
+            "path": "automation/examples/ansys-native/native_restart_20261014_074719_mcp_protocol_report.json",
+            "raw_sha256": "22e628953967119c863e7a08d987b850da0cb5772249a8d89ca02413abcbde6c",
+            "public_sha256": "22e628953967119c863e7a08d987b850da0cb5772249a8d89ca02413abcbde6c",
+            "processing": "portable paths; all event numeric values retained"
+          }
+        }
+      ],
+      "conclusion": "completed / passed_port_and_power_scope_only",
+      "task_lifecycle": "provenance/rc2/native_task_lifecycle.json"
+    },
+    {
+      "id": "cross-solver",
+      "harness": "Codex desktop orchestrating the standard MCP client bridge",
+      "model_identifier": "not exposed as a stable session identifier; no model version inferred",
+      "task_origin": "approved implementation plan and the visible task template",
+      "runs": [
+        {
+          "run_id": "rc2_coax42_compare_01",
+          "result_sha256": "57ef86e3eac865555afc62720951fd78b7ff97d667533f95a6632b32e0a00bf5",
+          "execution_status": "completed",
+          "physical_acceptance_status": "passed_test_scope_only",
+          "attachment_path": "outputs/rc2_coax42_compare_01"
+        },
+        {
+          "run_id": "rc2_seven_comparison_verified_01",
+          "result_sha256": "3b72afdc0b3fb477d4518174cf627bb591e73dc7ed15219310dec84c47434264",
+          "execution_status": "completed",
+          "physical_acceptance_status": "comparison_observed_convergence_not_run",
+          "attachment_path": "outputs/rc2_seven_comparison_verified_01"
+        },
+        {
+          "run_id": "rc2_final_seven_comparison_01",
+          "result_sha256": "e0cefd8d886b4798f7d2db7284edc6823be4bf06310d44737f80852041316e0b",
+          "execution_status": "completed",
+          "physical_acceptance_status": "comparison_observed_convergence_not_run",
+          "attachment_path": "outputs/rc2_final_seven_comparison_01"
+        }
+      ],
+      "conclusion": "comparison_observed_convergence_not_run"
+    },
+    {
+      "id": "frequency-extension",
+      "harness": "Codex desktop orchestrating the standard MCP client bridge",
+      "model_identifier": "not exposed as a stable session identifier; no model version inferred",
+      "task_origin": "approved implementation plan and the visible task template",
+      "runs": [
+        {
+          "run_id": "rc2_frequency_extension_01",
+          "result_sha256": "d2973feb754c679646eaad930360c6dc8f27f774c4cfef14d6c22f6a27bfc97d",
+          "execution_status": "completed",
+          "physical_acceptance_status": "passed",
+          "attachment_path": "outputs/rc2_frequency_extension_01"
+        },
+        {
+          "run_id": "rc2_analytic_01",
+          "result_sha256": "368f1940a0807cd2a6436b3e8257cc8b3715cd890533ef6723d3eb36a24f22c9",
+          "execution_status": "completed",
+          "physical_acceptance_status": "passed",
+          "attachment_path": "outputs/rc2_analytic_01"
+        }
+      ],
+      "conclusion": "completed / passed"
+    },
+    {
+      "id": "diagnosis",
+      "harness": "Codex desktop orchestrating the standard MCP client bridge",
+      "model_identifier": "not exposed as a stable session identifier; no model version inferred",
+      "task_origin": "approved implementation plan and the visible task template",
+      "runs": [
+        {
+          "run_id": "rc2_ansys_mcp_maxwell_final_01",
+          "result_sha256": "af89ce3f51112467647b935660ab373b9d4dcff6dc7f49f9a5df43b8e4da5369",
+          "execution_status": "failed",
+          "physical_acceptance_status": "not_verified",
+          "attachment_path": "outputs/rc2_ansys_mcp_maxwell_final_01",
+          "mcp_events.jsonl": {
+            "path": "automation/examples/diagnosis/rc2_ansys_mcp_maxwell_final_01_mcp_events.jsonl",
+            "raw_sha256": "3d48046b10104756b8988b69e2fa317838f44ce24311abb23a30807f1fffffe2",
+            "public_sha256": "a8c3e1abf055ee400f97262ceb33e76f24c6041f3fe041659d8126399dabfda9",
+            "processing": "machine paths normalized; all JSON numeric structural paths unchanged"
+          },
+          "protocol_report.json": {
+            "path": "automation/examples/diagnosis/rc2_ansys_mcp_maxwell_final_01_protocol_report.json",
+            "raw_sha256": "12d57ad056f0de426db2317c08eb330e3f32c013994cf6d87a194effd88bf777",
+            "public_sha256": "12d57ad056f0de426db2317c08eb330e3f32c013994cf6d87a194effd88bf777",
+            "processing": "machine paths normalized; all JSON numeric structural paths unchanged"
+          }
+        },
+        {
+          "run_id": "rc2_ansys_mcp_maxwell_final_02",
+          "result_sha256": "167b6cb7015dfc14881e8236e1ede576aaa7e7ef8b7ed1f042ad5926b5864076",
+          "execution_status": "completed",
+          "physical_acceptance_status": "not_evaluated_by_protocol_probe",
+          "attachment_path": "outputs/rc2_ansys_mcp_maxwell_final_02",
+          "mcp_events.jsonl": {
+            "path": "automation/examples/diagnosis/rc2_ansys_mcp_maxwell_final_02_mcp_events.jsonl",
+            "raw_sha256": "c8d904a5fcdc322e87e2887d7ec1ff5989216d5584fe72a4f9db913e2b3d259f",
+            "public_sha256": "e3672de9962e2ae4e9704b1b8ca156b68ab32e4eb0b13333004b3bc96c354821",
+            "processing": "machine paths normalized; all JSON numeric structural paths unchanged"
+          },
+          "protocol_report.json": {
+            "path": "automation/examples/diagnosis/rc2_ansys_mcp_maxwell_final_02_protocol_report.json",
+            "raw_sha256": "8adaeba946fab679b1095d72bab6b36e88d2ba7698dec789229a5e3018575d7f",
+            "public_sha256": "8adaeba946fab679b1095d72bab6b36e88d2ba7698dec789229a5e3018575d7f",
+            "processing": "machine paths normalized; all JSON numeric structural paths unchanged"
+          }
+        }
+      ],
+      "conclusion": "actual unit conversion API failure repaired; unchanged physical constraints"
+    },
+    {
+      "id": "aphi-diagnostics",
+      "harness": "Codex desktop orchestrating the standard MCP client bridge",
+      "model_identifier": "not exposed as a stable session identifier; no model version inferred",
+      "task_origin": "approved implementation plan and the visible task template",
+      "runs": [
+        {
+          "run_id": "rc2_aphi_bound_fields_01",
+          "result_sha256": "69855e51768918504bd60de115b4f3515b797e79bdb38b6df2795c8b3f071f8f",
+          "execution_status": "completed",
+          "physical_acceptance_status": "failed_retained_phi_gauge",
+          "attachment_path": "outputs/rc2_aphi_bound_fields_01"
+        }
+      ],
+      "conclusion": "completed / failed_retained_phi_gauge"
+    }
+  ],
+  "notebooks": {
+    "count": 20,
+    "passed": 20,
+    "records": "provenance/rc2/notebook_verification.json",
+    "runtime_source_binding": true
+  },
+  "harness_matrix": {
+    "Codex_standard_MCP_bridge": "end_to_end_verified",
+    "Codex_native_client_registration": "configuration_template_generated_and_parsed",
+    "generic_MCP_Python_client": "initialize_tools_list_tools_call_verified",
+    "other_agent_clients": "not_tested",
+    "HTTP_transport": "configuration_only"
+  },
+  "independent_recovery": "provenance/rc2/recovery_verification.json",
+  "Python_regression_tests": 149
+}

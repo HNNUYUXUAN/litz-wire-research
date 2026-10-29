@@ -1,0 +1,33 @@
+{
+  "schema_version": "1.0",
+  "status": "reference_inputs_not_a_solver_configuration",
+  "frequency_Hz": 200000,
+  "current_RMS_A": 20,
+  "conductivity_S_per_m": 58000000,
+  "relative_permeability": 1,
+  "temperature_C": 20,
+  "axial_length_m": 1,
+  "mu0_convention": "4*pi*1e-7 H/m",
+  "phasor_time_convention": "exp(+j*omega*t)",
+  "phasor_amplitude": "RMS",
+  "q1": {
+    "solid_diameter_m": 0.002,
+    "purpose": "specified_calibration_case",
+    "meets_uniform_Jdc_constraint": false
+  },
+  "q2_constraints": {
+    "max_Jdc_A_per_mm2": 4,
+    "minimum_nominal_copper_area_mm2": 5
+  },
+  "candidate_example_not_optimized": {
+    "strand_count": 640,
+    "strand_diameter_m": 0.0001,
+    "status": "initialization_only_no_geometry_or_field_solve"
+  },
+  "main_case": {
+    "independent_external_field": false,
+    "terminal_condition": "common terminal voltage and total current; solve complex strand currents",
+    "insulation": "electrically isolated along length; joined only at terminals",
+    "return_path": "must be specified per numerical model; analytic reference assumes isolated long round wire/remote return"
+  }
+}

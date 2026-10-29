@@ -1,0 +1,25 @@
+--- failed/MCPMaxwellCase.py
++++ repaired/MCPMaxwellCase.py
+@@ -22,7 +22,9 @@
+     app.modeler.model_units='mm';app.materials.add_material('litz_copper').conductivity=5.8e7
+     app.materials.add_material('litz_air').permittivity=1.
+     app.change_design_settings({'BackgroundMaterialName':'litz_air','ModelDepth':'1000mm'})
+-    if app.modeler.model_units!='mm' or abs(float(app.model_depth)-1000)>1e-9:
++    from ansys.aedt.core.generic.numbers_utils import decompose_variable_value
++    depth,depth_unit=decompose_variable_value(app.model_depth)
++    if app.modeler.model_units!='mm' or depth_unit!='mm' or abs(float(depth)-1000)>1e-9:
+         raise RuntimeError('Actual Maxwell units/depth do not match the one-metre case')
+     d=p['diameter_m']*1000.;radius=d/2
+     centers=[[0.,0.]]+[[1.2*d*math.cos(k*math.pi/3),1.2*d*math.sin(k*math.pi/3)] for k in range(6)]
+@@ -63,5 +65,10 @@
+     current_error=float(np.linalg.norm(currents(final)-[p['current_RMS_A'],-p['current_RMS_A']])/np.linalg.norm([p['current_RMS_A'],-p['current_RMS_A']]))
+     loss=sum(v for k,v in final['solid_losses_W'].items() if k not in {'ReturnWinding','total'})
+     report.update(execution_status='completed',physical_acceptance_status='passed_port_and_power_scope_only' if current_error<1e-8 and final['power_relative_difference']<1e-8 else 'failed',current_constraint_relative_error=current_error,power_relative_error=final['power_relative_difference'],bundle_Rac_ohm_per_m=loss/p['current_RMS_A']**2,source_geometry={'strand_centers_mm':centers,'strand_radius_mm':radius,'return_inner_radius_mm':ri,'return_outer_radius_mm':ro,'domain_radius_mm':domain,'strand_segments':42,'return_segments':96},project='seven_strand.aedt')
+-    app.save_project();save()
++    import platform,importlib.metadata
++    report['environment']={'python':platform.python_version(),'pyaedt':importlib.metadata.version('pyaedt'),'aedt':app.desktop_class.aedt_version,'model_units':app.modeler.model_units,'model_depth':app.model_depth,'frequency_setting':setup.props['Frequency'],'solver_cores':4}
++    app.save_project()
++    project=out/'seven_strand.aedt'
++    report['project_readback']={'design_present':b'CommonTerminal7' in project.read_bytes(),'sha256':hashlib.sha256(project.read_bytes()).hexdigest()}
++    save()
+     return report

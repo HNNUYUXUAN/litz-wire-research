@@ -1,0 +1,28 @@
+{
+  "schema_version": 1,
+  "academic-search": {
+    "repository": "https://github.com/ustc-ai4science/academic-search",
+    "commit": "b9b692ed1334c858eb42d1f2710ccfcae1a43eb8",
+    "license": "MIT",
+    "role": "record normalization and open-access acquisition",
+    "validation": "71 unit tests passed; 2 skipped; live normalization, conflict preservation and OA acquisition passed on 2026-10-28"
+  },
+  "citation-management": {
+    "repository": "https://github.com/K-Dense-AI/scientific-agent-skills",
+    "commit": "5f2bc0341354fd5590aef76a533ada1e1e5b4e62",
+    "license": "MIT",
+    "role": "reviewed citation-validation candidate"
+  },
+  "paper-search-mcp": {
+    "repository": "https://github.com/openags/paper-search-mcp",
+    "commit": "cab1b5cc276a0cd004a0044003926a6440088049",
+    "license": "MIT",
+    "role": "reviewed retrieval-backend comparator"
+  },
+  "science-skills": {
+    "repository": "https://github.com/google-deepmind/science-skills",
+    "commit": "4de6786171f1479026da5d3a00f110703c8ba35e",
+    "license": "Apache-2.0 software; CC-BY-4.0 other material; source-specific terms",
+    "role": "reviewed lightweight retrieval comparator"
+  }
+}

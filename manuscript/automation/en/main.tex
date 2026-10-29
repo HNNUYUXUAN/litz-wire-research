@@ -1,0 +1,24 @@
+\documentclass[journal,10pt]{IEEEtran}
+\input{../../preamble.tex}
+\title{Agent-Driven Reviewable Modeling and Simulation: A Wolfram–Ansys MCP Workflow with Litz-Wire Cases}
+\author{Miao Yuxuan\thanks{Huainan Normal University}}
+\date{}
+\begin{document}
+\maketitle
+\begin{abstract}
+This paper presents an agent-driven modeling and simulation workflow built on task identities, saved source, and independent acceptance. Codex, Wolfram, and Ansys MCP connect research questions to traceable computational artifacts. Workflows, execution adapters, and physical models organize tasks, software connections, and numerical implementations through common parameter and result interfaces. Six recorded case classes cover analytical calibration and Notebooks, native Maxwell construction and solution, cross-solver comparison, frequency extension, interface repair, and A–φ failure diagnosis. A seven-strand common-port comparison gives a relative complex-current L2 difference of 0.0106814\% and a relative resistance difference of 0.00132823\%. These values concern the retained meshes; spatial and boundary convergence require further examination. The cases demonstrate how protocol status, execution status, and physical acceptance jointly support continued research. Workflows, configurations, adapter code, models, and run records provide reusable research materials.
+\end{abstract}
+\begin{IEEEkeywords}
+Litz wire; hierarchical verification; skin and proximity effects; common-terminal circuits; finite-length PEEC; reproducible numerical research
+\end{IEEEkeywords}
+\input{sections/01.tex}
+\input{sections/02.tex}
+\input{sections/03.tex}
+\input{sections/04.tex}
+\input{sections/05.tex}
+\input{sections/07.tex}
+\input{sections/06.tex}
+\input{sections/convergence.tex}
+\renewcommand{\refname}{References}
+\input{../../generated/automation-references.tex}
+\end{document}

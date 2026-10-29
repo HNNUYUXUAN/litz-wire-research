@@ -1,0 +1,319 @@
+{
+  "source_url": "https://api.crossref.org/works/10.1007/BFb0064470",
+  "response": {
+    "status": "ok",
+    "message-type": "work",
+    "message-version": "1.0.0",
+    "message": {
+      "indexed": {
+        "date-parts": [
+          [
+            2026,
+            10,
+            10
+          ]
+        ],
+        "date-time": "2026-10-10T02:09:15Z",
+        "timestamp": 1791598155076,
+        "version": "4.3.4"
+      },
+      "publisher-location": "Berlin, Heidelberg",
+      "reference-count": 20,
+      "publisher": "Springer Berlin Heidelberg",
+      "isbn-type": [
+        {
+          "value": "9783540084327",
+          "type": "print"
+        },
+        {
+          "value": "9783540371588",
+          "type": "electronic"
+        }
+      ],
+      "license": [
+        {
+          "start": {
+            "date-parts": [
+              [
+                1977,
+                1,
+                1
+              ]
+            ],
+            "date-time": "1977-01-01T00:00:00Z",
+            "timestamp": 220924800000
+          },
+          "content-version": "unspecified",
+          "delay-in-days": 0,
+          "URL": "http://www.springer.com/tdm"
+        }
+      ],
+      "content-domain": {
+        "domain": [],
+        "crossmark-restriction": false
+      },
+      "short-container-title": [],
+      "published-print": {
+        "date-parts": [
+          [
+            1977
+          ]
+        ]
+      },
+      "DOI": "10.1007/bfb0064470",
+      "type": "book-chapter",
+      "created": {
+        "date-parts": [
+          [
+            2006,
+            11,
+            10
+          ]
+        ],
+        "date-time": "2006-11-10T13:47:33Z",
+        "timestamp": 1163166453000
+      },
+      "page": "292-315",
+      "source": "Crossref",
+      "is-referenced-by-count": 1487,
+      "title": [
+        "A mixed finite element method for 2-nd order elliptic problems"
+      ],
+      "prefix": "10.1007",
+      "author": [
+        {
+          "given": "P. A.",
+          "family": "Raviart",
+          "sequence": "first",
+          "affiliation": [],
+          "role": [
+            {
+              "vocabulary": "crossref",
+              "role": "author"
+            }
+          ]
+        },
+        {
+          "given": "J. M.",
+          "family": "Thomas",
+          "sequence": "additional",
+          "affiliation": [],
+          "role": [
+            {
+              "vocabulary": "crossref",
+              "role": "author"
+            }
+          ]
+        }
+      ],
+      "member": "297",
+      "published-online": {
+        "date-parts": [
+          [
+            2006,
+            8,
+            25
+          ]
+        ]
+      },
+      "reference": [
+        {
+          "key": "19_CR1",
+          "first-page": "129",
+          "volume": "R 2",
+          "author": "F. Brezzi",
+          "year": "1974",
+          "unstructured": "F. Brezzi: On the existence, uniqueness and approximation of saddle-point problems arising from lagrangian multipliers. R.A.I.R.O., R 2 Août 1974, 129–151.",
+          "journal-title": "R.A.I.R.O."
+        },
+        {
+          "key": "19_CR2",
+          "unstructured": "F.Brezzi, P.A.Raviart: Mixed finite element methods for 4 th order problems. To appear."
+        },
+        {
+          "key": "19_CR3",
+          "doi-asserted-by": "publisher",
+          "first-page": "177",
+          "DOI": "10.1007/BF00252458",
+          "volume": "46",
+          "author": "P.G. Ciarlet",
+          "year": "1972",
+          "unstructured": "P.G. Ciarlet, P.A. Raviart: General Lagrange and Hermite interpolation in R n with applications to finite element methods. Arch. Rat. Mech. Anal. 46 (1972), 177–199.",
+          "journal-title": "Arch. Rat. Mech. Anal."
+        },
+        {
+          "key": "19_CR4",
+          "doi-asserted-by": "publisher",
+          "first-page": "125",
+          "DOI": "10.1016/B978-0-12-208350-1.50009-1",
+          "volume-title": "A mixed finite element method for the biharmonic equation, Mathematical Aspects of Finite Elements in Partial Differential Equations",
+          "author": "P.G. Ciarlet",
+          "year": "1974",
+          "unstructured": "P.G. Ciarlet, P.A. Raviart: A mixed finite element method for the biharmonic equation, Mathematical Aspects of Finite Elements in Partial Differential Equations. pp. 125–145. Academic Press, New-York, 1974."
+        },
+        {
+          "key": "19_CR5",
+          "unstructured": "B.Fraeijs De Veubeke: Displacement and equilibrium models in the finite element method, Stress Analysis (O.C. Zienkiewicz and G.S.Holister, Editors), ch. 9, pp. 145–197. Wiley, 1965."
+        },
+        {
+          "key": "19_CR6",
+          "unstructured": "B.Fraeijs De Veubeke: Diffusive equilibrium models Lecture notes. University of Calgary, 1973."
+        },
+        {
+          "key": "19_CR7",
+          "doi-asserted-by": "publisher",
+          "first-page": "65",
+          "DOI": "10.1002/nme.1620050107",
+          "volume": "5",
+          "author": "B. Fraeijs De Veubeke",
+          "year": "1972",
+          "unstructured": "B. Fraeijs De Veubeke, M.A. Hogge: Dual analysis for heat conductions problems by finite elements. Int. J. for Num. Methods in Eng., 5 (1972), 65–82.",
+          "journal-title": "Int. J. for Num. Methods in Eng."
+        },
+        {
+          "key": "19_CR8",
+          "unstructured": "J.Haslinger, I.Hlavacek: A mixed finite element method close to the equilibrium model, I.Dirichlet problem for one equation, II. Plane elasticity. To appear."
+        },
+        {
+          "key": "19_CR9",
+          "doi-asserted-by": "publisher",
+          "first-page": "43",
+          "DOI": "10.1007/BF01436186",
+          "volume": "21",
+          "author": "C. Johnson",
+          "year": "1973",
+          "unstructured": "C. Johnson: On the convergence of a mixed finite element method for plate bending problems. Numer. Math., 21 (1973), 43–62.",
+          "journal-title": "Numer. Math."
+        },
+        {
+          "key": "19_CR10",
+          "unstructured": "C.Johnson: Convergence of another mixed finite element method for plate bending problems. To appear."
+        },
+        {
+          "key": "19_CR11",
+          "first-page": "87",
+          "volume": "9",
+          "author": "T. Miyoshi",
+          "year": "1973",
+          "unstructured": "T. Miyoshi: A finite element method for the solutions of fourth order partial differential equations. Kumamoto J., (Math.), 9, (1973), 87–116.",
+          "journal-title": "Kumamoto J., (Math.)"
+        },
+        {
+          "key": "19_CR12",
+          "first-page": "629",
+          "volume-title": "Generalized conjugate functions for mixed finite element approximations of boundary-value problems, The Mathematical Foundations of the Finite Element Method",
+          "author": "J.T. Oden",
+          "year": "1973",
+          "unstructured": "J.T. Oden: Generalized conjugate functions for mixed finite element approximations of boundary-value problems, The Mathematical Foundations of the Finite Element Method (A.K. Aziz Editor), pp. 629–670, Academic Press, New-York, 1973."
+        },
+        {
+          "key": "19_CR13",
+          "volume-title": "Some contributions to the mathematical theory of mixed finite element approximations",
+          "author": "J.T. Oden",
+          "year": "1973",
+          "unstructured": "J.T. Oden: Some contributions to the mathematical theory of mixed finite element approximations. Tokyo Seminar on Finite Elements, Tokyo, 1973."
+        },
+        {
+          "key": "19_CR14",
+          "doi-asserted-by": "crossref",
+          "unstructured": "J.T.Oden, J.N.Reddy: On mixed element approximations, Texas Institute for Computational Mechanics. The University of Texas at Austin, 1974.",
+          "DOI": "10.1007/BFb0074145"
+        },
+        {
+          "key": "19_CR15",
+          "unstructured": "P.A.Raviart, J.M.Thomas: Primal hybrid finite element methods for 2 nd order elliptic equations. To appear."
+        },
+        {
+          "key": "19_CR16",
+          "doi-asserted-by": "crossref",
+          "unstructured": "J.N.Reddy: A Mathematical Theory of Complementary-Dual Variational Principles and Mixed Finite Element Approximations of Linear Boundary-Value Problems in Continuous Mechanics. Ph. D. Dissertation, The University of Alabama in Huntsville, 1973.",
+          "DOI": "10.1080/03601217308905301"
+        },
+        {
+          "key": "19_CR17",
+          "unstructured": "B.Scheurer: To appear."
+        },
+        {
+          "key": "19_CR18",
+          "unstructured": "J.M.Thomas: Methode des éléments finis hybrides duaux pour les problèmes elliptiques du 2 nd ordre. To appear in R.A.I.R.O., Série Analyse Numérique."
+        },
+        {
+          "key": "19_CR19",
+          "unstructured": "J.M.Thomas: Méthode des éléments finis équilibre pour les problèmes elliptiques du 2 nd ordre. To appear."
+        },
+        {
+          "key": "19_CR20",
+          "unstructured": "J.M.Thomas: Thesis. To appear."
+        }
+      ],
+      "container-title": [
+        "Lecture Notes in Mathematics",
+        "Mathematical Aspects of Finite Element Methods"
+      ],
+      "original-title": [],
+      "link": [
+        {
+          "URL": "http://link.springer.com/content/pdf/10.1007/BFb0064470",
+          "content-type": "unspecified",
+          "content-version": "vor",
+          "intended-application": "similarity-checking"
+        }
+      ],
+      "deposited": {
+        "date-parts": [
+          [
+            2020,
+            4,
+            18
+          ]
+        ],
+        "date-time": "2020-04-18T20:07:34Z",
+        "timestamp": 1587240454000
+      },
+      "score": 1,
+      "resource": {
+        "primary": {
+          "URL": "http://link.springer.com/10.1007/BFb0064470"
+        }
+      },
+      "subtitle": [],
+      "short-title": [],
+      "issued": {
+        "date-parts": [
+          [
+            1977
+          ]
+        ]
+      },
+      "ISBN": [
+        "9783540084327",
+        "9783540371588"
+      ],
+      "references-count": 20,
+      "URL": "https://doi.org/10.1007/bfb0064470",
+      "relation": {},
+      "ISSN": [
+        "0075-8434",
+        "1617-9692"
+      ],
+      "issn-type": [
+        {
+          "value": "0075-8434",
+          "type": "print"
+        },
+        {
+          "value": "1617-9692",
+          "type": "electronic"
+        }
+      ],
+      "subject": [],
+      "published": {
+        "date-parts": [
+          [
+            1977
+          ]
+        ]
+      }
+    }
+  }
+}

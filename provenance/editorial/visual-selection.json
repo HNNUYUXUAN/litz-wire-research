@@ -1,0 +1,187 @@
+{
+  "candidate_files": [
+    {
+      "path": "outputs/review/visual-candidates/connections-en-1.svg",
+      "sha256": "83a4bdec5c90c612a21ae59c086e945cf6a036c1d955084bf0a1a3071dbc9198"
+    },
+    {
+      "path": "outputs/review/visual-candidates/connections-en-2.svg",
+      "sha256": "b878520953fc094e5708c813453745957a589f04aefc4f94740c422d754e627a"
+    },
+    {
+      "path": "outputs/review/visual-candidates/connections-en-3.svg",
+      "sha256": "cd812894cdd34aa8bfe36dcc5ee29e49dbdde8748dfee33bef95fc4c45f7f20d"
+    },
+    {
+      "path": "outputs/review/visual-candidates/connections-zh-CN-1.svg",
+      "sha256": "e3dfdbe3e5456c609d58f056d5b10c53083be1fc064a39046fd818aac7358764"
+    },
+    {
+      "path": "outputs/review/visual-candidates/connections-zh-CN-2.svg",
+      "sha256": "4c700f046dce54013fab5ef80b96a5a644f6a76bda54efb5bb8002a7fb3922f2"
+    },
+    {
+      "path": "outputs/review/visual-candidates/connections-zh-CN-3.svg",
+      "sha256": "c9af7e4756faaadd43d8095f2aedbc0e99c155607a47af1848e29893dae9b076"
+    },
+    {
+      "path": "outputs/review/visual-candidates/cross-solver-en-1.svg",
+      "sha256": "3906994cacf18f107d93f111f1696714460c0c7db39b8021e19db9228100e20c"
+    },
+    {
+      "path": "outputs/review/visual-candidates/cross-solver-en-2.svg",
+      "sha256": "4ec7cc0be89946b486f40c1cab02eef79736a1cd2f5cdc2e7fd50b648bafb9c7"
+    },
+    {
+      "path": "outputs/review/visual-candidates/cross-solver-en-3.svg",
+      "sha256": "5dcdb4c12b1e099e9ffef856280d1ed7d9c6e4a8c15a4cd4d1f8574705b3c55c"
+    },
+    {
+      "path": "outputs/review/visual-candidates/cross-solver-zh-CN-1.svg",
+      "sha256": "d5e2bb0d48762822249998eee536f39745274e97a589a0216b5ae6cf27c7a582"
+    },
+    {
+      "path": "outputs/review/visual-candidates/cross-solver-zh-CN-2.svg",
+      "sha256": "1078fdc06bd1c95022a7f9b0cd17ac5da4b061df774adbe273277bd2e88bfbb9"
+    },
+    {
+      "path": "outputs/review/visual-candidates/cross-solver-zh-CN-3.svg",
+      "sha256": "7c0476cb1dc53e6ffb28905eafabdd24a31bbdc03d90d39dad40123f22a1e800"
+    },
+    {
+      "path": "outputs/review/visual-candidates/model-hierarchy-en-1.svg",
+      "sha256": "2222cce86900a46705a7f3a620e4b862b28fe773194374a574ef13a1b86d88f6"
+    },
+    {
+      "path": "outputs/review/visual-candidates/model-hierarchy-en-2.svg",
+      "sha256": "eaa3a77582ef09ac796b9b145dd4b52b95e8d1ba355d75b9ce819f05854ff726"
+    },
+    {
+      "path": "outputs/review/visual-candidates/model-hierarchy-en-3.svg",
+      "sha256": "9efd104b895dbb75ff178b30f0e9d90369295e59c0eb88340573aab5438f407b"
+    },
+    {
+      "path": "outputs/review/visual-candidates/model-hierarchy-zh-CN-1.svg",
+      "sha256": "17ac5b4941f4fc075dc0fc9cdcb3f98dca6b9b8b037cb40da51307e0258367b2"
+    },
+    {
+      "path": "outputs/review/visual-candidates/model-hierarchy-zh-CN-2.svg",
+      "sha256": "4d58b5bb07d1440154e4561ad68977bcd68033facfa6b84befec93cff23f7254"
+    },
+    {
+      "path": "outputs/review/visual-candidates/model-hierarchy-zh-CN-3.svg",
+      "sha256": "08812df2fb4f359d90ee2eaf89c366941fac07afd26559da57954ad3dffc5a61"
+    },
+    {
+      "path": "outputs/review/visual-candidates/overview-en-final.png",
+      "sha256": "8d46dfd222036df47dcbe0c59e93c11d752e113c4474d39cf7d50e6b64ab0f26"
+    },
+    {
+      "path": "outputs/review/visual-candidates/overview-en.png",
+      "sha256": "af1ebc3deca7bac07de16932a46327cb6bfa85d5fac4a14abe2b44c2bcdc37e1"
+    },
+    {
+      "path": "outputs/review/visual-candidates/overview-zh-final.png",
+      "sha256": "fd7e5d2805b1f51322b341c91a0ac17d6c1b29932f364b893d91f6b80106f781"
+    },
+    {
+      "path": "outputs/review/visual-candidates/overview-zh.png",
+      "sha256": "f737c8f5ee8aec78ddf765fad32883b71e14901adeab2ce3482eccfb81fa0dbe"
+    },
+    {
+      "path": "outputs/review/visual-candidates/research-loop-en-1.svg",
+      "sha256": "d262b4a970631cfdf9be9ac62fd72447ab703acd578dc6cf17cf382061150557"
+    },
+    {
+      "path": "outputs/review/visual-candidates/research-loop-en-2.svg",
+      "sha256": "dbc18cd8c8de3566dab2816be51efb8628225744f3407393ade6ceee5b10d169"
+    },
+    {
+      "path": "outputs/review/visual-candidates/research-loop-en-3.svg",
+      "sha256": "722d7e596615fef95b1efc52ad89143788d85a010c459806185c9a62d9b0c071"
+    },
+    {
+      "path": "outputs/review/visual-candidates/research-loop-zh-CN-1.svg",
+      "sha256": "8d7e8b8316f822d123b94491c5ffbd86c97ce11fba31593b33f7aea3185be99b"
+    },
+    {
+      "path": "outputs/review/visual-candidates/research-loop-zh-CN-2.svg",
+      "sha256": "05feed7c2840a03a177b81f32133b286c8347ab892281a51c0edf1687bfea767"
+    },
+    {
+      "path": "outputs/review/visual-candidates/research-loop-zh-CN-3.svg",
+      "sha256": "49a58cab4b001a76440573c59bdca01a7718fb3de40fcdc798cfd8d859eb765c"
+    },
+    {
+      "path": "outputs/review/visual-candidates/research-sketch-a.png",
+      "sha256": "486ff1ee591750257ff274475910bddf7cadf4f8f90a789bc88c168c2c44daa2"
+    },
+    {
+      "path": "outputs/review/visual-candidates/sketch-en-final.png",
+      "sha256": "fb7ce2ee788b664331eb68e21143a9fb704e8e1d1aaf4ee87f42e1a0fd2167b1"
+    },
+    {
+      "path": "outputs/review/visual-candidates/sketch-zh-final.png",
+      "sha256": "b8bf0fa9e867881d76b56608475149001c4482828a419efd0e9a3b3b682408d6"
+    }
+  ],
+  "selected_files": [
+    {
+      "path": "publications/assets/overview/en/connections.svg",
+      "sha256": "83a4bdec5c90c612a21ae59c086e945cf6a036c1d955084bf0a1a3071dbc9198"
+    },
+    {
+      "path": "publications/assets/overview/en/cross-solver.svg",
+      "sha256": "3906994cacf18f107d93f111f1696714460c0c7db39b8021e19db9228100e20c"
+    },
+    {
+      "path": "publications/assets/overview/en/model-hierarchy.svg",
+      "sha256": "2222cce86900a46705a7f3a620e4b862b28fe773194374a574ef13a1b86d88f6"
+    },
+    {
+      "path": "publications/assets/overview/en/project.png",
+      "sha256": "8d46dfd222036df47dcbe0c59e93c11d752e113c4474d39cf7d50e6b64ab0f26"
+    },
+    {
+      "path": "publications/assets/overview/en/research-loop.svg",
+      "sha256": "d262b4a970631cfdf9be9ac62fd72447ab703acd578dc6cf17cf382061150557"
+    },
+    {
+      "path": "publications/assets/overview/en/research-sketch.png",
+      "sha256": "fb7ce2ee788b664331eb68e21143a9fb704e8e1d1aaf4ee87f42e1a0fd2167b1"
+    },
+    {
+      "path": "publications/assets/overview/zh-CN/connections.svg",
+      "sha256": "e3dfdbe3e5456c609d58f056d5b10c53083be1fc064a39046fd818aac7358764"
+    },
+    {
+      "path": "publications/assets/overview/zh-CN/cross-solver.svg",
+      "sha256": "d5e2bb0d48762822249998eee536f39745274e97a589a0216b5ae6cf27c7a582"
+    },
+    {
+      "path": "publications/assets/overview/zh-CN/model-hierarchy.svg",
+      "sha256": "17ac5b4941f4fc075dc0fc9cdcb3f98dca6b9b8b037cb40da51307e0258367b2"
+    },
+    {
+      "path": "publications/assets/overview/zh-CN/project.png",
+      "sha256": "fd7e5d2805b1f51322b341c91a0ac17d6c1b29932f364b893d91f6b80106f781"
+    },
+    {
+      "path": "publications/assets/overview/zh-CN/research-loop.svg",
+      "sha256": "8d7e8b8316f822d123b94491c5ffbd86c97ce11fba31593b33f7aea3185be99b"
+    },
+    {
+      "path": "publications/assets/overview/zh-CN/research-sketch.png",
+      "sha256": "b8bf0fa9e867881d76b56608475149001c4482828a419efd0e9a3b3b682408d6"
+    }
+  ],
+  "themes": [
+    "project",
+    "connections",
+    "research-loop",
+    "model-hierarchy",
+    "cross-solver",
+    "research-sketch"
+  ],
+  "scope": "Conceptual illustrations and exact workflow diagrams; scientific results use saved evidence."
+}

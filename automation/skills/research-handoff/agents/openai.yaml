@@ -1,0 +1,5 @@
+interface:
+  display_name: "research-handoff"
+  short_description: "Scientific research workflow with verifiable evidence"
+  default_prompt: "Use research-handoff to complete this research task with saved inputs and source evidence."
+

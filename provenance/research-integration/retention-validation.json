@@ -1,0 +1,22 @@
+{
+  "status": "passed",
+  "retention": [
+    {
+      "receipt": "docs/text-entry-cleanup-receipt.json",
+      "files_verified": 27
+    },
+    {
+      "receipt": "docs/publication-chain-cleanup-receipt.json",
+      "files_verified": 172
+    },
+    {
+      "receipt": "docs/publication-disk-cleanup-receipt.json",
+      "files_verified": 16
+    }
+  ],
+  "removed_files_verified": 215,
+  "original_text_blocks_verified": 540,
+  "vendor_files_verified": 7,
+  "unaltered_IEEEtran_classes": 4,
+  "scope": "Every removed file is retained locally with its recorded SHA256; migrated original block hashes bind to archived sources and current TeX sections."
+}

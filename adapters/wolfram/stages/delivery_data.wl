@@ -1,0 +1,16 @@
+ddIndex=Import[FileNameJoin[{stageRoot,"docs","总控","当前运行索引.json"}],"RawJSON"];
+ddCoaxID=ddIndex["routes"]["coax640"]["selected_run_id"];
+ddCoax=Import[LitzEvidence`ReadPath[stageRoot,FileNameJoin[{stageRoot,"outputs",ddCoaxID,"results.wxf"}]],"WXF"]["data"];
+ddKeep={"nodes","triangles","mesh_factor","circle_segments","return_factor","return_outer_radius_m","bundle_loss_W_per_m","return_loss_W_per_m","input_W_per_m","bundle_Rac_ohm_per_m","linear_residual","current_residual","power_residual","polygonal_bundle_area_m2","source_voltage_V_per_m","return_voltage_V_per_m"};
+ddCases=KeyTake[#,Intersection[ddKeep,Keys[#]]]&/@ddCoax["cases"];
+ddSafe[expr_]:=expr/.(z_Complex:><|"real"->Re[z],"imag"->Im[z]|>);
+ddPub=<|"source_run_id"->ddCoaxID,"source_model"->"archived_2D_coax640_WXF","case_count"->Length[ddCases],"assumptions"->"Scalar public export; complex strand currents are in CSV as real/imag columns."|>;
+Export[FileNameJoin[{stageDir,"coax640_public_data.json"}],ddPub,"RawJSON"];
+ddCurrents=ddCoax["cases"][[3]]["strand_currents_RMS_A"];
+Export[FileNameJoin[{stageDir,"coax640_complex_currents.csv"}],Prepend[MapIndexed[{First[#2],Re[#1],Im[#1],Abs[#1],Arg[#1]}&,ddCurrents],{"strand_id","Re_I_RMS_A","Im_I_RMS_A","Abs_I_RMS_A","phase_rad"}],"CSV"];
+ddCylinderID=ddIndex["routes"]["fem3_cylinder"]["selected_run_id"];
+ddCylinder=Import[LitzEvidence`ReadPath[stageRoot,FileNameJoin[{stageRoot,"outputs",ddCylinderID,"results.wxf"}]],"WXF"]["data"];
+Export[FileNameJoin[{stageDir,"cylinder_summary_recovered.json"}],<|"source_run_id"->ddCylinderID,"data_source"->"preserved_results.wxf; original summary JSON export failed","cases"->(KeyDrop[#,{"fields","mesh","profile"}]&/@ddCylinder["cases"])|>,"RawJSON"];
+Do[Export[FileNameJoin[{stageDir,"cylinder_profile_"<>ToString[k]<>".csv"}],Prepend[({#[[1]],Re[#[[2]]],Im[#[[2]]],Re[#[[3]]],Im[#[[3]]]}&/@ddCylinder["cases"][[k]]["profile"]),{"r_over_a","Re_actual_J","Im_actual_J","Re_Bessel_J","Im_Bessel_J"}],"CSV"],{k,Length[ddCylinder["cases"]]}];
+stageCheck["delivery_coax_source_current",Abs[Total[ddCurrents]-20.]/20.,10.^-8,"archived_coax_FEM_data_export"];
+stageData=<|"source_model"->"archived_WXF_evidence_export","source_run_ids"->{ddCoaxID,ddCylinderID},"assumptions"->"Read-only conversion of explicitly selected preserved model outputs; no new physical solve or change to historical failed run. Complex values stored with real/imag components."|>;

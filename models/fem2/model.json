@@ -1,0 +1,35 @@
+{
+  "route": "fem2",
+  "model_id": "fem2",
+  "titles": {
+    "en": "Two-dimensional diffusion FEM",
+    "zh-CN": "二维扩散有限元"
+  },
+  "equation": "∇⊥²Ez−jωμσEz=0; Jz=σEz",
+  "references": [
+    "FEMDOC",
+    "P04"
+  ],
+  "parameters": {
+    "mesh_h": 0.2
+  },
+  "tutorial_instructions": {
+    "en": "Change mesh_h; run at least three meshes before making a convergence claim.",
+    "zh-CN": "修改 mesh_h；收敛判断至少运行三档网格。"
+  },
+  "fixed_conventions": "SI; exp(+j omega t); RMS; sigma=58 MS/m; mu_r=1; 20 C",
+  "evidence_dataset": "fem2",
+  "derivation": {
+    "en": [
+      "The circular cross section solves ∇⊥²Ez−jωμσEz=0. A constant boundary field is normalized to the total complex current; the circle polygon, interpolation order and mesh size determine numerical error.",
+      "The weak form integrates ∇v·∇Ez+jωμσvEz over the domain, subject to the stated boundary value. Integrate the resulting current and Joule density independently and compare Rac with the Bessel solution.",
+      "This tutorial uses one mesh. Repeat at three or more decreasing h/a values and inspect boundary/polygon resolution before claiming accuracy; integral conservation alone does not bound field error."
+    ],
+    "zh-CN": [
+      "在圆截面求解 ∇⊥²Ez−jωμσEz=0；边界常量场通过总复电流归一化。圆周多边形、插值阶次和网格尺寸共同决定数值误差。",
+      "弱形式在区域内积分 ∇v·∇Ez+jωμσvEz，并施加给定边界值。对所得电流及焦耳密度独立积分，再将 Rac 与 Bessel 解比较。",
+      "教程只用单档网格。精度判断须至少三档递减 h/a，并检查边界及圆周离散；积分守恒本身不构成场误差上界。"
+    ]
+  },
+  "history": "data/evidence/v1.0.0-rc.1/; litz-research data fetch fem2"
+}

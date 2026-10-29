@@ -1,0 +1,107 @@
+\section{Acceptance, Diagnostics, and Reproduction}
+\label{chapter:C}
+
+% block-id: C.report_repro.p1
+\hypertarget{C.report_repro.p1}{}
+Route inventories connect original WXF files, checkpoints, Ansys projects, logs, and postprocessing outputs through model, parameter, source, and run identities. JSON/CSV retain real and imaginary components, units, and strand identities. Where a source field's unit label is ambiguous, canonical quantities follow the source model definition and document the conversion. Figure mappings further connect data, plotting expressions, independent PDF/SVG/PNG exports, and composite layouts. Inventories identify the coverage of scalar integrals, spatial fields, and partially recovered results separately.
+
+% block-id: C.report_repro.p2
+\hypertarget{C.report_repro.p2}{}
+Failure cases retain triggering inputs, actual errors, targeted revisions, stopping conditions, and requirements for continued research. Missing wrapper/kernel exit information in geometry validation, missing metrics and failure status in the original RT0 q=18 summary, and abnormal exits at larger PEEC scales remain as recorded. The longitudinal PEEC 1.28 m case is unexecuted. Postprocessing acceptance has an independent identity, allowing data recovery, numerical execution, and physical validation to be distinguished.
+
+% block-id: C.report_repro.p3
+\hypertarget{C.report_repro.p3}{}
+The canonical LaTeX sources contain the prose, equations and figure captions. Generated Markdown provides the reading edition. Dataset inventories locate preserved numerical and geometry evidence; text tutorials and the CLI execute research calculations. Migration checks cover relative links, attachment reads, file SHA256 identities, and lightweight execution in paths containing spaces. Document build records include thread, memory, and environment information for reproduction on systems with the required dependencies.
+
+% block-id: C.tables
+\hypertarget{C.tables}{}
+\begin{table}[!htbp]
+\centering
+\caption{Round-wire two-dimensional calibration}
+\label{tab:C.tables-0}
+\begingroup\footnotesize
+\begin{tabularx}{\textwidth}{>{\raggedright\arraybackslash}X>{\raggedright\arraybackslash}X>{\raggedright\arraybackslash}X>{\raggedright\arraybackslash}X}
+\toprule
+Nodes & h/a & Rac (mΩ/m) & Relative resistance error\\
+\midrule
+353 & 0.24 & 20.1572 & 0.00704525\\
+1389 & 0.12 & 20.0208 & 0.000230269\\
+5573 & 0.06 & 20.0162 & 1.79233e-06\\
+\bottomrule
+\end{tabularx}
+\endgroup
+\end{table}
+\begin{table}[!htbp]
+\centering
+\caption{Longitudinal PEEC length sensitivity}
+\label{tab:C.tables-1}
+\begingroup\footnotesize
+\begin{tabularx}{\textwidth}{>{\raggedright\arraybackslash}X>{\raggedright\arraybackslash}X>{\raggedright\arraybackslash}X>{\raggedright\arraybackslash}X}
+\toprule
+Degrees of freedom & Length (m) & Rac (mΩ/axial m) & Rac/Rdc\\
+\midrule
+1264 & 0.16 & 19.8992 & 3.64713\\
+1264 & 0.32 & 19.9586 & 3.65802\\
+1264 & 0.64 & 19.9885 & 3.66349\\
+5024 & 0.32 & 19.983 & 3.63931\\
+5024 & 0.64 & 20.0127 & 3.64472\\
+\bottomrule
+\end{tabularx}
+\endgroup
+\end{table}
+\begin{table}[!htbp]
+\centering
+\caption{RT0 imposed-field loss and quadrature order}
+\label{tab:C.tables-2}
+\begingroup\footnotesize
+\begin{tabularx}{\textwidth}{>{\raggedright\arraybackslash}X>{\raggedright\arraybackslash}X>{\raggedright\arraybackslash}X}
+\toprule
+Cells & Quadrature order & Loss (mW)\\
+\midrule
+8192 & 14 & 0.927463\\
+16000 & 14 & 0.933539\\
+27648 & 14 & 0.936927\\
+27648 & 18 & 0.936927\\
+\bottomrule
+\end{tabularx}
+\endgroup
+\end{table}
+\begin{table}[!htbp]
+\centering
+\caption{CPU/GPU comparison for the same model}
+\label{tab:C.tables-3}
+\begingroup\footnotesize
+\begin{tabularx}{\textwidth}{>{\raggedright\arraybackslash}X>{\raggedright\arraybackslash}X>{\raggedright\arraybackslash}X}
+\toprule
+Degrees of freedom & Relative inductance difference & Relative current difference\\
+\midrule
+1264 & 7.07572e-16 & 3.28174e-14\\
+5024 & 7.48149e-16 & 7.78082e-14\\
+\bottomrule
+\end{tabularx}
+\endgroup
+\end{table}
+\begin{table}[!htbp]
+\centering
+\caption{PEEC sensitivity plot indices and values}
+\label{tab:C.tables-4}
+\begingroup\footnotesize
+\begin{tabularx}{\textwidth}{>{\raggedright\arraybackslash}X>{\raggedright\arraybackslash}X>{\raggedright\arraybackslash}X}
+\toprule
+Plot index & Single-factor comparison & Plotted relative change (\%)\\
+\midrule
+1 & length\_\allowbreak 016\_\allowbreak 032 & 0.29864\\
+2 & length\_\allowbreak 032\_\allowbreak 064 & 0.149482\\
+3 & fine\_\allowbreak length\_\allowbreak 032\_\allowbreak 064 & 0.14873\\
+4 & mutual\_\allowbreak q4\_\allowbreak to6 & 0.001597\\
+5 & mutual\_\allowbreak q6\_\allowbreak to8 & 0.000588978\\
+6 & fine\_\allowbreak mutual\_\allowbreak q4\_\allowbreak to6 & 0.000462112\\
+7 & fine\_\allowbreak mutual\_\allowbreak q6\_\allowbreak to8 & 0.000169935\\
+8 & self\_\allowbreak 10p8\_\allowbreak to12p10 & 7.09596e-09\\
+9 & fine\_\allowbreak self\_\allowbreak 10p8\_\allowbreak to12p10 & 1.84501e-09\\
+10 & spatial\_\allowbreak l032 & 0.122127\\
+11 & spatial\_\allowbreak l064 & 0.121376\\
+\bottomrule
+\end{tabularx}
+\endgroup
+\end{table}

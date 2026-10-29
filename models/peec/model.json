@@ -1,0 +1,38 @@
+{
+  "route": "peec",
+  "model_id": "peec",
+  "titles": {
+    "en": "Finite-length longitudinal PEEC",
+    "zh-CN": "有限长度纵向 PEEC"
+  },
+  "equation": "Z=R+jωL; Zi=V1; 1ᵀi=It",
+  "references": [
+    "P03",
+    "RUEHLI1974"
+  ],
+  "parameters": {
+    "cross_divisions": 6,
+    "length_m": 0.04,
+    "frequency_Hz": 200000.0,
+    "quadrature_order": 4
+  },
+  "tutorial_instructions": {
+    "en": "Change length or cross divisions; compare complex port constraints and power. The basis is longitudinal.",
+    "zh-CN": "修改长度或横向离散，核对复端口约束与功率。基函数沿纵向。"
+  },
+  "fixed_conventions": "SI; exp(+j omega t); RMS; sigma=58 MS/m; mu_r=1; 20 C",
+  "evidence_dataset": "peec",
+  "derivation": {
+    "en": [
+      "Discretize the cross section into longitudinal current basis elements. Galerkin projection of the magnetoquasistatic integral equation gives Z=R+jωL, where R follows from conductivity and basis overlap and L contains finite-length mutual and self interactions.",
+      "Solve Zi=V1 and 1ᵀi=It simultaneously. The terminal voltage and complex currents are unknowns. Real input power must equal the quadratic resistive loss iᴴRi.",
+      "Vary cross-section divisions, longitudinal length and quadrature independently. This longitudinal basis omits general transverse current and end-region charge; it must not be presented as a full vector 3D conductor solution."
+    ],
+    "zh-CN": [
+      "将截面离散为纵向电流基函数。磁准静态积分方程经 Galerkin 投影得到 Z=R+jωL；R 由电导率与基函数重叠构造，L 含有限长度互项与自项。",
+      "联立 Zi=V1、1ᵀi=It 求未知端电压与复电流。有功输入须与电阻二次型损耗 iᴴRi 一致。",
+      "横向离散、轴向长度和积分阶数分别研究。纵向基函数未保留一般横向电流及完整端区电荷，适用范围应据此解释。"
+    ]
+  },
+  "history": "data/evidence/v1.0.0-rc.1/; litz-research data fetch peec"
+}

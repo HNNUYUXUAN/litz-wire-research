@@ -1,0 +1,33 @@
+\section{离散与后处理}
+\label{chapter:B}
+
+% block-id: B.triangle_derivation.heading
+\hypertarget{B.triangle_derivation.heading}{}
+\subsection{线性三角形的电流与功率积分}
+
+% block-id: B.triangle_derivation.p1
+\hypertarget{B.triangle_derivation.p1}{}
+线性三角形内以 J=\(\sum\)\(_a\)NaJa 插值复电流密度。每个形函数的面积积分为 AT/3，因而可直接得到单元复电流；焦耳损耗使用 \eqref{eq:E09} 的一致质量矩阵计算。材料标记确定单元所属股线、回流或空气，坐标转换为米后求面积。按材料求和所得电流和损耗与原始场路标量独立核对。
+
+% block-id: B.report_rt0.heading
+\hypertarget{B.report_rt0.heading}{}
+\subsection{RT0 面通量与轻量场恢复}
+
+% block-id: B.report_rt0.p1
+\hypertarget{B.report_rt0.p1}{}
+原 RT0 面通量按方向及整数网格身份保存。单元每轴取相对两面的 q−、q+，中心分量为 (q−+q+)/(2h²)，轴向局部电阻功率为 [|q−|²+|q+|²+Re(q−*q+)]/(3σh)。三轴相加、全单元求和恢复总损耗。被绝缘侧边省略的面在原离散定义中具有结构零通量；这种零值不等于另做了独立边界通量场解。
+
+% block-id: B.report_rt0.p2
+\hypertarget{B.report_rt0.p2}{}
+成稿后处理独立恢复全部 27648 单元中心复 J，与原 cell\_fields.csv 对照；同时用完整重叠积分核验原损耗。切面取实际最接近中心的离散层并标注 z，不假设所有采样正好位于 1 mm。W/cm³ 色标由 SI 损耗密度乘 10⁻⁶ 得到。三维箭头的抽样身份与公共长度缩放可在图件请求和映射数据中检查，不用额外求解器。
+
+% block-id: B.equation.E09
+\hypertarget{B.equation.E09}{}
+\hypertarget{E09}{}
+\begin{equation}
+\begin{gathered}
+M_T=\frac{A_T}{12}\begin{bmatrix}2&1&1\\1&2&1\\1&1&2\end{bmatrix} \\
+P_T=\mathbf J_T^H M_T\mathbf J_T/\sigma
+\end{gathered}
+\tag{9}\label{eq:E09}
+\end{equation}

@@ -1,0 +1,26 @@
+{
+  "schema_version": 1,
+  "cause": "Windows runner temporary directory has equivalent short and long names.",
+  "failed_source_commit": "506d3753e5312d41fefa4efed9aedc949d7bf634",
+  "failed_ci_run": "https://github.com/HNNUYUXUAN/litz-wire-research/actions/runs/39287036468",
+  "change": "Compare existing evidence files by filesystem identity; retain corruption and version-isolation assertions.",
+  "actions": [
+    {
+      "repository": "actions/checkout",
+      "tag": "v7.0.1",
+      "commit": "3d3c42e5aac5ba805825da76410c181273ba90b1",
+      "runtime": "node24"
+    },
+    {
+      "repository": "actions/setup-python",
+      "tag": "v7.0.0",
+      "commit": "5fda3b95a4ea91299a34e894583c3862153e4b97",
+      "runtime": "'node24'"
+    }
+  ],
+  "source_release_tag": "v1.0.0-rc.3",
+  "preserved_evidence_tags": [
+    "v1.0.0-rc.1",
+    "v1.0.0-rc.2"
+  ]
+}

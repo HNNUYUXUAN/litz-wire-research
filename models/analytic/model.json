@@ -1,0 +1,35 @@
+{
+  "route": "analytic",
+  "model_id": "wolfram-analytic",
+  "titles": {
+    "en": "Round-wire analytical calibration",
+    "zh-CN": "单圆线解析校准"
+  },
+  "equation": "∇²Ez−jωμσEz=0; Zint=κ I0(κa)/(2πaσ I1(κa))",
+  "references": [
+    "BESSEL"
+  ],
+  "parameters": {
+    "frequency_Hz": 200000.0,
+    "current_RMS_A": 20.0
+  },
+  "tutorial_instructions": {
+    "en": "Change frequency/current; compare independent current and Joule integrals.",
+    "zh-CN": "修改频率与总电流，核对独立电流积分与焦耳积分。"
+  },
+  "fixed_conventions": "SI; exp(+j omega t); RMS; sigma=58 MS/m; mu_r=1; 20 C",
+  "evidence_dataset": "analytic",
+  "derivation": {
+    "en": [
+      "For a homogeneous, long cylindrical conductor, symmetry leaves Ez(r) and Jz=σEz. Combining Ampère and Faraday laws with exp(+jωt) gives (1/r)d(r dEz/dr)/dr=jωμσEz. The regular solution is C I0(κr), κ²=jωμσ.",
+      "Normalize C using 2π∫Jz r dr=It. The terminal voltage gradient gives Zint=κ I0(κa)/(2πaσ I1(κa)). Independently integrate ∫|J|²/σ dA and compare with |It|² Re Zint. RMS phasors introduce no extra factor 1/2.",
+      "As κa→0, I0→1 and I1→κa/2, giving Rdc=1/(σπa²). The model excludes end effects and return-path external inductance. Q1 uses a=1 mm and remains a calibration case."
+    ],
+    "zh-CN": [
+      "均匀长圆柱导体的轴对称内场仅保留 Ez(r)，并有 Jz=σEz。由安培与法拉第定律及 exp(+jωt) 得 (1/r)d(r dEz/dr)/dr=jωμσEz；轴心正则解为 C I0(κr)，κ²=jωμσ。",
+      "用 2π∫Jz r dr=It 确定 C，得到内阻抗 Zint=κ I0(κa)/(2πaσ I1(κa))。独立积分 ∫|J|²/σ dA，与 |It|² Re Zint 比较；采用 RMS 相量，无额外 1/2 系数。",
+      "κa→0 时 I0→1、I1→κa/2，因此 Rdc=1/(σπa²)。模型不含端效应与回流外电感。Q1 的 a=1 mm 保留为解析校准。"
+    ]
+  },
+  "history": "data/evidence/v1.0.0-rc.1/; litz-research data fetch analytic"
+}

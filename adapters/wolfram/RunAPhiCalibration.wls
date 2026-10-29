@@ -1,0 +1,18 @@
+$HistoryLength=0;$CharacterEncoding="UTF8";
+root=Environment["LITZ_PROJECT"];runID=Environment["LITZ_RUN_ID"];case=Environment["LITZ_APHI_CASE"];
+stageDir=FileNameJoin[{root,"outputs",runID}];p=Import[FileNameJoin[{stageDir,"parameters.json"}],"RawJSON"];
+SetSystemOptions["ParallelOptions"->"ParallelThreadNumber"->Min[8,$ProcessorCount]];
+Get[FileNameJoin[{root,"shared","wolfram","NotebookPhysics.wl"}]];
+stageChecks={};stageData=<||>;
+stageCheck[name_,actual_,tolerance_,scope_]:=AppendTo[stageChecks,<|"name"->name,"actual"->N[actual],"tolerance"->tolerance,"scope"->scope,"execution_status"->If[TrueQ[NumericQ[actual]&&actual<=tolerance],"passed","failed"]|>];
+stageSave[]:=Export[FileNameJoin[{stageDir,"checkpoint.wxf"}],<|"data"->stageData,"checks"->stageChecks|>,"WXF"];
+fcHValues={Lookup[p,"mesh_h",.35]};fcBoundaryMode=If[case=="extrusion-control","discrete_2D","analytic"];
+fcSolveTimeout=p["solve_timeout_seconds"];fcTolerances={Lookup[p,"J_tolerance",.01],p["phi_tolerance"],p["gauge_tolerance"]};
+mmHValues=Lookup[p,"cell_volumes",{.04,.015,.0035}];mmTolerance=p["phi_tolerance"];mmGaugeTolerance=p["gauge_tolerance"];
+Get[FileNameJoin[{root,"models","aphi","src","stages",If[case=="manufactured","fem3_mms.wl","fem3_cylinder.wl"]}]];
+stageSave[];
+Export[FileNameJoin[{stageDir,"results.wxf"}],<|"data"->stageData,"checks"->stageChecks|>,"WXF"];
+summary=Join[KeyDrop[stageData,{"cases"}],<|"cases"->(KeyDrop[#,{"fields","mesh","profile","discrete_cross_field"}]&/@Lookup[stageData,"cases",{}])|>];
+result=<|"run_id"->runID,"source_model"->Lookup[stageData,"source_model",case],"execution_status"->"completed","physical_acceptance_status"->Lookup[stageData,"physical_acceptance_status","not_verified"],"case"->case,"parameters"->p,"boundary_mode"->fcBoundaryMode,"checks"->stageChecks,"data"->summary,"Wolfram_version"->$Version|>;
+Export[FileNameJoin[{stageDir,"results.json"}],result,"RawJSON"];
+Print["APHI_CALIBRATION_COMPLETE ",case];Exit[0];

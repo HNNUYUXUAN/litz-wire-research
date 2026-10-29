@@ -1,0 +1,19 @@
+{
+  "approved_specimen_run_id": "publication_20261013_paper_sample_09",
+  "approval": "User approved the complete specimen after reviewing figures 4, 5, 9 and 10",
+  "fonts": {
+    "zh-CN": "SimSun",
+    "latin": "Times New Roman"
+  },
+  "independent_figure_width_mm": 88.9,
+  "composed_figure_width_mm": 182,
+  "caption_title_alignment": "center",
+  "caption_description_alignment": "left",
+  "panel_letters": "above panels",
+  "independent_figure_box_pt": [
+    252,
+    198
+  ],
+  "source_review": "docs/revision-sample-review.zh-CN.md",
+  "scope": "Approved specimen and reusable editorial/plotting convention; full scholarly edition propagation is a subsequent stage"
+}

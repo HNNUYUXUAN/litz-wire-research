@@ -1,0 +1,36 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="600" viewBox="0 0 1200 600" role="img" aria-labelledby="title desc">
+<title id="title">七条模型路线与各自的观测量</title>
+<desc id="desc">根据问题选择自由度、激励与边界条件</desc>
+<defs><marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0,0 L10,5 L0,10 Z" fill="#31556a"/></marker></defs>
+<rect width="1200" height="600" fill="white"/>
+<text x="600" y="57" text-anchor="middle" font-family="Arial,Microsoft YaHei,sans-serif" font-size="32" font-weight="bold" fill="#31556a">七条模型路线与各自的观测量</text>
+<text x="600" y="95" text-anchor="middle" font-family="Arial,Microsoft YaHei,sans-serif" font-size="17" font-weight="normal" fill="#31556a">根据问题选择自由度、激励与边界条件</text>
+<rect x="65" y="145" width="330" height="90" rx="10" fill="#f2f6f8" stroke="#31556a" stroke-width="1.5"/>
+<path d="M85,162 H125" stroke="#b57043" stroke-width="4"/>
+<text x="230.0" y="188" text-anchor="middle" font-family="Arial,Microsoft YaHei,sans-serif" font-size="21" font-weight="bold" fill="#31556a">解析圆线</text>
+<text x="230.0" y="215" text-anchor="middle" font-family="Arial,Microsoft YaHei,sans-serif" font-size="15" font-weight="normal" fill="#31556a">Bessel · 内部阻抗与径向电流</text>
+<rect x="435" y="145" width="330" height="90" rx="10" fill="#f2f6f8" stroke="#31556a" stroke-width="1.5"/>
+<path d="M455,162 H495" stroke="#b57043" stroke-width="4"/>
+<text x="600.0" y="188" text-anchor="middle" font-family="Arial,Microsoft YaHei,sans-serif" font-size="21" font-weight="bold" fill="#31556a">二维 FEM</text>
+<text x="600.0" y="215" text-anchor="middle" font-family="Arial,Microsoft YaHei,sans-serif" font-size="15" font-weight="normal" fill="#31556a">内场校准 · 网格与功率</text>
+<rect x="805" y="145" width="330" height="90" rx="10" fill="#f2f6f8" stroke="#31556a" stroke-width="1.5"/>
+<path d="M825,162 H865" stroke="#b57043" stroke-width="4"/>
+<text x="970.0" y="188" text-anchor="middle" font-family="Arial,Microsoft YaHei,sans-serif" font-size="21" font-weight="bold" fill="#31556a">多股共端场路</text>
+<text x="970.0" y="215" text-anchor="middle" font-family="Arial,Microsoft YaHei,sans-serif" font-size="15" font-weight="normal" fill="#31556a">共同电压 · 逐股复电流</text>
+<rect x="65" y="275" width="330" height="90" rx="10" fill="#f2f6f8" stroke="#31556a" stroke-width="1.5"/>
+<path d="M85,292 H125" stroke="#b57043" stroke-width="4"/>
+<text x="230.0" y="318" text-anchor="middle" font-family="Arial,Microsoft YaHei,sans-serif" font-size="21" font-weight="bold" fill="#31556a">股线几何</text>
+<text x="230.0" y="345" text-anchor="middle" font-family="Arial,Microsoft YaHei,sans-serif" font-size="15" font-weight="normal" fill="#31556a">身份 · 换位 · 弧长与铜体积</text>
+<rect x="435" y="275" width="330" height="90" rx="10" fill="#f2f6f8" stroke="#31556a" stroke-width="1.5"/>
+<path d="M455,292 H495" stroke="#b57043" stroke-width="4"/>
+<text x="600.0" y="318" text-anchor="middle" font-family="Arial,Microsoft YaHei,sans-serif" font-size="21" font-weight="bold" fill="#31556a">有限长度 PEEC</text>
+<text x="600.0" y="345" text-anchor="middle" font-family="Arial,Microsoft YaHei,sans-serif" font-size="15" font-weight="normal" fill="#31556a">纵向电流 · 长度与积分敏感性</text>
+<rect x="805" y="275" width="330" height="90" rx="10" fill="#f2f6f8" stroke="#31556a" stroke-width="1.5"/>
+<path d="M825,292 H865" stroke="#b57043" stroke-width="4"/>
+<text x="970.0" y="318" text-anchor="middle" font-family="Arial,Microsoft YaHei,sans-serif" font-size="21" font-weight="bold" fill="#31556a">三分量 RT0</text>
+<text x="970.0" y="345" text-anchor="middle" font-family="Arial,Microsoft YaHei,sans-serif" font-size="15" font-weight="normal" fill="#31556a">面通量 · 连续性 · 外场吸收</text>
+<rect x="435" y="405" width="330" height="90" rx="10" fill="#f2f6f8" stroke="#31556a" stroke-width="1.5"/>
+<path d="M455,422 H495" stroke="#b57043" stroke-width="4"/>
+<text x="600.0" y="448" text-anchor="middle" font-family="Arial,Microsoft YaHei,sans-serif" font-size="21" font-weight="bold" fill="#31556a">三维 A–φ</text>
+<text x="600.0" y="475" text-anchor="middle" font-family="Arial,Microsoft YaHei,sans-serif" font-size="15" font-weight="normal" fill="#31556a">场势诊断 · 规范残差</text>
+</svg>

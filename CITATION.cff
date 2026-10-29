@@ -1,0 +1,18 @@
+cff-version: 1.2.0
+message: "Cite this software version, the source run and dataset manifest used, and the relevant modeling references."
+type: software
+title: "Litz Wire Research: agent-driven reproducible modeling and simulation"
+version: 1.0.0
+date-released: 2026-10-30
+authors:
+  - family-names: Miao
+    given-names: Yuxuan
+    affiliation: Huainan Normal University
+repository-code: "https://github.com/HNNUYUXUAN/litz-wire-research"
+url: "https://github.com/HNNUYUXUAN/litz-wire-research"
+license: MIT
+keywords:
+  - agent-driven simulation
+  - MCP
+  - Litz wire
+  - reproducible research

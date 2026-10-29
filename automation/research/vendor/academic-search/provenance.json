@@ -1,0 +1,43 @@
+{
+  "repository": "https://github.com/ustc-ai4science/academic-search",
+  "commit": "b9b692ed1334c858eb42d1f2710ccfcae1a43eb8",
+  "license": "MIT",
+  "modifications": [],
+  "files": [
+    {
+      "path": "LICENSE",
+      "sha256": "81ab511477684cf507d32cfcbade3f89a174657f063d6129ad6a51c26fdc534e"
+    },
+    {
+      "path": "scripts/academic-records.mjs",
+      "sha256": "66f77a704d84cb5eddf28dbe88e61c52a3d2b1f06166ccfc9d60e776e45c8dd3"
+    },
+    {
+      "path": "scripts/academic-records.test.mjs",
+      "sha256": "4764c32aaa1f9e944215d25d97485e33abd13f4a0587c607369f9c5b976dc2aa"
+    },
+    {
+      "path": "scripts/fixtures/pdf/corrupt-page-tree.pdf",
+      "sha256": "93e87af2b5508260b96725225c6d42ce0618c9917af117aa0943a2a248798fe2"
+    },
+    {
+      "path": "scripts/fixtures/pdf/valid.pdf",
+      "sha256": "b78f8b6ee607258d3e6bbc9dc8b7e80ce776713632c6615cd68645bca5632363"
+    },
+    {
+      "path": "scripts/oa-pdf-download.mjs",
+      "sha256": "49beff88eb5f9e2fe1bcd75a7715d6b83226600c4c0f71798294d3e7e568a22e"
+    },
+    {
+      "path": "scripts/oa-pdf-download.test.mjs",
+      "sha256": "a22855623fa2ea96923ee70cdf7018ec87cc69eed83401ffe03eee132ba359e6"
+    }
+  ],
+  "validation": {
+    "pass": 71,
+    "skip": 2,
+    "fail": 0,
+    "node": "24.19.0",
+    "scope": "record and OA helper unit tests"
+  }
+}

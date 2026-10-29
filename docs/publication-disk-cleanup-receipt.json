@@ -1,0 +1,118 @@
+{
+  "files": [
+    {
+      "bytes": 15404376,
+      "sha256": "3bd99dbb32709b3a73a4a2d33bf7f6de1b823f65deb563c15fecb1c5b9da3c47",
+      "path": "notebooks/publication/publication_20261013_paper_sample_09/paper/zh-CN/paper_zh-CN.nb",
+      "retained": ".local-archive/publication-chain-20261028/notebooks/publication/publication_20261013_paper_sample_09/paper/zh-CN/paper_zh-CN.nb",
+      "status": "retired_archive_verified"
+    },
+    {
+      "bytes": 176549,
+      "sha256": "c0cd953fff1321fda32703b13c99493d1c5b51e5a4d7314b1e28dbf106f14be7",
+      "path": "notebooks/publication/publication_review_20261015_01/automation/en/automation_en.nb",
+      "retained": ".local-archive/publication-chain-20261028/notebooks/publication/publication_review_20261015_01/automation/en/automation_en.nb",
+      "status": "retired_archive_verified"
+    },
+    {
+      "bytes": 208177,
+      "sha256": "d5889ed2ef7a1dd524c4cecfc10040f90968e343403fc9092161b730a3bb7288",
+      "path": "notebooks/publication/publication_review_20261015_01/automation/zh-CN/automation_zh-CN.nb",
+      "retained": ".local-archive/publication-chain-20261028/notebooks/publication/publication_review_20261015_01/automation/zh-CN/automation_zh-CN.nb",
+      "status": "retired_archive_verified"
+    },
+    {
+      "bytes": 15320529,
+      "sha256": "4d5e5893c6351f9527cfe6f7fc794e276c0f8ad0b22fa333dd37b434d25f2f88",
+      "path": "notebooks/publication/publication_review_20261015_01/paper/en/paper_en.nb",
+      "retained": ".local-archive/publication-chain-20261028/notebooks/publication/publication_review_20261015_01/paper/en/paper_en.nb",
+      "status": "retired_archive_verified"
+    },
+    {
+      "bytes": 15403879,
+      "sha256": "cdccf577305956c4619e0ba40ed06478c8a1f225b762ce9c0ee9034b1e78ec3d",
+      "path": "notebooks/publication/publication_review_20261015_01/paper/zh-CN/paper_zh-CN.nb",
+      "retained": ".local-archive/publication-chain-20261028/notebooks/publication/publication_review_20261015_01/paper/zh-CN/paper_zh-CN.nb",
+      "status": "retired_archive_verified"
+    },
+    {
+      "bytes": 15342824,
+      "sha256": "f12af45727479f8eb79fead08671be28f5d7efb4501d1e9dce2ee545016cb486",
+      "path": "notebooks/publication/publication_review_20261015_01/report/en/report_en.nb",
+      "retained": ".local-archive/publication-chain-20261028/notebooks/publication/publication_review_20261015_01/report/en/report_en.nb",
+      "status": "retired_archive_verified"
+    },
+    {
+      "bytes": 15447111,
+      "sha256": "5d6de36ac401301368f0e815bc3de2015b07695bbf098e7eda7043eb5b6f895c",
+      "path": "notebooks/publication/publication_review_20261015_01/report/zh-CN/report_zh-CN.nb",
+      "retained": ".local-archive/publication-chain-20261028/notebooks/publication/publication_review_20261015_01/report/zh-CN/report_zh-CN.nb",
+      "status": "retired_archive_verified"
+    },
+    {
+      "bytes": 15404695,
+      "sha256": "e1e6f6cb577b9a10bd1fd22d14a379c880b917faea71f665cfae514dd756ba6f",
+      "path": "notebooks/publication/publication_review_20261015_02/paper/zh-CN/paper_zh-CN.nb",
+      "retained": ".local-archive/publication-chain-20261028/notebooks/publication/publication_review_20261015_02/paper/zh-CN/paper_zh-CN.nb",
+      "status": "retired_archive_verified"
+    },
+    {
+      "bytes": 15339747,
+      "sha256": "ec963e8740132d6f4f503daea27a37c53f0a9e9cac6de628d41f3f0fe3646bd9",
+      "path": "notebooks/publication/publication_review_20261015_02/report/en/report_en.nb",
+      "retained": ".local-archive/publication-chain-20261028/notebooks/publication/publication_review_20261015_02/report/en/report_en.nb",
+      "status": "retired_archive_verified"
+    },
+    {
+      "bytes": 15449876,
+      "sha256": "353b9da760ae5dc52778511b6c0dad4d43a44a24388c57f59dc44fda915df591",
+      "path": "notebooks/publication/publication_review_20261015_02/report/zh-CN/report_zh-CN.nb",
+      "retained": ".local-archive/publication-chain-20261028/notebooks/publication/publication_review_20261015_02/report/zh-CN/report_zh-CN.nb",
+      "status": "retired_archive_verified"
+    },
+    {
+      "bytes": 176549,
+      "sha256": "f964b266d7779ad6a2db5c7260a8e5b1b2edd73391b1a809a19b76159b36b94d",
+      "path": "notebooks/publication/publication_review_20261015_03/automation/en/automation_en.nb",
+      "retained": ".local-archive/publication-chain-20261028/notebooks/publication/publication_review_20261015_03/automation/en/automation_en.nb",
+      "status": "retired_archive_verified"
+    },
+    {
+      "bytes": 208177,
+      "sha256": "1df224b0c1f173f2f4bce252cc7a9bff0cd5312135bd0808bcdc5e27ff4b82be",
+      "path": "notebooks/publication/publication_review_20261015_03/automation/zh-CN/automation_zh-CN.nb",
+      "retained": ".local-archive/publication-chain-20261028/notebooks/publication/publication_review_20261015_03/automation/zh-CN/automation_zh-CN.nb",
+      "status": "retired_archive_verified"
+    },
+    {
+      "bytes": 15316697,
+      "sha256": "c007340bd3d0467b1b6adc5c61e8ec22d12e2382de2efb317bf28693d28ae39b",
+      "path": "notebooks/publication/publication_review_20261015_03/paper/en/paper_en.nb",
+      "retained": ".local-archive/publication-chain-20261028/notebooks/publication/publication_review_20261015_03/paper/en/paper_en.nb",
+      "status": "retired_archive_verified"
+    },
+    {
+      "bytes": 15404695,
+      "sha256": "3d89e6d6655e478179be19e3a1756245fff33054a297ad94a82936d3697b7e06",
+      "path": "notebooks/publication/publication_review_20261015_03/paper/zh-CN/paper_zh-CN.nb",
+      "retained": ".local-archive/publication-chain-20261028/notebooks/publication/publication_review_20261015_03/paper/zh-CN/paper_zh-CN.nb",
+      "status": "retired_archive_verified"
+    },
+    {
+      "bytes": 15342119,
+      "sha256": "338e0238769b935917eb5fbc5282e90c0dacc69ab2f7f294cf600907d93173fe",
+      "path": "notebooks/publication/publication_review_20261015_03/report/en/report_en.nb",
+      "retained": ".local-archive/publication-chain-20261028/notebooks/publication/publication_review_20261015_03/report/en/report_en.nb",
+      "status": "retired_archive_verified"
+    },
+    {
+      "bytes": 15452251,
+      "sha256": "cfd2772562201ed20a3d20a369c3d5539a399bf5d4651d2af27226bc3950ab08",
+      "path": "notebooks/publication/publication_review_20261015_03/report/zh-CN/report_zh-CN.nb",
+      "retained": ".local-archive/publication-chain-20261028/notebooks/publication/publication_review_20261015_03/report/zh-CN/report_zh-CN.nb",
+      "status": "retired_archive_verified"
+    }
+  ],
+  "completed_at": "2026-10-28T14:29:30.6478502+00:00",
+  "status": "completed"
+}

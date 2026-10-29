@@ -1,0 +1,49 @@
+{
+  "status": "passed",
+  "source_package_sha256": "bcd45fb632fbf86e2ee76b57a34b7782520d45fa5515203495633875da28ea25",
+  "path_case": "Chinese characters and spaces",
+  "documents": [
+    {
+      "id": "report_zh-CN",
+      "status": "passed",
+      "pages": 30,
+      "pdf_sha256": "8fc5e58ac20cea1559b16189af0b6cc44be4f99b2315eb0d13ee595835599637",
+      "rendered_pixels_match_reviewed_build": true
+    },
+    {
+      "id": "report_en",
+      "status": "passed",
+      "pages": 33,
+      "pdf_sha256": "ebbe45dac3193a36cfe12fc19e7c13900d5921427a5dbafbec4b27c9c5fd86fc",
+      "rendered_pixels_match_reviewed_build": true
+    },
+    {
+      "id": "paper_zh-CN",
+      "status": "passed",
+      "pages": 13,
+      "pdf_sha256": "6b5db27d23a0fece8b4868a0d1bdbc04ca92fc3912b51b470a4b35b802a28247",
+      "rendered_pixels_match_reviewed_build": true
+    },
+    {
+      "id": "paper_en",
+      "status": "passed",
+      "pages": 15,
+      "pdf_sha256": "6ed188c313e6a1ee17728502db3c5d961b0107f5bc5851550817df3877ac2dc0",
+      "rendered_pixels_match_reviewed_build": true
+    },
+    {
+      "id": "automation_zh-CN",
+      "status": "passed",
+      "pages": 5,
+      "pdf_sha256": "ab0e0c0b38ebda3bfd3cdf9232e489c0f58aa9b6bd76f063d2cf4427b464338f",
+      "rendered_pixels_match_reviewed_build": true
+    },
+    {
+      "id": "automation_en",
+      "status": "passed",
+      "pages": 6,
+      "pdf_sha256": "0b472087285b80733a1271bd522ba404f3df71886a9e8b8d401def610c0b67ba",
+      "rendered_pixels_match_reviewed_build": true
+    }
+  ]
+}

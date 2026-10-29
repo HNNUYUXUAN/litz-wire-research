@@ -1,0 +1,584 @@
+{
+  "run_id": "publication_rc1_20261007_01",
+  "status": "passed",
+  "unique_source_objects": 13,
+  "snapshot_occurrences": 72,
+  "sources": [
+    {
+      "recorded_snapshot": "source_snapshot/BuildPublicationDocuments.wls",
+      "source_path": "src/BuildPublicationDocuments.wls",
+      "sha256": "ca634ea320376dbcfb2ff13241d84ef2daaaefa1ae1dccf74bdf0316072589de",
+      "stored_path": "provenance/build_sources/ca634ea320376dbcfb2ff13241d84ef2daaaefa1ae1dccf74bdf0316072589de/BuildPublicationDocuments.wls",
+      "license": "MIT",
+      "author": "Miao Yuxuan"
+    },
+    {
+      "recorded_snapshot": "source_snapshot/BuildPublicationEdition.py",
+      "source_path": "src/BuildPublicationEdition.py",
+      "sha256": "64fdf088d35fc0d71cb828ac65634c1aa3cc28ccd15e0fdf91b71249e110b052",
+      "stored_path": "provenance/build_sources/64fdf088d35fc0d71cb828ac65634c1aa3cc28ccd15e0fdf91b71249e110b052/BuildPublicationEdition.py",
+      "license": "MIT",
+      "author": "Miao Yuxuan"
+    },
+    {
+      "recorded_snapshot": "source_snapshot/PublicationContent.py",
+      "source_path": "src/PublicationContent.py",
+      "sha256": "8d5f61a419c14dc952cbb85f9a41e16dff15c26190fdc4d673e22c97aea83b79",
+      "stored_path": "provenance/build_sources/8d5f61a419c14dc952cbb85f9a41e16dff15c26190fdc4d673e22c97aea83b79/PublicationContent.py",
+      "license": "MIT",
+      "author": "Miao Yuxuan"
+    },
+    {
+      "recorded_snapshot": "source_snapshot/PublicationData.py",
+      "source_path": "src/PublicationData.py",
+      "sha256": "21926f3e1226eee62c27487c9c9afd0d73d9d0ca72ec373c566a6b8266d9af9b",
+      "stored_path": "provenance/build_sources/21926f3e1226eee62c27487c9c9afd0d73d9d0ca72ec373c566a6b8266d9af9b/PublicationData.py",
+      "license": "MIT",
+      "author": "Miao Yuxuan"
+    },
+    {
+      "recorded_snapshot": "source_snapshot/PublicationDiagrams.py",
+      "source_path": "src/PublicationDiagrams.py",
+      "sha256": "26b2718e32f7c60adf855763d26622e6bba077fd8dfb0338f105335b386c38e6",
+      "stored_path": "provenance/build_sources/26b2718e32f7c60adf855763d26622e6bba077fd8dfb0338f105335b386c38e6/PublicationDiagrams.py",
+      "license": "MIT",
+      "author": "Miao Yuxuan"
+    },
+    {
+      "recorded_snapshot": "source_snapshot/PublicationDocuments.py",
+      "source_path": "src/PublicationDocuments.py",
+      "sha256": "2a3ae96fbb91ba668aef5bb31f737cbf5414149bf6c23d9657abeb3358f66085",
+      "stored_path": "provenance/build_sources/2a3ae96fbb91ba668aef5bb31f737cbf5414149bf6c23d9657abeb3358f66085/PublicationDocuments.py",
+      "license": "MIT",
+      "author": "Miao Yuxuan"
+    },
+    {
+      "recorded_snapshot": "source_snapshot/PublicationManuscripts.py",
+      "source_path": "src/PublicationManuscripts.py",
+      "sha256": "cfd3afcc1135ec7aeddb7e44277baa2cd8a21a3a1f1bea4c6c0658c16fd478c1",
+      "stored_path": "provenance/build_sources/cfd3afcc1135ec7aeddb7e44277baa2cd8a21a3a1f1bea4c6c0658c16fd478c1/PublicationManuscripts.py",
+      "license": "MIT",
+      "author": "Miao Yuxuan"
+    },
+    {
+      "recorded_snapshot": "source_snapshot/PublicationPanels.py",
+      "source_path": "src/PublicationPanels.py",
+      "sha256": "f1a7ef909a4282744ca570b4e8b9d5707816d5c56f48ea7966cedac0d71bca94",
+      "stored_path": "provenance/build_sources/f1a7ef909a4282744ca570b4e8b9d5707816d5c56f48ea7966cedac0d71bca94/PublicationPanels.py",
+      "license": "MIT",
+      "author": "Miao Yuxuan"
+    },
+    {
+      "recorded_snapshot": "source_snapshot/PublicationPortableCheck.py",
+      "source_path": "src/PublicationPortableCheck.py",
+      "sha256": "b255e6181bbce157845e37ac066cfd406248c25a89e107b4328ec3c3063ea693",
+      "stored_path": "provenance/build_sources/b255e6181bbce157845e37ac066cfd406248c25a89e107b4328ec3c3063ea693/PublicationPortableCheck.py",
+      "license": "MIT",
+      "author": "Miao Yuxuan"
+    },
+    {
+      "recorded_snapshot": "source_snapshot/PublicationStyles.wl",
+      "source_path": "src/PublicationStyles.wl",
+      "sha256": "fa011fdf764681ad881a5f1814ec468698a119aa2ff43974871fed10b8b2f541",
+      "stored_path": "provenance/build_sources/fa011fdf764681ad881a5f1814ec468698a119aa2ff43974871fed10b8b2f541/PublicationStyles.wl",
+      "license": "MIT",
+      "author": "Miao Yuxuan"
+    },
+    {
+      "recorded_snapshot": "source_snapshot/PublicationSupplementFigures.py",
+      "source_path": "src/PublicationSupplementFigures.py",
+      "sha256": "299d22b7162442f0298c4a398dfa47ef0c67048d9ca8f279c60844f9d2983284",
+      "stored_path": "provenance/build_sources/299d22b7162442f0298c4a398dfa47ef0c67048d9ca8f279c60844f9d2983284/PublicationSupplementFigures.py",
+      "license": "MIT",
+      "author": "Miao Yuxuan"
+    },
+    {
+      "recorded_snapshot": "source_snapshot/PublicationVisualReview.py",
+      "source_path": "src/PublicationVisualReview.py",
+      "sha256": "8a5f366d285313d52bf1cd68c7bbd8367bd11a0907dd4d195dae1bc3a81d0e82",
+      "stored_path": "provenance/build_sources/8a5f366d285313d52bf1cd68c7bbd8367bd11a0907dd4d195dae1bc3a81d0e82/PublicationVisualReview.py",
+      "license": "MIT",
+      "author": "Miao Yuxuan"
+    },
+    {
+      "recorded_snapshot": "stage_sources/documents/21926f3e1226_PublicationData.py",
+      "source_path": "src/PublicationData.py",
+      "sha256": "21926f3e1226eee62c27487c9c9afd0d73d9d0ca72ec373c566a6b8266d9af9b",
+      "stored_path": "provenance/build_sources/21926f3e1226eee62c27487c9c9afd0d73d9d0ca72ec373c566a6b8266d9af9b/PublicationData.py",
+      "license": "MIT",
+      "author": "Miao Yuxuan"
+    },
+    {
+      "recorded_snapshot": "stage_sources/documents/26b2718e32f7_PublicationDiagrams.py",
+      "source_path": "src/PublicationDiagrams.py",
+      "sha256": "26b2718e32f7c60adf855763d26622e6bba077fd8dfb0338f105335b386c38e6",
+      "stored_path": "provenance/build_sources/26b2718e32f7c60adf855763d26622e6bba077fd8dfb0338f105335b386c38e6/PublicationDiagrams.py",
+      "license": "MIT",
+      "author": "Miao Yuxuan"
+    },
+    {
+      "recorded_snapshot": "stage_sources/documents/299d22b71624_PublicationSupplementFigures.py",
+      "source_path": "src/PublicationSupplementFigures.py",
+      "sha256": "299d22b7162442f0298c4a398dfa47ef0c67048d9ca8f279c60844f9d2983284",
+      "stored_path": "provenance/build_sources/299d22b7162442f0298c4a398dfa47ef0c67048d9ca8f279c60844f9d2983284/PublicationSupplementFigures.py",
+      "license": "MIT",
+      "author": "Miao Yuxuan"
+    },
+    {
+      "recorded_snapshot": "stage_sources/documents/2a3ae96fbb91_PublicationDocuments.py",
+      "source_path": "src/PublicationDocuments.py",
+      "sha256": "2a3ae96fbb91ba668aef5bb31f737cbf5414149bf6c23d9657abeb3358f66085",
+      "stored_path": "provenance/build_sources/2a3ae96fbb91ba668aef5bb31f737cbf5414149bf6c23d9657abeb3358f66085/PublicationDocuments.py",
+      "license": "MIT",
+      "author": "Miao Yuxuan"
+    },
+    {
+      "recorded_snapshot": "stage_sources/documents/64fdf088d35f_BuildPublicationEdition.py",
+      "source_path": "src/BuildPublicationEdition.py",
+      "sha256": "64fdf088d35fc0d71cb828ac65634c1aa3cc28ccd15e0fdf91b71249e110b052",
+      "stored_path": "provenance/build_sources/64fdf088d35fc0d71cb828ac65634c1aa3cc28ccd15e0fdf91b71249e110b052/BuildPublicationEdition.py",
+      "license": "MIT",
+      "author": "Miao Yuxuan"
+    },
+    {
+      "recorded_snapshot": "stage_sources/documents/8a5f366d2853_PublicationVisualReview.py",
+      "source_path": "src/PublicationVisualReview.py",
+      "sha256": "8a5f366d285313d52bf1cd68c7bbd8367bd11a0907dd4d195dae1bc3a81d0e82",
+      "stored_path": "provenance/build_sources/8a5f366d285313d52bf1cd68c7bbd8367bd11a0907dd4d195dae1bc3a81d0e82/PublicationVisualReview.py",
+      "license": "MIT",
+      "author": "Miao Yuxuan"
+    },
+    {
+      "recorded_snapshot": "stage_sources/documents/8d5f61a419c1_PublicationContent.py",
+      "source_path": "src/PublicationContent.py",
+      "sha256": "8d5f61a419c14dc952cbb85f9a41e16dff15c26190fdc4d673e22c97aea83b79",
+      "stored_path": "provenance/build_sources/8d5f61a419c14dc952cbb85f9a41e16dff15c26190fdc4d673e22c97aea83b79/PublicationContent.py",
+      "license": "MIT",
+      "author": "Miao Yuxuan"
+    },
+    {
+      "recorded_snapshot": "stage_sources/documents/b255e6181bbc_PublicationPortableCheck.py",
+      "source_path": "src/PublicationPortableCheck.py",
+      "sha256": "b255e6181bbce157845e37ac066cfd406248c25a89e107b4328ec3c3063ea693",
+      "stored_path": "provenance/build_sources/b255e6181bbce157845e37ac066cfd406248c25a89e107b4328ec3c3063ea693/PublicationPortableCheck.py",
+      "license": "MIT",
+      "author": "Miao Yuxuan"
+    },
+    {
+      "recorded_snapshot": "stage_sources/documents/ca634ea32037_BuildPublicationDocuments.wls",
+      "source_path": "src/BuildPublicationDocuments.wls",
+      "sha256": "ca634ea320376dbcfb2ff13241d84ef2daaaefa1ae1dccf74bdf0316072589de",
+      "stored_path": "provenance/build_sources/ca634ea320376dbcfb2ff13241d84ef2daaaefa1ae1dccf74bdf0316072589de/BuildPublicationDocuments.wls",
+      "license": "MIT",
+      "author": "Miao Yuxuan"
+    },
+    {
+      "recorded_snapshot": "stage_sources/documents/cfd3afcc1135_PublicationManuscripts.py",
+      "source_path": "src/PublicationManuscripts.py",
+      "sha256": "cfd3afcc1135ec7aeddb7e44277baa2cd8a21a3a1f1bea4c6c0658c16fd478c1",
+      "stored_path": "provenance/build_sources/cfd3afcc1135ec7aeddb7e44277baa2cd8a21a3a1f1bea4c6c0658c16fd478c1/PublicationManuscripts.py",
+      "license": "MIT",
+      "author": "Miao Yuxuan"
+    },
+    {
+      "recorded_snapshot": "stage_sources/documents/f1a7ef909a42_PublicationPanels.py",
+      "source_path": "src/PublicationPanels.py",
+      "sha256": "f1a7ef909a4282744ca570b4e8b9d5707816d5c56f48ea7966cedac0d71bca94",
+      "stored_path": "provenance/build_sources/f1a7ef909a4282744ca570b4e8b9d5707816d5c56f48ea7966cedac0d71bca94/PublicationPanels.py",
+      "license": "MIT",
+      "author": "Miao Yuxuan"
+    },
+    {
+      "recorded_snapshot": "stage_sources/documents/fa011fdf7646_PublicationStyles.wl",
+      "source_path": "src/PublicationStyles.wl",
+      "sha256": "fa011fdf764681ad881a5f1814ec468698a119aa2ff43974871fed10b8b2f541",
+      "stored_path": "provenance/build_sources/fa011fdf764681ad881a5f1814ec468698a119aa2ff43974871fed10b8b2f541/PublicationStyles.wl",
+      "license": "MIT",
+      "author": "Miao Yuxuan"
+    },
+    {
+      "recorded_snapshot": "stage_sources/notebooks/21926f3e1226_PublicationData.py",
+      "source_path": "src/PublicationData.py",
+      "sha256": "21926f3e1226eee62c27487c9c9afd0d73d9d0ca72ec373c566a6b8266d9af9b",
+      "stored_path": "provenance/build_sources/21926f3e1226eee62c27487c9c9afd0d73d9d0ca72ec373c566a6b8266d9af9b/PublicationData.py",
+      "license": "MIT",
+      "author": "Miao Yuxuan"
+    },
+    {
+      "recorded_snapshot": "stage_sources/notebooks/26b2718e32f7_PublicationDiagrams.py",
+      "source_path": "src/PublicationDiagrams.py",
+      "sha256": "26b2718e32f7c60adf855763d26622e6bba077fd8dfb0338f105335b386c38e6",
+      "stored_path": "provenance/build_sources/26b2718e32f7c60adf855763d26622e6bba077fd8dfb0338f105335b386c38e6/PublicationDiagrams.py",
+      "license": "MIT",
+      "author": "Miao Yuxuan"
+    },
+    {
+      "recorded_snapshot": "stage_sources/notebooks/299d22b71624_PublicationSupplementFigures.py",
+      "source_path": "src/PublicationSupplementFigures.py",
+      "sha256": "299d22b7162442f0298c4a398dfa47ef0c67048d9ca8f279c60844f9d2983284",
+      "stored_path": "provenance/build_sources/299d22b7162442f0298c4a398dfa47ef0c67048d9ca8f279c60844f9d2983284/PublicationSupplementFigures.py",
+      "license": "MIT",
+      "author": "Miao Yuxuan"
+    },
+    {
+      "recorded_snapshot": "stage_sources/notebooks/2a3ae96fbb91_PublicationDocuments.py",
+      "source_path": "src/PublicationDocuments.py",
+      "sha256": "2a3ae96fbb91ba668aef5bb31f737cbf5414149bf6c23d9657abeb3358f66085",
+      "stored_path": "provenance/build_sources/2a3ae96fbb91ba668aef5bb31f737cbf5414149bf6c23d9657abeb3358f66085/PublicationDocuments.py",
+      "license": "MIT",
+      "author": "Miao Yuxuan"
+    },
+    {
+      "recorded_snapshot": "stage_sources/notebooks/64fdf088d35f_BuildPublicationEdition.py",
+      "source_path": "src/BuildPublicationEdition.py",
+      "sha256": "64fdf088d35fc0d71cb828ac65634c1aa3cc28ccd15e0fdf91b71249e110b052",
+      "stored_path": "provenance/build_sources/64fdf088d35fc0d71cb828ac65634c1aa3cc28ccd15e0fdf91b71249e110b052/BuildPublicationEdition.py",
+      "license": "MIT",
+      "author": "Miao Yuxuan"
+    },
+    {
+      "recorded_snapshot": "stage_sources/notebooks/8a5f366d2853_PublicationVisualReview.py",
+      "source_path": "src/PublicationVisualReview.py",
+      "sha256": "8a5f366d285313d52bf1cd68c7bbd8367bd11a0907dd4d195dae1bc3a81d0e82",
+      "stored_path": "provenance/build_sources/8a5f366d285313d52bf1cd68c7bbd8367bd11a0907dd4d195dae1bc3a81d0e82/PublicationVisualReview.py",
+      "license": "MIT",
+      "author": "Miao Yuxuan"
+    },
+    {
+      "recorded_snapshot": "stage_sources/notebooks/8d5f61a419c1_PublicationContent.py",
+      "source_path": "src/PublicationContent.py",
+      "sha256": "8d5f61a419c14dc952cbb85f9a41e16dff15c26190fdc4d673e22c97aea83b79",
+      "stored_path": "provenance/build_sources/8d5f61a419c14dc952cbb85f9a41e16dff15c26190fdc4d673e22c97aea83b79/PublicationContent.py",
+      "license": "MIT",
+      "author": "Miao Yuxuan"
+    },
+    {
+      "recorded_snapshot": "stage_sources/notebooks/b255e6181bbc_PublicationPortableCheck.py",
+      "source_path": "src/PublicationPortableCheck.py",
+      "sha256": "b255e6181bbce157845e37ac066cfd406248c25a89e107b4328ec3c3063ea693",
+      "stored_path": "provenance/build_sources/b255e6181bbce157845e37ac066cfd406248c25a89e107b4328ec3c3063ea693/PublicationPortableCheck.py",
+      "license": "MIT",
+      "author": "Miao Yuxuan"
+    },
+    {
+      "recorded_snapshot": "stage_sources/notebooks/ca634ea32037_BuildPublicationDocuments.wls",
+      "source_path": "src/BuildPublicationDocuments.wls",
+      "sha256": "ca634ea320376dbcfb2ff13241d84ef2daaaefa1ae1dccf74bdf0316072589de",
+      "stored_path": "provenance/build_sources/ca634ea320376dbcfb2ff13241d84ef2daaaefa1ae1dccf74bdf0316072589de/BuildPublicationDocuments.wls",
+      "license": "MIT",
+      "author": "Miao Yuxuan"
+    },
+    {
+      "recorded_snapshot": "stage_sources/notebooks/cfd3afcc1135_PublicationManuscripts.py",
+      "source_path": "src/PublicationManuscripts.py",
+      "sha256": "cfd3afcc1135ec7aeddb7e44277baa2cd8a21a3a1f1bea4c6c0658c16fd478c1",
+      "stored_path": "provenance/build_sources/cfd3afcc1135ec7aeddb7e44277baa2cd8a21a3a1f1bea4c6c0658c16fd478c1/PublicationManuscripts.py",
+      "license": "MIT",
+      "author": "Miao Yuxuan"
+    },
+    {
+      "recorded_snapshot": "stage_sources/notebooks/f1a7ef909a42_PublicationPanels.py",
+      "source_path": "src/PublicationPanels.py",
+      "sha256": "f1a7ef909a4282744ca570b4e8b9d5707816d5c56f48ea7966cedac0d71bca94",
+      "stored_path": "provenance/build_sources/f1a7ef909a4282744ca570b4e8b9d5707816d5c56f48ea7966cedac0d71bca94/PublicationPanels.py",
+      "license": "MIT",
+      "author": "Miao Yuxuan"
+    },
+    {
+      "recorded_snapshot": "stage_sources/notebooks/fa011fdf7646_PublicationStyles.wl",
+      "source_path": "src/PublicationStyles.wl",
+      "sha256": "fa011fdf764681ad881a5f1814ec468698a119aa2ff43974871fed10b8b2f541",
+      "stored_path": "provenance/build_sources/fa011fdf764681ad881a5f1814ec468698a119aa2ff43974871fed10b8b2f541/PublicationStyles.wl",
+      "license": "MIT",
+      "author": "Miao Yuxuan"
+    },
+    {
+      "recorded_snapshot": "stage_sources/package/21926f3e1226_PublicationData.py",
+      "source_path": "src/PublicationData.py",
+      "sha256": "21926f3e1226eee62c27487c9c9afd0d73d9d0ca72ec373c566a6b8266d9af9b",
+      "stored_path": "provenance/build_sources/21926f3e1226eee62c27487c9c9afd0d73d9d0ca72ec373c566a6b8266d9af9b/PublicationData.py",
+      "license": "MIT",
+      "author": "Miao Yuxuan"
+    },
+    {
+      "recorded_snapshot": "stage_sources/package/26b2718e32f7_PublicationDiagrams.py",
+      "source_path": "src/PublicationDiagrams.py",
+      "sha256": "26b2718e32f7c60adf855763d26622e6bba077fd8dfb0338f105335b386c38e6",
+      "stored_path": "provenance/build_sources/26b2718e32f7c60adf855763d26622e6bba077fd8dfb0338f105335b386c38e6/PublicationDiagrams.py",
+      "license": "MIT",
+      "author": "Miao Yuxuan"
+    },
+    {
+      "recorded_snapshot": "stage_sources/package/299d22b71624_PublicationSupplementFigures.py",
+      "source_path": "src/PublicationSupplementFigures.py",
+      "sha256": "299d22b7162442f0298c4a398dfa47ef0c67048d9ca8f279c60844f9d2983284",
+      "stored_path": "provenance/build_sources/299d22b7162442f0298c4a398dfa47ef0c67048d9ca8f279c60844f9d2983284/PublicationSupplementFigures.py",
+      "license": "MIT",
+      "author": "Miao Yuxuan"
+    },
+    {
+      "recorded_snapshot": "stage_sources/package/2a3ae96fbb91_PublicationDocuments.py",
+      "source_path": "src/PublicationDocuments.py",
+      "sha256": "2a3ae96fbb91ba668aef5bb31f737cbf5414149bf6c23d9657abeb3358f66085",
+      "stored_path": "provenance/build_sources/2a3ae96fbb91ba668aef5bb31f737cbf5414149bf6c23d9657abeb3358f66085/PublicationDocuments.py",
+      "license": "MIT",
+      "author": "Miao Yuxuan"
+    },
+    {
+      "recorded_snapshot": "stage_sources/package/64fdf088d35f_BuildPublicationEdition.py",
+      "source_path": "src/BuildPublicationEdition.py",
+      "sha256": "64fdf088d35fc0d71cb828ac65634c1aa3cc28ccd15e0fdf91b71249e110b052",
+      "stored_path": "provenance/build_sources/64fdf088d35fc0d71cb828ac65634c1aa3cc28ccd15e0fdf91b71249e110b052/BuildPublicationEdition.py",
+      "license": "MIT",
+      "author": "Miao Yuxuan"
+    },
+    {
+      "recorded_snapshot": "stage_sources/package/8a5f366d2853_PublicationVisualReview.py",
+      "source_path": "src/PublicationVisualReview.py",
+      "sha256": "8a5f366d285313d52bf1cd68c7bbd8367bd11a0907dd4d195dae1bc3a81d0e82",
+      "stored_path": "provenance/build_sources/8a5f366d285313d52bf1cd68c7bbd8367bd11a0907dd4d195dae1bc3a81d0e82/PublicationVisualReview.py",
+      "license": "MIT",
+      "author": "Miao Yuxuan"
+    },
+    {
+      "recorded_snapshot": "stage_sources/package/8d5f61a419c1_PublicationContent.py",
+      "source_path": "src/PublicationContent.py",
+      "sha256": "8d5f61a419c14dc952cbb85f9a41e16dff15c26190fdc4d673e22c97aea83b79",
+      "stored_path": "provenance/build_sources/8d5f61a419c14dc952cbb85f9a41e16dff15c26190fdc4d673e22c97aea83b79/PublicationContent.py",
+      "license": "MIT",
+      "author": "Miao Yuxuan"
+    },
+    {
+      "recorded_snapshot": "stage_sources/package/b255e6181bbc_PublicationPortableCheck.py",
+      "source_path": "src/PublicationPortableCheck.py",
+      "sha256": "b255e6181bbce157845e37ac066cfd406248c25a89e107b4328ec3c3063ea693",
+      "stored_path": "provenance/build_sources/b255e6181bbce157845e37ac066cfd406248c25a89e107b4328ec3c3063ea693/PublicationPortableCheck.py",
+      "license": "MIT",
+      "author": "Miao Yuxuan"
+    },
+    {
+      "recorded_snapshot": "stage_sources/package/ca634ea32037_BuildPublicationDocuments.wls",
+      "source_path": "src/BuildPublicationDocuments.wls",
+      "sha256": "ca634ea320376dbcfb2ff13241d84ef2daaaefa1ae1dccf74bdf0316072589de",
+      "stored_path": "provenance/build_sources/ca634ea320376dbcfb2ff13241d84ef2daaaefa1ae1dccf74bdf0316072589de/BuildPublicationDocuments.wls",
+      "license": "MIT",
+      "author": "Miao Yuxuan"
+    },
+    {
+      "recorded_snapshot": "stage_sources/package/e6542129695d_PublicationManuscripts.py",
+      "source_path": "src/PublicationManuscripts.py",
+      "sha256": "e6542129695da3a16a9bd4108673fdcb40fffc1c774023c30045b984f95f3669",
+      "stored_path": "provenance/build_sources/e6542129695da3a16a9bd4108673fdcb40fffc1c774023c30045b984f95f3669/PublicationManuscripts.py",
+      "license": "MIT",
+      "author": "Miao Yuxuan"
+    },
+    {
+      "recorded_snapshot": "stage_sources/package/f1a7ef909a42_PublicationPanels.py",
+      "source_path": "src/PublicationPanels.py",
+      "sha256": "f1a7ef909a4282744ca570b4e8b9d5707816d5c56f48ea7966cedac0d71bca94",
+      "stored_path": "provenance/build_sources/f1a7ef909a4282744ca570b4e8b9d5707816d5c56f48ea7966cedac0d71bca94/PublicationPanels.py",
+      "license": "MIT",
+      "author": "Miao Yuxuan"
+    },
+    {
+      "recorded_snapshot": "stage_sources/package/fa011fdf7646_PublicationStyles.wl",
+      "source_path": "src/PublicationStyles.wl",
+      "sha256": "fa011fdf764681ad881a5f1814ec468698a119aa2ff43974871fed10b8b2f541",
+      "stored_path": "provenance/build_sources/fa011fdf764681ad881a5f1814ec468698a119aa2ff43974871fed10b8b2f541/PublicationStyles.wl",
+      "license": "MIT",
+      "author": "Miao Yuxuan"
+    },
+    {
+      "recorded_snapshot": "stage_sources/pdf/21926f3e1226_PublicationData.py",
+      "source_path": "src/PublicationData.py",
+      "sha256": "21926f3e1226eee62c27487c9c9afd0d73d9d0ca72ec373c566a6b8266d9af9b",
+      "stored_path": "provenance/build_sources/21926f3e1226eee62c27487c9c9afd0d73d9d0ca72ec373c566a6b8266d9af9b/PublicationData.py",
+      "license": "MIT",
+      "author": "Miao Yuxuan"
+    },
+    {
+      "recorded_snapshot": "stage_sources/pdf/26b2718e32f7_PublicationDiagrams.py",
+      "source_path": "src/PublicationDiagrams.py",
+      "sha256": "26b2718e32f7c60adf855763d26622e6bba077fd8dfb0338f105335b386c38e6",
+      "stored_path": "provenance/build_sources/26b2718e32f7c60adf855763d26622e6bba077fd8dfb0338f105335b386c38e6/PublicationDiagrams.py",
+      "license": "MIT",
+      "author": "Miao Yuxuan"
+    },
+    {
+      "recorded_snapshot": "stage_sources/pdf/299d22b71624_PublicationSupplementFigures.py",
+      "source_path": "src/PublicationSupplementFigures.py",
+      "sha256": "299d22b7162442f0298c4a398dfa47ef0c67048d9ca8f279c60844f9d2983284",
+      "stored_path": "provenance/build_sources/299d22b7162442f0298c4a398dfa47ef0c67048d9ca8f279c60844f9d2983284/PublicationSupplementFigures.py",
+      "license": "MIT",
+      "author": "Miao Yuxuan"
+    },
+    {
+      "recorded_snapshot": "stage_sources/pdf/2a3ae96fbb91_PublicationDocuments.py",
+      "source_path": "src/PublicationDocuments.py",
+      "sha256": "2a3ae96fbb91ba668aef5bb31f737cbf5414149bf6c23d9657abeb3358f66085",
+      "stored_path": "provenance/build_sources/2a3ae96fbb91ba668aef5bb31f737cbf5414149bf6c23d9657abeb3358f66085/PublicationDocuments.py",
+      "license": "MIT",
+      "author": "Miao Yuxuan"
+    },
+    {
+      "recorded_snapshot": "stage_sources/pdf/64fdf088d35f_BuildPublicationEdition.py",
+      "source_path": "src/BuildPublicationEdition.py",
+      "sha256": "64fdf088d35fc0d71cb828ac65634c1aa3cc28ccd15e0fdf91b71249e110b052",
+      "stored_path": "provenance/build_sources/64fdf088d35fc0d71cb828ac65634c1aa3cc28ccd15e0fdf91b71249e110b052/BuildPublicationEdition.py",
+      "license": "MIT",
+      "author": "Miao Yuxuan"
+    },
+    {
+      "recorded_snapshot": "stage_sources/pdf/8a5f366d2853_PublicationVisualReview.py",
+      "source_path": "src/PublicationVisualReview.py",
+      "sha256": "8a5f366d285313d52bf1cd68c7bbd8367bd11a0907dd4d195dae1bc3a81d0e82",
+      "stored_path": "provenance/build_sources/8a5f366d285313d52bf1cd68c7bbd8367bd11a0907dd4d195dae1bc3a81d0e82/PublicationVisualReview.py",
+      "license": "MIT",
+      "author": "Miao Yuxuan"
+    },
+    {
+      "recorded_snapshot": "stage_sources/pdf/8d5f61a419c1_PublicationContent.py",
+      "source_path": "src/PublicationContent.py",
+      "sha256": "8d5f61a419c14dc952cbb85f9a41e16dff15c26190fdc4d673e22c97aea83b79",
+      "stored_path": "provenance/build_sources/8d5f61a419c14dc952cbb85f9a41e16dff15c26190fdc4d673e22c97aea83b79/PublicationContent.py",
+      "license": "MIT",
+      "author": "Miao Yuxuan"
+    },
+    {
+      "recorded_snapshot": "stage_sources/pdf/b255e6181bbc_PublicationPortableCheck.py",
+      "source_path": "src/PublicationPortableCheck.py",
+      "sha256": "b255e6181bbce157845e37ac066cfd406248c25a89e107b4328ec3c3063ea693",
+      "stored_path": "provenance/build_sources/b255e6181bbce157845e37ac066cfd406248c25a89e107b4328ec3c3063ea693/PublicationPortableCheck.py",
+      "license": "MIT",
+      "author": "Miao Yuxuan"
+    },
+    {
+      "recorded_snapshot": "stage_sources/pdf/ca634ea32037_BuildPublicationDocuments.wls",
+      "source_path": "src/BuildPublicationDocuments.wls",
+      "sha256": "ca634ea320376dbcfb2ff13241d84ef2daaaefa1ae1dccf74bdf0316072589de",
+      "stored_path": "provenance/build_sources/ca634ea320376dbcfb2ff13241d84ef2daaaefa1ae1dccf74bdf0316072589de/BuildPublicationDocuments.wls",
+      "license": "MIT",
+      "author": "Miao Yuxuan"
+    },
+    {
+      "recorded_snapshot": "stage_sources/pdf/cfd3afcc1135_PublicationManuscripts.py",
+      "source_path": "src/PublicationManuscripts.py",
+      "sha256": "cfd3afcc1135ec7aeddb7e44277baa2cd8a21a3a1f1bea4c6c0658c16fd478c1",
+      "stored_path": "provenance/build_sources/cfd3afcc1135ec7aeddb7e44277baa2cd8a21a3a1f1bea4c6c0658c16fd478c1/PublicationManuscripts.py",
+      "license": "MIT",
+      "author": "Miao Yuxuan"
+    },
+    {
+      "recorded_snapshot": "stage_sources/pdf/f1a7ef909a42_PublicationPanels.py",
+      "source_path": "src/PublicationPanels.py",
+      "sha256": "f1a7ef909a4282744ca570b4e8b9d5707816d5c56f48ea7966cedac0d71bca94",
+      "stored_path": "provenance/build_sources/f1a7ef909a4282744ca570b4e8b9d5707816d5c56f48ea7966cedac0d71bca94/PublicationPanels.py",
+      "license": "MIT",
+      "author": "Miao Yuxuan"
+    },
+    {
+      "recorded_snapshot": "stage_sources/pdf/fa011fdf7646_PublicationStyles.wl",
+      "source_path": "src/PublicationStyles.wl",
+      "sha256": "fa011fdf764681ad881a5f1814ec468698a119aa2ff43974871fed10b8b2f541",
+      "stored_path": "provenance/build_sources/fa011fdf764681ad881a5f1814ec468698a119aa2ff43974871fed10b8b2f541/PublicationStyles.wl",
+      "license": "MIT",
+      "author": "Miao Yuxuan"
+    },
+    {
+      "recorded_snapshot": "stage_sources/verify/21926f3e1226_PublicationData.py",
+      "source_path": "src/PublicationData.py",
+      "sha256": "21926f3e1226eee62c27487c9c9afd0d73d9d0ca72ec373c566a6b8266d9af9b",
+      "stored_path": "provenance/build_sources/21926f3e1226eee62c27487c9c9afd0d73d9d0ca72ec373c566a6b8266d9af9b/PublicationData.py",
+      "license": "MIT",
+      "author": "Miao Yuxuan"
+    },
+    {
+      "recorded_snapshot": "stage_sources/verify/26b2718e32f7_PublicationDiagrams.py",
+      "source_path": "src/PublicationDiagrams.py",
+      "sha256": "26b2718e32f7c60adf855763d26622e6bba077fd8dfb0338f105335b386c38e6",
+      "stored_path": "provenance/build_sources/26b2718e32f7c60adf855763d26622e6bba077fd8dfb0338f105335b386c38e6/PublicationDiagrams.py",
+      "license": "MIT",
+      "author": "Miao Yuxuan"
+    },
+    {
+      "recorded_snapshot": "stage_sources/verify/299d22b71624_PublicationSupplementFigures.py",
+      "source_path": "src/PublicationSupplementFigures.py",
+      "sha256": "299d22b7162442f0298c4a398dfa47ef0c67048d9ca8f279c60844f9d2983284",
+      "stored_path": "provenance/build_sources/299d22b7162442f0298c4a398dfa47ef0c67048d9ca8f279c60844f9d2983284/PublicationSupplementFigures.py",
+      "license": "MIT",
+      "author": "Miao Yuxuan"
+    },
+    {
+      "recorded_snapshot": "stage_sources/verify/2a3ae96fbb91_PublicationDocuments.py",
+      "source_path": "src/PublicationDocuments.py",
+      "sha256": "2a3ae96fbb91ba668aef5bb31f737cbf5414149bf6c23d9657abeb3358f66085",
+      "stored_path": "provenance/build_sources/2a3ae96fbb91ba668aef5bb31f737cbf5414149bf6c23d9657abeb3358f66085/PublicationDocuments.py",
+      "license": "MIT",
+      "author": "Miao Yuxuan"
+    },
+    {
+      "recorded_snapshot": "stage_sources/verify/64fdf088d35f_BuildPublicationEdition.py",
+      "source_path": "src/BuildPublicationEdition.py",
+      "sha256": "64fdf088d35fc0d71cb828ac65634c1aa3cc28ccd15e0fdf91b71249e110b052",
+      "stored_path": "provenance/build_sources/64fdf088d35fc0d71cb828ac65634c1aa3cc28ccd15e0fdf91b71249e110b052/BuildPublicationEdition.py",
+      "license": "MIT",
+      "author": "Miao Yuxuan"
+    },
+    {
+      "recorded_snapshot": "stage_sources/verify/8a5f366d2853_PublicationVisualReview.py",
+      "source_path": "src/PublicationVisualReview.py",
+      "sha256": "8a5f366d285313d52bf1cd68c7bbd8367bd11a0907dd4d195dae1bc3a81d0e82",
+      "stored_path": "provenance/build_sources/8a5f366d285313d52bf1cd68c7bbd8367bd11a0907dd4d195dae1bc3a81d0e82/PublicationVisualReview.py",
+      "license": "MIT",
+      "author": "Miao Yuxuan"
+    },
+    {
+      "recorded_snapshot": "stage_sources/verify/8d5f61a419c1_PublicationContent.py",
+      "source_path": "src/PublicationContent.py",
+      "sha256": "8d5f61a419c14dc952cbb85f9a41e16dff15c26190fdc4d673e22c97aea83b79",
+      "stored_path": "provenance/build_sources/8d5f61a419c14dc952cbb85f9a41e16dff15c26190fdc4d673e22c97aea83b79/PublicationContent.py",
+      "license": "MIT",
+      "author": "Miao Yuxuan"
+    },
+    {
+      "recorded_snapshot": "stage_sources/verify/b255e6181bbc_PublicationPortableCheck.py",
+      "source_path": "src/PublicationPortableCheck.py",
+      "sha256": "b255e6181bbce157845e37ac066cfd406248c25a89e107b4328ec3c3063ea693",
+      "stored_path": "provenance/build_sources/b255e6181bbce157845e37ac066cfd406248c25a89e107b4328ec3c3063ea693/PublicationPortableCheck.py",
+      "license": "MIT",
+      "author": "Miao Yuxuan"
+    },
+    {
+      "recorded_snapshot": "stage_sources/verify/ca634ea32037_BuildPublicationDocuments.wls",
+      "source_path": "src/BuildPublicationDocuments.wls",
+      "sha256": "ca634ea320376dbcfb2ff13241d84ef2daaaefa1ae1dccf74bdf0316072589de",
+      "stored_path": "provenance/build_sources/ca634ea320376dbcfb2ff13241d84ef2daaaefa1ae1dccf74bdf0316072589de/BuildPublicationDocuments.wls",
+      "license": "MIT",
+      "author": "Miao Yuxuan"
+    },
+    {
+      "recorded_snapshot": "stage_sources/verify/cfd3afcc1135_PublicationManuscripts.py",
+      "source_path": "src/PublicationManuscripts.py",
+      "sha256": "cfd3afcc1135ec7aeddb7e44277baa2cd8a21a3a1f1bea4c6c0658c16fd478c1",
+      "stored_path": "provenance/build_sources/cfd3afcc1135ec7aeddb7e44277baa2cd8a21a3a1f1bea4c6c0658c16fd478c1/PublicationManuscripts.py",
+      "license": "MIT",
+      "author": "Miao Yuxuan"
+    },
+    {
+      "recorded_snapshot": "stage_sources/verify/f1a7ef909a42_PublicationPanels.py",
+      "source_path": "src/PublicationPanels.py",
+      "sha256": "f1a7ef909a4282744ca570b4e8b9d5707816d5c56f48ea7966cedac0d71bca94",
+      "stored_path": "provenance/build_sources/f1a7ef909a4282744ca570b4e8b9d5707816d5c56f48ea7966cedac0d71bca94/PublicationPanels.py",
+      "license": "MIT",
+      "author": "Miao Yuxuan"
+    },
+    {
+      "recorded_snapshot": "stage_sources/verify/fa011fdf7646_PublicationStyles.wl",
+      "source_path": "src/PublicationStyles.wl",
+      "sha256": "fa011fdf764681ad881a5f1814ec468698a119aa2ff43974871fed10b8b2f541",
+      "stored_path": "provenance/build_sources/fa011fdf764681ad881a5f1814ec468698a119aa2ff43974871fed10b8b2f541/PublicationStyles.wl",
+      "license": "MIT",
+      "author": "Miao Yuxuan"
+    }
+  ]
+}

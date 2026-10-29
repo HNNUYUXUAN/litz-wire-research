@@ -1,0 +1,47 @@
+{
+  "status": "passed",
+  "reviewed_at": "2026-10-28T14:51:53.527829+00:00",
+  "scope": "Current tracked and nonignored source content, public configuration examples, source notices and submitted PR text",
+  "scanned_files": 1088,
+  "unresolved_findings": 0,
+  "findings": [
+    {
+      "path": "tests/test_anonymous_release_assets.py",
+      "line": 79,
+      "category": "session_query",
+      "matched_text_sha256": "6ff4adf4b3645c6c0d6df7142eb9d09a92fffe24706cc303a9940cac24940f76",
+      "disposition": "reviewed_synthetic_test_fixture",
+      "reason": "Literal test input verifies credential rejection or stripping; no live credential"
+    },
+    {
+      "path": "tests/test_research_records.py",
+      "line": 15,
+      "category": "session_query",
+      "matched_text_sha256": "7d80b11945514b2a91c0e426b388a4e677feb16cd1269d6e0a04fcc752c2a119",
+      "disposition": "reviewed_synthetic_test_fixture",
+      "reason": "Literal test input verifies credential rejection or stripping; no live credential"
+    }
+  ],
+  "license_files": {
+    "LICENSE": "339fa4bb2c8448f65a6ff2bccc1f0b67b984744d1497ea2c90c1c76498bc1bab",
+    "LICENSES/CC-BY-4.0.txt": "9ba9550ad48438d0836ddab3da480b3b69ffa0aac7b7878b5a0039e7ab429411",
+    "LICENSES/LPPL-1.3c.txt": "3d262cdf34dafa6955f703c634a8c238ec44109bc8dd6ef34fb7aa54809f7e66",
+    "LICENSES/third-party/AgentTools-MIT.txt": "f20a78d582dd0f663e6bdc3009eac12f45f353b5d69c63f7cf636c4755f11993",
+    "LICENSES/third-party/PyAEDT-MCP-Apache-2.0.txt": "336617ae2e1efc0cdff79161ca7a1007c12e02940c0d819b13d4ff5d11d53e26",
+    "automation/research/vendor/academic-search/LICENSE": "81ab511477684cf507d32cfcbade3f89a174657f063d6129ad6a51c26fdc534e",
+    "automation/research/vendor/academic-search/provenance.json": "e1c1bb59373c1cdd042c559df6537509015f57e60d37734c78decdfc2c1e07e1",
+    "references/sources.json": "87427ccb76345a76ad80c12f51b03e76ac0e744aca49bdb05cc715f71161d49c",
+    "THIRD_PARTY_NOTICES.md": "1ffe9f61ca79181b3a87f0dd95e3c86ca2e432753614c1a0b11add928ba952f3",
+    "THIRD_PARTY_NOTICES.zh-CN.md": "d11101e359f8542b9a9afe9e72056217c836caca4af407759905d0e5b9c1b9bb"
+  },
+  "redistribution": {
+    "academic_search": "Unmodified MIT files with original license and copyright",
+    "IEEEtran": "Four original byte-identical classes with LPPL notices",
+    "Wolfram_and_ANSYS": "Externally installed proprietary applications; official MCP identities and notices retained",
+    "yuanbao": "Installed local capability invocation; implementation not redistributed",
+    "C01_papers": "Local-only copies; redistribution unknown",
+    "ZHU2026": "Repository accepted manuscript explicitly records CC BY 4.0; current acquired copy retained locally"
+  },
+  "limitations": "Pattern checks and source review cover the present delivery; they do not constitute a universal credential detector or permission for material with unestablished rights.",
+  "scan_receipt_sha256": "5b790c67354fe36a3d2e62a0ead1aad8a28f1566ea58cf96ace78acec67bb951"
+}

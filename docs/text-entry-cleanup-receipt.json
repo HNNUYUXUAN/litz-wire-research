@@ -1,0 +1,360 @@
+{
+  "schema_version": 1,
+  "status": "completed",
+  "scope": "Twenty research notebook wrappers, five series helpers, and two GPU Notebook presentation helpers",
+  "files": [
+    {
+      "original": "models/analytic/notebooks/analytic_en.nb",
+      "sha256": "3f96fe889781530331c6ff8d40749522828207538e790eea1346f40a85ff9746",
+      "retained": ".local-archive/text-entry-migration-20261028/models/analytic/notebooks/analytic_en.nb",
+      "guide": "models/analytic/README.md",
+      "parameters": "models/analytic/examples/tutorial.json",
+      "model_id": "wolfram-analytic",
+      "language": "en",
+      "input_cell_mapping": {
+        "initialization": "project root and installed CLI",
+        "parameters": "models/analytic/examples/tutorial.json",
+        "RunResearch": "litz-research run wolfram-analytic --case tutorial --parameters models/analytic/examples/tutorial.json --run-id analytic_example_01",
+        "DisplayResearch": "results.json checks, status, scope and optional results.wxf"
+      }
+    },
+    {
+      "original": "models/analytic/notebooks/analytic_zh-CN.nb",
+      "sha256": "aaaaa49e5983da084b7f538f0b7193e25d1035d5585dd9edbf257ce58f44c35f",
+      "retained": ".local-archive/text-entry-migration-20261028/models/analytic/notebooks/analytic_zh-CN.nb",
+      "guide": "models/analytic/README.zh-CN.md",
+      "parameters": "models/analytic/examples/tutorial.json",
+      "model_id": "wolfram-analytic",
+      "language": "zh-CN",
+      "input_cell_mapping": {
+        "initialization": "project root and installed CLI",
+        "parameters": "models/analytic/examples/tutorial.json",
+        "RunResearch": "litz-research run wolfram-analytic --case tutorial --parameters models/analytic/examples/tutorial.json --run-id analytic_example_01",
+        "DisplayResearch": "results.json checks, status, scope and optional results.wxf"
+      }
+    },
+    {
+      "original": "models/fem2/notebooks/fem2_en.nb",
+      "sha256": "584ec60869c370964d3ed9395cadcb216f525b4cd4d1355c0dc1a2d22800dfb2",
+      "retained": ".local-archive/text-entry-migration-20261028/models/fem2/notebooks/fem2_en.nb",
+      "guide": "models/fem2/README.md",
+      "parameters": "models/fem2/examples/tutorial.json",
+      "model_id": "fem2",
+      "language": "en",
+      "input_cell_mapping": {
+        "initialization": "project root and installed CLI",
+        "parameters": "models/fem2/examples/tutorial.json",
+        "RunResearch": "litz-research run fem2 --case tutorial --parameters models/fem2/examples/tutorial.json --run-id fem2_example_01",
+        "DisplayResearch": "results.json checks, status, scope and optional results.wxf"
+      }
+    },
+    {
+      "original": "models/fem2/notebooks/fem2_zh-CN.nb",
+      "sha256": "dc327ef544165fee61e3baa493173f91efa69819b5095800ee915d9be63d1102",
+      "retained": ".local-archive/text-entry-migration-20261028/models/fem2/notebooks/fem2_zh-CN.nb",
+      "guide": "models/fem2/README.zh-CN.md",
+      "parameters": "models/fem2/examples/tutorial.json",
+      "model_id": "fem2",
+      "language": "zh-CN",
+      "input_cell_mapping": {
+        "initialization": "project root and installed CLI",
+        "parameters": "models/fem2/examples/tutorial.json",
+        "RunResearch": "litz-research run fem2 --case tutorial --parameters models/fem2/examples/tutorial.json --run-id fem2_example_01",
+        "DisplayResearch": "results.json checks, status, scope and optional results.wxf"
+      }
+    },
+    {
+      "original": "models/common_terminal/notebooks/common_terminal_en.nb",
+      "sha256": "755bd3d2dcc81c65be629f850154dc78ad8ae1fb31c10a5b520d1e0d94923a9a",
+      "retained": ".local-archive/text-entry-migration-20261028/models/common_terminal/notebooks/common_terminal_en.nb",
+      "guide": "models/common_terminal/README.md",
+      "parameters": "models/common_terminal/examples/tutorial.json",
+      "model_id": "coax",
+      "language": "en",
+      "input_cell_mapping": {
+        "initialization": "project root and installed CLI",
+        "parameters": "models/common_terminal/examples/tutorial.json",
+        "RunResearch": "litz-research run coax --case tutorial --parameters models/common_terminal/examples/tutorial.json --run-id common_terminal_example_01",
+        "DisplayResearch": "results.json checks, status, scope and optional results.wxf"
+      }
+    },
+    {
+      "original": "models/common_terminal/notebooks/common_terminal_zh-CN.nb",
+      "sha256": "c26c708eb447717519717357cbf1f9d10796670f3a9a8f487ef53a5c3217ec72",
+      "retained": ".local-archive/text-entry-migration-20261028/models/common_terminal/notebooks/common_terminal_zh-CN.nb",
+      "guide": "models/common_terminal/README.zh-CN.md",
+      "parameters": "models/common_terminal/examples/tutorial.json",
+      "model_id": "coax",
+      "language": "zh-CN",
+      "input_cell_mapping": {
+        "initialization": "project root and installed CLI",
+        "parameters": "models/common_terminal/examples/tutorial.json",
+        "RunResearch": "litz-research run coax --case tutorial --parameters models/common_terminal/examples/tutorial.json --run-id common_terminal_example_01",
+        "DisplayResearch": "results.json checks, status, scope and optional results.wxf"
+      }
+    },
+    {
+      "original": "models/geometry/notebooks/geometry_en.nb",
+      "sha256": "e332b2feef3256ffce5d88339078ec8ec228fae2425dbb821f26f243c76b9bc7",
+      "retained": ".local-archive/text-entry-migration-20261028/models/geometry/notebooks/geometry_en.nb",
+      "guide": "models/geometry/README.md",
+      "parameters": "models/geometry/examples/tutorial.json",
+      "model_id": "geometry",
+      "language": "en",
+      "input_cell_mapping": {
+        "initialization": "project root and installed CLI",
+        "parameters": "models/geometry/examples/tutorial.json",
+        "RunResearch": "litz-research run geometry --case tutorial --parameters models/geometry/examples/tutorial.json --run-id geometry_example_01",
+        "DisplayResearch": "results.json checks, status, scope and optional results.wxf"
+      }
+    },
+    {
+      "original": "models/geometry/notebooks/geometry_zh-CN.nb",
+      "sha256": "21a86b4609b268796820a278d009c8c1e122c47c50e3c5cfcbaa6c60050fd8b5",
+      "retained": ".local-archive/text-entry-migration-20261028/models/geometry/notebooks/geometry_zh-CN.nb",
+      "guide": "models/geometry/README.zh-CN.md",
+      "parameters": "models/geometry/examples/tutorial.json",
+      "model_id": "geometry",
+      "language": "zh-CN",
+      "input_cell_mapping": {
+        "initialization": "project root and installed CLI",
+        "parameters": "models/geometry/examples/tutorial.json",
+        "RunResearch": "litz-research run geometry --case tutorial --parameters models/geometry/examples/tutorial.json --run-id geometry_example_01",
+        "DisplayResearch": "results.json checks, status, scope and optional results.wxf"
+      }
+    },
+    {
+      "original": "models/peec/notebooks/peec_en.nb",
+      "sha256": "897d3c1a1d186105f1281c21c01abeda2b913a89d728effbbcc968d4dd1c64eb",
+      "retained": ".local-archive/text-entry-migration-20261028/models/peec/notebooks/peec_en.nb",
+      "guide": "models/peec/README.md",
+      "parameters": "models/peec/examples/tutorial.json",
+      "model_id": "peec",
+      "language": "en",
+      "input_cell_mapping": {
+        "initialization": "project root and installed CLI",
+        "parameters": "models/peec/examples/tutorial.json",
+        "RunResearch": "litz-research run peec --case tutorial --parameters models/peec/examples/tutorial.json --run-id peec_example_01",
+        "DisplayResearch": "results.json checks, status, scope and optional results.wxf"
+      }
+    },
+    {
+      "original": "models/peec/notebooks/peec_zh-CN.nb",
+      "sha256": "93156d3982b0f3962f6f454fd8d0a90e84a52828209249d2cdd30f7b7969a488",
+      "retained": ".local-archive/text-entry-migration-20261028/models/peec/notebooks/peec_zh-CN.nb",
+      "guide": "models/peec/README.zh-CN.md",
+      "parameters": "models/peec/examples/tutorial.json",
+      "model_id": "peec",
+      "language": "zh-CN",
+      "input_cell_mapping": {
+        "initialization": "project root and installed CLI",
+        "parameters": "models/peec/examples/tutorial.json",
+        "RunResearch": "litz-research run peec --case tutorial --parameters models/peec/examples/tutorial.json --run-id peec_example_01",
+        "DisplayResearch": "results.json checks, status, scope and optional results.wxf"
+      }
+    },
+    {
+      "original": "models/rt0/notebooks/rt0_en.nb",
+      "sha256": "7a0c10a2c69430ef23de9b05587c84e005e2e3791040048266aa2f112fc6f6a0",
+      "retained": ".local-archive/text-entry-migration-20261028/models/rt0/notebooks/rt0_en.nb",
+      "guide": "models/rt0/README.md",
+      "parameters": "models/rt0/examples/tutorial.json",
+      "model_id": "rt0",
+      "language": "en",
+      "input_cell_mapping": {
+        "initialization": "project root and installed CLI",
+        "parameters": "models/rt0/examples/tutorial.json",
+        "RunResearch": "litz-research run rt0 --case tutorial --parameters models/rt0/examples/tutorial.json --run-id rt0_example_01",
+        "DisplayResearch": "results.json checks, status, scope and optional results.wxf"
+      }
+    },
+    {
+      "original": "models/rt0/notebooks/rt0_zh-CN.nb",
+      "sha256": "bf00b16cc9acabcb9657118ecb70a19d8e5eebb507aaffb64598675a2dfca92a",
+      "retained": ".local-archive/text-entry-migration-20261028/models/rt0/notebooks/rt0_zh-CN.nb",
+      "guide": "models/rt0/README.zh-CN.md",
+      "parameters": "models/rt0/examples/tutorial.json",
+      "model_id": "rt0",
+      "language": "zh-CN",
+      "input_cell_mapping": {
+        "initialization": "project root and installed CLI",
+        "parameters": "models/rt0/examples/tutorial.json",
+        "RunResearch": "litz-research run rt0 --case tutorial --parameters models/rt0/examples/tutorial.json --run-id rt0_example_01",
+        "DisplayResearch": "results.json checks, status, scope and optional results.wxf"
+      }
+    },
+    {
+      "original": "models/aphi/notebooks/aphi_en.nb",
+      "sha256": "6a472d02d80fde502aaf1b764648f77046e6a10abb5611ff501dce90fc550bf4",
+      "retained": ".local-archive/text-entry-migration-20261028/models/aphi/notebooks/aphi_en.nb",
+      "guide": "models/aphi/README.md",
+      "parameters": "models/aphi/examples/tutorial.json",
+      "model_id": "aphi",
+      "language": "en",
+      "input_cell_mapping": {
+        "initialization": "project root and installed CLI",
+        "parameters": "models/aphi/examples/tutorial.json",
+        "RunResearch": "litz-research run aphi --case diagnostic --parameters models/aphi/examples/tutorial.json --run-id aphi_example_01",
+        "DisplayResearch": "results.json checks, status, scope and optional results.wxf"
+      }
+    },
+    {
+      "original": "models/aphi/notebooks/aphi_zh-CN.nb",
+      "sha256": "e907ab9e3ffa48bc4464c2fd092da4fc2012ba37d8183cd6ceff05bc7450a4e6",
+      "retained": ".local-archive/text-entry-migration-20261028/models/aphi/notebooks/aphi_zh-CN.nb",
+      "guide": "models/aphi/README.zh-CN.md",
+      "parameters": "models/aphi/examples/tutorial.json",
+      "model_id": "aphi",
+      "language": "zh-CN",
+      "input_cell_mapping": {
+        "initialization": "project root and installed CLI",
+        "parameters": "models/aphi/examples/tutorial.json",
+        "RunResearch": "litz-research run aphi --case diagnostic --parameters models/aphi/examples/tutorial.json --run-id aphi_example_01",
+        "DisplayResearch": "results.json checks, status, scope and optional results.wxf"
+      }
+    },
+    {
+      "original": "adapters/wolfram/notebooks/wolfram_en.nb",
+      "sha256": "991bb9468af544e696fb3c3a2ba80547a881d2e9208259df08da96d267e8af59",
+      "retained": ".local-archive/text-entry-migration-20261028/adapters/wolfram/notebooks/wolfram_en.nb",
+      "guide": "adapters/wolfram/README.md",
+      "parameters": "adapters/wolfram/examples/tutorial.json",
+      "model_id": "wolfram",
+      "language": "en",
+      "input_cell_mapping": {
+        "initialization": "project root and installed CLI",
+        "parameters": "adapters/wolfram/examples/tutorial.json",
+        "RunResearch": "litz-research run wolfram --case tutorial --parameters adapters/wolfram/examples/tutorial.json --run-id wolfram_example_01",
+        "DisplayResearch": "results.json checks, status, scope and optional results.wxf"
+      }
+    },
+    {
+      "original": "adapters/wolfram/notebooks/wolfram_zh-CN.nb",
+      "sha256": "bb7471659149d8fbebc4943d80f03152fa05c28b0ede5c98e65458a7c48ba2fa",
+      "retained": ".local-archive/text-entry-migration-20261028/adapters/wolfram/notebooks/wolfram_zh-CN.nb",
+      "guide": "adapters/wolfram/README.zh-CN.md",
+      "parameters": "adapters/wolfram/examples/tutorial.json",
+      "model_id": "wolfram",
+      "language": "zh-CN",
+      "input_cell_mapping": {
+        "initialization": "project root and installed CLI",
+        "parameters": "adapters/wolfram/examples/tutorial.json",
+        "RunResearch": "litz-research run wolfram --case tutorial --parameters adapters/wolfram/examples/tutorial.json --run-id wolfram_example_01",
+        "DisplayResearch": "results.json checks, status, scope and optional results.wxf"
+      }
+    },
+    {
+      "original": "adapters/ansys/notebooks/ansys_en.nb",
+      "sha256": "84dbef739057c5c7cb12b3297a0e974d8de018182347a82fa09fc55e47579aa5",
+      "retained": ".local-archive/text-entry-migration-20261028/adapters/ansys/notebooks/ansys_en.nb",
+      "guide": "adapters/ansys/README.md",
+      "parameters": "adapters/ansys/examples/tutorial.json",
+      "model_id": "ansys",
+      "language": "en",
+      "input_cell_mapping": {
+        "initialization": "project root and installed CLI",
+        "parameters": "adapters/ansys/examples/tutorial.json",
+        "RunResearch": "litz-research run ansys --case preflight --parameters adapters/ansys/examples/tutorial.json --run-id ansys_example_01",
+        "DisplayResearch": "results.json checks, status, scope and optional results.wxf"
+      }
+    },
+    {
+      "original": "adapters/ansys/notebooks/ansys_zh-CN.nb",
+      "sha256": "d821aaea11b35c0e3b68b808c29a20fc0622bab40db6ebbb7c78183c41a0e655",
+      "retained": ".local-archive/text-entry-migration-20261028/adapters/ansys/notebooks/ansys_zh-CN.nb",
+      "guide": "adapters/ansys/README.zh-CN.md",
+      "parameters": "adapters/ansys/examples/tutorial.json",
+      "model_id": "ansys",
+      "language": "zh-CN",
+      "input_cell_mapping": {
+        "initialization": "project root and installed CLI",
+        "parameters": "adapters/ansys/examples/tutorial.json",
+        "RunResearch": "litz-research run ansys --case preflight --parameters adapters/ansys/examples/tutorial.json --run-id ansys_example_01",
+        "DisplayResearch": "results.json checks, status, scope and optional results.wxf"
+      }
+    },
+    {
+      "original": "adapters/gpu/notebooks/gpu_en.nb",
+      "sha256": "14c20f43dbc58df9e908427d5d480188330b8208ed6f564f1e685ff6954fa2d7",
+      "retained": ".local-archive/text-entry-migration-20261028/adapters/gpu/notebooks/gpu_en.nb",
+      "guide": "adapters/gpu/README.md",
+      "parameters": "adapters/gpu/examples/tutorial.json",
+      "model_id": "gpu",
+      "language": "en",
+      "input_cell_mapping": {
+        "initialization": "project root and installed CLI",
+        "parameters": "adapters/gpu/examples/tutorial.json",
+        "RunResearch": "litz-research run gpu --case tutorial --parameters adapters/gpu/examples/tutorial.json --run-id gpu_example_01",
+        "DisplayResearch": "results.json checks, status, scope and optional results.wxf"
+      }
+    },
+    {
+      "original": "adapters/gpu/notebooks/gpu_zh-CN.nb",
+      "sha256": "141c79d3d333abdeb3e10b10b96f9ebf565d6f077b3ffde5f835f440efa27c3d",
+      "retained": ".local-archive/text-entry-migration-20261028/adapters/gpu/notebooks/gpu_zh-CN.nb",
+      "guide": "adapters/gpu/README.zh-CN.md",
+      "parameters": "adapters/gpu/examples/tutorial.json",
+      "model_id": "gpu",
+      "language": "zh-CN",
+      "input_cell_mapping": {
+        "initialization": "project root and installed CLI",
+        "parameters": "adapters/gpu/examples/tutorial.json",
+        "RunResearch": "litz-research run gpu --case tutorial --parameters adapters/gpu/examples/tutorial.json --run-id gpu_example_01",
+        "DisplayResearch": "results.json checks, status, scope and optional results.wxf"
+      }
+    },
+    {
+      "original": "configs/research_notebooks.json",
+      "retained": ".local-archive/text-entry-migration-20261028/configs/research_notebooks.json",
+      "sha256": "9affb65ba49671da70f6e80dec746c315ce713de8685f5f82eec28d32d7c90fc",
+      "replacement": "configs/research_entries.json and tools/BuildResearchGuides.py"
+    },
+    {
+      "original": "adapters/wolfram/BuildResearchNotebooks.wls",
+      "retained": ".local-archive/text-entry-migration-20261028/adapters/wolfram/BuildResearchNotebooks.wls",
+      "sha256": "93290a78d126e95837785bbdd44a67b30b5f5d81eacf91405c41352e4e41a429",
+      "replacement": "configs/research_entries.json and tools/BuildResearchGuides.py"
+    },
+    {
+      "original": "adapters/wolfram/VerifyResearchNotebooks.wls",
+      "retained": ".local-archive/text-entry-migration-20261028/adapters/wolfram/VerifyResearchNotebooks.wls",
+      "sha256": "45f28116239850cde49bd4cf6a5dfc8d6e3d0ab76e306853f0cb4e5fec403438",
+      "replacement": "configs/research_entries.json and tools/BuildResearchGuides.py"
+    },
+    {
+      "original": "shared/wolfram/ResearchNotebook.wl",
+      "retained": ".local-archive/text-entry-migration-20261028/shared/wolfram/ResearchNotebook.wl",
+      "sha256": "97b09eb2fd95ef2c7472633d638311b062fd897b7d7fc87ecc3f2f285b31b72b",
+      "replacement": "configs/research_entries.json and tools/BuildResearchGuides.py"
+    },
+    {
+      "original": "tools/VerifyResearchNotebookSeries.py",
+      "retained": ".local-archive/text-entry-migration-20261028/tools/VerifyResearchNotebookSeries.py",
+      "sha256": "d695597f9d4dfa8d29d548a1350f9e7297241dbea1c9d847de41cf3a7f207fab",
+      "replacement": "configs/research_entries.json and tools/BuildResearchGuides.py"
+    },
+    {
+      "guide": "adapters/gpu/README.md",
+      "original": "adapters/gpu/BuildGPUNotebook.wls",
+      "status": "removed_archive_verified",
+      "scope": "Notebook presentation only; GPU algorithms retained",
+      "retained": ".local-archive/text-entry-migration-20261028/adapters/gpu/BuildGPUNotebook.wls",
+      "sha256": "338ea7cabccc0d8cf897831fc160c3c7f37a7ed2465b0abdc9ba0f908428f22e"
+    },
+    {
+      "guide": "adapters/gpu/README.md",
+      "original": "adapters/gpu/EvaluateGPUNotebookHeadless.wls",
+      "status": "removed_archive_verified",
+      "scope": "Notebook presentation only; GPU algorithms retained",
+      "retained": ".local-archive/text-entry-migration-20261028/adapters/gpu/EvaluateGPUNotebookHeadless.wls",
+      "sha256": "108dc47de4cc752f4d60393a501ce0fa0ab823a61b03cf98f5595929255750a2"
+    }
+  ],
+  "checks": [
+    "All retained hashes equal removed bytes",
+    "Source and archive absolute paths checked",
+    "Twenty replacement guides pass parameter and CLI parsing tests",
+    "Reader link audit passed before removal"
+  ],
+  "completed_at": "2026-10-28T14:06:15.8687659Z"
+}

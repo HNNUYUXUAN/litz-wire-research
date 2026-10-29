@@ -1,0 +1,93 @@
+{
+  "status": "passed",
+  "native_transport": "Codex registered native MCP tools",
+  "observed_at": "2026-10-28T13:03:00.740Z",
+  "platform": {
+    "observed": "Windows Server 2022 Datacenter 21H2 build 20348.4405",
+    "desktop_session": 1,
+    "requested_target": "Windows 10",
+    "windows_10_validation": "pending_target_device",
+    "windows_11_validation": "future_release_gate"
+  },
+  "native_client": {
+    "wolfram_version": "15.0.0",
+    "wolfram_test_count": 12,
+    "wolfram_passed": 12,
+    "project_python": ".conda/project/python.exe",
+    "ansys_python": ".conda/ansys/python.exe",
+    "python_version": "3.12.16",
+    "pyaedt": "1.8.0",
+    "pyaedt_mcp": "0.2.dev0",
+    "aedt_student": "2025.2.4",
+    "owned_cleanup": "passed"
+  },
+  "post_retirement_analytical": {
+    "run_id": "post_retirement_analytic_20261028_01",
+    "execution_status": "completed",
+    "physical_acceptance_status": "passed",
+    "checks": [
+      {
+        "name": "delta_mm",
+        "passed": true
+      },
+      {
+        "name": "Q1_Rdc_mohm_per_m",
+        "passed": true
+      },
+      {
+        "name": "Q1_Rac_mohm_per_m",
+        "passed": true
+      },
+      {
+        "name": "Q1_Xint_mohm_per_m",
+        "passed": true
+      },
+      {
+        "name": "Q1_Rac_Rdc",
+        "passed": true
+      },
+      {
+        "name": "Q1_P_W_per_m",
+        "passed": true
+      },
+      {
+        "name": "current_error",
+        "passed": true
+      },
+      {
+        "name": "power_error",
+        "passed": true
+      },
+      {
+        "name": "low_frequency_error",
+        "passed": true
+      },
+      {
+        "name": "passivity_and_phasor_sign",
+        "passed": true
+      },
+      {
+        "name": "RMS_power_convention",
+        "passed": true
+      },
+      {
+        "name": "Q1_current_density_condition",
+        "passed": true
+      }
+    ]
+  },
+  "maxwell": {
+    "run_id": "conda_maxwell_20261028_02",
+    "execution_status": "completed",
+    "physical_acceptance_status": "passed_port_and_power_scope_only",
+    "mesh_scope": "One-pass polygonal mesh; full spatial and boundary convergence not_run",
+    "current_constraint_relative_error": 5.5881786794192e-15,
+    "power_relative_error": 3.9415801385132145e-15,
+    "scope": "Straight insulated seven-strand pure transport; controlled copper return; prescribed 20 C conductivity; no thermal solve; insufficient copper for final Q2."
+  },
+  "evidence_identities": {
+    "outputs/conda_native_client_20261028_01/native-client.json": "283c34c06a09fb7849c1622feddc2301200cac68687caeaf82e269249b1e1fc9",
+    "outputs/conda_maxwell_20261028_02/results.json": "8fb081d3ea18ecdb8fb8ecb7136ec170d9f5fc68af7a03c0d2ce83f6b8f46f6c",
+    "outputs/post_retirement_analytic_20261028_01/results.json": "f5afc7e59aef9f6575150ed41f45e3e3f87ae25ce4ed9c201bd7a8d09445fa00"
+  }
+}

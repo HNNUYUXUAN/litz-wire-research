@@ -1,0 +1,37 @@
+\section{数据来源与环境交接}
+\label{chapter:D}
+
+% block-id: D.workflow.p1
+\hypertarget{D.workflow.p1}{}
+研究计算入口读取模型输入和求解配置，输出运行记录及相应检查结果；文档构建入口读取已保存量值、图件与 LaTeX 主稿，生成 Markdown 阅读稿并编译预览 PDF。输入、源码及输出哈希共同定义一次构建，所用单图保留矢量曲线和字体信息，组图记录面板身份与布局参数。下列来源表用于从正文观测量追溯到具体文件及其验收记录。
+
+% block-id: D.sources
+\hypertarget{D.sources}{}
+来源清单：metrics.json; migration-receipt.json; reading-receipt.json.
+\begin{table}[!htbp]
+\centering
+\caption{冻结来源与完整性}
+\label{tab:D.sources-1}
+\begingroup\footnotesize
+\begin{tabularx}{\textwidth}{>{\raggedright\arraybackslash}X>{\raggedright\arraybackslash}X}
+\toprule
+来源 & SHA256\\
+\midrule
+docs/总控/当前运行索引.json & \seqsplit{3324976d4af8f58e60820a88ae978246443f78fbdd0cfa1050e86809110ae60d}\\
+outputs/prewrite\_\allowbreak closure\_\allowbreak state.json & \seqsplit{80a66afa79c321a89f730b102af0e70125f6e1655372717d6b59f470c6520e71}\\
+\bottomrule
+\end{tabularx}
+\endgroup
+\end{table}
+
+% block-id: D.automation.heading
+\hypertarget{D.automation.heading}{}
+\subsection{智能体工作流与软件接入}
+
+% block-id: D.automation.p1
+\hypertarget{D.automation.p1}{}
+Codex 通过标准 MCP 客户端桥接调用固定版本的 AgentTools 与 PyAEDT-MCP。工作流定义任务与验收，适配层管理软件连接，模型源码给出确定性计算。正式任务绑定参数、源码哈希和运行号；长任务通过状态查询接续，取消仅作用于所属进程树。恢复使用核实后的输入和检查点，教程重启建立关联的新运行号。
+
+% block-id: D.automation.p2
+\hypertarget{D.automation.p2}{}
+Wolfram 记录包含解析积分、测试、图形和 Notebook 保存回读。Ansys 记录包含工具初始化、发现、实际调用、AEDT 执行和结构化结果。单位换算 API 的修复保留失败与成功调用，物理参数保持一致；A–φ 回读则保留完成执行但势与规范验收失败的状态。协议、程序和科学状态分别记录，使下一步研究能够针对实际失败层安排。

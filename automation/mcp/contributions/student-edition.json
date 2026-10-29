@@ -1,0 +1,24 @@
+{
+  "repository": "https://github.com/ansys/pyaedt-mcp",
+  "pull_request": "https://github.com/ansys/pyaedt-mcp/pull/155",
+  "base_commit": "feb7862a8b60fa20cc112638b6fe2b615b0132ab",
+  "head_commit": "1be069a960da7a8ea2d567ef39728edc59664138",
+  "target_branch": "main",
+  "status": "submitted",
+  "review_status": "awaiting_upstream_review",
+  "checks_at_submission": [],
+  "scope": "Forward Student edition selection through launch, connect and startup; standard edition remains default",
+  "tests": {"pristine_upstream_failures":9,"patched_passes":141,"ruff":"0.17.0 passed"},
+  "native_validation": {
+    "python":"3.13.18","pyaedt":"1.9.0","aedt":"Student 2025 R2 (2025.2.4)",
+    "os":"Windows Server 2022","launch":"passed","connect":"passed",
+    "startup":"passed","owned_process_cleanup":"passed","physical_acceptance":"not_evaluated"
+  },
+  "local_evidence": [
+    "outputs/integration_20261028_01/student-baseline.log",
+    "outputs/integration_20261028_01/student-tests-final.log",
+    "outputs/integration_20261028_01/student-native-03/receipt.json",
+    "outputs/student_upstream_native_03/process_receipt.json"
+  ],
+  "local_adapter_retirement": "Keep the adapter for locked 0.2.dev0 until an upstream version containing this fix passes the project regression and native-client acceptance."
+}

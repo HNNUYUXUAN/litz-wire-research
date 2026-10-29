@@ -1,0 +1,27 @@
+\documentclass[journal,10pt]{IEEEtran}
+\input{../../preamble.tex}
+\renewcommand{\figurename}{图}
+\renewcommand{\tablename}{表}
+\renewcommand{\abstractname}{摘要}
+\title{智能体驱动的可复核建模与仿真：Wolfram–Ansys MCP 工作流及 Litz 案例}
+\author{缪雨轩\thanks{淮南师范学院}}
+\date{}
+\begin{document}
+\maketitle
+\begin{abstract}
+本文提出以任务身份、保存源码和独立验收为基础的智能体建模与仿真流程，通过 Codex、Wolfram 和 Ansys MCP 将研究问题连接到可追溯的计算产物。工作流、执行适配与物理模型分别承担任务组织、软件连接及数值实现，并通过共同参数和结果接口协作。六类已有案例覆盖解析校准与 Notebook、Maxwell 原生建模求解、跨求解器比较、频率扩展、接口修复和 A–φ 失败诊断。七股共同端口比较的复电流相对 L2 差异为 0.0106814\%，电阻相对差异为 0.00132823\%；这些结果对应保存网格，空间与边界收敛尚待进一步检查。案例说明了协议状态、执行状态和物理验收如何共同支持研究接续。工作流、配置、适配代码、模型与运行记录共同构成可复用的研究材料。
+\end{abstract}
+\begin{IEEEkeywords}
+Litz 线；分层验证；趋肤与邻近效应；共端场路；有限长度 PEEC；可复现数值研究
+\end{IEEEkeywords}
+\input{sections/01.tex}
+\input{sections/02.tex}
+\input{sections/03.tex}
+\input{sections/04.tex}
+\input{sections/05.tex}
+\input{sections/07.tex}
+\input{sections/06.tex}
+\input{sections/convergence.tex}
+\renewcommand{\refname}{参考文献}
+\input{../../generated/automation-references.tex}
+\end{document}

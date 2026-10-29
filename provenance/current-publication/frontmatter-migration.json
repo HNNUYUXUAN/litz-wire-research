@@ -1,0 +1,55 @@
+{
+  "status": "passed",
+  "original_manifest_sha256": "e735ecaa20bd29fd2bb157a5eb9272031998ca8c21ee1b379b05a549b33bb93f",
+  "normalization": "Unicode NFKC, escaped TeX punctuation and whitespace",
+  "documents": [
+    {
+      "main": "manuscript/report/en/main.tex",
+      "title": "matched",
+      "abstract": "matched",
+      "author": "matched",
+      "affiliation": "matched",
+      "sha256": "fa5c23dbc4c746da7948f91b45972325fa7a4c0c0496b8447a6f88ed595724dd"
+    },
+    {
+      "main": "manuscript/report/zh-CN/main.tex",
+      "title": "matched",
+      "abstract": "matched",
+      "author": "matched",
+      "affiliation": "matched",
+      "sha256": "fc81c143ab801ef4d1888dcbe6127f0e61f880c0c94984427be47bae8cd81147"
+    },
+    {
+      "main": "manuscript/paper/en/main.tex",
+      "title": "matched",
+      "abstract": "matched",
+      "author": "matched",
+      "affiliation": "matched",
+      "sha256": "5713f33516a7ed60adaec28a24135fe584ee55b238456d09d739f0e8daacb4c3"
+    },
+    {
+      "main": "manuscript/paper/zh-CN/main.tex",
+      "title": "matched",
+      "abstract": "matched",
+      "author": "matched",
+      "affiliation": "matched",
+      "sha256": "a52be86602897f860e6c6d15047968c2e2ec7a739d89864a115b1d2a9a097493"
+    },
+    {
+      "main": "manuscript/automation/en/main.tex",
+      "title": "matched",
+      "abstract": "matched",
+      "author": "matched",
+      "affiliation": "matched",
+      "sha256": "ef09eb616ffcca9302bac78faa495763e49ab0fdd51b6156c883f376fabebb48"
+    },
+    {
+      "main": "manuscript/automation/zh-CN/main.tex",
+      "title": "matched",
+      "abstract": "matched",
+      "author": "matched",
+      "affiliation": "matched",
+      "sha256": "472e76177027f7e000afff409624461beb54ba76ef5f559765d279e4303bae91"
+    }
+  ]
+}

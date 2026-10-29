@@ -1,0 +1,85 @@
+{
+  "schema_version": 1,
+  "release_tag": "v1.0.0-rc.2",
+  "release_url": "https://github.com/HNNUYUXUAN/litz-wire-research/releases",
+  "artifacts": [
+    {
+      "name": "litz_publication_licenses_20261020.zip",
+      "bytes": 103265,
+      "sha256": "5aa6311ca16e5623e610a08dc4122764dcdeb25fd8a2d28c46585065e56bfda2"
+    }
+  ],
+  "source_root": "LICENSES/publication-companion/",
+  "members": [
+    {
+      "path": "LICENSE",
+      "bytes": 1086,
+      "sha256": "339fa4bb2c8448f65a6ff2bccc1f0b67b984744d1497ea2c90c1c76498bc1bab"
+    },
+    {
+      "path": "LICENSES/CC-BY-4.0.txt",
+      "bytes": 18657,
+      "sha256": "9ba9550ad48438d0836ddab3da480b3b69ffa0aac7b7878b5a0039e7ab429411"
+    },
+    {
+      "path": "LICENSES/LPPL-1.3c.txt",
+      "bytes": 19102,
+      "sha256": "3d262cdf34dafa6955f703c634a8c238ec44109bc8dd6ef34fb7aa54809f7e66"
+    },
+    {
+      "path": "LICENSES/MIT.txt",
+      "bytes": 1086,
+      "sha256": "339fa4bb2c8448f65a6ff2bccc1f0b67b984744d1497ea2c90c1c76498bc1bab"
+    },
+    {
+      "path": "LICENSES/README.md",
+      "bytes": 822,
+      "sha256": "062e48eb7e8d0d6cee64a71b0f4a4cecabafa751597981e5d9f1692653b9da47"
+    },
+    {
+      "path": "LICENSES/README.zh-CN.md",
+      "bytes": 751,
+      "sha256": "d8b1c800d44dabf9c6cfa23fc75a49aa57bd4a56580becce9341265923c0dc75"
+    },
+    {
+      "path": "LICENSES/third-party/AgentTools-MIT.txt",
+      "bytes": 1078,
+      "sha256": "f20a78d582dd0f663e6bdc3009eac12f45f353b5d69c63f7cf636c4755f11993"
+    },
+    {
+      "path": "LICENSES/third-party/PyAEDT-MCP-Apache-2.0.txt",
+      "bytes": 11365,
+      "sha256": "336617ae2e1efc0cdff79161ca7a1007c12e02940c0d819b13d4ff5d11d53e26"
+    },
+    {
+      "path": "README.md",
+      "bytes": 2612,
+      "sha256": "e6ea7a426dd1dec2f613baee015f057ff93bdddfe02812de0825a22341929c8a"
+    },
+    {
+      "path": "README.zh-CN.md",
+      "bytes": 2379,
+      "sha256": "23b62fa13b6117efbf1ecbe073a9595cbeb4aa1c06c4fa193a89315e72e4d853"
+    },
+    {
+      "path": "THIRD_PARTY_NOTICES.md",
+      "bytes": 3294,
+      "sha256": "8fbd82f6ecaf4b8477b47171375b3d784282c13c4055276cb896a58807b984a3"
+    },
+    {
+      "path": "THIRD_PARTY_NOTICES.zh-CN.md",
+      "bytes": 2946,
+      "sha256": "d9ffae670c7172c3a11be4d4b0162bd18c0ee5d0b83699001618b2c6f4aad634"
+    },
+    {
+      "path": "package-licenses.json",
+      "bytes": 74085,
+      "sha256": "3f606d08924b373b3d5e37d7c5d830c35ea72b31927017988ba8f51c63998ddd"
+    },
+    {
+      "path": "upstream/IEEEtran-license.txt",
+      "bytes": 288304,
+      "sha256": "c972aca108fda004c3514d63658e02816da2e54d9a1451e870b9bd970e003f55"
+    }
+  ]
+}

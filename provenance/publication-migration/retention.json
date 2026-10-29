@@ -1,0 +1,44 @@
+{
+  "files": [
+    {
+      "original": "publications/manifest.json",
+      "retained": "provenance/publication-migration/publications/manifest.json",
+      "sha256": "adb436f83f0ca37876cbc382632e1b3049a6035b484c6f238b8bcd732b8d369b"
+    },
+    {
+      "original": "tools/BuildPublicationIndex.py",
+      "retained": "provenance/publication-migration/tools/BuildPublicationIndex.py",
+      "sha256": "5b50281f930719c264f5755a2de5e3809056a75353dae9a966497bec1cd86790"
+    },
+    {
+      "original": "publications/report/en/README.md",
+      "retained": "provenance/publication-migration/publications/report/en/README.md",
+      "sha256": "f992445b67da7b5fc79cd325af9e6da9ef40707b029314495980747b91de716e"
+    },
+    {
+      "original": "publications/report/zh-CN/README.md",
+      "retained": "provenance/publication-migration/publications/report/zh-CN/README.md",
+      "sha256": "c16e5a99830f6e3bde67f28c819dd636fc8d8a89ef113626424f0aa33b4233bc"
+    },
+    {
+      "original": "publications/automation/en/README.md",
+      "retained": "provenance/publication-migration/publications/automation/en/README.md",
+      "sha256": "8a361dfbd710fafc28988a98c582340818a9228eb659ab0724ed6cc489d044b3"
+    },
+    {
+      "original": "publications/automation/zh-CN/README.md",
+      "retained": "provenance/publication-migration/publications/automation/zh-CN/README.md",
+      "sha256": "596afefeb9fa427e101e16a8d4c2cc82920aaa7e88a7df1efa2db7f4ece71146"
+    },
+    {
+      "original": "publications/paper/en/README.md",
+      "retained": "provenance/publication-migration/publications/paper/en/README.md",
+      "sha256": "fb66a6f6bc216b6cb2803d6924cd7a1c19eeaa1db76f53a8152a9319ecd917f8"
+    },
+    {
+      "original": "publications/paper/zh-CN/README.md",
+      "retained": "provenance/publication-migration/publications/paper/zh-CN/README.md",
+      "sha256": "0e8c7314dcd51b02d483fb5d4fed60ed06292bc798e5bb3bb3ef07b805f9c107"
+    }
+  ]
+}

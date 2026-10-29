@@ -1,0 +1,260 @@
+{
+  "source_url": "https://api.crossref.org/works/10.1137/0907058",
+  "response": {
+    "status": "ok",
+    "message-type": "work",
+    "message-version": "1.0.0",
+    "message": {
+      "indexed": {
+        "date-parts": [
+          [
+            2026,
+            10,
+            13
+          ]
+        ],
+        "date-time": "2026-10-13T01:31:21Z",
+        "timestamp": 1791855081423,
+        "version": "4.3.4"
+      },
+      "reference-count": 16,
+      "publisher": "Society for Industrial & Applied Mathematics (SIAM)",
+      "issue": "3",
+      "content-domain": {
+        "domain": [],
+        "crossmark-restriction": false
+      },
+      "short-container-title": [
+        "SIAM J. Sci. and Stat. Comput."
+      ],
+      "published-print": {
+        "date-parts": [
+          [
+            1986,
+            7
+          ]
+        ]
+      },
+      "abstract": "<jats:p>We present an iterative method for solving linear systems, which has the property of minimizing at every step the norm of the residual vector over a Krylov subspace. The algorithm is derived from the Arnoldi process for constructing an $l_2 $-orthogonal basis of Krylov subspaces. It can be considered as a generalization of Paige and Saunders’ MINRES algorithm and is theoretically equivalent to the Generalized Conjugate Residual (GCR) method and to ORTHODIR. The new algorithm presents several advantages over GCR and ORTHODIR.</jats:p>",
+      "DOI": "10.1137/0907058",
+      "type": "journal-article",
+      "created": {
+        "date-parts": [
+          [
+            2005,
+            3,
+            1
+          ]
+        ],
+        "date-time": "2005-03-01T03:33:07Z",
+        "timestamp": 1109647987000
+      },
+      "page": "856-869",
+      "source": "Crossref",
+      "is-referenced-by-count": 9110,
+      "title": [
+        "GMRES: A Generalized Minimal Residual Algorithm for Solving Nonsymmetric Linear Systems"
+      ],
+      "prefix": "10.1137",
+      "volume": "7",
+      "author": [
+        {
+          "given": "Youcef",
+          "family": "Saad",
+          "sequence": "first",
+          "affiliation": [],
+          "role": [
+            {
+              "vocabulary": "crossref",
+              "role": "author"
+            }
+          ]
+        },
+        {
+          "given": "Martin H.",
+          "family": "Schultz",
+          "sequence": "additional",
+          "affiliation": [],
+          "role": [
+            {
+              "vocabulary": "crossref",
+              "role": "author"
+            }
+          ]
+        }
+      ],
+      "member": "351",
+      "published-online": {
+        "date-parts": [
+          [
+            2006,
+            7,
+            14
+          ]
+        ]
+      },
+      "reference": [
+        {
+          "key": "R1",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1090/qam/42792"
+        },
+        {
+          "key": "R2",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1016/0024-3795(80)90226-8"
+        },
+        {
+          "key": "R3",
+          "unstructured": "R. Chandra, Ph.D. Thesis,  Conjugate gradient methods for partial differential equations, Computer Science Dept., Yale Univ., New Haven, CT,  1978"
+        },
+        {
+          "key": "R4",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1137/0720023"
+        },
+        {
+          "key": "R5",
+          "unstructured": "H. C. Elman,  Iterative methods for large sparse nonsymmetric systems of linear equations, Computer Science Dept., Yale Univ., New Haven, CT,  1982"
+        },
+        {
+          "key": "R6",
+          "unstructured": "H. C. Elman, Y. Saad, P. Saylor,  A hybrid Chebyshev Krylov subspace algorithm for solving nonsymmetric systems of linear equations, Technical Report, YALU/DCS/TR-301, Yale Univ., New Haven, CT,  1984"
+        },
+        {
+          "key": "R7",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1137/0904040"
+        },
+        {
+          "key": "R8",
+          "volume-title": "Applied iterative methods",
+          "author": "Hageman A. L.",
+          "year": "1981"
+        },
+        {
+          "key": "R9",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1016/0024-3795(80)90165-2"
+        },
+        {
+          "key": "R10",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1137/0712047"
+        },
+        {
+          "key": "R11",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1016/0024-3795(80)90248-7"
+        },
+        {
+          "key": "R12",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1016/0024-3795(80)90169-X"
+        },
+        {
+          "key": "R13",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1090/S0025-5718-1981-0616364-6"
+        },
+        {
+          "key": "R14",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1137/0905015"
+        },
+        {
+          "key": "R15",
+          "volume-title": "Introduction to matrix computations",
+          "author": "Stewart G. W.",
+          "year": "1973"
+        },
+        {
+          "key": "R16",
+          "doi-asserted-by": "crossref",
+          "unstructured": "P. K. W. Vinsome,  ORTHOMIN, an iterative method for solving sparse sets of simultaneous linear equations,  Proc. Fourth Symposium on Reservoir Simulation, Society of Petroleum Engineers of AIME,  1976,  149–159",
+          "DOI": "10.2118/5729-MS"
+        }
+      ],
+      "container-title": [
+        "SIAM Journal on Scientific and Statistical Computing"
+      ],
+      "original-title": [],
+      "language": "en",
+      "link": [
+        {
+          "URL": "https://epubs.siam.org/doi/pdf/10.1137/0907058",
+          "content-type": "unspecified",
+          "content-version": "vor",
+          "intended-application": "similarity-checking"
+        }
+      ],
+      "deposited": {
+        "date-parts": [
+          [
+            2026,
+            8,
+            20
+          ]
+        ],
+        "date-time": "2026-08-20T13:25:59Z",
+        "timestamp": 1787232359000
+      },
+      "score": 1,
+      "resource": {
+        "primary": {
+          "URL": "https://epubs.siam.org/doi/10.1137/0907058"
+        }
+      },
+      "subtitle": [],
+      "short-title": [],
+      "issued": {
+        "date-parts": [
+          [
+            1986,
+            7
+          ]
+        ]
+      },
+      "references-count": 16,
+      "journal-issue": {
+        "issue": "3",
+        "published-print": {
+          "date-parts": [
+            [
+              1986,
+              7
+            ]
+          ]
+        }
+      },
+      "alternative-id": [
+        "10.1137/0907058"
+      ],
+      "URL": "https://doi.org/10.1137/0907058",
+      "relation": {},
+      "ISSN": [
+        "0196-5204",
+        "2168-3417"
+      ],
+      "issn-type": [
+        {
+          "value": "0196-5204",
+          "type": "print"
+        },
+        {
+          "value": "2168-3417",
+          "type": "electronic"
+        }
+      ],
+      "subject": [],
+      "published": {
+        "date-parts": [
+          [
+            1986,
+            7
+          ]
+        ]
+      }
+    }
+  }
+}

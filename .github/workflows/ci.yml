@@ -1,0 +1,114 @@
+name: Source checkout
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: source-checkout-${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  source:
+    name: ${{ matrix.os }} / Python ${{ matrix.python }}
+    runs-on: ${{ matrix.os }}
+    timeout-minutes: 15
+    strategy:
+      fail-fast: false
+      max-parallel: 2
+      matrix:
+        os: [ubuntu-latest, windows-latest]
+        python: ['3.11', '3.12']
+    env:
+      PYTHONDONTWRITEBYTECODE: '1'
+      PYTHONUTF8: '1'
+      OMP_NUM_THREADS: '8'
+      OPENBLAS_NUM_THREADS: '8'
+      MKL_NUM_THREADS: '8'
+    steps:
+      - name: Check out source
+        uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          persist-credentials: false
+      - name: Set up Python
+        uses: actions/setup-python@5fda3b95a4ea91299a34e894583c3862153e4b97 # v7.0.0
+        with:
+          python-version: ${{ matrix.python }}
+          cache: pip
+          cache-dependency-path: pyproject.toml
+      - name: Install source interfaces
+        run: python -m pip install -e ".[automation]"
+      - name: Check source contracts and portable tests
+        run: python -B tools/CheckSourceCheckout.py --output outputs/ci/source-checkout.json
+      - name: Check publication indexes
+        run: python tools/BuildPublicationIndex.py --check
+      - name: Check discovery catalog
+        run: python tools/BuildAgentCatalog.py --check
+      - name: Check tracked reader links
+        run: python tools/CheckReaderLinks.py --output outputs/ci/reader-links.json
+      - name: Test discovery catalog
+        run: python -m unittest discover -s tests -p test_agent_catalog.py
+      - name: Test reader link checks
+        run: python -m unittest discover -s tests -p test_reader_links.py
+      - name: Test release metadata checks
+        run: python -m unittest discover -s tests -p test_release_readiness.py
+      - name: Test future publication builds
+        run: python -m unittest discover -s tests -p test_publication_index.py
+      - name: Test public dataset restoration
+        run: python -m unittest discover -s tests -p test_public_data.py
+      - name: Test convergence contracts and isolated backup recovery
+        run: |
+          python -m unittest discover -s tests -p test_convergence_cases.py
+          python -m unittest discover -s tests -p test_full_backup.py
+          python -m unittest discover -s tests -p test_task_lifecycle.py
+      - name: Test anonymous download verifier
+        run: python -m unittest discover -s tests -p test_anonymous_release_assets.py
+      - name: Test public source acceptance helpers
+        run: python -m unittest discover -s provenance/public-release/verification -p 'test_*.py'
+      - name: Test research entry and source records
+        run: |
+          python -m unittest discover -s tests -p test_text_entrypoints.py
+          python -m unittest discover -s tests -p test_research_records.py
+
+  publication:
+    name: LaTeX readings / ${{ matrix.os }}
+    runs-on: ${{ matrix.os }}
+    timeout-minutes: 20
+    strategy:
+      fail-fast: false
+      matrix:
+        os: [ubuntu-latest, windows-latest]
+    env:
+      PYTHONUTF8: '1'
+      PYTHONDONTWRITEBYTECODE: '1'
+    defaults:
+      run:
+        shell: bash -el {0}
+    steps:
+      - name: Check out source
+        uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          persist-credentials: false
+      - name: Install fixed publication toolchain
+        uses: conda-incubator/setup-miniconda@fc2d68f6413eb2d87b895e92f8584b5b94a10167 # v3.3.0
+        with:
+          activate-environment: litz-publication-ci
+          environment-file: automation/environments/publication-ci.yml
+          auto-activate-base: false
+          miniforge-version: latest
+      - name: Install publication interface
+        run: python -m pip install -e ".[documents]"
+      - name: Check conversion invariants
+        run: |
+          python -m litz_research.latex_publication --stage preflight --run-id ci_latex_preflight
+          python -m unittest discover -s tests -p test_latex_publication.py
+      - name: Regenerate six readings and check recorded identities
+        run: |
+          python -m litz_research.latex_publication --stage documents --run-id ci_latex_readings
+          python tools/BuildPublicationIndex.py --check
+          git diff --exit-code -- manuscript/generated publications/reading

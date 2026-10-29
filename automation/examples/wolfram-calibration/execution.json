@@ -1,0 +1,40 @@
+{
+  "id": "wolfram-calibration",
+  "harness": "Codex desktop orchestrating the standard MCP client bridge",
+  "model_identifier": "not exposed as a stable session identifier; no model version inferred",
+  "task_origin": "approved implementation plan and the visible task template",
+  "runs": [
+    {
+      "run_id": "rc2_wolfram_final_mcp_01",
+      "result_sha256": "6b2a062c3bd72dd2eaf582d4a270cce2c42c737193f8295dd63717df3503782c",
+      "execution_status": "completed",
+      "physical_acceptance_status": "not_evaluated_by_protocol_probe",
+      "attachment_path": "outputs/rc2_wolfram_final_mcp_01",
+      "mcp_events.jsonl": {
+        "path": "automation/examples/wolfram-calibration/rc2_wolfram_final_mcp_01_mcp_events.jsonl",
+        "raw_sha256": "8427f0b4dc1bb60cbbddff5ffc8ace98ebf0c5f19f3253c9ee6aa4de93467754",
+        "public_sha256": "7fd20b65eaf2910dfac98740f6621912e10aad6f885461d24f9be64b1df9cf8c",
+        "processing": "machine paths normalized; JSON numeric structural values retained"
+      },
+      "protocol_report.json": {
+        "path": "automation/examples/wolfram-calibration/rc2_wolfram_final_mcp_01_protocol_report.json",
+        "raw_sha256": "133e92ee2101f6e2546615953618a6887949de0d0cf04971ed1d33811f44a8e5",
+        "public_sha256": "133e92ee2101f6e2546615953618a6887949de0d0cf04971ed1d33811f44a8e5",
+        "processing": "machine paths normalized; JSON numeric structural values retained"
+      },
+      "process_completion": {
+        "actual_exit_code": 137,
+        "cleanup_reason": "mcp_calls_receipt_saved",
+        "completion_receipt_observed": true
+      }
+    },
+    {
+      "run_id": "rc2_wolfram_final_study_01",
+      "result_sha256": "3cb6ad33b42b64a8177b4b2d8e72c0e8d712203ecc484f545ae1b0b294efd0fa",
+      "execution_status": "completed",
+      "physical_acceptance_status": "passed_test_scope_only",
+      "attachment_path": "outputs/rc2_wolfram_final_study_01"
+    }
+  ],
+  "conclusion": "completed / passed_test_scope_only"
+}

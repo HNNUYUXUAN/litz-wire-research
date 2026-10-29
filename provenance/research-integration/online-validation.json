@@ -1,0 +1,88 @@
+{
+  "schema_version": 1,
+  "reviewed_at": "2026-10-28T14:28:27.541746+00:00",
+  "case": "Litz literature and implementation discovery",
+  "papers": [
+    {
+      "id": "C01",
+      "acquisition": "open_publisher",
+      "identity_receipt": {
+        "filename": "C01.pdf",
+        "expected_title": "基于半解析有限元的利兹线交流电阻分析",
+        "expected_doi": "10.12263/dzxb.20230001",
+        "identity_status": "verified",
+        "redistribution": "unknown",
+        "method": "PDF parser plus normalized exact title and DOI in first three pages",
+        "sha256": "a06323537dd61104fa4e170304a77037987a20d29fa88ffc755b113f94392beb",
+        "pdf_status": "parser_validated",
+        "page_count": 6,
+        "title_match": true,
+        "doi_match": true
+      },
+      "rights_review": {
+        "redistribution": "unknown"
+      }
+    },
+    {
+      "id": "ZHU2026",
+      "acquisition": "open_repository",
+      "identity_receipt": {
+        "filename": "2026_AC_loss_calculation_for_Litz_wire_windings_in_electrical_machines_31551269a7b2.pdf",
+        "expected_title": "AC Loss Calculation for Litz Wire Windings in Electrical Machines",
+        "expected_doi": "10.1109/tte.2025.3610369",
+        "identity_status": "verified",
+        "redistribution": "unknown",
+        "method": "PDF parser plus normalized exact title and DOI in first three pages",
+        "sha256": "08404aa8707a198481380459b8b6045fa06768d15dfe55c1994ed59e7e87912e",
+        "pdf_status": "parser_validated",
+        "page_count": 13,
+        "title_match": true,
+        "doi_match": true
+      },
+      "rights_review": {
+        "redistribution": "allowed",
+        "license": "CC-BY-4.0",
+        "evidence": "https://eprints.whiterose.ac.uk/id/eprint/234524/"
+      }
+    },
+    {
+      "id": "C01-institutional",
+      "acquisition": "authorized_browser",
+      "identity_receipt": {
+        "filename": "C01-institutional.pdf",
+        "expected_title": "基于半解析有限元的利兹线交流电阻分析",
+        "expected_doi": "10.12263/DZXB.20230001",
+        "identity_status": "verified",
+        "redistribution": "unknown",
+        "method": "PDF parser plus normalized exact title and DOI in first three pages",
+        "sha256": "48c26d46a8738028dc8c9acc46d3974bb162d5f749a6d71e6e7e11fba1bf6207",
+        "pdf_status": "parser_validated",
+        "page_count": 6,
+        "title_match": true,
+        "doi_match": true
+      },
+      "rights_review": {
+        "redistribution": "unknown"
+      }
+    }
+  ],
+  "normalization": {
+    "input_records": 4,
+    "output_records": 2,
+    "conflicts": 1,
+    "conflict": "C01 publication dates differ between publisher and CNKI; both retained"
+  },
+  "failure_cases": [
+    "Crossref exact C01 lookup returned HTTP 404; publisher identity verified",
+    "Institutional session verification required human intervention; successful PDF acquisition followed",
+    "Direct FEMM forum retrieval unavailable; original FEMM manual used for technical definitions"
+  ],
+  "platform_review": "automation/research/platform-review.md",
+  "handoff": {
+    "run_id": "research_handoff_20261028_01",
+    "case": "analytic",
+    "checks_passed": 12
+  },
+  "fulltext_distribution": "Full texts retained locally; public evidence contains metadata and identities",
+  "scope": "Current device and Litz case; independent domains and target Windows platforms require further tests"
+}

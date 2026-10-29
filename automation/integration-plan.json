@@ -1,0 +1,171 @@
+{
+  "schema_version": 1,
+  "scope": "Current-device single-repository delivery approved on 2026-10-28",
+  "status": "completed",
+  "baseline": "outputs/integration_20261028_01/baseline.patch",
+  "tasks": [
+    {
+      "id": "runtime-identity",
+      "status": "passed",
+      "evidence": [
+        "tests/test_readiness.py"
+      ],
+      "result": "12 readiness regressions passed; fixed VCS and editable installs are distinguished"
+    },
+    {
+      "id": "runtime-rebuild",
+      "status": "passed",
+      "evidence": [
+        "tools/CondaEnvironments.py",
+        "automation/environments/locks"
+      ],
+      "result": "All three clean prefixes rebuilt from Conda and pip locks; inventories, pip check, modules and tool versions passed",
+      "verification": [
+        "outputs/integration_20261028_01/verify-rebuilt-project.log",
+        "outputs/integration_20261028_01/verify-rebuilt-ansys.log",
+        "outputs/integration_20261028_01/verify-rebuilt-research.log"
+      ]
+    },
+    {
+      "id": "candidate-probes",
+      "status": "passed",
+      "depends_on": [
+        "runtime-identity"
+      ],
+      "evidence": [
+        "outputs/conda_ansys_20261028_02/results.json",
+        "outputs/conda_wolfram_20261028_03/results.json",
+        "outputs/conda_wolfram_tests_20261028_01/results.json",
+        "outputs/conda_maxwell_20261028_02/results.json"
+      ],
+      "failure": "Sandbox Context failure retained; actual-user-context probe passed"
+    },
+    {
+      "id": "runtime-switch",
+      "status": "passed",
+      "depends_on": [
+        "candidate-probes"
+      ],
+      "evidence": [
+        "outputs/integration_20261028_01/config-backup/receipt.json",
+        "outputs/conda_native_client_20261028_01/native-client.json",
+        "outputs/conda_native_client_20261028_01/owned_session/aedt_session_closed.json",
+        "provenance/research-integration/environment-retirement.json"
+      ],
+      "result": "Conda configuration switch, native clients and owned cleanup passed; both previous project environments retired to verified local archives, 33802 files preserved"
+    },
+    {
+      "id": "source-validator",
+      "status": "passed",
+      "evidence": [
+        "tests/test_research_records.py"
+      ],
+      "result": "Eight record tests and three PDF identity tests passed, including DOI prefix collisions"
+    },
+    {
+      "id": "research-online",
+      "status": "passed",
+      "depends_on": [
+        "source-validator"
+      ],
+      "evidence": [
+        "outputs/research_online_20261028_01/search-events.json",
+        "outputs/research_online_20261028_01/oa-acquisition.json",
+        "outputs/research_online_20261028_01/crossref-events.json",
+        "outputs/research_online_20261028_01/webvpn-acquisition.json",
+        "outputs/research_handoff_20261028_01/results.json",
+        "provenance/research-integration/online-validation.json",
+        "provenance/research-integration/retrieval-stage-comparison.json",
+        "automation/research/platform-review.md"
+      ],
+      "result": "DOI/theme discovery, OA and authorized institutional PDFs, metadata conflicts, primary-source platform review, failure records and CLI handoff verified. Three paired DOI retrieval-stage comparisons passed; scope excludes end-to-end model/token savings"
+    },
+    {
+      "id": "upstream-student",
+      "status": "passed",
+      "evidence": [
+        "automation/mcp/contributions/student-edition.json",
+        "https://github.com/ansys/pyaedt-mcp/pull/155"
+      ],
+      "next": "Upstream review; project adapter remains until an accepted fixed upstream release"
+    },
+    {
+      "id": "latex-migration",
+      "status": "passed",
+      "evidence": [
+        "manuscript/latex-publication.json",
+        "manuscript/migration-receipt.json",
+        "outputs/latex_compile_20261028_03/compile-receipt.json",
+        "outputs/latex_migration_20261028_04/reading-receipt.json",
+        "tests/test_latex_publication.py",
+        "outputs/latex_delivery_20261028_02/reading-receipt.json",
+        "outputs/latex_delivery_20261028_02/compile-receipt.json",
+        "outputs/latex_delivery_20261028_02/source-package.json",
+        "provenance/current-publication/reading-receipt.json",
+        "provenance/current-publication/compilation.json",
+        "provenance/current-publication/visual-review.json",
+        "provenance/current-publication/migration-text-audit.json",
+        "provenance/current-publication/package-portability.json",
+        "provenance/current-publication/frontmatter-migration.json"
+      ],
+      "result": "Six masters and 64 sections compile; all 102 pages visually reviewed; 540 original blocks audited; Markdown reproducible; indexes/catalog/CI migrated; extracted source package in Chinese and space path compiles with all page pixels identical"
+    },
+    {
+      "id": "cli-migration",
+      "status": "passed",
+      "evidence": [
+        "configs/research_entries.json",
+        "docs/research-entry-migration.json",
+        "tests/test_text_entrypoints.py",
+        "docs/text-entry-cleanup-receipt.json",
+        "docs/agent-catalog.json"
+      ],
+      "result": "Twenty text/CLI entries and catalog/CI updated; notebook wrappers and dedicated maintenance chain retired with verified retention; shared algorithms migrated and regression-tested"
+    },
+    {
+      "id": "cleanup",
+      "status": "passed",
+      "depends_on": [
+        "latex-migration",
+        "cli-migration",
+        "runtime-switch"
+      ],
+      "result": "215 old maintenance files archived, independently hash-verified and removed; both previous project environments retired with 33802 retained files; actual-disk inventory has no active Notebook, Word or slide documents",
+      "evidence": [
+        "docs/text-entry-cleanup-receipt.json",
+        "docs/publication-chain-cleanup-receipt.json",
+        "docs/publication-disk-cleanup-receipt.json",
+        "provenance/research-integration/retention-validation.json"
+      ]
+    },
+    {
+      "id": "final-acceptance",
+      "status": "passed",
+      "depends_on": [
+        "runtime-rebuild",
+        "runtime-switch",
+        "research-online",
+        "upstream-student",
+        "latex-migration",
+        "cli-migration",
+        "cleanup"
+      ],
+      "result": "Current-device checks passed; final source, public review, retained-file hashes, publication indexes and reader links recorded in the consolidated acceptance receipt",
+      "evidence": [
+        "docs/integration-acceptance.zh-CN.md",
+        "provenance/research-integration/final-acceptance.json",
+        "provenance/research-integration/source-checks.json",
+        "provenance/research-integration/public-review.json"
+      ]
+    }
+  ],
+  "future_release_gates": [
+    "Windows 10 actual-device validation",
+    "Windows 11 actual-device validation",
+    "Cross-domain validation",
+    "End-to-end agent research paired evaluation",
+    "Independent repositories"
+  ],
+  "completed_at": "2026-10-28T14:51:53.527829+00:00",
+  "acceptance_report": "docs/integration-acceptance.zh-CN.md"
+}
